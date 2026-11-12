@@ -24,6 +24,10 @@ const nextConfig = {
       'acillazim.net',
       'admin.acillazim.net',
       'api.acillazim.net',
+      'acillazım.net',
+      'api.acillazım.net',
+      'xn--acillazm-zkb.net',
+      'api.xn--acillazm-zkb.net',
       '213.142.159.11',
       'api.acillazim.com',
       'dev-api.acillazim.com',
@@ -51,7 +55,7 @@ const nextConfig = {
   async rewrites() {
     const backend = (
       process.env.BACKEND_INTERNAL_URL ||
-      'http://acillazim-backend:8080'
+      'https://api.xn--acillazm-zkb.net'
     ).replace(/\/$/, '');
     return [
       {
