@@ -30,7 +30,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Next.js standalone build oluştur (BuildKit cache ile hızlandırılmış)
 RUN --mount=type=cache,target=/app/.next/cache \
-    npm run build
+    npm run build:next
 
 # ==========================================
 # 3. Çalıştırma (Runner) Aşaması
