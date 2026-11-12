@@ -8,9 +8,6 @@ import {
   FaUser, 
   FaCalendarAlt, 
   FaLayerGroup, 
-  FaCopy, 
-  FaCheck, 
-  FaWhatsapp, 
   FaExclamationCircle,
   FaHome
 } from 'react-icons/fa';
@@ -160,21 +157,7 @@ export default function SharedFavoritesCatchAllPage() {
               </div>
             </div>
 
-            {/* Aksiyon Butonları */}
-            <div className={styles.actionBtns}>
-              <button onClick={handleWhatsApp} className={styles.shareBtn} type="button">
-                <FaWhatsapp size={18} />
-                <span>WhatsApp ile Paylaş</span>
-              </button>
-              <button 
-                onClick={handleCopy} 
-                className={`${styles.copyBtn} ${copied ? styles.copyBtnSuccess : ''}`} 
-                type="button"
-              >
-                {copied ? <FaCheck size={15} /> : <FaCopy size={15} />}
-                <span>{copied ? 'Bağlantı Kopyalandı' : 'Linki Kopyala'}</span>
-              </button>
-            </div>
+            {/* Aksiyon Butonları kaldırıldı - kurumsal ve sade başlık yapısı */}
           </div>
         </div>
 

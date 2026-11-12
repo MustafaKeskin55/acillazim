@@ -4,12 +4,19 @@
   @apply box-border;
   min-height: 85vh;
   background-color: #f8fafc;
-  padding: 1rem 1.25rem 4rem;
+  padding: calc(var(--navbar-height-desktop, 80px) + 24px) 1.25rem 4rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: calc(var(--navbar-height-mobile, 60px) + env(safe-area-inset-top, 0px) + 16px);
+    padding-bottom: calc(var(--app-main-pad-bottom-mobile, 92px) + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 .inner {
   @apply mx-auto w-full box-border;
-  max-width: 1240px;
+  max-width: 1400px;
 }
 
 /* ── Kurumsal Liste Başlık Kartı ── */
