@@ -125,28 +125,32 @@ export default function SharedFavoritesCatchAllPage() {
     <div className={styles.container}>
       <Toaster position="top-center" />
       <div className={styles.inner}>
-        {/* Kurumsal Sade Başlık Barı (Dashboard Favoriler & Acillazım Tasarım Sistemi) */}
-        <div className={styles.headerBar}>
+        {/* Acillazım 2026 Kurumsal Liste Başlığı */}
+        <div className={styles.headerCard}>
           <div className={styles.headerInfo}>
             <div className={styles.titleRow}>
               <div className={styles.titleIconBox}>
-                <FaHeart />
+                <FaHeart className={styles.heartIcon} />
               </div>
-              <h1 className={styles.pageTitle}>{data.listName || 'Favori İlanlar'}</h1>
-              <span className={styles.countBadge}>
-                {data.items?.length || 0} İlan
-              </span>
-            </div>
-            <div className={styles.metaRow}>
-              {data.sharedBy && (
-                <span className={styles.metaText}>
-                  Paylaşan: <strong>{data.sharedBy}</strong>
-                </span>
-              )}
-              {data.sharedBy && formattedDate && <span className={styles.metaDot}>&bull;</span>}
-              {formattedDate && (
-                <span className={styles.metaText}>{formattedDate}</span>
-              )}
+              <div className={styles.titleTextGroup}>
+                <div className={styles.titleTopLine}>
+                  <h1 className={styles.pageTitle}>{data.listName || 'Favori İlanlar'}</h1>
+                  <span className={styles.countBadge}>
+                    {data.items?.length || 0} İlan
+                  </span>
+                </div>
+                <div className={styles.metaRow}>
+                  {data.sharedBy && (
+                    <span className={styles.metaText}>
+                      Paylaşan: <strong>{data.sharedBy}</strong>
+                    </span>
+                  )}
+                  {data.sharedBy && formattedDate && <span className={styles.metaDot}>•</span>}
+                  {formattedDate && (
+                    <span className={styles.metaText}>{formattedDate}</span>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>

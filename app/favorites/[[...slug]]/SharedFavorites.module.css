@@ -15,33 +15,80 @@
 }
 
 .inner {
-  @apply mx-auto w-full box-border;
-  max-width: 1400px;
+  @apply mx-auto box-border flex flex-col;
+  width: fit-content;
+  max-width: 100%;
 }
 
-/* ── Kurumsal Sade Başlık Barı (Dashboard ve Sistem Uyumu) ── */
-.headerBar {
-  @apply flex items-center justify-between flex-wrap gap-3 pb-3.5 mb-6 border-0 border-b border-solid border-slate-200;
+/* ── Acillazım 2026 Kurumsal Liste Başlığı ── */
+.headerCard {
+  @apply relative flex items-center justify-between w-full box-border overflow-hidden;
+  margin-bottom: 24px;
+  padding: 22px 26px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.headerCard::before {
+  @apply absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #003466 0%, #004B87 55%, #ff7a00 100%);
 }
 
 .headerInfo {
-  @apply flex flex-col gap-1;
+  @apply flex flex-col items-start flex-1;
+  min-width: 0;
 }
 
 .titleRow {
-  @apply flex items-center gap-2.5 flex-wrap;
+  @apply flex items-center;
+  gap: 16px;
+  min-width: 0;
 }
 
 .titleIconBox {
-  @apply w-9 h-9 rounded-xl flex items-center justify-center text-sm shrink-0 bg-orange-50 text-brand-accent border border-solid border-orange-200/80;
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 16px -3px rgba(0, 52, 102, 0.28);
+}
+
+.heartIcon {
+  color: #ff7a00;
+  font-size: 20px;
+}
+
+.titleTextGroup {
+  @apply flex flex-col;
+  gap: 4px;
+  min-width: 0;
+}
+
+.titleTopLine {
+  @apply flex items-center flex-wrap;
+  gap: 10px;
 }
 
 .pageTitle {
-  @apply m-0 text-xl font-bold text-slate-900 tracking-tight leading-snug;
+  @apply m-0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 
 .countBadge {
-  @apply inline-flex items-center py-0.5 px-2.5 rounded-full bg-slate-100 text-slate-600 border border-solid border-slate-200/80 text-xs font-semibold tracking-wide whitespace-nowrap;
+  @apply inline-flex items-center py-0.5 px-2.5 rounded-full bg-orange-50 text-orange-700 border border-solid border-orange-200 text-xs font-bold tracking-wide whitespace-nowrap;
 }
 
 .metaRow {
@@ -62,7 +109,7 @@
 
 /* ── İlan Kartları Izgarası (Ayrık Olma Sorunu Çözüldü) ── */
 .listingsGrid {
-  @apply justify-start w-full box-border;
+  @apply w-full box-border;
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w, 200px));
   gap: var(--alz-listing-card-gap, 16px);
