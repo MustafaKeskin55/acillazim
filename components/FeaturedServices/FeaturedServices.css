@@ -1,0 +1,172 @@
+/* =============================================================
+   FeaturedServices.css
+   Öne Çıkan Hizmetler — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler ve responsive davranış birebir korunmuştur.
+   ============================================================= */
+
+.service-page-one-cikan-hizmetler-scope {
+  @apply w-full;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services {
+  @apply w-full p-0 bg-transparent m-0 flex flex-col items-stretch relative max-w-full box-border;
+}
+
+/* Başlık + buton satırı */
+.service-page-one-cikan-hizmetler-scope .featured-services-header {
+  @apply flex items-center justify-between mb-6 p-0 w-full relative text-left gap-4 flex-wrap;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services-header h3 {
+  @apply font-bold text-brand-ink relative inline-block leading-tight text-left m-0 pb-[14px];
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem) !important;
+  letter-spacing: -0.03em !important;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services-header h3::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-[56px] h-1 rounded-full;
+  background: linear-gradient(90deg, #FF6B00 0%, #FF3D6E 100%);
+  box-shadow: 0 2px 6px -2px rgba(255, 107, 0, 0.5);
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services-header button {
+  @apply inline-flex items-center gap-2 bg-brand-ink text-white border border-brand-ink rounded-full py-[10px] px-5 text-[13px] font-semibold cursor-pointer relative whitespace-nowrap;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services-header button:hover {
+  @apply bg-brand-accent border-brand-accent -translate-y-0.5;
+  box-shadow: 0 10px 20px -8px rgba(255, 107, 0, 0.5);
+}
+
+.service-page-one-cikan-hizmetler-scope .button-icon {
+  @apply text-[14px];
+}
+
+/* Kart ızgarası: Tek kaynak --alz-listing-card-w token'ı */
+.service-page-one-cikan-hizmetler-scope .featured-services-container {
+  @apply grid p-0 justify-center w-full;
+  grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w)) !important;
+  gap: var(--alz-listing-card-gap) !important;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-service-card-wrapper {
+  @apply w-full max-w-full min-w-0;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-service-card-wrapper .prodcard-wrapper,
+.service-page-one-cikan-hizmetler-scope .featured-service-card-wrapper .prodcard-container {
+  @apply w-full mx-auto;
+  max-width: var(--alz-listing-card-w) !important;
+}
+
+.service-page-one-cikan-hizmetler-scope .featured-services-loading {
+  @apply w-full min-h-[300px] flex flex-col justify-center items-center text-brand-muted text-[14px];
+  font-family: var(--font-body);
+}
+
+.service-page-one-cikan-hizmetler-scope .loading-spinner {
+  @apply w-9 h-9 rounded-full mb-3.5;
+  border: 3px solid rgba(0, 52, 102, 0.1);
+  border-top-color: #FF6B00;
+  animation: featured-services-loading-spin 1s linear infinite;
+}
+
+@keyframes featured-services-loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-wrapper {
+  @apply w-full p-0 mx-auto flex justify-center items-center text-center;
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal {
+  @apply w-full flex flex-col justify-center items-center py-9 pb-5 px-0 bg-transparent text-center mx-auto;
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal .empty-state-column {
+  @apply w-full max-w-[500px] text-center flex flex-col items-center justify-center gap-[18px] mx-auto;
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal h3 {
+  @apply font-bold text-brand-ink m-0 text-center w-full text-[1.4rem];
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.02em !important;
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal p {
+  @apply hidden;
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal button {
+  @apply inline-flex items-center justify-center mx-auto gap-2.5 text-white border-0 rounded-full py-3.5 px-7 text-[15px] font-bold cursor-pointer whitespace-nowrap;
+  font-family: var(--font-body);
+  background: linear-gradient(120deg, #FF6B00 0%, #FF3D6E 100%);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px -6px rgba(255, 107, 0, 0.4);
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal button:hover {
+  @apply -translate-y-0.5;
+  box-shadow: 0 12px 28px -6px rgba(255, 107, 0, 0.55);
+}
+
+.service-page-one-cikan-hizmetler-scope .empty-state-minimal button:active {
+  @apply translate-y-0;
+}
+
+.service-page-one-cikan-hizmetler-scope .button-handshake-icon {
+  @apply text-[20px] mr-0.5;
+}
+
+/* =============================================================
+   Responsive Düzenlemeler — Mobil Yatay Scroll & Esneklik
+   ============================================================= */
+@media (max-width: 520px) {
+  .service-page-one-cikan-hizmetler-scope .featured-services-container {
+    @apply flex flex-nowrap overflow-x-auto justify-start m-0;
+    -webkit-overflow-scrolling: touch;
+    grid-template-columns: unset !important;
+    gap: var(--alz-listing-card-gap-scroll) !important;
+    padding: 4px 2px 8px !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+  }
+  .service-page-one-cikan-hizmetler-scope .featured-services-container::-webkit-scrollbar {
+    @apply hidden;
+  }
+  .service-page-one-cikan-hizmetler-scope .featured-service-card-wrapper {
+    @apply m-0;
+    flex: 0 0 var(--alz-listing-card-w) !important;
+    width: var(--alz-listing-card-w) !important;
+    min-width: var(--alz-listing-card-w) !important;
+    max-width: var(--alz-listing-card-w) !important;
+    scroll-snap-align: start;
+  }
+  .service-page-one-cikan-hizmetler-scope .featured-services-header {
+    @apply px-[15px] mb-5 flex-col items-start gap-3;
+  }
+  .service-page-one-cikan-hizmetler-scope .featured-services-header h3 {
+    @apply text-[1.2rem] pb-2.5;
+  }
+  .service-page-one-cikan-hizmetler-scope .featured-services-header button {
+    @apply text-[12px] py-2 px-4 static mt-0 self-start transform-none;
+  }
+  .service-page-one-cikan-hizmetler-scope .empty-state-minimal {
+    @apply py-[30px] px-[15px] justify-center text-center;
+  }
+  .service-page-one-cikan-hizmetler-scope .empty-state-minimal .empty-state-column {
+    @apply p-0 gap-4 items-center text-center mx-auto;
+  }
+  .service-page-one-cikan-hizmetler-scope .empty-state-minimal h3 {
+    @apply text-[1.15rem] text-center;
+  }
+  .service-page-one-cikan-hizmetler-scope .empty-state-minimal button {
+    @apply w-auto py-3 px-[22px] text-[14px];
+  }
+}

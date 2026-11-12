@@ -1,0 +1,14 @@
+.sales-chart {
+  @apply w-full;
+  height: 300px;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.chart-placeholder {
+  @apply w-full h-full flex items-center justify-center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
+} 

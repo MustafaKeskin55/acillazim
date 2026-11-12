@@ -1,0 +1,198 @@
+/* PortfolioTab Styles */
+.portfolio-tab {
+  @apply flex flex-col;
+  gap: 2rem;
+}
+
+.portfolio-tab h3 {
+  margin: 0 0 1.5rem 0;
+  color: #003466;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Gallery Grid Styles */
+.portfolio-tab__gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-tab__gallery-item {
+  @apply relative overflow-hidden cursor-pointer;
+  border-radius: 15px;
+  aspect-ratio: 4/3;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 52, 102, 0.05);
+}
+
+.portfolio-tab__gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 52, 102, 0.15);
+  border-color: #ff8c00;
+}
+
+.portfolio-tab__gallery-item img {
+  @apply w-full h-full object-cover;
+  transition: all 0.3s ease;
+}
+
+.portfolio-tab__gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Protected Image - Filigran koruması */
+.portfolio-tab__gallery-item .protected-image {
+  @apply select-none pointer-events-auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Ek filigran koruması - Merkezi filigran */
+.portfolio-tab__gallery-item::before {
+  @apply absolute pointer-events-none;
+  content: 'Acillazım.com';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  color: rgba(255, 255, 255, 0.08);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Watermark - Filigran */
+.portfolio-tab__gallery-watermark-container {
+  @apply absolute pointer-events-none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  padding: 1.25rem 0.75rem 0.75rem;
+}
+
+.portfolio-tab__gallery-watermark {
+  @apply text-right;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0.6;
+  letter-spacing: 0.2px;
+}
+
+/* Gallery Overlay */
+.portfolio-tab__gallery-overlay {
+  @apply absolute w-full h-full flex items-center justify-center;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(0, 52, 102, 0.7), rgba(255, 140, 0, 0.7));
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-tab__gallery-item:hover .portfolio-tab__gallery-overlay {
+  opacity: 1;
+}
+
+.portfolio-tab__gallery-zoom {
+  @apply border-0 rounded-full cursor-pointer flex items-center justify-center;
+  background: white;
+  width: 50px;
+  height: 50px;
+  color: #003466;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-tab__gallery-zoom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* No Gallery State */
+.portfolio-tab__no-gallery {
+  @apply flex items-center justify-center;
+  padding: 4rem 2rem;
+  background: rgba(248, 250, 252, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 52, 102, 0.05);
+}
+
+.portfolio-tab__no-gallery-content {
+  @apply text-center;
+  color: #6c757d;
+}
+
+.portfolio-tab__no-gallery-content i {
+  font-size: 3rem;
+  color: #ff8c00;
+  margin-bottom: 1rem;
+}
+
+.portfolio-tab__no-gallery-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #003466;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.portfolio-tab__no-gallery-content p {
+  @apply m-0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-tab__gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-tab__gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .portfolio-tab__gallery-zoom {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .portfolio-tab__gallery-item::before {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-tab__gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .portfolio-tab__gallery-zoom {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .portfolio-tab__gallery-watermark {
+    font-size: 0.625rem;
+  }
+  
+  .portfolio-tab__gallery-item::before {
+    font-size: 1rem;
+  }
+}
+

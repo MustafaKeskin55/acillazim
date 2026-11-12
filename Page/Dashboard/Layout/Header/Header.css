@@ -1,0 +1,181 @@
+/* ===================================================================
+   Header.css — Tailwind CSS (@apply Mimarisi)
+   Acillazım Dashboard Header (Eşit Köşeli Butonlar & Sağda Açılır Arama)
+   =================================================================== */
+
+.dashboard-header {
+  @apply fixed flex items-center bg-white h-[70px] px-6 shadow-sm border-b border-slate-100 top-0 right-0 z-[998] transition-all duration-[250ms] ease-in-out box-border;
+}
+
+.dashboard-header .header-content {
+  @apply flex items-center justify-between w-full mx-auto h-full gap-4;
+}
+
+/* ===================================================================
+   1. SOL BÖLÜM (Yalnızca Mobilde Hamburger Butonu, Masaüstünde Gizli)
+   =================================================================== */
+.dashboard-header .header-left {
+  @apply flex items-center flex-none;
+}
+
+/* Hamburger Menü Butonu Masaüstünde KESİNLİKLE GİZLİDİR */
+.dashboard-header .header-nav-toggle-btn {
+  @apply hidden !important;
+}
+
+/* ===================================================================
+   2. SAĞ BÖLÜM (Arama İkonu, Eşit Köşeli Butonlar & Profil)
+   =================================================================== */
+.dashboard-header .header-right {
+  @apply flex items-center gap-2.5 flex-shrink-0 justify-end;
+}
+
+/* Eşit Köşeli Kurumsal Aksiyon Butonları (42x42px, Radius: 10px) */
+.dashboard-header .header-action-btn {
+  @apply flex items-center justify-center cursor-pointer relative w-[42px] h-[42px] min-w-[42px] min-h-[42px] rounded-[10px] border border-solid border-slate-200 bg-white text-slate-800 shadow-sm transition-all duration-150 p-0 m-0 box-border outline-none appearance-none leading-none hover:bg-slate-50 hover:border-slate-300 hover:text-brand-accent hover:-translate-y-px hover:shadow-md active:scale-95;
+}
+
+.dashboard-header .action-btn-icon {
+  @apply text-[20px] transition-colors duration-150 leading-none;
+}
+
+/* Bildirim & Mesaj Rozeti */
+.dashboard-header .action-badge {
+  @apply absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 bg-brand-accent text-white text-[11px] font-bold rounded-full border-2 border-white shadow-[0_2px_5px_rgba(255,107,0,0.35)] flex items-center justify-center;
+}
+
+/* Bildirim Butonu & Dropdown Konumu */
+.dashboard-header .notifications-btn-wrapper {
+  @apply relative;
+}
+
+.dashboard-header .notifications-btn-wrapper,
+.dashboard-header .notifications-btn-wrapper:hover,
+.dashboard-header .notifications-btn-wrapper:active {
+  @apply !transform-none;
+}
+
+.dashboard-header .notifications-trigger-btn {
+  @apply flex items-center justify-center w-full h-full border-0 bg-transparent cursor-pointer p-0 text-inherit;
+}
+
+/* ===================================================================
+   3. SAĞDA AÇILIR ARAMA ALANI
+   =================================================================== */
+.dashboard-header .header-search-form {
+  @apply flex items-center h-[42px] w-[340px] max-w-full bg-slate-50 border border-solid border-slate-300 rounded-[10px] pl-3 pr-2.5 gap-2 box-border transition-all duration-200 focus-within:bg-white focus-within:border-brand-accent focus-within:ring-2 focus-within:ring-brand-accent/20;
+  animation: search-slide-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dashboard-header .header-search-form-icon {
+  @apply text-slate-500 text-[15px] shrink-0;
+}
+
+.dashboard-header .header-search-form-input {
+  @apply flex-1 border-0 outline-none bg-transparent text-[13.5px] text-slate-900 font-sans min-w-0 p-0 placeholder:text-slate-400 placeholder:font-medium;
+}
+
+.dashboard-header .header-search-form-close {
+  @apply flex items-center justify-center w-6 h-6 rounded-md border-0 bg-transparent text-slate-500 text-[13px] cursor-pointer p-0 transition-all duration-150 shrink-0 hover:bg-slate-200 hover:text-slate-900;
+}
+
+@keyframes search-slide-in {
+  from {
+    opacity: 0;
+    transform: scaleX(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+/* ===================================================================
+   4. KULLANICI PROFİLİ KAPSÜLÜ
+   =================================================================== */
+.dashboard-header .header-user-profile {
+  @apply flex items-center gap-2.5 py-1 pr-3 pl-1.5 rounded-xl border border-solid border-slate-200 bg-white shadow-sm cursor-pointer transition-all duration-150 select-none h-[42px] box-border hover:bg-slate-50 hover:border-slate-300 hover:-translate-y-px;
+}
+
+.dashboard-header .user-avatar-wrap {
+  @apply relative flex items-center justify-center w-8 h-8 shrink-0;
+}
+
+.dashboard-header .user-avatar-img {
+  @apply w-full h-full rounded-full object-cover;
+}
+
+.dashboard-header .user-status-dot {
+  @apply absolute -bottom-px -right-px w-[8.5px] h-[8.5px] bg-emerald-500 border-[1.5px] border-white rounded-full;
+}
+
+.dashboard-header .user-info-text {
+  @apply flex flex-col max-w-[140px];
+}
+
+.dashboard-header .user-name-span {
+  @apply font-bold text-slate-900 text-[13px] leading-tight truncate whitespace-nowrap;
+}
+
+.dashboard-header .user-email-span {
+  @apply text-[11px] text-slate-500 truncate whitespace-nowrap;
+}
+
+/* ===================================================================
+   5. RESPONSIVE DÜZENLEME (TABLET & MOBİL ≤ 1024px)
+   =================================================================== */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    @apply h-[70px] px-4 w-full !left-0 !right-0;
+  }
+
+  .dashboard-header .header-nav-toggle-btn {
+    @apply !flex;
+  }
+
+  .dashboard-header .header-right {
+    @apply gap-2;
+  }
+
+  .dashboard-header .header-user-profile {
+    @apply p-0 gap-0 rounded-[10px] w-[42px] h-[42px] min-w-[42px] min-h-[42px] justify-center;
+  }
+
+  .dashboard-header .user-info-text {
+    @apply hidden;
+  }
+
+  .dashboard-header.header-search-open .hide-on-mobile-search {
+    @apply !hidden;
+  }
+
+  .dashboard-header.header-search-open .header-right {
+    @apply flex-1 min-w-0;
+  }
+
+  .dashboard-header.header-search-open .header-search-form {
+    @apply flex-1 w-full max-w-none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    @apply px-3;
+  }
+
+  .dashboard-header .header-right {
+    @apply gap-1.5;
+  }
+
+  .dashboard-header .header-action-btn {
+    @apply w-10 h-10 min-w-[40px] min-h-[40px];
+  }
+
+  .dashboard-header .action-btn-icon {
+    @apply text-lg;
+  }
+
+  .dashboard-header .header-user-profile {
+    @apply w-10 h-10 min-w-[40px] min-h-[40px];
+  }
+}

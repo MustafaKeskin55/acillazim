@@ -1,0 +1,400 @@
+/* ==========================================================================
+   Sidebar.css — Tailwind CSS (@apply Mimarisi)
+   Acillazım Dashboard Yan Menü (Kurumsal Lacivert, Turuncu Vurgu, Sıfır Scrollbar)
+   ========================================================================== */
+
+.dashboard-sidebar {
+  @apply fixed flex flex-col left-0 top-0 bottom-0 z-[1100] w-[280px] bg-brand-deep border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.16)] transition-all duration-300 ease-in-out font-display;
+  overflow: visible !important;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+}
+
+/* Masaüstü Daraltılmış (Collapsed) Durum */
+.dashboard-sidebar.collapsed {
+  @apply w-[84px];
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar Header (Logo & Toggle Butonu)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar .dashboard-sidebar-header {
+  @apply flex items-center justify-between flex-shrink-0 relative h-[70px] pl-5 pr-4 border-b border-white/10 bg-transparent;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-header {
+  @apply flex items-center p-0 relative h-[70px] min-h-[70px] pl-[18px] pr-4 justify-start;
+}
+
+.dashboard-sidebar .dashboard-sidebar-logo-link {
+  @apply flex items-center no-underline min-w-0 transition-opacity duration-150 hover:opacity-90;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-logo-link {
+  @apply flex justify-center items-center m-0 w-12;
+}
+
+/* Geniş Logo: Menü açıkken */
+.dashboard-sidebar .dashboard-sidebar-logo-wide {
+  @apply block object-contain h-[38px] w-auto max-w-[175px] bg-transparent;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-logo-wide {
+  @apply hidden !important;
+}
+
+/* Kompakt Logo: Menü daraltıldığında */
+.dashboard-sidebar .dashboard-sidebar-logo-compact {
+  @apply hidden object-contain h-8 w-8;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-logo-compact {
+  @apply block mx-auto !important;
+}
+
+/* Menü Aç/Kapat Butonu (Geniş Açık Durumda) */
+.dashboard-sidebar:not(.collapsed) .dashboard-sidebar-toggle {
+  @apply inline-flex items-center justify-center cursor-pointer text-white w-9 h-9 min-w-[36px] rounded-[10px] border border-white/15 bg-white/10 text-sm transition-all duration-150 backdrop-blur-md hover:bg-brand-accent/20 hover:border-brand-accent/45 hover:text-[#ff8c00] hover:-translate-y-px active:scale-95;
+}
+
+/* Daraltılmış Durumda Kenardan Taşan Toggle Butonu */
+.dashboard-sidebar.collapsed .dashboard-sidebar-toggle {
+  @apply inline-flex items-center justify-center cursor-pointer absolute -right-3 top-[23px] w-6 h-6 min-w-[24px] rounded-full bg-brand-deep border-2 border-white text-white text-[11px] shadow-[0_2px_8px_rgba(0,0,0,0.22)] z-[1200] transition-all duration-200 hover:bg-brand-accent hover:border-white hover:text-white hover:scale-110 hover:shadow-[0_4px_14px_rgba(255,107,0,0.45)] active:scale-95 !important;
+}
+
+.sidebar-toggle-desktop {
+  @apply inline-flex items-center justify-center;
+}
+
+.sidebar-toggle-mobile {
+  @apply hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar İçerik (Görsel Scrollbar Tamamen Gizli, Akıcı Kaydırma)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar,
+.dashboard-sidebar .dashboard-sidebar-content {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.dashboard-sidebar::-webkit-scrollbar,
+.dashboard-sidebar .dashboard-sidebar-content::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+.dashboard-sidebar .dashboard-sidebar-content {
+  @apply overflow-y-auto overflow-x-hidden flex-1 min-h-0 pt-3.5 px-2.5 pb-5 overscroll-contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --------------------------------------------------------------------------
+   En Üstteki Ana Sayfa Hızlı Butonu
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar .dashboard-sidebar-top-action {
+  @apply mb-3 px-0.5;
+}
+
+.dashboard-sidebar .dashboard-sidebar-site-home {
+  @apply flex items-center no-underline text-white font-semibold gap-3 py-2.5 px-3.5 bg-white/10 border border-white/15 rounded-[10px] text-[13.5px] shadow-[0_2px_6px_rgba(0,0,0,0.12)] transition-all duration-150 hover:bg-brand-accent/20 hover:border-brand-accent/45 hover:text-white hover:translate-x-0.5;
+}
+
+.dashboard-sidebar .dashboard-sidebar-site-home .dashboard-sidebar-nav-icon {
+  @apply text-brand-accent;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-site-home {
+  @apply justify-center mx-auto p-0 py-3 w-12 !translate-x-0;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-site-home .dashboard-sidebar-nav-label {
+  @apply hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Menü Bölüm Başlıkları
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar .dashboard-sidebar-section {
+  @apply mb-4;
+}
+
+.dashboard-sidebar .dashboard-sidebar-section-title {
+  @apply uppercase select-none font-bold py-1.5 px-3.5 text-[11px] text-white/50 tracking-wider;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-section-title {
+  @apply hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Menü Öğeleri (Nav Items)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar .dashboard-sidebar-nav-item {
+  @apply relative flex items-center no-underline select-none font-medium gap-3 py-2.5 px-3.5 my-0.5 mx-0.5 rounded-[10px] text-white/80 text-[13.5px] border-0 bg-transparent cursor-pointer text-left w-[calc(100%-4px)] box-border transition-all duration-150 hover:bg-white/10 hover:text-white hover:translate-x-0.5;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-icon {
+  @apply inline-flex items-center justify-center flex-shrink-0 w-5 h-5 text-[17px] text-white/80 transition-all duration-150;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-label {
+  @apply flex-1 whitespace-nowrap overflow-hidden text-ellipsis flex items-center justify-between;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item:hover .dashboard-sidebar-nav-icon {
+  @apply text-brand-accent;
+}
+
+/* Aktif (Seçili) Durum */
+.dashboard-sidebar .dashboard-sidebar-nav-item.active {
+  @apply font-semibold text-white bg-black/25 border border-white/10 shadow-[0_2px_6px_rgba(0,0,0,0.16)];
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item.active .dashboard-sidebar-nav-icon {
+  @apply text-brand-accent;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item.active::before {
+  @apply absolute left-[3px] top-[calc(50%-9px)] w-[3.5px] h-[18px] bg-brand-accent rounded;
+  content: '';
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item.disabled {
+  @apply opacity-40 cursor-not-allowed pointer-events-none;
+}
+
+.dashboard-sidebar .dashboard-sidebar-notification-badge {
+  @apply inline-flex items-center justify-center text-white font-bold leading-none ml-2 min-w-[19px] h-[19px] py-0 px-1.5 bg-brand-accent rounded-full text-[11px];
+}
+
+/* --------------------------------------------------------------------------
+   Profil Akordeon Menüsü
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar-accordion-group {
+  @apply flex flex-col;
+}
+
+.dashboard-sidebar-chevron {
+  @apply text-[13px] text-white/65 transition-transform duration-200 ease-in-out shrink-0 ml-2;
+}
+
+.dashboard-sidebar-chevron.rotated {
+  @apply rotate-180 text-brand-accent;
+}
+
+.dashboard-sidebar-subnav-container {
+  @apply flex flex-col gap-1 py-1.5 px-0 pb-2 mt-0.5 mr-1 mb-2 ml-3 transition-all duration-200;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-subnav-container,
+.dashboard-sidebar.collapsed .dashboard-sidebar-subnav-list {
+  @apply hidden !important;
+}
+
+.dashboard-sidebar-subgroup-block {
+  @apply flex flex-col mb-0.5;
+}
+
+.dashboard-sidebar-subgroup-header {
+  @apply flex items-center justify-between w-full border-0 bg-transparent cursor-pointer py-2 px-2.5 rounded-lg transition-all duration-200 select-none text-left min-h-[36px] hover:bg-white/10;
+}
+
+.dashboard-sidebar-subgroup-header.has-active {
+  @apply bg-brand-accent/15;
+}
+
+.dashboard-sidebar-subgroup-title-wrap {
+  @apply flex items-center gap-2.5 min-w-0;
+}
+
+.dashboard-sidebar-subgroup-icon {
+  @apply text-[14.5px] text-white/65 shrink-0 transition-colors duration-150;
+}
+
+.dashboard-sidebar-subgroup-header.has-active .dashboard-sidebar-subgroup-icon,
+.dashboard-sidebar-subgroup-header:hover .dashboard-sidebar-subgroup-icon {
+  @apply text-brand-accent;
+}
+
+.dashboard-sidebar-subgroup-title {
+  @apply text-[13px] font-semibold text-white/90 leading-snug whitespace-nowrap overflow-hidden text-ellipsis tracking-wide;
+}
+
+.dashboard-sidebar-subgroup-meta {
+  @apply flex items-center gap-1.5 shrink-0 ml-2;
+}
+
+.dashboard-sidebar-subgroup-badge {
+  @apply text-[10px] font-bold text-emerald-400 bg-emerald-500/15 border border-emerald-500/35 rounded-full py-0.5 px-2 leading-tight tracking-wide;
+}
+
+.dashboard-sidebar-subgroup-chevron {
+  @apply text-[11px] text-white/50 transition-transform duration-200 ease-in-out;
+}
+
+.dashboard-sidebar-subgroup-chevron.rotated {
+  @apply rotate-180 text-brand-accent;
+}
+
+/* Bölüm Altındaki Alt Sekmeler */
+.dashboard-sidebar-subnav-list {
+  @apply flex flex-col gap-0.5 pt-1 px-0 pb-1.5 mt-1 mr-0.5 mb-1.5 ml-4 border-l border-white/15 transition-all duration-200;
+}
+
+.dashboard-sidebar-subnav-btn {
+  @apply flex items-center gap-2.5 w-full border-0 bg-transparent cursor-pointer text-left py-1.5 px-2.5 pl-3.5 rounded-md transition-all duration-150 select-none min-h-[34px];
+}
+
+.dashboard-sidebar-subnav-indicator {
+  @apply w-1.5 h-1.5 rounded-full bg-white/35 shrink-0 transition-all duration-200;
+}
+
+.dashboard-sidebar-subnav-label {
+  @apply text-[12.5px] font-medium text-white/80 leading-snug whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-150;
+}
+
+.dashboard-sidebar-subnav-btn:hover:not(.active) {
+  @apply bg-white/10;
+}
+
+.dashboard-sidebar-subnav-btn:hover:not(.active) .dashboard-sidebar-subnav-label {
+  @apply text-white;
+}
+
+.dashboard-sidebar-subnav-btn:hover:not(.active) .dashboard-sidebar-subnav-indicator {
+  @apply bg-brand-accent;
+}
+
+.dashboard-sidebar-subnav-btn.active {
+  @apply bg-brand-accent/20;
+}
+
+.dashboard-sidebar-subnav-btn.active .dashboard-sidebar-subnav-indicator {
+  @apply bg-brand-accent shadow-[0_0_7px_rgba(255,107,0,0.7)] scale-125;
+}
+
+.dashboard-sidebar-subnav-btn.active .dashboard-sidebar-subnav-label {
+  @apply text-white font-semibold;
+}
+
+/* Daraltılmış Sidebar İçi Öğeler */
+.dashboard-sidebar.collapsed .dashboard-sidebar-nav-item {
+  @apply justify-center mx-auto py-2.5 px-0 my-1 mx-auto w-12 !translate-x-0;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-nav-label {
+  @apply hidden;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-nav-item.active::before {
+  @apply left-0.5;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar Footer (Çıkış Yap vb.)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar .dashboard-sidebar-footer {
+  @apply flex flex-col flex-shrink-0 bg-transparent gap-0.5 p-2.5 pt-3 border-t border-white/10;
+  padding-bottom: max(14px, calc(8px + env(safe-area-inset-bottom, 0px)));
+}
+
+.dashboard-sidebar .dashboard-sidebar-footer .dashboard-sidebar-nav-item {
+  @apply py-2 px-3.5 my-px mx-0.5;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item.logout {
+  @apply cursor-pointer text-white/80 mt-0.5 rounded-[10px] hover:bg-brand-accent/15 hover:text-white;
+}
+
+.dashboard-sidebar .dashboard-sidebar-nav-item.logout .dashboard-sidebar-nav-icon {
+  @apply text-brand-accent;
+}
+
+.dashboard-sidebar.collapsed .dashboard-sidebar-footer .dashboard-sidebar-nav-item {
+  @apply w-12 my-0.5 mx-auto py-2.5 px-0;
+}
+
+/* --------------------------------------------------------------------------
+   Mobil ve Tablet Çekmece Davranışı (≤ 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .dashboard-sidebar {
+    @apply max-w-full translate-x-0 shadow-[6px_0_32px_rgba(0,0,0,0.32)];
+    width: min(290px, 84vw);
+  }
+
+  .dashboard-sidebar.collapsed {
+    @apply pointer-events-none -translate-x-full shadow-none !important;
+    width: min(290px, 84vw);
+    max-width: 100%;
+  }
+
+  .dashboard-sidebar:not(.collapsed) {
+    @apply pointer-events-auto translate-x-0;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-header {
+    @apply h-16 px-4;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-logo-wide {
+    @apply block h-[34px] !important;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-logo-compact {
+    @apply hidden !important;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-nav-label {
+    @apply flex !important;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-section-title {
+    @apply block !important;
+  }
+
+  .dashboard-sidebar.collapsed .dashboard-sidebar-toggle {
+    @apply hidden !important;
+  }
+
+  .sidebar-toggle-desktop {
+    @apply hidden;
+  }
+
+  .sidebar-toggle-mobile {
+    @apply inline-flex items-center justify-center text-white text-[15px];
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-nav-item {
+    @apply py-3 px-3.5 text-sm;
+  }
+
+  .dashboard-sidebar .dashboard-sidebar-nav-icon {
+    @apply text-lg;
+  }
+
+  .dashboard-sidebar-subgroup-header {
+    @apply py-2.5 px-3 min-h-[42px];
+  }
+
+  .dashboard-sidebar-subgroup-icon {
+    @apply text-base;
+  }
+
+  .dashboard-sidebar-subgroup-title {
+    @apply text-[13.5px];
+  }
+
+  .dashboard-sidebar-subnav-btn {
+    @apply py-2 px-3 pl-4 min-h-[38px];
+  }
+
+  .dashboard-sidebar-subnav-label {
+    @apply text-[13px];
+  }
+}

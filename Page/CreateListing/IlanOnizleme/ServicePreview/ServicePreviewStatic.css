@@ -1,0 +1,240 @@
+/* ===================================
+   SERVICE PREVIEW STATIC - MAIN STYLES
+   Ana container ve layout stilleri
+   Bileşenler kendi CSS dosyalarında tanımlanmıştır
+   ================================== */
+
+/* Ana Container - Tamamen İzole */
+.service-preview-static {
+  @apply w-full;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Loading State */
+.service-preview-static-loading {
+  @apply flex justify-center items-center;
+  min-height: 50vh;
+}
+
+.service-preview-static-error {
+  @apply text-center;
+  color: #6c757d;
+  padding: 2rem;
+}
+
+.service-preview-static-error h2 {
+  color: #003466;
+  margin-bottom: 1rem;
+}
+
+/* Content Area - 3 kolonlu yapı: Reklam | Main | Sidebar */
+.service-preview-static__content {
+  @apply mx-auto relative;
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 2rem;
+  max-width: 1400px;
+  padding: 2rem 1.5rem;
+}
+
+/* Grid item sıralaması - JSX sıralamasına uygun */
+.service-preview-static__ad-sidebar {
+  grid-column: 1;
+}
+
+.service-preview-static__main {
+  grid-column: 2;
+}
+
+.service-preview-static__sidebar {
+  grid-column: 3;
+}
+
+/* Left Advertisement Sidebar - En Sol */
+.service-preview-static__ad-sidebar {
+  @apply w-full static;
+  height: fit-content;
+ 
+}
+
+.service-preview-static__vertical-ad {
+  @apply w-full flex items-center justify-center;
+  height: 600px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  border: 2px dashed rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+}
+
+.service-preview-static__vertical-ad:hover {
+  border-color: #003466;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.service-preview-static__ad-placeholder {
+  @apply text-center;
+  color: #64748b;
+  padding: 2rem;
+}
+
+.service-preview-static__ad-content {
+  @apply flex flex-col items-center;
+  gap: 1rem;
+}
+
+.service-preview-static__ad-icon {
+  font-size: 3rem;
+  opacity: 0.7;
+}
+
+.service-preview-static__ad-text h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.service-preview-static__ad-text p {
+  @apply m-0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Main Content Area - Orta */
+.service-preview-static__main {
+  @apply flex-1 flex flex-col;
+  min-width: 0;
+    gap: 1.5rem;
+}
+
+/* Tab Content */
+.service-preview-static__tab-content {
+  min-height: 500px;
+}
+
+/* Preview Notice */
+.service-preview-static__notice {
+  @apply fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 90vw;
+}
+
+.service-preview-static__notice-content {
+    @apply flex items-center flex-wrap justify-center;
+    gap: 1rem;
+}
+
+.service-preview-static__notice-content i {
+  color: #ff8c00;
+  font-size: 1.25rem;
+}
+
+.service-preview-static__notice-content span {
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.service-preview-static__notice-actions {
+    @apply flex;
+    gap: 0.75rem;
+  }
+  
+.service-preview-static__btn {
+  @apply flex items-center border-0 cursor-pointer no-underline;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.service-preview-static__btn.primary {
+  background: linear-gradient(135deg, #003466 0%, #004080 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 52, 102, 0.3);
+}
+
+.service-preview-static__btn.primary:hover {
+  background: linear-gradient(135deg, #004080 0%, #0056b3 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 52, 102, 0.4);
+}
+
+.service-preview-static__btn.secondary {
+  background: rgba(100, 116, 139, 0.1);
+  color: #64748b;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.service-preview-static__btn.secondary:hover {
+  background: rgba(100, 116, 139, 0.2);
+  color: #475569;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .service-preview-static__content {
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+  }
+  
+  /* Reklam alanını gizle, sadece main ve sidebar kalsın */
+  .service-preview-static__ad-sidebar {
+    @apply hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-preview-static__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .service-preview-static__notice {
+    @apply relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-preview-static__notice-content {
+    @apply flex-col text-center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-preview-static__content {
+    padding: 1rem 0.5rem;
+  }
+  
+  .service-preview-static__notice {
+    padding: 1rem;
+  }
+  
+  .service-preview-static__notice-actions {
+    @apply flex-col w-full;
+  }
+  
+  .service-preview-static__btn {
+    @apply justify-center;
+  }
+}

@@ -1,0 +1,488 @@
+/* ==========================================================================
+   HİZMETLER VE UZMANLIK — AcilLazım Kurumsal Tasarım Sistemi
+   Temel Bilgiler ile %100 Birebir Aynı Tasarım Mimarisi:
+   - Aynı kart yapısı (12px radius, 22px padding, #e2e8f0 sınır)
+   - Aynı başlık ve alt başlık tipografisi
+   - Kurumsal Lacivert (#003466) ve Canlı Turuncu (#FF6B00)
+   ========================================================================== */
+
+.sv-services-container {
+  @apply w-full box-border;
+}
+
+.sv-services-form {
+  @apply flex flex-col;
+  gap: 24px;
+}
+
+/* 2 Kolonlu Yan Yana Grid */
+.sv-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.sv-cards-grid.sv-cards-grid--single {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 960px) {
+  .sv-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sv-fade-in {
+  animation: svSectionFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes svSectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 1. Kart Blokları (Temel Bilgiler ile Birebir Aynı Section Card) */
+.sv-section-card {
+  @apply relative overflow-hidden flex flex-col;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sv-section-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+.sv-section-header {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.sv-header-left {
+  @apply flex items-center justify-between flex-wrap;
+  gap: 12px;
+}
+
+.sv-section-title {
+  @apply m-0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.sv-section-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.sv-count-pill {
+  @apply inline-flex items-center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sv-section-content {
+  @apply flex flex-col flex-1 justify-between;
+  gap: 16px;
+}
+
+/* 2. Hizmet Alanları Listesi */
+.sv-area-list {
+  @apply m-0 p-0 flex flex-col;
+  list-style: none;
+  gap: 10px;
+}
+
+.sv-area-item {
+  @apply flex items-center justify-between flex-wrap;
+  gap: 8px 12px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.sv-area-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 52, 102, 0.05);
+}
+
+.sv-area-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-right: auto;
+}
+
+.sv-area-item-actions {
+  @apply inline-flex items-center flex-shrink-0;
+  gap: 8px;
+}
+
+/* Deneyim Yılı Seçimi */
+.sv-area-edit-group {
+  @apply inline-flex items-center;
+  gap: 6px;
+  background: #ffffff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.sv-area-edit-group:focus-within {
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.12);
+}
+
+.sv-area-years-label {
+  @apply select-none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin: 0;
+}
+
+.sv-area-years-select {
+  @apply cursor-pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: auto !important;
+  height: 26px !important;
+  padding: 0 1.3rem 0 0.25rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23003466' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.25rem center !important;
+  background-size: 10px 10px !important;
+  color: #0f172a !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  outline: none !important;
+}
+
+.sv-area-years-select option,
+.sv-years-add-select option {
+  color: #0f172a;
+  background-color: #ffffff;
+  font-weight: 500;
+}
+
+.sv-chip-remove {
+  @apply inline-flex items-center justify-center rounded-full cursor-pointer flex-shrink-0;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: #f1f5f9;
+  color: #64748b;
+  transition: all 0.18s ease;
+}
+
+.sv-chip-remove:hover {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+/* 3. Hizmet Alanı Ekleme Satırı */
+.sv-area-add-row {
+  @apply flex items-center flex-wrap;
+  gap: 12px;
+}
+
+.sv-area-add-row .sv-typeahead {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.sv-area-add-controls {
+  @apply inline-flex items-center flex-shrink-0;
+  gap: 10px;
+}
+
+/* Girdi Alanları */
+.sv-input-with-icon {
+  @apply w-full box-border;
+  height: 42px;
+  padding: 8px 12px 8px 38px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0f172a;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sv-input-with-icon:hover {
+  border-color: #94a3b8;
+}
+
+.sv-input-with-icon:focus {
+  @apply outline-none;
+  background-color: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.12);
+}
+
+.sv-input-search-icon {
+  @apply absolute pointer-events-none;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  z-index: 2;
+}
+
+.sv-years-add-select {
+  @apply cursor-pointer flex-shrink-0;
+  width: 100px;
+  height: 42px;
+  padding: 0 2rem 0 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23003466' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px 12px;
+  color: #0f172a;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.sv-years-add-select:focus {
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.12);
+  outline: none;
+}
+
+/* + Ekle Butonu: Kurumsal Lacivert (#003466) */
+.sv-add-button {
+  @apply inline-flex items-center justify-center cursor-pointer flex-shrink-0;
+  gap: 6px;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #003466;
+  border-radius: 8px;
+  background: #003466;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 52, 102, 0.2);
+}
+
+.sv-add-button:hover:not(:disabled) {
+  background: #002244;
+  border-color: #002244;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 52, 102, 0.28);
+}
+
+.sv-add-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+}
+
+/* 4. Typeahead Açılır Liste */
+.sv-typeahead {
+  @apply relative w-full;
+}
+
+.sv-typeahead-list {
+  @apply absolute m-0 overflow-y-auto;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  padding: 6px;
+  list-style: none;
+  max-height: 240px;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 52, 102, 0.12);
+}
+
+.sv-typeahead-list button {
+  @apply w-full flex justify-between items-center text-left cursor-pointer;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.sv-typeahead-list button:hover {
+  background: #f0f7ff;
+  color: #003466;
+}
+
+.sv-typeahead-list em {
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+}
+
+/* 5. Yetenekler Etiket Listesi */
+.sv-chip-list {
+  @apply flex flex-wrap m-0;
+  gap: 8px;
+}
+
+.sv-chip {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 6px 8px 6px 12px;
+  background: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #003466;
+  transition: all 0.18s ease;
+}
+
+.sv-chip:hover {
+  border-color: #003466;
+  transform: translateY(-1px);
+}
+
+/* 6. Alt Aksiyon Çubuğu (Sticky Save Bar — Erişilebilir & Kaçırılmaz) */
+.sv-actions-bar {
+  position: sticky;
+  bottom: 16px;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 10px 25px -4px rgba(0, 43, 73, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.sv-actions-inner {
+  @apply flex items-center justify-between flex-wrap;
+  gap: 16px;
+}
+
+.sv-actions-hint {
+  @apply m-0;
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.sv-save-button {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 24px;
+  background: #ff6b00;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.28);
+}
+
+.sv-save-button:hover:not(:disabled) {
+  background: #e65c00;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 107, 0, 0.35);
+}
+
+.sv-save-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.sv-save-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.65;
+}
+
+.spin-icon {
+  animation: svSpin 0.8s linear infinite;
+}
+
+@keyframes svSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Uyumluluk */
+@media (max-width: 640px) {
+  .sv-section-card {
+    padding: 16px;
+  }
+
+  .sv-area-add-row {
+    @apply flex-col items-stretch;
+  }
+
+  .sv-area-add-row .sv-typeahead {
+    flex: 1 1 auto;
+  }
+
+  .sv-area-add-controls {
+    @apply w-full;
+  }
+
+  .sv-years-add-select {
+    @apply flex-1;
+  }
+
+  .sv-add-button {
+    @apply flex-1;
+  }
+
+  .sv-actions-inner {
+    @apply flex-col items-stretch;
+  }
+
+  .sv-save-button {
+    @apply w-full;
+  }
+}

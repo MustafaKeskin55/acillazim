@@ -1,0 +1,517 @@
+/* ServicePreviewHeader Styles */
+.service-preview-header {
+  @apply relative;
+  background: white;
+  margin-bottom: 2rem;
+}
+
+/* Cover Section - Büyütülmüş */
+.service-preview-header__cover {
+  @apply relative overflow-hidden flex justify-between items-start;
+  height: 280px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+}
+
+/* Geri Dön Butonu - Geliştirilmiş */
+.service-preview-header__back-btn-modern {
+  @apply absolute border-0 flex items-center cursor-pointer pointer-events-auto;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 12px 16px;
+  gap: 8px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.service-preview-header__back-btn-modern:hover {
+  background: white;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.08);
+  color: #003466;
+}
+
+.service-preview-header__back-btn-modern svg {
+  transition: transform 0.3s ease;
+}
+
+.service-preview-header__back-btn-modern:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Paylaş ve Favori butonları - Geliştirilmiş */
+.service-preview-header__social-actions {
+  @apply absolute flex;
+  top: 20px;
+  right: 20px;
+  gap: 12px;
+  z-index: 10;
+}
+
+.service-preview-header__share-btn,
+.service-preview-header__favorite-btn {
+  @apply rounded-full border-0 flex items-center justify-center cursor-pointer relative overflow-hidden;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+  color: #6b7280;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Paylaş butonu hover efekti */
+.service-preview-header__share-btn:hover {
+  background: white;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: #003466;
+}
+
+.service-preview-header__share-btn::before {
+  @apply absolute rounded-full;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.service-preview-header__share-btn:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+/* Favori butonu - Kırmızı kalp efekti */
+.service-preview-header__favorite-btn {
+  @apply border-0 relative overflow-visible;
+  background: rgba(255, 255, 255, 0.95);
+  color: #ef4444;
+}
+
+.service-preview-header__favorite-btn.active {
+  background: white;
+  color: rgb(255, 0, 0);
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4), 0 4px 8px rgba(239, 68, 68, 0.2);
+}
+
+.service-preview-header__favorite-btn:hover {
+  background: white;
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.service-preview-header__favorite-btn.active:hover {
+  background: white;
+  color: #ef4444;
+  transform: scale(1.2);
+  box-shadow: 0 12px 35px rgba(239, 68, 68, 0.5), 0 6px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Kalp animasyonu */
+.service-preview-header__favorite-btn::after {
+  @apply absolute rounded-full pointer-events-none;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.service-preview-header__favorite-btn:hover::after,
+.service-preview-header__favorite-btn.active::after {
+  width: 80px;
+  height: 80px;
+}
+
+/* Favori butonu aktif durum animasyonu */
+@keyframes heartBeat {
+  0% { transform: scale(1.1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1.1); }
+}
+
+.service-preview-header__favorite-btn.active {
+  animation: heartBeat 0.6s ease-in-out;
+}
+
+/* Kalp tıklama efekti */
+.service-preview-header__favorite-btn.heart-clicked {
+  animation: heartClickEffect 0.8s ease-out forwards;
+}
+
+@keyframes heartClickEffect {
+  0% { transform: scale(1); }
+  15% { transform: scale(0.85); }
+  30% { transform: scale(1.35); }
+  50% { transform: scale(1.1); }
+  70% { transform: scale(1.25); }
+  100% { transform: scale(1.1); }
+}
+
+.service-preview-header__cover-image {
+  @apply absolute w-full h-full;
+  top: 0;
+  left: 0;
+}
+
+.service-preview-header__cover-img {
+  @apply w-full h-full object-cover;
+}
+
+/* Header Section - Kompakt ve Şık */
+.service-preview-header__header {
+  @apply relative overflow-hidden;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  margin: -50px auto 0 auto;
+  padding: 1.5rem;
+  z-index: 10;
+  max-width: 1100px;
+  width: calc(100% - 4rem);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-preview-header__header:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.service-preview-header__header-background {
+  @apply absolute w-full h-full;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.service-preview-header__header-gradient {
+  @apply w-full h-full mx-auto;
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.03) 0%, 
+    rgba(139, 92, 246, 0.03) 25%,
+    rgba(16, 185, 129, 0.03) 50%,
+    rgba(245, 158, 11, 0.03) 75%,
+    rgba(239, 68, 68, 0.03) 100%);
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.service-preview-header__header-content {
+  @apply flex justify-center items-center flex-wrap;
+  gap: 2rem;
+}
+
+.service-preview-header__profile-section {
+  @apply flex items-center flex-1;
+  gap: 1.25rem;
+}
+
+.service-preview-header__avatar-wrapper {
+  @apply relative flex-shrink-0;
+}
+
+.service-preview-header__avatar-container {
+  @apply relative;
+  z-index: 2;
+}
+
+.service-preview-header__avatar-placeholder {
+  @apply flex items-center justify-center;
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #64748b;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.service-preview-header__avatar-glow {
+  @apply absolute;
+  top: -8px;
+  left: -8px;
+  width: 86px;
+  height: 86px;
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.2) 0%, 
+    rgba(139, 92, 246, 0.2) 50%,
+    rgba(16, 185, 129, 0.2) 100%);
+  border-radius: 22px;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: 1;
+  animation: avatarGlow 4s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  50% { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
+}
+
+.service-preview-header__profile-info {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.service-preview-header__category-badge {
+  @apply inline-flex items-center uppercase;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  box-shadow: 
+    0 3px 12px rgba(99, 102, 241, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.service-preview-header__category-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 6px 20px rgba(99, 102, 241, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.service-preview-header__badge-icon {
+  font-size: 0.875rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.service-preview-header__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.375rem 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #0f172a 0%, #334155 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-preview-header__provider {
+  @apply flex flex-col;
+  gap: 0.25rem;
+}
+
+.service-preview-header__provider-name {
+  @apply flex items-center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.service-preview-header__provider-meta {
+  @apply flex items-center;
+  gap: 0.5rem;
+}
+
+.service-preview-header__location {
+  @apply flex items-center;
+  gap: 0.375rem;
+  color: #555657;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.service-preview-header__action-buttons {
+  @apply flex flex-shrink-0;
+  gap: 0.75rem;
+}
+
+.service-preview-header__action-btn {
+  @apply flex items-center border-0 cursor-pointer relative overflow-hidden justify-center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.service-preview-header__action-btn::before {
+  @apply absolute w-full h-full;
+  content: '';
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.service-preview-header__action-btn:hover::before {
+  left: 100%;
+}
+
+.service-preview-header__action-btn.primary {
+  @apply relative;
+  background: linear-gradient(135deg, #003466 0%, #004080 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 52, 102, 0.3);
+}
+
+.service-preview-header__action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 52, 102, 0.4);
+  background: linear-gradient(135deg, #002952 0%, #003466 100%);
+}
+
+.service-preview-header__action-btn.secondary {
+  @apply relative;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa640 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
+}
+
+.service-preview-header__action-btn.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 140, 0, 0.4);
+  background: linear-gradient(135deg, #e07600 0%, #ff8c00 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .service-preview-header__cover {
+    height: 240px;
+  }
+
+  .service-preview-header__header {
+    margin: -40px auto 0 auto;
+    padding: 1.25rem;
+    max-width: 950px;
+    width: calc(100% - 2rem);
+  }
+
+  .service-preview-header__header-content {
+    @apply flex-col items-center text-center;
+    gap: 1.5rem;
+  }
+
+  .service-preview-header__action-buttons {
+    @apply w-full justify-center;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-preview-header__cover {
+    height: 200px;
+    padding: 0.75rem;
+  }
+
+  .service-preview-header__header {
+    margin: -35px auto 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+    width: calc(100% - 2rem);
+  }
+  
+  .service-preview-header__profile-section {
+    @apply flex-col text-center;
+    gap: 1rem;
+  }
+  
+  .service-preview-header__avatar-placeholder {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-preview-header__avatar-glow {
+    width: 76px;
+    height: 76px;
+    top: -8px;
+    left: -8px;
+  }
+
+  .service-preview-header__title {
+    font-size: 1.3rem;
+  }
+  
+  .service-preview-header__action-buttons {
+    @apply flex-col w-full;
+  }
+  
+  .service-preview-header__action-btn {
+    @apply w-full;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-preview-header__cover {
+    height: 160px;
+    padding: 0.5rem;
+  }
+
+  .service-preview-header__back-btn-modern span {
+    @apply hidden;
+  }
+
+  .service-preview-header__header {
+    margin: -25px auto 0 auto;
+    padding: 0.875rem;
+    max-width: 100%;
+    width: calc(100% - 1rem);
+  }
+
+  .service-preview-header__avatar-placeholder {
+    width: 55px;
+    height: 55px;
+  }
+
+  .service-preview-header__avatar-glow {
+    width: 71px;
+    height: 71px;
+    top: -8px;
+    left: -8px;
+  }
+
+  .service-preview-header__title {
+    font-size: 1.2rem;
+  }
+
+  .service-preview-header__category-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .service-preview-header__action-btn {
+    padding: 0.65rem 1rem;
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+}

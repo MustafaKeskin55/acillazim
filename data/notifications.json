@@ -1,0 +1,269 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 8,
+      "type": "welcome",
+      "title": "Acillazım Ailesine Hoş Geldiniz!",
+      "message": "Hesabınız başarıyla aktive edildi. Hemen aradığınız hizmeti bulun veya ilanınızı verin.",
+      "read": false,
+      "createdAt": "2026-11-10T19:00:00Z",
+      "actionText": "Profili Tamamla",
+      "actionLink": "/dashboard/profil",
+      "details": {
+        "features": [
+          { "title": "Güvenilir Ustalar", "icon": "🛡️", "description": "Doğrulanmış uzman ve servis sağlayıcılar" },
+          { "title": "Hızlı Randevu", "icon": "📅", "description": "Dakikalar içinde müsait saatleri belirleyip randevu oluşturun" },
+          { "title": "Güvenli İletişim", "icon": "💬", "description": "Platform içi mesajlaşma ile anında görüşün" }
+        ],
+        "ctaButtons": [
+          { "text": "Hemen İlan Ver", "link": "/ilan-ver", "primary": true },
+          { "text": "Hizmetleri Keşfet", "link": "/Ustalar-ve-Hizmetler", "primary": false }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "userId": 8,
+      "type": "appointment-request",
+      "title": "Yeni Randevu Talebi",
+      "message": "Ayşe Demir adlı müşteri 2026-11-15 tarihinde 14:30 saatinde Acil Su Tesisatı Tamiri hizmetiniz için yeni bir randevu talebi oluşturdu.",
+      "read": false,
+      "createdAt": "2026-11-10T18:30:00Z",
+      "actionText": "Randevuyu İncele",
+      "actionLink": "/dashboard/randevular",
+      "details": {
+        "appointment": {
+          "id": 101,
+          "requester": { "name": "Ayşe Demir", "phone": "0532 987 65 43", "verified": true },
+          "listing": { "id": 501, "title": "Acil Su Tesisatı & Kaçak Tespiti", "category": "Sıhhi Tesisat", "price": 1250, "address": "İzmir / Bornova" },
+          "requestedDates": [
+            { "date": "15 Kasım 2026", "time": "14:30", "available": true },
+            { "date": "16 Kasım 2026", "time": "10:00", "available": true }
+          ],
+          "message": "Banyodaki borudan su sızıyor, acil kontrol edilmesi gerekiyor."
+        }
+      }
+    },
+    {
+      "id": 3,
+      "userId": 8,
+      "type": "appointment-request",
+      "title": "Randevu Başarıyla Tamamlandı",
+      "message": "Mehmet Kaya adlı müşteri ile olan Kombi Bakımı randevunuz başarıyla tamamlandı olarak işaretlendi.",
+      "read": true,
+      "createdAt": "2026-11-09T16:00:00Z",
+      "actionText": "Detayları Görüntüle",
+      "actionLink": "/dashboard/randevular/gecmis",
+      "details": {
+        "appointment": {
+          "id": 102,
+          "requester": { "name": "Mehmet Kaya", "phone": "0544 123 45 67", "verified": true },
+          "listing": { "id": 502, "title": "Kombi & Petek Yıllık Bakım Hizmeti", "category": "Isıtma & Soğutma", "price": 950, "address": "İzmir / Karşıyaka" }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "userId": 8,
+      "type": "appointment-request",
+      "title": "Randevu İptal Edildi",
+      "message": "Can Öztürk adlı müşteri tarafından planlanan Boya Badana randevusu iptal edildi. Sebep: Müşteri seyahat nedeniyle ertelemek istedi.",
+      "read": true,
+      "createdAt": "2026-11-08T11:20:00Z",
+      "actionText": "Randevulara Git",
+      "actionLink": "/dashboard/randevular",
+      "details": {
+        "appointment": {
+          "id": 103,
+          "requester": { "name": "Can Öztürk", "phone": "0555 456 78 90", "verified": false },
+          "listing": { "id": 503, "title": "3+1 Ev Boya & Badana İşleri", "category": "Boya & Badana" },
+          "reason": "Müşteri şehir dışına çıkmak zorunda kaldığını bildirdi."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "userId": 8,
+      "type": "new-message",
+      "title": "Fatma Öz size yeni bir mesaj gönderdi",
+      "message": "Fatma Öz adlı kullanıcı size mesaj gönderdi: \"Merhabalar, Karataş mahallesindeki elektrik panosu değişimi için yarın gelebilir misiniz?\"",
+      "read": false,
+      "createdAt": "2026-11-10T20:10:00Z",
+      "actionText": "Mesajı Yanıtla",
+      "actionLink": "/dashboard/mesajlar",
+      "details": {
+        "conversation": { "id": 201, "sender": { "id": 4, "name": "Fatma Öz" } },
+        "listingTitle": "Elektrik Arıza & Pano Yenileme"
+      }
+    },
+    {
+      "id": 6,
+      "userId": 8,
+      "type": "price-drop",
+      "title": "Takip Ettiğiniz İlanda Fiyat Düştü",
+      "message": "Favorilerinize eklediğiniz \"İzmir Bornova 2+1 Doğalgazlı Daire\" ilanının fiyatı 24.500 ₺ yerine 21.000 ₺ olarak güncellendi.",
+      "read": false,
+      "createdAt": "2026-11-10T16:45:00Z",
+      "actionText": "İlanı İncele",
+      "actionLink": "/ilan/401",
+      "details": {
+        "listing": {
+          "id": 401,
+          "title": "İzmir Bornova 2+1 Doğalgazlı Daire",
+          "subtitle": "Metroya 3 dakika yürüme mesafesinde, geniş balkonlu",
+          "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400",
+          "location": { "city": "İzmir", "district": "Bornova", "neighborhood": "Kazımdirik Mah." },
+          "price": { "old": 24500, "new": 21000, "currency": "TRY", "savings": 3500 }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "userId": 8,
+      "type": "listing-published",
+      "title": "İlanınız Yayına Alındı",
+      "message": "\"Profesyonel Evden Eve Nakliyat & Asansörlü Taşıma\" başlıklı ilanınız editör onayından geçti ve yayına alındı.",
+      "read": true,
+      "createdAt": "2026-11-09T09:15:00Z",
+      "actionText": "İlanı Görüntüle",
+      "actionLink": "/ilan/505",
+      "details": {
+        "listing": {
+          "id": 505,
+          "title": "Profesyonel Evden Eve Nakliyat & Asansörlü Taşıma",
+          "price": 6500,
+          "currency": "TRY",
+          "location": { "city": "İzmir", "district": "Karaburun" },
+          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"
+        },
+        "tips": [
+          "İlanınıza ait fotoğrafları güncel tutun",
+          "Gelen mesajlara 15 dakika içinde yanıt vermek arama sıralamanızı yükseltir"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "userId": 8,
+      "type": "new-favorite",
+      "title": "İlanınız Favorilere Eklendi",
+      "message": "\"Acil Oto Çekici & Yol Yardım\" ilanınız son 24 saat içinde 6 farklı kullanıcı tarafından favorilere eklendi.",
+      "read": false,
+      "createdAt": "2026-11-10T19:30:00Z",
+      "actionText": "İstatistikleri Gör",
+      "actionLink": "/dashboard/ilan-istatistikleri",
+      "details": {
+        "stats": { "favoriteCount": 6, "weeklyIncrease": 14, "viewCount": 248 },
+        "listingTitle": "Acil Oto Çekici & Yol Yardım"
+      }
+    },
+    {
+      "id": 9,
+      "userId": 8,
+      "type": "seller-review",
+      "title": "Yeni Müşteri Değerlendirmesi",
+      "message": "Ahmet Yılmaz sunduğunuz Elektrik Tesisatı Tamiri hizmetini 5 yıldız vererek değerlendirdi.",
+      "read": false,
+      "createdAt": "2026-11-10T17:15:00Z",
+      "actionText": "Yorumları İncele",
+      "actionLink": "/dashboard/hizmet-alanlari",
+      "details": {
+        "review": {
+          "rating": 5,
+          "comment": "Mustafa Bey tam vaktinde geldi ve sigorta arızasını yarım saatte profesyonelce çözdü. Çok teşekkürler, kesinlikle tavsiye ederim.",
+          "reviewer": { "name": "Ahmet Yılmaz", "memberSince": "2024" }
+        },
+        "transactionListing": { "title": "Elektrik Tesisatı Tamiri", "soldPrice": 850 }
+      }
+    },
+    {
+      "id": 10,
+      "userId": 8,
+      "type": "expiring-soon",
+      "title": "İlanınızın Süresi 3 Gün İçinde Doluyor",
+      "message": "\"Garantili Çatı İzolasyon ve Onarım\" ilanınızın 30 günlük yayın süresi 3 gün sonra sona erecek.",
+      "read": false,
+      "createdAt": "2026-11-10T15:00:00Z",
+      "actionText": "İlanı Yenile",
+      "actionLink": "/dashboard/aktif-ilanlar",
+      "details": {
+        "listing": {
+          "id": 506,
+          "title": "Garantili Çatı İzolasyon ve Onarım",
+          "subtitle": "Su ve ısı izolasyonu, 5 yıl firma garantisi",
+          "daysRemaining": 3,
+          "location": { "city": "İzmir", "district": "Çeşme" }
+        },
+        "renewalOptions": [
+          { "label": "Standart Yenileme (30 Gün)", "price": 0, "recommended": false },
+          { "label": "Öne Çıkan Vitrin Paketi", "price": 199, "recommended": true }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "userId": 8,
+      "type": "listing-expired",
+      "title": "İlanınızın Yayın Süresi Doldu",
+      "message": "\"Klima Montaj ve Gaz Dolumu\" ilanınızın süresi dolduğu için pasife alındı. Tek tıkla yeniden aktif edebilirsiniz.",
+      "read": true,
+      "createdAt": "2026-11-07T14:00:00Z",
+      "actionText": "Hemen Yeniden Yayınla",
+      "actionLink": "/dashboard/pasif-ilanlar",
+      "details": {
+        "listing": {
+          "id": 507,
+          "title": "Klima Montaj ve Gaz Dolumu",
+          "price": 1500
+        },
+        "stats": {
+          "totalViews": 420,
+          "totalFavorites": 18,
+          "totalContacts": 9
+        },
+        "renewalOptions": [
+          { "label": "Ücretsiz Yeniden Yayınla (30 Gün)", "price": 0, "recommended": true }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "userId": 8,
+      "type": "system-update",
+      "title": "Sistem Güncellemesi ve Bakım Bildirimi",
+      "message": "Platformumuzun altyapısı ve randevu optimizasyon modülü 2026.4 sürümüne yükseltildi.",
+      "read": true,
+      "createdAt": "2026-11-06T10:00:00Z",
+      "actionText": "Tüm Bildirimler",
+      "actionLink": "/dashboard/bildirimler",
+      "details": {
+        "updateInfo": {
+          "title": "Acillazım v2026.4 Performans & Randevu İyileştirmesi",
+          "version": "2026.4.1",
+          "description": "Randevu takvim hızlandırması, SMS bildirim entegrasyonu ve mobil bildirim merkezi optimizasyonları tamamlandı."
+        }
+      }
+    }
+  ],
+  "preferences": {
+    "email": true,
+    "push": true,
+    "sms": false,
+    "types": {
+      "welcome": true,
+      "price-drop": true,
+      "listing-published": true,
+      "expiring-soon": true,
+      "system-update": true,
+      "new-favorite": true,
+      "new-message": true,
+      "appointment-request": true,
+      "seller-review": true,
+      "listing-expired": true
+    },
+    "quietHoursEnabled": false,
+    "quietHoursStart": null,
+    "quietHoursEnd": null
+  }
+}

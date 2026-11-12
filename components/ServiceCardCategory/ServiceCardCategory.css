@@ -1,0 +1,174 @@
+/* =============================================================
+   ServiceCardCategory.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   ============================================================= */
+
+.service-page-populer-hizmetler-scope {
+  @apply w-full;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-container {
+  @apply relative w-full max-w-full p-0 box-border m-0;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-header-wrapper {
+  @apply flex justify-start items-center mb-6 relative pt-0 px-0 pb-3.5;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-header {
+  @apply text-left normal-case text-brand-ink font-bold m-0 p-0 leading-tight;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  letter-spacing: -0.03em;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-header::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-[56px] h-1 rounded-full transform-none;
+  background: linear-gradient(90deg, var(--brand-accent) 0%, #FF3D6E 100%);
+  box-shadow: 0 2px 6px -2px rgba(255, 107, 0, 0.5);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-section {
+  @apply relative flex items-center;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-controls {
+  @apply absolute top-1/2 -translate-y-1/2 w-full flex justify-between pointer-events-none z-20 p-0;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-button {
+  @apply w-11 h-11 rounded-full cursor-pointer flex items-center justify-center text-brand-ink pointer-events-auto opacity-90 relative transform-none;
+  border: 1px solid var(--brand-line);
+  background: var(--brand-paper);
+  box-shadow: 0 6px 18px -6px rgba(0, 52, 102, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-left {
+  @apply -left-[22px];
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-right {
+  @apply -right-[22px];
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-button:hover:not(.service-card-category-scroll-disabled) {
+  @apply opacity-100 bg-brand-ink text-white border-brand-ink scale-105;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-button:active:not(.service-card-category-scroll-disabled) {
+  @apply scale-95;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-button.service-card-category-scroll-disabled {
+  @apply opacity-35 cursor-not-allowed;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-button svg {
+  @apply w-[22px] h-[22px];
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-horizontal-container {
+  @apply w-full overflow-x-auto overflow-y-hidden scroll-smooth m-0 pt-1 px-0 pb-2;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-horizontal-container::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-horizontal-track {
+  @apply grid grid-flow-col justify-start p-0 min-w-full;
+  grid-auto-columns: var(--alz-listing-card-w);
+  gap: var(--alz-listing-card-gap);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-horizontal-wrapper {
+  @apply w-full flex min-w-0;
+  height: var(--alz-listing-card-h);
+  scroll-snap-align: start;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-horizontal-track .prodcard-wrapper {
+  @apply h-full w-full flex flex-col;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-indicator {
+  @apply text-center mt-3;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-scroll-hint {
+  @apply text-[12px] text-brand-muted italic;
+  font-family: var(--font-body);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-loading-state,
+.service-page-populer-hizmetler-scope .service-card-category-error-state,
+.service-page-populer-hizmetler-scope .service-card-category-empty-state {
+  @apply w-full flex flex-col justify-center items-center py-[60px] px-0 text-center text-brand-muted;
+  font-family: var(--font-body);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-loading-state {
+  @apply gap-3.5;
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-loading-spinner {
+  @apply w-10 h-10 rounded-full;
+  border: 3px solid rgba(0, 52, 102, 0.1);
+  border-top-color: var(--brand-accent);
+  animation: service-card-category-spin 1s linear infinite;
+}
+
+@keyframes service-card-category-spin {
+  to { transform: rotate(360deg); }
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-retry-button {
+  @apply mt-3.5 py-2.5 px-[22px] bg-brand-accent text-white border-0 rounded-full cursor-pointer text-[14px] font-semibold transition-all duration-300;
+  font-family: var(--font-body);
+}
+
+.service-page-populer-hizmetler-scope .service-card-category-retry-button:hover {
+  @apply bg-[#e05a00] -translate-y-px;
+}
+
+@media (max-width: 1280px) {
+  .service-page-populer-hizmetler-scope .service-card-category-horizontal-track {
+    grid-auto-columns: var(--alz-listing-card-w);
+    gap: var(--alz-listing-card-gap);
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-page-populer-hizmetler-scope .service-card-category-horizontal-track {
+    grid-auto-columns: var(--alz-listing-card-w);
+    gap: var(--alz-listing-card-gap);
+  }
+}
+
+@media (max-width: 720px) {
+  .service-page-populer-hizmetler-scope .service-card-category-horizontal-track {
+    grid-auto-columns: var(--alz-listing-card-w);
+    gap: var(--alz-listing-card-gap);
+  }
+  .service-page-populer-hizmetler-scope .service-card-category-scroll-left { @apply -left-2.5; }
+  .service-page-populer-hizmetler-scope .service-card-category-scroll-right { @apply -right-2.5; }
+  .service-page-populer-hizmetler-scope .service-card-category-scroll-button {
+    @apply w-10 h-10;
+  }
+  .service-page-populer-hizmetler-scope .service-card-category-header {
+    @apply text-[1.25rem];
+  }
+}
+
+@media (max-width: 480px) {
+  .service-page-populer-hizmetler-scope .service-card-category-horizontal-track {
+    grid-auto-columns: var(--alz-listing-card-w);
+    gap: var(--alz-listing-card-gap-scroll);
+  }
+}

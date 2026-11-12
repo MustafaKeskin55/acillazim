@@ -1,0 +1,131 @@
+/* AboutTab Styles */
+.about-tab {
+  @apply flex flex-col;
+  gap: 2rem;
+}
+
+.about-tab h3 {
+  margin: 0 0 1.5rem 0;
+  color: #003466;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.about-tab__content {
+  @apply flex flex-col;
+  gap: 2rem;
+}
+
+/* Modern Card Styles */
+.about-tab__modern-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 52, 102, 0.08);
+  border: 1px solid rgba(0, 52, 102, 0.05);
+  transition: all 0.3s ease;
+}
+
+.about-tab__modern-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 52, 102, 0.12);
+}
+
+/* Provider Info */
+.about-tab__provider-info {
+  max-width: 600px;
+}
+
+.about-tab__provider-header {
+  @apply flex items-center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-tab__provider-avatar {
+  @apply rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #003466;
+  box-shadow: 0 4px 15px rgba(0, 52, 102, 0.2);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #64748b;
+}
+
+.about-tab__provider-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: #003466;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.about-tab__provider-details p {
+  margin: 0 0 1rem 0;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.about-tab__provider-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-tab__provider-stat {
+  @apply flex flex-col;
+  gap: 0.5rem;
+}
+
+.about-tab__provider-stat .about-tab__stat-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.about-tab__provider-stat .about-tab__stat-value {
+  color: #003466;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-tab__provider-header {
+    @apply flex-col text-center;
+    gap: 1rem;
+  }
+  
+  .about-tab__provider-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .about-tab__provider-details h4 {
+    font-size: 1.2rem;
+  }
+  
+  .about-tab__provider-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-tab__modern-card {
+    padding: 1.5rem;
+  }
+  
+  .about-tab__provider-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .about-tab__provider-details h4 {
+    font-size: 1.1rem;
+  }
+  
+  .about-tab__provider-details p {
+    font-size: 0.9rem;
+  }
+}
+

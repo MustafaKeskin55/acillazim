@@ -1,0 +1,171 @@
+.create-listing-guard-overlay {
+  @apply flex items-center justify-center;
+  min-height: 80vh;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.create-listing-guard-card {
+  @apply w-full text-center;
+  max-width: 580px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 0 1px 1px rgba(15, 23, 42, 0.05);
+  padding: 36px 32px;
+  border: 1px solid #e2e8f0;
+  animation: cardFadeIn 0.3s ease-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.guard-icon-container {
+  @apply rounded-full flex items-center justify-center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px auto;
+  background: #fef3c7;
+  color: #d97706;
+  font-size: 34px;
+  box-shadow: 0 0 0 8px #fef9c3;
+}
+
+.guard-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.guard-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.guard-missing-box {
+  @apply text-left;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.guard-missing-header {
+  @apply flex items-center uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e11d48;
+  margin-bottom: 10px;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.guard-missing-list {
+  @apply p-0 m-0 flex flex-col;
+  list-style: none;
+  gap: 8px;
+}
+
+.guard-missing-item {
+  @apply flex items-center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9f1239;
+}
+
+.guard-missing-bullet {
+  @apply rounded-full flex-shrink-0;
+  width: 6px;
+  height: 6px;
+  background: #e11d48;
+}
+
+.guard-actions {
+  @apply flex justify-center;
+  gap: 12px;
+}
+
+.guard-btn-primary {
+  @apply flex-1 border-0 cursor-pointer inline-flex items-center justify-center no-underline;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  gap: 8px;
+}
+
+.guard-btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.guard-btn-secondary {
+  @apply cursor-pointer inline-flex items-center justify-center;
+  padding: 13px 20px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.guard-btn-secondary:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.guard-loading-card {
+  @apply flex flex-col items-center justify-center;
+  padding: 40px;
+  color: #64748b;
+  gap: 16px;
+}
+
+.guard-spinner {
+  @apply rounded-full;
+  width: 44px;
+  height: 44px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  animation: guardSpin 0.8s linear infinite;
+}
+
+@keyframes guardSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .create-listing-guard-card {
+    padding: 24px 20px;
+  }
+  .guard-actions {
+
+    @apply flex-col;
+  }
+  .guard-btn-primary,
+  .guard-btn-secondary {
+
+    @apply w-full;
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "popularCities": [
+    {
+      "id": 1,
+      "name": "İstanbul",
+      "slug": "istanbul"
+    },
+    {
+      "id": 2,
+      "name": "Ankara",
+      "slug": "ankara"
+    },
+    {
+      "id": 3,
+      "name": "İzmir",
+      "slug": "izmir"
+    },
+    {
+      "id": 4,
+      "name": "Antalya",
+      "slug": "antalya"
+    },
+    {
+      "id": 5,
+      "name": "Bursa",
+      "slug": "bursa"
+    },
+    {
+      "id": 6,
+      "name": "Adana",
+      "slug": "adana"
+    },
+    {
+      "id": 7,
+      "name": "Gaziantep",
+      "slug": "gaziantep"
+    },
+    {
+      "id": 8,
+      "name": "Konya",
+      "slug": "konya"
+    },
+    {
+      "id": 9,
+      "name": "Mersin",
+      "slug": "mersin"
+    },
+    {
+      "id": 10,
+      "name": "Samsun",
+      "slug": "samsun"
+    },
+    {
+      "id": 11,
+      "name": "Trabzon",
+      "slug": "trabzon"
+    },
+    {
+      "id": 12,
+      "name": "Diyarbakır",
+      "slug": "diyarbakir"
+    },
+    {
+      "id": 13,
+      "name": "Kayseri",
+      "slug": "kayseri"
+    },
+    {
+      "id": 14,
+      "name": "Eskişehir",
+      "slug": "eskisehir"
+    },
+    {
+      "id": 15,
+      "name": "Malatya",
+      "slug": "malatya"
+    }
+  ]
+} 

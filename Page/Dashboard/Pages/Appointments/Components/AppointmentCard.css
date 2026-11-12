@@ -1,0 +1,352 @@
+/* ==========================================================================
+   Randevu Kartı (AppointmentCard.css)
+   Acillazım Tasarım Sistemi ile Modernize Edilmiş Randevu Kartı
+   ========================================================================== */
+
+.appt-service-card {
+  @apply w-full overflow-hidden relative flex flex-col box-border;
+  max-width: 252px;
+  min-width: 0;
+  min-height: 280px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 3px rgba(15, 23, 42, 0.04),
+    0 10px 24px -8px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.appt-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.05),
+    0 16px 32px -8px rgba(15, 23, 42, 0.1);
+  border-color: rgba(203, 213, 225, 0.9);
+}
+
+/* Durum Rozeti (Status Badge) */
+.appt-status-badge {
+  @apply absolute inline-flex items-center;
+  top: 12px;
+  right: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  gap: 6px;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.01em;
+}
+
+.appt-status-badge.confirmed {
+  background: rgba(16, 185, 129, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appt-status-badge.pending {
+  background: rgba(249, 115, 22, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appt-status-badge.rejected {
+  background: rgba(239, 68, 68, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appt-status-badge.in_progress {
+  background: rgba(14, 165, 233, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appt-status-badge.completed {
+  background: rgba(16, 185, 129, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appt-status-badge.disputed {
+  background: rgba(225, 29, 72, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Provider Workflow Banners & Buttons */
+.appt-workflow-banner {
+  @apply box-border flex flex-col;
+  margin-top: 0.85rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  gap: 6px;
+}
+
+.appt-workflow-banner--arrived {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+}
+
+.appt-workflow-banner--completed {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.appt-workflow-banner--disputed {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.appt-workflow-title {
+  @apply flex items-center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.appt-workflow-btn {
+  @apply w-full inline-flex items-center justify-center cursor-pointer border-0;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.appt-workflow-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.65;
+}
+
+.appt-workflow-btn--arrive {
+  background: #0284c7;
+}
+
+.appt-workflow-btn--arrive:hover:not(:disabled) {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+
+.appt-workflow-btn--complete {
+  background: #10b981;
+}
+
+.appt-workflow-btn--complete:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+/* Görsel Alanı */
+.appt-service-img-container {
+  @apply relative w-full overflow-hidden flex-shrink-0;
+  height: 132px;
+  background: #f1f5f9;
+}
+
+.appt-service-image {
+  @apply w-full h-full object-cover;
+  transition: transform 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.appt-service-image.loaded {
+  opacity: 1;
+}
+
+.appt-service-card:hover .appt-service-image {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  @apply absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: apptShimmer 1.5s infinite;
+}
+
+@keyframes apptShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Kart İçeriği */
+.appt-service-content {
+  @apply flex-1 flex flex-col box-border;
+  padding: 0.9rem 0.95rem 0.7rem;
+  min-width: 0;
+}
+
+.appt-service-title {
+  @apply overflow-hidden;
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.appt-service-info {
+  @apply flex flex-col;
+  margin-bottom: auto;
+  gap: 0.38rem;
+  min-width: 0;
+}
+
+.appt-info-row {
+  @apply flex items-start;
+  gap: 6px;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.38;
+  min-width: 0;
+}
+
+.appt-info-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.appt-info-icon {
+  @apply flex-shrink-0;
+  color: #0d9488;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+.appt-service-price {
+  @apply flex justify-between items-center;
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  gap: 6px;
+}
+
+.appt-service-price span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.appt-service-price strong {
+  color: #ea580c;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* Eylem Butonları */
+.appt-service-actions {
+  @apply flex items-center box-border;
+  gap: 6px;
+  padding: 0 0.95rem 0.9rem;
+}
+
+.appt-action-btn {
+  @apply flex-1 border-0 cursor-pointer inline-flex items-center justify-center;
+  min-width: 0;
+  border-radius: 9px;
+  height: 33px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.appt-action-btn.edit {
+  background: #4f46e5;
+}
+.appt-action-btn.edit:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.appt-action-btn.confirm {
+  background: #0d9488;
+}
+.appt-action-btn.confirm:hover {
+  background: #0f766e;
+  transform: translateY(-1px);
+}
+
+.appt-action-btn.delete {
+  background: #e11d48;
+}
+.appt-action-btn.delete:hover {
+  background: #be123c;
+  transform: translateY(-1px);
+}
+
+.appt-action-btn.view {
+  @apply w-full;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+}
+.appt-action-btn.view:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  transform: translateY(-1px);
+}
+
+.appt-action-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── KART IZGARA KAPSAYICISI (GRID) ── */
+.appt-cards-grid-container {
+  @apply justify-start p-0 w-full box-border;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 252px));
+  gap: 1.1rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 767px) {
+  .appt-cards-grid-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.15rem;
+  }
+
+  .appt-service-card {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .appt-service-img-container {
+    height: 155px;
+  }
+
+  .appt-service-content {
+    padding: 1.1rem 1rem 0.85rem;
+  }
+
+  .appt-service-actions {
+    padding: 0 1rem 1rem;
+  }
+
+  .appt-action-btn {
+    height: 42px;
+    font-size: 15px;
+  }
+}

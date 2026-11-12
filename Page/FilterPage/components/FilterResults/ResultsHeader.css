@@ -1,0 +1,127 @@
+/* ResultsHeader.css */
+
+/* Ortak stiller */
+.results-header {
+  @apply w-full flex flex-col;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+.results-header-wrapper {
+  @apply flex w-full items-center;
+  height: 32px;
+  padding: 0 15px;
+}
+
+.results-header-list .results-header-wrapper {
+  padding: 0 15px;
+}
+
+.results-header-grid .results-header-wrapper {
+  @apply justify-between;
+  padding: 0 10px;
+}
+
+/* Sütun başlık stilleri */
+.results-header-label {
+  @apply flex items-center;
+  gap: 5px;
+}
+
+/* Liste görünümü için sütun genişlikleri */
+.results-header-list .results-header-image {
+  @apply flex-shrink-0;
+  width: 100px;
+  margin-right: 15px;
+}
+
+/* İlan başlığı bölümü */
+.results-header-list .results-header-title {
+  @apply flex;
+  flex: 2;
+  padding-right: 0;
+}
+
+/* Fiyat, İl/İlçe ve Tarih sütunları dikey hizalama için sabit genişlik */
+.results-header-list .results-header-price {
+  @apply flex justify-end;
+  width: 110px;
+  flex: 0 0 auto;
+  padding-right: 10px;
+  margin-right: 30px;
+}
+
+.results-header-list .results-header-location {
+  @apply flex justify-center;
+  width: 110px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.results-header-list .results-header-date {
+  @apply flex justify-center;
+  width: 110px;
+  flex: 0 0 auto;
+  margin-right: 40px; /* Favoriler için ek boşluk */
+}
+
+/* Grid görünümü için sütun stilleri */
+.results-header-grid .results-header-title {
+  flex: 2;
+}
+
+.results-header-grid .results-header-price {
+  @apply flex-1;
+}
+
+.results-header-grid .results-header-location,
+.results-header-grid .results-header-date {
+  @apply flex-1 text-center;
+}
+
+/* Sıralanabilir alanlar için stiller */
+.sortable {
+  @apply cursor-pointer flex items-center h-full relative;
+  padding: 0 2px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.sortable:hover {
+  color: #333;
+}
+
+.sortable:hover:after {
+  @apply absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 30%;
+  height: 2px;
+  background-color: #2196F3;
+  transform: translateX(-50%);
+}
+
+/* Sıralama ikonları */
+.sort-icon {
+  margin-left: 5px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.sort-icon.active {
+  opacity: 1;
+  color: #2196F3;
+  transform: scale(1.2);
+}
+
+/* Mobil: masaüstü tablo başlığı (Görsel / İlan Başlığı / …) yer kaplıyor; sıralama üstteki «Sırala» ile */
+@media screen and (max-width: 768px) {
+  .results-header {
+    display: none !important;
+  }
+} 

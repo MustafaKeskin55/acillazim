@@ -1,0 +1,54 @@
+.modal-overlay {
+  @apply fixed flex justify-center items-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.error-modal {
+  @apply overflow-hidden flex flex-col;
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.modal-content {
+  @apply text-center;
+  padding: 20px;
+  color: #333;
+  font-size: 16px;
+}
+
+.modal-button {
+  @apply w-full border-0 cursor-pointer;
+  padding: 15px;
+  background: #FF8A00;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.modal-button:hover {
+  background: #ff9819;
+}
+
+.not-member-content {
+  @apply flex flex-col items-center;
+  gap: 12px;
+}
+
+.modal-emoji {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.not-member-content p {
+  @apply m-0;
+  line-height: 1.4;
+} 

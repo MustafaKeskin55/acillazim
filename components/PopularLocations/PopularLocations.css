@@ -1,0 +1,205 @@
+/* ===================================================================
+   PopularLocations.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+.popular-location {
+  @apply w-full mx-auto my-0 h-auto min-h-0;
+  --pl-navy: #003466;
+  --pl-navy-soft: #004d7f;
+  --pl-orange: #ff6b00;
+}
+
+.popular-locationContainer {
+  @apply mx-auto my-0 w-full max-w-full px-5 box-border relative min-w-0;
+}
+
+.popular-location__surface {
+  @apply bg-transparent border-0 rounded-none shadow-none pt-1 px-0 pb-0 relative max-w-full;
+  overflow-x: clip;
+}
+
+.popular-location__header {
+  @apply text-center mb-4 relative;
+}
+
+.popular-locationText {
+  @apply text-[24px] text-[var(--pl-orange)] m-0 font-bold text-center relative pb-2.5 leading-tight;
+}
+
+.popular-locationText::after {
+  content: "";
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-[88px] h-px rounded-[1px];
+  background: linear-gradient(
+    to right,
+    rgba(255, 107, 0, 0.08),
+    rgba(255, 107, 0, 0.85),
+    rgba(255, 107, 0, 0.08)
+  );
+}
+
+.popular-location__slider-wrap {
+  @apply relative z-[1] -mx-1 pt-0.5 px-0 pb-1.5 max-w-full;
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  .popular-location__slider-wrap {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12px,
+      #000 calc(100% - 12px),
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12px,
+      #000 calc(100% - 12px),
+      transparent
+    );
+  }
+}
+
+.popular-locationBtn {
+  @apply bg-white rounded-xl py-3 px-3.5 w-full text-[14px] font-semibold text-[#2a3f4f] cursor-pointer whitespace-nowrap leading-normal text-left inline-flex items-center justify-start gap-2.5 mx-auto my-0 box-border;
+  border: 1px solid #e8ecf0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  max-width: var(--alz-popular-location-chip-w, 210px);
+  min-height: 52px;
+  transition:
+    transform 0.22s cubic-bezier(0.34, 1.2, 0.64, 1),
+    box-shadow 0.22s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.popular-locationBtn__icon {
+  @apply shrink-0 flex items-center justify-center w-[34px] h-[34px] rounded-[10px] bg-[#f0f4f8] text-[var(--pl-navy-soft)] text-[18px] transition-all duration-200;
+}
+
+.popular-locationBtn__label {
+  @apply flex-1 min-w-0 text-left whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.popular-locationBtn:hover {
+  background: linear-gradient(135deg, var(--pl-navy-soft) 0%, #003d66 100%) !important;
+  color: #fff !important;
+  border-color: rgba(0, 77, 127, 0.35) !important;
+  @apply -translate-y-0.5;
+  box-shadow: 0 8px 20px rgba(0, 77, 127, 0.18) !important;
+}
+
+.popular-locationBtn:hover .popular-locationBtn__icon {
+  background: rgba(255, 255, 255, 0.18);
+  @apply text-white;
+}
+
+.popular-locationBtn:active {
+  @apply -translate-y-px;
+}
+
+.button-containers {
+  @apply flex justify-center items-stretch p-0 h-full;
+}
+
+.popular-locationContainer .slick-track {
+  @apply flex items-stretch;
+  gap: var(--alz-listing-card-gap);
+}
+
+.popular-locationContainer .slick-slide {
+  @apply m-0 box-border;
+  width: var(--alz-popular-location-chip-w, 210px) !important;
+  height: auto !important;
+  display: flex !important;
+}
+
+.popular-locationContainer .slick-slide > div {
+  @apply w-full flex justify-center;
+}
+
+.popular-locationContainer .slick-list {
+  @apply m-0 overflow-hidden pt-1.5 px-1 pb-3.5;
+}
+
+.popular-locations-loading,
+.popular-locations-error {
+  @apply flex justify-center items-center min-h-[56px] py-3.5 px-4 bg-[#f6f8fa] rounded-[10px] border-0 text-[#5c6b7a] text-[14px] font-medium;
+}
+
+.popular-locations-error {
+  @apply text-[#c0392b] bg-[#fdf2f2];
+}
+
+@media (max-width: 1200px) {
+  .popular-locationContainer {
+    @apply px-4;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-location__surface {
+    @apply pt-0.5 px-0 pb-0;
+  }
+
+  .popular-location__header {
+    @apply mb-3.5;
+  }
+
+  .popular-locationText {
+    @apply text-[20px] pb-3 mb-0;
+  }
+
+  .popular-locationText::after {
+    @apply w-[72px] h-0.5;
+  }
+
+  .popular-locationContainer {
+    @apply px-2;
+  }
+
+  .popular-locationContainer .slick-list {
+    overflow: hidden !important;
+    @apply m-0 pt-1.5 px-0.5 pb-3;
+  }
+
+  .popular-locationContainer .slick-slide {
+    width: var(--alz-popular-location-chip-w, 190px) !important;
+    min-width: var(--alz-popular-location-chip-w, 190px) !important;
+    height: auto !important;
+    margin-right: var(--alz-listing-card-gap-scroll);
+    @apply box-border;
+  }
+
+  .popular-locationContainer .slick-slide:last-child {
+    @apply mr-0;
+  }
+
+  .popular-locationBtn {
+    @apply w-full max-w-full rounded-xl box-border gap-2 whitespace-nowrap;
+    min-height: var(--alz-popular-location-chip-min-h);
+    padding: var(--alz-popular-location-chip-pad-y) var(--alz-popular-location-chip-pad-x);
+    font-size: var(--alz-popular-location-chip-font);
+  }
+
+  .popular-locationBtn__icon {
+    @apply w-[30px] h-[30px] rounded-[9px] text-[16px];
+  }
+
+  .popular-locationContainer .slick-track {
+    @apply gap-0 flex items-stretch;
+  }
+
+  .popular-location__slider-wrap {
+    @apply -mx-0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-locationContainer .slick-track {
+    gap: var(--alz-listing-card-gap-scroll);
+  }
+}

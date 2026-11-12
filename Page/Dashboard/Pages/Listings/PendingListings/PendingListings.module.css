@@ -1,0 +1,490 @@
+/* ==========================================================================
+   ACİLLAZIM.COM — Onayda Bekleyen İlanlarım (2026 Kurumsal Tasarım Sistemi)
+   Navy (#003466 / #004B87) + Corporate Orange (#ff7a00 / #ea580c)
+   ========================================================================== */
+
+.listings-container {
+  @apply p-0 w-full box-border;
+  max-width: 100%;
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.listings-header {
+  @apply relative flex justify-between items-end flex-wrap overflow-hidden box-border;
+  margin-bottom: 24px;
+  gap: 20px;
+  padding: 24px 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 52%, #f5f3ff 100%);
+  border-radius: 22px;
+  border: 1px solid #fde68a;
+  box-shadow:
+    0 12px 30px -12px rgba(217, 119, 6, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.listings-header__info {
+  @apply flex flex-col items-start flex-1;
+  gap: 12px;
+  min-width: 260px;
+}
+
+.listings-header__badge {
+  @apply inline-flex items-center uppercase;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 122, 0, 0.09);
+  border: 1px solid rgba(255, 122, 0, 0.22);
+  color: #c2410c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.listings-header__badge svg {
+  color: #ff7a00;
+  font-size: 12px;
+}
+
+.listings-header__title-row {
+  @apply flex items-start;
+  gap: 15px;
+}
+
+.listings-header__icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff7a00 0%, #ea580c 100%);
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 8px 18px -4px rgba(234, 88, 12, 0.34);
+}
+
+.listings-header__text {
+  @apply flex flex-col;
+  gap: 5px;
+}
+
+.listings-header__heading-group {
+  @apply flex items-center flex-wrap;
+  gap: 10px;
+}
+
+.listings-header h1 {
+  @apply m-0;
+  font-size: 24px;
+  color: #0f172a;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.listings-count-badge {
+  @apply inline-flex items-center;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(255, 122, 0, 0.12);
+  border: 1px solid rgba(255, 122, 0, 0.28);
+  color: #c2410c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.listings-subtitle {
+  @apply m-0;
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  max-width: 580px;
+}
+
+.search-filter {
+  @apply flex items-center;
+  gap: 12px;
+}
+
+.search-box {
+
+  @apply relative flex items-center;
+}
+
+.search-icon {
+  @apply absolute pointer-events-none;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+.search-input {
+  @apply box-border;
+  height: 44px;
+  padding: 0 14px 0 40px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  width: 260px;
+  max-width: 100%;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  @apply outline-none;
+  background: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3.5px rgba(0, 52, 102, 0.09);
+}
+
+/* Kartlar Grid Yapısı */
+.listings-grid {
+  @apply justify-start w-full box-border;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 252px));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.listing-card {
+  @apply w-full overflow-hidden relative flex flex-col box-border;
+  max-width: 252px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 6px 20px -8px rgba(79, 70, 229, 0.06),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.listing-card:hover {
+  transform: translateY(-3px);
+  border-color: #c7d2fe;
+  box-shadow:
+    0 16px 32px -12px rgba(79, 70, 229, 0.14),
+    0 4px 10px rgba(15, 23, 42, 0.05);
+}
+
+.card-image {
+  @apply w-full relative overflow-hidden flex-shrink-0;
+  height: 136px;
+  background: #f1f5f9;
+}
+
+.card-image img {
+  @apply w-full h-full object-cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.listing-card:hover .card-image img {
+  transform: scale(1.06);
+}
+
+.card-image-overlay {
+  @apply absolute pointer-events-none;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.24) 0%, rgba(15, 23, 42, 0) 45%, rgba(15, 23, 42, 0.16) 100%);
+}
+
+.status-badge {
+  @apply absolute inline-flex items-center;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff7a00 0%, #ea580c 100%);
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.32);
+  z-index: 2;
+}
+
+.status-badge--edit {
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  box-shadow: 0 4px 12px rgba(0, 52, 102, 0.32);
+}
+
+.status-badge svg {
+  font-size: 11.5px;
+}
+
+.card-content {
+  @apply flex flex-col flex-1;
+  padding: 16px 18px 15px;
+  gap: 8px;
+}
+
+.card-title {
+  @apply m-0 overflow-hidden;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  min-height: 43px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.card-info {
+  @apply flex items-center justify-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.card-location {
+  @apply flex items-center;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748b;
+  gap: 6px;
+  min-width: 0;
+}
+
+.card-location svg {
+  @apply flex-shrink-0;
+  color: #ff7a00;
+}
+
+.card-location span {
+  @apply overflow-hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-price {
+  color: #003466;
+  font-weight: 800;
+  font-size: 15px;
+  white-space: nowrap;
+  background: rgba(0, 52, 102, 0.06);
+  padding: 3px 9px;
+  border-radius: 8px;
+}
+
+.card-category {
+  @apply flex items-center overflow-hidden;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-actions {
+  @apply flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.action-btn {
+  @apply cursor-pointer inline-flex items-center justify-center;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.action-btn svg {
+  font-size: 13px;
+}
+
+.action-btn.edit {
+  @apply flex-1;
+  background: #003466;
+  border: 1px solid #003466;
+  color: #ffffff;
+}
+
+.action-btn.edit:hover {
+  background: #004B87;
+  border-color: #004B87;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px -4px rgba(0, 52, 102, 0.35);
+}
+
+.action-btn.delete {
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.action-btn.delete:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px -4px rgba(220, 38, 38, 0.32);
+}
+
+/* Boş ve Yüklenme Durumları */
+.no-listings {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 56px 24px;
+  color: #64748b;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px dashed #cbd5e1;
+  box-shadow: 0 6px 20px -6px rgba(15, 23, 42, 0.04);
+}
+
+.no-listings__icon-wrap {
+  @apply flex items-center justify-center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.1) 0%, rgba(0, 52, 102, 0.08) 100%);
+  margin-bottom: 16px;
+}
+
+.no-listings__icon {
+  font-size: 26px;
+  color: #ea580c;
+}
+
+.no-listings__spinner {
+  font-size: 26px;
+  color: #003466;
+  animation: pending-spin 0.9s linear infinite;
+}
+
+@keyframes pending-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.no-listings h3 {
+  margin: 0 0 6px 0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.no-listings p {
+  @apply m-0;
+  font-size: 14px;
+  color: #64748b;
+  max-width: 440px;
+  line-height: 1.55;
+}
+
+/* Sayfalama */
+.listings-pagination {
+  @apply flex items-center justify-center flex-wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.page-numbers {
+  @apply flex flex-wrap;
+  gap: 6px;
+}
+
+.page-btn {
+  @apply cursor-pointer;
+  height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 11px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: #003466;
+  color: #003466;
+  background: #f8fafc;
+}
+
+.page-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.45;
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  color: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 6px 14px -4px rgba(0, 52, 102, 0.35);
+}
+
+/* Responsive (Tablet & Mobil) */
+@media (max-width: 1024px) {
+  .listings-header {
+    @apply flex-col items-stretch;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .search-filter,
+  .search-box,
+  .search-input {
+
+    @apply w-full;
+  }
+
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .listings-header {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .listings-header__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .listings-header h1 {
+    font-size: 20px;
+  }
+
+  .listings-subtitle {
+    font-size: 13px;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card-title {
+    min-height: 0;
+  }
+}

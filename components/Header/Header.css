@@ -1,0 +1,26 @@
+.header-icons {
+  @apply flex items-center;
+  gap: 1rem;
+}
+
+.message-icon,
+.favorites-icon {
+  @apply cursor-pointer rounded-full;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.message-icon:hover,
+.favorites-icon:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.favorites-icon i {
+  color: #64748b;
+  font-size: 1.2rem;
+}
+
+.favorites-icon:hover i {
+  color: #ff4757;
+} 

@@ -1,0 +1,133 @@
+{
+  "id": 1,
+  "fullName": "Mustafa Keskin",
+  "email": "mustafakeskin@gmail.com",
+  "password": "password123",
+  "phone": "+90 555 123 4567",
+  "address": {
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "fullAddress": "Türkiye"
+  },
+  "website": "https://johndoe.com",
+  "socialMedia": {
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "twitter": "https://twitter.com/johndoe",
+    "instagram": "https://instagram.com/johndoe",
+    "facebook": "https://facebook.com/johndoe"
+  },
+  "personalInfo": {
+    "birthDate": "1990-01-01",
+    "gender": "male",
+    "nationality": "TC",
+    "maritalStatus": "single",
+    "drivingLicense": true
+  },
+  "additionalInfo": {
+    "bio": "Merhaba! Ben Mustafa Keskin. İnşaat mühendisiyim ve sürdürülebilir yapılar konusunda uzmanım. 5 yıllık deneyimim boyunca çeşitli büyük ölçekli projelerde yer aldım. Yenilikçi çözümler üretmeyi ve ekip çalışmasını seviyorum. Özellikle yeşil bina teknolojileri ve akıllı ev sistemleri konularında kendimi sürekli geliştiriyorum.",
+    "interests": ["Sürdürülebilir Mimari", "Yeşil Binalar", "Akıllı Ev Sistemleri"],
+    "achievements": ["2022 Yılın Genç Mühendisi Ödülü", "3 Yeşil Bina Sertifikası"]
+  },
+  "contactPreferences": {
+    "preferredContactMethod": "email",
+    "availableHours": "09:00-18:00",
+    "timeZone": "Europe/Istanbul",
+    "languages": ["Türkçe", "İngilizce"]
+  },
+  "emergencyContact": {
+    "name": "Jane Doe",
+    "relationship": "Eş",
+    "phone": "+90 555 987 6543",
+    "email": "jane.doe@gmail.com"
+  },
+  "salesRental": {
+    "properties": [
+      {
+        "id": 1,
+        "title": "Modern Villa",
+        "type": "sale",
+        "price": "2500000",
+        "location": "Beşiktaş, İstanbul",
+        "status": "available"
+      }
+    ],
+    "preferences": {
+      "propertyType": "residential",
+      "priceRange": "2000000-3000000",
+      "location": "İstanbul",
+      "status": "active"
+    }
+  },
+  "services": {
+    "professionalInfo": {
+      "educations": [
+        {
+          "id": 1,
+          "school": "İstanbul Teknik Üniversitesi",
+          "degree": "Lisans",
+          "field": "İnşaat Mühendisliği",
+          "startDate": "2015-09-01",
+          "endDate": "2019-06-30",
+          "description": "İnşaat Mühendisliği bölümünden onur derecesiyle mezun oldum."
+        }
+      ],
+      "experiences": [
+        {
+          "id": 1,
+          "company": "ABC İnşaat",
+          "position": "Kıdemli İnşaat Mühendisi",
+          "startDate": "2019-07-01",
+          "endDate": "2023-12-31",
+          "description": "Büyük ölçekli konut projelerinin tasarım ve uygulama aşamalarında görev aldım."
+        }
+      ],
+      "certifications": [
+        {
+          "id": 1,
+          "name": "PMP - Proje Yönetimi Profesyoneli",
+          "issuer": "PMI",
+          "date": "2020-06-15",
+          "description": "Uluslararası geçerliliği olan proje yönetimi sertifikası"
+        }
+      ],
+      "skills": [
+        {
+          "id": 1,
+          "name": "AutoCAD",
+          "level": "Uzman"
+        },
+        {
+          "id": 2,
+          "name": "Proje Yönetimi",
+          "level": "İleri"
+        }
+      ]
+    },
+    "portfolio": {
+      "projects": [
+        {
+          "id": 1,
+          "name": "Yeşil Vadi Konutları",
+          "technologies": ["Yeşil Bina", "Akıllı Ev Sistemleri"],
+          "description": "100 dairelik modern konut projesi",
+          "link": "https://example.com/projects/yesilvadi"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 1,
+          "name": "Mehmet Yılmaz",
+          "position": "ABC Holding CEO",
+          "text": "Profesyonel yaklaşımı ve kaliteli iş çıkarma becerisi ile projelerimize büyük katkı sağladı.",
+          "phone": "+90 532 987 6543"
+        }
+      ]
+    },
+    "workPreferences": {
+      "workType": "full-time",
+      "salary": "30000",
+      "location": "office",
+      "availability": "immediate"
+    }
+  }
+} 

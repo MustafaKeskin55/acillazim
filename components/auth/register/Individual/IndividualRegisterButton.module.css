@@ -1,0 +1,48 @@
+.register-button {
+  @apply w-full;
+  max-width: 100%;
+}
+
+.login-link-container {
+  @apply text-center w-full;
+  margin-top: 4px;
+  max-width: 100%;
+}
+
+.login-link {
+  @apply w-full flex items-center justify-center box-border no-underline cursor-pointer;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  padding: 14px 18px;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.22s ease;
+}
+
+.login-link span {
+  @apply inline-flex items-center;
+  color: #004B87;
+  font-weight: 700;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  background: #ffffff;
+  border-color: rgba(0, 75, 135, 0.3);
+  box-shadow: 0 6px 16px -6px rgba(0, 42, 78, 0.1);
+}
+
+.login-link:hover span {
+  color: #ff7a00;
+}
+
+@media (max-width: 480px) {
+  .login-link {
+    font-size: 13.5px;
+    padding: 13px 14px;
+  }
+}

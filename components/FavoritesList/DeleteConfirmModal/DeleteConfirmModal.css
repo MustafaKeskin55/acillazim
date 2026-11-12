@@ -1,0 +1,56 @@
+/* ==========================================================================
+   DeleteConfirmModal.css — Tailwind CSS (@apply Mimarisi)
+   - Yumuşatılmış Modern SaaS Onay Modalı
+   ========================================================================== */
+
+.delete-modal-overlay {
+  @apply fixed inset-0 flex justify-center items-center bg-slate-900/50 backdrop-blur-sm z-[1000] p-4;
+}
+
+.delete-modal {
+  @apply relative w-full max-w-[390px] bg-white rounded-2xl shadow-2xl border border-slate-200/80 p-6 flex flex-col box-border;
+  animation: deleteModalPopIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes deleteModalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.delete-modal-close {
+  @apply absolute top-4 right-4 w-7 h-7 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 flex items-center justify-center border-0 bg-transparent cursor-pointer transition-colors;
+}
+
+.delete-modal-body {
+  @apply flex flex-col items-center text-center pt-2 pb-3;
+}
+
+.delete-modal-icon-wrap {
+  @apply w-12 h-12 rounded-full bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center text-lg mb-3 shadow-sm;
+}
+
+.delete-modal-title {
+  @apply text-base font-bold text-slate-900 m-0 mb-1.5 tracking-tight;
+}
+
+.delete-modal-text {
+  @apply text-xs sm:text-[13px] text-slate-500 m-0 leading-relaxed max-w-[300px];
+}
+
+.delete-modal-buttons {
+  @apply flex items-center gap-2.5 pt-2 w-full;
+}
+
+.cancel-button {
+  @apply flex-1 h-9 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold cursor-pointer transition-colors text-center shadow-sm;
+}
+
+.confirm-button {
+  @apply flex-1 h-9 px-4 rounded-xl border-0 bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold cursor-pointer transition-colors text-center shadow-sm;
+}

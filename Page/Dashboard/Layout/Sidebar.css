@@ -1,0 +1,7 @@
+/* ===================================================================
+   Sidebar.css — Tailwind CSS (@apply Mimarisi)
+   =================================================================== */
+
+.dashboard-sidebar .notification-badge {
+  @apply text-white bg-brand-accent py-0.5 px-1.5 rounded-[10px] text-xs ml-2;
+}

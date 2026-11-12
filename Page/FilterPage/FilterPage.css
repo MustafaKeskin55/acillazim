@@ -1,0 +1,330 @@
+/* ============================================================
+   FilterPage.css  — Sol Sidebar + Sağ İçerik Layout
+   ============================================================ */
+
+/* ── Scroll kilidi (mobil filtre paneli) ── */
+html.filter-mobile-no-scroll,
+html.filter-mobile-no-scroll body {
+  @apply overflow-hidden;
+}
+
+/* ── Ana Sayfa Container ── */
+.filter-page {
+  @apply flex flex-col w-full;
+  min-height: calc(100vh - 160px);
+  background: #f0f2f5;
+}
+
+/* ── Breadcrumb ── */
+.filter-page-breadcrumb {
+  @apply w-full;
+  border-bottom: 1px solid rgba(0, 52, 102, 0.08);
+  background: #fff;
+}
+
+/* ── Filter Container: SOL sidebar + SAĞ içerik ── */
+.filter-container {          @apply flex flex-row items-start w-full mx-auto relative box-border;          /* ← YAN YANA */
+  gap: 20px;
+  max-width: 1600px;
+  padding: 20px 20px 60px;
+}
+
+/* ── Sol Sidebar ── */
+.filter-sidebar-aside {
+  @apply overflow-y-auto overflow-x-hidden block;
+  flex: 0 0 260px;              /* sabit genişlik */
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 80px);
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+  /* mobil panel gizli */
+}
+
+.filter-sidebar-aside::-webkit-scrollbar {
+  width: 4px;
+}
+.filter-sidebar-aside::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+/* Sidebar içindeki .fs-sidebar'ın margin-bottom'ını kaldır */
+.filter-sidebar-aside .fs-sidebar {
+  margin-bottom: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 14px;
+}
+
+/* Sidebar içindeki yatay bar dikey olsun */
+.filter-sidebar-aside .fs-horizontal-bar {
+  @apply flex-col items-stretch;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 12px;
+  gap: 8px;
+}
+
+/* Sidebar'daki filtre grupları tam genişlikte */
+.filter-sidebar-aside .fs-hbar-group {
+  @apply w-full;
+}
+
+/* Sidebar'daki trigger butonları tam genişlikte */
+.filter-sidebar-aside .fs-hbar-trigger {
+  @apply w-full justify-between;
+  border-radius: 10px;
+}
+
+/* Sidebar'daki dropdown yukarı/aşağı normal pozisyonda */
+.filter-sidebar-aside .fs-hbar-dropdown {
+  @apply static;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 10px;
+  margin-top: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Ayırıcı sidebar'da yatay */
+.filter-sidebar-aside .fs-hbar-divider {
+  @apply w-full;
+  height: 1px;
+  margin: 4px 0;
+}
+
+/* Aksiyonlar sidebar'da tam genişlikte dikey */
+.filter-sidebar-aside .fs-hbar-actions {
+  @apply flex-col w-full;
+  margin-left: 0;
+}
+
+.filter-sidebar-aside .fs-hbar-btn {
+  @apply w-full;
+}
+
+/* Mobil sheet header gizli (masaüstü) */
+.filter-mobile-sheet-header {
+  @apply hidden;
+}
+
+.filter-mobile-sheet-body {
+  min-width: 0;
+}
+
+/* ── Sağ İçerik Alanı ── */
+.filter-content {
+  @apply flex-1 flex flex-col;
+  min-width: 0;
+  gap: 16px;
+}
+
+/* ── Loader Overlay ── */
+.filter-loader-overlay {
+  @apply fixed flex justify-center items-center;
+  inset: 0;
+  background: rgba(240, 242, 245, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+}
+
+/* ── No Results ── */
+.no-results-message {
+  @apply flex justify-center items-center;
+  min-height: 260px;
+  padding: 40px 20px;
+}
+
+.no-results-container {
+  @apply flex flex-col items-center text-center;
+  max-width: 460px;
+  padding: 48px 36px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 52, 102, 0.08);
+  border: 1px solid rgba(0, 52, 102, 0.06);
+}
+
+.no-results-icon {
+  font-size: 48px;
+  color: #003466;
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.no-results-container h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2540;
+  margin-bottom: 10px;
+}
+
+.no-results-container p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .filter-container {
+    gap: 16px;
+    padding: 16px 16px 50px;
+  }
+
+  .filter-sidebar-aside {
+    flex: 0 0 230px;
+    width: 230px;
+    min-width: 230px;
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter-container {
+    gap: 14px;
+    padding: 14px 14px 50px;
+  }
+
+  .filter-sidebar-aside {
+    flex: 0 0 210px;
+    width: 210px;
+    min-width: 210px;
+    max-width: 210px;
+  }
+}
+
+/* ── 768px altı: sidebar tam ekran panel olarak açılır ── */
+@media (max-width: 768px) {
+  .filter-page > .breadcrumb2-container.filter-page-breadcrumb {
+    display: none !important;
+  }
+
+  .filter-container {      @apply flex-col;      /* ← dikey dön */
+    padding: 10px 10px 50px;
+    gap: 12px;
+  }
+
+  /* Masaüstü sidebar gizli, mobilde panel olarak açılır */
+  .filter-sidebar-aside {
+    @apply hidden fixed overflow-y-auto w-full;
+    inset: 0;
+    z-index: 3000;
+    background: #f4f6f9;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+    top: 0;
+    max-height: 100vh;
+  }
+
+  .filter-sidebar-aside.filter-sidebar-aside--open {
+    @apply block;
+  }
+
+  /* Mobil panel header */
+  .filter-mobile-sheet-header {
+    @apply flex items-center justify-between;
+    padding: 16px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0,52,102,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .filter-mobile-sheet-back {
+    @apply flex items-center border-0 cursor-pointer;
+    gap: 6px;
+    background: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #003466;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+
+  .filter-mobile-sheet-back-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .filter-mobile-sheet-title {
+    @apply m-0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a2540;
+  }
+
+  .filter-mobile-sheet-spacer {
+    width: 80px;
+  }
+
+  .filter-mobile-sheet-body {
+    padding: 16px;
+  }
+
+  /* Mobil açık sidebar: filtre barı yine dikey */
+  .filter-sidebar-aside--open .fs-sidebar {
+    @apply m-0;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 14px;
+  }
+
+  .filter-sidebar-aside--open .fs-horizontal-bar {
+    @apply flex-col;
+    overflow-x: visible;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-group {
+    @apply w-full;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-trigger {
+    @apply w-full justify-between;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-dropdown {
+    @apply static;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 10px;
+    margin-top: 4px;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-divider {
+    @apply w-full;
+    height: 1px;
+    margin: 4px 0;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-actions {
+    @apply flex-col w-full;
+    margin-left: 0;
+  }
+
+  .filter-sidebar-aside--open .fs-hbar-btn {
+    @apply w-full;
+  }
+
+  .filter-content {
+    @apply w-full;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-container {
+    padding: 8px 8px 50px;
+  }
+}

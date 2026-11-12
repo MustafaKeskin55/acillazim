@@ -1,0 +1,115 @@
+/* LocationButton.module.css */
+/* Navbar konum butonu için özel CSS - Diğer CSS'lerle karışmaz */
+
+.locationSelector {
+  @apply relative;
+  z-index: 10;
+  margin-left: 40px;
+}
+
+.locationButton {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  min-height: 36px !important;
+}
+
+.locationButton:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.locationButton:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+.locationIcon {
+  font-size: 16px !important;
+  color: #FF8C00 !important;
+  flex-shrink: 0 !important;
+}
+
+.locationText {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+.locationLabel {
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.locationDivider {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  margin: 0 4px !important;
+}
+
+.locationValue {
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  max-width: 150px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Has location state */
+.hasLocation {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.hasLocation:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .locationButton {
+    padding: 6px 10px !important;
+    font-size: 14px !important;
+  }
+  
+  .locationText {
+    font-size: 14px !important;
+  }
+  
+  .locationLabel,
+  .locationValue,
+  .locationDivider {
+    font-size: 14px !important;
+  }
+  
+  .locationValue {
+    max-width: 100px !important;
+  }
+}

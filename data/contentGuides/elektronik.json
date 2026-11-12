@@ -1,0 +1,69 @@
+{
+  "title": "Elektronik Alışveriş Rehberi",
+  "description": "İkinci el elektronik ürünler satın alırken dikkat edilmesi gereken noktalar",
+  "lastUpdated": "2025-03-28T12:30:00Z",
+  "categoryId": 499,
+  "sections": [
+    {
+      "id": 1,
+      "title": "Ürün Özellikleri",
+      "icon": "info-circle",
+      "description": "İlan açıklamasında verilen teknik özellikleri dikkatlice inceleyin ve ihtiyaçlarınızı karşıladığından emin olun. Tarih, model, seri numarası gibi detayları satıcıdan sorun.",
+      "tips": [
+        "Cihazın model numarasını, seri numarasını, üretim tarihini öğrenin",
+        "Teknik özellikleri resmi üretici sitesinden doğrulayın",
+        "Donanım özelliklerinin (RAM, depolama, işlemci vb.) ihtiyacınıza uygun olduğundan emin olun"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Ürün Durumu",
+      "icon": "clipboard-check",
+      "description": "Elektronik ürünlerin fiziksel durumunu, aşınma belirtilerini ve fonksiyonel durumunu detaylı şekilde öğrenin. Varsa ürün garanti durumunu ve faturasını sorun.",
+      "tips": [
+        "Ekran çizik, çatlak gibi görsel kusurları sorgulayın",
+        "Batarya ömrü ve durumu hakkında bilgi edinin",
+        "Orijinal kutusunun, aksesuarlarının ve kullanım kılavuzunun olup olmadığını sorun"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Test İmkanı",
+      "icon": "check-circle",
+      "description": "Mümkünse ürünü teslim almadan önce test etmeyi talep edin. Yetkili servisten ürün durumu raporu isteyebilirsiniz.",
+      "tips": [
+        "Ürünü incelemek ve test etmek için güvenli bir ortam belirleyin",
+        "Tüm fonksiyonları ve bağlantı noktalarını test edin",
+        "Ürünü satın almadan önce ekspertiz veya kontrolden geçirmeyi önerin"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "İade ve Değişim Koşulları",
+      "icon": "exchange-alt",
+      "description": "Satıcının iade koşullarını öğrenin. Ürünün belirtilenden farklı olması durumunda nasıl bir yol izleneceğini önceden konuşun.",
+      "tips": [
+        "Ürünün belirtilen özelliklere sahip olmaması durumundaki seçenekleri netleştirin",
+        "İade süresini ve koşullarını yazılı olarak alın",
+        "Oluşabilecek anlaşmazlıklar için platformun çözüm mekanizmalarını öğrenin"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Orjinallik Kontrolü",
+      "icon": "certificate",
+      "description": "Özellikle elektronik cihazlarda sahte ürünler olabilir. IMEI, seri numarası gibi bilgileri kontrol edin ve üretici web sitesinden doğrulayın.",
+      "tips": [
+        "Telefonlarda IMEI numarasını kontrol edin ve kaydını sorgulayın",
+        "Sahte ürünlerde görülen belirtilere karşı dikkatli olun (düşük kaliteli logo, farklı yazım hataları vb.)",
+        "Fiyatı piyasanın çok altında olan ürünlerde dikkatli olun"
+      ]
+    }
+  ],
+  "videoUrl": "https://example.com/elektronik-alisveris-rehberi",
+  "contactInfo": {
+    "email": "elektronik@acillazim.com",
+    "phone": "+90 (212) 555 45 67",
+    "supportHours": "09:00 - 18:00"
+  }
+} 

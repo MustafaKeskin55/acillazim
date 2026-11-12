@@ -1,0 +1,577 @@
+/* ==========================================================================
+   ACİLLAZIM — BİREYSEL ÜYELİK (2026 KURUMSAL TASARIM SİSTEMİ)
+   ========================================================================== */
+
+.individual-register {
+  @apply flex items-center justify-center;
+  min-height: calc(100vh - 110px);
+  padding: 52px 24px 72px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(0, 75, 135, 0.065) 0%, transparent 45%),
+    radial-gradient(circle at 88% 86%, rgba(255, 122, 0, 0.05) 0%, transparent 45%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.individual-register .register-container {
+  @apply relative w-full;
+  max-width: 720px;
+  background: linear-gradient(180deg, rgba(0, 75, 135, 0.04) 0%, #ffffff 22%);
+  border: 1.5px solid rgba(0, 75, 135, 0.14);
+  border-radius: 28px;
+  padding: 44px 44px 40px;
+  box-shadow:
+    0 24px 56px -14px rgba(0, 42, 78, 0.11),
+    0 8px 22px -6px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+/* Header */
+.individual-register .register-header {
+  @apply text-center;
+  margin-bottom: 32px;
+}
+
+.individual-register .register-header-top {
+  @apply flex items-center justify-center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.individual-register .register-icon-squircle {
+  @apply flex items-center justify-center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #004B87 0%, #0263b0 100%);
+  color: #ffffff;
+  box-shadow:
+    0 10px 22px -6px rgba(0, 75, 135, 0.38),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.individual-register .register-icon-squircle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.individual-register .register-badge {
+  @apply inline-flex items-center uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(0, 75, 135, 0.08);
+  color: #004B87;
+  border: 1px solid rgba(0, 75, 135, 0.16);
+}
+
+.individual-register .register-header h1 {
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.individual-register .register-header .accent-text {
+  color: #ff7a00;
+  font-weight: 800;
+}
+
+.individual-register .register-header p {
+  @apply m-0;
+  color: #64748b;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Form Sections */
+.individual-register .register-form {
+  @apply flex flex-col;
+  gap: 22px;
+}
+
+.individual-register .form-section-block {
+  @apply flex flex-col;
+  background: rgba(248, 250, 252, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  gap: 16px;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.individual-register .form-section-block:focus-within {
+  background: #ffffff;
+  border-color: rgba(0, 75, 135, 0.24);
+  box-shadow: 0 10px 26px -10px rgba(0, 42, 78, 0.08);
+}
+
+.individual-register .form-section-title {
+  @apply flex items-center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.individual-register .section-step {
+  @apply inline-flex items-center justify-center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #004B87 0%, #0263b0 100%);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 10px -2px rgba(0, 75, 135, 0.3);
+}
+
+/* Grid & Field Groups */
+.individual-register .input-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+.individual-register .input-field {
+  @apply relative w-full flex flex-col;
+  margin-bottom: 0;
+  gap: 6px;
+}
+
+.individual-register .field-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: -0.01em;
+  margin-left: 2px;
+}
+
+.individual-register .input-field input,
+.individual-register .input-field select,
+.individual-register .input-field textarea {
+  @apply w-full box-border;
+  height: 48px;
+  padding: 0 15px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: inherit;
+}
+
+.individual-register .input-field textarea {
+  height: auto;
+  min-height: 92px;
+  padding: 12px 15px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.individual-register .input-field input::placeholder,
+.individual-register .input-field textarea::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.individual-register .input-field input:hover,
+.individual-register .input-field select:hover:not(:disabled),
+.individual-register .input-field textarea:hover {
+  border-color: #94a3b8;
+}
+
+.individual-register .input-field input:focus,
+.individual-register .input-field select:focus,
+.individual-register .input-field textarea:focus {
+  @apply outline-none;
+  border-color: #004B87;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(0, 75, 135, 0.11);
+}
+
+/* Select Dropdown */
+.individual-register .select-field select {
+  @apply cursor-pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004B87' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}
+
+.individual-register .select-field select:disabled {
+  @apply cursor-not-allowed;
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+}
+
+/* Password Field */
+.individual-register .password-input-wrap {
+
+  @apply relative flex items-center w-full;
+}
+
+.individual-register .password-input-wrap input {
+  padding-right: 84px;
+}
+
+.individual-register .toggle-password {
+  @apply absolute border-0 cursor-pointer;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 75, 135, 0.07);
+  border-radius: 8px;
+  color: #004B87;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+}
+
+.individual-register .toggle-password:hover {
+  background: rgba(0, 75, 135, 0.14);
+  color: #00335c;
+}
+
+.individual-register .password-match-icon {
+  @apply absolute pointer-events-none;
+  right: 68px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.individual-register .password-match-icon.match {
+  color: #10b981;
+}
+
+.individual-register .password-match-icon.mismatch {
+  color: #ef4444;
+}
+
+/* Password Strength Feedback */
+.individual-register .password-feedback {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px -6px rgba(15, 23, 42, 0.06);
+  margin-top: 2px;
+}
+
+.individual-register .password-strength {
+  @apply flex items-center justify-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.individual-register .strength-bars {
+  @apply flex flex-1;
+  gap: 6px;
+}
+
+.individual-register .strength-bar {
+  @apply flex-1;
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.individual-register .strength-bar.level-1 { background: #ef4444; }
+.individual-register .strength-bar.level-2 { background: #f59e0b; }
+.individual-register .strength-bar.level-3 { background: #10b981; }
+.individual-register .strength-bar.level-4 { background: #059669; }
+
+.individual-register .strength-text {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.individual-register .strength-text.level-1 { color: #ef4444; }
+.individual-register .strength-text.level-2 { color: #f59e0b; }
+.individual-register .strength-text.level-3 { color: #10b981; }
+.individual-register .strength-text.level-4 { color: #059669; }
+
+.individual-register .password-rules h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin: 0 0 8px 0;
+}
+
+.individual-register .password-rules ul {
+  @apply p-0 m-0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.individual-register .password-rules li {
+  @apply flex items-center;
+  font-size: 12px;
+  color: #64748b;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.individual-register .password-rules li::before {
+  content: "•";
+  color: #cbd5e1;
+  font-weight: bold;
+}
+
+.individual-register .password-rules li.valid {
+  color: #059669;
+  font-weight: 600;
+}
+
+.individual-register .password-rules li.valid::before {
+  content: "✓";
+  color: #10b981;
+}
+
+/* Field Errors */
+.individual-register .input-field input.error,
+.individual-register .input-field textarea.error {
+  border-color: #ef4444;
+  background-color: #fffafa;
+}
+
+.individual-register .error-message,
+.individual-register .phone-error {
+  @apply flex items-center;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+/* Terms Box (Separate Items) */
+.individual-register .terms-container {
+  @apply flex flex-col m-0;
+  gap: 10px;
+}
+
+.individual-register .checkbox-container {
+  @apply flex items-center cursor-pointer;
+  gap: 12px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 13px;
+  padding: 13px 16px;
+  transition: all 0.2s ease;
+}
+
+.individual-register .checkbox-container:hover {
+  background: #ffffff;
+  border-color: rgba(0, 75, 135, 0.28);
+}
+
+.individual-register .checkbox-container input[type="checkbox"] {
+  @apply m-0 cursor-pointer flex-shrink-0;
+  width: 18px;
+  height: 18px;
+  accent-color: #004B87;
+}
+
+.individual-register .terms-text {
+  @apply cursor-pointer m-0;
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.individual-register .contract-link {
+  @apply underline;
+  color: #004B87;
+  font-weight: 700;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.individual-register .contract-link:hover {
+  color: #ff7a00;
+}
+
+/* reCAPTCHA */
+.individual-register .recaptcha-container {
+  @apply flex justify-center;
+  margin: 2px 0;
+}
+
+/* Submit & Google Side-by-Side Row */
+.individual-register .register-actions-row {
+  @apply items-center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.individual-register .register-button {
+  @apply w-full m-0 border-0 cursor-pointer;
+  height: 42px;
+  background: linear-gradient(135deg, #004B87 0%, #0260ab 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 10px 20px -6px rgba(0, 75, 135, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.individual-register .register-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #003d6e 0%, #004B87 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 30px -6px rgba(0, 75, 135, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.individual-register .register-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.individual-register .register-button:disabled {
+  @apply cursor-not-allowed;
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.58) 0%, rgba(2, 96, 171, 0.52) 100%);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: none;
+}
+
+.individual-register .google-register-wrapper {
+
+  @apply flex justify-center items-center w-full;
+}
+
+/* Modal */
+.modal-overlay {
+  @apply fixed flex justify-center items-center;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  @apply w-full text-center;
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 20px;
+  max-width: 400px;
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.25);
+}
+
+.modal-icon {
+  @apply rounded-full flex items-center justify-center;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 122, 0, 0.12);
+  color: #ff7a00;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 auto 16px;
+}
+
+.modal-message {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-button {
+  @apply border-0 cursor-pointer;
+  background: #004B87;
+  color: #ffffff;
+  padding: 11px 32px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.modal-button:hover {
+  background: #003865;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .individual-register {
+    padding: 28px 16px 48px;
+  }
+
+  .individual-register .register-container {
+    padding: 28px 20px 26px;
+    border-radius: 22px;
+  }
+
+  .individual-register .register-header h1 {
+    font-size: 23px;
+  }
+
+  .individual-register .form-section-block {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .individual-register .input-group,
+  .individual-register .register-actions-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .individual-register .password-rules ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .individual-register {
+    padding: 18px 12px 36px;
+  }
+
+  .individual-register .register-container {
+    padding: 24px 16px 22px;
+    border-radius: 20px;
+  }
+
+  .individual-register .register-header h1 {
+    font-size: 21px;
+  }
+
+  .individual-register .register-header p {
+    font-size: 13.5px;
+  }
+
+  .individual-register .recaptcha-container {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+}

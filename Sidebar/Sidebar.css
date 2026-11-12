@@ -1,0 +1,143 @@
+/* =============================================================
+   Sidebar.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler ve responsive davranış birebir korunmuştur.
+   ============================================================= */
+
+/* Sidebar ana bileşen stilleri - Modern tasarım */
+.sidebar {
+  @apply bg-white rounded-lg w-[230px] h-[570px] overflow-hidden mx-auto my-0 z-[1000] flex flex-col;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #c8c8c8;
+}
+
+/* Sidebar başlık bölümü */
+.sidebar-header {
+  @apply p-[15px] bg-[#f8f9fb];
+  border-bottom: 1px solid #eaeef5;
+}
+
+.sidebar-header h3 {
+  @apply m-0 text-[16px] font-semibold text-[#1a1a1a];
+}
+
+/* Kategori container */
+.sidebar-categories-container {
+  @apply overflow-y-auto flex-1;
+}
+
+/* Sidebar Option Styles */
+.sidebar-options {
+  @apply flex items-center py-[7px] px-3 transition-all duration-200;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.sidebar-options:hover {
+  @apply bg-[#e8f0fe];
+}
+
+.sidebar-options:last-child {
+  @apply border-b-0;
+}
+
+.sidebar-option {
+  @apply flex items-center w-full;
+}
+
+.icon {
+  @apply min-w-[36px] h-9 rounded-md flex items-center justify-center mr-3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.category-text {
+  @apply text-[14px] font-[550] text-[#2a2a2a] m-0 whitespace-nowrap overflow-hidden text-ellipsis capitalize;
+}
+
+.sidebar-option-link {
+  @apply cursor-pointer transition-colors duration-200;
+}
+
+.sidebar-option-link:hover {
+  color: #0d6efd !important;
+}
+
+.sidebar-option-link.active {
+  color: #0d6efd !important;
+  @apply font-semibold;
+}
+
+.sidebar-loading {
+  @apply p-5 text-center text-[#495057];
+}
+
+.sidebar-error {
+  @apply p-5 text-center text-[#dc3545];
+}
+
+/* Arkaplan overlay (mobil görünümde) */
+.sidebar-overlay {
+  @apply fixed inset-0 bg-black/50 z-[999] backdrop-blur-[2px];
+}
+
+/* Mobil görünüm için hamburger menü */
+.hamburger-menu {
+  @apply hidden;
+}
+
+/* Mobil görünüm */
+@media (max-width: 880px) {
+  .category-text {
+    @apply text-[13px];
+  }
+
+  .sidebar.mobile {
+    @apply fixed top-0 -left-[230px] h-screen z-[1000];
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.mobile.open {
+    @apply left-0;
+  }
+
+  .hamburger-menu {
+    @apply flex fixed top-5 left-5 z-[1001] cursor-pointer bg-white w-10 h-10 rounded-full items-center justify-center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger {
+    @apply w-5 h-4 relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  .hamburger span {
+    @apply block absolute h-0.5 w-full bg-[#1a1a1a] rounded-[9px] opacity-100 left-0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 7px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: 14px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 7px;
+    transform: rotate(135deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    @apply opacity-0 -left-[60px];
+  }
+
+  .hamburger.open span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-135deg);
+  }
+}

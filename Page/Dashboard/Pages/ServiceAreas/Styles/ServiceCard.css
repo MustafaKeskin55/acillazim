@@ -1,0 +1,290 @@
+/* ==========================================================================
+   HİZMET KARTI (ServiceCard.css) — 2026 KURUMSAL TASARIM
+   Uygulanan Prensipler: UI UX Pro Max, Taste Skill, Impeccable, Jakub Krehel
+   Not: Kartta üst/yan renkli şerit (::before strip) kullanılmaz.
+   ========================================================================== */
+
+.service-card {
+  @apply overflow-hidden relative cursor-pointer flex flex-col w-full h-full outline-none;
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 252px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 10px 28px -16px rgba(15, 23, 42, 0.07),
+    0 2px 6px rgba(15, 23, 42, 0.02);
+  transition:
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+  font-family: var(--font-body, 'Manrope', 'Inter', system-ui, sans-serif);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  border-color: #c7d2fe;
+  box-shadow:
+    0 18px 36px -14px rgba(79, 70, 229, 0.12),
+    0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.service-card:focus-visible {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.16);
+}
+
+/* ── Görsel Alanı ── */
+.service-card__image {
+  @apply relative w-full overflow-hidden flex-shrink-0;
+  height: 136px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.service-card__image img {
+  @apply w-full h-full object-cover block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card__image-fallback {
+  @apply w-full h-full flex items-center justify-center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #94a3b8;
+  font-size: 2.25rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-card__image img,
+.service-card:hover .service-card__image-fallback {
+  transform: scale(1.035);
+}
+
+/* Sol Üst Durum Rozeti */
+.service-card__status {
+  @apply absolute inline-flex items-center;
+  top: 10px;
+  left: 10px;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #99f6e4;
+  color: #0f766e;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  z-index: 2;
+}
+
+.service-card__status::before {
+  @apply rounded-full;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #0d9488;
+}
+
+/* Sağ Üst Kategori Rozeti */
+.service-card__category {
+  @apply absolute overflow-hidden;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #4338ca;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  border: 1px solid #c7d2fe;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  z-index: 2;
+  letter-spacing: 0.01em;
+  max-width: calc(100% - 115px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ── Kart İçeriği ── */
+.service-card__content {
+  @apply flex flex-col justify-between flex-1;
+  padding: 13px 14px 12px;
+  background: #ffffff;
+  gap: 10px;
+}
+
+.service-card__body {
+  @apply flex flex-col;
+  gap: 6px;
+}
+
+.service-card__title {
+  @apply m-0 overflow-hidden;
+  font-size: 0.91rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.service-card__description {
+  @apply m-0 overflow-hidden;
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.44;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* ── Alt Bilgi ve Aksiyon Barı ── */
+.service-card__stats {
+  @apply flex items-center justify-between;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto;
+}
+
+.service-card__meta {
+  @apply flex items-center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.service-card__rating {
+  @apply inline-flex items-center;
+  gap: 4px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-card__rating .star-icon {
+  @apply flex-shrink-0;
+  color: #f59e0b;
+  font-size: 0.78rem;
+}
+
+.service-card__rating span {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #92400e;
+  line-height: 1;
+}
+
+.service-card__reviews {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.service-card__cta {
+  @apply inline-flex items-center flex-shrink-0;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%);
+  border: 1px solid #c7d2fe;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.service-card__cta-icon {
+  font-size: 0.7rem;
+  color: #4f46e5;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.service-card:hover .service-card__cta {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 6px 14px -6px rgba(79, 70, 229, 0.3);
+}
+
+.service-card:hover .service-card__cta-icon {
+  transform: translateX(2px);
+  color: #ffffff;
+}
+
+/* ── Responsive Kırılımlar ── */
+@media (max-width: 1024px) {
+  .service-card__image {
+    height: 136px;
+  }
+
+  .service-card__content {
+    padding: 13px 14px;
+  }
+
+  .service-card__title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-card {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .service-card__image {
+    height: 168px;
+  }
+
+  .service-card__content {
+    padding: 15px 16px;
+    gap: 12px;
+  }
+
+  .service-card__status,
+  .service-card__category {
+    top: 10px;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .service-card__status {
+    left: 10px;
+  }
+
+  .service-card__category {
+    right: 10px;
+  }
+
+  .service-card__title {
+    font-size: 0.98rem;
+  }
+
+  .service-card__description {
+    font-size: 0.82rem;
+  }
+
+  .service-card__stats {
+    padding-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__cta,
+  .service-card__image img,
+  .service-card__image-fallback {
+    transition-duration: 0.05s !important;
+  }
+}

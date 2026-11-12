@@ -1,0 +1,284 @@
+.hesabim-page {
+  @apply flex flex-col;
+  padding-top: 0;
+  padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  min-height: 100vh;
+  background: #eef2f7;
+  --bg-page-fallback: #eef2f7;
+}
+
+.hesabim-page--empty {
+  min-height: 100vh;
+  background: #eef2f7;
+}
+
+/* Üst mavi alan: üst köşeler düz, yalnızca alt sol / alt sağ kavisli */
+.hesabim-hero {
+  @apply relative m-0 overflow-hidden;
+  padding: calc(22px + env(safe-area-inset-top, 0px)) 16px 28px;
+  color: #fff;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 8px 28px rgba(0, 52, 102, 0.22);
+}
+
+.hesabim-hero-bg {
+  @apply absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(155deg, #003466 0%, #0a4d8c 45%, #003466 100%);
+}
+
+.hesabim-hero-bg::before,
+.hesabim-hero-bg::after {
+  @apply absolute rounded-full pointer-events-none;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.hesabim-hero-bg::before {
+  width: 220px;
+  height: 220px;
+  top: -90px;
+  right: -60px;
+}
+
+.hesabim-hero-bg::after {
+  width: 160px;
+  height: 160px;
+  bottom: -50px;
+  left: -40px;
+}
+
+.hesabim-close {
+  @apply absolute border-0 rounded-full flex items-center justify-center cursor-pointer p-0;
+  top: calc(14px + env(safe-area-inset-top, 0px));
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.hesabim-close svg {
+  font-size: 26px;
+}
+
+.hesabim-close:active {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.hesabim-hero-row {
+  @apply relative flex items-center;
+  z-index: 1;
+  gap: 16px;
+  padding-right: 44px;
+  margin-top: 8px;
+}
+
+.hesabim-avatar {
+  @apply rounded-full flex items-center justify-center flex-shrink-0;
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(180deg, #8a9caf 0%, #6b7c8f 100%);
+  color: #fff;
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hesabim-avatar svg {
+  font-size: 34px;
+}
+
+.hesabim-hero-text {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.hesabim-username {
+  @apply m-0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+}
+
+/* Görseldeki rozet (Premium benzeri — metin genel üye) */
+.hesabim-badge {
+  @apply inline-block;
+  margin-top: 10px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #e8c547;
+  background: rgba(18, 55, 62, 0.88);
+  border: 1px solid rgba(232, 197, 71, 0.95);
+  border-radius: 999px;
+}
+
+/* Yönetim paneli — dashboard’a tam erişim */
+.hesabim-dashboard {
+  @apply overflow-hidden;
+  margin: 16px 12px 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0, 52, 102, 0.07);
+  border: 1px solid #e4e9f0;
+}
+
+.hesabim-dashboard-intro {
+  padding: 18px 16px 16px;
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  border-bottom: 1px solid #eef1f6;
+}
+
+.hesabim-dashboard-title {
+  @apply m-0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #003466;
+  letter-spacing: 0.02em;
+}
+
+.hesabim-dashboard-desc {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #5a6f82;
+}
+
+.hesabim-dashboard-cta {
+  @apply block text-center no-underline;
+  margin-top: 14px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa640 100%);
+  box-shadow: 0 4px 14px rgba(255, 140, 0, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.hesabim-dashboard-cta:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.3);
+}
+
+.hesabim-subsection-title {
+  @apply uppercase;
+  margin: 18px 16px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #8a9caf;
+}
+
+/* Menü listesi — üst panelden ayrı, arada boşluk */
+.hesabim-list {
+  @apply flex-1 overflow-hidden;
+  margin: 0 12px 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0, 52, 102, 0.07);
+  border: 1px solid #e4e9f0;
+}
+
+.hesabim-row {
+  @apply flex items-center no-underline;
+  gap: 14px;
+  padding: 15px 16px;
+  color: #003466;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #eef1f6;
+  transition: background 0.15s ease;
+}
+
+.hesabim-row:last-child {
+  border-bottom: none;
+}
+
+.hesabim-row:active {
+  background: #f3f7fc;
+}
+
+.hesabim-row--active {
+  background: #e8f1fb;
+}
+
+.hesabim-row--active .hesabim-row-icon-wrap {
+  background: #003466;
+  color: #fff;
+}
+
+.hesabim-row-icon-wrap {
+  @apply rounded-full flex items-center justify-center flex-shrink-0;
+  width: 44px;
+  height: 44px;
+  background: #e8eef5;
+  color: #4a5f75;
+}
+
+.hesabim-row-icon {
+  font-size: 18px;
+}
+
+.hesabim-row-label {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.hesabim-row-chevron {
+  color: #b8c4d4;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Çıkış */
+.hesabim-footer {
+  @apply flex justify-center;
+  padding: 10px 16px 8px;
+  margin-top: auto;
+}
+
+.hesabim-logout {
+  @apply inline-flex items-center justify-center cursor-pointer;
+  width: auto;
+  min-width: 150px;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid #f5b5bd;
+  border-radius: 10px;
+  background: #fff5f6;
+  color: #c82333;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.hesabim-logout:hover {
+  background: #ffecee;
+  border-color: #f19da8;
+}
+
+.hesabim-logout:active {
+  background: #ffdce1;
+  transform: scale(0.98);
+}
+
+.hesabim-logout-icon {
+  @apply rounded-full flex items-center justify-center flex-shrink-0;
+  width: 26px;
+  height: 26px;
+  background: rgba(200, 35, 51, 0.12);
+  color: #c82333;
+}
+
+.hesabim-logout-icon svg {
+  font-size: 13px;
+}

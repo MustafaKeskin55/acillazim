@@ -1,0 +1,95 @@
+/* ===================================================================
+   Breadcrumb.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+.breadcrumb-container {
+  @apply inline-flex items-center py-2 px-5 rounded-md h-[52px] max-w-full;
+  margin: 0 0 20px 0;
+  border: 1px solid #E5E7EB;
+  background-color: #FFFFFF !important;
+  width: 910px;
+}
+
+.breadcrumb-content {
+  @apply flex items-center gap-5 h-full;
+}
+
+.breadcrumb {
+  @apply flex items-center gap-2 whitespace-nowrap mt-[30px];
+}
+
+.breadcrumb-item {
+  @apply inline-flex items-center text-[#6B7280] text-[14px] h-[26px] leading-[26px];
+}
+
+.breadcrumb-separator {
+  @apply inline-flex items-center text-[#9CA3AF] text-[16px] font-light h-[26px] leading-[26px];
+}
+
+.breadcrumb-item span {
+  @apply inline-flex items-center text-[#2563EB] no-underline py-0 px-2 h-[26px] leading-[26px] rounded font-medium transition-all duration-200;
+}
+
+.breadcrumb-item:last-child span {
+  @apply text-[#4B5563] font-normal;
+}
+
+.breadcrumb-item.clickable {
+  @apply cursor-pointer;
+}
+
+.breadcrumb-item.clickable span:hover {
+  background-color: rgba(37, 99, 235, 0.05);
+  @apply text-[#1E40AF];
+}
+
+.breadcrumb-item:not(.clickable) span {
+  @apply cursor-default;
+}
+
+.breadcrumb-item:not(.clickable) span:hover {
+  @apply bg-transparent text-inherit;
+}
+
+.change-category-btn {
+  @apply inline-flex items-center text-[#2563EB] bg-transparent border-0 text-[14px] font-medium py-0 px-3 h-[26px] leading-[26px] cursor-pointer rounded whitespace-nowrap mt-0 transition-all duration-200;
+}
+
+.change-category-btn:hover {
+  @apply text-[#1E40AF];
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.breadcrumb-container, .breadcrumb-with-button {
+  @apply mb-[150px];
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    @apply py-1.5 px-3 h-[38px];
+  }
+  
+  .breadcrumb-content {
+    @apply gap-[15px];
+  }
+  
+  .change-category-btn {
+    @apply text-[13px] py-0 px-2.5;
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb-container {
+    @apply py-1 px-2.5 h-9;
+  }
+  
+  .breadcrumb-content {
+    @apply gap-2.5;
+  }
+  
+  .change-category-btn {
+    @apply text-[12px] py-0 px-2;
+  }
+}

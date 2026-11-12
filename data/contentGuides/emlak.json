@@ -1,0 +1,83 @@
+{
+  "title": "Emlak Alım-Satım ve Kiralama Rehberi",
+  "description": "Emlak alım-satım ve kiralama işlemlerinde dikkat edilmesi gereken önemli noktalar",
+  "lastUpdated": "2025-03-28T13:00:00Z",
+  "categoryId": 1,
+  "sections": [
+    {
+      "id": 1,
+      "title": "Gayrimenkul Araştırması",
+      "icon": "search",
+      "description": "Gayrimenkulün konumunu, ulaşım imkanlarını, çevresindeki sosyal donatıları ve benzer özellikteki gayrimenkullerin fiyatlarını detaylı olarak araştırın.",
+      "tips": [
+        "Bölgedeki gayrimenkul fiyat trendlerini inceleyin",
+        "Lokasyonu fiziksel olarak ziyaret edin ve çevreyi gözlemleyin",
+        "Çevredeki hastane, okul, market, toplu taşıma gibi imkanları kontrol edin"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Hukuki Durum Kontrolü",
+      "icon": "gavel",
+      "description": "Gayrimenkulün tapu bilgilerini, imar durumunu, varsa üzerindeki şerh, ipotek veya haciz durumlarını kontrol edin.",
+      "tips": [
+        "Tapu kayıtlarını tapu dairesinden veya e-Devlet üzerinden sorgulayın",
+        "İmar durumunu belediyeden öğrenin",
+        "Üzerinde haciz, ipotek veya şerh olup olmadığını kontrol edin"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Emlak Durumu",
+      "icon": "home",
+      "description": "Gayrimenkulün fiziksel durumunu, yaşını, depreme dayanıklılığını, alt yapısını, ısıtma-soğutma sistemlerini ve tadilat gereksinimi olup olmadığını kontrol edin.",
+      "tips": [
+        "Binanın yaşını ve yapı kullanma izin belgesini kontrol edin",
+        "Deprem yönetmeliğine uygunluğunu sorgulayın",
+        "Su, elektrik, doğalgaz, internet altyapısını ve faturalarını inceleyin",
+        "Profesyonel bir ekspertiz raporu alın"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Fiyat Analizi",
+      "icon": "chart-line",
+      "description": "Benzer özelliklerdeki emlakların fiyatlarını karşılaştırın. Ödeyeceğiniz fiyatın piyasa değerine uygun olduğundan emin olun.",
+      "tips": [
+        "Aynı bölgedeki benzer gayrimenkullerin fiyatlarını araştırın",
+        "Satış fiyatını etkileyen faktörleri (konum, kat, manzara vb.) değerlendirin",
+        "Pazarlık stratejinizi belirleyin"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Ek Maliyetler",
+      "icon": "money-bill-wave",
+      "description": "Satın alma veya kiralama sürecinde emlak komisyonu, tapu harcı, damga vergisi, sigorta gibi ek maliyetleri hesaplayın.",
+      "tips": [
+        "Emlak komisyonu oranını ve nasıl paylaşılacağını netleştirin",
+        "Tapu harcı, KDV, damga vergisi gibi yasal maliyetleri öğrenin",
+        "Tadilatlar için bütçe ayırın",
+        "Aidat, ısınma ve diğer sabit giderleri hesaplayın"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sözleşme İncelemesi",
+      "icon": "file-contract",
+      "description": "Satış veya kira sözleşmesini imzalamadan önce tüm maddeleri dikkatlice okuyun ve gerekirse bir avukata danışın.",
+      "tips": [
+        "Sözleşmedeki tüm maddeleri anlayarak okuyun",
+        "Teslim şartlarını ve tarihini net bir şekilde belirleyin",
+        "Kiralama sözleşmelerinde depozito, kira artış oranı ve diğer şartları netleştirin",
+        "Sözleşmenin hukuki kontrolünü bir avukata yaptırın"
+      ]
+    }
+  ],
+  "videoUrl": "https://example.com/emlak-alisveris-rehberi",
+  "contactInfo": {
+    "email": "emlak@acillazim.com",
+    "phone": "+90 (212) 555 45 67",
+    "supportHours": "09:00 - 18:00"
+  }
+} 

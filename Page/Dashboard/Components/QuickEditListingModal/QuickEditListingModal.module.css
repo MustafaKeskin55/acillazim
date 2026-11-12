@@ -1,0 +1,221 @@
+.overlay {
+  @apply fixed flex justify-center items-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.content {
+  @apply flex flex-col overflow-hidden;
+  background-color: white;
+  border-radius: 8px;
+  width: 560px;
+  max-width: 92vw;
+  max-height: 88vh;
+}
+
+.header {
+  @apply text-center;
+  background-color: #FF6B00;
+  color: white;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.body {
+  @apply flex flex-col overflow-y-auto flex-1;
+  padding: 20px 20px 8px;
+  gap: 14px;
+}
+
+.field {
+  @apply flex flex-col flex-1;
+  gap: 6px;
+  min-width: 0;
+}
+
+.fieldRow {
+  @apply flex;
+  gap: 12px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.field input,
+.field textarea,
+.field select {
+  @apply w-full box-border;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  @apply outline-none;
+  border-color: #FF8A00;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.checkboxRow {
+  @apply flex items-center cursor-pointer;
+  gap: 8px;
+  font-size: 13px;
+  color: #444;
+}
+
+.photoGrid {
+  @apply flex flex-wrap;
+  gap: 10px;
+}
+
+.photoThumb {
+  @apply relative overflow-hidden;
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.photoThumb img {
+
+  @apply w-full h-full object-cover block;
+}
+
+.photoThumb button {
+  @apply absolute border-0 rounded-full cursor-pointer flex items-center justify-center;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.photoUploadBtn {
+  @apply flex items-center justify-center cursor-pointer text-center;
+  width: 72px;
+  height: 72px;
+  border: 1px dashed #FF8A00;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #FF6B00;
+  padding: 4px;
+}
+
+.featureGrid {
+  @apply flex flex-wrap;
+  gap: 8px;
+}
+
+.featureChip {
+  @apply flex items-center cursor-pointer select-none;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #444;
+}
+
+.featureChip input {
+
+  @apply m-0 cursor-pointer;
+}
+
+.attributeRow {
+  @apply flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.attributeRow input {
+  @apply flex-1;
+  padding: 8px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.attributeRow button {
+  @apply border-0 cursor-pointer flex-shrink-0;
+  width: 28px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #b00020;
+  font-size: 15px;
+}
+
+.addAttributeBtn {
+  @apply border-0 cursor-pointer;
+  align-self: flex-start;
+  background: none;
+  color: #FF6B00;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.loadingText {
+  @apply text-center;
+  padding: 24px 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.buttons {
+  @apply flex;
+  padding: 16px 20px 20px;
+  gap: 12px;
+}
+
+.baseButton {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.baseButton:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #eeeeee;
+}
+
+.confirmButton {
+  background-color: #FF6B00;
+  color: white;
+}
+
+.confirmButton:hover {
+  background-color: #e86000;
+}

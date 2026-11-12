@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Hizmet Detay Modalı — Mobil Uyumluluk (ServiceModal.mobile.css)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .service-modal-overlay {
+    @apply items-end;
+    padding: 0.65rem;
+  }
+
+  .service-modal {
+    @apply w-full;
+    max-width: 100%;
+    max-height: 92dvh;
+    border-radius: 20px 20px 16px 16px;
+  }
+
+  .service-modal__top-bar {
+    padding: 0.9rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .service-modal__report-pill {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .service-modal__status-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .service-modal__edit-btn {
+    height: 34px;
+    padding: 0 0.75rem;
+    font-size: 0.76rem;
+  }
+
+  .service-modal__close {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-modal__scroll-container {
+    padding: 1rem;
+  }
+
+  .service-modal__hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .service-modal__image {
+    min-height: 155px;
+    max-height: 180px;
+    border-radius: 14px;
+  }
+
+  .service-modal__title {
+    font-size: 1.12rem;
+  }
+
+  .service-modal__meta-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.75rem;
+    gap: 0.55rem;
+  }
+
+  .service-modal__tabs-sticky {
+    margin-bottom: 1.1rem;
+  }
+
+  .service-modal__tabs {
+    @apply flex-nowrap justify-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .service-modal__tabs::-webkit-scrollbar {
+
+    @apply hidden;
+  }
+
+  .service-modal__tab {
+    flex: 0 0 auto;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  .service-modal__tab--action {
+
+    @apply hidden;
+  }
+
+  .service-modal__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .modal-stat {
+    padding: 0.85rem;
+    border-radius: 14px;
+    gap: 0.6rem;
+  }
+
+  .modal-stat__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    font-size: 0.95rem;
+  }
+
+  .modal-stat__value {
+    font-size: 1.25rem;
+  }
+
+  .modal-stat__label {
+    font-size: 0.7rem;
+  }
+
+  .overview-item {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .performance-chart {
+    padding: 0.6rem;
+  }
+}

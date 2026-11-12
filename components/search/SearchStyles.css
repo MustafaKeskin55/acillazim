@@ -1,0 +1,665 @@
+/* Arama ve Öneri Stilleri */
+.search-box-container {
+  @apply relative w-full inline-block;
+}
+
+/* Form içindeki arama kutusu */
+.search-box-container form {
+  @apply w-full relative;
+}
+
+/* Arama kutusu */
+.search-box-container .search-box {
+  @apply w-full relative flex items-center p-0 overflow-hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Arama kutusu odaklandığında */
+.search-box-container .search-box:focus-within {
+  border-radius: 12px 12px 0 0;
+  border-color: #ff7300;
+  border-bottom-color: #eaeaea;
+  box-shadow: 0 4px 12px rgba(255, 115, 0, 0.08);
+}
+
+/* Önerilerin ana konteyneri - dropdown */
+.search-suggestions-container {
+  @apply absolute overflow-y-auto box-border;
+  top: 100%;
+  left: 50%;
+  width: 95%;
+  max-height: 350px;
+  background-color: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  z-index: 1001;
+  margin-top: 0;
+  padding: 8px 0;
+  border: 1px solid #eaeaea;
+  border-top: 1px solid #eaeaea;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+}
+
+/* Öneriler görünür olduğunda */
+.search-box-container .search-box:focus-within + .search-suggestions-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* PC uyumlu arama kutusu düzenlemeleri */
+@media (min-width: 769px) {
+  .search-box-container .search-box {
+    @apply flex-shrink-0;
+    width: 100% !important;
+    min-width: 567px !important;
+    max-width: 700px !important;
+    transition: all 0.3s ease;
+  }
+  
+  .search-box-container {
+    @apply w-full relative flex justify-center;
+  }
+  
+  /* PC için dropdown genişliği */
+  .search-suggestions-container {
+    width: 95%;
+    min-width: 540px;
+    max-width: 665px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Arama kutusu odaklandığında gölgelendirme efekti */
+  .search-box-container .search-box:focus-within {
+    box-shadow: 0 4px 12px rgba(255, 115, 0, 0.08);
+  }
+  
+  /* Öneriler açıkken gölgelendirme efekti */
+  .search-box-container .search-box:focus-within + .search-suggestions-container {
+    box-shadow: 0 12px 24px rgba(255, 115, 0, 0.08);
+  }
+}
+
+/* Kayma animasyonunu kaldırdık */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Birleşik sonuçlar listesi */
+.search-unified-results {
+  @apply w-full;
+}
+
+.search-unified-results-list {
+  @apply m-0 p-0 w-full;
+  list-style: none;
+}
+
+.search-unified-result-item {
+  @apply cursor-pointer w-full box-border;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.5);
+  color: #333;
+}
+
+.search-unified-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-unified-result-item:hover {
+  background-color: rgba(255, 115, 0, 0.03);
+}
+
+/* Kategori sonuçları */
+.search-category-item {
+  @apply no-underline block;
+  color: inherit;
+}
+
+.search-category-path {
+  @apply overflow-hidden;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 95%;
+}
+
+.search-category-path .search-path-separator {
+  color: #999;
+}
+
+.search-category-path .search-highlighted-term {
+  font-weight: 600;
+  color: #0077ff;
+}
+
+/* İlan sonuçları */
+.search-listing-item {
+  @apply no-underline block;
+  color: inherit;
+}
+
+.search-listing-info-compact {
+  @apply flex flex-col;
+}
+
+.search-listing-info-compact h5 {
+  @apply overflow-hidden;
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-listing-meta {
+  @apply flex justify-between items-center;
+}
+
+.search-listing-location {
+  font-size: 12px;
+  color: #777;
+}
+
+.search-listing-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff6c00;
+}
+
+/* Vurgulanmış eşleşme metni - ikinci görseldeki gibi daha belirgin */
+.search-suggestion-highlight {
+  font-weight: 700;
+  color: #ff6b00;
+  background-color: rgba(255, 107, 0, 0.1);
+}
+
+/* Öneri içeriği */
+.search-result-content {
+  @apply flex flex-col;
+  gap: 4px;
+}
+
+.search-result-type {
+  @apply uppercase;
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.search-result-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.3;
+}
+
+/* Sonuç bulunamadı mesajı */
+.search-suggestions-empty {
+  @apply p-0 text-center flex flex-col items-center w-full;
+  color: #666;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.search-suggestions-empty .search-unified-results-list {
+  @apply w-full m-0 p-0;
+}
+
+.search-suggestions-empty > span {
+  @apply flex items-center justify-center w-full;
+  gap: 8px;
+  font-weight: 400;
+  color: #666;
+  padding: 16px 0;
+}
+
+/* Eşleşme türlerine göre stil farklılıkları */
+.search-suggestion-exact-match .search-result-title {
+  color: #004d7f;
+  font-weight: 600;
+}
+
+.search-suggestion-strong-match .search-result-title {
+  color: #0066a6;
+}
+
+.search-suggestion-medium-match .search-result-title {
+  color: #0078c2;
+}
+
+/* Scrollbar stilleri */
+.search-suggestions-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-suggestions-container::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.search-suggestions-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.search-suggestions-container::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* "Bunu mu demek istediniz?" stilini yaratma */
+.search-correction {
+  margin: 8px 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-correction-text {
+  @apply cursor-pointer underline;
+  color: #004d7f;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.search-correction-text:hover {
+  color: #ff6b00;
+}
+
+/* Mobil ekranlar için uyumlu hale getirme */
+@media (max-width: 768px) {
+  .search-suggestions-container {
+    @apply fixed w-full;
+    top: 60px;
+    left: 0;
+    max-height: 70vh;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-unified-result-item {
+    padding: 12px 15px;
+  }
+  
+  .search-result-type {
+    font-size: 10px;
+  }
+  
+  .search-result-title {
+    font-size: 13px;
+  }
+}
+
+/* Boş sonuç için özel stil */
+.search-empty-container {
+  max-height: fit-content !important;
+  height: auto !important;
+  border-radius: 0 0 8px 8px !important;
+  width: 100% !important;
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* İlgili kategoriler bölümü */
+.search-related-categories {
+  @apply w-full;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+
+.search-related-categories h4 {
+  @apply text-left;
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.search-related-categories ul {
+  @apply p-0 m-0 flex flex-col;
+  list-style: none;
+  gap: 8px;
+}
+
+.search-related-categories li {
+  @apply overflow-hidden;
+  border-radius: 6px;
+}
+
+.search-related-categories li a {
+  @apply no-underline block;
+  color: #333;
+  padding: 8px 12px;
+  background-color: #f2f8ff;
+  border-left: 3px solid #0077ff;
+  transition: all 0.2s ease;
+}
+
+.search-related-categories li a:hover {
+  background-color: #e6f0ff;
+}
+
+/* Öne çıkan ilanlar bölümü */
+.search-popular-listings {
+  @apply w-full;
+  margin-top: 4px;
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+
+.search-popular-listings h4 {
+  @apply text-left;
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.search-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.search-listing-card {
+  @apply overflow-hidden cursor-pointer;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-listing-image {
+  @apply w-full overflow-hidden;
+  height: 140px;
+}
+
+.search-listing-image img {
+  @apply w-full h-full object-cover;
+  transition: transform 0.3s ease;
+}
+
+.search-listing-card:hover .search-listing-image img {
+  transform: scale(1.05);
+}
+
+.search-listing-info {
+  padding: 10px 12px;
+}
+
+.search-listing-info h5 {
+  @apply overflow-hidden;
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-listing-location {
+  @apply block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.search-listing-price {
+  @apply block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ff6c00;
+}
+
+/* Responsive tasarım için */
+@media (max-width: 768px) {
+  .search-listings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-suggestions-empty {
+    padding: 12px 8px;
+  }
+  
+  .search-listing-image {
+    height: 120px;
+  }
+}
+
+/* Yükleniyor durum mesajı */
+.search-suggestions-loading {
+  @apply text-center;
+  padding: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Hata durumu mesajı */
+.search-suggestions-error {
+  @apply text-center;
+  padding: 16px;
+  color: #e53935;
+  font-size: 14px;
+}
+
+/* Vurgulanmış öneri (klavye navigasyonu) */
+.search-suggestion-highlighted {
+  background-color: #f0f7ff;
+}
+
+/* Son aramalar listesi */
+.search-recent-searches {
+  @apply w-full;
+}
+
+.search-recent-searches-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.5);
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgba(249, 250, 251, 0.8);
+}
+
+.search-recent-search-item {
+  @apply flex items-center;
+  gap: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+.search-recent-icon {
+  @apply flex-shrink-0;
+  font-size: 16px;
+  color: #999;
+}
+
+/* İlan başlıkları için özel stil */
+.search-listing-title {
+  color: #0066cc !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+/* İlan fiyatı için stil */
+.search-result-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff6c00;
+  margin-left: auto;
+}
+
+/* İlan sonuçları için yan yana düzenleme */
+.search-listing-result {
+  @apply justify-between items-center;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px;
+}
+
+/* İlan sonuçlarında başlık genişliği sınırlama */
+.search-listing-result .search-result-title {
+  @apply overflow-hidden;
+  max-width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Sonuç bulunamadı mesajı */
+.search-no-results-message {
+  @apply text-center w-full box-border;
+  padding: 20px 16px;
+  color: #666;
+  font-size: 14px;
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: #f8f8f8;
+}
+
+.search-no-results-message strong {
+  color: #444;
+  font-weight: 500;
+}
+
+/* Sonuç bölümleri */
+.search-result-section {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.5);
+}
+
+.search-result-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.search-result-section-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  padding: 8px 12px 4px;
+}
+
+/* Kategori sonuçları listesi */
+.search-category-results-list,
+.search-listing-results-list {
+  @apply m-0 p-0;
+  list-style: none;
+}
+
+/* Arama sonuçları genel konteyner */
+.search-results {
+  @apply w-full flex flex-col;
+}
+
+/* Kategori sonuçları için düzenleme */
+.search-category-result {
+  @apply flex flex-col;
+  gap: 2px;
+}
+
+.search-category-result .search-result-type {
+  @apply uppercase inline-block;
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.6px;
+  padding: 2px 4px;
+  margin-right: 4px;
+  background-color: rgba(255, 145, 0, 0.15);
+  border-radius: 3px;
+  max-width: fit-content;
+}
+
+/* İlan listesi için görünüm */
+.search-listing-result {
+  @apply justify-between items-center;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px;
+}
+
+.search-listing-result .search-result-title {
+  @apply overflow-hidden;
+  max-width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-listing-result .search-result-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff6c00;
+  margin-left: auto;
+}
+
+/* Kategori sonuçları titlerini düzenle */
+.search-category-result .search-result-title {
+  font-weight: 500;
+}
+
+/* Temizleme butonu */
+.search-clear-button {
+  @apply absolute border-0 cursor-pointer flex items-center justify-center rounded-full;
+  right: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #888;
+  padding: 6px;
+  font-size: 18px;
+  z-index: 11;
+}
+
+.search-clear-button:hover {
+  color: #555;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search-clear-button:focus {
+  @apply outline-none;
+  box-shadow: 0 0 0 2px rgba(255, 115, 0, 0.4);
+}
+
+.search-clear-button svg {
+  font-size: 18px;
+}
+
+/* Arama butonu için yeni stil */
+.navbar-iconContainer {
+  @apply m-0 flex items-center justify-center border-0 cursor-pointer relative h-full;
+  background-color: #ff7300;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 0 12px 12px 0;
+  transition: all 0.2s ease;
+  right: 0;
+  min-height: 44px;
+}
+
+.navbar-iconContainer:hover {
+  background-color: #e65c00;
+}

@@ -1,0 +1,528 @@
+/* ===================================================================
+   DashboardFavorite.module.css — Tailwind CSS (@apply Mimarisi)
+   - 2-Kolonlu Master-Detail Favori Listeleri (Bildirimler Tarzı)
+   - Standart Nötr Tipografi (text-slate-900, text-slate-500)
+   - TSX Dosyasına Gömmeden CSS İçinde Tailwind Utility (@apply)
+   - Görünmez Scrollbar ve Akıcı Gezinme
+   =================================================================== */
+
+.favoritesPage {
+  @apply w-full max-w-[1240px] mx-auto py-1.5 px-4 pb-9 flex flex-col gap-3.5 bg-transparent text-slate-900 box-border;
+}
+
+/* ── 1. ÜST BAŞLIK VE KONTROL BARI ── */
+.headerBar {
+  @apply flex items-center justify-between flex-wrap gap-3 py-0.5;
+}
+
+.headerInfo {
+  @apply flex flex-col gap-0.5;
+}
+
+.titleRow {
+  @apply flex items-center gap-2.5;
+}
+
+.pageTitle {
+  @apply m-0 text-xl font-bold text-slate-900 tracking-tight leading-snug;
+}
+
+.countBadge {
+  @apply inline-flex items-center py-0.5 px-2 rounded-full bg-orange-50 text-orange-700 border border-solid border-orange-200 text-[11.5px] font-bold tracking-wide;
+}
+
+.pageDesc {
+  @apply m-0 text-xs sm:text-[13px] text-slate-500 leading-normal;
+}
+
+.headerControls {
+  @apply flex items-center gap-2;
+}
+
+.createBtn {
+  @apply inline-flex items-center gap-1.5 h-8 px-3.5 bg-brand-deep hover:bg-[#00254a] text-white rounded-lg text-xs font-semibold cursor-pointer transition-colors shadow-sm border-0 whitespace-nowrap m-0 outline-none appearance-none;
+}
+
+/* ── 2. İKİ KOLONLU MASTER-DETAIL AKIŞ KARTI ── */
+.splitCard {
+  @apply grid grid-cols-1 md:grid-cols-[360px_1fr] bg-white border border-solid border-slate-200 rounded-2xl shadow-sm overflow-hidden box-border h-[calc(100vh-195px)] min-h-[580px] max-h-[860px];
+}
+
+/* ════════════ SOL KOLON: LİSTELER (KLASÖRLER) ════════════ */
+.listColumn {
+  @apply border-0 border-r border-solid border-slate-200 flex flex-col bg-white min-w-0 min-h-0 h-full overflow-hidden;
+}
+
+.listHeader {
+  @apply p-2.5 bg-slate-50 border-0 border-b border-solid border-slate-200 flex items-center shrink-0;
+}
+
+.searchBox {
+  @apply flex items-center gap-2 w-full bg-white border border-solid border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 shadow-inner;
+}
+
+.searchIcon {
+  @apply text-slate-400 text-xs shrink-0;
+}
+
+.searchInput {
+  @apply w-full bg-transparent border-0 outline-none text-xs text-slate-900 placeholder:text-slate-400;
+}
+
+.searchClearBtn {
+  @apply p-0.5 text-slate-400 hover:text-slate-700 cursor-pointer border-0 bg-transparent flex items-center justify-center;
+}
+
+.listScroll {
+  @apply flex-1 min-h-0 h-full overflow-y-auto overflow-x-hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.listScroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Satır Kartı (Liste Elemanı) */
+.listRow {
+  @apply flex items-center gap-3 p-3.5 border-0 border-b border-solid border-slate-100 bg-white cursor-pointer transition-colors relative no-underline box-border hover:bg-slate-50;
+}
+
+.listRow:last-child {
+  @apply border-b-0;
+}
+
+.listRow.isSelected {
+  @apply bg-slate-100 border-0 border-b border-solid border-slate-100 border-l-[3.5px] border-l-brand-deep pl-3;
+}
+
+.listRow.isSelected .rowTitle {
+  @apply text-brand-deep font-bold;
+}
+
+.rowIconBox {
+  @apply w-9 h-9 rounded-xl flex items-center justify-center text-sm shrink-0 bg-slate-100 text-slate-600 border border-solid border-slate-200 transition-colors;
+}
+
+.rowIconBoxActive {
+  @apply bg-brand-deep text-white border-brand-deep;
+}
+
+.rowBody {
+  @apply flex-1 min-w-0 flex flex-col gap-0.5;
+}
+
+.rowTitleWrap {
+  @apply flex items-center gap-1.5;
+}
+
+.rowTitle {
+  @apply text-[13.5px] text-slate-900 leading-snug truncate font-semibold;
+}
+
+.rowSubtitle {
+  @apply m-0 text-xs text-slate-400 truncate font-normal;
+}
+
+.rowActions {
+  @apply flex items-center gap-1.5 shrink-0 ml-auto;
+}
+
+.rowActionBtn {
+  @apply w-7 h-7 rounded-lg border border-solid border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-500 hover:text-slate-900 flex items-center justify-center transition-all duration-150 cursor-pointer shadow-sm p-0 m-0 outline-none appearance-none;
+}
+
+.rowActionBtnDelete:hover {
+  @apply bg-rose-50 border-rose-200 text-rose-600;
+}
+
+.rowChevron {
+  @apply text-slate-300 ml-0.5 transition-colors;
+}
+
+.listRow:hover .rowChevron {
+  @apply text-slate-600;
+}
+
+/* ════════════ SAĞ KOLON: SEÇİLİ LİSTE İÇERİĞİ VE İLANLAR ════════════ */
+.detailColumn {
+  @apply flex flex-col bg-white overflow-y-auto overflow-x-hidden flex-1 min-w-0 min-h-0 h-full;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.detailColumn::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.detailContainer {
+  @apply p-5 sm:p-6 flex flex-col gap-4;
+}
+
+.detailTopbar {
+  @apply flex items-center justify-between pb-3.5 border-0 border-b border-solid border-slate-100 flex-wrap gap-3;
+}
+
+.detailHeaderLeft {
+  @apply flex items-center gap-3 min-w-0 flex-1;
+}
+
+.mobileBackBtn {
+  @apply hidden items-center gap-1.5 px-3 py-1.5 bg-slate-50 hover:bg-slate-100 border border-solid border-slate-200 rounded-[10px] text-xs font-medium text-slate-700 cursor-pointer transition-colors shadow-sm shrink-0 m-0 outline-none appearance-none;
+}
+
+.detailIconBox {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-base shrink-0 bg-orange-50 text-brand-accent border border-solid border-orange-200/80;
+}
+
+.detailTitleWrap {
+  @apply flex items-center gap-2.5 min-w-0 flex-wrap;
+}
+
+.detailTitle {
+  @apply text-base sm:text-lg font-bold text-slate-900 m-0 tracking-tight leading-snug truncate;
+}
+
+.detailCountBadge {
+  @apply px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold whitespace-nowrap border border-solid border-slate-200/60;
+}
+
+.detailTopbarActions {
+  @apply flex items-center gap-2 shrink-0;
+}
+
+.detailActionBtn {
+  @apply inline-flex items-center gap-2 h-8 px-3.5 rounded-[10px] border border-solid border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-semibold cursor-pointer transition-all duration-150 shadow-sm m-0 outline-none appearance-none;
+}
+
+.detailActionBtnShare {
+  @apply bg-brand-deep hover:bg-[#002244] !text-white border-0 shadow-sm font-semibold;
+}
+
+.detailActionBtnShare:hover {
+  @apply !text-white bg-[#002244];
+}
+
+.detailActionBtnDelete:hover {
+  @apply bg-rose-50 border-rose-200 text-rose-600;
+}
+
+/* İlanlar Izgarası */
+.itemsGrid {
+  @apply grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 w-full box-border pt-1;
+}
+
+.itemsGrid :global(.prodcard-wrapper) {
+  @apply m-0 w-full min-w-0 box-border;
+}
+
+.itemsGrid :global(.prodcard-container) {
+  @apply w-full min-w-0 box-border;
+}
+
+/* Boş Durumlar */
+.detailEmptyBox {
+  @apply text-center bg-slate-50/70 border border-slate-200 rounded-2xl p-8 lg:p-12 mt-2;
+}
+
+.detailEmptyIcon {
+  @apply w-14 h-14 rounded-2xl bg-white border border-slate-200 text-slate-400 flex items-center justify-center mx-auto mb-3 shadow-sm text-2xl;
+}
+
+.detailEmptyTitle {
+  @apply text-base font-bold text-slate-900 m-0 mb-1.5;
+}
+
+.detailEmptyDesc {
+  @apply text-xs text-slate-500 max-w-sm mx-auto mb-5 leading-relaxed;
+}
+
+.exploreListingsBtn {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-brand-deep hover:bg-[#00254a] text-white text-xs font-semibold rounded-lg shadow-sm transition-colors no-underline cursor-pointer;
+}
+
+.emptyListState {
+  @apply text-center p-8 text-slate-500;
+}
+
+.emptyIcon {
+  @apply text-slate-300 flex justify-center mb-2.5 text-2xl;
+}
+
+.emptyTitle {
+  @apply text-sm font-bold text-slate-800 m-0 mb-1;
+}
+
+.emptyDesc {
+  @apply text-xs text-slate-500 m-0 mb-4 max-w-xs mx-auto leading-relaxed;
+}
+
+.inlineCreateBtn {
+  @apply inline-flex items-center gap-1.5 h-8 px-3 bg-brand-deep hover:bg-[#00254a] text-white text-xs font-semibold rounded-lg cursor-pointer transition-colors border-0 shadow-sm;
+}
+
+.noSelectionState {
+  @apply flex flex-col items-center justify-center text-center p-12 h-full;
+}
+
+.noSelectionIcon {
+  @apply text-slate-300 text-3xl mb-3;
+}
+
+.noSelectionTitle {
+  @apply text-base font-bold text-slate-800 m-0 mb-1.5;
+}
+
+.noSelectionDesc {
+  @apply text-xs text-slate-500 max-w-sm leading-relaxed;
+}
+
+.loadingState {
+  @apply flex flex-col items-center justify-center p-12 gap-3 text-slate-500 text-xs;
+}
+
+.spinner {
+  @apply w-6 h-6 border-2 border-slate-200 border-t-brand-deep rounded-full;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── MODALLAR (CREATE / EDIT / SHARE) ── */
+.modalOverlay {
+  @apply fixed inset-0 flex items-center justify-center bg-slate-900/55 backdrop-blur-[3px] z-[1050] p-4;
+}
+
+.createModal {
+  @apply w-full max-w-md bg-white border border-solid border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col;
+}
+
+.modalHeader {
+  @apply flex items-center justify-between px-5 py-4 bg-white border-0 border-b border-solid border-slate-100 gap-3;
+}
+
+.modalHeaderLeft {
+  @apply flex items-center gap-3;
+}
+
+.modalHeaderIcon {
+  @apply flex items-center justify-center w-9 h-9 rounded-[10px] bg-orange-50 text-brand-accent text-sm border border-solid border-orange-200/70 shrink-0;
+}
+
+.modalHeader h2 {
+  @apply m-0 text-[15px] font-bold text-slate-900 tracking-tight leading-snug;
+}
+
+.modalHeaderSubtitle {
+  @apply block text-xs text-slate-500 font-medium mt-0.5;
+}
+
+.modalCloseBtn {
+  @apply border border-solid border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-500 hover:text-slate-800 w-8 h-8 rounded-[9px] flex items-center justify-center text-xs cursor-pointer transition-all duration-150 shadow-sm shrink-0 p-0 m-0 outline-none appearance-none;
+}
+
+.modalContent {
+  @apply flex flex-col p-5 bg-white gap-2;
+}
+
+.inputLabel {
+  @apply flex justify-between text-xs font-bold text-slate-700;
+}
+
+.charCount {
+  @apply font-normal text-slate-400;
+}
+
+.input {
+  @apply w-full h-10 px-3.5 bg-slate-50 border border-solid border-slate-200 rounded-[10px] text-slate-900 text-sm focus:bg-white focus:border-brand-deep focus:ring-2 focus:ring-brand-deep/15 outline-none transition-all box-border m-0 appearance-none;
+}
+
+.inputHelper {
+  @apply m-0 text-[11px] text-slate-400;
+}
+
+.modalFooter {
+  @apply flex items-center justify-end px-5 py-3.5 bg-slate-50 border-0 border-t border-solid border-slate-100 gap-2.5;
+}
+
+.cancelButton {
+  @apply h-9 px-4 border border-solid border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-semibold rounded-[10px] cursor-pointer transition-all duration-150 shadow-sm m-0 outline-none appearance-none;
+}
+
+.submitButton {
+  @apply h-9 px-5 border-0 bg-brand-deep hover:bg-[#002244] text-white text-xs font-semibold rounded-[10px] cursor-pointer transition-all duration-150 shadow-sm m-0 outline-none appearance-none;
+}
+
+/* ── PAYLAŞIM MODALI ── */
+.shareModal {
+  @apply w-full max-w-[420px] bg-white border border-solid border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col;
+}
+
+.shareBody {
+  @apply flex flex-col overflow-y-auto box-border p-5 gap-4 bg-white max-h-[82vh];
+}
+
+.shareSection {
+  @apply flex flex-col gap-2;
+}
+
+.shareSectionLabel {
+  @apply uppercase text-[11px] font-bold text-slate-500 tracking-wider;
+}
+
+.shareButtons {
+  @apply flex items-center justify-center gap-3;
+}
+
+.shareIconBtn {
+  @apply flex items-center justify-center w-11 h-11 rounded-[11px] bg-white border border-solid border-slate-200 text-slate-700 cursor-pointer shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md active:scale-95 p-0 m-0 outline-none appearance-none;
+}
+
+.shareBtnIcon {
+  @apply text-[18px] shrink-0 transition-transform duration-150;
+}
+
+.whatsappButton {
+  @apply hover:border-[#25D366]/60 hover:bg-[#25D366]/[0.07];
+}
+
+.whatsappButton .shareBtnIcon {
+  @apply text-[#25D366];
+}
+
+.facebookButton {
+  @apply hover:border-[#1877F2]/60 hover:bg-[#1877F2]/[0.07];
+}
+
+.facebookButton .shareBtnIcon {
+  @apply text-[#1877F2];
+}
+
+.instagramButton {
+  @apply hover:border-[#E1306C]/60 hover:bg-[#E1306C]/[0.07];
+}
+
+.instagramButton .shareBtnIcon {
+  @apply text-[#E1306C];
+}
+
+.linkIconBtn {
+  @apply hover:border-brand-deep/60 hover:bg-brand-deep/[0.07];
+}
+
+.linkIconBtn .shareBtnIcon {
+  @apply text-brand-deep text-[16px];
+}
+
+.linkIconBtnCopied {
+  @apply border-emerald-500 bg-emerald-50;
+}
+
+.linkIconBtnCopied .shareBtnIcon {
+  @apply text-emerald-600 text-[16px];
+}
+
+.telegramButton {
+  @apply hover:border-[#0088cc]/60 hover:bg-[#0088cc]/[0.07];
+}
+
+.telegramButton .shareBtnIcon {
+  @apply text-[#0088cc];
+}
+
+.twitterButton {
+  @apply hover:border-slate-900/40 hover:bg-slate-900/[0.06];
+}
+
+.twitterButton .shareBtnIcon {
+  @apply text-slate-900;
+}
+
+.emailButton {
+  @apply hover:border-brand-accent/60 hover:bg-orange-50;
+}
+
+.emailButton .shareBtnIcon {
+  @apply text-brand-accent;
+}
+
+.moreSocialRowWrap {
+  @apply w-full overflow-hidden;
+}
+
+.moreSocialRow {
+  @apply flex items-center justify-center gap-3 pt-2.5 mt-1 border-0 border-t border-solid border-slate-100;
+}
+
+.qrCodeSection {
+  @apply text-center flex flex-col items-center bg-slate-50/70 border border-solid border-slate-200/90 rounded-2xl p-5;
+}
+
+.qrCodeWrapper {
+  @apply bg-white p-3 rounded-2xl border border-solid border-slate-200/90 shadow-sm mb-3 flex items-center justify-center;
+}
+
+.brandLogo {
+  @apply h-6 w-auto my-1;
+}
+
+.qrCodeText {
+  @apply text-slate-500 text-xs font-medium m-0 mb-4;
+}
+
+.qrDownloadBar {
+  @apply inline-flex items-center justify-center gap-2.5 w-full max-w-[280px];
+}
+
+.downloadBtnPrimary {
+  @apply flex-1 inline-flex items-center justify-center gap-1.5 h-9 px-4 rounded-[10px] border-0 bg-brand-deep hover:bg-[#002244] text-white text-xs font-semibold transition-all duration-150 cursor-pointer shadow-sm hover:-translate-y-px active:scale-[0.98] m-0 outline-none appearance-none whitespace-nowrap;
+}
+
+.downloadBtnSecondary {
+  @apply flex-1 inline-flex items-center justify-center gap-1.5 h-9 px-4 rounded-[10px] border border-solid border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 hover:text-brand-deep text-xs font-semibold transition-all duration-150 cursor-pointer shadow-sm hover:-translate-y-px active:scale-[0.98] m-0 outline-none appearance-none whitespace-nowrap;
+}
+
+/* ── MOBİL VE TABLET UYUMLULUĞU (≤ 768px) ── */
+@media (max-width: 768px) {
+  .favoritesPage {
+    @apply p-2.5 gap-2.5;
+  }
+
+  .splitCard {
+    @apply h-[calc(100vh-140px)] min-h-[500px] rounded-xl;
+  }
+
+  .showMobileList .listColumn {
+    @apply flex w-full border-r-0;
+  }
+
+  .showMobileList .detailColumn {
+    @apply hidden;
+  }
+
+  .showMobileDetail .listColumn {
+    @apply hidden;
+  }
+
+  .showMobileDetail .detailColumn {
+    @apply flex w-full;
+  }
+
+  .mobileBackBtn {
+    @apply inline-flex;
+  }
+
+  .detailContainer {
+    @apply p-3.5 gap-3;
+  }
+
+  .itemsGrid {
+    @apply grid-cols-2 gap-2;
+  }
+}

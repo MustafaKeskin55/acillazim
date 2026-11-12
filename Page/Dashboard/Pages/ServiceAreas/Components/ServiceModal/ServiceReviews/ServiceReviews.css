@@ -1,0 +1,263 @@
+/* ==========================================================================
+   Müşteri Yorumları Sekmesi (ServiceReviews.css) — 4 Skill & Sofistike Ara Renkler
+   ========================================================================== */
+
+.service-reviews {
+
+  @apply p-0;
+}
+
+.service-reviews__summary {
+  background: linear-gradient(145deg, #ffffff 0%, #fffaf5 55%, #f5f3ff 100%);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fde68a;
+}
+
+.service-reviews__stats {
+  @apply items-center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.25rem;
+}
+
+.service-reviews__overall {
+  @apply text-center;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(253, 230, 138, 0.8);
+}
+
+.service-reviews__overall-score {
+  @apply block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #92400e;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.service-reviews__overall-stars {
+  @apply flex items-center justify-center flex-wrap;
+  gap: 0.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.service-reviews__overall-count {
+  font-size: 0.8rem;
+  color: #b45309;
+  font-weight: 600;
+  margin-left: 0.35rem;
+}
+
+.service-reviews__distribution {
+  @apply flex flex-col;
+  gap: 0.55rem;
+}
+
+.service-reviews__bar {
+  @apply items-center;
+  display: grid;
+  grid-template-columns: 24px 1fr 36px;
+  gap: 0.75rem;
+}
+
+.service-reviews__bar-label {
+  @apply text-center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-reviews__bar-container {
+  @apply overflow-hidden;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 999px;
+}
+
+.service-reviews__bar-fill {
+  @apply h-full;
+  background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.service-reviews__bar-count {
+  @apply text-right;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-reviews__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-review {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-review:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.08);
+}
+
+.service-review__header {
+  @apply flex justify-between items-center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.service-review__user {
+  @apply flex items-center;
+  gap: 0.85rem;
+}
+
+.service-review__avatar {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #eef2ff 100%);
+  border: 1px solid #ddd6fe;
+  color: #4f46e5;
+  font-size: 1rem;
+}
+
+.service-review__user-info {
+  @apply flex flex-col;
+  gap: 0.15rem;
+}
+
+.service-review__username {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.92rem;
+}
+
+.service-review__date {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-review__rating {
+  @apply flex;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.service-review__star--filled {
+  color: #f59e0b;
+}
+
+.service-review__star--empty {
+  color: #cbd5e1;
+}
+
+.service-review__content {
+  @apply relative;
+  padding: 0.85rem 1rem 0.85rem 2.2rem;
+  background: #faf8f5;
+  border: 1px solid #ece7dc;
+  border-radius: 13px;
+}
+
+.service-review__quote-icon {
+  @apply absolute;
+  left: 0.75rem;
+  top: 0.85rem;
+  color: #a5b4fc;
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.service-review__text {
+  @apply m-0;
+  color: #334155;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.service-review__response {
+  @apply flex flex-col;
+  margin-top: 0.875rem;
+  gap: 0.5rem;
+}
+
+.service-review__response-badge {
+  @apply inline-flex items-center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  padding: 0.28rem 0.68rem;
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  color: #0f766e;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.service-review__response-box {
+  background: linear-gradient(145deg, #f0fdfa 0%, #ecfdf5 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 13px;
+  padding: 0.85rem 1rem;
+}
+
+.service-review__response-text {
+  @apply m-0;
+  font-size: 0.875rem;
+  line-height: 1.58;
+  color: #1e293b;
+}
+
+.service-reviews__empty {
+  @apply text-center;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 100%);
+  border: 1px dashed #c7d2fe;
+  border-radius: 16px;
+  padding: 2.25rem 1.5rem;
+  color: #64748b;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.service-reviews__empty p {
+
+  @apply m-0;
+}
+
+@media (max-width: 767px) {
+  .service-reviews__stats {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-reviews__overall {
+    padding-right: 0;
+    padding-bottom: 1.25rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(253, 230, 138, 0.8);
+  }
+
+  .service-review {
+    padding: 1.1rem;
+  }
+
+  .service-review__header {
+    @apply flex-col items-start;
+    gap: 0.65rem;
+  }
+}

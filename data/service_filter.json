@@ -1,0 +1,906 @@
+{
+  "field_definitions": {
+    "quick_action": {
+      "label": "Hızlı İşlem Seçimi",
+      "description": "Müşterileriniz hızlıca işlem başlatabilsin mi?",
+      "type": "toggle",
+      "db_field": "quick_action_enabled"
+    },
+    "service_description": {
+      "label": "Hizmet Açıklaması",
+      "description": "Hizmetinizi detaylıca açıklayın",
+      "type": "textarea",
+      "db_field": "service_description",
+      "required": true,
+      "min_length": 50,
+      "max_length": 2000
+    },
+    "portfolio_gallery": {
+      "label": "Portföy Galerisi",
+      "description": "Yaptığınız işlerden örnekler ekleyin",
+      "type": "gallery",
+      "db_field": "portfolio_images",
+      "max_files": 20,
+      "accepted_types": ["image/jpeg", "image/png", "image/webp"]
+    },
+    "service_areas": {
+      "label": "Hizmet Bölgeleri",
+      "description": "Hangi illerde/ilçelerde hizmet veriyorsunuz?",
+      "type": "multi-location",
+      "db_field": "service_areas"
+    },
+    "working_hours": {
+      "label": "Çalışma Saatleri",
+      "description": "Haftalık çalışma saatlerinizi girin",
+      "type": "working_hours",
+      "db_field": "working_hours"
+    },
+    "certificates": {
+      "label": "Sertifikalar",
+      "description": "Sertifikanız varsa ekleyin",
+      "type": "certificates",
+      "db_field": "certificates",
+      "max_files": 10
+    },
+    "faq": {
+      "label": "Sıkça Sorulan Sorular",
+      "description": "Müşterilerinizin sıkça sorduğu soruları ekleyin",
+      "type": "faq_list",
+      "db_field": "faq_items",
+      "max_items": 20
+    },
+    "service_packages": {
+      "label": "Hizmet Paketleri",
+      "description": "Fiyatlandırma paketlerinizi oluşturun",
+      "type": "packages",
+      "db_field": "pricing_packages",
+      "min_packages": 1,
+      "max_packages": 5
+    },
+    "service_features": {
+      "label": "Hizmet Özellikleri",
+      "description": "Hizmetinizin özelliklerini seçin",
+      "type": "multi_select",
+      "db_field": "service_features",
+      "max_items": 15
+    },
+    "about": {
+      "label": "Hakkında",
+      "description": "Kendinizi ve işinizi tanıtın",
+      "type": "textarea",
+      "db_field": "about_text",
+      "min_length": 20,
+      "max_length": 1000
+    }
+  },
+  "subcategory_defaults": {
+    "12541": {
+      "label": "Teknik & Tesisat Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12549": {
+      "label": "İnşaat & Tadilat",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12559": {
+      "label": "Ev Hizmetleri & Mobilya",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12576": {
+      "label": "Otomotiv Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12585": {
+      "label": "Temizlik Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12593": {
+      "label": "Usta & İşçilik Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12602": {
+      "label": "Kuaför & Sağlık & Güzellik",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": false,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12610": {
+      "label": "Çocuk & Yaşlı Bakımı",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": false,
+        "about": true
+      }
+    },
+    "12615": {
+      "label": "Gayrimenkul & Emlak Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": false,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12620": {
+      "label": "Eğitim & Kurs",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12627": {
+      "label": "Dijital & Freelance Hizmetler",
+      "fields": {
+        "quick_action": false,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": false,
+        "working_hours": false,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12635": {
+      "label": "Fotoğraf & Video",
+      "fields": {
+        "quick_action": false,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12641": {
+      "label": "Kurumsal & Hukuki Hizmetler",
+      "fields": {
+        "quick_action": false,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12647": {
+      "label": "Güvenlik & Alarm Sistemleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12653": {
+      "label": "Elektronik & Beyaz Eşya Teknik Servis",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12659": {
+      "label": "Organizasyon & Etkinlik Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12666": {
+      "label": "Hayvan Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12671": {
+      "label": "Turizm & Rehberlik",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "12676": {
+      "label": "Diğer Hizmetler",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": true,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": false,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    },
+    "48343": {
+      "label": "Nakliye ve Lojistik Hizmetleri",
+      "fields": {
+        "quick_action": true,
+        "service_description": true,
+        "portfolio_gallery": false,
+        "service_areas": true,
+        "working_hours": true,
+        "certificates": true,
+        "faq": true,
+        "service_packages": true,
+        "service_features": true,
+        "about": true
+      }
+    }
+  },
+  "category_overrides": {
+    "12542": { "certificates": true },
+    "12543": { "certificates": true },
+    "12544": { "certificates": true },
+    "12545": { "certificates": true },
+    "12546": { "certificates": true },
+    "12547": { "certificates": true },
+    "12548": { "certificates": true },
+    "12560": { "portfolio_gallery": false },
+    "12561": { "portfolio_gallery": false },
+    "12562": { "portfolio_gallery": false },
+    "12577": { "certificates": true },
+    "12578": { "certificates": true },
+    "12580": { "portfolio_gallery": true },
+    "12581": { "portfolio_gallery": true },
+    "12603": { "service_areas": false },
+    "12604": { "service_areas": false },
+    "12605": { "service_areas": false },
+    "12606": { "service_areas": false },
+    "12607": { "service_areas": false },
+    "12609": { "service_areas": false },
+    "12622": { "service_areas": false },
+    "12630": { "portfolio_gallery": false },
+    "12632": { "portfolio_gallery": false },
+    "12634": { "portfolio_gallery": false },
+    "12645": { "certificates": false },
+    "12654": { "portfolio_gallery": false },
+    "12655": { "portfolio_gallery": false },
+    "12656": { "portfolio_gallery": false },
+    "12657": { "portfolio_gallery": false },
+    "12662": { "portfolio_gallery": false },
+    "12663": { "portfolio_gallery": false },
+    "12670": { "portfolio_gallery": false },
+    "12672": { "portfolio_gallery": false },
+    "12674": { "portfolio_gallery": false },
+    "12675": { "portfolio_gallery": false },
+    "12677": { "portfolio_gallery": false },
+    "12678": { "portfolio_gallery": false },
+    "12679": { "portfolio_gallery": false },
+    "12680": { "portfolio_gallery": false }
+  },
+  "feature_options": {
+    "12541": {
+      "label": "Teknik & Tesisat Hizmetleri",
+      "options": [
+        "Ev Tipi Hizmet",
+        "İş Yeri Hizmeti",
+        "Acil Servis",
+        "7/24 Hizmet",
+        "Ücretsiz Keşif",
+        "Yerinde Servis",
+        "Garanti Süresi",
+        "Orijinal Yedek Parça",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Şehir Dışı Hizmet",
+        "Projelendirme",
+        "Malzemeli Hizmet",
+        "Malzemeli Hizmet (Siz Temin Ediyorsunuz)",
+        "Sözleşmeli Hizmet",
+        "Periyodik Bakım",
+        "Garanti Belgesi",
+        "İş Güvenliği Sertifikası",
+        "Konusunda Uzman Kadro",
+        "Referans Verebilme"
+      ]
+    },
+    "12549": {
+      "label": "İnşaat & Tadilat",
+      "options": [
+        "Keşif ve Ölçüm",
+        "Ücretsiz Keşif",
+        "3D Projelendirme",
+        "Malzemeli İşçilik",
+        "Sadece İşçilik",
+        "Anahtar Teslim",
+        "Proje Yönetimi",
+        "Ruhsat İşlemleri",
+        "Fatura Düzenleme",
+        "Garanti Süresi",
+        "Sigortalı Hizmet",
+        "Sözleşmeli Hizmet",
+        "Şantiye Başındayız",
+        "Kentsel Dönüşüm",
+        "Isı Yalıtımı",
+        "Deprem Güçlendirme",
+        "Çevre Düzenleme",
+        "Önce Referanslar",
+        "Taksit Seçenekleri",
+        "Şehir Dışı Hizmet"
+      ]
+    },
+    "12559": {
+      "label": "Ev Hizmetleri & Mobilya",
+      "options": [
+        "Ev Tipi Hizmet",
+        "İş Yeri Hizmeti",
+        "Yerinde Hizmet",
+        "Adrese Teslim",
+        "Garanti Süresi",
+        "Orijinal Yedek Parça",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Acil Servis",
+        "Hafta Sonu Hizmet",
+        "Ücretsiz Keşif",
+        "Malzemeli Hizmet",
+        "Sadece İşçilik",
+        "Montaj Hizmeti",
+        "Sökme ve Take Hizmeti",
+        "Sigortalı Hizmet",
+        "Konusunda Uzman Kadro",
+        "Referans Verebilme"
+      ]
+    },
+    "12576": {
+      "label": "Otomotiv Hizmetleri",
+      "options": [
+        "Oto Markası (Yerli)",
+        "Oto Markası (Yabancı)",
+        "Tüm Markalara Hizmet",
+        "Yerinde Hizmet",
+        "Çekici Hizmeti",
+        "Garanti Süresi",
+        "Orijinal Parça Kullanımı",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Sigortalı Hizmet",
+        "Exper Raporu",
+        "Detaylı Fotoğraf Çekimi",
+        "Video Çekimi",
+        "Yol Yardım",
+        "7/24 Hizmet",
+        "Yerinde Servis",
+        "İş Güvenliği Sertifikası",
+        "Konusunda Uzman Kadro",
+        "Referans Verebilme"
+      ]
+    },
+    "12585": {
+      "label": "Temizlik Hizmetleri",
+      "options": [
+        "Ev Temizliği",
+        "Ofis Temizliği",
+        "İnşaat Sonrası Temizlik",
+        "Dış Cephe Temizliği",
+        "Cam Temizliği",
+        "Halı Yıkama",
+        "Koltuk Yıkama",
+        "Endüstriyel Temizlik",
+        "Dezenfeksiyon",
+        "Haşere İlaçlama",
+        "Çöp Removal",
+        "Balkon Temizliği",
+        "Banyo Temizliği",
+        "Mutfak Temizliği",
+        "Perde Yıkama",
+        "Halıflex Yıkama",
+        "Su Baskını Temizliği",
+        "Yangın Sonrası Temizlik",
+        "Malzemeli Temizlik",
+        "Malzemesiz Temizlik",
+        "Personel Temini",
+        "Günlük Personel",
+        "Aylık Personel",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit"
+      ]
+    },
+    "12593": {
+      "label": "Usta & İşçilik Hizmetleri",
+      "options": [
+        "Ev Tipi Hizmet",
+        "İş Yeri Hizmeti",
+        "İnşaat Sahası",
+        "Acil Servis",
+        "7/24 Hizmet",
+        "Ücretsiz Keşif",
+        "Yerinde Hizmet",
+        "Garanti Süresi",
+        "Orijinal Yedek Parça",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Şehir Dışı Hizmet",
+        "Malzemeli Hizmet",
+        "Sadece İşçilik",
+        "Sözleşmeli Hizmet",
+        "Periyodik Bakım",
+        "İş Güvenliği Sertifikası",
+        "Konusunda Uzman Kadro",
+        "Referans Verebilme",
+        "Proje Bazlı Fiyatlandırma"
+      ]
+    },
+    "12602": {
+      "label": "Kuaför & Sağlık & Güzellik",
+      "options": [
+        "Kadın müşteriler",
+        "Erkek müşteriler",
+        "Her ikisi",
+        "Randevulu Hizmet",
+        "Yerinde Hizmet",
+        "Evde Hizmet",
+        "Otelde Hizmet",
+        "Ücretsiz Danışmanlık",
+        "İlk Görüşme Ücretsiz",
+        "Garanti Süresi",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Sertifikalı Uzman",
+        "Deneyimli Kadro",
+        "Referans Verebilme",
+        "Kampanyalı Hizmet",
+        "Paket Hizmet",
+        "Aylık Üyelik",
+        "Birebir Hizmet",
+        "Grup Hizmeti"
+      ]
+    },
+    "12610": {
+      "label": "Çocuk & Yaşlı Bakımı",
+      "options": [
+        "Gündüzlü Bakıcı",
+        "Yatılı Bakıcı",
+        "Acil Bakıcı",
+        "Hafta Sonu Bakıcı",
+        "Gece Bakıcısı",
+        "Özel Bakıcı",
+        "Hasta Bakıcı",
+        "Referans Verebilme",
+        "Sigortalı Hizmet",
+        "Sertifikalı Bakıcı",
+        "Deneyimli Bakıcı",
+        "İlk Görüşme Ücretsiz",
+        "Deneme Süresi",
+        "Günlük Rapor",
+        "Fotoğraf ve Video Paylaşımı",
+        "Özel Gereksinimli Bakıcı",
+        "Dil Bilen Bakıcı",
+        "Eğitimli Bakıcı"
+      ]
+    },
+    "12615": {
+      "label": "Gayrimenkul & Emlak Hizmetleri",
+      "options": [
+        "Satılık Konut",
+        "Kiralık Konut",
+        "Satılık İşyeri",
+        "Kiralık İşyeri",
+        "Satılık Arsa",
+        "Emlak Danışmanlığı",
+        "Değerleme Hizmeti",
+        "Yatırım Danışmanlığı",
+        "Hukuki Danışmanlık",
+        "Vergi Danışmanlığı",
+        "Ücretsiz Keşif",
+        "Fotoğraf Çekimi",
+        "Video Çekimi",
+        "360° Sanal Tur",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Referans Verebilme",
+        "Sözleşmeli Hizmet"
+      ]
+    },
+    "12620": {
+      "label": "Eğitim & Kurs",
+      "options": [
+        "Birebir Ders",
+        "Grup Dersi",
+        "Online Ders",
+        "Yüz Yüze Ders",
+        "Evde Ders",
+        "Kursta Ders",
+        "Sınava Hazırlık",
+        "Hafta İçi",
+        "Hafta Sonu",
+        "Akşam Dersleri",
+        "Yazılı Kaynak Verme",
+        "Deneme Sınavı",
+        "Ücretsiz Deneme Dersi",
+        "Ders Materyali Dahil",
+        "Sertifika Verme",
+        "Referans Verebilme",
+        "Fatura Düzenleme",
+        "Taksit Seçenekleri"
+      ]
+    },
+    "12627": {
+      "label": "Dijital & Freelance Hizmetler",
+      "options": [
+        "Uzaktan Hizmet",
+        "Ofiste Hizmet",
+        "Müşteri Yerinde Hizmet",
+        "Proje Bazlı",
+        "Saatlik Ücretli",
+        "Aylık Sabit Ücret",
+        "Sözleşmeli Hizmet",
+        "Ücretsiz Danışmanlık",
+        "İlk Görüşme Ücretsiz",
+        "Revizyon Hakkı",
+        "Kaynak Kod Teslimi",
+        "Eğitim Desteği",
+        "Teknik Destek",
+        "Referans Verebilme",
+        "Portföy Gösterimi",
+        "NDA Imzalama",
+        "Hızlı Teslimat",
+        "Acil Teslimat"
+      ]
+    },
+    "12635": {
+      "label": "Fotoğraf & Video",
+      "options": [
+        "Düğün Fotoğrafçılığı",
+        "Nişan Fotoğrafçılığı",
+        "Doğum Günü Fotoğrafçılığı",
+        "Kurumsal Fotoğrafçılıık",
+        "Ürün Fotoğrafçılığı",
+        "Emlak Fotoğrafçılığı",
+        "Drone Çekimi",
+        "Video Çekimi",
+        "Klip Çekimi",
+        "Belgesel Çekimi",
+        "Montaj Hizmeti",
+        "Dış Mekan Çekimi",
+        "Stüdyo Çekimi",
+        "Siyah Beyaz Baskı",
+        "Renkli Baskı",
+        " albüm Hazırlama",
+        "Dijital Teslimat",
+        "USB ile Teslimat",
+        "Online Galeri",
+        "Referans Verebilme",
+        "Fatura Düzenleme"
+      ]
+    },
+    "12641": {
+      "label": "Kurumsal & Hukuki Hizmetler",
+      "options": [
+        "İnternet Danışmanlığı",
+        "Telefonda Danışmanlık",
+        "Ofiste Danışmanlık",
+        "Müşteri Yerinde Hizmet",
+        "Sözleşmeli Hizmet",
+        "Proje Bazlı",
+        "Saatlik Ücretli",
+        "Aylık Sabit Ücret",
+        "Ücretsiz İlk Danışmanlık",
+        "Referans Verebilme",
+        "Fatura Düzenleme",
+        "Gizlilik Sözleşmesi",
+        "Çoklu Dil Desteği",
+        "Uzman Kadro",
+        "Hızlı Çözüm",
+        "7/24 Destek"
+      ]
+    },
+    "12647": {
+      "label": "Güvenlik & Alarm Sistemleri",
+      "options": [
+        "Ev Güvenlik Sistemi",
+        "İşyeri Güvenlik Sistemi",
+        "Site Güvenlik Sistemi",
+        "Kamera Kurulumu",
+        "Alarm Kurulumu",
+        "Kapı Kilidi Kurulumu",
+        "Akıllı Ev Sistemi",
+        "Yangın Alarm Sistemi",
+        "GAZ Alarm Sistemi",
+        "Perimetre Güvenlik",
+        "Geçim Kontrol Sistemi",
+        "Plaka Tanıma Sistemi",
+        "Yüz Tanıma Sistemi",
+        "Uzaktan İzleme",
+        "7/24 Monitoring",
+        "Garanti Süresi",
+        "Periyodik Bakım",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Referans Verebilme"
+      ]
+    },
+    "12653": {
+      "label": "Elektronik & Beyaz Eşya Teknik Servis",
+      "options": [
+        "Yerinde Tamir",
+        "Atölyede Tamir",
+        "Adresinizden Teslim",
+        "Adrese Teslim",
+        "Garanti Süresi",
+        "Orijinal Parça Kullanımı",
+        "Uygun Fiyat",
+        "Hızlı Teslimat",
+        "Acil Servis",
+        "7/24 Hizmet",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Ücretsiz Keşif",
+        "Ücretsiz Arıza Tespiti",
+        "Eski Cihaz Alımı",
+        "Yeni Cihaz Kurulumu",
+        "Eğitim Desteği",
+        "Referans Verebilme"
+      ]
+    },
+    "12659": {
+      "label": "Organizasyon & Etkinlik Hizmetleri",
+      "options": [
+        "Düğün Organizasyonu",
+        "Nişan Organizasyonu",
+        "Doğum Günü Partisi",
+        "Kurumsal Etkinlik",
+        "Bayi Toplantısı",
+        "Fuar Standı",
+        "Açılış Organizasyonu",
+        "Sünnet Düğünü",
+        "Mezuniyet Töreni",
+        "Ses ve Işık Sistemi",
+        "Sahne Kurulumu",
+        "DJ Hizmeti",
+        "Orkestra Hizmeti",
+        "Catering Hizmeti",
+        "Çiçek Süsleme",
+        "Balon Süsleme",
+        "Fotoğraf Çekimi",
+        "Video Çekimi",
+        "Lazer Show",
+        "Havai Fişek",
+        "Referans Verebilme"
+      ]
+    },
+    "12666": {
+      "label": "Hayvan Hizmetleri",
+      "options": [
+        "Köpek Bakımı",
+        "Kedi Bakımı",
+        "Kuş Bakımı",
+        "Balık Bakımı",
+        "Kaplumbağa Bakımı",
+        "Evcil Hayvan Kuaförü",
+        "Evcil Hayvan Eğitimi",
+        "Veteriner Hizmeti",
+        "Aşılama Hizmeti",
+        "Pet Taksi",
+        "Evcil Hayvan Oteli",
+        "Evcil Hayvan Gezdirme",
+        "Evcil Hayvan Eğitimi",
+        "Davranış Eğitimi",
+        "İtaat Eğitimi",
+        "Sosyalleşme Eğitimi",
+        "Yüzdürme Eğitimi",
+        "Acil Veteriner",
+        "Evde Veteriner",
+        "Referans Verebilme"
+      ]
+    },
+    "12671": {
+      "label": "Turizm & Rehberlik",
+      "options": [
+        "Günlük Tur",
+        "Konaklamalı Tur",
+        "Yurtiçi Tur",
+        "Yurtdışı Tur",
+        "Kültür Turu",
+        "Doğa Turu",
+        "Tarihi Tur",
+        "Gastro Tur",
+        "Alışveriş Turu",
+        "VIP Transfer",
+        "Havalimanı Transferi",
+        "Özel Araç",
+        "Minibüs Kiralama",
+        "Otobüs Kiralama",
+        "Rehberlik Hizmeti",
+        "Tercümanlık",
+        "Sigorta Dahil",
+        "Yemekli Tur",
+        "Özel Tur Programı",
+        "Referans Verebilme"
+      ]
+    },
+    "12676": {
+      "label": "Diğer Hizmetler",
+      "options": [
+        "Ev Tipi Hizmet",
+        "İş Yeri Hizmeti",
+        "Yerinde Hizmet",
+        "Adrese Teslim",
+        "Acil Servis",
+        "7/24 Hizmet",
+        "Ücretsiz Keşif",
+        "Garanti Süresi",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit",
+        "Şehir Dışı Hizmet",
+        "Malzemeli Hizmet",
+        "Sadece İşçilik",
+        "Sözleşmeli Hizmet",
+        "Referans Verebilme"
+      ]
+    },
+    "48343": {
+      "label": "Nakliye ve Lojistik Hizmetleri",
+      "options": [
+        "Evden Eve Nakliyat",
+        "Ofis Taşıma",
+        "Şehir İçi Nakliyat",
+        "Şehirler Arası Nakliyat",
+        "Asansörlü Nakliyat",
+        "Sigortalı Nakliyat",
+        "Ambalajlı Nakliyat",
+        "Sadece Araç",
+        "Sadece Personel",
+        "Paketleme Hizmeti",
+        "Depolama Hizmeti",
+        "Kurye Hizmeti",
+        "Express Kurye",
+        "Gece Kurye",
+        "Yük Taşıma",
+        "Ağır Yük Taşıma",
+        "Piyano Taşıma",
+        "Kasa Taşıma",
+        "Fatura Düzenleme",
+        "Kredi Kartına Taksit"
+      ]
+    }
+  }
+}

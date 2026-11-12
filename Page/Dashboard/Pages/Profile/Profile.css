@@ -1,0 +1,401 @@
+/* ==========================================================================
+   Dashboard Profile 2-Kolonlu Kurumsal SaaS Düzeni
+   AcilLazım Tasarım Sistemi Kuralları:
+   - Ana Renkler: Kurumsal Lacivert (#003466) & Canlı Turuncu (#FF6B00)
+   - Tipografi: 8px ritmi, yüksek okunabilirlik, sade ve dengeli kartlar
+   ========================================================================== */
+
+.pf-profile-container {
+  @apply w-full box-border;
+  max-width: 860px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* TEK VE BÜTÜNLEŞİK KART (Dış Kapsayıcı — Çizgisiz, Tek Gövde) */
+.pf-unified-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.pf-unified-card:hover {
+  border-color: #cbd5e1;
+}
+
+/* ÜST BLOK: Kullanıcı Profil & Kimlik Başlık Bölümü */
+.pf-user-header-card {
+  background: transparent;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 2;
+}
+
+.pf-user-card-cover {
+  position: relative;
+  height: 95px;
+  background: linear-gradient(135deg, #0A0E27 0%, #002B54 50%, #003466 100%);
+  background-size: cover;
+  background-position: center;
+  border-radius: 13px 13px 0 0;
+}
+
+.pf-cover-mini-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(0, 52, 102, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.pf-cover-mini-btn:hover {
+  background: rgba(0, 52, 102, 0.95);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.pf-user-card-body {
+  padding: 0 20px 10px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+}
+
+.pf-avatar-wrapper {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 3.5px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+  background: #f8fafc;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.pf-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.pf-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-avatar-upload-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #003466;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 52, 102, 0.25);
+  transition: all 0.2s ease;
+}
+
+.pf-avatar-upload-badge:hover {
+  background: #FF6B00;
+  transform: scale(1.08);
+}
+
+.pf-user-header-details {
+  flex: 1;
+  min-width: 0;
+  padding-top: 12px;
+}
+
+.pf-user-primary-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pf-user-primary-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pf-user-fullname {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pf-badge-individual {
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.pf-badge-company {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.pf-company-subtext {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.pf-company-subtext em {
+  font-style: normal;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.pf-user-quick-list {
+  margin-top: 6px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-top: 4px;
+  border-top: none;
+}
+
+.pf-quick-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #334155;
+  font-weight: 500;
+  padding: 5px 10px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.pf-quick-item:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.pf-quick-icon {
+  color: #ff6b00;
+  flex-shrink: 0;
+}
+
+/* ALT BLOK: Dinamik İçerik Alanı (Üst Kartla Çizgisiz, Tamamen Bütünleşik) */
+.pf-main-column {
+  width: 100%;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Birleşik form kartları: Çizgiler ve iç kutular sıfırlanır, tek bir bütün gövde görünür */
+.pf-main-column .bi-basic-info-form,
+.pf-main-column .sv-services-form,
+.pf-main-column .pas__form {
+  gap: 0;
+}
+
+.pf-main-column .bi-section-card,
+.pf-main-column .sv-section-card,
+.pf-main-column .pas__card {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 12px 20px 14px 20px !important;
+  margin: 0 !important;
+}
+
+/* Kartın altındaki kaydet aksiyon çubuğunu kartla bütünleştirip dikey alanı yukarı çeker */
+.pf-main-column .bi-actions-bar,
+.pf-main-column .sv-actions-bar,
+.pf-main-column .pas__actions-bar {
+  margin: 8px 0 0 0 !important;
+  border-radius: 0 0 14px 14px !important;
+  border: none !important;
+  border-top: 1px solid #f1f5f9 !important;
+  background: #f8fafc !important;
+  box-shadow: none !important;
+  padding: 10px 20px !important;
+  position: static !important;
+}
+
+@media (max-width: 640px) {
+  .pf-user-card-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pf-avatar-wrapper {
+    margin-top: -39px;
+  }
+
+  .pf-user-header-details {
+    width: 100%;
+    padding-top: 4px;
+  }
+
+  .pf-user-primary-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pf-user-primary-info {
+    justify-content: center;
+  }
+
+  .pf-user-quick-list {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* İçerik Alanı (SPA Mantığıyla Yumuşak Fade-In / Slide-Up Geçişi) */
+.pf-profile-content-area {
+  @apply w-full flex flex-col;
+  animation: pfFadeSlideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pfFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pf-incomplete-banner {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #92400e;
+}
+
+.pf-incomplete-icon {
+  color: #d97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pf-incomplete-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pf-incomplete-text strong {
+  display: block;
+  font-weight: 700;
+  color: #78350f;
+  margin-bottom: 2px;
+}
+
+.pf-incomplete-text p {
+  margin: 0;
+  color: #92400e;
+}
+
+/* Mobil ve Tablet Uyumluluğu */
+@media (max-width: 960px) {
+  .pf-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pf-sidebar-column {
+    position: static;
+  }
+
+  .pf-user-card {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Mobilde dikey akordeon menüyü gizle */
+  .pf-user-nav {
+    display: none !important;
+  }
+
+  .pf-user-quick-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pf-user-quick-list {
+    grid-template-columns: 1fr;
+  }
+}

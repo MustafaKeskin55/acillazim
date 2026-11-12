@@ -1,0 +1,2000 @@
+.messaging-container {
+  @apply flex;
+  height: calc(100vh - 64px); /* Navbar yüksekliğini çıkarın */
+  background: #f8f9fa;
+  gap: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.messaging-left {
+  @apply overflow-y-auto;
+  width: 35%;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+}
+
+.messaging-right {
+  @apply flex flex-col;
+  width: 65%;
+  background: white;
+}
+
+.messages-list {
+
+  @apply p-0;
+}
+
+.message-item {
+  @apply flex cursor-pointer;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.message-item:hover {
+  background: #f5f8ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.message-avatar img {
+  @apply rounded-full object-cover;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.message-content {
+
+  @apply flex-1;
+}
+
+.message-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 5px;
+}
+
+.message-header h3 {
+  @apply m-0;
+  font-size: 14px;
+  color: #004D7F;
+}
+
+.message-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.message-sender {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.message-preview {
+  @apply m-0 overflow-hidden;
+  font-size: 12px;
+  color: #666;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.chat-header {
+  @apply flex justify-between items-center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  background: white;
+}
+
+.chat-user-info {
+  @apply flex items-center;
+  gap: 15px;
+}
+
+.chat-user-info img {
+  @apply rounded-full;
+  width: 40px;
+  height: 40px;
+}
+
+.chat-user-info h2 {
+  @apply m-0;
+  font-size: 16px;
+  color: #333;
+}
+
+.chat-user-info p {
+  @apply m-0;
+  font-size: 12px;
+  color: #666;
+}
+
+.chat-actions button {
+  @apply border-0 cursor-pointer rounded-full;
+  background: none;
+  padding: 8px;
+  color: #004D7F;
+  transition: background 0.2s;
+}
+
+.chat-actions button:hover {
+  background: rgba(0, 77, 127, 0.1);
+}
+
+.chat-messages {
+  @apply flex-1 overflow-y-auto flex flex-col;
+  padding: 20px;
+  padding-bottom: 90px;
+  gap: 15px;
+  background: #f8f9fa;
+  margin-bottom: 10px; /* 20px'den 10px'e düşürüldü */
+}
+
+/* Chat input bölümü için özel scope */
+.messaging-chat-scope {
+  /* Diğer stillerin etki etmemesi için reset */
+  all: initial;
+}
+
+.messaging-chat-scope .chat-input-container {
+  @apply fixed flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 1001;
+  padding: 10px;
+  gap: 10px;
+}
+
+.messaging-chat-scope .text-input-container {
+  @apply flex-1 flex items-center border-0;
+  background: #f5f7fa;
+  border-radius: 30px;
+  padding: 5px 15px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.messaging-chat-scope .custom-input {
+  @apply flex-1;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  font-size: 15px !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  caret-color: #004D7F !important; /* İmleç rengi */
+  transition: all 0.3s ease !important;
+}
+
+.messaging-chat-scope .buttons-container {
+  @apply flex items-center;
+  gap: 8px;
+  padding: 5px;
+}
+
+.messaging-chat-scope .btn-offer,
+.messaging-chat-scope .btn-send {
+  width: 35px !important;
+  height: 35px !important;
+  min-width: 35px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+
+.messaging-chat-scope .btn-offer {
+  background: #28a745 !important;
+  color: white !important;
+}
+
+.messaging-chat-scope .btn-send {
+  background: #004D7F !important;
+  color: white !important;
+}
+
+.messaging-chat-scope .text-input-container:focus-within {
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #004D7F33, 0 2px 8px rgba(0, 77, 127, 0.15);
+  transform: translateY(-1px);
+}
+
+.messaging-chat-scope .custom-input::placeholder {
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.messaging-chat-scope .custom-input:focus::placeholder {
+  color: #004D7F;
+}
+
+/* Seçili metin stili */
+.messaging-chat-scope .custom-input::selection {
+  background-color: rgba(0, 77, 127, 0.2);
+  color: #004D7F;
+}
+
+/* Animasyonlar */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-item {
+  animation: slideIn 0.3s ease;
+}
+
+/* Parlaklık efekti */
+.message-item:hover {
+  background: linear-gradient(145deg, #ffffff, #f0f7ff);
+}
+
+/* Gölge efektleri */
+.messaging-container {
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.chat-container {
+  @apply flex flex-col;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.chat-header {
+  @apply flex justify-between items-center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  @apply flex items-center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  @apply rounded-full;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #004D7F;
+  box-shadow: 0 0 10px rgba(0, 77, 127, 0.3);
+}
+
+.user-details h2 {
+  @apply m-0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.blue-text {
+  color: #004D7F;
+  font-weight: 500;
+}
+
+.header-actions {
+  @apply flex;
+  gap: 1rem;
+}
+
+.action-button {
+  @apply border-0 rounded-full cursor-pointer;
+  background: none;
+  color: #004D7F;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background: rgba(0, 77, 127, 0.1);
+  transform: scale(1.1);
+}
+
+.chat-content {
+  @apply flex-1 overflow-y-auto flex flex-col;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+.message-bubble.seller {
+  background: white;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+
+.message-bubble.buyer {
+  background: #004D7F;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+
+.message-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 0.5rem;
+}
+
+.message-title {
+  font-weight: 600;
+  color: #004D7F;
+}
+
+.message-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.message-text {
+  @apply m-0;
+  line-height: 1.5;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.price-offer {
+  @apply flex items-center;
+  gap: 0.5rem;
+}
+
+.offer-label {
+  font-size: 0.9rem;
+}
+
+.offer-amount {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.chat-footer {
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.message-input {
+  @apply flex-1;
+  padding: 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.message-input:focus {
+  @apply outline-none;
+  border-color: #004D7F;
+  box-shadow: 0 0 0 3px rgba(0, 77, 127, 0.2);
+}
+
+.send-button {
+  @apply border-0 cursor-pointer;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #004D7F, #0056b3);
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 77, 127, 0.3);
+}
+
+.send-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 77, 127, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Özel scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004D7F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+/* Parıltı efekti */
+.message-bubble::after {
+  @apply absolute;
+  content: '';
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+.messaging-super-container {
+  height: calc(100vh - 94px); /* 64px navbar + 30px boşluk */
+  margin-top: 94px; /* 64px navbar + 30px boşluk */
+  background: none;  /* Arka planı kaldır */
+  padding: 0 20px 20px 20px;
+}
+
+.messaging-tabs {
+  @apply flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  margin-top: -60px;  /* 60px yukarı al */
+}
+
+.tab {
+  @apply cursor-pointer relative overflow-visible;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.tab.active {
+  background: #004D7F;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,77,127,0.3);
+}
+
+.tab.active .badge {
+  background: #dc3545;
+  color: white;
+  z-index: 10;
+}
+
+.messaging-content {
+  @apply flex flex-1;
+  gap: 20px;
+  min-height: 0;
+}
+
+.messages-list {
+  @apply overflow-y-auto;
+  width: 35%;
+  max-height: calc(100vh - 150px);
+  padding: 15px;
+  scrollbar-width: thin;
+}
+
+.message-card {
+  @apply flex;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: white;
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f7;
+}
+
+.message-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-color: #004D7F;
+}
+
+.car-image {
+  @apply overflow-hidden;
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  border: 2px solid #eef2f7;
+  background: #f8f9fa;
+}
+
+.car-image img {
+  @apply w-full h-full object-cover;
+  transition: transform 0.3s ease;
+}
+
+.message-card:hover .car-image img {
+  transform: scale(1.05);
+}
+
+.message-info {
+  @apply flex-1;
+  min-width: 0; /* Taşma sorununu çözer */
+}
+
+.message-header h3 {
+  @apply m-0 overflow-hidden;
+  font-size: 14px;
+  font-weight: 600;
+  color: #004D7F;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.preview {
+  @apply overflow-hidden;
+  font-size: 13px;
+  color: #666;
+  margin: 5px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+}
+
+.chat-section {
+  @apply flex-1 flex flex-col overflow-hidden relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.chat-header {
+  @apply flex justify-between items-center;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.user-info {
+  @apply flex items-center;
+  gap: 15px;
+}
+
+.user-info img {
+  @apply rounded-full;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #004D7F;
+  padding: 2px;
+}
+
+.user-info h2 {
+  @apply m-0;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-info span {
+  font-size: 13px;
+  color: #004D7F;
+}
+
+.btn-icon {
+  @apply border-0 rounded-full;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  color: #004D7F;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: #004D7F;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 77, 127, 0.3);
+}
+
+.message {
+  @apply flex flex-col relative;
+  max-width: 80%;
+  margin-bottom: 25px; /* Mesajlar arası boşluğu artırdık */
+}
+
+.message.seller {
+  align-self: flex-start;
+}
+
+.message.buyer {
+  align-self: flex-end;
+}
+
+/* Mesaj stilleri güncellemesi */
+.message-content {
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-size: 15px !important;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 6px;
+}
+
+.seller .message-content {
+  background: white;
+  border-bottom-left-radius: 5px;
+}
+
+.buyer .message-content {
+  background: #004D7F;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+/* Tarih bilgisi */
+.message-time {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+  padding: 0 4px;
+  align-self: flex-end;
+}
+
+.seller .message-time {
+  align-self: flex-start;
+}
+
+/* Fiyat teklifi için özel stil */
+.price-offer {
+  background: linear-gradient(45deg, #004D7F, #0056b3) !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: white !important;
+}
+
+.chat-input {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+.custom-input {
+  border-radius: 25px !important;
+  padding: 12px 20px !important;
+   transition: all 0.3s ease !important;
+}
+
+
+
+.btn-send {
+  border-radius: 25px !important;
+  padding: 12px 25px !important;
+  background: linear-gradient(45deg, #004D7F, #0056b3) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-send:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(0,77,127,0.3) !important;
+}
+
+/* Özel scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004D7F;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .messaging-content {
+
+    @apply flex-col;
+  }
+  
+  .messages-list {
+    @apply w-full;
+    margin-bottom: 20px;
+  }
+
+  .messaging-super-container {
+    margin-top: 84px; /* 64px navbar + 20px boşluk (mobilde daha az) */
+    height: calc(100vh - 84px);
+    padding: 0 10px 10px 10px;
+  }
+
+  .chat-section {
+    @apply fixed;
+    top: 84px; /* Navbar + boşluk */
+  }
+
+  .message-content {
+    padding: 10px 14px;
+    font-size: 14px !important;
+  }
+
+  .message-title {
+    font-size: 11px;
+  }
+
+  .message-time {
+    font-size: 11px;
+  }
+
+  .price-offer {
+    font-size: 15px !important;
+  }
+
+  .chat-messages {
+    padding-bottom: 100px;
+    margin-bottom: 10px; /* 20px'den 10px'e düşürüldü */
+  }
+
+  .message {
+    margin-bottom: 20px;
+  }
+
+  .message-content {
+    margin-bottom: 4px;
+  }
+}
+
+/* Mevcut CSS'e eklenecek yeni stiller */
+
+.badge {
+  @apply absolute flex items-center justify-center;
+  top: -8px;
+  right: -8px;
+  background: #dc3545;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+  z-index: 10;
+  min-width: 20px;
+  height: 20px;
+}
+
+.tab.active .badge {
+  background: #dc3545;
+  color: white;
+  z-index: 10;
+}
+
+/* Tab hover efektini badge'e uygulamayacak */
+.tab:hover .badge {
+  transform: none;
+  box-shadow: none;
+}
+
+.message-card.selected {
+  background: #f0f7ff;
+  border-left: 3px solid #004D7F;
+}
+
+.no-chat-selected {
+  @apply flex-1 flex flex-col justify-center items-center;
+  color: #666;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.no-chat-selected i {
+  font-size: 48px;
+  color: #004D7F;
+  margin-bottom: 15px;
+}
+
+.no-chat-selected p {
+  font-size: 16px;
+  color: #666;
+}
+
+form.input-group {
+
+  @apply m-0;
+}
+
+/* Yeni fiyat teklifi dialog stili */
+.price-dialog {
+  @apply fixed w-full h-full flex justify-center items-center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.price-dialog-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.price-dialog h3 {
+  @apply text-center;
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.price-input-container {
+  @apply relative;
+  margin-bottom: 20px;
+}
+
+.currency {
+  @apply absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-weight: 500;
+}
+
+.price-input {
+  @apply w-full;
+  padding: 12px 20px 12px 35px;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.price-input:focus {
+  @apply outline-none;
+  border-color: #004D7F;
+  box-shadow: 0 0 0 3px rgba(0,77,127,0.1);
+}
+
+.price-actions {
+  @apply flex;
+  gap: 10px;
+}
+
+.price-actions button {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.btn-cancel:hover {
+  background: #e9ecef;
+}
+
+.btn-submit {
+  background: #004D7F;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mevcut CSS'e ekleyin */
+
+.options-menu {
+  @apply fixed w-full h-full flex justify-center items-center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+.options-menu-content {
+  @apply overflow-hidden relative;
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 300px;
+  animation: slideUp 0.3s ease;
+  z-index: 1101;
+}
+
+.option-item {
+  @apply w-full border-0 flex items-center cursor-pointer;
+  padding: 15px 20px;
+  background: none;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  background: #f8f9fa;
+}
+
+.option-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.option-item i {
+  font-size: 16px;
+  width: 20px;
+}
+
+.option-item:nth-child(1) i {
+  color: #dc3545;
+}
+
+.option-item:nth-child(2) i {
+  color: #ffc107;
+}
+
+.option-item:nth-child(3) i {
+  color: #28a745;
+}
+
+.option-item:nth-child(4) i {
+  color: #6c757d;
+}
+
+.option-item:nth-child(5) i {
+  color: #004D7F;
+}
+
+.btn-icon {
+  @apply border-0 rounded-full flex items-center justify-center cursor-pointer;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  color: #004D7F;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: #004D7F;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 77, 127, 0.3);
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mevcut CSS'e ekleyin/güncelleyin */
+
+.actions {
+
+  @apply flex items-center;
+}
+
+.action-buttons {
+  @apply flex;
+  gap: 12px; /* Butonlar arası boşluk */
+  margin-left: 15px;
+}
+
+.btn-icon {
+  @apply border-0 rounded-full flex items-center justify-center cursor-pointer;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  color: #004D7F;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-icon:hover {
+  background: #004D7F;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 77, 127, 0.3);
+}
+
+.options-menu-content {
+  @apply overflow-hidden;
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 300px;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.option-item {
+  @apply w-full border-0 flex items-center cursor-pointer;
+  padding: 15px 20px;
+  background: none;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  background: #f8f9fa;
+}
+
+.option-item i {
+  font-size: 16px;
+  width: 20px;
+}
+
+/* Özel renkler her menü öğesi için */
+.option-item:nth-child(1) i { /* Mesajı Sil */
+  color: #dc3545;
+}
+
+.option-item:nth-child(2) i { /* Raporla */
+  color: #ffc107;
+}
+
+.option-item:nth-child(3) i { /* Satıcının Tüm İlanları */
+  color: #28a745;
+}
+
+.option-item:nth-child(4) i { /* Engelle */
+  color: #6c757d;
+}
+
+.option-item:nth-child(5) i { /* Paylaş */
+  color: #004D7F;
+}
+
+.btn-back {
+  @apply hidden border-0 cursor-pointer;
+  background: none;
+  color: #004D7F;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* Responsive tasarım güncellemeleri */
+@media (max-width: 768px) {
+  .messaging-super-container {
+    padding: 10px;
+  }
+
+  .messaging-content {
+    gap: 0;
+  }
+
+  .messages-list {
+    @apply w-full;
+    margin-bottom: 0;
+  }
+
+  .chat-section {
+    @apply fixed;
+    top: 64px; /* Navbar yüksekliği */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    border-radius: 0;
+  }
+
+  .btn-back {
+
+    @apply block;
+  }
+
+  .chat-header {
+    @apply flex items-center justify-between relative;
+    padding: 0 15px; /* Padding'i azalttık */
+    height: 70px !important; /* Kesin yükseklik */
+    min-height: 70px !important;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .chat-header-top { @apply flex items-center flex-1 h-full; /* Yüksekliği tam kullan */
+  }
+
+  .btn-back {
+    @apply flex items-center justify-center border-0 p-0 absolute;
+    width: 32px;
+    height: 32px;
+    background: none;
+    color: #004D7F;
+    font-size: 18px;
+    left: 15px;
+  }
+
+  .chat-header-user {
+    @apply flex-1 text-center overflow-hidden;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 40px 0 42px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 180px;
+    line-height: 70px; /* Header yüksekliğiyle aynı */
+  }
+
+  .header-actions {
+    @apply absolute flex h-full items-center;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .chat-header-image {
+    @apply overflow-hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+
+  .chat-header-image img {
+
+    @apply w-full h-full object-cover;
+  }
+
+  .chat-header-info {
+
+    @apply flex-1;
+  }
+
+  .chat-header-title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .chat-header-price {
+    font-size: 14px;
+    color: #004D7F;
+    font-weight: 600;
+  }
+
+  .btn-back {
+    @apply flex items-center justify-center border-0 p-0;
+    width: 32px;
+    height: 32px;
+    background: none;
+    color: #004D7F;
+    font-size: 18px;
+  }
+
+  .header-actions {
+    @apply flex;
+    gap: 8px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+  }
+
+  .btn-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .message-card {
+    padding: 10px;
+  }
+
+  .car-image {
+    width: 80px;
+    height: 60px;
+  }
+
+  .messaging-tabs {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .tab {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    padding-bottom: 80px;
+    margin-bottom: 20px;
+  }
+
+  .messaging-chat-scope .chat-input-container {
+    @apply fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 15px;
+  }
+
+  .messaging-chat-scope .text-input-container {
+    height: 45px;
+  }
+
+  .message:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+/* Tablet için ek düzenlemeler */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .messaging-content {
+    gap: 15px;
+  }
+
+  .messages-list {
+    width: 40%;
+  }
+
+  .action-buttons {
+    gap: 10px;
+  }
+}
+
+/* Küçük ekranlar için ek optimizasyonlar */
+@media (max-width: 360px) {
+  .messaging-super-container {
+    padding: 5px;
+  }
+
+  .car-image {
+    width: 70px;
+    height: 50px;
+  }
+
+  .message-header h3 {
+    font-size: 13px;
+  }
+
+  .preview {
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    gap: 5px;
+  }
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Mobil görünüm için user-info düzenlemesi */
+@media screen and (max-width: 768px) {
+  .messaging-container {
+    @apply p-0;
+    height: calc(100vh - 60px); /* Navbar yüksekliğini çıkar */
+  }
+
+  .messaging-list {
+    @apply w-full;
+    border-right: none;
+  }
+
+  .message-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .message-item-header {
+    @apply flex justify-between items-center;
+    margin-bottom: 8px;
+  }
+
+  .message-item-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .message-item-date {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .message-item-preview {
+    @apply overflow-hidden;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .message-item-status {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+  }
+
+  .message-detail {
+    @apply fixed hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1000;
+  }
+
+  .message-detail.active {
+
+    @apply block;
+  }
+
+  .message-detail-header {
+    @apply flex items-center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+  }
+
+  .back-button {
+    @apply border-0 cursor-pointer;
+    background: none;
+    padding: 8px;
+    margin-right: 10px;
+  }
+
+  .message-detail-content {
+    @apply overflow-y-auto;
+    padding: 15px;
+    height: calc(100vh - 130px);
+  }
+
+  .message-input-container {
+    @apply fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #eee;
+  }
+
+  .user-info {
+
+    @apply flex items-center;
+  }
+
+  .user-info img {
+
+    @apply hidden;
+  }
+
+  .user-info div {
+    margin-left: 0;
+  }
+
+  .user-info h2 {
+    @apply m-0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .user-info span {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .chat-header {
+    @apply flex items-center relative;
+    padding: 8px 12px;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-back {
+    @apply absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .user-info {
+    @apply flex-1 text-center;
+    padding: 0 40px;
+    margin-top: 8px;
+  }
+
+  .user-info h2 {
+    @apply m-0 overflow-hidden;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 4px;
+  }
+
+  .actions {
+    @apply absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .chat-subheader {
+    @apply flex;
+    padding: 12px 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    gap: 12px;
+  }
+
+  .chat-subheader-image {
+    @apply overflow-hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+
+  .chat-subheader-image img {
+
+    @apply w-full h-full object-cover;
+  }
+
+  .chat-subheader-content {
+    @apply flex-1 flex flex-col justify-center;
+    gap: 4px;
+  }
+
+  .chat-subheader-title {
+    @apply m-0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .chat-subheader-price {
+    @apply m-0;
+    font-size: 14px;
+    color: #004D7F;
+    font-weight: 600;
+  }
+
+  .messaging-super-container {
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+  }
+
+  .notification-count {
+
+    @apply hidden;
+  }
+
+  .chat-section {
+    @apply fixed;
+    top: 64px;
+  }
+}
+
+/* Mobil görünüm için chat-section düzenlemeleri */
+@media screen and (max-width: 768px) {
+  .chat-section {
+    @apply fixed w-full;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 64px);
+    border-radius: 0;
+    z-index: 1000;
+    background: #fff;
+  }
+
+  .chat-messages {
+    @apply flex-1 overflow-y-auto;
+    padding: 15px;
+    padding-bottom: 80px;
+    background: #f8f9fa;
+  }
+
+  .messaging-chat-scope .chat-input-container {
+    @apply fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    z-index: 1001;
+  }
+
+  .chat-header {
+    padding: 10px 15px;
+    height: auto;
+    min-height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .chat-header-top {
+    @apply flex items-center;
+    gap: 10px;
+  }
+
+  .chat-header-user-info {
+    @apply flex flex-col;
+    gap: 2px;
+  }
+
+  .chat-header-user {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .chat-header-sender {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .chat-header-bottom {
+    @apply flex items-center;
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    gap: 12px;
+  }
+
+  .chat-header-image {
+    @apply overflow-hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+
+  .chat-header-image img {
+
+    @apply w-full h-full object-cover;
+  }
+
+  .chat-header-info {
+
+    @apply flex-1;
+  }
+
+  .chat-header-title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .chat-header-price {
+    font-size: 14px;
+    color: #004D7F;
+    font-weight: 600;
+  }
+
+  .btn-back {
+    @apply flex items-center justify-center border-0 p-0;
+    width: 32px;
+    height: 32px;
+    background: none;
+    color: #004D7F;
+    font-size: 18px;
+  }
+
+  .header-actions {
+    @apply flex;
+    gap: 8px;
+  }
+
+  .chat-subheader {
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .chat-section.mobile {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .chat-section.mobile.hidden {
+    transform: translateX(100%);
+  }
+
+  .messaging-chat-scope .text-input-container {
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .messaging-chat-scope .buttons-container {
+    gap: 8px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+
+  .message-content {
+    padding: 10px 15px;
+    font-size: 14px !important;
+  }
+
+  .chat-messages {
+    height: calc(100vh - 64px - 70px - 84px - 80px) !important;
+    /* viewport - navbar - header(70px) - subheader - input */
+  }
+}
+
+/* Chat-subheader için düzenleme */
+.chat-subheader {
+
+  @apply hidden;
+}
+
+/* PC modu için chat-header düzenlemeleri */
+@media screen and (min-width: 769px) {
+  .chat-header {
+    @apply flex justify-between items-center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background: white;
+    height: auto;
+  }
+
+  .chat-user-info {
+    @apply flex items-center;
+    gap: 15px;
+  }
+
+  .chat-user-info img {
+    @apply rounded-full;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat-user-info h2 {
+    @apply m-0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .chat-user-info p {
+    @apply m-0;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .user-info {
+    @apply flex items-center;
+    gap: 15px;
+  }
+
+  .user-info img {
+    @apply rounded-full;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #004D7F;
+    padding: 2px;
+  }
+
+  .user-info div {
+
+    @apply flex flex-col items-start;
+  }
+
+  .user-info h2 {
+    @apply m-0 text-left;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .user-info span {
+    @apply block;
+    font-size: 13px;
+    color: #004D7F;
+    margin-top: 2px;
+  }
+
+  .chat-actions {
+    @apply flex;
+    gap: 10px;
+  }
+
+  .chat-actions button {
+    @apply border-0 cursor-pointer rounded-full flex items-center justify-center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    padding: 8px;
+    color: #004D7F; /* Normal durumda da mavi renk */
+    transition: all 0.2s ease;
+  }
+
+  .chat-actions button:hover {
+    background: #004D7F;
+    color: white;
+  }
+
+  .chat-actions {
+    @apply flex;
+    gap: 10px;
+  }
+}
+
+/* PC modu için chat-input-container düzenlemeleri */
+@media screen and (min-width: 769px) {
+  .chat-section {
+
+    @apply relative flex flex-col h-full;
+  }
+
+  .chat-messages {
+    @apply flex-1 overflow-y-auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .messaging-chat-scope .chat-input-container {
+    @apply relative;
+    bottom: auto;
+    border-top: 1px solid #eee;
+    padding: 15px 20px;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  }
+
+  .messaging-chat-scope .text-input-container {
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .messaging-chat-scope .buttons-container {
+    gap: 10px;
+  }
+}
+
+/* Mobil görünüm için mevcut kodlar korunacak */
+@media screen and (max-width: 768px) {
+  .messaging-chat-scope .chat-input-container {
+    @apply fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    z-index: 1001;
+  }
+}
+
+/* PC modu için chat-section düzenlemeleri */
+@media screen and (min-width: 769px) {
+  .messaging-super-container {
+    max-width: 1400px;
+    margin: 94px auto 0;
+    padding: 0 20px 20px;
+    height: 700px; /* Sabit yükseklik */
+  }
+
+  .messaging-content {
+    @apply flex h-full;
+    gap: 20px; /* Parent'ın yüksekliğini al */
+  }
+
+  .messages-list {
+    @apply h-full overflow-y-auto;
+    width: 380px;
+    min-width: 380px; /* Parent'ın yüksekliğini al */
+    padding: 15px;
+  }
+
+  .chat-section {
+    @apply flex-1 h-full flex flex-col overflow-hidden;
+    max-width: calc(100% - 400px); /* Parent'ın yüksekliğini al */
+    background: white;
+    border-radius: 12px;
+  }
+
+  .chat-messages {
+    @apply flex-1 overflow-y-auto;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 0; /* Flexbox scroll için gerekli */
+  }
+
+  .messaging-chat-scope .chat-input-container {
+    height: 70px;
+    min-height: 70px;
+    padding: 15px 20px;
+    background: white;
+    border-top: 1px solid #eee;
+  }
+}
+
+/* Modal stilleri */
+.delete-modal-overlay {
+  @apply fixed flex justify-center items-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.delete-modal {
+  @apply overflow-hidden;
+  background-color: white;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.delete-modal-header {
+  @apply text-center;
+  background-color: #FF6B00;
+  color: white;
+  padding: 16px;
+}
+
+.delete-modal-header h2 {
+  @apply m-0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.delete-modal-content {
+  @apply text-center;
+  padding: 24px;
+}
+
+.delete-modal-content p {
+  @apply m-0;
+  color: #333;
+  font-size: 16px;
+}
+
+.delete-modal-buttons {
+  @apply flex;
+  padding: 16px;
+  gap: 12px;
+  background-color: #f8f9fa;
+}
+
+.cancel-button, .confirm-button {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.cancel-button {
+  background-color: #f1f3f5;
+  color: #495057;
+}
+
+.confirm-button {
+  background-color: #FF6B00;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #e9ecef;
+}
+
+.confirm-button:hover {
+  background-color: #e86000;
+}
+
+/* Mobil cihazlar için responsive tasarım */
+@media (max-width: 480px) {
+  .delete-modal {
+    width: 85%;
+  }
+
+  .delete-modal-content p {
+    font-size: 14px;
+  }
+
+  .cancel-button, .confirm-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+} 

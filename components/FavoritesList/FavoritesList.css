@@ -1,0 +1,47 @@
+/* ==========================================================================
+   FavoritesList.css — Tailwind CSS (@apply Mimarisi)
+   ========================================================================== */
+
+.favorites-container {
+  @apply max-w-6xl mx-auto my-8 px-4;
+}
+
+.favorites-container .favorites-header {
+  @apply mb-8;
+}
+
+.favorites-container .favorites-header h1 {
+  @apply text-2xl font-bold text-slate-900 mb-4;
+}
+
+.favorites-container .favorites-header .filter-tabs {
+  @apply flex gap-3;
+}
+
+.favorites-container .favorites-header .filter-tabs .tab {
+  @apply border-0 cursor-pointer py-2 px-4 rounded-xl bg-slate-100 text-slate-600 transition-colors text-xs font-semibold;
+}
+
+.favorites-container .favorites-header .filter-tabs .tab.active {
+  @apply bg-brand-deep text-white;
+}
+
+.favorites-container .favorites-header .filter-tabs .tab:hover {
+  @apply bg-slate-200 text-slate-900;
+}
+
+.favorites-container .favorites-header .filter-tabs .tab.active:hover {
+  @apply bg-brand-accent text-white;
+}
+
+.favorites-container .favorites-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8;
+}
+
+.favorites-container .favorites-grid .favorite-card {
+  @apply overflow-hidden bg-white rounded-2xl shadow-sm border border-slate-200 transition-all duration-200;
+}
+
+.favorites-container .favorites-grid .favorite-card .card-image {
+  @apply overflow-hidden relative w-full h-48 bg-slate-100;
+}

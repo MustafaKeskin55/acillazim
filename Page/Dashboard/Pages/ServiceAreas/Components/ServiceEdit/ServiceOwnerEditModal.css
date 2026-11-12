@@ -1,0 +1,346 @@
+/* Hizmet düzenleme modalları — 4 Skill Disiplini & Göz Yormayan Ara Renk Paleti */
+
+.soe-modal {
+  @apply fixed flex items-center justify-center box-border pointer-events-none;
+  inset: 0;
+  z-index: 120000;
+  padding: max(16px, env(safe-area-inset-top, 0px) + 8px)
+    max(16px, env(safe-area-inset-right, 0px))
+    max(16px, env(safe-area-inset-bottom, 0px))
+    max(16px, env(safe-area-inset-left, 0px));
+  font-family:
+    'Plus Jakarta Sans',
+    'Manrope',
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.soe-modal__scrim {
+  @apply absolute border-0 p-0 m-0 cursor-pointer pointer-events-auto;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.44);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: soe-scrim-in 0.18s ease-out;
+}
+
+@keyframes soe-scrim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.soe-modal__sheet {
+  @apply pointer-events-auto relative m-0 flex flex-col overflow-hidden;
+  z-index: 1;
+  width: min(640px, calc(100vw - 20px));
+  max-width: min(640px, calc(100vw - 20px));
+  max-height: min(88dvh, 88vh);
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e0e7ff;
+  box-shadow:
+    0 24px 60px -12px rgba(30, 41, 59, 0.18),
+    0 8px 20px -6px rgba(79, 70, 229, 0.08);
+  min-height: 0;
+  animation: soe-dialog-in 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 1024px) {
+  .soe-modal__sheet {
+    width: min(760px, calc(100vw - 48px));
+    max-width: min(760px, calc(100vw - 48px));
+    max-height: min(90dvh, 90vh);
+  }
+
+  .soe-modal {
+    padding: max(20px, env(safe-area-inset-top, 0px) + 10px)
+      max(24px, env(safe-area-inset-right, 0px))
+      max(20px, env(safe-area-inset-bottom, 0px))
+      max(24px, env(safe-area-inset-left, 0px));
+  }
+
+  .soe-modal__scroll {
+    padding: 20px 24px;
+    padding-bottom: 16px;
+  }
+
+  .soe-modal__top {
+    padding: 18px 22px 16px;
+  }
+
+  .soe-modal__bar {
+    padding: 14px 22px;
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@keyframes soe-dialog-in {
+  from {
+    transform: scale(0.97) translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.soe-modal__top {
+  @apply flex items-center justify-between flex-shrink-0;
+  gap: 12px;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid #e0e7ff;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 58%, #f0fdfa 100%);
+}
+
+.soe-modal__heading {
+  @apply m-0 flex-1;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  min-width: 0;
+}
+
+.soe-modal__close {
+  @apply flex-shrink-0 inline-flex items-center justify-center cursor-pointer;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #64748b;
+  transition: all 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.soe-modal__close:hover {
+  background: #f5f3ff;
+  border-color: #c7d2fe;
+  color: #4f46e5;
+}
+
+.soe-modal__close:active {
+  transform: scale(0.97);
+}
+
+.soe-modal__scroll {
+  @apply overflow-x-hidden overflow-y-auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px 18px;
+  padding-bottom: 12px;
+  background: #faf8f5;
+}
+
+/* Yorum listesi: son kart footer ile çakışmasın, nefes alanı */
+.soe-modal__scroll:has(.srr-service-reviews-response--owner-modal) {
+  padding-top: 12px;
+  padding-bottom: 28px;
+}
+
+.soe-modal__bar {
+  @apply flex-shrink-0;
+  padding: 12px 18px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid #e0e7ff;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 65%, #f0fdfa 100%);
+}
+
+.soe-modal__footer-actions {
+  @apply flex flex-wrap;
+  gap: 10px;
+  justify-content: stretch;
+}
+
+.soe-modal__btn {
+  @apply cursor-pointer;
+  flex: 1 1 auto;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: all 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.soe-modal__btn:active {
+  transform: scale(0.98);
+}
+
+.soe-modal__btn--primary {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  border-color: #0f766e;
+  color: #ffffff;
+  box-shadow: 0 6px 16px -4px rgba(13, 148, 136, 0.28);
+}
+
+.soe-modal__btn--primary:hover {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  box-shadow: 0 10px 22px -4px rgba(13, 148, 136, 0.36);
+  transform: translateY(-1px);
+}
+
+.soe-modal__btn--ghost {
+  background: #ffffff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.soe-modal__btn--ghost:hover {
+  background: #f5f3ff;
+  border-color: #a5b4fc;
+}
+
+/* Kapak alanı */
+.soe-cover-hint {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.soe-cover-upload {
+  @apply relative inline-flex items-center justify-center cursor-pointer;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #f5f3ff;
+  color: #4338ca;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px dashed #c7d2fe;
+  margin-bottom: 16px;
+}
+
+.soe-cover-upload input[type='file'] {
+  @apply absolute cursor-pointer w-full h-full;
+  inset: 0;
+  opacity: 0;
+  font-size: 0;
+}
+
+.soe-cover-preview {
+  @apply overflow-hidden;
+  margin-top: 12px;
+  border-radius: 13px;
+  border: 1px solid #e2e8f0;
+  max-height: 220px;
+}
+
+.soe-cover-preview img {
+  @apply w-full block object-cover;
+  height: auto;
+  max-height: 220px;
+}
+
+/* İletişim kanalları (sadece görünürlük) */
+.soe-prefs {
+
+  @apply m-0;
+}
+
+.soe-prefs__hint {
+  margin: 0 0 14px;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.soe-prefs__list {
+  @apply p-0 flex flex-col;
+  list-style: none;
+  margin: 0 0 16px;
+  gap: 10px;
+}
+
+.soe-prefs__row {
+  @apply flex items-start cursor-pointer;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.soe-prefs__row input {
+  @apply flex-shrink-0;
+  margin-top: 3px;
+}
+
+.soe-prefs__field {
+  @apply flex flex-col;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.soe-prefs__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.soe-prefs__input {
+  @apply w-full box-border;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.soe-prefs__input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+}
+
+.soe-prefs__note {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Yükleniyor */
+.soe-loading {
+  @apply text-center;
+  padding: 2.5rem 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soe-modal__scrim,
+  .soe-modal__sheet {
+    animation: none;
+  }
+}
+
+/* Dashboard gövdesi — taşma */
+.service-dashboard-editor-root {
+  @apply relative w-full box-border;
+  max-width: 100%;
+  min-height: 0;
+  overflow-x: clip;
+}
+
+/* Düzenleme modalları: iç kartlar yatay taşmasın */
+.soe-modal__scroll .service-pricing-section,
+.soe-modal__scroll .service-gallery-section,
+.soe-modal__scroll .service-faq-section,
+.soe-modal__scroll .service-features-section,
+.soe-modal__scroll .service-certificates-section,
+.soe-modal__scroll .service-description-section,
+.soe-modal__scroll .service-working-hours,
+.soe-modal__scroll .service-working-hours-root {
+  @apply box-border;
+  max-width: 100%;
+}

@@ -1,0 +1,190 @@
+/* =============================================================
+   ServiceFeatures.css
+   Modern Avantaj Kartları — Asimetrik grid, sıcak gradient'ler,
+   mikro animasyonlar.
+   ============================================================= */
+.sf-advantages-section {
+  @apply w-full mx-auto p-0 box-border relative;
+  max-width: 1400px;
+}
+
+.sf-section-title {
+  @apply relative flex flex-col;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 0 0 36px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  gap: 4px;
+}
+
+.sf-section-title .sf-block {
+  @apply block uppercase;
+  color: var(--brand-muted);
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.sf-section-title-highlight {
+  color: var(--brand-accent);
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.sf-indented-title {
+  @apply inline-block relative;
+  padding-bottom: 14px;
+}
+
+.sf-indented-title::after {
+  @apply block;
+  content: "";
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-accent), #FF3D6E);
+  margin-top: 12px;
+  border-radius: 99px;
+}
+
+.sf-cards-grid-wrap {
+  animation: sf-cards-page-in 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sf-cards-page-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sf-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sf-advantage-card {
+  @apply relative flex flex-col items-start text-left overflow-hidden;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px 28px;
+  border: 1px solid var(--brand-line);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  isolation: isolate;
+}
+
+.sf-advantage-card::before {
+  @apply absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 0, 0.04) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.sf-advantage-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 0, 0.25);
+  box-shadow:
+    0 24px 50px -20px rgba(0, 52, 102, 0.15),
+    0 4px 12px -4px rgba(255, 107, 0, 0.08);
+}
+
+.sf-advantage-card:hover::before {
+  opacity: 1;
+}
+
+.sf-icon-wrapper {
+  @apply flex items-center justify-center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  color: #fff;
+  box-shadow:
+    0 12px 24px -8px rgba(0, 0, 0, 0.18),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sf-advantage-card:hover .sf-icon-wrapper {
+  transform: scale(1.06) rotate(-4deg);
+}
+
+/* Sıcak gradient'ler */
+.sf-gradient-purple { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
+.sf-gradient-yellow { background: linear-gradient(135deg, #FFB800 0%, #FF6B00 100%); }
+.sf-gradient-red    { background: linear-gradient(135deg, #FF6B00 0%, #FF3D6E 100%); }
+.sf-gradient-blue   { background: linear-gradient(135deg, #003466 0%, #001a33 100%); }
+
+.sf-icon-svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.6;
+}
+
+.sf-card-title {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.sf-card-description {
+  @apply m-0;
+  color: var(--brand-muted);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* Pagination (mobil) */
+.sf-pagination-controls {
+  @apply flex items-center justify-center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.sf-page-indicator {
+  @apply rounded-full border-0 p-0 cursor-pointer;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 52, 102, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sf-page-indicator--active {
+  background: linear-gradient(90deg, var(--brand-accent), #FF3D6E);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  .sf-cards-grid { gap: 18px; }
+  .sf-advantage-card { padding: 28px 22px; }
+}
+
+@media screen and (max-width: 900px) {
+  .sf-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .sf-section-title { margin-bottom: 24px; }
+}
+
+@media screen and (max-width: 576px) {
+  .sf-cards-grid { grid-template-columns: 1fr; gap: 14px; }
+  .sf-advantage-card { padding: 24px 20px; }
+  .sf-icon-wrapper { width: 48px; height: 48px; }
+  .sf-icon-svg { width: 22px; height: 22px; }
+  .sf-card-title { font-size: 1.05rem; }
+}

@@ -1,0 +1,490 @@
+/* Reklam Banner Temel Stilleri */
+.ad-banner {
+  @apply relative overflow-hidden;
+  margin: 4px 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Reklam Etiketi */
+.ad-banner-label {
+  @apply absolute;
+  top: 6px;
+  right: 6px;
+  background-color: #ffcc00;
+  color: #004d7f;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 12px;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Reklam Bağlantı Stilleri */
+.ad-banner-link {
+  @apply block no-underline w-full;
+  color: inherit;
+  height: auto !important;
+}
+
+/* Farklı Medya Türleri için Stillendirme */
+.alz-vitrin-media,
+.alz-vitrin-anim,
+.alz-vitrin-video,
+.alz-vitrin-iframe,
+.ad-banner-image,
+.ad-banner-animation,
+.ad-banner-video,
+.ad-banner-iframe,
+.alz-vitrin-image,
+.alz-vitrin-animation {
+  @apply w-full block;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+/* NOT: Tüm boyutlandırmalar artık sayfa CSS'lerinde yapılacaktır */
+/* Her sayfanın kendi CSS'inde ilgili data-section-code attribute'una göre boyutlar belirlenecektir */
+/* Örnek: .home .ad-banner[data-section-code="AB1"] { width: 100%; height: 450px; } */
+
+/* Reklam İçeriği Başlık */
+.ad-banner-title {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Yükleniyor, Hata ve Boş Durumlar */
+.ad-banner-loading,
+.ad-banner-error,
+.ad-banner-empty {
+  @apply flex flex-col justify-center items-center text-center w-full h-full;
+  min-height: 40px;
+  background-color: #f5f5f5;
+  color: #999;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Etiket ayarlaması */
+.ad-banner-loading .ad-banner-label,
+.ad-banner-error .ad-banner-label,
+.ad-banner-empty .ad-banner-label {
+  @apply static w-full text-center;
+  margin-bottom: 10px;
+}
+
+.ad-banner-error-content,
+.ad-banner-empty-content {
+  @apply w-full;
+}
+
+/* Hata Durumu Özel Stili */
+.ad-banner-error {
+  background-color: #fff4f4;
+  color: #c00;
+}
+
+/* Çoklu Reklam Gösterimi */
+.multiple-ad-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.multiple-ad-banner-item {
+  @apply relative overflow-hidden;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* SLIDER ÖZELLİKLERİ */
+.ad-slider {
+  @apply relative overflow-hidden;
+}
+
+.ad-slider-container {
+  @apply relative w-full;
+}
+
+/* Slider Kontrolleri - Gizlendi */
+.ad-slider-controls { @apply hidden; /* Slider kontrollerini tamamen gizle */
+}
+
+/* Geçiş Animasyonu - AB1 için geliştirildi */
+.ad-slider .ad-banner-link {
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* AB1 için özel daha yumuşak geçiş animasyonu */
+.ad-banner[data-section-code="AB1"] .ad-banner-link {
+  transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.ad-banner[data-section-code="AB1"] .alz-vitrin-media,
+.ad-banner[data-section-code="AB1"] .alz-vitrin-anim,
+.ad-banner[data-section-code="AB1"] .alz-vitrin-video,
+.ad-banner[data-section-code="AB1"] .alz-vitrin-iframe,
+.ad-banner[data-section-code="AB1"] .ad-banner-image,
+.ad-banner[data-section-code="AB1"] .ad-banner-animation,
+.ad-banner[data-section-code="AB1"] .ad-banner-video,
+.ad-banner[data-section-code="AB1"] .ad-banner-iframe {
+  transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* AB1 için özel slider stil ve animasyonları */
+.acillazim-ab1-slider {
+  @apply relative overflow-hidden;
+  transform-style: flat;
+  background-color: white !important;
+  box-shadow: none;
+  border: none !important;
+  outline: none !important;
+}
+
+.acillazim-ab1-slider-container {
+  @apply relative w-full overflow-hidden;
+  height: auto !important;
+  background-color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Animasyon süresince gösterilecek resim her zaman görünür olmalı */
+.acillazim-ab1-slider-container .alz-vitrin-media,
+.acillazim-ab1-slider-container .alz-vitrin-anim,
+.acillazim-ab1-slider-container .alz-vitrin-video,
+.acillazim-ab1-slider-container .alz-vitrin-iframe,
+.acillazim-ab1-slider-container .ad-banner-image,
+.acillazim-ab1-slider-container .ad-banner-animation,
+.acillazim-ab1-slider-container .ad-banner-video,
+.acillazim-ab1-slider-container .ad-banner-iframe {
+  background-color: white !important;
+  border: none !important;
+  outline: none !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Kariyer.net tarzı yumuşak geçiş animasyonu - daha az hareket */
+.acillazim-ab1-slider-container.animating.slide-next {
+  animation: kariyer-style-next 1300ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.acillazim-ab1-slider-container.animating.slide-prev {
+  animation: kariyer-style-prev 1300ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Daha küçük ve daha dikkatli hareket, siyah boşluğu önlemek için */
+@keyframes kariyer-style-next {
+  0% {
+    opacity: 1;
+    transform: translateX(-3%);
+    background-color: white;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: white;
+  }
+}
+
+@keyframes kariyer-style-prev {
+  0% {
+    opacity: 1;
+    transform: translateX(3%);
+    background-color: white;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: white;
+  }
+}
+
+/* Animasyon süresince üst katman boşluk olmamasını sağlar */
+.acillazim-ab1-slider::before,
+.acillazim-ab1-slider::after,
+.acillazim-ab1-slider-container::before,
+.acillazim-ab1-slider-container::after {
+  display: none !important;
+}
+
+/* Reklam içerik stilleri için ek düzenleme */
+.acillazim-ab1-slider .alz-vitrin-media,
+.acillazim-ab1-slider .alz-vitrin-anim,
+.acillazim-ab1-slider .alz-vitrin-video,
+.acillazim-ab1-slider .alz-vitrin-iframe,
+.acillazim-ab1-slider .ad-banner-image, 
+.acillazim-ab1-slider .ad-banner-animation, 
+.acillazim-ab1-slider .ad-banner-video, 
+.acillazim-ab1-slider .ad-banner-iframe {
+  background-color: white;
+}
+
+/* Animasyonlu geçişler kaldırıldı */
+@keyframes slide-left-to-right-smooth {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-right-to-left-smooth {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Eski animasyonların bilgileri korundu */
+@keyframes slide-left-to-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right-to-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Eski animasyonlar */
+@keyframes acillazim-fade-transition {
+  0% {
+    opacity: 1;
+  }
+  20% { 
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Eski animasyon bilgileri korundu */
+@keyframes acillazim-simple-transition {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Önceki şimşek efekti animasyonu kaldırıldı */
+@keyframes acillazim-flash-transition {
+  0% {
+    filter: brightness(100%) contrast(100%);
+    transform: scale(1);
+  }
+  20% {
+    filter: brightness(120%) contrast(110%);
+    transform: scale(1.02);
+  }
+  40% {
+    filter: brightness(200%) contrast(120%) saturate(130%);
+    transform: scale(1.03);
+  }
+  50% {
+    filter: brightness(300%) contrast(150%) saturate(150%);
+    transform: scale(1);
+  }
+  60% {
+    filter: brightness(200%) contrast(120%) saturate(130%);
+    transform: scale(0.98);
+  }
+  80% {
+    filter: brightness(120%) contrast(110%);
+    transform: scale(0.99);
+  }
+  100% {
+    filter: brightness(100%) contrast(100%);
+    transform: scale(1);
+  }
+}
+
+/* Resim ışık efekti - AB1 için devre dışı bırakıldı */
+.acillazim-ab1-slider-container::before { @apply hidden; /* Işık efektini tamamen kaldır */
+}
+
+.acillazim-ab1-slider-container.animating::before {
+  animation: none; /* Işık animasyonunu tamamen kaldır */
+}
+
+/* Eski ışık efekti animasyonu */
+@keyframes light-sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-5deg);
+  }
+  20% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) rotate(-5deg);
+  }
+}
+
+.acillazim-ab1-ad-link {
+  @apply block relative;
+  z-index: 1;
+  transition: all 200ms ease;
+}
+
+/* İndikatör noktaları */
+.acillazim-ab1-indicators {
+  @apply flex justify-center relative;
+  gap: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.acillazim-ab1-indicator {
+  @apply rounded-full p-0 cursor-pointer relative;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.acillazim-ab1-indicator::after {
+  @apply hidden;
+}
+
+.acillazim-ab1-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: none;
+}
+
+.acillazim-ab1-indicator:hover::after {
+  @apply hidden;
+}
+
+.acillazim-ab1-indicator.active {
+  background-color: rgba(255, 107, 0, 1);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(255, 107, 0, 0.5);
+}
+
+.acillazim-ab1-indicator:not(.active) {
+  opacity: 0.6;
+}
+
+.acillazim-ab1-indicator:not(.active):hover {
+  opacity: 0.6;
+}
+
+/* Mobil görünüm için navigasyon butonlarının boyut ayarlaması */
+@media (max-width: 768px) {
+  .acillazim-ab1-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  
+  .acillazim-ab1-indicator {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .acillazim-ab1-nav-wrapper {
+    gap: 15px;
+  }
+}
+
+/* İleri-Geri Navigasyon Butonları (Opsiyonel) - Bu stilden etkilenmeyen yeni sınıflar oluşturulduğundan bu gizleme artık gerekli değil  */
+.ad-slider-prev,
+.ad-slider-next { @apply hidden; /* İleri-geri butonlarını da gizle */
+}
+
+/* Sayfa Tabanlı Reklam Stilleri */
+.page-aware-ad {
+  @apply relative overflow-hidden;
+  margin: 16px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasyon */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.ad-banner-loading::after,
+.multiple-ad-banner-loading::after,
+.page-aware-ad-loading::after {
+  content: 'Yükleniyor...';
+  color: #999;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 480px) {
+  .multiple-ad-banner-item {
+    flex: 1 1 100%;
+  }
+  
+  .ad-banner-title {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* AB1 Navigasyon bileşenleri için özgün class isimleri */
+.acillazim-ab1-nav-wrapper {
+  @apply absolute flex justify-center items-center;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+} 

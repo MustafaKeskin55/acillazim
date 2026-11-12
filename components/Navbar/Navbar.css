@@ -1,0 +1,711 @@
+/* ===================================================================
+   Navbar.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+:root {
+  --navbar-bg: #003466;
+  --navbar-height-desktop: var(--app-main-pad-top-desktop, 80px);
+  --navbar-height-mobile: var(--app-main-pad-top-mobile, 60px);
+  --navbar-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  
+  --logo-width-desktop: 240px;
+  --logo-height-desktop: 80px;
+  --logo-height-mobile: 80px;
+  
+  --icon-color: #ffffff;
+  --icon-hover-color: #ffa500;
+  --icon-bg-hover: rgba(255, 255, 255, 0.1);
+  
+  --btn-primary-bg: #ff6b00;
+  --btn-primary-hover: #ff8124;
+  --btn-primary-active: #e56100;
+  
+  --notification-bg: #ff3b30;
+  --notification-border: 2px solid #004d7f;
+  
+  --search-bg: rgba(255, 255, 255, 0.97);
+  --search-border: 2px solid rgba(255, 255, 255, 0.8);
+  --search-focus-border: rgba(255, 167, 38, 0.9);
+  --search-width: 380px;
+  
+  --location-bg: rgba(255, 255, 255, 0.15);
+  --location-border: rgba(255, 255, 255, 0.3);
+  --location-text: white;
+  
+  --mobile-breakpoint: 768px;
+  --desktop-breakpoint: 769px;
+}
+
+/* BASE NAVBAR STYLES */
+.navbar {
+  @apply flex gap-[5px] justify-start items-center fixed top-0 left-0 right-0 w-full z-[1050] m-0;
+  background-color: var(--navbar-bg);
+  padding: 15px 5px 0px 5px;
+  box-shadow: 0 3px 8px -3px rgba(0,0,0,0.15);
+}
+
+a {
+  @apply no-underline;
+  text-decoration: none !important;
+}
+
+/* LOGO STYLES */
+.navbar-logoContainer {
+  @apply absolute left-[50px] top-1/2 -translate-y-1/2;
+  width: var(--logo-width-desktop);
+}
+
+.navbar-logo {
+  @apply object-contain;
+  height: var(--logo-height-desktop);
+  width: var(--logo-width-desktop);
+}
+
+/* SEARCH BOX STYLES */
+.navbar form {
+  @apply flex items-center gap-3 no-underline;
+}
+
+.navbar-search-form {
+  @apply ml-10 w-1/2 flex items-center gap-3;
+}
+
+.navbar form .search-box {
+  @apply flex h-[44px] items-center rounded-3xl shrink-0 overflow-hidden relative;
+  background-color: var(--search-bg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border: var(--search-border);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.navbar-search-box {
+  @apply shrink-0;
+  width: var(--search-width);
+  min-width: var(--search-width);
+}
+
+.navbar form .search-box:hover {
+  @apply -translate-y-px;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar form .search-box:focus-within {
+  @apply -translate-y-0.5 bg-white;
+  border-color: var(--search-focus-border);
+  box-shadow: 0 6px 18px rgba(255, 167, 38, 0.25);
+}
+
+.navbar form .search-box input {
+  @apply w-[92%] bg-transparent outline-none border-0 py-2 px-5 text-[15px] font-medium text-[#333] transition-all duration-300;
+}
+
+.navbar form .search-box input::placeholder {
+  @apply text-[#888] font-normal transition-all duration-300;
+}
+
+.navbar form .search-box:focus-within input::placeholder {
+  @apply text-[#bbb] translate-x-0.5;
+}
+
+.navbar form .navbar-iconContainer {
+  @apply text-white w-[8%] min-w-[46px] cursor-pointer h-full rounded-none flex items-center justify-center border-0 outline-none p-0 text-[20px] relative overflow-hidden transition-all duration-300;
+  background: linear-gradient(135deg, #ff6b00, #ff8800);
+}
+
+.navbar form .navbar-iconContainer:hover {
+  background: linear-gradient(135deg, #ff7d00, #ff9500);
+}
+
+.navbar form .navbar-iconContainer:hover svg {
+  @apply scale-110;
+}
+
+/* LOCATION SELECTOR STYLES */
+.location-selector {
+  @apply ml-[30px];
+}
+
+.location-select-btn {
+  @apply flex items-center gap-2 rounded-lg py-2 px-4 ml-[15px] cursor-pointer text-[14px] font-medium min-w-[120px] relative overflow-hidden transition-all duration-300;
+  background-color: var(--location-bg);
+  color: var(--location-text);
+  border: 1px solid var(--location-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location-select-btn:hover {
+  @apply -translate-y-px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.location-select-btn .location-pin-icon {
+  @apply text-[18px] mr-2 relative top-0 text-white/90;
+}
+
+.location-text {
+  @apply flex items-center gap-2 flex-1;
+  color: var(--location-text);
+}
+
+.location-label {
+  @apply text-[12px] font-normal text-white/80;
+}
+
+.location-value {
+  @apply text-[14px] font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px];
+  color: var(--location-text);
+}
+
+.location-select-btn.has-location {
+  @apply min-w-[140px];
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.location-select-btn.has-location .location-text {
+  @apply flex-row gap-2;
+  color: var(--location-text);
+}
+
+/* NAVIGATION ICONS STYLES */
+.navbar-user-icons {
+  @apply flex items-center mr-2 px-[3px];
+}
+
+.nav-icon {
+  @apply relative flex items-center justify-center mx-2 my-0 p-0 cursor-pointer h-10 transition-all duration-300;
+  color: var(--icon-color);
+}
+
+.nav-icon > svg,
+.nav-icon > .modern-icon {
+  @apply text-[24px] w-6 h-6 transition-all duration-300;
+  color: var(--icon-color);
+}
+
+.nav-icon:hover > svg,
+.nav-icon:hover > .modern-icon,
+.nav-icon:active > svg,
+.nav-icon:active > .modern-icon,
+.nav-icon.active > svg,
+.nav-icon.active > .modern-icon {
+  @apply -translate-y-0.5;
+  color: var(--icon-hover-color);
+}
+
+.nav-icon:hover .message-badge,
+.nav-icon:hover .notification-badge {
+  @apply -translate-y-0.5 scale-110;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* User Icon Special Styles */
+.user-icon {
+  @apply flex items-center justify-center gap-[5px] mr-[15px] pt-2 pb-2 pr-5 pl-[15px] rounded-lg w-auto h-10 cursor-pointer bg-transparent border border-transparent shadow-none transition-all duration-300;
+}
+
+.navbar-user-avatar {
+  @apply w-[26px] h-[26px] rounded-full object-cover shrink-0 block;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+}
+
+.user-name {
+  @apply text-white text-[14px] font-semibold ml-2 max-w-[200px] overflow-visible whitespace-nowrap tracking-[0.3px] inline-block transition-all duration-200;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.user-icon:hover {
+  @apply -translate-y-px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.user-icon:hover .user-name {
+  @apply text-[#ffd280];
+}
+
+.message-icon {
+  @apply relative;
+}
+
+.message-icon svg {
+  @apply text-[24px] transition-all duration-300;
+  color: var(--icon-color);
+}
+
+.message-icon:hover svg {
+  @apply -translate-y-0.5;
+  color: var(--icon-hover-color);
+}
+
+/* NOTIFICATION STYLES */
+.notification-badge {
+  @apply absolute -top-[3px] -right-[7px] bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold leading-none transition-all duration-300;
+  border: 1px solid #ffffff61;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.notification-badge.active {
+  @apply flex;
+}
+
+.message-badge {
+  @apply absolute -top-[3px] -right-[10px] bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold py-0 px-0.5 leading-none transition-all duration-300;
+  border: 1px solid #ffffff61;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.notifications-wrapper {
+  @apply relative overflow-visible;
+}
+
+.navbar-comm-cluster {
+  @apply flex items-center gap-3.5 ml-1 mr-2 relative overflow-visible;
+}
+
+.navbar-user-icons a.nav-icon {
+  @apply no-underline text-inherit;
+}
+
+.navbar-comm-cluster .nav-icon {
+  @apply m-0 min-w-[46px] w-[46px] h-[46px] rounded-full box-border transition-all duration-300;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar-comm-cluster .nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.navbar-comm-cluster .nav-icon > svg,
+.navbar-comm-cluster .nav-icon > .modern-icon {
+  @apply text-[26px] w-[26px] h-[26px];
+}
+
+.navbar-comm-cluster .notification-badge {
+  @apply -top-0.5 -right-1;
+}
+
+.navbar-comm-cluster .message-badge {
+  @apply -top-0.5 -right-1.5;
+}
+
+/* BUTTONS STYLES */
+.ilan-ver-btnn {
+  @apply relative text-white px-5 h-[42px] border-0 outline-none rounded-md text-[14px] font-bold uppercase flex items-center justify-center gap-2 ml-[18px] cursor-pointer tracking-wider overflow-hidden;
+  background-color: var(--btn-primary-bg);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+  transform: translateZ(0);
+}
+
+.ilan-ver-btnn:hover,
+.ilan-ver-btnn:focus,
+.ilan-ver-btnn:active,
+.ilan-ver-btnn:visited {
+  text-decoration: none !important;
+}
+
+.ilan-ver-btnn .plus-icon {
+  @apply text-[22px] text-white flex items-center justify-center -mt-0.5 transition-all duration-200;
+}
+
+.ilan-ver-btnn span {
+  @apply font-bold text-[13px] whitespace-nowrap;
+  text-decoration: none !important;
+}
+
+.ilan-ver-btnn:hover {
+  background-color: var(--btn-primary-hover);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ilan-ver-btnn:active {
+  @apply translate-y-px;
+  background-color: var(--btn-primary-active);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Buttons */
+.navbar-rightLinks {
+  @apply flex items-center gap-2.5 bg-transparent border-0 p-0 shadow-none;
+}
+
+.navbar-rightLinks .navbar-auth-login {
+  @apply text-white no-underline text-[13.5px] font-semibold py-[7px] px-[15px] rounded-[10px] whitespace-nowrap;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-rightLinks .navbar-auth-login:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-rightLinks .navbar-auth-login:active {
+  @apply scale-95;
+}
+
+.navbar-rightLinks .navbar-auth-register {
+  @apply bg-white text-[#0a3871] no-underline text-[13.5px] font-bold py-[7px] px-4 rounded-[10px] whitespace-nowrap;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-rightLinks .navbar-auth-register:hover {
+  @apply bg-[#f8fafc] -translate-y-px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+.navbar-rightLinks .navbar-auth-register:active {
+  @apply scale-95;
+}
+
+/* NAVBAR RIGHT SECTION */
+.navbar-right {
+  @apply ml-auto flex items-center justify-end pr-[15px];
+}
+
+.navbar-menu {
+  @apply flex items-center w-full px-0 ml-[260px];
+}
+
+/* DROPDOWN STYLES */
+.dropdown-overlay {
+  @apply fixed inset-0 bg-transparent z-[999] cursor-pointer;
+}
+
+.dropdown-menu {
+  @apply absolute right-0 bg-white rounded-lg z-[1000] opacity-0 invisible -translate-y-2.5 transition-all duration-200;
+  top: calc(100% + 5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu.active {
+  @apply opacity-100 visible translate-y-0;
+}
+
+.dropdown-container {
+  @apply relative;
+}
+
+/* =================================================================== */
+/* MOBILE STYLES */
+/* =================================================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-right: calc(12px + env(safe-area-inset-right, 0px));
+    padding-bottom: 0;
+    padding-left: calc(12px + env(safe-area-inset-left, 0px));
+    height: calc(var(--navbar-height-mobile) + env(safe-area-inset-top, 0px));
+    min-height: calc(var(--navbar-height-mobile) + env(safe-area-inset-top, 0px));
+    @apply box-border flex items-center justify-between fixed top-0 left-0 right-0 w-full z-[1050];
+    background: var(--navbar-bg);
+    box-shadow: 0 2px 8px rgba(0, 52, 102, 0.2);
+  }
+
+  .navbar-logoContainer {
+    @apply static w-auto h-auto transform-none shrink-0;
+  }
+
+  .navbar-logo {
+    @apply h-[42px] w-auto object-contain max-w-[145px];
+  }
+
+  .navbar-menu,
+  .navbar-right {
+    display: none !important;
+  }
+
+  .navbar-rightLinks {
+    @apply flex items-center gap-2 ml-auto mr-0 bg-transparent border-0 p-0 shadow-none shrink-0;
+  }
+
+  .navbar-rightLinks .navbar-auth-login {
+    @apply text-white no-underline text-[12px] font-semibold py-1.5 px-[11px] rounded-[9px] whitespace-nowrap;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    transition: all 0.2s ease;
+  }
+
+  .navbar-rightLinks .navbar-auth-login:active {
+    @apply scale-95;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-rightLinks .navbar-auth-register {
+    @apply bg-white text-[#0a3871] no-underline text-[12px] font-bold py-1.5 px-[13px] rounded-[9px] whitespace-nowrap;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
+    transition: all 0.2s ease;
+  }
+
+  .navbar-rightLinks .navbar-auth-register:active {
+    @apply scale-95 bg-[#f1f5f9];
+  }
+
+  .navbar-icons {
+    @apply flex items-center gap-2 ml-auto mr-2.5;
+  }
+
+  .navbar-icons.navbar-icons--auth {
+    @apply gap-3.5;
+  }
+
+  .navbar-icons a.navbar-icon {
+    @apply no-underline text-inherit;
+  }
+
+  .navbar-icon {
+    @apply flex items-center justify-center w-9 h-9 rounded-full cursor-pointer relative shrink-0 transition-all duration-200;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-icons.navbar-icons--auth .navbar-icon {
+    @apply w-[42px] h-[42px];
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .navbar-icon:active {
+    @apply scale-95;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-icon svg {
+    @apply text-white text-[19px];
+  }
+
+  .navbar-icons.navbar-icons--auth .navbar-icon svg {
+    @apply text-[22px];
+  }
+
+  .navbar-icons.navbar-icons--auth .navbar-icon .modern-icon {
+    @apply text-[22px] w-[22px] h-[22px];
+  }
+
+  .navbar-icon .notification-badge,
+  .navbar-icon .message-badge {
+    @apply absolute top-0.5 right-0.5 w-4 h-4 bg-[#ff3b30] rounded-full text-[9px] font-bold text-white flex items-center justify-center leading-none;
+    border: 2px solid var(--navbar-bg);
+  }
+
+  /* FLUID CURVED MOBILE BOTTOM NAVIGATION DOCK */
+  .bottom-nav {
+    @apply fixed;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    @apply left-4 right-4 h-[62px] bg-white rounded-3xl flex items-center z-[2000] overflow-visible box-border backdrop-blur-md;
+    border: 1.5px solid #cbd5e1;
+    box-shadow: 0 10px 25px -4px rgba(10, 56, 113, 0.16), 0 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .bottom-nav-cradle {
+    @apply absolute -top-[22px] w-[76px] h-[54px] -translate-x-1/2 pointer-events-none z-10;
+    transition: left 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .bottom-nav-cradle-svg {
+    @apply absolute top-[20.5px] left-0 w-[76px] h-[33px];
+  }
+
+  .bottom-nav-bubble {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-[52px] h-[52px] rounded-full flex items-center justify-center text-white cursor-pointer pointer-events-auto;
+    background: linear-gradient(135deg, #0a3871 0%, #1557a6 100%);
+    border: 3.5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(10, 56, 113, 0.38);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  }
+
+  .bottom-nav-bubble:active {
+    @apply -translate-x-1/2 scale-90;
+  }
+
+  .bottom-nav-bubble-icon {
+    @apply text-[26px] text-white;
+  }
+
+  .bottom-nav-bubble-icon--add {
+    @apply text-[30px];
+  }
+
+  .bottom-nav-item {
+    @apply flex-1 h-full flex flex-col items-center justify-center gap-[3px] text-[#0a3871] bg-transparent border-0 p-0 relative cursor-pointer select-none z-[5];
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: color 0.25s ease;
+  }
+
+  .bottom-nav-item-icon {
+    @apply text-[23px] text-[#0a3871];
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+  }
+
+  .bottom-nav-item-icon--add {
+    @apply text-[25px];
+  }
+
+  .bottom-nav-item-label {
+    @apply text-[11.5px] font-bold text-[#0a3871] tracking-[-0.2px] leading-none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .bottom-nav-item.active .bottom-nav-item-icon {
+    @apply opacity-0 -translate-y-2 scale-50;
+  }
+
+  .bottom-nav-item.active .bottom-nav-item-label {
+    @apply opacity-0 translate-y-1;
+  }
+
+  .bottom-nav-item:focus,
+  .bottom-nav-item:focus-visible,
+  .bottom-nav-bubble:focus,
+  .bottom-nav-bubble:focus-visible {
+    outline: none !important;
+  }
+}
+
+/* =================================================================== */
+/* TABLET & SMALL LAPTOP STYLES (769px - 1180px) */
+/* =================================================================== */
+@media (min-width: 769px) and (max-width: 1180px) {
+  .navbar {
+    height: var(--navbar-height-desktop);
+    padding: 0 12px;
+    overflow-x: hidden;
+  }
+
+  .navbar-logoContainer {
+    @apply absolute top-1/2 -translate-y-1/2;
+    left: 12px;
+    width: 160px;
+  }
+
+  .navbar-logo {
+    width: 160px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .navbar-menu {
+    @apply flex items-center justify-between;
+    margin-left: 175px;
+    width: calc(100% - 175px);
+    gap: 8px;
+    padding: 0;
+  }
+
+  .navbar-menu .navbar-search-form {
+    margin-left: 8px;
+    flex: 1;
+    min-width: 0;
+    max-width: 280px;
+  }
+
+  .navbar-search-box {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 280px !important;
+  }
+
+  .navbar-right {
+    @apply flex items-center shrink-0;
+    margin-left: auto;
+    gap: 8px;
+    padding-right: 0;
+  }
+
+  .user-menu {
+    @apply flex items-center shrink-0;
+    gap: 8px;
+    margin-left: auto;
+    padding-right: 0;
+  }
+
+  .navbar .ilan-ver-btnn {
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .navbar-auth-links {
+    gap: 6px;
+  }
+
+  .navbar-auth-links a {
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+/* =================================================================== */
+/* DESKTOP STYLES (1181px+) */
+/* =================================================================== */
+@media (min-width: 1181px) {
+  .navbar {
+    @apply px-5;
+    height: var(--navbar-height-desktop);
+  }
+
+  .navbar-right {
+    @apply ml-auto flex items-center gap-5 pr-5;
+  }
+
+  .user-menu {
+    @apply flex items-center gap-5 ml-auto pr-5;
+  }
+
+  .navbar-logoContainer {
+    @apply absolute left-[30px] top-1/2 -translate-y-1/2;
+    width: var(--logo-width-desktop);
+  }
+
+  .navbar-menu {
+    @apply flex px-0 ml-[260px];
+  }
+  
+  .navbar-menu .navbar-search-form {
+    @apply ml-10;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-container:has(.main-content .sidebar.sidebar-fullpage.sidebar--service) .navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}

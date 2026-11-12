@@ -1,0 +1,219 @@
+/* ===================================================================
+   NotifyDropdown.css — Tailwind CSS (@apply Mimarisi)
+   - Standart Nötr Tipografi (text-slate-900, text-slate-500)
+   - TSX Dosyasına Gömmeden CSS İçinde Tailwind Utility (@apply)
+   - Mobilde Ekrana Ortalanmış ve Taşmayan Konum
+   - Listenin En Altında Sade, Altı Çizgili "Tümünü Gör" Linki
+   =================================================================== */
+
+.notify-dropdown-backdrop {
+  @apply hidden;
+}
+
+.notify-dropdown-container {
+  @apply absolute top-12 right-0 w-[360px] bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden box-border z-[2000];
+  animation: notifyDropdownSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes notifyDropdownSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 1. Üst Başlık Barı */
+.notify-dropdown-header {
+  @apply p-3 bg-brand-deep text-white flex items-center justify-between border-b border-white/10 gap-2;
+}
+
+.notify-dropdown-title {
+  @apply flex items-center gap-2;
+}
+
+.notify-bell-icon {
+  @apply text-brand-accent text-sm;
+}
+
+.notify-dropdown-title h3 {
+  @apply m-0 text-sm font-bold text-white tracking-tight;
+}
+
+.notify-unread-badge {
+  @apply inline-flex items-center px-1.5 py-0.5 bg-brand-accent text-white text-[11px] font-bold rounded-full;
+}
+
+.notify-dropdown-actions {
+  @apply flex items-center gap-2;
+}
+
+.notify-dropdown-mark-all-read {
+  @apply inline-flex items-center gap-1 border border-white/25 bg-white/10 hover:bg-white/20 text-white px-2 py-1 rounded-md text-[11px] font-semibold cursor-pointer transition-colors whitespace-nowrap;
+}
+
+/* 2. Bildirimler Listesi */
+.notify-dropdown-list {
+  @apply max-h-[380px] overflow-y-auto bg-white;
+  scrollbar-width: thin;
+}
+
+.notify-dropdown-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.notify-dropdown-list::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded;
+}
+
+/* Liste Öğesi */
+.notify-dropdown-item {
+  @apply flex items-start gap-3 p-3 border-b border-slate-100 hover:bg-slate-50 transition-colors text-slate-800 no-underline cursor-pointer relative box-border border-l-[3px] border-l-transparent;
+}
+
+.notify-dropdown-item:last-child {
+  @apply border-b-0;
+}
+
+.notify-dropdown-item.unread {
+  @apply bg-slate-50/70 border-l-brand-accent;
+}
+
+.notify-dropdown-item.unread:hover {
+  @apply bg-slate-100/80;
+}
+
+.notify-dropdown-item__icon {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5 border transition-transform duration-150;
+}
+
+.notify-dropdown-item:hover .notify-dropdown-item__icon {
+  @apply scale-105;
+}
+
+/* Merkezi Kontrol Bildirim Rozet Stilleri */
+.notify-icon--message {
+  @apply bg-blue-50 border-blue-100 text-[#003466];
+}
+
+.notify-icon--success {
+  @apply bg-emerald-50 border-emerald-100 text-emerald-600;
+}
+
+.notify-icon--favorite {
+  @apply bg-rose-50 border-rose-100 text-rose-600;
+}
+
+.notify-icon--appointment,
+.notify-icon--price {
+  @apply bg-orange-50 border-orange-100 text-orange-600;
+}
+
+.notify-icon--review,
+.notify-icon--warning {
+  @apply bg-amber-50 border-amber-100 text-amber-600;
+}
+
+.notify-icon--danger {
+  @apply bg-rose-50 border-rose-100 text-rose-600;
+}
+
+.notify-icon--default {
+  @apply bg-slate-100 border-slate-200 text-slate-700;
+}
+
+/* Dış Stillerden (Navbar.css vb.) SVG Yalıtımı */
+.notify-dropdown-container svg {
+  width: auto !important;
+  height: auto !important;
+  color: inherit !important;
+  fill: currentColor !important;
+  display: inline-block !important;
+}
+
+.notify-dropdown-item__icon svg {
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+.notify-dropdown-header svg {
+  width: 14px !important;
+  height: 14px !important;
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+.notify-dropdown-item__content {
+  @apply flex-1 min-w-0 flex flex-col gap-0.5;
+}
+
+.notify-dropdown-item__title {
+  @apply text-xs font-medium text-slate-700 truncate leading-snug;
+}
+
+.notify-dropdown-item.unread .notify-dropdown-item__title {
+  @apply font-bold text-slate-900;
+}
+
+.notify-dropdown-item__message {
+  @apply text-[11.5px] text-slate-500 line-clamp-2 leading-relaxed mt-0.5;
+}
+
+.notify-dropdown-item__date {
+  @apply text-[10.5px] text-slate-400 font-medium mt-1;
+}
+
+/* Boş Durum */
+.notify-dropdown-empty {
+  @apply p-8 text-center text-slate-500 text-xs;
+}
+
+.notify-dropdown-empty p {
+  @apply m-0 font-medium;
+}
+
+/* 3. Listenin En Altında Sade, Altı Çizgili "Tümünü Gör" Linki */
+.notify-dropdown-inline-footer {
+  @apply p-2.5 text-center bg-transparent border-t border-slate-100;
+}
+
+.notify-dropdown-subtle-link {
+  @apply inline-block text-slate-500 hover:text-slate-900 text-xs font-medium underline underline-offset-4 decoration-slate-300 hover:decoration-slate-900 opacity-85 hover:opacity-100 transition-all cursor-pointer;
+}
+
+/* 4. Mobil ve Tablet Uyumluluk (≤ 1024px) */
+@media (max-width: 1024px) {
+  .notify-dropdown-backdrop {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(15, 23, 42, 0.45) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 99998 !important;
+  }
+
+  .notify-dropdown-container {
+    position: fixed !important;
+    top: 68px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: calc(100vw - 24px) !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    z-index: 99999 !important;
+    box-shadow: 0 20px 45px -5px rgba(15, 23, 42, 0.35) !important;
+    border-radius: 14px !important;
+  }
+
+  .notify-dropdown-list {
+    max-height: 65vh !important;
+  }
+}

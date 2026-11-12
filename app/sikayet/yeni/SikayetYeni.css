@@ -1,0 +1,110 @@
+.favori-yukleniyor {
+  @apply flex items-center justify-center;
+  gap: 10px;
+  padding: 28px 0;
+  color: #003466;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.favori-listesi {
+  @apply flex flex-col overflow-y-auto;
+  gap: 10px;
+  max-height: 440px;
+  padding-right: 4px;
+}
+
+.favori-item {
+  @apply flex items-center cursor-pointer text-left w-full;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.favori-item:hover {
+  border-color: #003466;
+  background: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px -6px rgba(0, 52, 102, 0.1);
+}
+
+.favori-item:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.favori-item-gorsel {
+  @apply flex items-center justify-center overflow-hidden flex-shrink-0;
+  width: 52px;
+  height: 52px;
+  border-radius: 11px;
+  background: rgba(0, 52, 102, 0.06);
+  color: #003466;
+}
+
+.favori-item-gorsel img {
+
+  @apply w-full h-full object-cover;
+}
+
+.favori-item-metin {
+  @apply flex-1 flex flex-col;
+  gap: 3px;
+  min-width: 0;
+}
+
+.favori-item-baslik {
+  @apply overflow-hidden;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.favori-item-fiyat {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ea580c;
+}
+
+.favori-item-ok {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.favori-item:hover .favori-item-ok {
+  color: #003466;
+}
+
+.favori-bos {
+  @apply text-center;
+  padding: 36px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+}
+
+.favori-bos-ikon {
+  font-size: 2.2rem;
+  color: #003466;
+  opacity: 0.65;
+  margin-bottom: 14px;
+}
+
+.favori-bos p {
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+}
+
+.favori-anasayfa-btn {
+
+  @apply mx-auto;
+}

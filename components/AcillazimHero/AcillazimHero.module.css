@@ -1,0 +1,286 @@
+.banner {
+  @apply w-full mx-auto overflow-hidden;
+  --orange: #fa6b18;
+  --ink: #0a173b;
+  display: grid;
+  grid-template-columns: 45% minmax(0, 1fr);
+  max-width: 1250px;
+  min-height: 374px;
+  border: 1px solid #eef0f5;
+  border-radius: 25px;
+  background: linear-gradient(125deg, #ffffff 65%, #fff9f5 100%);
+  box-shadow: 0 14px 38px rgba(18, 35, 70, 0.065);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.photo {
+  @apply relative overflow-hidden;
+  isolation: isolate;
+  min-height: 374px;
+  background: #ebe5db;
+}
+
+.photoImage {
+  @apply object-cover;
+  object-position: 49% 48%;
+}
+
+/* Beyaz, organik geçiş; fotoğrafın üzerinde yazı veya buton bulunmaz. */
+.photo::after {
+  @apply absolute;
+  content: "";
+  z-index: 1;
+  right: -60px;
+  top: -8%;
+  width: 110px;
+  height: 118%;
+  border-left: 5px solid #ff9e55;
+  border-radius: 50% 0 0 50% / 50% 0 0 50%;
+  background: #fff;
+}
+
+.content {
+  @apply relative flex flex-col justify-center;
+  padding: 38px 40px 26px 30px;
+  min-width: 0;
+}
+
+.deco {
+  @apply absolute rounded-full pointer-events-none;
+  right: -35px;
+  top: -46px;
+  width: 144px;
+  height: 114px;
+  transform: rotate(-22deg);
+  border: 26px solid rgba(255, 137, 54, 0.12);
+}
+
+.heading {
+  @apply relative;
+  z-index: 1;
+  margin: 0 0 15px;
+  font-size: clamp(23px, 2.6vw, 38px);
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.heading span {
+  color: #f46b1b;
+}
+
+.description {
+  @apply m-0;
+  max-width: 470px;
+  font-size: clamp(13px, 1.24vw, 16px);
+  line-height: 1.58;
+  color: #5d6473;
+}
+
+.actions {
+  @apply flex items-stretch flex-wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primaryButton,
+.secondaryButton {
+  @apply inline-flex justify-center items-center no-underline;
+  gap: 11px;
+  min-height: 50px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 750;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.primaryButton {
+  background: linear-gradient(140deg, #ff7b22, #f85d11);
+  color: #fff;
+  box-shadow: 0 10px 21px rgba(253, 105, 26, 0.21);
+}
+
+.secondaryButton {
+  border: 1px solid #d9dce4;
+  background: #fff;
+  color: var(--ink);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.primaryButton:hover {
+  box-shadow: 0 12px 24px rgba(253, 105, 26, 0.32);
+}
+
+.secondaryButton:hover {
+  background: #fff4eb;
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 3px solid #235fe0;
+  outline-offset: 3px;
+}
+
+.buttonIcon {
+  @apply flex-shrink-0;
+  width: 19px;
+  height: 19px;
+}
+
+.arrowIcon {
+  @apply flex-shrink-0;
+  width: 16px;
+  height: 16px;
+}
+
+.benefits {
+  @apply p-0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  align-items: start;
+  list-style: none;
+  margin: 32px 0 0;
+}
+
+.benefit {
+  @apply flex flex-col items-center text-center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
+  min-width: 0;
+}
+
+.benefit + .benefit {
+  border-left: 1px solid #e6e6eb;
+}
+
+.benefitIcon {
+  @apply flex justify-center items-center rounded-full;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  background: #fff0e6;
+  color: var(--orange);
+}
+
+.benefitIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    padding: 30px 23px 22px 17px;
+  }
+  .heading {
+    font-size: clamp(22px, 2.8vw, 29px);
+  }
+  .actions {
+    margin-top: 17px;
+    gap: 9px;
+  }
+  .primaryButton,
+  .secondaryButton {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .benefits {
+    margin-top: 23px;
+    gap: 5px;
+  }
+  .benefit {
+    font-size: 11px;
+  }
+  .benefitIcon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+  .benefitIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    @apply flex flex-col;
+    border-radius: 19px;
+  }
+  .photo {
+    min-height: 210px;
+    height: 210px;
+  }
+  .photoImage {
+    object-position: 50% 42%;
+  }
+  .photo::after {
+
+    @apply hidden;
+  }
+  .content {
+    padding: 24px 21px 25px;
+  }
+  .heading {
+    font-size: clamp(24px, 6.4vw, 33px);
+  }
+  .heading br {
+
+    @apply hidden;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .actions {
+    margin-top: 19px;
+  }
+  .benefits {
+    margin-top: 27px;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 390px) {
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .primaryButton,
+  .secondaryButton {
+    padding: 10px 8px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .arrowIcon {
+
+    @apply hidden;
+  }
+  .benefit {
+    font-size: 10px;
+  }
+  .benefitIcon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
+  }
+}

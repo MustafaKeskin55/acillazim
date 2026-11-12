@@ -1,0 +1,14 @@
+.next
+node_modules
+.git
+.gitignore
+.agents
+.claude
+*.log
+*.txt
+*.jsonl
+.DS_Store
+Thumbs.db
+*.jpeg
+*.png
+

@@ -1,0 +1,213 @@
+/* ===================================================================
+   Footer.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+:root {
+  --primary-color: #003466;
+  --primary-light: #004080;
+  --primary-gradient: linear-gradient(135deg, #003466, #004080);
+  --secondary-color: #ff8c00;
+  --secondary-light: #ffa640;
+  --secondary-gradient: linear-gradient(135deg, #ff8c00, #ffa640);
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --background-light: #f8f9fa;
+}
+
+/* Footer Styles */
+.footer {
+  @apply relative overflow-hidden mt-auto shrink-0;
+  background: var(--primary-gradient);
+  padding: 50px 0 20px;
+  color: var(--text-light);
+}
+
+.footer-no-margin {
+  margin-top: 0 !important;
+}
+
+.footer-content {
+  @apply mx-auto px-5 max-w-[1200px];
+}
+
+.footer-sections {
+  @apply flex justify-between flex-wrap gap-5 mb-10;
+}
+
+.footer-section {
+  @apply flex-1 min-w-[200px] px-[15px];
+}
+
+.footer-section h3 {
+  @apply text-[16px] mb-5 font-semibold relative pb-2.5 whitespace-nowrap;
+  color: var(--secondary-color);
+}
+
+.footer-section h3::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-[50px] h-[3px] rounded-sm transition-all duration-300;
+  background: var(--secondary-gradient);
+}
+
+.footer-section:hover h3::after {
+  @apply w-[100px];
+}
+
+.footer-section ul {
+  @apply list-none p-0 m-0;
+}
+
+.footer-section ul li {
+  @apply mb-3 transition-transform duration-300;
+}
+
+.footer-section ul li:hover {
+  @apply translate-x-2.5;
+}
+
+.footer-section ul li a {
+  @apply no-underline text-[14px] opacity-90 transition-all duration-300 flex items-center gap-2;
+  color: var(--text-light);
+}
+
+.footer-section ul li a i,
+.footer-section ul li a svg {
+  @apply text-[12px] opacity-80;
+}
+
+.footer-section ul li a:hover {
+  @apply opacity-100;
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+.footer-section ul li a:hover i,
+.footer-section ul li a:hover svg {
+  @apply opacity-100;
+}
+
+.footer-section h3 i,
+.footer-section h3 svg {
+  @apply mr-2;
+}
+
+.social-links {
+  @apply flex gap-[15px] mb-[25px] flex-wrap;
+}
+
+.social-links a {
+  @apply text-[18px] w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 relative;
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a svg {
+  @apply relative z-[1] text-[16px];
+}
+
+.social-links a::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full opacity-0;
+}
+
+.social-links a:hover {
+  @apply -translate-y-1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-links a[aria-label="Facebook"]:hover  { @apply bg-[#1877F2]; box-shadow: 0 5px 15px rgba(24, 119, 242, 0.5); }
+.social-links a[aria-label="X"]:hover         { @apply bg-[#000000]; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+.social-links a[aria-label="Instagram"]:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); box-shadow: 0 5px 15px rgba(214, 36, 159, 0.5); }
+.social-links a[aria-label="LinkedIn"]:hover  { @apply bg-[#0A66C2]; box-shadow: 0 5px 15px rgba(10, 102, 194, 0.5); }
+.social-links a[aria-label="YouTube"]:hover   { @apply bg-[#FF0000]; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); }
+
+.social-links a i {
+  @apply relative z-[1];
+}
+
+.mobile-apps {
+  @apply flex gap-2.5 flex-wrap;
+}
+
+.mobile-apps img {
+  @apply h-[35px] transition-all duration-300;
+  filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.mobile-apps img:hover {
+  @apply -translate-y-1 scale-105;
+  filter: brightness(1.2) drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3));
+}
+
+.footer-bottom {
+  @apply mt-[30px] py-5 px-0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-info {
+  @apply text-center mb-[15px];
+}
+
+.footer-disclaimer {
+  @apply mx-auto px-5 text-[12px] leading-relaxed text-center max-w-[1200px];
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =================================================================== */
+/* Responsive Design */
+/* =================================================================== */
+
+@media (max-width: 1200px) {
+  .footer-sections {
+    @apply justify-start;
+  }
+  .footer-section {
+    flex: 0 1 calc(20% - 20px);
+  }
+}
+
+@media (max-width: 1110px) {
+  .footer-content {
+    @apply max-w-[1000px];
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-section {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    flex: 0 1 100%;
+  }
+  .footer-section h3 {
+    @apply text-center;
+  }
+  .footer-section h3::after {
+    @apply left-1/2 -translate-x-1/2;
+  }
+  .footer-section ul li a {
+    @apply justify-center;
+  }
+  .social-links {
+    @apply justify-center;
+  }
+  .mobile-apps {
+    @apply justify-center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer.footer {
+    display: none !important;
+  }
+}

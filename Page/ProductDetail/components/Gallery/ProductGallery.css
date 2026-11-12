@@ -1,0 +1,505 @@
+/* ProductGallery.css - Converted to Tailwind @apply */
+.product-gallery-standalone-wrapper {
+  @apply w-full overflow-hidden;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.product-detail-product-gallery {
+  @apply relative flex flex-col bg-white overflow-hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.product-detail-gallery-main-image-container {
+  @apply relative flex items-center bg-white p-0;
+}
+
+.product-detail-gallery-main-image {
+  @apply relative flex justify-center items-center w-full overflow-hidden cursor-pointer;
+  height: 400px;
+  border-radius: 0;
+}
+
+.product-detail-gallery-main-preview-image {
+  @apply w-full h-full object-cover;
+  transition: transform 0.3s ease;
+}
+
+.product-detail-gallery-main-image:hover .product-detail-gallery-main-preview-image {
+  transform: scale(1.02);
+}
+
+/* Büyüt butonu */
+.expand-button {
+  @apply absolute rounded-full flex justify-center items-center cursor-pointer border-0;
+  bottom: 12px;
+  left: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  color: #333;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.product-detail-gallery-main-image:hover .expand-button {
+  opacity: 1;
+}
+
+.expand-button:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* İlan türü etiketi konumu */
+.product-detail-gallery-badges {
+  @apply absolute flex;
+  top: 15px;
+  left: 15px;
+  gap: 10px;
+  z-index: 5;
+}
+
+.product-detail-gallery-main-image-container .navigation-button {
+  @apply absolute rounded-full flex justify-center items-center cursor-pointer border-0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  color: #333;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-gallery-main-image-container .navigation-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  color: #4299e1;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.product-detail-gallery-main-image-container .navigation-button:focus {
+  @apply outline-none;
+}
+
+.product-detail-gallery-main-image-container .navigation-button.prev {
+  left: 12px;
+}
+
+.product-detail-gallery-main-image-container .navigation-button.next {
+  right: 12px;
+}
+
+.product-detail-gallery-image-counter {
+  @apply absolute text-white;
+  bottom: 12px;
+  right: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.product-detail-gallery-main-image .listing-badge-container {
+  @apply absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+
+/* Modern Lightbox Styles */
+.modern-lightbox-overlay {
+  @apply fixed top-0 left-0 w-full flex items-center justify-center overflow-hidden box-border;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(5px);
+  z-index: 99999;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.modern-lightbox-container {
+  @apply relative flex flex-col overflow-hidden;
+  max-width: 1200px;
+  width: 90%;
+  max-height: 90vh;
+  background-color: rgba(25, 25, 30, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modern-lightbox-header {
+  @apply flex justify-between items-center;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modern-lightbox-counter {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modern-lightbox-close {
+  @apply flex items-center justify-center cursor-pointer rounded-full border-0;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+}
+
+.modern-lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.modern-lightbox-content {
+  @apply relative flex items-center justify-center overflow-hidden;
+  height: calc(80vh - 120px);
+}
+
+.lightbox-image-container {
+  @apply flex items-center justify-center w-full h-full;
+  opacity: 0;
+  animation: fadeImage 0.3s ease forwards;
+}
+
+@keyframes fadeImage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.product-detail-gallery-lightbox-image {
+  @apply max-w-full max-h-full object-contain;
+  border-radius: 4px;
+}
+
+.modern-lightbox-nav-button {
+  @apply absolute flex justify-center items-center cursor-pointer rounded-full text-white border-0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.modern-lightbox-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modern-lightbox-nav-button.prev {
+  left: 20px;
+}
+
+.modern-lightbox-nav-button.next {
+  right: 20px;
+}
+
+.modern-lightbox-thumbnails {
+  @apply flex overflow-x-auto;
+  padding: 15px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.modern-lightbox-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.modern-lightbox-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-lightbox-thumbnails::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.modern-lightbox-thumbnail {
+  @apply overflow-hidden cursor-pointer;
+  flex: 0 0 80px;
+  height: 60px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.modern-lightbox-thumbnail:hover {
+  opacity: 0.9;
+}
+
+.modern-lightbox-thumbnail.active {
+  opacity: 1;
+  border-color: #3182ce;
+}
+
+.modern-lightbox-thumbnail img {
+  @apply w-full h-full object-cover;
+}
+
+.video-thumbnail-indicator {
+  @apply relative w-full h-full;
+}
+
+.video-thumbnail-indicator img {
+  @apply w-full h-full object-cover;
+}
+
+.video-thumbnail-indicator .thumbnail-play-icon {
+  @apply absolute flex items-center justify-center rounded-full text-white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+}
+
+/* Küçük resimler */
+.product-detail-gallery-thumbnails {
+  @apply flex overflow-x-auto;
+  padding: 10px;
+  gap: 10px;
+  scrollbar-width: thin;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.product-detail-gallery-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-detail-gallery-thumbnails::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.product-detail-gallery-thumbnails::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 3px;
+}
+
+.product-detail-gallery-thumbnails::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.product-detail-gallery-thumbnail {
+  @apply relative overflow-hidden cursor-pointer;
+  flex: 0 0 80px;
+  height: 60px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.product-detail-gallery-thumbnail img {
+  @apply w-full h-full object-cover;
+}
+
+.product-detail-gallery-thumbnail:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.product-detail-gallery-thumbnail.active {
+  border-color: #3182ce;
+  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
+}
+
+.product-detail-gallery-main-image.video-content {
+  @apply cursor-default;
+}
+
+.product-detail-gallery-video-container {
+  @apply relative flex items-center justify-center w-full h-full;
+}
+
+.product-detail-gallery-video {
+  @apply w-full h-full object-cover;
+}
+
+.product-detail-gallery-video-container iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.product-detail-gallery-video-controls {
+  @apply absolute bottom-0 left-0 w-full;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 3;
+}
+
+.product-detail-gallery-video-control {
+  @apply flex items-center justify-center cursor-pointer rounded-full border-0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease;
+}
+
+.product-detail-gallery-video-control:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.media-type-indicator {
+  @apply absolute rounded-full flex items-center justify-center text-white;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.media-type-indicator.video {
+  background-color: rgba(229, 62, 62, 0.8);
+}
+
+.product-detail-gallery-thumbnail.video-thumbnail {
+  @apply relative;
+}
+
+.thumbnail-play-icon {
+  @apply absolute flex items-center justify-center rounded-full text-white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-detail-gallery-main-image {
+    height: 300px;
+  }
+  
+  .modern-lightbox-container {
+    width: 95%;
+  }
+  
+  .modern-lightbox-content {
+    height: calc(70vh - 120px);
+  }
+  
+  .modern-lightbox-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .modern-lightbox-nav-button.prev {
+    left: 10px;
+  }
+  
+  .modern-lightbox-nav-button.next {
+    right: 10px;
+  }
+  
+  .modern-lightbox-thumbnail {
+    flex: 0 0 60px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-detail-gallery-main-image {
+    height: 250px;
+  }
+  
+  .expand-button {
+    width: 32px;
+    height: 32px;
+    bottom: 8px;
+    left: 8px;
+  }
+  
+  .navigation-button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .modern-lightbox-content {
+    height: calc(60vh - 100px);
+  }
+  
+  .modern-lightbox-nav-button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .modern-lightbox-nav-button.prev {
+    left: 5px;
+  }
+  
+  .modern-lightbox-nav-button.next {
+    right: 5px;
+  }
+  
+  .modern-lightbox-thumbnails {
+    padding: 8px;
+  }
+  
+  .modern-lightbox-thumbnail {
+    flex: 0 0 50px;
+    height: 40px;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.slide-left {
+  animation: slideLeft 0.3s ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-40px); }
+}
+
+.slide-right {
+  animation: slideRight 0.3s ease-in-out;
+}
+
+@keyframes slideRight {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(40px); }
+}

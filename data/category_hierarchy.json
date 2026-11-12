@@ -1,0 +1,1562 @@
+{
+  "Ustalar ve Hizmetler": [
+    {
+      "id": 12542,
+      "label": "Elektrikçi"
+    },
+    {
+      "id": 12543,
+      "label": "Su Tesisatçısı"
+    },
+    {
+      "id": 12544,
+      "label": "Doğalgaz Tesisatı"
+    },
+    {
+      "id": 12545,
+      "label": "Kombi Bakım & Onarım"
+    },
+    {
+      "id": 12546,
+      "label": "Klima Montaj & Servis"
+    },
+    {
+      "id": 12547,
+      "label": "Güneş Enerji Sistemleri"
+    },
+    {
+      "id": 12548,
+      "label": "Yangın Alarm Sistemleri"
+    },
+    {
+      "id": 12683,
+      "label": "Petek Temizliği"
+    },
+    {
+      "id": 12684,
+      "label": "Şofben & Termosifon Servisi"
+    },
+    {
+      "id": 12685,
+      "label": "Merkezi Isıtma Sistemleri"
+    },
+    {
+      "id": 12686,
+      "label": "Akıllı Ev Sistemleri"
+    },
+    {
+      "id": 12687,
+      "label": "Güvenlik Kamera ve Alarm Sistemleri"
+    },
+    {
+      "id": 12688,
+      "label": "Görüntülü Diafon Sistemleri"
+    },
+    {
+      "id": 12689,
+      "label": "Uydu & Anten Kurulumu"
+    },
+    {
+      "id": 12690,
+      "label": "Hidrofor & Su Deposu Montajı"
+    },
+    {
+      "id": 12691,
+      "label": "Zayıf Akım Sistemleri"
+    },
+    {
+      "id": 12692,
+      "label": "İnternet"
+    },
+    {
+      "id": 12693,
+      "label": "Ses Sistemleri"
+    },
+    {
+      "id": 12694,
+      "label": "Drenaj ve Yağmur Suyu Tesisatı"
+    },
+    {
+      "id": 12550,
+      "label": "Ev Tadilatı"
+    },
+    {
+      "id": 12551,
+      "label": "Alçıpan & Kartonpiyer"
+    },
+    {
+      "id": 12552,
+      "label": "Boya & Badana"
+    },
+    {
+      "id": 12553,
+      "label": "Fayans & Seramik"
+    },
+    {
+      "id": 12554,
+      "label": "Duvar Örme & Sıva"
+    },
+    {
+      "id": 12555,
+      "label": "Çatı Yapımı & İzolasyon"
+    },
+    {
+      "id": 12556,
+      "label": "Mantolama & Isı Yalıtımı"
+    },
+    {
+      "id": 12557,
+      "label": "Mermer & Granit İşleri"
+    },
+    {
+      "id": 12558,
+      "label": "İnşaat İşçisi / Usta"
+    },
+    {
+      "id": 12695,
+      "label": "Banyo & Mutfak Yenileme"
+    },
+    {
+      "id": 12696,
+      "label": "Zemin Kaplama (Parke)"
+    },
+    {
+      "id": 12697,
+      "label": "Epoksi"
+    },
+    {
+      "id": 12698,
+      "label": "PVC"
+    },
+    {
+      "id": 12699,
+      "label": "Kapı & Pencere Sistemleri (PVC)"
+    },
+    {
+      "id": 12700,
+      "label": "Ahşap"
+    },
+    {
+      "id": 12701,
+      "label": "Alüminyum"
+    },
+    {
+      "id": 12702,
+      "label": "Demir Doğrama & Ferforje"
+    },
+    {
+      "id": 12703,
+      "label": "Beton & Kalıp İşleri"
+    },
+    {
+      "id": 12704,
+      "label": "Cam & Ayna Montajı"
+    },
+    {
+      "id": 12705,
+      "label": "Asma Tavan & Led Sistemleri"
+    },
+    {
+      "id": 12706,
+      "label": "İç Mimarlık & 3D Projelendirme"
+    },
+    {
+      "id": 12707,
+      "label": "İskele Kurulumu"
+    },
+    {
+      "id": 12708,
+      "label": "Kanal Açma & Temel Kazı"
+    },
+    {
+      "id": 12560,
+      "label": "Temizlikçi (gündelik/aylık)"
+    },
+    {
+      "id": 12561,
+      "label": "Koltuk & Halı Yıkama"
+    },
+    {
+      "id": 12562,
+      "label": "Ev Yardımcısı / Bakıcı"
+    },
+    {
+      "id": 12563,
+      "label": "Mobilya Montaj & Tamir"
+    },
+    {
+      "id": 12564,
+      "label": "Camcı"
+    },
+    {
+      "id": 12565,
+      "label": "Marangoz"
+    },
+    {
+      "id": 12566,
+      "label": "Doğrama / Pimapen"
+    },
+    {
+      "id": 12567,
+      "label": "Bahçıvanlık"
+    },
+    {
+      "id": 12709,
+      "label": "Perde ve Stor Montajı"
+    },
+    {
+      "id": 12710,
+      "label": "Parke Döşeme ve Tamiri"
+    },
+    {
+      "id": 12711,
+      "label": "Mobilya Boyama ve Cila"
+    },
+    {
+      "id": 12712,
+      "label": "Ev Elektronik Cihaz Kurulumu (TV / Ankastre)"
+    },
+    {
+      "id": 12713,
+      "label": "Avize Montajı"
+    },
+    {
+      "id": 12715,
+      "label": "Duvar Kağıdı Ustası"
+    },
+    {
+      "id": 12716,
+      "label": "Evcil Hayvan Bakımı & Gezdirme"
+    },
+    {
+      "id": 12717,
+      "label": "Çamaşır & Ütü Hizmeti"
+    },
+    {
+      "id": 12718,
+      "label": "İç Dekorasyon & Stil Danışmanlığı"
+    },
+    {
+      "id": 12719,
+      "label": "Bahçe Düzenleme & Peyzaj"
+    },
+    {
+      "id": 12577,
+      "label": "Oto Tamircisi"
+    },
+    {
+      "id": 12578,
+      "label": "Oto Ekspertiz"
+    },
+    {
+      "id": 12579,
+      "label": "Oto Elektrik"
+    },
+    {
+      "id": 12580,
+      "label": "Oto Yıkama & Detaylı Temizlik"
+    },
+    {
+      "id": 12581,
+      "label": "Oto Kaporta & Boya"
+    },
+    {
+      "id": 12582,
+      "label": "Lastikçi"
+    },
+    {
+      "id": 12583,
+      "label": "Çekici & Yol Yardım"
+    },
+    {
+      "id": 12584,
+      "label": "Cam Filmi / Seramik Kaplama"
+    },
+    {
+      "id": 12731,
+      "label": "Oto Klima Bakım & Tamiri"
+    },
+    {
+      "id": 12732,
+      "label": "Araç İçi Aksesuar Montajı"
+    },
+    {
+      "id": 12733,
+      "label": "Far Temizleme & Parlatma"
+    },
+    {
+      "id": 12734,
+      "label": "Pasta – Cila – Boya Koruma"
+    },
+    {
+      "id": 12735,
+      "label": "Motor Temizliği"
+    },
+    {
+      "id": 12736,
+      "label": "Jant Düzeltme & Boyama"
+    },
+    {
+      "id": 12737,
+      "label": "Araç Folyo Kaplama"
+    },
+    {
+      "id": 12738,
+      "label": "Kaput Koruma (PPF / Şeffaf Film)"
+    },
+    {
+      "id": 12739,
+      "label": "Şase Düzeltme & Rot Ayarı"
+    },
+    {
+      "id": 12586,
+      "label": "Ev Temizliği"
+    },
+    {
+      "id": 12587,
+      "label": "İnşaat Sonrası Temizlik"
+    },
+    {
+      "id": 12588,
+      "label": "Ofis / Dükkan Temizliği"
+    },
+    {
+      "id": 12589,
+      "label": "Dış Cephe Cam Temizliği"
+    },
+    {
+      "id": 12590,
+      "label": "Apartman Temizliği"
+    },
+    {
+      "id": 12591,
+      "label": "Haşere & Böcek İlaçlama"
+    },
+    {
+      "id": 12592,
+      "label": "Halı & Koltuk Temizliği"
+    },
+    {
+      "id": 12740,
+      "label": "Boş Ev Temizliği"
+    },
+    {
+      "id": 12741,
+      "label": "Villa & Lüks Konut Temizliği"
+    },
+    {
+      "id": 12742,
+      "label": "Endüstriyel Temizlik (Fabrika / Depo / Hangar)"
+    },
+    {
+      "id": 12745,
+      "label": "Su Baskını / Sel Sonrası Temizlik"
+    },
+    {
+      "id": 12746,
+      "label": "Yangın & Duman Sonrası Temizlik"
+    },
+    {
+      "id": 12747,
+      "label": "Dezenfekte & Hijyen Temizliği"
+    },
+    {
+      "id": 12594,
+      "label": "Demirci"
+    },
+    {
+      "id": 12595,
+      "label": "Kaynakçı"
+    },
+    {
+      "id": 12596,
+      "label": "Kalıpçı"
+    },
+    {
+      "id": 12597,
+      "label": "Sıvacı"
+    },
+    {
+      "id": 12598,
+      "label": "Boyacı"
+    },
+    {
+      "id": 12599,
+      "label": "Elektrikçi"
+    },
+    {
+      "id": 12600,
+      "label": "İnşaat İşçisi (Yevmiyeli)"
+    },
+    {
+      "id": 12601,
+      "label": "Vinç Operatörü"
+    },
+    {
+      "id": 12748,
+      "label": "Asansör Montaj & Bakım Ustası"
+    },
+    {
+      "id": 12749,
+      "label": "İskele Kurulum Ustası"
+    },
+    {
+      "id": 12750,
+      "label": "Çatı Ustası"
+    },
+    {
+      "id": 12751,
+      "label": "Şap Ustası"
+    },
+    {
+      "id": 12752,
+      "label": "Mermer Ustası"
+    },
+    {
+      "id": 12753,
+      "label": "Kanal Açma & Altyapı Ustası"
+    },
+    {
+      "id": 12754,
+      "label": "Tadilatçı (Çoklu Uzmanlık)"
+    },
+    {
+      "id": 12603,
+      "label": "Hemşire / Hasta Bakıcı"
+    },
+    {
+      "id": 12604,
+      "label": "Masaj & Terapi"
+    },
+    {
+      "id": 12605,
+      "label": "Güzellik Uzmanı"
+    },
+    {
+      "id": 12606,
+      "label": "Saç Kesim & Kuaförlük"
+    },
+    {
+      "id": 12607,
+      "label": "Estetisyen"
+    },
+    {
+      "id": 12608,
+      "label": "Diyetisyen & Beslenme"
+    },
+    {
+      "id": 12609,
+      "label": "Spor Eğitmeni / Fitness"
+    },
+    {
+      "id": 12755,
+      "label": "Cilt Bakımı & Medikal Cilt Hizmetleri"
+    },
+    {
+      "id": 12756,
+      "label": "Protez Tırnak & Tırnak Bakımı"
+    },
+    {
+      "id": 12757,
+      "label": "Lazer Epilasyon & Ağda Hizmetleri"
+    },
+    {
+      "id": 12758,
+      "label": "Psikolog & Danışmanlık"
+    },
+    {
+      "id": 12759,
+      "label": "Fizyoterapist & Rehabilitasyon Hizmetleri"
+    },
+    {
+      "id": 12760,
+      "label": "Doğum Koçu & Emzirme Danışmanı"
+    },
+    {
+      "id": 12761,
+      "label": "Alternatif Tıp & Bitkisel Terapi"
+    },
+    {
+      "id": 12762,
+      "label": "Yaşam Koçu & Motivasyon Danışmanı"
+    },
+    {
+      "id": 12763,
+      "label": "Bebek Bakıcısı"
+    },
+    {
+      "id": 12764,
+      "label": "Oyun Ablası"
+    },
+    {
+      "id": 12765,
+      "label": "Yaşlı Bakıcısı"
+    },
+    {
+      "id": 12766,
+      "label": "Hasta Refakatçisi"
+    },
+    {
+      "id": 12767,
+      "label": "Özel Eğitimli Çocuk Bakımı"
+    },
+    {
+      "id": 12768,
+      "label": "Engelli Birey Bakımı"
+    },
+    {
+      "id": 12769,
+      "label": "Yatılı Bakıcı"
+    },
+    {
+      "id": 12770,
+      "label": "Gündüzlü Bakıcı"
+    },
+    {
+      "id": 12616,
+      "label": "Emlak Danışmanı"
+    },
+    {
+      "id": 12617,
+      "label": "Ev Kiralama / Satış Danışmanlığı"
+    },
+    {
+      "id": 12618,
+      "label": "Kat Mülkiyet İşlemleri"
+    },
+    {
+      "id": 12619,
+      "label": "Tapu & Ruhsat Danışmanlığı"
+    },
+    {
+      "id": 12771,
+      "label": "Arsa & Arazi Danışmanlığı"
+    },
+    {
+      "id": 12772,
+      "label": "Kentsel Dönüşüm Danışmanlığı"
+    },
+    {
+      "id": 12773,
+      "label": "Emlak Değerleme Uzmanlığı"
+    },
+    {
+      "id": 12774,
+      "label": "Yabancılara Emlak Satışı & Oturum Danışmanlığı"
+    },
+    {
+      "id": 12775,
+      "label": "Kira Takibi & Tahsilat Yönetimi"
+    },
+    {
+      "id": 12776,
+      "label": "Kiralık İş Yeri / Dükkan Danışmanlığı"
+    },
+    {
+      "id": 12777,
+      "label": "Site & Apartman Yönetimi Hizmetleri"
+    },
+    {
+      "id": 12621,
+      "label": "Özel Ders (Matematik, Fizik, Kimya, Türkçe)"
+    },
+    {
+      "id": 12622,
+      "label": "Online Ders"
+    },
+    {
+      "id": 12623,
+      "label": "Sürücü Kursu Eğitmeni"
+    },
+    {
+      "id": 12624,
+      "label": "Yabancı Dil Eğitmeni"
+    },
+    {
+      "id": 12625,
+      "label": "Müzik Dersi (Gitar, Piyano, Bağlama vb.)"
+    },
+    {
+      "id": 12626,
+      "label": "Dikiş / El Sanatları Eğitimi"
+    },
+    {
+      "id": 12778,
+      "label": "Okul Öncesi & Oyun Grubu Eğitmeni"
+    },
+    {
+      "id": 12779,
+      "label": "Kodlama & Yazılım Eğitimi"
+    },
+    {
+      "id": 12780,
+      "label": "Üniversiteye Hazırlık Koçluğu"
+    },
+    {
+      "id": 12781,
+      "label": "Öğrenci Koçu & Eğitim Danışmanı"
+    },
+    {
+      "id": 12782,
+      "label": "Fotoğrafçılık & Grafik Tasarım Eğitimi"
+    },
+    {
+      "id": 12783,
+      "label": "Kariyer Planlama & CV Hazırlık Eğitimi"
+    },
+    {
+      "id": 12784,
+      "label": "İşaret Dili Eğitimi"
+    },
+    {
+      "id": 12785,
+      "label": "Kişisel Gelişim & İletişim Eğitimi"
+    },
+    {
+      "id": 12628,
+      "label": "Web Tasarım / Yazılım"
+    },
+    {
+      "id": 12629,
+      "label": "Grafik Tasarım"
+    },
+    {
+      "id": 12630,
+      "label": "Sosyal Medya Yönetimi"
+    },
+    {
+      "id": 12631,
+      "label": "Video Montaj & Animasyon"
+    },
+    {
+      "id": 12632,
+      "label": "Reklam & Dijital Pazarlama"
+    },
+    {
+      "id": 12633,
+      "label": "E-Ticaret Danışmanlığı"
+    },
+    {
+      "id": 12634,
+      "label": "Çeviri Hizmeti"
+    },
+    {
+      "id": 12786,
+      "label": "Mobil Uygulama Geliştirme"
+    },
+    {
+      "id": 12787,
+      "label": "UI/UX Tasarımı"
+    },
+    {
+      "id": 12788,
+      "label": "Veri Analizi & Raporlama Hizmetleri"
+    },
+    {
+      "id": 12789,
+      "label": "Chatbot & Otomasyon Sistemleri"
+    },
+    {
+      "id": 12790,
+      "label": "Online Eğitim İçeriği Hazırlama"
+    },
+    {
+      "id": 12791,
+      "label": "Seslendirme & Dublaj Hizmeti"
+    },
+    {
+      "id": 12794,
+      "label": "Yapay Zeka Destekli Uygulama & Entegrasyon Hizmetleri"
+    },
+    {
+      "id": 12795,
+      "label": "Yazı & İçerik Üretimi"
+    },
+    {
+      "id": 12636,
+      "label": "Düğün Fotoğrafçısı"
+    },
+    {
+      "id": 12637,
+      "label": "Doğum & Yeni Doğan Fotoğrafçılığı"
+    },
+    {
+      "id": 12638,
+      "label": "Ürün Fotoğrafçılığı"
+    },
+    {
+      "id": 12639,
+      "label": "Drone Çekimi"
+    },
+    {
+      "id": 12640,
+      "label": "Klip & Tanıtım Videosu"
+    },
+    {
+      "id": 12796,
+      "label": "Mezuniyet & Okul Fotoğrafçılığı"
+    },
+    {
+      "id": 12797,
+      "label": "Etkinlik & Organizasyon Fotoğrafçılığı"
+    },
+    {
+      "id": 12798,
+      "label": "Mekan & İç Mekan Fotoğrafçılığı"
+    },
+    {
+      "id": 12799,
+      "label": "Moda & Katalog Çekimi"
+    },
+    {
+      "id": 12800,
+      "label": "Kurumsal Profil & CV Fotoğrafçılığı"
+    },
+    {
+      "id": 12801,
+      "label": "Belgesel & Kısa Film Yapımı"
+    },
+    {
+      "id": 12642,
+      "label": "Avukatlık & Hukuki Danışmanlık"
+    },
+    {
+      "id": 12643,
+      "label": "Mali Müşavir & Muhasebe"
+    },
+    {
+      "id": 12644,
+      "label": "Vergi Danışmanlığı"
+    },
+    {
+      "id": 12645,
+      "label": "Şirket Kuruluş Hizmeti"
+    },
+    {
+      "id": 12646,
+      "label": "İnsan Kaynakları & Personel Hazırlama"
+    },
+    {
+      "id": 12802,
+      "label": "Ticari Sözleşme Hazırlama & İnceleme"
+    },
+    {
+      "id": 12803,
+      "label": "Marka & Patent Danışmanlığı"
+    },
+    {
+      "id": 12804,
+      "label": "İcra & Takip Hizmetleri"
+    },
+    {
+      "id": 12805,
+      "label": "KVKK & Veri Güvenliği Danışmanlığı"
+    },
+    {
+      "id": 12806,
+      "label": "Uluslararası Şirket Danışmanlığı"
+    },
+    {
+      "id": 12807,
+      "label": "Ticaret Sicil & Oda İşlemleri"
+    },
+    {
+      "id": 12808,
+      "label": "Yatırım & Teşvik Danışmanlığı"
+    },
+    {
+      "id": 12648,
+      "label": "Kamera Kurulumu"
+    },
+    {
+      "id": 12649,
+      "label": "Alarm Sistemi"
+    },
+    {
+      "id": 12650,
+      "label": "Kapı Otomasyonu"
+    },
+    {
+      "id": 12651,
+      "label": "Site Güvenliği & Özel Güvenlik"
+    },
+    {
+      "id": 12652,
+      "label": "Araç Takip Sistemleri"
+    },
+    {
+      "id": 12809,
+      "label": "Yüz Tanıma & Biyometrik Sistemler"
+    },
+    {
+      "id": 12810,
+      "label": "Turnike & Geçiş Kontrol Sistemleri"
+    },
+    {
+      "id": 12811,
+      "label": "Acil Anons & Yangın İhbar Sistemleri"
+    },
+    {
+      "id": 12812,
+      "label": "Elektrikli Kilit & Kartlı Geçiş Sistemleri"
+    },
+    {
+      "id": 12813,
+      "label": "Ev & Ofis İçin Akıllı Güvenlik Sistemleri"
+    },
+    {
+      "id": 12654,
+      "label": "Beyaz Eşya Tamiri"
+    },
+    {
+      "id": 12655,
+      "label": "Televizyon Tamiri"
+    },
+    {
+      "id": 12656,
+      "label": "Bilgisayar & Laptop Tamiri"
+    },
+    {
+      "id": 12657,
+      "label": "Cep Telefonu Tamiri"
+    },
+    {
+      "id": 12658,
+      "label": "Elektronik Kart Tamiri"
+    },
+    {
+      "id": 12814,
+      "label": "Klima & Kombi Teknik Servisi"
+    },
+    {
+      "id": 12815,
+      "label": "Yazıcı & Tarayıcı Tamiri"
+    },
+    {
+      "id": 12816,
+      "label": "Tablet & Akıllı Saat Tamiri"
+    },
+    {
+      "id": 12817,
+      "label": "Elektrikli Süpürge & Küçük Ev Aletleri Servisi"
+    },
+    {
+      "id": 12818,
+      "label": "Güç Kaynağı & Adaptör Onarımı"
+    },
+    {
+      "id": 12819,
+      "label": "Ankastre Cihaz Montaj & Tamiri"
+    },
+    {
+      "id": 12660,
+      "label": "Düğün Organizasyonu"
+    },
+    {
+      "id": 12661,
+      "label": "Doğum Günü & Parti Organizasyonu"
+    },
+    {
+      "id": 12662,
+      "label": "Palyaço & Animatör"
+    },
+    {
+      "id": 12663,
+      "label": "Ses & Işık Sistemi Kiralama"
+    },
+    {
+      "id": 12664,
+      "label": "Nişan & Kına Organizasyonu"
+    },
+    {
+      "id": 12665,
+      "label": "Catering & Yemek Hizmeti"
+    },
+    {
+      "id": 12820,
+      "label": "Mezuniyet Töreni Organizasyonu"
+    },
+    {
+      "id": 12821,
+      "label": "Açılış & Lansman Organizasyonu"
+    },
+    {
+      "id": 12822,
+      "label": "Festival & Konser Organizasyonu"
+    },
+    {
+      "id": 12823,
+      "label": "Kurumsal Etkinlik & Toplantı Hizmetleri"
+    },
+    {
+      "id": 12824,
+      "label": "Fuar Stand & Tanıtım Organizasyonu"
+    },
+    {
+      "id": 12825,
+      "label": "Araç Süsleme & Gelin Arabası Hizmeti"
+    },
+    {
+      "id": 12667,
+      "label": "Evcil Hayvan Bakımı"
+    },
+    {
+      "id": 12668,
+      "label": "Köpek Eğitimi"
+    },
+    {
+      "id": 12669,
+      "label": "Pet Kuaför & Tıraş"
+    },
+    {
+      "id": 12670,
+      "label": "Veteriner Hizmetleri"
+    },
+    {
+      "id": 12826,
+      "label": "Hayvan Oteli & Geçici Konaklama"
+    },
+    {
+      "id": 12827,
+      "label": "Pet Taksi & Taşıma Hizmeti"
+    },
+    {
+      "id": 12828,
+      "label": "Hayvan Sahiplendirme & Danışmanlık"
+    },
+    {
+      "id": 12829,
+      "label": "Evde Veteriner Hizmeti"
+    },
+    {
+      "id": 12830,
+      "label": "Egzotik Hayvan Bakım Hizmeti"
+    },
+    {
+      "id": 12672,
+      "label": "Özel Rehberlik Hizmeti"
+    },
+    {
+      "id": 12673,
+      "label": "Tur Organizasyonu"
+    },
+    {
+      "id": 12674,
+      "label": "Transfer Hizmeti"
+    },
+    {
+      "id": 12675,
+      "label": "Araçlı Şoför Hizmeti"
+    },
+    {
+      "id": 12831,
+      "label": "Tercümanlık & Çok Dilli Rehberlik"
+    },
+    {
+      "id": 12832,
+      "label": "VIP Tur & Lüks Gezi Hizmeti"
+    },
+    {
+      "id": 12833,
+      "label": "Yurtiçi & Yurtdışı Gezi Planlama"
+    },
+    {
+      "id": 12834,
+      "label": "Karavan & Özel Tur Aracı Kiralama"
+    },
+    {
+      "id": 12835,
+      "label": "Otobüs & Minibüs Kiralama"
+    },
+    {
+      "id": 12836,
+      "label": "Turizm Danışmanlık Hizmeti"
+    },
+    {
+      "id": 12677,
+      "label": "Çilingir"
+    },
+    {
+      "id": 12678,
+      "label": "Anahtar Kopyalama"
+    },
+    {
+      "id": 12679,
+      "label": "Hurdacı"
+    },
+    {
+      "id": 12680,
+      "label": "İkinci El Eşya Alım Satım"
+    },
+    {
+      "id": 12681,
+      "label": "Kayıp Eşya İlanı"
+    },
+    {
+      "id": 12682,
+      "label": "Koli & Ambalaj Temini"
+    },
+    {
+      "id": 12837,
+      "label": "Tornacı & Metal İşleri"
+    },
+    {
+      "id": 12838,
+      "label": "Plakacı & Oto Aksesuarcı"
+    },
+    {
+      "id": 12839,
+      "label": "Kıyafet Tamiri & Fermuar Değişimi"
+    },
+    {
+      "id": 12840,
+      "label": "Matbaa & Fotokopi Hizmeti"
+    },
+    {
+      "id": 12841,
+      "label": "Bayrak & Afiş Basımı"
+    },
+    {
+      "id": 12842,
+      "label": "Zımpara & Bıçak Bileme Hizmeti"
+    },
+    {
+      "id": 12843,
+      "label": "Ev Taşıma İçin Asansör Kiralama"
+    },
+    {
+      "id": 12844,
+      "label": "Baharat & Bitkisel Ürün Satışı"
+    },
+    {
+      "id": 12845,
+      "label": "Kurye & Evrak Taşıma Hizmeti"
+    },
+    {
+      "id": 12846,
+      "label": "Su Sebili & Damacana Dağıtımı"
+    }
+  ],
+  "Diğer": [
+    {
+      "id": 48345,
+      "label": "Şehir İçi Evden Eve Nakliyat"
+    },
+    {
+      "id": 48346,
+      "label": "Şehirler Arası Evden Eve Nakliyat"
+    },
+    {
+      "id": 48347,
+      "label": "Asansörlü Evden Eve Nakliyat"
+    },
+    {
+      "id": 48348,
+      "label": "Sigortalı Evden Eve Nakliyat"
+    },
+    {
+      "id": 48349,
+      "label": "Paketlemeli Evden Eve Nakliyat"
+    },
+    {
+      "id": 48350,
+      "label": "Parça Eşya Ev Taşıma"
+    },
+    {
+      "id": 48351,
+      "label": "Öğrenci Evi Taşıma"
+    },
+    {
+      "id": 48352,
+      "label": "Yazlık Ev Taşıma"
+    },
+    {
+      "id": 48353,
+      "label": "Villa Taşıma"
+    },
+    {
+      "id": 48354,
+      "label": "Apartman Dairesi Taşıma"
+    },
+    {
+      "id": 48356,
+      "label": "Ofis Taşıma"
+    },
+    {
+      "id": 48357,
+      "label": "Büro Taşıma"
+    },
+    {
+      "id": 48358,
+      "label": "Mağaza Taşıma"
+    },
+    {
+      "id": 48359,
+      "label": "Depo Taşıma"
+    },
+    {
+      "id": 48360,
+      "label": "Fabrika Taşıma"
+    },
+    {
+      "id": 48361,
+      "label": "Atölye Taşıma"
+    },
+    {
+      "id": 48362,
+      "label": "Arşiv Taşıma"
+    },
+    {
+      "id": 48363,
+      "label": "Banka / Kurumsal Taşıma"
+    },
+    {
+      "id": 48364,
+      "label": "Okul / Dershane Taşıma"
+    },
+    {
+      "id": 48365,
+      "label": "Hastane / Klinik Taşıma"
+    },
+    {
+      "id": 48367,
+      "label": "Tek Parça Eşya Taşıma"
+    },
+    {
+      "id": 48368,
+      "label": "Koltuk Taşıma"
+    },
+    {
+      "id": 48369,
+      "label": "Beyaz Eşya Taşıma"
+    },
+    {
+      "id": 48370,
+      "label": "Yatak / Baza Taşıma"
+    },
+    {
+      "id": 48371,
+      "label": "Masa / Sandalye Taşıma"
+    },
+    {
+      "id": 48372,
+      "label": "Dolap Taşıma"
+    },
+    {
+      "id": 48373,
+      "label": "Televizyon Taşıma"
+    },
+    {
+      "id": 48374,
+      "label": "Koli Taşıma"
+    },
+    {
+      "id": 48375,
+      "label": "Küçük Ev Eşyası Taşıma"
+    },
+    {
+      "id": 48376,
+      "label": "İkinci El Eşya Taşıma"
+    },
+    {
+      "id": 48378,
+      "label": "Ev İçin Asansörlü Nakliyat"
+    },
+    {
+      "id": 48379,
+      "label": "Ofis İçin Asansörlü Nakliyat"
+    },
+    {
+      "id": 48380,
+      "label": "Yük Asansörü Kiralama"
+    },
+    {
+      "id": 48381,
+      "label": "Mobilya Asansörü Hizmeti"
+    },
+    {
+      "id": 48382,
+      "label": "Dış Cephe Asansörlü Taşıma"
+    },
+    {
+      "id": 48383,
+      "label": "Yüksek Kat Eşya Taşıma"
+    },
+    {
+      "id": 48385,
+      "label": "Kamyonet ile Taşıma"
+    },
+    {
+      "id": 48386,
+      "label": "Panelvan ile Taşıma"
+    },
+    {
+      "id": 48387,
+      "label": "Kamyon ile Taşıma"
+    },
+    {
+      "id": 48388,
+      "label": "Tır ile Taşıma"
+    },
+    {
+      "id": 48389,
+      "label": "Pikap ile Taşıma"
+    },
+    {
+      "id": 48390,
+      "label": "Minivan ile Taşıma"
+    },
+    {
+      "id": 48391,
+      "label": "Açık Kasa Araçla Taşıma"
+    },
+    {
+      "id": 48392,
+      "label": "Kapalı Kasa Araçla Taşıma"
+    },
+    {
+      "id": 48393,
+      "label": "Frigorifik Araçla Taşıma"
+    },
+    {
+      "id": 48394,
+      "label": "Lowbed Taşıma"
+    },
+    {
+      "id": 48396,
+      "label": "İnşaat Malzemesi Taşıma"
+    },
+    {
+      "id": 48397,
+      "label": "Paletli Yük Taşıma"
+    },
+    {
+      "id": 48398,
+      "label": "Koli ve Paket Taşıma"
+    },
+    {
+      "id": 48399,
+      "label": "Sanayi Malzemesi Taşıma"
+    },
+    {
+      "id": 48400,
+      "label": "Makine Taşıma"
+    },
+    {
+      "id": 48401,
+      "label": "Ağır Yük Taşıma"
+    },
+    {
+      "id": 48402,
+      "label": "Hafif Yük Taşıma"
+    },
+    {
+      "id": 48403,
+      "label": "Mobilya Yük Taşıma"
+    },
+    {
+      "id": 48404,
+      "label": "Beyaz Eşya Yük Taşıma"
+    },
+    {
+      "id": 48405,
+      "label": "Market / Mağaza Ürün Taşıma"
+    },
+    {
+      "id": 48407,
+      "label": "Şehir İçi Ambar Taşıma"
+    },
+    {
+      "id": 48408,
+      "label": "Şehirler Arası Ambar Taşıma"
+    },
+    {
+      "id": 48409,
+      "label": "Parsiyel Yük Taşıma"
+    },
+    {
+      "id": 48410,
+      "label": "Komple Yük Taşıma"
+    },
+    {
+      "id": 48411,
+      "label": "Ticari Ürün Taşıma"
+    },
+    {
+      "id": 48412,
+      "label": "Düzenli Sevkiyat Hizmeti"
+    },
+    {
+      "id": 48413,
+      "label": "Bayi / Şube Dağıtımı"
+    },
+    {
+      "id": 48414,
+      "label": "Toptan Ürün Taşıma"
+    },
+    {
+      "id": 48416,
+      "label": "Moto Kurye"
+    },
+    {
+      "id": 48417,
+      "label": "Araçlı Kurye"
+    },
+    {
+      "id": 48418,
+      "label": "Express Kurye"
+    },
+    {
+      "id": 48419,
+      "label": "Gün İçi Teslimat"
+    },
+    {
+      "id": 48420,
+      "label": "Evrak Kurye"
+    },
+    {
+      "id": 48421,
+      "label": "Paket Kurye"
+    },
+    {
+      "id": 48422,
+      "label": "Yemek / Ürün Dağıtımı"
+    },
+    {
+      "id": 48423,
+      "label": "E-Ticaret Ürün Dağıtımı"
+    },
+    {
+      "id": 48424,
+      "label": "Medikal Kurye"
+    },
+    {
+      "id": 48425,
+      "label": "Gece Kurye Hizmeti"
+    },
+    {
+      "id": 48427,
+      "label": "Ev Eşyası Depolama"
+    },
+    {
+      "id": 48428,
+      "label": "Ofis Eşyası Depolama"
+    },
+    {
+      "id": 48429,
+      "label": "Kısa Süreli Depolama"
+    },
+    {
+      "id": 48430,
+      "label": "Uzun Süreli Depolama"
+    },
+    {
+      "id": 48431,
+      "label": "Güvenlikli Depolama"
+    },
+    {
+      "id": 48432,
+      "label": "Kişisel Eşya Depolama"
+    },
+    {
+      "id": 48433,
+      "label": "Ticari Ürün Depolama"
+    },
+    {
+      "id": 48434,
+      "label": "Mobilya Depolama"
+    },
+    {
+      "id": 48435,
+      "label": "Arşiv Depolama"
+    },
+    {
+      "id": 48436,
+      "label": "Isı Kontrollü Depolama"
+    },
+    {
+      "id": 48438,
+      "label": "Ev Eşyası Paketleme"
+    },
+    {
+      "id": 48439,
+      "label": "Ofis Eşyası Paketleme"
+    },
+    {
+      "id": 48440,
+      "label": "Kırılacak Eşya Paketleme"
+    },
+    {
+      "id": 48441,
+      "label": "Mobilya Paketleme"
+    },
+    {
+      "id": 48442,
+      "label": "Beyaz Eşya Paketleme"
+    },
+    {
+      "id": 48443,
+      "label": "Koli Hazırlama"
+    },
+    {
+      "id": 48444,
+      "label": "Streçleme Hizmeti"
+    },
+    {
+      "id": 48445,
+      "label": "Balonlu Naylon Paketleme"
+    },
+    {
+      "id": 48446,
+      "label": "Profesyonel Ambalajlama"
+    },
+    {
+      "id": 48447,
+      "label": "Taşınma Öncesi Paketleme"
+    },
+    {
+      "id": 48449,
+      "label": "Uluslararası Evden Eve Nakliyat"
+    },
+    {
+      "id": 48450,
+      "label": "Uluslararası Ofis Taşıma"
+    },
+    {
+      "id": 48451,
+      "label": "Yurtdışı Eşya Taşıma"
+    },
+    {
+      "id": 48452,
+      "label": "Gümrüklü Taşıma"
+    },
+    {
+      "id": 48453,
+      "label": "Karayolu Uluslararası Taşıma"
+    },
+    {
+      "id": 48454,
+      "label": "Denizyolu Uluslararası Taşıma"
+    },
+    {
+      "id": 48455,
+      "label": "Havayolu Uluslararası Taşıma"
+    },
+    {
+      "id": 48456,
+      "label": "Parsiyel Uluslararası Taşıma"
+    },
+    {
+      "id": 48457,
+      "label": "Komple Uluslararası Taşıma"
+    },
+    {
+      "id": 48459,
+      "label": "Piyano Taşıma"
+    },
+    {
+      "id": 48460,
+      "label": "Kasa Taşıma"
+    },
+    {
+      "id": 48461,
+      "label": "Antika Eşya Taşıma"
+    },
+    {
+      "id": 48462,
+      "label": "Sanat Eseri Taşıma"
+    },
+    {
+      "id": 48463,
+      "label": "Medikal Cihaz Taşıma"
+    },
+    {
+      "id": 48464,
+      "label": "Laboratuvar Cihazı Taşıma"
+    },
+    {
+      "id": 48465,
+      "label": "Server / Teknoloji Ekipmanı Taşıma"
+    },
+    {
+      "id": 48466,
+      "label": "Fuar Standı Taşıma"
+    },
+    {
+      "id": 48467,
+      "label": "Organizasyon Malzemesi Taşıma"
+    },
+    {
+      "id": 48468,
+      "label": "Hassas Eşya Taşıma"
+    },
+    {
+      "id": 48470,
+      "label": "Günlük Sevkiyat Hizmeti"
+    },
+    {
+      "id": 48471,
+      "label": "Haftalık Sevkiyat Hizmeti"
+    },
+    {
+      "id": 48472,
+      "label": "Düzenli Araç Tahsisi"
+    },
+    {
+      "id": 48473,
+      "label": "Şirket İçi Lojistik Destek"
+    },
+    {
+      "id": 48474,
+      "label": "Mağaza Sevkiyatı"
+    },
+    {
+      "id": 48475,
+      "label": "Depodan Müşteriye Teslimat"
+    },
+    {
+      "id": 48476,
+      "label": "Tedarik Zinciri Taşıma"
+    },
+    {
+      "id": 48477,
+      "label": "Ara Depo Transferi"
+    },
+    {
+      "id": 48478,
+      "label": "Rota Bazlı Dağıtım"
+    },
+    {
+      "id": 48479,
+      "label": "Lojistik Operasyon Desteği"
+    },
+    {
+      "id": 48481,
+      "label": "Şoförlü Kamyonet Kiralama"
+    },
+    {
+      "id": 48482,
+      "label": "Şoförlü Kamyon Kiralama"
+    },
+    {
+      "id": 48483,
+      "label": "Şoförlü Panelvan Kiralama"
+    },
+    {
+      "id": 48484,
+      "label": "Nakliye Aracı Kiralama"
+    },
+    {
+      "id": 48485,
+      "label": "Günlük Nakliye Aracı"
+    },
+    {
+      "id": 48486,
+      "label": "Saatlik Nakliye Aracı"
+    },
+    {
+      "id": 48487,
+      "label": "Yük Taşıma İçin Araç Kiralama"
+    }
+  ]
+}

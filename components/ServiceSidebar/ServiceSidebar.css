@@ -1,0 +1,98 @@
+/* =============================================================
+   ServiceSidebar.css
+   Yumuşak köşeli, ince çerçeveli modern kategori listesi.
+   ============================================================= */
+.service-sidebar {
+  @apply relative w-full p-0 overflow-visible;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none !important;
+  max-height: none;
+  margin-bottom: 0;
+  z-index: 2;
+  border: none !important;
+}
+
+.service-sidebar .sidebar-categories {
+  @apply flex flex-col;
+  gap: 6px;
+  background: var(--brand-paper);
+  border: 1px solid var(--brand-line);
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 4px 24px -12px rgba(0, 52, 102, 0.08);
+}
+
+.service-sidebar .sidebar-loading,
+.service-sidebar .sidebar-error,
+.service-sidebar .sidebar-empty {
+  @apply text-center;
+  background: var(--brand-paper);
+  border: 1px solid var(--brand-line);
+  border-radius: 24px;
+  padding: 24px;
+  font-family: var(--font-body);
+  color: var(--brand-muted);
+  font-size: 14px;
+}
+
+.service-sidebar .sidebar-error button {
+  @apply border-0 cursor-pointer;
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: var(--brand-accent);
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+/* Sidebar header başlığı */
+.service-sidebar .sidebar-header {
+  @apply relative overflow-hidden;
+  background: linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-deep) 100%);
+  color: white;
+  padding: 18px 22px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.service-sidebar .sidebar-header::before {
+  @apply absolute pointer-events-none;
+  content: "";
+  inset: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(255, 107, 0, 0.3) 0%, transparent 60%);
+}
+
+.service-sidebar .sidebar-header h3 {
+  @apply m-0 relative;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Sidebar Ads section spacing */
+.sidebar-ad-card {
+  @apply overflow-hidden;
+  margin-top: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--brand-line);
+}
+
+@media (max-width: 880px) {
+  .service-sidebar.mobile {
+    @apply fixed box-border;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 3500;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #fff;
+    padding: 70px 18px 20px;
+    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.15);
+  }
+  .service-sidebar.mobile.open { left: 0; }
+}

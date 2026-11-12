@@ -1,0 +1,89 @@
+[
+  {
+    "ilan_id": 2042,
+    "certificates": [
+      {
+        "id": 1,
+        "name": "Çocuk Gelişimi Sertifikası",
+        "issuer": "Milli Eğitim Bakanlığı",
+        "date": "2023",
+        "type": "education",
+        "is_active": true
+      },
+      {
+        "id": 2,
+        "name": "İlk Yardım Sertifikası",
+        "issuer": "Türk Kızılay",
+        "date": "2024",
+        "type": "safety",
+        "is_active": true
+      },
+      {
+        "id": 3,
+        "name": "Çocuk Psikolojisi Kursu",
+        "issuer": "Anadolu Üniversitesi",
+        "date": "2023",
+        "type": "psychology",
+        "is_active": true
+      },
+      {
+        "id": 4,
+        "name": "Bebek Bakımı Uzman Sertifikası",
+        "issuer": "Sağlık Bakanlığı",
+        "date": "2022",
+        "type": "childcare",
+        "is_active": true
+      }
+    ]
+  },
+  {
+    "ilan_id": 2043,
+    "certificates": [
+      {
+        "id": 5,
+        "name": "Temizlik Teknikleri Sertifikası",
+        "issuer": "KOSGEB",
+        "date": "2023",
+        "type": "professional",
+        "is_active": true
+      },
+      {
+        "id": 6,
+        "name": "Hijyen ve Sanitasyon",
+        "issuer": "Sağlık Bakanlığı",
+        "date": "2024",
+        "type": "health",
+        "is_active": true
+      }
+    ]
+  },
+  {
+    "ilan_id": 2044,
+    "certificates": [
+      {
+        "id": 7,
+        "name": "Masaj Terapisti Sertifikası",
+        "issuer": "Türk Masaj Derneği",
+        "date": "2023",
+        "type": "therapy",
+        "is_active": true
+      },
+      {
+        "id": 8,
+        "name": "Anatomi ve Fizyoloji",
+        "issuer": "İstanbul Üniversitesi",
+        "date": "2022",
+        "type": "medical",
+        "is_active": true
+      },
+      {
+        "id": 9,
+        "name": "Spor Masajı Uzmanı",
+        "issuer": "Gençlik ve Spor Bakanlığı",
+        "date": "2024",
+        "type": "sports",
+        "is_active": true
+      }
+    ]
+  }
+] 

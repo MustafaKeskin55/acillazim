@@ -1,0 +1,57 @@
+{
+  "title": "Güvenli Alışveriş İçin Öneriler",
+  "description": "Acillazim.com üzerinden alışveriş yaparken dikkat etmeniz gereken noktalar",
+  "lastUpdated": "2025-03-28T12:00:00Z",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Satıcıyı İyi Tanıyın",
+      "icon": "user-shield",
+      "description": "İlanı veren satıcının profilini, puanlarını ve ne kadar süredir platformda olduğunu mutlaka kontrol edin. Olumlu değerlendirme sayısı yüksek olan satıcılarla işlem yapmayı tercih edin.",
+      "tips": [
+        "Satıcının daha önceki satışlarına ve aldığı yorumlara göz atın",
+        "Satıcının platformdaki aktiflik süresine dikkat edin",
+        "Satıcının iletişim bilgilerinin eksiksiz olduğundan emin olun"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Ürün Fotoğraflarını Detaylı İnceleyin",
+      "icon": "images",
+      "description": "İlandaki fotoğrafların gerçek ve ürünün kendi fotoğrafları olduğundan emin olun. Farklı açılardan çekilmiş, detayları gösteren fotoğraflar tercih edin.",
+      "tips": [
+        "Fotoğrafların yüksek çözünürlüklü ve net olmasına dikkat edin",
+        "Ürünün eksik ve hasarlı kısımlarını görebilmek için detay fotoğraflarını isteyin",
+        "Katalog fotoğrafları yerine gerçek ürün fotoğraflarının olmasına özen gösterin"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fiyat Araştırması Yapın",
+      "icon": "tags",
+      "description": "Almayı düşündüğünüz ürünün gerçek piyasa değerini iyi araştırın. Çok uygun fiyatlar konusunda şüpheci olun ve nedenini mutlaka satıcıya sorun.",
+      "tips": [
+        "Benzer ürünlerin fiyatlarını karşılaştırın",
+        "Fiyatı çok düşük olan ilanları ekstra dikkatle inceleyin",
+        "Piyasa değerinin çok altındaki tekliflerde gizli kusur olabilir"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Güvenli Ödeme Yöntemleri Kullanın",
+      "icon": "credit-card",
+      "description": "Mümkünse yüz yüze satın alma yapın ve ürünü kontrol ettikten sonra ödeme yapın. Online ödemelerde platformun sunduğu güvenli ödeme seçeneklerini tercih edin.",
+      "tips": [
+        "Nakit ödeme için kalabalık ve güvenli yerler seçin",
+        "Havale yaparken dikkatli olun ve dekontunuzu saklayın",
+        "Platform dışı ödeme tekliflerine dikkat edin"
+      ]
+    }
+  ],
+  "videoUrl": "https://example.com/guvenli-alisveris",
+  "contactInfo": {
+    "email": "guvenlik@acillazim.com",
+    "phone": "+90 (212) 555 45 67",
+    "supportHours": "09:00 - 18:00"
+  }
+}

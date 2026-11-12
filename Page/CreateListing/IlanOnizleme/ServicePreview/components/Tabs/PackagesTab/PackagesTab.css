@@ -1,0 +1,196 @@
+/* PackagesTab Styles */
+.packages-tab {
+  @apply flex flex-col;
+  gap: 2rem;
+}
+
+.packages-tab h3 {
+  margin: 0 0 1.5rem 0;
+  color: #003466;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Pricing Grid Styles */
+.packages-tab__pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.packages-tab__pricing-card {
+  @apply relative overflow-hidden;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  border: 2px solid rgba(0, 52, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.packages-tab__pricing-card:hover {
+  border-color: #ff8c00;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.15);
+}
+
+.packages-tab__pricing-card.popular {
+  border-color: #ff8c00;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+}
+
+.packages-tab__popular-badge {
+  @apply absolute;
+  top: -1px;
+  right: 15px;
+  background: linear-gradient(135deg, #ff8c00, #ffa640);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  z-index: 5;
+}
+
+.packages-tab__package-header {
+  @apply text-center;
+  margin-bottom: 2rem;
+}
+
+.packages-tab__package-header h4 {
+  margin: 0 0 1rem 0;
+  color: #003466;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.packages-tab__price {
+  @apply flex items-baseline justify-center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.packages-tab__currency {
+  font-size: 1.2rem;
+  color: #ff8c00;
+  font-weight: 600;
+}
+
+.packages-tab__amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #003466;
+  line-height: 1;
+}
+
+.packages-tab__delivery-time {
+  @apply flex items-center justify-center m-0;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.packages-tab__package-features {
+  margin-bottom: 2rem;
+}
+
+.packages-tab__feature {
+  @apply flex items-center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 52, 102, 0.05);
+}
+
+.packages-tab__check-icon {
+  @apply flex-shrink-0;
+  color: #27ae60;
+}
+
+.packages-tab__select-package-btn {
+  @apply w-full border-0 cursor-pointer flex items-center justify-center;
+  background: linear-gradient(135deg, #003466, #004080);
+  color: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+}
+
+.packages-tab__select-package-btn:hover {
+  background: linear-gradient(135deg, #004080, #0056b3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 52, 102, 0.3);
+}
+
+/* No Packages State */
+.packages-tab__no-packages {
+  @apply flex items-center justify-center;
+  padding: 4rem 2rem;
+  background: rgba(248, 250, 252, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 52, 102, 0.05);
+}
+
+.packages-tab__no-packages-content {
+  @apply text-center;
+  color: #6c757d;
+}
+
+.packages-tab__no-packages-content svg {
+  color: #ff8c00;
+  margin-bottom: 1rem;
+}
+
+.packages-tab__no-packages-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #003466;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.packages-tab__no-packages-content p {
+  @apply m-0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .packages-tab__pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .packages-tab__pricing-card {
+    padding: 1.5rem;
+  }
+  
+  .packages-tab__package-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .packages-tab__amount {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-tab__pricing-card {
+    padding: 1.25rem;
+  }
+  
+  .packages-tab__package-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .packages-tab__package-features {
+    margin-bottom: 1.5rem;
+  }
+  
+  .packages-tab__feature {
+    padding: 0.5rem 0;
+  }
+}
+

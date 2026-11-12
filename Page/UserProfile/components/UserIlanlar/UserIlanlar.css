@@ -1,0 +1,300 @@
+/* UserIlanlar.css - İlanlar görünümü için stil dosyası */
+
+/* Kategori sayısı için stil */
+.kategori-count {
+  margin-left: 5px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.active .kategori-count {
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+/* Genel konteyner stilleri */
+.user-ilanlar-container {
+  @apply w-full;
+  margin-top: 10px;
+}
+
+/* İlanlar grid görünümü — tüm site ile aynı token'lar */
+.ilanlar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+  gap: var(--alz-listing-card-gap);
+  margin: 15px 0 45px;
+  overflow-x: visible;
+  padding: 10px 0;
+}
+
+/* İlanlar liste görünümü */
+.ilanlar-list {
+  @apply flex flex-col;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ilan-list-item {
+  @apply w-full;
+}
+
+/* Yükleniyor durumu stil tanımları */
+.ilan-card-skeleton {
+  @apply flex flex-col overflow-hidden;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 340px;
+}
+
+.ilan-image-skeleton {
+  height: 180px;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+}
+
+.ilan-content-skeleton {
+  @apply flex-1 flex flex-col;
+  padding: 16px;
+  gap: 10px;
+}
+
+.ilan-title-skeleton {
+  height: 20px;
+  width: 85%;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+  border-radius: 4px;
+}
+
+.ilan-price-skeleton {
+  height: 24px;
+  width: 40%;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.ilan-meta-skeleton {
+  height: 16px;
+  width: 70%;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+  border-radius: 4px;
+}
+
+/* Hata ve boş durum için stil tanımları */
+.ilanlar-error,
+.ilanlar-empty {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.error-icon,
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.error-icon {
+  color: #e74c3c;
+}
+
+.info-icon {
+  color: #3498db;
+}
+
+.ilanlar-error h3,
+.ilanlar-empty h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.ilanlar-error p,
+.ilanlar-empty p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  @apply border-0 cursor-pointer;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #2980b9;
+}
+
+/* Animasyon tanımları */
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Kategori filtreleme bölümü için stil */
+.filter-bar__category-filter {
+  @apply w-full relative;
+  margin-bottom: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 4px 0;
+}
+
+/* Yatay kaydırma için düzenleme */
+.scroll-indicator {
+  @apply relative;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -ms-overflow-style: none; /* IE ve Edge */
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch; /* iOS için yumuşak kaydırma */
+}
+
+/* Webkit tabanlı tarayıcılar için scrollbar düzenlemesi */
+.scroll-indicator::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.scroll-indicator::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scroll-indicator::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.filter-bar__category-options { @apply flex flex-nowrap; /* Öğelerin alt satıra geçmesini engeller */
+  gap: 8px;
+  padding: 8px 12px;
+  min-width: min-content; /* İçeriğin genişliğine göre minimum genişlik ayarlar */
+}
+
+.filter-bar__category-option {
+  @apply cursor-pointer inline-flex items-center select-none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: max-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8; /* Kullanıcı tarafından seçilmesini engeller */
+  -webkit-tap-highlight-color: transparent; /* Mobil cihazlarda dokunma vurgusunu kaldırır */
+}
+
+.filter-bar__category-option:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-bar__category-option.active {
+  background-color: #2196f3;
+  color: white;
+  border-color: #1976d2;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+/* Boş kategoriler için stil */
+.filter-bar__category-option.empty-category {
+  opacity: 0.7;
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.filter-bar__category-option.empty-category:hover {
+  background-color: #e5e5e5;
+}
+
+/* Sıralama seçeneği için stil */
+.sort-dropdown {
+  @apply w-full;
+  max-width: none;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  background-color: #fff;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1200px) {
+  .ilanlar-grid {
+    grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+  }
+}
+
+/* Responsive - Mobil */
+@media (max-width: 767px) {
+  .ilanlar-grid {
+    grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+    gap: var(--alz-listing-card-gap);
+  }
+
+  .ilan-card-skeleton {
+    height: var(--alz-listing-card-h);
+  }
+
+  .ilan-image-skeleton {
+    height: calc(var(--alz-listing-card-h) * 160 / 280);
+  }
+
+  .ilanlar-error,
+  .ilanlar-empty {
+    padding: 30px 20px;
+  }
+
+  .filter-bar__category-option {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .sort-dropdown {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* filter-bar__dropdown-menu için z-index ayarlaması */
+.filter-bar__dropdown-menu {
+  @apply absolute w-full;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+/* UserIlanlar sayfası için ilan etiketleri stili */
+.user-ilanlar-container .ilan-etiketi,
+.user-ilanlar-container [class*="İlan"],
+.user-ilanlar-container [class*="ilan"] {
+  @apply relative;
+  z-index: auto;
+} 

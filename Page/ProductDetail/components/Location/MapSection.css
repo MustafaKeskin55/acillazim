@@ -1,0 +1,113 @@
+/* MapSection.css - Converted to Tailwind @apply */
+.product-detail-map-section {
+  @apply flex flex-col w-full;
+  gap: 15px;
+}
+
+.product-detail-address-section {
+  @apply flex;
+  gap: 12px;
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+.product-detail-address-icon {
+  @apply flex items-start;
+  padding-top: 3px;
+}
+
+.product-detail-address-icon i {
+  color: #ff5722;
+  font-size: 18px;
+}
+
+.product-detail-address-text {
+  @apply flex-1;
+}
+
+.product-detail-address-content {
+  @apply m-0;
+  line-height: 1.5;
+  color: #333;
+  font-size: 15px;
+}
+
+.product-detail-address-toggle {
+  @apply border-0;
+  @apply cursor-pointer;
+  background: none;
+  color: #2196f3;
+  font-size: 13px;
+  padding: 5px 0;
+  margin-top: 5px;
+}
+
+.product-detail-address-toggle:hover {
+  @apply underline;
+}
+
+.product-detail-map-container {
+  @apply relative overflow-hidden;
+  height: 350px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.product-detail-map-element {
+  @apply w-full h-full;
+  z-index: 1;
+}
+
+.product-detail-map-loading {
+  @apply absolute top-0 left-0 w-full h-full flex items-center justify-center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.product-detail-loading-spinner {
+  @apply rounded-full;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  animation: product-detail-spin 1s linear infinite;
+}
+
+@keyframes product-detail-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.product-detail-map-actions {
+  @apply flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-detail-map-action-button {
+  @apply flex items-center cursor-pointer border-0;
+  gap: 8px;
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.product-detail-map-action-button:hover {
+  background-color: #e0e0e0;
+}
+
+.product-detail-map-action-button i {
+  color: #1976d2;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 576px) {
+  .product-detail-map-element {
+    height: 250px;
+  }
+}

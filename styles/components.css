@@ -1,0 +1,124 @@
+/* ===================================================================
+   ACİLLAZIM.COM — MERKEZİ TAILWIND BİLEŞEN KATMANI
+   Tüm sitedeki ortak butonlar, kartlar, girdi alanları, ikonlar
+   ve rozetler burada tanımlanır.
+   =================================================================== */
+
+/* 🔘 1. MERKEZİ BUTONLAR */
+.alz-btn {
+  @apply inline-flex items-center justify-center transition-all duration-200 cursor-pointer select-none no-underline;
+  border-radius: var(--alz-btn-radius, 12px);
+  font-weight: var(--alz-btn-font-weight, 600);
+  padding: var(--alz-btn-pad-y, 10px) var(--alz-btn-pad-x, 20px);
+}
+
+.alz-btn-primary {
+  @apply alz-btn text-white;
+  background-color: var(--brand-accent, #FF6B00);
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2);
+}
+.alz-btn-primary:hover {
+  background-color: var(--brand-accent-hover, #FF8124);
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.35);
+  transform: translateY(-1px);
+}
+.alz-btn-primary:active {
+  background-color: var(--brand-accent-active, #e56100);
+  transform: scale(0.98);
+}
+
+.alz-btn-navy {
+  @apply alz-btn text-white;
+  background-color: var(--brand-deep, #003466);
+  box-shadow: 0 2px 8px rgba(0, 52, 102, 0.2);
+}
+.alz-btn-navy:hover {
+  background-color: var(--brand-deep-hover, #00274d);
+  box-shadow: 0 4px 14px rgba(0, 52, 102, 0.35);
+  transform: translateY(-1px);
+}
+.alz-btn-navy:active {
+  transform: scale(0.98);
+}
+
+.alz-btn-outline {
+  @apply alz-btn bg-transparent;
+  color: var(--brand-deep, #003466);
+  border: 1.5px solid var(--brand-deep, #003466);
+}
+.alz-btn-outline:hover {
+  background-color: rgba(0, 52, 102, 0.05);
+}
+
+/* 📝 2. MERKEZİ GİRDİ ALANLARI (INPUT / SELECT) */
+.alz-input {
+  @apply w-full outline-none transition-all duration-200;
+  border-radius: var(--alz-input-radius, 12px);
+  border: 1px solid var(--alz-input-border, #E2E8F0);
+  background: #ffffff;
+  height: var(--alz-input-height, 48px);
+  padding: 0 16px;
+  font-size: 14px;
+  color: var(--brand-ink, #0A0E27);
+}
+.alz-input:focus {
+  border-color: var(--alz-input-focus-border, #FF6B00);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.15);
+}
+
+/* 🗂️ 3. MERKEZİ KARTLAR */
+.alz-card {
+  @apply bg-white transition-all duration-200;
+  border-radius: var(--alz-card-radius, 16px);
+  border: 1px solid var(--alz-card-border, #F1F5F9);
+  box-shadow: var(--alz-card-shadow, 0 4px 16px rgba(0, 0, 0, 0.04));
+}
+.alz-card:hover {
+  box-shadow: var(--alz-card-shadow-hover, 0 8px 24px rgba(0, 0, 0, 0.08));
+}
+
+/* 🏷️ 4. MERKEZİ ROZETLER (BADGE) */
+.alz-badge {
+  @apply inline-flex items-center font-bold uppercase;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.alz-badge-accent {
+  background: rgba(255, 107, 0, 0.1);
+  color: var(--brand-accent, #FF6B00);
+}
+.alz-badge-navy {
+  background: rgba(0, 52, 102, 0.1);
+  color: var(--brand-deep, #003466);
+}
+.alz-badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+}
+.alz-badge-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+}
+.alz-badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+}
+
+/* 💎 5. MERKEZİ İKON KUTULARI */
+.alz-icon-box {
+  @apply flex items-center justify-center transition-all duration-200 cursor-pointer;
+  border-radius: var(--alz-icon-radius, 12px);
+  width: var(--alz-icon-box-size, 44px);
+  height: var(--alz-icon-box-size, 44px);
+}
+.alz-icon-box-navy {
+  @apply alz-icon-box;
+  background: rgba(0, 52, 102, 0.08);
+  color: var(--brand-deep, #003466);
+}
+.alz-icon-box-navy:hover {
+  background: rgba(0, 52, 102, 0.15);
+}
+

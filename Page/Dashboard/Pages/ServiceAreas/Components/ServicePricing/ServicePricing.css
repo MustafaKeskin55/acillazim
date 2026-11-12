@@ -1,0 +1,750 @@
+.service-pricing-section {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--gray-100);
+}
+
+/* Özet ön izleme ile aynı kabuk: modern-card + packages-preview (modal içi) */
+.service-pricing--mirror-detail {
+  margin-bottom: 0;
+}
+
+.soe-modal__scroll > .service-pricing--mirror-detail {
+  margin-top: -4px;
+}
+
+.service-pricing-section__header {
+  margin-bottom: 1.25rem;
+}
+
+.service-pricing-section__edit-actions {
+  @apply flex-wrap justify-end;
+  gap: 0.5rem;
+}
+
+.service-pricing-section__no-features {
+  @apply m-0 text-center;
+  color: #6c757d;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/* Okuma modu: Randevu görseli aynı, tıklama yok */
+.service-detail__select-package-btn.service-detail__select-package-btn--preview-only {
+  @apply cursor-default;
+}
+
+.service-detail__select-package-btn.service-detail__select-package-btn--preview-only:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  background: linear-gradient(135deg, #ff8c00, #ffa640);
+}
+
+/* Düzenleme: kart kabuğu detay sayfasıyla aynı; içerik sola hizalı */
+.service-detail__pricing-card.pricing-package--editing {
+  @apply text-left;
+}
+
+.service-detail__pricing-card.pricing-package--editing .package-header {
+  margin-top: 0;
+}
+
+.service-pricing-header {
+  @apply flex justify-between items-start flex-wrap;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+  gap: 0.75rem 1rem;
+}
+
+.service-pricing-header h2 {
+  @apply m-0 flex items-center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: black;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.action-buttons {
+  @apply flex flex-wrap justify-end items-center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.service-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Eski salt okunur kart (previewLikePublic=false) */
+.pricing-package {
+  @apply relative;
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-100);
+}
+
+.pricing-package:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary);
+}
+
+.package-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.package-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.package-price {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.package-features {
+  @apply p-0 m-0 flex flex-col;
+  list-style: none;
+  gap: 1rem;
+}
+
+.package-features li {
+  @apply flex items-center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+.feature-icon {
+  @apply flex-shrink-0;
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+/* Paket Kartı - Düzenleme Modu */
+.pricing-package.editing,
+.service-detail__pricing-card.pricing-package--editing {
+  background: white;
+  padding: 1.5rem;
+}
+
+.package-title-input {
+  @apply w-full;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+}
+
+.package-description-input {
+  @apply w-full;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.package-price-input {
+  @apply relative w-full;
+  margin-bottom: 1rem;
+}
+
+.package-price-input input {
+  @apply w-full text-right relative;
+  padding: 0.75rem 1rem;
+  padding-right: 2rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  cursor: text;
+  z-index: 2;
+  background: transparent;
+}
+
+.package-price-input input::-webkit-outer-spin-button,
+.package-price-input input::-webkit-inner-spin-button {
+  @apply m-0;
+  -webkit-appearance: none;
+}
+
+.package-price-input input:focus {
+  @apply outline-none;
+  border-color: var(--primary);
+}
+
+.package-price-input .currency {
+  @apply absolute select-none pointer-events-none;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  background: transparent;
+  z-index: 1;
+}
+
+.package-features-edit {
+  @apply flex flex-col;
+  gap: 1rem;
+}
+
+.package-features-edit h4 {
+  @apply m-0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.package-header {
+  @apply flex items-start w-full;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.package-header input {
+  @apply flex-1;
+  height: 42px;
+}
+
+.feature-input-group {
+  @apply flex items-start;
+  gap: 0.75rem;
+}
+
+.feature-input-group input {
+  @apply flex-1;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+}
+
+.remove-package, .remove-feature {
+  @apply cursor-pointer flex items-center justify-center flex-shrink-0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  background: white;
+  color: var(--gray-400);
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  margin-top: 3px;
+}
+
+.remove-package:hover, .remove-feature:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+  color: var(--gray-600);
+}
+
+.add-feature {
+  @apply flex items-center cursor-pointer;
+  align-self: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background: var(--gray-50);
+  color: var(--gray-700);
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.add-feature:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+.form-actions {
+  @apply flex justify-end;
+  grid-column: 1 / -1;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.edit-button,
+.cancel-button,
+.save-button {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.edit-button {
+  background: var(--gray-50);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+.edit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--gray-300);
+}
+
+.cancel-button {
+  background: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+.cancel-button:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+}
+
+.save-button {
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.save-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(79, 70, 229, 0.3);
+}
+
+.no-features {
+  @apply text-center m-0;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .service-pricing-grid,
+  .service-pricing-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pricing-package {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-pricing-section {
+    padding: 1.5rem;
+  }
+
+  .service-pricing-header,
+  .service-pricing-section__header.service-detail__section-header {
+    @apply flex-col items-stretch;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .service-pricing-section__header .service-detail__section-header-actions {
+    @apply w-full flex-col items-stretch;
+    justify-content: stretch;
+  }
+
+  .service-pricing-section__header .service-detail__view-all-btn {
+    @apply w-full justify-center;
+  }
+
+  .action-buttons,
+  .service-pricing-section__edit-actions {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .service-pricing__add-package-btn,
+  .service-pricing__cancel-btn,
+  .service-pricing__save-btn {
+    @apply w-full;
+    min-width: 0;
+    height: 48px;
+  }
+
+  .service-pricing__edit-btn,
+  .service-pricing-section__header .service-detail__owner-edit-trigger {
+    @apply w-full justify-center;
+  }
+
+  .service-pricing-grid,
+  .service-pricing-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pricing-package {
+    padding: 1.25rem;
+  }
+
+  .package-price {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-pricing-section {
+    padding: 1.125rem;
+  }
+}
+
+.add-package-button {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: var(--gray-50);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+.add-package-button:hover:not(:disabled) {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+.add-package-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+}
+
+/* Sadece bu bileşene özel düzenle butonu stili */
+.service-pricing__edit-btn {
+  @apply m-0 inline-flex items-center cursor-pointer;
+  background: linear-gradient(135deg, #4a90e2, #5a6acf);
+  color: white;
+  border: 1px solid #4285F4;
+  border-radius: 8px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  height: fit-content;
+}
+
+.service-pricing__edit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(66, 133, 244, 0.3);
+}
+
+/* Paket Ekle Butonu */
+.service-pricing__add-package-btn {
+  @apply inline-flex items-center justify-center cursor-pointer box-border;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  border: 1px solid #388E3C;
+  border-radius: 10px;
+  font-weight: 500;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  min-width: min(100%, 108px);
+  width: auto;
+  padding: 0 16px;
+  height: 43px;
+  font-size: 0.9rem;
+}
+
+.service-pricing__add-package-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -4px rgba(76, 175, 80, 0.3);
+}
+
+.service-pricing__add-package-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+  background: linear-gradient(135deg, #9E9E9E, #757575);
+  border-color: #757575;
+}
+
+/* İptal Butonu */
+.service-pricing__cancel-btn {
+  @apply inline-flex items-center justify-center cursor-pointer box-border;
+  background: linear-gradient(135deg, #ff7043, #e64a19);
+  color: white;
+  border: 1px solid #e64a19;
+  border-radius: 10px;
+  font-weight: 500;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  min-width: min(100%, 108px);
+  width: auto;
+  padding: 0 16px;
+  height: 43px;
+  font-size: 0.9rem;
+}
+
+.service-pricing__cancel-btn:hover {
+  background: linear-gradient(135deg, #f4511e, #d84315);
+  border-color: #d84315;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -4px rgba(244, 81, 30, 0.3);
+}
+
+/* Kaydet Butonu */
+.service-pricing__save-btn {
+  @apply inline-flex items-center justify-center cursor-pointer box-border;
+  background: linear-gradient(135deg, #4a90e2, #5a6acf);
+  color: white;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  font-weight: 500;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  min-width: min(100%, 108px);
+  width: auto;
+  padding: 0 16px;
+  height: 43px;
+  font-size: 0.9rem;
+}
+
+.service-pricing__save-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -4px rgba(74, 144, 226, 0.4);
+}
+
+/* Removing old button styles */
+.service-pricing-edit-button,
+.service-pricing-cancel-button,
+.service-pricing-save-button,
+.service-pricing-add-button {
+  @apply hidden;
+} 
+
+
+/* ===== Modern Paket Düzenleme Stilleri ===== */
+.sp-edit-card {
+  @apply flex flex-col w-full;
+  gap: 1rem;
+}
+
+.sp-edit-header {
+  @apply flex items-center justify-between;
+  border-bottom: 1px solid #eef2f6;
+  padding-bottom: 0.75rem;
+}
+
+.sp-edit-badge {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  background: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+}
+
+.sp-edit-header-actions {
+  @apply flex items-center;
+  gap: 0.5rem;
+}
+
+.sp-btn-popular {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.sp-btn-popular.active {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+.sp-btn-remove {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+  background: #fff;
+  color: #ef4444;
+  transition: all 0.2s;
+}
+
+.sp-btn-remove:hover {
+  background: #fee2e2;
+}
+
+.sp-form-grid {
+  @apply flex flex-col;
+  gap: 0.85rem;
+}
+
+.sp-field {
+  @apply flex flex-col;
+  gap: 0.35rem;
+}
+
+.sp-field-row {
+  @apply flex items-end;
+  gap: 0.75rem;
+}
+
+.sp-field-grow {
+  @apply flex-1;
+}
+
+.sp-field-shrink {
+  flex: 0 0 110px;
+}
+
+.sp-label-row {
+  @apply flex justify-between items-center;
+}
+
+.sp-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.sp-counter {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.sp-input,
+.sp-select {
+  @apply w-full outline-none box-border;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  transition: border-color 0.2s;
+}
+
+.sp-input:focus,
+.sp-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.sp-tags-list {
+  @apply flex flex-wrap;
+  gap: 0.4rem;
+  min-height: 28px;
+  margin-bottom: 0.4rem;
+}
+
+.sp-tag {
+  @apply inline-flex items-center;
+  gap: 0.35rem;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #3730a3;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.sp-tag-remove {
+  @apply border-0 cursor-pointer p-0;
+  background: none;
+  color: #6366f1;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.sp-add-feature-row {
+  @apply flex;
+  gap: 0.5rem;
+}
+
+.sp-feature-input {
+  @apply flex-1;
+}
+
+.sp-btn-add-feature {
+  @apply border-0 cursor-pointer;
+  padding: 0.55rem 1rem;
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.sp-btn-add-feature:hover {
+  background: #4f46e5;
+}
+
+.sp-price-type-tag {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.sp-discount-badge {
+  @apply inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.35rem;
+}
+
+.sp-preview-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0.5rem 0 0.85rem 0;
+}

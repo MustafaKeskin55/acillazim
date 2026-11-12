@@ -1,0 +1,96 @@
+/* =============================================================
+   ServiceSidebarOption.css
+   Modern, hafif köşeli, hover'da soluklaşan accent.
+   ============================================================= */
+.service-sidebar-options {
+  @apply flex items-center cursor-pointer w-full overflow-hidden relative;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-sidebar-option {
+  @apply flex items-center w-full box-border;
+  padding: 11px 16px;
+}
+
+.service-category-text {
+  @apply flex-1 m-0 overflow-hidden;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-muted);
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-body);
+}
+
+.service-sidebar-option-link {
+  @apply no-underline cursor-pointer flex items-center justify-between w-full capitalize relative;
+  color: inherit;
+  gap: 8px;
+  padding-left: 14px;
+}
+
+.service-sidebar-option-link::before {
+  @apply absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px;
+  height: 18px;
+  background: linear-gradient(180deg, var(--brand-accent), #FF3D6E);
+  border-radius: 99px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.service-sidebar-option-link::after {
+  content: "›";
+  font-size: 18px;
+  color: var(--brand-muted);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 400;
+}
+
+.service-sidebar-options:hover {
+  background: linear-gradient(90deg, rgba(255, 107, 0, 0.04) 0%, transparent 100%);
+}
+
+.service-sidebar-options:hover .service-category-text {
+  color: var(--brand-ink);
+}
+
+.service-sidebar-options:hover .service-sidebar-option-link::after {
+  opacity: 0.7;
+  transform: translateX(0);
+  color: var(--brand-accent);
+}
+
+.service-sidebar-option-link.active {
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+.service-sidebar-option-link.active::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.service-sidebar-option-link.active::after {
+  opacity: 1;
+  color: var(--brand-accent);
+  transform: translateX(0);
+}
+
+.service-sidebar-options:has(.active) {
+  background: linear-gradient(90deg, rgba(255, 107, 0, 0.08) 0%, transparent 100%);
+}
+
+@media (max-width: 880px) {
+  .service-category-text { font-size: 15px; }
+  .service-sidebar-option { padding: 12px 16px; }
+}

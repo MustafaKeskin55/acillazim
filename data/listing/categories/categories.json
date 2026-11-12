@@ -1,0 +1,239 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Emlak",
+      "slug": "emlak"
+    },
+    {
+      "id": 2,
+      "name": "Vasıta",
+      "slug": "vasita"
+    },
+    {
+      "id": 3,
+      "name": "Acil",
+      "slug": "acil"
+    },
+    {
+      "id": 4,
+      "name": "Elektronik",
+      "slug": "elektronik"
+    },
+    {
+      "id": 5,
+      "name": "Araç",
+      "slug": "arac"
+    },
+    {
+      "id": 6,
+      "name": "Takas",
+      "slug": "takas"
+    },
+    {
+      "id": 7,
+      "name": "Elektrik",
+      "slug": "elektrik"
+    },
+    {
+      "id": 8,
+      "name": "Giyim Moda",
+      "slug": "giyim-moda"
+    },
+    {
+      "id": 9,
+      "name": "Hizmet",
+      "slug": "hizmet"
+    },
+    {
+      "id": 10,
+      "name": "Yedek Parça",
+      "slug": "yedek-parca"
+    },
+    {
+      "id": 11,
+      "name": "Ev & Yaşam",
+      "slug": "ev-yasam"
+    },
+    {
+      "id": 12,
+      "name": "Sanayi & İş Makinaları",
+      "slug": "sanayi-is-makinalari"
+    },
+    {
+      "id": 13,
+      "name": "Araç Aksesuarları",
+      "slug": "arac-aksesuarlari"
+    },
+    {
+      "id": 14,
+      "name": "Telefon & Aksesuar",
+      "slug": "telefon-aksesuar"
+    },
+    {
+      "id": 15,
+      "name": "Konut",
+      "slug": "konut"
+    },
+    {
+      "id": 16,
+      "name": "İş Yeri",
+      "slug": "is-yeri"
+    },
+    {
+      "id": 17, 
+      "name": "Arsa",
+      "slug": "arsa"
+    },
+    {
+      "id": 18,
+      "name": "Müstakil Ev",
+      "slug": "mustakil-ev"
+    },
+    {
+      "id": 19,
+      "name": "Otomobil",
+      "slug": "otomobil"
+    },
+    {
+      "id": 20,
+      "name": "Motosiklet & Aksesuarları",
+      "slug": "motosiklet-aksesuarlari"
+    },
+    {
+      "id": 21,
+      "name": "Telefon",
+      "slug": "telefon"
+    },
+    {
+      "id": 22,
+      "name": "Bilgisayar & Bileşenleri",
+      "slug": "bilgisayar-bilesenleri"
+    },
+    {
+      "id": 26,
+      "name": "Mobilya",
+      "slug": "mobilya"
+    },
+    {
+      "id": 27,
+      "name": "Ev Dekorasyon",
+      "slug": "ev-dekorasyon"
+    },
+    {
+      "id": 28,
+      "name": "Mutfak Eşyaları",
+      "slug": "mutfak-esyalari"
+    },
+    {
+      "id": 29,
+      "name": "Elektrikli Scooter",
+      "slug": "elektrikli-scooter"
+    },
+    {
+      "id": 30,
+      "name": "Takı",
+      "slug": "taki"
+    },
+    {
+      "id": 31,
+      "name": "Rezidans",
+      "slug": "rezidans"
+    },
+    {
+      "id": 32,
+      "name": "Villa",
+      "slug": "villa"
+    },
+    {
+      "id": 33,
+      "name": "Çiftlik Evi",
+      "slug": "ciftlik-evi"
+    },
+    {
+      "id": 34,
+      "name": "Kiralık Arsa",
+      "slug": "kiralik-arsa"
+    },
+    {
+      "id": 35,
+      "name": "Audi",
+      "slug": "audi"
+    },
+    {
+      "id": 36,
+      "name": "Jant & Lastik",
+      "slug": "jant-lastik"
+    },
+    {
+      "id": 37,
+      "name": "Akıllı Telefon",
+      "slug": "akilli-telefon"
+    },
+    {
+      "id": 38,
+      "name": "Tablet",
+      "slug": "tablet"
+    },
+    {
+      "id": 39,
+      "name": "Gaming Laptop",
+      "slug": "gaming-laptop"
+    },
+    {
+      "id": 40,
+      "name": "LED TV",
+      "slug": "led-tv"
+    },
+    {
+      "id": 41,
+      "name": "Elbise",
+      "slug": "elbise"
+    },
+    {
+      "id": 42,
+      "name": "Koltuk Takımı",
+      "slug": "koltuk-takimi"
+    },
+    {
+      "id": 43,
+      "name": "Yatak Odası",
+      "slug": "yatak-odasi"
+    },
+    {
+      "id": 44,
+      "name": "Halı",
+      "slug": "hali"
+    },
+    {
+      "id": 45,
+      "name": "Tencere Seti",
+      "slug": "tencere-seti"
+    },
+    {
+      "id": 46,
+      "name": "Torna & Freze",
+      "slug": "torna-freze"
+    },
+    {
+      "id": 47,
+      "name": "Ekskavatör",
+      "slug": "ekskavator"
+    },
+    {
+      "id": 48,
+      "name": "Traktör",
+      "slug": "traktor"
+    },
+    {
+      "id": 49,
+      "name": "Dizel Jeneratör",
+      "slug": "dizel-jenerator"
+    },
+    {
+      "id": 50,
+      "name": "Otomotiv Yedek Parçaları",
+      "slug": "otomotiv-yedek-parcalari"
+    }
+  ]
+}

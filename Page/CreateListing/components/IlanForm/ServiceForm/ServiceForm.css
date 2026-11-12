@@ -1,0 +1,2468 @@
+/* ServiceForm - Modern Hizmet İlanları Form Stilleri */
+
+/* Rich Text Editor Entegrasyonu */
+.sf-rich-editor {
+  margin-top: 8px;
+}
+
+.sf-rich-editor .rte-editor {
+  @apply overflow-hidden;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.sf-rich-editor .rte-editor:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.sf-rich-editor.rte-error .rte-editor {
+  border-color: #ef4444;
+}
+
+.sf-rich-editor.rte-error .rte-editor:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Rich Editor Toolbar Özelleştirmeleri */
+.sf-rich-editor .ql-toolbar {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 16px;
+}
+
+.sf-rich-editor .ql-editor {
+  min-height: 160px;
+  max-height: 300px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.sf-rich-editor .ql-editor.ql-blank::before {
+  color: #9ca3af;
+  font-style: italic;
+  left: 16px;
+}
+
+.sf-container {
+  @apply relative;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  z-index: 10;
+}
+
+.sf-header {
+  @apply text-center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.sf-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sf-step-indicator {
+  @apply flex items-center justify-center;
+  gap: 15px;
+}
+
+.sf-step {
+  @apply rounded-full flex items-center justify-center;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sf-step.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.sf-step.completed {
+  background: rgba(255, 255, 255, 0.9);
+  color: #667eea;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.sf-step-separator {
+  width: 40px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+}
+
+/* Modern Form */
+.sf-form {
+  background: #fbfbfb;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.sf-section {
+  @apply flex flex-col;
+  gap: 32px;
+}
+
+.sf-step-content {
+  padding: 40px;
+}
+
+.sf-step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 30px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.sf-section-title {
+  @apply flex items-center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 30px 0 20px 0;
+  gap: 10px;
+}
+
+.sf-section-title svg {
+  color: #667eea;
+}
+
+.sf-section-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 20px;
+}
+
+.sf-group {
+  margin-bottom: 25px;
+}
+
+.sf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.sf-label {
+  @apply block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.sf-required {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.sf-input,
+.sf-select,
+.sf-textarea {
+  @apply w-full;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.sf-input:focus,
+.sf-select:focus,
+.sf-textarea:focus {
+  @apply outline-none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.sf-input.error,
+.sf-select.error,
+.sf-textarea.error {
+  border-color: #ef4444;
+}
+
+.sf-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Çoklu İlçe Dropdown */
+.sf-multi-select-wrapper {
+  @apply relative w-full;
+}
+
+.sf-multi-select-trigger {
+  @apply w-full cursor-pointer flex items-center justify-between text-left;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+}
+
+.sf-multi-select-trigger:hover:not(:disabled) {
+  border-color: #3b82f6;
+}
+
+.sf-multi-select-trigger:focus {
+  @apply outline-none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.sf-multi-select-trigger.open {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.sf-multi-select-trigger:disabled {
+  @apply cursor-not-allowed;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.sf-multi-select-trigger.error {
+  border-color: #ef4444;
+}
+
+.sf-multi-select-text {
+  @apply flex-1 overflow-hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sf-chevron {
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.sf-chevron.open {
+  transform: rotate(180deg);
+}
+
+.sf-multi-select-dropdown {
+  @apply absolute flex flex-col overflow-hidden;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 300px;
+}
+
+.sf-multi-select-search {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sf-search-input {
+  @apply w-full outline-none;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.sf-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.sf-multi-select-options {
+  @apply overflow-y-auto;
+  max-height: 250px;
+  padding: 4px;
+}
+
+.sf-multi-select-option {
+  @apply flex items-center cursor-pointer select-none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sf-multi-select-option:hover {
+  background: #f3f4f6;
+}
+
+.sf-multi-select-option.selected {
+  background: #eff6ff;
+}
+
+.sf-multi-select-option input[type="checkbox"] {
+  @apply cursor-pointer;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #3b82f6;
+}
+
+.sf-checkbox-label {
+  @apply flex-1;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.sf-no-options {
+  @apply text-center;
+  padding: 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.sf-selected-districts {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.sf-selected-label {
+  @apply block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.sf-district-tags {
+  @apply flex flex-wrap;
+  gap: 8px;
+}
+
+.sf-district-tag {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1e40af;
+}
+
+.sf-tag-remove {
+  @apply border-0 cursor-pointer p-0 flex items-center justify-center rounded-full;
+  background: none;
+  color: #1e40af;
+  font-size: 18px;
+  line-height: 1;
+  width: 18px;
+  height: 18px;
+  transition: all 0.2s ease;
+}
+
+.sf-tag-remove:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.sf-hint {
+  @apply inline-block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.sf-price-input-wrapper {
+  @apply flex;
+  gap: 0;
+}
+
+.sf-price-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.sf-currency {
+  min-width: 100px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.sf-rich-editor {
+  margin-top: 8px;
+}
+
+.sf-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.sf-error-message {
+  @apply text-center;
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  color: #dc2626;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.sf-help-text {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Çalışma Saatleri */
+.sf-working-hours {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.sf-working-hour-row {
+  @apply flex items-center justify-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sf-working-hour-row:last-child {
+  border-bottom: none;
+}
+
+.sf-day-name {
+  font-weight: 600;
+  color: #374151;
+  min-width: 100px;
+}
+
+.sf-day-controls {
+  @apply flex items-center;
+  gap: 15px;
+}
+
+.sf-checkbox-wrapper {
+  @apply flex items-center cursor-pointer;
+  gap: 6px;
+}
+
+.sf-checkbox-wrapper input[type="checkbox"] {
+  @apply m-0;
+  width: auto;
+}
+
+.sf-checkbox-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.sf-time-inputs {
+  @apply flex items-center;
+  gap: 10px;
+}
+
+.sf-time-input {
+  width: 100px;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Hizmet Paketleri - ServiceAreas benzeri tasarım */
+.sf-packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sf-package-card {
+  @apply flex flex-col relative overflow-hidden;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sf-package-card::before {
+  @apply absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  opacity: 1;
+}
+
+.sf-package-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sf-package-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sf-package-header h4 {
+  @apply m-0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.sf-package-fields {
+  @apply flex flex-col;
+  gap: 16px;
+}
+
+.sf-package-fields .sf-group {
+  margin-bottom: 0;
+}
+
+.sf-package-fields .sf-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.sf-package-fields .sf-input,
+.sf-package-fields .sf-textarea {
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+.sf-empty-state {
+  @apply text-center;
+  padding: 40px 20px;
+  color: #6b7280;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+}
+
+/* Görsel Yükleme - ModernForm benzeri */
+.sf-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 8px;
+}
+
+.sf-image-item {
+  @apply relative overflow-hidden;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  border: 2px solid #f1f5f9;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  transform-origin: center;
+  cursor: grab;
+}
+
+/* Drag & Drop States */
+.sf-image-item.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg) scale(0.95);
+  cursor: grabbing;
+  z-index: 1000;
+  box-shadow: 
+    0 20px 64px rgba(0, 0, 0, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.sf-image-item.drag-over {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  transform: scale(1.05);
+  box-shadow: 
+    0 16px 48px rgba(59, 130, 246, 0.2),
+    0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+.sf-image-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: #3b82f6;
+  z-index: 10;
+}
+
+.sf-image-item img {
+  @apply w-full h-full object-cover;
+  transition: all 0.3s ease;
+}
+
+.sf-image-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Kapak ve Arka Plan Fotoğrafı Badge'leri */
+.sf-cover-badge {
+  @apply absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  white-space: nowrap;
+}
+
+.sf-cover-badge.with-vitrin {
+  padding: 8px 20px;
+  font-size: 11px;
+}
+
+.sf-image-item.cover-selected {
+  border-color: #f59e0b;
+  border-width: 3px;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+
+/* Kapak Seçim Butonu */
+.sf-image-role-buttons {
+  @apply absolute flex;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 6;
+}
+
+.sf-image-item:hover .sf-image-role-buttons {
+  opacity: 1;
+}
+
+.sf-role-btn {
+  @apply flex items-center cursor-pointer;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sf-role-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sf-role-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.sf-role-btn.active:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.sf-image-actions {
+  @apply absolute flex;
+  top: 8px;
+  right: 8px;
+  gap: 8px;
+  z-index: 10;
+}
+
+.sf-vitrin-badge {
+  @apply absolute uppercase;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    0 4px 16px rgba(245, 158, 11, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+
+.sf-vitrin-badge::before {
+  content: '⭐';
+  margin-right: 4px;
+  font-size: 10px;
+}
+
+.sf-image-remove,
+.sf-image-up {
+  @apply absolute border-0 rounded-full cursor-pointer flex items-center justify-center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.sf-image-remove {
+  @apply relative flex items-center justify-center;
+  top: 0;
+  left: 0;
+  transform: none;
+  color: #ef4444;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(239, 68, 68, 0.15);
+  font-size: 16px;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  line-height: 1;
+}
+
+/* Silme butonu hover'da görünür */
+.sf-image-item:hover .sf-image-remove {
+  opacity: 1 !important;
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.sf-image-up {
+  bottom: 10px;
+  right: 10px;
+  color: #3b82f6;
+}
+
+.sf-image-item:hover .sf-image-remove,
+.sf-image-item:hover .sf-image-up {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sf-image-remove:hover {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 
+    0 6px 20px rgba(239, 68, 68, 0.4),
+    0 4px 12px rgba(220, 38, 38, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sf-image-up:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Drag Handle */
+.sf-drag-handle {
+  @apply absolute hidden items-center justify-center select-none;
+  bottom: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 8px; /* Gizle */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: grab;
+  z-index: 3;
+}
+
+.sf-image-item:hover .sf-drag-handle {
+  opacity: 1;
+}
+
+.sf-drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Image Order Number */
+.sf-image-order {
+  @apply absolute rounded-full flex items-center justify-center;
+  bottom: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+.sf-image-upload {
+  @apply cursor-pointer flex items-center justify-center relative overflow-hidden;
+  aspect-ratio: 1;
+  border: 3px dashed #cbd5e1;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.sf-image-upload::before {
+  @apply absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sf-image-upload:hover {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 32px rgba(59, 130, 246, 0.15),
+    inset 0 2px 8px rgba(59, 130, 246, 0.05);
+}
+
+.sf-image-upload:hover::before {
+  opacity: 1;
+}
+
+.sf-image-upload input {
+  @apply hidden;
+}
+
+.sf-upload-text {
+  @apply flex flex-col items-center relative text-center;
+  gap: 16px;
+  color: #475569;
+  z-index: 1;
+}
+
+.sf-upload-text span:first-child {
+  font-size: 36px;
+  font-weight: 300;
+  color: #3b82f6;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.2));
+}
+
+.sf-upload-text span:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.sf-image-upload:hover .sf-upload-text span:first-child {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+.sf-image-upload:hover .sf-upload-text span:last-child {
+  color: #1e40af;
+}
+
+.sf-image-upload:hover .sf-upload-stats .sf-stat {
+  color: #475569;
+}
+
+/* Upload Stats in Button */
+.sf-upload-stats {
+  @apply flex flex-col;
+  gap: 6px;
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+.sf-stat {
+  @apply flex items-center justify-center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  gap: 4px;
+}
+
+/* Form Hints */
+.sf-hint {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Butonlar */
+.sf-btn {
+  @apply inline-flex items-center border-0 no-underline cursor-pointer;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.sf-btn-primary {
+  @apply border-0 cursor-pointer;
+  background: #3b82f6;
+  color: white;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.sf-btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+}
+
+.sf-btn-secondary {
+  @apply border-0 cursor-pointer;
+  background: #10b981;
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.sf-btn-secondary:hover {
+  background: #059669;
+}
+
+.sf-btn-outline {
+  @apply cursor-pointer;
+  background: #f8f9fa;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.sf-btn-outline:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.sf-btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.sf-btn-danger:hover {
+  background: #dc2626;
+}
+
+.sf-btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.sf-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+  transform: none !important;
+}
+
+/* Form Actions - ModernForm benzeri */
+.sf-step-navigation {
+  @apply flex justify-center;
+  margin-top: 40px;
+  gap: 1rem;
+}
+
+.sf-action-buttons {
+  @apply flex justify-center;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sf-container {
+    padding: 15px;
+  }
+  
+  .sf-header {
+    padding: 20px;
+  }
+  
+  .sf-title {
+    font-size: 22px;
+  }
+  
+  .sf-step-content {
+    padding: 25px;
+  }
+  
+  .sf-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .sf-package-fields {
+    grid-template-columns: 1fr;
+  }
+  
+  .sf-step-navigation {
+    @apply flex-col items-stretch;
+    gap: 15px;
+  }
+  
+  .sf-action-buttons {
+    @apply flex-col;
+  }
+  
+  .sf-day-controls {
+    @apply flex-col items-end;
+    gap: 10px;
+  }
+  
+  .sf-working-hour-row {
+    @apply flex-col items-stretch;
+    gap: 10px;
+  }
+  
+  .sf-day-name {
+    @apply text-left;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sf-step-indicator {
+    gap: 10px;
+  }
+  
+  .sf-step {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .sf-step-separator {
+    width: 25px;
+  }
+}
+
+/* ===========================================
+   STEP 2: ServiceAreas Tarzı Yeni Bölümler
+   =========================================== */
+
+/* Hizmet Özellikleri - ServiceFeatures benzeri */
+.sf-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sf-feature-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sf-feature-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.sf-feature-row {
+  @apply flex items-center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sf-feature-row .sf-input {
+  @apply flex-1;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  background: white;
+}
+
+.sf-feature-row .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-feature-row .sf-textarea {
+  @apply w-full;
+  min-height: 100px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  background: white;
+}
+
+.sf-feature-row .sf-textarea:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-btn-remove {
+  @apply cursor-pointer flex items-center justify-center flex-shrink-0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.sf-btn-remove:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #ef4444;
+}
+
+/* Fiyatlandırma Paketleri - ServicePricing benzeri */
+.sf-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sf-package-item {
+  @apply relative;
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.sf-package-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: #6366f1;
+}
+
+.sf-package-header {
+  @apply flex items-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sf-package-header .sf-input {
+  @apply flex-1;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.sf-package-header .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-package-row {
+  @apply flex items-center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sf-package-row .sf-input {
+  @apply flex-1;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.sf-package-row .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-currency {
+  @apply text-center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #374151;
+  min-width: 50px;
+}
+
+.sf-package-features {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.sf-package-features .sf-label {
+  margin-bottom: 15px;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sf-btn-outline {
+  @apply cursor-pointer flex items-center justify-center;
+  background: white;
+  color: #6366f1;
+  border: 1px dashed #cbd5e1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 8px;
+}
+
+.sf-btn-outline:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #9ca3af;
+}
+
+.sf-btn-outline:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+}
+
+.sf-btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Çalışma Saatleri */
+.sf-working-hours {
+  @apply flex flex-col;
+  gap: 1rem;
+}
+
+.sf-working-day {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sf-working-day:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sf-day-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 1rem;
+}
+
+.sf-day-name {
+  font-weight: 600;
+  color: #374151;
+  font-size: 15px;
+}
+
+.sf-checkbox {
+  @apply flex items-center cursor-pointer;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.sf-checkbox input[type="checkbox"] {
+  @apply m-0;
+  width: 16px;
+  height: 16px;
+  accent-color: #6366f1;
+}
+
+.sf-time-inputs {
+  @apply flex items-center;
+  gap: 15px;
+}
+
+.sf-time-inputs .sf-input {
+  @apply flex-1 text-center;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.sf-time-inputs .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-time-inputs span {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Sertifikalar */
+.sf-certificates-grid {
+  @apply flex flex-col;
+  gap: 1rem;
+}
+
+.sf-certificate-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sf-certificate-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sf-certificate-row {
+  @apply items-center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sf-certificate-row:last-child {
+  margin-bottom: 0;
+}
+
+.sf-certificate-row:first-child {
+  grid-template-columns: 1fr auto;
+}
+
+.sf-certificate-row:nth-child(2) {
+  grid-template-columns: 1fr 140px;
+}
+
+.sf-certificate-row .sf-input {
+  @apply w-full;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.sf-certificate-row .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-certificate-row .sf-input[type="date"] {
+  min-width: 140px;
+}
+
+/* SSS (FAQ) */
+.sf-faq-grid {
+  @apply flex flex-col;
+  gap: 1.25rem;
+}
+
+.sf-faq-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sf-faq-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sf-faq-row {
+  @apply flex items-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sf-faq-row .sf-input {
+  @apply flex-1;
+  font-weight: 500;
+  height: 42px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.sf-faq-row .sf-input:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+.sf-faq-row .sf-textarea {
+  @apply w-full;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  background: white;
+}
+
+.sf-faq-row .sf-textarea:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+}
+
+/* ServiceAreas stilindeki butonlar */
+.sf-group .sf-btn-outline {
+  align-self: flex-start;
+  margin-top: 1rem;
+  width: auto;
+}
+
+/* Responsive için yeni bölümler */
+/* Özel Zaman Seçici Stilleri */
+.stylely-time-picker {
+  @apply relative w-full;
+}
+
+.stylely-time-display {
+  @apply flex items-center justify-between cursor-pointer relative overflow-hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.stylely-time-display:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+  transform: translateY(-1px);
+}
+
+.stylely-time-display:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.stylely-time-display::before {
+  @apply absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stylely-time-display:hover::before {
+  opacity: 1;
+}
+
+.time-icon {
+  color: #6366f1;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.stylely-time-display:hover .time-icon {
+  transform: scale(1.1);
+}
+
+.stylely-time-dropdown {
+  @apply absolute overflow-hidden;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  animation: slideDown 0.2s ease;
+  max-width: 200px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.time-columns {
+  @apply flex;
+  max-height: 200px;
+}
+
+.time-column {
+  @apply flex-1;
+  border-right: 1px solid #e2e8f0;
+}
+
+.time-column:last-child {
+  border-right: none;
+}
+
+.time-header {
+  @apply text-center;
+  background: #6366f1;
+  color: white;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.time-options {
+  @apply overflow-y-auto;
+  max-height: 150px;
+}
+
+.time-option {
+  @apply cursor-pointer text-center;
+  padding: 6px 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.time-option:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #6366f1;
+}
+
+.time-option.selected {
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+}
+
+.time-actions {
+  @apply flex;
+  padding: 8px;
+  gap: 6px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.time-apply-btn, .time-cancel-btn {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.time-apply-btn {
+  background: #10b981;
+  color: white;
+}
+
+.time-apply-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.time-cancel-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.time-cancel-btn:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+}
+
+.time-separator {
+  @apply flex items-center;
+  color: #6366f1;
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+/* Özel Tarih Seçici Stilleri */
+.stylely-date-picker {
+  @apply relative w-full;
+}
+
+.stylely-date-display {
+  @apply flex items-center justify-between cursor-pointer relative overflow-hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.stylely-date-display:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+  transform: translateY(-1px);
+}
+
+.stylely-date-display:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.stylely-date-display::before {
+  @apply absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stylely-date-display:hover::before {
+  opacity: 1;
+}
+
+.date-icon {
+  color: #6366f1;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.stylely-date-display:hover .date-icon {
+  transform: scale(1.1);
+}
+
+.stylely-date-dropdown {
+  @apply absolute overflow-hidden;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  animation: slideDown 0.2s ease;
+  min-width: 280px;
+  max-width: 320px;
+}
+
+.date-header {
+  @apply flex;
+  gap: 8px;
+  padding: 12px;
+  background: #6366f1;
+}
+
+.month-select, .year-select {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.month-select:hover, .year-select:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.month-select:focus, .year-select:focus {
+  @apply outline-none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.date-grid {
+  padding: 12px;
+}
+
+.date-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  @apply text-center;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 8px 4px;
+}
+
+.date-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.date-day {
+  @apply flex items-center justify-center cursor-pointer relative;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.date-day:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #6366f1;
+  transform: scale(1.05);
+}
+
+.date-day.other-month {
+  @apply cursor-not-allowed;
+  color: #cbd5e1;
+}
+
+.date-day.other-month:hover {
+  background: none;
+  transform: none;
+}
+
+.date-day.selected {
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+}
+
+.date-day.today {
+  background: #fbbf24;
+  color: white;
+  font-weight: 700;
+}
+
+.date-day.today.selected {
+  background: #6366f1;
+}
+
+.date-actions {
+  @apply flex justify-end;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.date-cancel-btn {
+  @apply border-0 cursor-pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #6b7280;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.date-cancel-btn:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+}
+
+/* Çalışma saatleri özel stiller - ServiceAreas tasarımı */
+.sf-working-hours-container {
+  @apply flex flex-col;
+  gap: 20px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sf-working-hours-item {
+  @apply flex justify-between items-center;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.sf-working-hours-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: #6366f1;
+}
+
+.sf-working-hours-item.inactive {
+  opacity: 0.75;
+  background: #f1f5f9;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.sf-day-info {
+  @apply flex items-center;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.sf-day-name {
+  font-weight: 600;
+  color: #374151;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.sf-time-inputs {
+  @apply flex items-center;
+  gap: 20px;
+}
+
+.sf-time-input-group {
+  @apply flex items-center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.sf-time-input-group:hover {
+  border-color: #6366f1;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sf-time-separator {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sf-time-input {
+  @apply flex-1;
+  min-width: 120px;
+}
+
+.sf-time-input.disabled {
+  @apply pointer-events-none;
+  opacity: 0.5;
+}
+
+/* Switch styling - ServiceAreas'dan alınan */
+.sf-switch {
+  @apply relative inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.sf-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sf-slider {
+  @apply absolute cursor-pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: .4s;
+  border-radius: 28px;
+}
+
+.sf-slider:before {
+  @apply absolute rounded-full;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sf-switch input:checked + .sf-slider {
+  background: linear-gradient(135deg, #6366f1 0%, #6366f1 100%);
+}
+
+.sf-switch input:checked + .sf-slider:before {
+  transform: translateX(24px);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sf-working-hours-item:nth-child(1) { animation-delay: 0.1s; }
+.sf-working-hours-item:nth-child(2) { animation-delay: 0.2s; }
+.sf-working-hours-item:nth-child(3) { animation-delay: 0.3s; }
+.sf-working-hours-item:nth-child(4) { animation-delay: 0.4s; }
+.sf-working-hours-item:nth-child(5) { animation-delay: 0.5s; }
+.sf-working-hours-item:nth-child(6) { animation-delay: 0.6s; }
+.sf-working-hours-item:nth-child(7) { animation-delay: 0.7s; }
+
+/* ServiceAreas Time Picker Stili - Yeni Tasarım */
+.sf-time-input-field {
+  @apply border-0 outline-none cursor-pointer;
+  font-size: 15px;
+  color: #374151;
+  background: transparent;
+  font-weight: 500;
+  width: 110px;
+}
+
+.sf-time-input-field::-webkit-calendar-picker-indicator {
+  filter: invert(0.4);
+}
+
+.sf-time-input-field.disabled {
+  @apply cursor-not-allowed;
+  color: #9ca3af;
+}
+
+.time-picker {
+  @apply fixed overflow-hidden pointer-events-auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 340px;
+  z-index: 999999;
+  animation: timePickerFadeIn 0.3s ease-out;
+}
+
+.time-picker-header {
+  @apply flex items-center;
+  padding: 20px;
+  background: linear-gradient(135deg, #6366f1 0%, #6366f1 100%);
+  color: white;
+  gap: 12px;
+}
+
+.time-picker-icon {
+  font-size: 20px;
+  color: white;
+}
+
+.time-picker-header span {
+  @apply flex-1;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.time-picker-close {
+  @apply border-0 cursor-pointer flex items-center justify-center rounded-full;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.time-picker-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.digital-clock {
+  @apply flex flex-col items-center;
+  padding: 24px;
+  gap: 24px;
+  background: #f8fafc;
+}
+
+.digital-time {
+  @apply flex items-center pointer-events-auto relative;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1000000;
+}
+
+.time-column {
+  @apply flex flex-col items-center relative pointer-events-auto;
+  gap: 8px;
+  z-index: 1000001;
+}
+
+.digital-hours, .digital-minutes {
+  @apply flex flex-col items-center overflow-hidden relative p-0;
+  height: 40px;
+  background: white;
+  border-radius: 12px;
+}
+
+.digital-number {
+  @apply border-0 cursor-pointer text-center flex items-center justify-center pointer-events-auto relative;
+  background: white;
+  color: #475569;
+  font-size: 18px;
+  padding: 8px;
+  height: 40px;
+  transition: all 0.2s ease;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 60px;
+  z-index: 1000001;
+}
+
+.digital-number:hover {
+  color: #6366f1;
+}
+
+.digital-number.selected {
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.scroll-button {
+  @apply rounded-full items-center justify-center outline-none;
+  background: white !important;
+  border: 2px solid #6366f1 !important;
+  color: #6366f1 !important;
+  width: 32px;
+  height: 32px;
+  display: flex !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  z-index: 1000002 !important;
+  pointer-events: auto !important;
+  position: relative !important;
+}
+
+.scroll-button:hover {
+  background: #6366f1;
+  color: white;
+  border-color: #6366f1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.2);
+}
+
+.scroll-button svg {
+  font-size: 14px;
+}
+
+.digital-separator {
+  @apply flex items-center;
+  color: #6366f1;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 8px;
+  height: 40px;
+}
+
+/* Seçili olmayan sayıları gizle */
+.digital-hours button:not(.selected),
+.digital-minutes button:not(.selected) {
+  @apply hidden;
+}
+
+/* Dijital gösterge ekranı */
+.digital-display {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 16px;
+  font-size: 42px;
+  color: #6366f1;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+}
+
+.digital-confirm {
+  @apply border-0 cursor-pointer w-full pointer-events-auto relative;
+  background: linear-gradient(135deg, #6366f1 0%, #6366f1 100%);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  z-index: 1000001;
+}
+
+.digital-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* Modal Overlay - Arka planı devre dışı bırak */
+.modal-overlay {
+  @apply fixed cursor-pointer pointer-events-auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 999998;
+  animation: overlayFadeIn 0.3s ease-out;
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Time picker overlay */
+.time-picker::before {
+  @apply fixed pointer-events-none;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* Time picker animasyonu */
+@keyframes timePickerFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Warning Modal Stilleri */
+/* Warning Modal Stilleri */
+.warning-modal {
+  @apply fixed overflow-hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90vw;
+  z-index: 1000000;
+  animation: timePickerFadeIn 0.3s ease-out;
+}
+
+.warning-modal-header {
+  @apply flex items-center;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  gap: 12px;
+}
+
+.warning-icon {
+  font-size: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.warning-modal-header h3 {
+  @apply flex-1 m-0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.warning-close {
+  @apply border-0 cursor-pointer flex items-center justify-center rounded-full;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px;
+  transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.warning-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.warning-modal-body {
+  padding: 24px;
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.warning-modal-body p {
+  @apply m-0;
+}
+
+.warning-modal-footer {
+  @apply flex justify-end;
+  padding: 20px 24px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.warning-ok-btn {
+  @apply border-0 cursor-pointer;
+  background: linear-gradient(135deg, #6366f1 0%, #5b21b6 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
+
+.warning-ok-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
+  .warning-modal {
+    width: 320px;
+    margin: 20px;
+  }
+  
+  .warning-modal-header {
+    padding: 16px 20px;
+  }
+  
+  .warning-modal-body {
+    padding: 20px;
+  }
+  
+  .warning-modal-footer {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sf-packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stylely-date-dropdown {
+    min-width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .time-columns {
+    max-height: 200px;
+  }
+  
+  .sf-time-inputs {
+    @apply flex-row;
+    gap: 8px;
+  }
+  
+  .time-separator {
+    margin: 0 4px;
+  }
+  
+  .sf-working-hours-container {
+    padding: 16px;
+  }
+
+  .sf-working-hours-item {
+    @apply flex-col items-start;
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .sf-time-inputs {
+    @apply w-full justify-between;
+  }
+
+  .sf-day-info {
+    @apply w-full justify-between;
+  }
+
+  .sf-time-input-group {
+    @apply flex-1;
+  }
+  
+  .sf-features-grid,
+  .sf-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .sf-feature-row,
+  .sf-package-header,
+  .sf-faq-row {
+    @apply flex-col;
+    gap: 10px;
+  }
+  
+  .sf-certificate-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .sf-certificate-row:first-child,
+  .sf-certificate-row:nth-child(2) {
+    grid-template-columns: 1fr;
+  }
+  
+  .sf-btn-remove {
+    align-self: flex-start;
+    min-width: auto;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+  }
+  
+  .sf-package-row {
+    @apply flex-row items-center;
+  }
+  
+  .sf-currency {
+    min-width: 60px;
+  }
+  
+  .sf-day-header {
+    @apply flex-col items-start;
+    gap: 10px;
+  }
+  
+  .sf-time-inputs {
+    gap: 10px;
+  }
+}

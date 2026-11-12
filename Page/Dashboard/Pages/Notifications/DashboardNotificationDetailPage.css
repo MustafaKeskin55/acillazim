@@ -1,0 +1,1418 @@
+/* ==========================================================================
+   ACİLLAZIM.COM — Bildirim Detay Sayfası (2026 Kurumsal Tasarım Sistemi)
+   Kurallar:
+   - Zemin: --brand-bg: #F5F6F8 (Sade, dingin kurumsal açık gri zemin)
+   - Kartlar: Saf Beyaz (#FFFFFF), 1px solid #E2E8F0, 12px radius, 8px ritmi
+   - Renk Hiyerarşisi: %60 Zemin/Kart, %30 Kurumsal Lacivert (#003466), %10 Kurumsal Turuncu (#FF6B00)
+   - Sıfır Gökkuşağı / Sıfır Lavanta & Turkuaz Kaosu
+   - Vektör İkonlar ve Erişilebilir Tipografi
+   ========================================================================== */
+
+.notification-detail {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 20px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: transparent;
+  color: #0f172a;
+  font-family: inherit;
+}
+
+/* ── 1. ÜST NAVİGASYON VE DURUM BARI ── */
+.notification-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nd-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nd-read-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nd-read-pill--read {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.nd-read-pill--unread {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.notifications-button,
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.notifications-button {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #003466;
+}
+
+.notifications-button:hover {
+  background: #f8fafc;
+  border-color: #003466;
+  color: #003466;
+}
+
+.action-link {
+  background: #ff6b00;
+  border: 1px solid #ff6b00;
+  color: #ffffff;
+}
+
+.action-link:hover {
+  background: #e05e00;
+  border-color: #e05e00;
+}
+
+/* ── 2. ANA BİLDİRİM DETAY KARTI ── */
+.notification-detail-content {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-sizing: border-box;
+}
+
+/* Kart Üst Bilgisi (Başlık & İkon & Tarih) */
+.notification-detail-info {
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.nd-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nd-title-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.notification-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: rgba(0, 52, 102, 0.06);
+  border: 1px solid rgba(0, 52, 102, 0.15);
+  color: #003466;
+  letter-spacing: 0.02em;
+}
+
+.notification-type.welcome,
+.notification-type.appointment-completed {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+
+.notification-type.appointment-request,
+.notification-type.price-drop {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #c2410c;
+}
+
+.notification-type.seller-review,
+.notification-type.expiring-soon {
+  background: #fefce8;
+  border-color: #fef08a;
+  color: #b45309;
+}
+
+.notification-type.listing-expired,
+.notification-type.appointment-cancelled {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.notification-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  background: #ffffff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.notification-detail-info h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #003466;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* Başlık İkon Kutusu */
+.title-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #003466;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.title-icon--appointment-request,
+.title-icon--price-drop {
+  background: #ff6b00;
+  color: #ffffff;
+}
+
+.title-icon--appointment-completed,
+.title-icon--welcome {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.title-icon--seller-review,
+.title-icon--expiring-soon {
+  background: #d97706;
+  color: #ffffff;
+}
+
+.title-icon--listing-expired,
+.title-icon--appointment-cancelled {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+/* ── 3. SPOTLIGHT MESAJ KUTUSU ── */
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.compact-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.notification-message-text {
+  position: relative;
+  padding: 18px 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.notification-message-text__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.notification-message-text__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #003466;
+  text-transform: uppercase;
+}
+
+.notification-message-text__label-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(0, 52, 102, 0.08);
+  color: #003466;
+  font-size: 11px;
+}
+
+.notification-message-text__live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.notification-message-text__live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+.notification-message-text__body {
+  margin: 0;
+  color: #1e293b;
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.notification-message-text__watermark {
+  position: absolute;
+  right: 16px;
+  bottom: -4px;
+  font-size: 64px;
+  color: rgba(0, 52, 102, 0.03);
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Mesaj İçi Çipler (Kişi, Tarih, Saat) */
+.nd-inline-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px;
+  margin: 0 2px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  vertical-align: baseline;
+  line-height: 1.4;
+}
+
+.nd-inline-chip svg {
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.nd-inline-chip--user {
+  background: rgba(0, 52, 102, 0.08);
+  border: 1px solid rgba(0, 52, 102, 0.16);
+  color: #003466;
+}
+
+.nd-inline-chip--date {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
+.nd-inline-chip--time {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+}
+
+/* ── 4. BENTO METRİK KARTLARI (.nd-bento-grid) ── */
+.nd-smart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nd-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nd-bento-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.nd-bento-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.05);
+}
+
+.nd-bento-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nd-bento-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #003466;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nd-bento-online-dot {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 10px;
+  height: 10px;
+  background: #16a34a;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.nd-bento-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 17px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #003466;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nd-bento-icon--amber {
+  background: #fff7ed;
+  border-color: #ffedd5;
+  color: #ea580c;
+}
+
+.nd-bento-icon--emerald {
+  background: #f0fdf4;
+  border-color: #dcfce7;
+  color: #16a34a;
+}
+
+.nd-bento-icon--slate {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #475569;
+}
+
+.nd-bento-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nd-bento-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.nd-bento-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #003466;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nd-bento-sub {
+  font-size: 11.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.nd-bento-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nd-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.nd-status-pill--emerald {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.nd-status-pill__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ── 5. İŞLEM ADIMLARI / SÜREÇ ÇİZELGESİ (.nd-flow-tracker) ── */
+.nd-flow-tracker {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nd-flow-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nd-flow-head h5 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #003466;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nd-flow-head p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.nd-flow-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.nd-flow-step {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nd-flow-step.is-done {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.nd-flow-step.is-active {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.nd-flow-step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.nd-flow-step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: #cbd5e1;
+  color: #ffffff;
+}
+
+.nd-flow-step.is-done .nd-flow-step-num {
+  background: #16a34a;
+}
+
+.nd-flow-step.is-active .nd-flow-step-num {
+  background: #ff6b00;
+}
+
+.nd-flow-step-pill {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.nd-flow-step.is-done .nd-flow-step-pill {
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.nd-flow-step.is-active .nd-flow-step-pill {
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.nd-flow-step-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.nd-flow-step.is-done .nd-flow-step-title {
+  color: #15803d;
+}
+
+.nd-flow-step.is-active .nd-flow-step-title {
+  color: #c2410c;
+}
+
+.nd-flow-step-desc {
+  font-size: 11.5px;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.nd-flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* ── 6. ALT AKSİYON ÇUBUĞU (.nd-action-banner) ── */
+.nd-action-banner {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nd-action-banner__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.nd-action-banner__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #003466;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.nd-action-banner__info h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.nd-action-banner__info p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.nd-action-banner__buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: #ff6b00;
+  border: 1px solid #ff6b00;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #e05e00;
+  border-color: #e05e00;
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.25);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #003466;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #003466;
+  color: #003466;
+}
+
+/* ── 7. ÖZEL BİLDİRİM ŞABLONLARI ── */
+
+/* A. Hoş Geldiniz Şablonu (Welcome) */
+.welcome-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.welcome-hero {
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  padding: 3px 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.welcome-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #003466;
+}
+
+.welcome-message {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.welcome-feature-card {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.welcome-feature-icon {
+  font-size: 22px;
+  color: #ff6b00;
+  flex-shrink: 0;
+}
+
+.welcome-feature-content h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.welcome-feature-content p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.welcome-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.welcome-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.welcome-btn-primary:hover {
+  background: #e05e00;
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.25);
+}
+
+.welcome-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #003466;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.welcome-btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #003466;
+}
+
+/* B. Gönderen & Randevu Bilgisi (Sender & Appointment) */
+.sender-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.sender-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.sender-details h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #003466;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verified-icon {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.sender-details .phone {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.requested-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.requested-dates h5 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.date-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.date-item.available {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.date-item.unavailable {
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.message-preview {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border-left: 3px solid #ff6b00;
+  font-size: 13px;
+  color: #475569;
+  font-style: italic;
+}
+
+.notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* C. İlan Kartı & Fiyat Kıyaslama (Listing Card & Price Comparison) */
+.notification-listing-card {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.listing-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f5f9;
+}
+
+.listing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listing-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.listing-content h4 {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.listing-category,
+.listing-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.listing-price {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ff6b00;
+}
+
+.listing-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.price-comparison {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin: 4px 0;
+}
+
+.old-price .price-label,
+.new-price .price-label {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.old-price .price-value {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.price-arrow {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.new-price .price-value.highlight {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+/* D. Süre Sonu & Yenileme Seçenekleri (Expiry & Renewal) */
+.listing-header-with-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.expiry-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-weight: 800;
+}
+
+.expiry-value {
+  font-size: 14px;
+}
+
+.expiry-label {
+  font-size: 10px;
+}
+
+.renewal-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.renewal-option {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.renewal-option.recommended {
+  border-color: #ff6b00;
+  background: #fff7ed;
+}
+
+.option-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.option-description {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.option-price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ff6b00;
+  margin-top: 4px;
+}
+
+/* E. Değerlendirme & Yıldızlar (Seller Review) */
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fefce8;
+  border-radius: 8px;
+  border: 1px solid #fef08a;
+}
+
+.rating-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: #b45309;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nd-star {
+  font-size: 15px;
+}
+
+.nd-star--filled {
+  color: #eab308;
+}
+
+.nd-star--empty {
+  color: #cbd5e1;
+}
+
+.review-comment {
+  padding: 14px;
+  background: #f8fafc;
+  border-left: 3px solid #ff6b00;
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.review-comment p {
+  margin: 0;
+}
+
+/* F. Sistem Güncellemesi & İstatistikler */
+.update-info {
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.update-info h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.version-info {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(0, 52, 102, 0.08);
+  color: #003466;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.maintenance-window {
+  padding: 12px 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.listing-stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.listing-stat-item,
+.stat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.listing-stat-item svg,
+.stat-item svg {
+  color: #003466;
+  font-size: 13px;
+}
+
+.performance-info,
+.performance-report,
+.notification-tips {
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.notification-tips h5 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #003466;
+}
+
+.notification-tips ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* G. Hata Sayfası (Not Found) */
+.notification-error-page {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.notification-error-page h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003466;
+}
+
+.notification-error-page p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #64748b;
+  max-width: 420px;
+}
+
+.error-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #ff6b00;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  margin-top: 6px;
+}
+
+.error-btn-primary:hover {
+  background: #e05e00;
+}
+
+/* ── 8. MOBİL VE TABLET UYUMLULUĞU ── */
+@media (max-width: 768px) {
+  .notification-detail {
+    padding: 12px 14px 36px;
+  }
+
+  .notification-detail-content {
+    padding: 16px;
+  }
+
+  .nd-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nd-flow-steps {
+    flex-direction: column;
+  }
+
+  .nd-flow-connector {
+    transform: rotate(90deg);
+    padding: 2px 0;
+  }
+
+  .nd-action-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nd-action-banner__buttons {
+    width: 100%;
+  }
+
+  .nd-action-banner__buttons a {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .notification-listing-card {
+    flex-direction: column;
+  }
+
+  .listing-image {
+    width: 100%;
+    height: 140px;
+  }
+}

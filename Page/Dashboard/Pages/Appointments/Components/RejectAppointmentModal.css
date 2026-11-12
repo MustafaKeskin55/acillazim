@@ -1,0 +1,607 @@
+/* ==========================================================================
+   RANDEVU ONAY & RED MODALI (RejectAppointmentModal.css)
+   Kurumsal Uyumlu Ara Renk Paleti & GPU Mikro Animasyon Mimarisi
+   (Şeritsiz 1px Kenarlık • Eşmerkezli Köşe Yuvarlaklıkları)
+   ========================================================================== */
+
+@keyframes ramModalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ramSectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ramIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5px);
+  }
+}
+
+.reject-modal-overlay {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.52);
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 16px;
+  font-family: var(--font-body, 'Manrope', 'Inter', system-ui, sans-serif);
+}
+
+.reject-modal {
+  @apply w-full overflow-hidden flex flex-col;
+  background: #ffffff;
+  border-radius: 22px;
+  max-width: 520px;
+  max-height: 90vh;
+  border: 1px solid #c7d2fe;
+  box-shadow:
+    0 24px 56px -12px rgba(15, 23, 42, 0.18),
+    0 8px 20px -6px rgba(79, 70, 229, 0.08);
+  animation: ramModalReveal 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+}
+
+.reject-modal--approve {
+  border-color: #99f6e4;
+  box-shadow:
+    0 24px 56px -12px rgba(15, 23, 42, 0.16),
+    0 8px 24px -6px rgba(13, 148, 136, 0.12);
+}
+
+.reject-modal--reject {
+  border-color: #fecdd3;
+  box-shadow:
+    0 24px 56px -12px rgba(15, 23, 42, 0.16),
+    0 8px 24px -6px rgba(225, 29, 72, 0.1);
+}
+
+/* ── HEADER ── */
+.reject-modal-header {
+  @apply flex items-center justify-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e7ff;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 52%, #f0fdfa 100%);
+}
+
+.reject-modal--approve .reject-modal-header {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 52%, #f5f3ff 100%);
+  border-bottom-color: #ccfbf1;
+}
+
+.reject-modal--reject .reject-modal-header {
+  background: linear-gradient(135deg, #ffffff 0%, #fff1f2 52%, #fdf2f8 100%);
+  border-bottom-color: #fecdd3;
+}
+
+.reject-modal-title {
+  @apply flex items-center;
+  gap: 14px;
+}
+
+.ram-header-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  animation: ramIconFloat 4s ease-in-out infinite;
+}
+
+.ram-header-icon--approve {
+  background: linear-gradient(135deg, #ecfdf5 0%, #ccfbf1 100%);
+  border: 1px solid #99f6e4;
+  box-shadow: 0 4px 12px -2px rgba(13, 148, 136, 0.15);
+}
+
+.ram-header-icon--reject {
+  background: linear-gradient(135deg, #fff1f2 0%, #fce7f3 100%);
+  border: 1px solid #fbcfe8;
+  box-shadow: 0 4px 12px -2px rgba(225, 29, 72, 0.15);
+}
+
+.approve-icon {
+  color: #0d9488;
+  font-size: 20px;
+}
+
+.reject-icon {
+  color: #e11d48;
+  font-size: 19px;
+}
+
+.ram-header-text {
+  @apply flex flex-col;
+  gap: 3px;
+}
+
+.ram-eyebrow {
+  @apply inline-flex items-center uppercase;
+  width: fit-content;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2.5px 9px;
+  border-radius: 999px;
+}
+
+.ram-eyebrow--approve {
+  background: #f0fdfa;
+  color: #0f766e;
+  border: 1px solid #99f6e4;
+}
+
+.ram-eyebrow--reject {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.reject-modal-title h3 {
+  @apply m-0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.reject-modal-close {
+  @apply cursor-pointer flex items-center justify-center flex-shrink-0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #64748b;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reject-modal-close:hover {
+  background: #f5f3ff;
+  border-color: #c7d2fe;
+  color: #4f46e5;
+  transform: rotate(90deg);
+}
+
+/* ── BODY ── */
+.reject-modal-body {
+  @apply overflow-y-auto flex flex-col;
+  padding: 22px 24px;
+  max-height: 68vh;
+  gap: 16px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, rgba(13, 148, 136, 0.03) 0%, transparent 45%),
+    #ffffff;
+}
+
+/* ── HİZMET & TALEP ÖZET KARTI (Şeritsiz 1px Kenarlık) ── */
+.reject-info {
+  @apply flex flex-col;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 65%, #eef2ff 100%);
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid #c7d2fe;
+  box-shadow: 0 4px 14px -4px rgba(79, 70, 229, 0.07);
+  gap: 8px;
+  animation: ramSectionReveal 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.04s both;
+}
+
+.reject-info--reject {
+  background: linear-gradient(135deg, #ffffff 0%, #fdf2f8 65%, #fff1f2 100%);
+  border-color: #fbcfe8;
+  box-shadow: 0 4px 14px -4px rgba(219, 39, 119, 0.07);
+}
+
+.ram-info-kicker {
+  @apply uppercase;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #4f46e5;
+}
+
+.reject-info--reject .ram-info-kicker {
+  color: #db2777;
+}
+
+.reject-info h4 {
+  @apply m-0;
+  color: #0f172a;
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.ram-meta-chips {
+  @apply flex flex-wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ram-meta-chip {
+  @apply inline-flex items-center;
+  gap: 7px;
+  padding: 6px 11px;
+  border-radius: 9px;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.ram-meta-chip--datetime {
+  background: #ffffff;
+  border: 1px solid #c7d2fe;
+  color: #3730a3;
+}
+
+.ram-meta-chip--datetime strong {
+  font-weight: 700;
+  color: #312e81;
+}
+
+.ram-meta-chip--datetime .ram-meta-chip-icon {
+  @apply flex-shrink-0;
+  color: #4f46e5;
+  font-size: 12.5px;
+}
+
+.ram-meta-chip--location {
+  background: #fffaf5;
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+}
+
+.ram-meta-chip--location .ram-meta-chip-icon {
+  @apply flex-shrink-0;
+  color: #ea580c;
+  font-size: 12.5px;
+}
+
+.reject-location {
+  color: #c2410c !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+/* ── ONAY ESNASINDA TARİH / SAAT DEĞİŞTİRME KARTI ── */
+.approve-custom-schedule {
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: ramSectionReveal 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+.approve-custom-schedule:hover {
+  border-color: #99f6e4;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+}
+
+.approve-custom-schedule.is-active {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 65%, #ecfdf5 100%);
+  border-color: #99f6e4;
+  box-shadow: 0 8px 22px -6px rgba(13, 148, 136, 0.1);
+}
+
+.approve-custom-checkbox {
+  @apply flex items-start cursor-pointer select-none relative;
+  gap: 12px;
+}
+
+.approve-custom-checkbox input[type="checkbox"] {
+  @apply absolute pointer-events-none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ram-checkbox-visual {
+  @apply inline-flex items-center justify-center flex-shrink-0;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: transparent;
+  font-size: 11px;
+  margin-top: 1px;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.approve-custom-checkbox:hover .ram-checkbox-visual {
+  border-color: #0d9488;
+  background: #f0fdfa;
+}
+
+.approve-custom-checkbox input[type="checkbox"]:checked + .ram-checkbox-visual {
+  background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+  border-color: #0f766e;
+  color: #ffffff;
+  box-shadow: 0 3px 10px -2px rgba(13, 148, 136, 0.35);
+  transform: scale(1.03);
+}
+
+.ram-checkbox-copy {
+  @apply flex flex-col;
+  gap: 2px;
+}
+
+.ram-checkbox-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.ram-checkbox-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.approve-schedule-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #99f6e4;
+  animation: ramSectionReveal 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.approve-input-group {
+  @apply flex flex-col;
+  gap: 6px;
+}
+
+.approve-input-group label {
+  @apply flex items-center uppercase;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.04em;
+}
+
+.ram-input-label-icon {
+  @apply flex-shrink-0;
+  font-size: 12px;
+}
+
+.ram-input-label-icon--date {
+  color: #4f46e5;
+}
+
+.ram-input-label-icon--time {
+  color: #0d9488;
+}
+
+.approve-input-group input {
+  @apply outline-none;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #0f172a;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.approve-input-group input:hover {
+  border-color: #99f6e4;
+}
+
+.approve-input-group input:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.14);
+}
+
+/* ── ONAY / UYARI BİLGİ KUTUSU ── */
+.reject-confirmation {
+  @apply flex items-center text-left;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 13px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  animation: ramSectionReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.reject-confirmation--approve {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+  border-color: #99f6e4;
+}
+
+.reject-confirmation--reschedule {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-color: #fde68a;
+}
+
+.reject-confirmation--reject {
+  background: linear-gradient(135deg, #fff1f2 0%, #fce7f3 100%);
+  border-color: #fecdd3;
+}
+
+.ram-confirm-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+.reject-confirmation--approve .ram-confirm-icon {
+  color: #0d9488;
+  border: 1px solid #99f6e4;
+}
+
+.reject-confirmation--reschedule .ram-confirm-icon {
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.reject-confirmation--reject .ram-confirm-icon {
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+}
+
+.reject-confirmation p {
+  @apply m-0;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #1e293b;
+}
+
+.reject-confirmation--approve p {
+  color: #0f766e;
+}
+
+.reject-confirmation--reschedule p {
+  color: #92400e;
+}
+
+.reject-confirmation--reject p {
+  color: #9f1239;
+}
+
+/* ── FOOTER & AKSİYON BUTONLARI ── */
+.reject-modal-footer {
+  @apply flex justify-end items-center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.reject-cancel-btn,
+.reject-confirm-btn {
+  @apply cursor-pointer inline-flex items-center justify-center;
+  padding: 11px 20px;
+  border-radius: 11px;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-family: inherit;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  gap: 8px;
+}
+
+.reject-cancel-btn {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  min-width: 104px;
+}
+
+.reject-cancel-btn:hover:not(:disabled) {
+  background: #f5f3ff;
+  border-color: #c7d2fe;
+  color: #4338ca;
+  transform: translateY(-1px);
+}
+
+.reject-confirm-btn {
+  background: linear-gradient(135deg, #e11d48 0%, #db2777 100%);
+  color: #ffffff;
+  border: 1px solid #be123c;
+  box-shadow: 0 6px 16px -4px rgba(225, 29, 72, 0.32);
+  min-width: 160px;
+}
+
+.reject-confirm-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #be123c 0%, #be185d 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 22px -4px rgba(225, 29, 72, 0.4);
+}
+
+.approve-btn {
+  background: linear-gradient(135deg, #0d9488 0%, #10b981 100%) !important;
+  border: 1px solid #0f766e !important;
+  box-shadow: 0 6px 16px -4px rgba(13, 148, 136, 0.34) !important;
+}
+
+.approve-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0f766e 0%, #059669 100%) !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 22px -4px rgba(13, 148, 136, 0.42) !important;
+}
+
+.ram-btn-icon {
+  @apply flex-shrink-0;
+  font-size: 14px;
+}
+
+.reject-cancel-btn:disabled,
+.reject-confirm-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .reject-modal {
+    border-radius: 18px;
+  }
+
+  .reject-modal-header {
+    padding: 16px 18px;
+  }
+
+  .reject-modal-body {
+    padding: 16px 18px;
+  }
+
+  .approve-schedule-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .reject-modal-footer {
+    padding: 14px 18px;
+    flex-direction: column-reverse;
+  }
+
+  .reject-cancel-btn,
+  .reject-confirm-btn {
+
+    @apply w-full;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reject-modal,
+  .reject-info,
+  .approve-custom-schedule,
+  .approve-schedule-inputs,
+  .reject-confirmation,
+  .ram-header-icon {
+    animation: none !important;
+  }
+}

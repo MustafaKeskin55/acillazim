@@ -1,0 +1,263 @@
+/* NearbyListings.css - Converted to Tailwind @apply */
+.nrb-nearby-products-container {
+  @apply relative w-full overflow-hidden box-border;
+  max-width: 1920px;
+  height: 420px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-listings-header {
+  @apply relative text-center capitalize;
+  color: #ffb03a;
+  font-size: 24px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-listings-header:after {
+  content: "";
+  @apply absolute bottom-0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 107, 0, 0.1), rgba(255, 107, 0, 1), rgba(255, 107, 0, 0.1));
+  box-shadow: 0 1px 2px rgba(255, 107, 0, 0.2);
+}
+
+.nrb-nearby-products-container .nrb-nearby-slider-wrapper {
+  @apply relative w-full overflow-hidden m-0;
+  height: 360px;
+  padding: 0 20px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-slider {
+  @apply w-full;
+}
+
+/* Slick slider ayarları */
+.nrb-nearby-products-container .slick-list {
+  @apply m-0 overflow-visible;
+}
+
+.nrb-nearby-products-container .slick-track {
+  @apply flex m-0 items-start;
+  gap: var(--alz-listing-card-gap);
+  transition: transform 500ms linear !important;
+}
+
+.nrb-nearby-products-container .slick-slide {
+  @apply m-0 flex items-center justify-center box-border;
+  width: var(--alz-listing-card-w) !important;
+  height: var(--alz-listing-card-h) !important;
+}
+
+.nrb-nearby-products-container .nrb-nearby-card-wrapper {
+  @apply p-0 flex box-border;
+  width: var(--alz-listing-card-w) !important;
+  height: var(--alz-listing-card-h) !important;
+}
+
+.nrb-nearby-products-container .nrb-nearby-card-content {
+  @apply relative w-full h-full;
+}
+
+.nrb-nearby-products-container .slick-slide.slick-cloned {
+  visibility: visible !important;
+}
+
+.nrb-nearby-products-container .nrb-nearby-prev,
+.nrb-nearby-products-container .nrb-nearby-next {
+  @apply absolute p-0 cursor-pointer rounded-full flex items-center justify-center bg-white;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 47px;
+  height: 48.5px;
+  border: 1px solid lightgray;
+  z-index: 100;
+}
+
+.nrb-nearby-products-container .nrb-nearby-prev {
+  left: 15px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-next {
+  right: 15px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-prev .nrb-icon-container,
+.nrb-nearby-products-container .nrb-nearby-next .nrb-icon-container {
+  @apply flex items-center justify-center;
+  width: 25px;
+  height: 25px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-prev svg,
+.nrb-nearby-products-container .nrb-nearby-next svg {
+  @apply stroke-2;
+  font-size: 12.5px;
+  stroke: #000000;
+  fill: none;
+  width: 25px;
+  height: 25px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-prev svg path,
+.nrb-nearby-products-container .nrb-nearby-next svg path {
+  @apply stroke-2;
+  stroke: #000000;
+  fill: none;
+}
+
+/* Badge stilleri */
+.nrb-nearby-products-container .nrb-nearby-badges {
+  @apply absolute flex flex-col pointer-events-none;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+  gap: 5px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-badge {
+  @apply font-bold uppercase;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.nrb-nearby-products-container .nrb-nearby-badge-urgent {
+  background-color: #ff3b30;
+  color: white;
+}
+
+.nrb-nearby-products-container .nrb-nearby-badge-new {
+  background-color: #34c759;
+  color: white;
+}
+
+.nrb-nearby-products-container .nrb-nearby-badge-featured {
+  background-color: #007aff;
+  color: white;
+}
+
+/* ProductCard override */
+.nrb-nearby-products-container .prodcard-wrapper {
+  @apply h-full p-2 box-border;
+  width: var(--alz-listing-card-w) !important;
+  max-width: var(--alz-listing-card-w);
+}
+
+.nrb-nearby-products-container .prodcard-container {
+  @apply h-full;
+}
+
+.nrb-nearby-products-container .prodcard-image-container {
+  height: calc(var(--alz-listing-card-h) * 160 / 280);
+}
+
+/* Yükleniyor ve Hata Durumları */
+.nrb-nearby-listings-loading,
+.nrb-nearby-listings-error,
+.nrb-nearby-listings-empty {
+  @apply text-center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.nrb-nearby-listings-loading {
+  @apply italic;
+  color: #666;
+}
+
+.nrb-nearby-listings-error {
+  color: #d9534f;
+  background-color: #fdf7f7;
+  border: 1px solid #f5c6cb;
+}
+
+.nrb-nearby-listings-empty {
+  color: #666;
+  background-color: #f5f5f5;
+}
+
+.nrb-nearby-listings-empty-help {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
+.nrb-nearby-products-container .nrb-error-details {
+  @apply text-left;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.nrb-nearby-products-container .nrb-error-details summary {
+  @apply cursor-pointer text-center;
+  color: #888;
+}
+
+.nrb-nearby-products-container .nrb-error-details pre {
+  @apply overflow-auto font-mono;
+  background-color: #f8f8f8;
+  padding: 0.5rem;
+  max-height: 100px;
+  border: 1px solid #ddd;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1920px) {
+  .nrb-nearby-products-container {
+    @apply w-full;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .nrb-nearby-products-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .nrb-nearby-products-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nrb-nearby-products-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nrb-nearby-products-container .nrb-nearby-listings-header {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .nrb-nearby-products-container .nrb-nearby-slider-wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nrb-nearby-products-container .nrb-nearby-listings-header {
+    font-size: 16px;
+  }
+  
+  .nrb-nearby-products-container .nrb-nearby-slider-wrapper {
+    padding: 0 25px;
+  }
+  
+  .nrb-nearby-products-container .nrb-nearby-prev,
+  .nrb-nearby-products-container .nrb-nearby-next {
+    width: 25px;
+    height: 25px;
+  }
+}

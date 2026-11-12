@@ -1,0 +1,154 @@
+.prgrs-v1 {
+    @apply relative;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    max-width: 100%; 
+}
+
+.prgrs-v1__steps {
+    @apply flex justify-between items-center relative w-full;
+    max-width: 100%;
+    z-index: 1;
+    --progress-width: 33.33%;
+}
+
+/* Base line (gray) */
+.prgrs-v1__steps::before {
+    @apply absolute w-full;
+    content: '';
+    top: 21px;
+    left: 0;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 0;
+}
+
+/* Progress line (green) */
+.prgrs-v1__steps::after {
+    @apply absolute;
+    content: '';
+    top: 21px;
+    left: 0;
+    width: var(--progress-width);
+    height: 3px;
+    background: #00a651;
+    z-index: 0;
+    transition: width 0.5s ease;
+}
+
+.prgrs-v1__step {
+    @apply flex flex-col items-center relative text-center cursor-pointer;
+    z-index: 1;
+    transition: all 0.3s ease;
+    padding: 10px;
+    margin: -10px;
+}
+
+.prgrs-v1__circle {
+    @apply rounded-full flex items-center justify-center relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    font-weight: 700;
+    color: #757575;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.prgrs-v1__circle::before {
+    @apply flex items-center justify-center;
+    content: attr(data-number);
+    font-size: 18px;
+}
+
+.prgrs-v1__text {
+    @apply relative;
+    font-size: 14px;
+    color: #757575;
+    margin-top: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Active state */
+.prgrs-v1__step--active .prgrs-v1__circle {
+    background: #fff;
+    border-color: #00a651;
+    color: #00a651;
+    border-width: 2px;
+}
+
+.prgrs-v1__step--active .prgrs-v1__text {
+    color: #00a651;
+    font-weight: 600;
+}
+
+/* Completed state */
+.prgrs-v1__step--completed .prgrs-v1__circle {
+    background: #00a651;
+    border-color: #00a651;
+    color: #fff;
+}
+
+.prgrs-v1__step--completed .prgrs-v1__text {
+    color: #00a651;
+}
+
+/* Hover effects for completed and active steps */
+.prgrs-v1__step--completed:hover .prgrs-v1__text,
+.prgrs-v1__step--active:hover .prgrs-v1__text {
+    transform: scale(1.05);
+}
+
+
+/* Hover effect for future steps */
+.prgrs-v1__step:not(.prgrs-v1__step--completed):not(.prgrs-v1__step--active):hover .prgrs-v1__circle {
+    border-color: #b4b4b4;
+}
+
+.prgrs-v1__step:not(.prgrs-v1__step--completed):not(.prgrs-v1__step--active):hover .prgrs-v1__text {
+    color: #555;
+}
+
+/* Disabled state */
+.prgrs-v1__step[style*="not-allowed"] {
+    opacity: 0.6;
+}
+
+.prgrs-v1__step[style*="not-allowed"]:hover {
+    transform: none;
+}
+
+.prgrs-v1__step[style*="not-allowed"] .prgrs-v1__circle:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .prgrs-v1__text {
+        font-size: 12px;
+    }
+
+    .prgrs-v1__circle {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .prgrs-v1__circle::before {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .prgrs-v1__text {
+
+        @apply hidden;
+    }
+
+    .prgrs-v1 {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+}

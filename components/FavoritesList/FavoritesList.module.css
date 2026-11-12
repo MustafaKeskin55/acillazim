@@ -1,0 +1,65 @@
+/* ==========================================================================
+   FavoritesList.module.css — Tailwind CSS (@apply Mimarisi)
+   - Merkezi Tasarım Sistemi Uyumlu
+   ========================================================================== */
+
+.favoritesContainer {
+  @apply max-w-6xl mx-auto my-8 px-4;
+}
+
+.pageTitle {
+  @apply text-center relative text-2xl font-bold text-slate-900 mb-8 tracking-tight;
+}
+
+.pageTitle:after {
+  content: '';
+  @apply absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-14 h-0.5 bg-brand-deep rounded-full;
+}
+
+.filterTabs {
+  @apply flex gap-3 mb-6;
+}
+
+.tab {
+  @apply border-0 cursor-pointer py-2.5 px-5 rounded-xl bg-slate-100 text-slate-600 transition-colors text-xs font-semibold;
+}
+
+.tab:hover {
+  @apply bg-slate-200 text-slate-900;
+}
+
+.tab.active {
+  @apply bg-brand-deep text-white shadow-sm;
+}
+
+.tab.active:hover {
+  @apply bg-brand-accent text-white;
+}
+
+.favoritesGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8;
+}
+
+.favoriteCard {
+  @apply overflow-hidden bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-200;
+}
+
+.favoriteCard:hover {
+  @apply shadow-md -translate-y-0.5 border-slate-300;
+}
+
+.cardImage {
+  @apply overflow-hidden relative w-full h-48 bg-slate-100;
+}
+
+.cardContent {
+  @apply p-4 flex flex-col gap-1;
+}
+
+.cardContent h3 {
+  @apply text-sm font-bold text-slate-900 m-0 truncate;
+}
+
+.cardContent p {
+  @apply text-xs text-slate-500 m-0 line-clamp-2 leading-relaxed;
+}

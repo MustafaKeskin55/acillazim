@@ -1,0 +1,5135 @@
+{
+  "service_listings": [
+    {
+      "id": "svc_3001",
+      "title": "Profesyonel Ev Temizliği Hizmeti - İstanbul Anadolu Yakası",
+      "description": "<p>10 yılı aşkın tecrübemizle İstanbul Anadolu Yakası genelinde profesyonel ev temizliği hizmeti sunuyoruz.</p><p>Ekibimiz eğitimli ve sertifikalı temizlik personelinden oluşmaktadır. Kullandığımız ürünler çevre dostu ve insan sağlığına uygun markalardan seçilmektedir.</p><p>Hizmetlerimiz arasında rutin ev temizliği, derin temizlik, taşınma öncesi/sonrası temizlik, inşaat sonrası temizlik yer almaktadır.</p>",
+      "category": {
+        "id": 12586,
+        "name": "Ev Temizliği",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12585,
+        "parent_name": "Temizlik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3001_1",
+          "package_title": "Standart Temizlik",
+          "description": "1+1 veya 2+1 daire için kapsamlı temizlik. Tüm odalar, mutfak ve banyo dahil.",
+          "price": "1500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Tüm odaların süpürülmesi ve silinmesi",
+            "Mutfak temizliği ve dezenfeksiyonu",
+            "Banyo ve tuvalet temizliği",
+            "Toz alma ve cam temizliği",
+            "Çöplerin toplanması"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3001_2",
+          "package_title": "Detaylı Temizlik",
+          "description": "3+1 ve üzeri daireler için derinlemesine temizlik. Balkon ve camlar dahil.",
+          "price": "2500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Standart temizlik dahil",
+            "Balkon temizliği",
+            "Cam ve çerçeve temizliği",
+            "Mutfak içi temizlik",
+            "Banyo derin temizlik",
+            "Halı aspiratörle temizlik"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3001_3",
+          "package_title": "Premium Kapsamlı Temizlik",
+          "description": "Villa ve lüks konutlar için üst düzey temizlik. Tüm alanlar dahil.",
+          "price": "4500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Detaylı temizlik dahil",
+            "Merdiven ve koridor temizliği",
+            "Avize temizliği",
+            "Dolap içi temizlik",
+            "Ankastre cihaz temizliği",
+            "Dezenfeksiyon işlemi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Resmi tatillerde hizmet verilmemektedir."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Caferağa",
+      "address": "Caferağa Mah. Moda Cad. No:45/A Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200",
+        "https://images.unsplash.com/photo-1628177142898-993a426fbf0a?w=1200",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Kocaeli"
+      ],
+      "certificates": [
+        {
+          "name": "ISO 9001 Kalite Yönetimi",
+          "title": "Kalite Standartları Sertifikası",
+          "date": "2023"
+        },
+        {
+          "name": "Çevre Dostu Temizlik Ürünleri Sertifikası",
+          "title": "Green Clean Certified",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hangi temizlik ürünlerini kullanıyorsunuz?",
+          "answer": "Çevre dostu ve Sağlık Bakanlığı onaylı temizlik ürünleri kullanıyoruz."
+        },
+        {
+          "question": "Temizlik kaç saat sürüyor?",
+          "answer": "Dairenin büyüklüğüne göre ortalama 3-5 saat sürmektedir."
+        },
+        {
+          "question": "Ödeme nasıl yapılıyor?",
+          "answer": "Hizmet tamamlandıktan sonra nakit veya kredi kartı ile ödeme yapabilirsiniz."
+        }
+      ],
+      "service_features": [
+        "Evrak/Diploma Sahibi",
+        "Sigortalı Personel",
+        "Referans Mevcut",
+        "Uygun Fiyat",
+        "Hızlı Teslimat",
+        "Garantili Hizmet"
+      ],
+      "about_text": "2014 yılından bu yana İstanbul'da temizlik sektöründe hizmet vermekteyiz. 20 kişilik uzman ekibimizle konut ve iş yeri temizliğinde profesyonel çözümler sunuyoruz. %98 müşteri memnuniyet oranı elde ettik.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "30 dakika",
+      "created_at": "2025-01-15T10:30:00Z",
+      "updated_at": "2025-06-20T14:22:00Z"
+    },
+    {
+      "id": "svc_3002",
+      "title": "Uzman Su Tesisatçısı - 7/24 Acil Tesisat Hizmeti",
+      "description": "<p>İstanbul genelinde 7/24 acil su tesisatı hizmeti sunan deneyimli tesisatçı ekibimiz, her türlü su kaçağı tespiti, tıkanıklık açma, kombi montajı gibi konularda uzman çözüm sağlamaktadır.</p><p>Son teknoloji cihazlarımızla su kaçağını termal kamerayla tespit ediyor, kırmadan ve dökmeden sorunu çözüyoruz.</p>",
+      "category": {
+        "id": 12543,
+        "name": "Su Tesisatçısı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12541,
+        "parent_name": "Teknik & Tesisat Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3002_1",
+          "package_title": "Su Kaçağı Tespiti",
+          "description": "Termal kamera ile su kaçağı tespiti. Tespit ücretsiz.",
+          "price": "500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Termal kamera ile tespit",
+            "Dinleme cihazıyla nokta atışı",
+            "Görsel raporlama",
+            "Tespit ücretsiz"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3002_2",
+          "package_title": "Tıkanıklık Açma",
+          "description": "Kırmadan tıkanıklık açma. Gider, tuvalet, lavabo dahil.",
+          "price": "800",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Robot cihaz ile açma",
+            "Kırmadan-dökmeden işlem",
+            "Kamera ile kontrol",
+            "6 ay garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3002_3",
+          "package_title": "Komple Tesisat Yenileme",
+          "description": "Eski tesisatın sökülüp yenilenmesi. Malzeme ve işçilik dahil.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "Keşif ve proje çalışması",
+            "Eski tesisat sökümü",
+            "PPR boru ile yenileme",
+            "Garanti belgesi",
+            "Malzeme dahil"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "07:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "07:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "07:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "07:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "07:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "special_notes": "7/24 acil tesisat hizmeti için WhatsApp'tan yazınız."
+      },
+      "city": "İstanbul",
+      "district": "Üsküdar",
+      "neighborhood": "Altunizade",
+      "address": "Altunizade Mah. Bağlarbaşı Cad. No:12/3 Üsküdar/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200",
+        "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200",
+        "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800"
+      ],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "İstanbul Avrupa Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Ustalık Belgesi",
+          "title": "Tesisatçılık Ustalık Belgesi",
+          "date": "2018"
+        },
+        {
+          "name": "ISİG Sertifikası",
+          "title": "İş Sağlığı ve Güvenliği",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Su kaçağı tespiti ne kadar sürüyor?",
+          "answer": "Termal kamera ile tespit işlemi ortalama 30-60 dakika sürmektedir."
+        },
+        {
+          "question": "Garanti veriyor musunuz?",
+          "answer": "Yaptığımız tüm tamiratlara 1 yıl garanti veriyoruz."
+        },
+        {
+          "question": "Gece geç saatlerde hizmet veriyor musunuz?",
+          "answer": "Evet, 7/24 acil tesisat hizmeti sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "7/24 Hizmet",
+        "Kırmadan Tespit",
+        "Hızlı Müdahale",
+        "Garantili İşçilik",
+        "Uygun Fiyat",
+        "Deneyimli Ekip"
+      ],
+      "about_text": "15 yılı aşkın tecrübemizle İstanbul'da tesisat sektöründe hizmet vermekteyiz. Son teknoloji cihazlarımız ve deneyimli ekibimizle sorunlarınızı en kısa sürede çözüyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "15 dakika",
+      "created_at": "2025-02-10T08:00:00Z",
+      "updated_at": "2025-06-19T11:45:00Z"
+    },
+    {
+      "id": "svc_3003",
+      "title": "Profesyonel Boya & Badana Hizmeti - İstanbul Geneli",
+      "description": "<p>Ev ve iş yeri boyama konusunda uzman kadromuzla hizmetinizdeyiz. Dış cephe, iç cephe, saten boya, plastik boya ve dekoratif boya uygulamaları yapılmaktadır.</p><p>Keşif ve fiyat teklifi ücretsizdir.</p>",
+      "category": {
+        "id": 12598,
+        "name": "Boyacı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12593,
+        "parent_name": "Usta & İşçilik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3003_1",
+          "package_title": "1+1 Daire Boyama",
+          "description": "1+1 daire için komple iç cephe boyama. Malzeme dahil.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "3",
+          "features": [
+            "Duvar tamiri ve zımpara",
+            "2 kat boya uygulaması",
+            "Malzeme dahil",
+            "Temizlik sonrası"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3003_2",
+          "package_title": "3+1 Daire Boyama",
+          "description": "3+1 daire için komple iç cephe boyama. Malzeme ve işçilik dahil.",
+          "price": "18000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "Duvar tamiri ve zımpara",
+            "2 kat boya uygulaması",
+            "Banyo ve mutfak dahil",
+            "Malzeme dahil",
+            "Temizlik sonrası"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3003_3",
+          "package_title": "Dış Cephe Boyama",
+          "description": "Bina dış cephe boyama. İskele dahil.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "10",
+          "features": [
+            "Keşif ve proje",
+            "İskele kurulumu",
+            "Silikonlu boya",
+            "Malzeme dahil",
+            "2 yıl garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "15:00",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "sunday": {
+          "start": "00:00",
+          "end": "00:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Keşif için lütfen randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beşiktaş",
+      "neighborhood": "Levent",
+      "address": "Levent Mah. Büyükdere Cad. No:185/4 Beşiktaş/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200",
+        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1200",
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Boya Ustalık Belgesi",
+          "title": "Mesleki Yeterlilik Belgesi",
+          "date": "2019"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hangi boya markalarını kullanıyorsunuz?",
+          "answer": "Dyo, Marshall, Polisan, Filli Boya gibi kaliteli markalar kullanıyoruz."
+        },
+        {
+          "question": "Malzeme dahil mi?",
+          "answer": "Paketlerimizin çoğunda malzeme dahildir."
+        }
+      ],
+      "service_features": [
+        "Ücretsiz Keşif",
+        "Malzeme Dahil",
+        "Sigortalı Ekip",
+        "Referans Mevcut",
+        "Hızlı Teslimat"
+      ],
+      "about_text": "12 yıllık tecrübemizle İstanbul'un her ilçesinde boya ve badana hizmeti sunuyoruz. 2000'den fazla daire boyama tecrübemiz mevcuttur.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-03-05T09:15:00Z",
+      "updated_at": "2025-06-18T16:30:00Z"
+    },
+    {
+      "id": "svc_3004",
+      "title": "Web Tasarım & Yazılım - Kurumsal ve E-Ticaret Çözümleri",
+      "description": "<p>İşletmenizin dijital dünyadaki yüzü olan web sitenizi, modern ve profesyonel tasarımlarla hayata geçiriyoruz.</p><p>React, Next.js, WordPress, Shopify gibi güncel teknolojilerle Responsive web siteleri geliştiriyoruz.</p>",
+      "category": {
+        "id": 12628,
+        "name": "Web Tasarım / Yazılım",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12627,
+        "parent_name": "Dijital & Freelance Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3004_1",
+          "package_title": "Kurumsal Web Sitesi",
+          "description": "5-10 sayfalık kurumsal web sitesi. Responsive tasarım, SEO dahil.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "14",
+          "features": [
+            "5-10 sayfa",
+            "Responsive tasarım",
+            "SEO optimizasyonu",
+            "SSL sertifikası",
+            "1 yıl hosting dahil",
+            "CMS paneli"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3004_2",
+          "package_title": "E-Ticaret Sitesi",
+          "description": "Ödeme sistemi entegreli e-ticaret sitesi.",
+          "price": "35000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "Sınırsız ürün",
+            "Ödeme sistemi",
+            "Kargo entegrasyonu",
+            "Stok yönetimi",
+            "SEO paketi",
+            "6 ay destek"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3004_3",
+          "package_title": "Özel Yazılım Projesi",
+          "description": "İhtiyaç özelinde yazılım geliştirme.",
+          "price": "50000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "45",
+          "features": [
+            "İhtiyaç analizi",
+            "UI/UX tasarım",
+            "Geliştirme ve test",
+            "Dokümantasyon",
+            "1 yıl bakım",
+            "Kaynak kod teslimi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "tuesday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "wednesday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "thursday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "friday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "sunday": {
+          "start": "00:00",
+          "end": "00:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Toplantılar için lütfen randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Şişli",
+      "neighborhood": "Merkez",
+      "address": "Merkez Mah. Büyükdere Cad. No:128/5 Şişli/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800"
+      ],
+      "service_areas": [
+        "Türkiye Geneli",
+        "Uzaktan Hizmet"
+      ],
+      "certificates": [
+        {
+          "name": "Google Partner",
+          "title": "Google Ads Sertifikası",
+          "date": "2024"
+        },
+        {
+          "name": "Meta Business Partner",
+          "title": "Sosyal Medya Pazarlama",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Proje süresi ne kadar?",
+          "answer": "Kurumsal site 2 hafta, e-ticaret 4-6 hafta, özel yazılım 2-3 ay."
+        },
+        {
+          "question": "Ödeme planı nasıl?",
+          "answer": "Başlangıçta %30, tasarım onayında %30, teslimde %40."
+        },
+        {
+          "question": "Destek devam ediyor mu?",
+          "answer": "Evet, 6-12 ay ücretsiz teknik destek sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "Responsive Tasarım",
+        "SEO Dostu",
+        "Hızlı Yüklenme",
+        "Güncel Teknolojiler",
+        "Destek Hizmeti",
+        "Referanslar Mevcut"
+      ],
+      "about_text": "5 yıllık deneyimimizle küçük işletmelerden büyük markalara web tasarım ve yazılım hizmeti sunuyoruz. 200'den fazla projeyi başarıyla tamamladık.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-01-20T11:00:00Z",
+      "updated_at": "2025-06-21T09:15:00Z"
+    },
+    {
+      "id": "svc_3005",
+      "title": "Düğün Fotoğrafçısı - Profesyonel Düğün & Nişan Çekimi",
+      "description": "<p>Ömür boyu hatırlanacak düğün gününüzü, sanatsal ve duygu dolu karelerle ölümsüzleştiriyoruz.</p><p>Düğün, nişan, kına gecesi, pre-wedding çekimleri yapıyoruz.</p>",
+      "category": {
+        "id": 12636,
+        "name": "Düğün Fotoğrafçısı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12635,
+        "parent_name": "Fotoğraf & Video"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3005_1",
+          "package_title": "Standart Paket",
+          "description": "Düğün günü fotoğraf çekimi. 4 saat çekim, 200+ fotoğraf.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "4 saat çekim",
+            "200+ düzenlenmiş fotoğraf",
+            "Online galeri",
+            "USB ile teslim",
+            "1 Photographer"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3005_2",
+          "package_title": "Premium Paket",
+          "description": "Tam gün çekim + klip. 8 saat, 500+ fotoğraf, 3-5 dk klip.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "45",
+          "features": [
+            "8 saat çekim",
+            "500+ fotoğraf",
+            "3-5 dk klip",
+            "Dış mekan dahil",
+            "2 Photographer",
+            "Albüm dahil"
+          ],
+          "is_popular": true,
+          "discount_percentage": "15"
+        },
+        {
+          "id": "pkg_3005_3",
+          "package_title": "Lüks Paket",
+          "description": "Her şey dahil. Düğün + nişan + klip + drone + albüm.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "60",
+          "features": [
+            "Sınırsız çekim",
+            "800+ fotoğraf",
+            "5-7 dk klip",
+            "Nişan dahil",
+            "Drone dahil",
+            "3 Photographer",
+            "2 Albüm"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "22:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "08:00",
+          "end": "22:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "special_notes": "En az 2 ay önce iletişime geçmenizi öneririz."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Fenerbahçe",
+      "address": "Fenerbahçe Mah. Bağdat Cad. No:234/A Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200",
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200",
+        "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800",
+        "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "İzmir",
+        "Antalya",
+        "Bodrum"
+      ],
+      "certificates": [
+        {
+          "name": "WPPI Üyeliği",
+          "title": "Wedding & Portrait Photographers International",
+          "date": "2022"
+        },
+        {
+          "name": "Canon Pro Photographer",
+          "title": "Canon Profesyonel Fotoğrafçı",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Ne kadar önce randevu almamız gerekiyor?",
+          "answer": "En az 2-3 ay önce iletişime geçmenizi öneririz."
+        },
+        {
+          "question": "Dış çekimde ulaşım sağlanıyor mu?",
+          "answer": "Evet, çiftlerimize ulaşım desteği sağlıyoruz."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Ekipman",
+        "Dış Çekim",
+        "Klip Çekimi",
+        "Drone Çekimi",
+        "Albüm",
+        "Online Galeri"
+      ],
+      "about_text": "10 yılı aşkın tecrübemizle binlerce çiftin en özel günlerini fotoğrafladık. Ödüllü fotoğraflarımız ve mutlu müşterilerimiz işimizin kalitesinin kanıtıdır.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "3 saat",
+      "created_at": "2025-02-01T14:00:00Z",
+      "updated_at": "2025-06-20T10:00:00Z"
+    },
+    {
+      "id": "svc_3006",
+      "title": "Kombi Bakım & Onarım - Kışa Hazırlık Servisi",
+      "description": "<p>Kombilerinizin periyodik bakımını, onarımını ve montajını profesyonel ekibimizle gerçekleştiriyoruz.</p><p>Doğalgaz sızıntı testi, petek temizliği, kombi iç temizliği, kart tamiri gibi tüm hizmetleri sunuyoruz.</p>",
+      "category": {
+        "id": 12545,
+        "name": "Kombi Bakım & Onarım",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12541,
+        "parent_name": "Teknik & Tesisat Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3006_1",
+          "package_title": "Periyodik Bakım",
+          "description": "Kombi yıllık bakım. Gaz ayarı, temizlik.",
+          "price": "1200",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "İç temizlik",
+            "Gaz basıncı kontrolü",
+            "Brulör temizliği",
+            "Kontrol raporu",
+            "1 yıl garanti"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3006_2",
+          "package_title": "Petek Temizliği",
+          "description": "Profesyonel petek temizliği.",
+          "price": "2000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Cihazla temizlik",
+            "Tesisat yıkama",
+            "Isı ölçümü",
+            "6 ay garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3006_3",
+          "package_title": "Kombi Değişimi",
+          "description": "Yeni kombi montajı dahil.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Eski söküm",
+            "Yeni montaj",
+            "Baca bağlantısı",
+            "Deneme",
+            "2 yıl garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Ataşehir",
+      "neighborhood": "İçerenköy",
+      "address": "İçerenköy Mah. Değirmenyolu Cad. No:56/A Ataşehir/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200",
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800"
+      ],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "İstanbul Avrupa Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Gaz Sertifikası",
+          "title": "Doğalgaz İşletme Belgesi",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Kombi bakımı ne sıklıkla yapılmalı?",
+          "answer": "Yılda en az 1 kez, kış öncesi yaptırmanızı öneririz."
+        },
+        {
+          "question": "Bakım ne kadar sürüyor?",
+          "answer": "Periyodik bakım ortalama 1-1.5 saat sürer."
+        }
+      ],
+      "service_features": [
+        "Yetkili Servis",
+        "Hızlı Çözüm",
+        "Garantili İşçilik",
+        "7/24 Destek",
+        "Uygun Fiyat"
+      ],
+      "about_text": "10 yıllık tecrübemizle İstanbul'da kombi bakım, onarım ve montaj hizmeti sunuyoruz. 8000'den fazla bakım hizmeti verdik.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "30 dakika",
+      "created_at": "2025-03-10T08:30:00Z",
+      "updated_at": "2025-06-21T07:00:00Z"
+    },
+    {
+      "id": "svc_3007",
+      "title": "Özel Ders - Matematik, Fizik, Kimya Lise ve Üniversite Hazırlık",
+      "description": "<p>Alanında uzman öğretmenlerimizle birebir veya küçük grup özel ders hizmeti sunuyoruz.</p><p>TYT, AYT, LGS hazırlık, okula takviye eğitim programları düzenliyoruz.</p>",
+      "category": {
+        "id": 12621,
+        "name": "Özel Ders",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12620,
+        "parent_name": "Eğitim & Kurs"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3007_1",
+          "package_title": "Birebir Ders (4 Saat)",
+          "description": "Tek kişilik özel ders.",
+          "price": "3000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "4 saat birebir",
+            "Kişiye özel müfredat",
+            "Deneme sınavları",
+            "Ödev takibi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3007_2",
+          "package_title": "Küçük Grup (3 Kişi)",
+          "description": "3 kişilik grup dersi.",
+          "price": "1800",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "4 saat grup",
+            "Maks. 3 kişi",
+            "Gruba özel program",
+            "Deneme sınavları"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3007_3",
+          "package_title": "Yoğun Hazırlık",
+          "description": "Yoğun program. 8 saat + online destek.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "8 saat birebir",
+            "WhatsApp destek",
+            "Haftalık deneme",
+            "Video kayıtları",
+            "Kaynak dahil"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "14:00",
+          "end": "21:00",
+          "is_active": true,
+          "break_start": "17:00",
+          "break_end": "17:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Maltepe",
+      "neighborhood": "Büyükbakkalköy",
+      "address": "Büyükbakkalköy Mah. Tugay Yolu Cad. No:89/4 Maltepe/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200",
+        "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul",
+        "Online Türkiye Geneli"
+      ],
+      "certificates": [
+        {
+          "name": "Öğretmenlik Sertifikası",
+          "title": "Matematik Öğretmenliği",
+          "date": "2020"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Deneme dersi var mı?",
+          "answer": "Evet, ilk ders ücretsiz tanışma ve seviye tespit dersidir."
+        },
+        {
+          "question": "Online dersler nasıl?",
+          "answer": "Zoom veya Google Meet üzerinden interaktif dersler yapılır."
+        }
+      ],
+      "service_features": [
+        "Birebir İlgilenme",
+        "Kişiye Özel Program",
+        "Online Ders",
+        "Deneme Sınavı",
+        "Ücretsiz Tanışma Dersi"
+      ],
+      "about_text": "6 yıllık öğretmenlik deneyimimle binlerce öğrencinin sınav başarısına katkıda bulundum.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-04-01T16:00:00Z",
+      "updated_at": "2025-06-20T13:45:00Z"
+    },
+    {
+      "id": "svc_3008",
+      "title": "Profesyonel Grafik Tasarım - Logo, Broşür, Kartvizit",
+      "description": "<p>Markanızın kimliğini yansıtan profesyonel grafik tasarım hizmetleri sunuyoruz.</p><p>Logo tasarımı, kurumsal kimlik, broşür, kartvizit, sosyal medya görselleri üretiyoruz.</p>",
+      "category": {
+        "id": 12629,
+        "name": "Grafik Tasarım",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12627,
+        "parent_name": "Dijital & Freelance Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3008_1",
+          "package_title": "Logo Tasarımı",
+          "description": "3 alternatif, sınırsız revizyon.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "3 alternatif",
+            "Sınırsız revizyon",
+            "Vektörel dosyalar",
+            "PNG/JPG çıktılar",
+            "Telif hakkı devri"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3008_2",
+          "package_title": "Kurumsal Kimlik",
+          "description": "Logo + kartvizit + broşür.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "15",
+          "features": [
+            "Logo (5 alternatif)",
+            "Kartvizit",
+            "Antetli kağıt",
+            "Broşür",
+            "Kimlik rehberi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3008_3",
+          "package_title": "Aylık Tasarım Desteği",
+          "description": "Sosyal medya görselleri aylık.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "20 görsel",
+            "10 banner",
+            "Story tasarımları",
+            "Revizyon hakları"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Suadiye",
+      "address": "Suadiye Mah. Bağdat Cad. No:456/8 Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200",
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800"
+      ],
+      "service_areas": [
+        "Türkiye Geneli",
+        "Uzaktan Hizmet"
+      ],
+      "certificates": [
+        {
+          "name": "Adobe Certified Expert",
+          "title": "Adobe Photoshop Uzmanlığı",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Tasarım süreci nasıl?",
+          "answer": "İhtiyaç analizi sonrası 2-3 alternatif sunulur, sınırsız revizyon yapılır."
+        },
+        {
+          "question": "Kaynak dosyalar veriliyor mu?",
+          "answer": "Evet, tüm paketlerde kaynak dosyalar müşteriye teslim edilir."
+        }
+      ],
+      "service_features": [
+        "Sınırsız Revizyon",
+        "Telif Hakkı Devri",
+        "Kaynak Dosya",
+        "Hızlı Teslimat",
+        "Profesyonel Tasarım"
+      ],
+      "about_text": "8 yıllık deneyimimle yüzlerce markaya kurumsal kimlik ve tasarım hizmeti sundum.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-02-20T10:00:00Z",
+      "updated_at": "2025-06-19T15:30:00Z"
+    },
+    {
+      "id": "svc_3009",
+      "title": "Oto Kaporta & Boya - Profesyonel Araç Boyama",
+      "description": "<p>Aracınıza değer katacak profesyonel kaporta ve boya hizmetleri sunuyoruz.</p><p>Çizik giderme, dolu hasarı onarımı, lokal boya, komple boya, pasta-cila yapılıyor.</p>",
+      "category": {
+        "id": 12581,
+        "name": "Oto Kaporta & Boya",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12576,
+        "parent_name": "Otomotiv Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3009_1",
+          "package_title": "Pasta & Cila",
+          "description": "Profesyonel pasta ve cila.",
+          "price": "3000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Oto yıkama",
+            "Pasta ile çizik giderme",
+            "Cila koruma",
+            "Parlatma",
+            "3 ay garanti"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3009_2",
+          "package_title": "Lokal Boya",
+          "description": "Tek panel boya.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "3",
+          "features": [
+            "Hasar tespiti",
+            "Renk kodlama",
+            "Fırça boyama",
+            "Vernik",
+            "1 yıl garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3009_3",
+          "package_title": "Komple Boya",
+          "description": "Tüm aracın boyanması.",
+          "price": "35000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "7",
+          "features": [
+            "Komple söküm",
+            "Zımpara ve astar",
+            "3 kat boya + 2 kat vernik",
+            "Kurutma odası",
+            "2 yıl garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:30",
+          "end": "18:30",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Pendik",
+      "neighborhood": "Kaynarca",
+      "address": "Kaynarca Mah. Ankara Cad. No:234 Pendik/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800"
+      ],
+      "service_areas": [
+        "İstanbul Anadolu Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Oto Boya Ustalık Belgesi",
+          "title": "Mesleki Yeterlilik",
+          "date": "2020"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Boyama ne kadar sürüyor?",
+          "answer": "Lokal 2-3 gün, komple 5-7 gün sürmektedir."
+        },
+        {
+          "question": "Sigorta kapsamında mısınız?",
+          "answer": "Evet, kasko kapsamındaki hasar onarımında hizmet veriyoruz."
+        }
+      ],
+      "service_features": [
+        "Ücretsiz Keşif",
+        "Sigorta Kapsamı",
+        "Orijinal Boya",
+        "Kurutma Odası",
+        "Garantili İşçilik"
+      ],
+      "about_text": "20 yıllık deneyimimizle İstanbul'da oto kaporta ve boya sektöründe hizmet vermekteyiz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-01-25T09:00:00Z",
+      "updated_at": "2025-06-21T08:15:00Z"
+    },
+    {
+      "id": "svc_3010",
+      "title": "Evden Eve Nakliyat - Sigortalı ve Profesyonel Taşımacılık",
+      "description": "<p>Türkiye genelinde evden eve, ofisten ofise, parça eşya taşımacılığı hizmeti sunuyoruz.</p><p>Eşyalarınız sigortalanır, ambalajlama ve montaj hizmeti dahildir.</p>",
+      "category": {
+        "id": 48344,
+        "name": "Evden Eve Nakliyat",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 48343,
+        "parent_name": "Nakliye ve Lojistik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3010_1",
+          "package_title": "1+1 Nakliyat",
+          "description": "1+1 daire için ambalajlı nakliyat.",
+          "price": "12000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Ambalajlama",
+            "Asansörlü taşıma",
+            "Montaj/demontaj",
+            "Sigorta",
+            "3 personel"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3010_2",
+          "package_title": "3+1 Nakliyat",
+          "description": "3+1 daire komple nakliyat.",
+          "price": "22000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Komple ambalaj",
+            "Asansörlü",
+            "Mobilya montajı",
+            "Sigorta",
+            "5 personel",
+            "1 hafta depolama"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3010_3",
+          "package_title": "Şehirlerarası",
+          "description": "İstanbul'dan diğer şehirlere.",
+          "price": "35000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "3",
+          "features": [
+            "Sigorta",
+            "Komple ambalaj",
+            "Özel araç",
+            "Montaj",
+            "Takip"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Başakşehir",
+      "neighborhood": "Bahçeşehir",
+      "address": "Bahçeşehir 1. Kısım Mah. 2009. Sok. No:45 Başakşehir/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1600515465163-01d8d3f3b8ce?w=1200",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+      ],
+      "service_areas": [
+        "Türkiye Geneli"
+      ],
+      "certificates": [
+        {
+          "name": "K1-K3 Yetki Belgesi",
+          "title": "Karayolu Taşıma Yetki",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Eşyalar sigortalanıyor mu?",
+          "answer": "Evet, tüm eşyalar taşıma sigortası ile güvence altındadır."
+        },
+        {
+          "question": "Depolama hizmeti var mı?",
+          "answer": "Evet, 1 aya kadar ücretsiz depolama sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "Sigorta Dahil",
+        "Asansörlü Nakliyat",
+        "Ambalajlama",
+        "Montaj Hizmeti",
+        "Depolama",
+        "7/24 Destek"
+      ],
+      "about_text": "15 yıllık deneyimimizle binlerce ailenin taşınmasına yardımcı olduk.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "30 dakika",
+      "created_at": "2025-02-05T07:30:00Z",
+      "updated_at": "2025-06-21T06:45:00Z"
+    },
+    {
+      "id": "svc_3011",
+      "title": "Profesyonel Masaj & Terapötik Masaj Hizmeti",
+      "description": "<p>Lisanslı masör ve masözlerimizle terapötik masaj hizmeti sunuyoruz.</p><p>Spor masajı, derin doku, thai masajı, aromaterapi, refleksoloji uyguluyoruz.</p>",
+      "category": {
+        "id": 12604,
+        "name": "Masaj & Terapi",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12602,
+        "parent_name": "Kuaför & Sağlık & Güzellik"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3011_1",
+          "package_title": "Relaksasyon (60 dk)",
+          "description": "Tam vücut gevşeme masajı.",
+          "price": "1500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "60 dk masaj",
+            "Tam vücut",
+            "Aromaterapi yağı",
+            "Sakinleştirici müzik"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3011_2",
+          "package_title": "Spor Masajı (90 dk)",
+          "description": "Derin doku masajı.",
+          "price": "2200",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "90 dk masaj",
+            "Derin doku",
+            "Spor öncesi/sonrası",
+            "Esnetme"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3011_3",
+          "package_title": "10 Seans Paket",
+          "description": "Avantajlı paket. 10 seans.",
+          "price": "12000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "70",
+          "features": [
+            "10 x 60 dk",
+            "Tüm çeşitler",
+            "Kişisel program",
+            "Öncelikli randevu",
+            "6 ay geçerli"
+          ],
+          "is_popular": false,
+          "discount_percentage": "20"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "14:00",
+          "break_end": "15:00"
+        },
+        "sunday": {
+          "start": "11:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "14:30",
+          "break_end": "15:30"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Şişli",
+      "neighborhood": "Nişantaşı",
+      "address": "Nişantaşı Mah. Abdi İpekçi Cad. No:78/3 Şişli/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200",
+        "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Masaj Terapisti Sertifikası",
+          "title": "Sağlık Bakanlığı Onaylı",
+          "date": "2022"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Evde masaj hizmeti var mı?",
+          "answer": "Evet, mobil masaj hizmetimiz mevcuttur."
+        },
+        {
+          "question": "Hamile masajı yapıyor musunuz?",
+          "answer": "Evet, doktor onayı ile hamile masajı uyguluyoruz."
+        }
+      ],
+      "service_features": [
+        "Lisanslı Terapist",
+        "Evde Hizmet",
+        "Profesyonel Malzeme",
+        "Kişiselleştirilmiş",
+        "Gizlilik"
+      ],
+      "about_text": "8 yıllık tecrübemizle binlerce kişiye masaj ve terapi hizmeti sunduk.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-03-15T12:00:00Z",
+      "updated_at": "2025-06-20T11:30:00Z"
+    },
+    {
+      "id": "svc_3012",
+      "title": "Kamera & Alarm Sistemi Kurulumu - Güvenlik Çözümleri",
+      "description": "<p>Evinizi ve iş yerinizi güvence altına alacak güvenlik sistemi kurulumları yapıyoruz.</p><p>IP kameralar, alarm sistemleri, yangın ihbar, akıllı kilit, diafon kurulumları.</p>",
+      "category": {
+        "id": 12648,
+        "name": "Kamera Kurulumu",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12647,
+        "parent_name": "Güvenlik & Alarm Sistemleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3012_1",
+          "package_title": "2 Kameralı Sistem",
+          "description": "2 dış mekan IP kamera + DVR.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "2 adet 2MP kamera",
+            "DVR kayıt",
+            "1 TB disk",
+            "Uzaktan izleme",
+            "Montaj dahil"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3012_2",
+          "package_title": "4 Kameralı Sistem",
+          "description": "4 kameralı akıllı güvenlik.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "4 adet 4MP kamera",
+            "Gece görüş",
+            "NVR kayıt",
+            "2 TB disk",
+            "Hareket algılama"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3012_3",
+          "package_title": "8 Kamera + Alarm",
+          "description": "Kapsamlı güvenlik paketi.",
+          "price": "30000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "3",
+          "features": [
+            "8 kamera",
+            "4 TB depolama",
+            "Alarm sistemi",
+            "Yangın ihbar",
+            "2 yıl bakım"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Sarıyer",
+      "neighborhood": "Maslak",
+      "address": "Maslak Mah. Büyükdere Cad. No:255/A Sarıyer/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200",
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Kocaeli",
+        "Sakarya"
+      ],
+      "certificates": [
+        {
+          "name": "Güvenlik Sistemleri",
+          "title": "Emniyet Onaylı Firma",
+          "date": "2023"
+        },
+        {
+          "name": "Hikvision Partner",
+          "title": "Yetkili Bayii",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Kameralar nereye monte edilir?",
+          "answer": "Keşif sırasında stratejik noktalar belirlenir."
+        },
+        {
+          "question": "Garanti nasıl?",
+          "answer": "Tüm sistemlere 2 yıl garanti veriyoruz."
+        }
+      ],
+      "service_features": [
+        "Ücretsiz Keşif",
+        "Uzaktan İzleme",
+        "Gece Görüş",
+        "Hareket Algılama",
+        "Garantili",
+        "Bakım Hizmeti"
+      ],
+      "about_text": "10 yıllık güvenlik sektörü deneyimimizle en son teknolojiyle koruma sağlıyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-01-30T13:00:00Z",
+      "updated_at": "2025-06-21T10:00:00Z"
+    },
+    {
+      "id": "svc_3013",
+      "title": "Emlak Danışmanı - Satış, Kiralama ve Değerleme",
+      "description": "<p>Gayrimenkul alım-satım ve kiralama işlemlerinizde profesyonel danışmanlık hizmeti sunuyorum.</p><p>Konut, iş yeri, villa, arsa değerlemesi, pazarlanması ve satışı.</p>",
+      "category": {
+        "id": 12616,
+        "name": "Emlak Danışmanı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12615,
+        "parent_name": "Gayrimenkul & Emlak Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3013_1",
+          "package_title": "Kiralama Danışmanlığı",
+          "description": "Kiralama süreci yönetimi.",
+          "price": "1",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "Pazar araştırması",
+            "Müşteri bulma",
+            "Gösteri organizasyonu",
+            "Sözleşme hazırlama",
+            "Hukuki danışmanlık"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3013_2",
+          "package_title": "Satış Danışmanlığı",
+          "description": "Pazarlama dahil satış hizmeti.",
+          "price": "1",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "90",
+          "features": [
+            "Eksper ve değerleme",
+            "Profesyonel fotoğraf",
+            "İlan yönetimi",
+            "Müşteri portföyü",
+            "Tapu işlemleri"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3013_3",
+          "package_title": "Değerleme Raporu",
+          "description": "Profesyonel değerleme raporu.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "7",
+          "features": [
+            "Piyasa analizi",
+            "Bölge karşılaştırma",
+            "Yapısal analiz",
+            "Resmi rapor"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "11:00",
+          "end": "16:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kartal",
+      "neighborhood": "Soğanlık",
+      "address": "Soğanlık Yeni Mah. Tugay Cad. No:12/5 Kartal/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200",
+        "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800"
+      ],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "Kocaeli"
+      ],
+      "certificates": [
+        {
+          "name": "Emlak Danışmanlığı",
+          "title": "Mesleki Yeterlilik",
+          "date": "2022"
+        },
+        {
+          "name": "SPK Lisansı",
+          "title": "Değerleme",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Komisyon oranınız nedir?",
+          "answer": "Kiralama için 1 kira, satış için %2-3."
+        },
+        {
+          "question": "İlanımı nasıl pazarlıyorsunuz?",
+          "answer": "Sahibinden, Hepsiemlak, sosyal medya ve kendi portföyümüzde."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Fotoğraf",
+        "Geniş Portföy",
+        "Hukuki Destek",
+        "Pazarlama",
+        "Değerleme",
+        "Güvenilir"
+      ],
+      "about_text": "10 yıllık deneyimimle binlerce müşterinin gayrimenkul ihtiyaçlarını karşılıyorum.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "30 dakika",
+      "created_at": "2025-04-10T09:00:00Z",
+      "updated_at": "2025-06-20T14:00:00Z"
+    },
+    {
+      "id": "svc_3014",
+      "title": "Bebek & Çocuk Bakıcısı - Profesyonel Bakıcı Hizmeti",
+      "description": "<p>Çocuklarınızın güvenli ve sevgi dolu bir ortamda büyümesi için profesyonel bakıcı hizmeti sunuyoruz.</p><p>0-12 yaş arası çocuklar için yarım gün, tam gün, yatılı seçenekler.</p>",
+      "category": {
+        "id": 12763,
+        "name": "Bebek Bakıcısı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12610,
+        "parent_name": "Çocuk & Yaşlı Bakımı"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3014_1",
+          "package_title": "Yarım Gün",
+          "description": "5 saatlik bakım.",
+          "price": "10000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "5 saat bakım",
+            "Yemek hazırlama",
+            "Oyun ve etkinlik",
+            "Günlük rapor"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3014_2",
+          "package_title": "Tam Gün",
+          "description": "08:00-18:00 tam gün bakım.",
+          "price": "18000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "10 saat bakım",
+            "3 öğün yemek",
+            "Eğitsel etkinlikler",
+            "Fotoğraf/video",
+            "Aylık rapor"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3014_3",
+          "package_title": "Yatılı Bakıcı",
+          "description": "7/24 yatılı bakım.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "7/24 bakım",
+            "Tüm öğünler",
+            "Gece bakımı",
+            "Haftalık izin",
+            "Çamaşır/ütü"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Ümraniye",
+      "neighborhood": "Atakent",
+      "address": "Atakent Mah. 229. Sok. No:8/A Ümraniye/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=1200",
+        "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "İstanbul Avrupa Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Çocuk Bakıcılığı",
+          "title": "MEB Onaylı",
+          "date": "2023"
+        },
+        {
+          "name": "İlk Yardım",
+          "title": "Sağlık Bakanlığı",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Bakıcılar nasıl seçiliyor?",
+          "answer": "Ön eleme, yüz yüze görüşme, referans kontrolü yapılıyor."
+        },
+        {
+          "question": "Deneme süresi var mı?",
+          "answer": "Evet, ilk 1 hafta deneme süresidir."
+        }
+      ],
+      "service_features": [
+        "Sertifikalı Bakıcı",
+        "Referans Kontrolü",
+        "Güvenlik Soruşturması",
+        "Deneme Süresi",
+        "Değişim Hakkı",
+        "Günlük Rapor"
+      ],
+      "about_text": "5 yıllık danışmanlık deneyimimizle binlerce ailenin güvenilir bakıcı bulmasına yardımcı olduk.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-03-20T10:00:00Z",
+      "updated_at": "2025-06-21T09:30:00Z"
+    },
+    {
+      "id": "svc_3015",
+      "title": "Sosyal Medya Yönetimi - Marka Stratejisi ve İçerik Üretimi",
+      "description": "<p>Markanızın sosyal medya stratejisini oluşturuyor, içerik üretiyor ve yönetiyoruz.</p><p>Instagram, Facebook, Twitter, LinkedIn, TikTok'ta dijital varlığınızı güçlendiriyoruz.</p>",
+      "category": {
+        "id": 12630,
+        "name": "Sosyal Medya Yönetimi",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12627,
+        "parent_name": "Dijital & Freelance Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3015_1",
+          "package_title": "Başlangıç",
+          "description": "1 platform, haftada 3 paylaşım.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "1 platform",
+            "Haftada 3 paylaşım",
+            "Görsel tasarım",
+            "Caption",
+            "Temel analiz",
+            "Yorum yönetimi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3015_2",
+          "package_title": "Profesyonel",
+          "description": "3 platform, haftada 5 paylaşım.",
+          "price": "18000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "3 platform",
+            "Haftada 5 paylaşım",
+            "Reels/Story",
+            "Reklam yönetimi",
+            "Aylık rapor",
+            "Rakip analizi"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3015_3",
+          "package_title": "Kurumsal",
+          "description": "Tüm platformlar, günlük paylaşım.",
+          "price": "35000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "5+ platform",
+            "Günlük paylaşım",
+            "Video üretimi",
+            "Influencer iş birliği",
+            "Detaylı raporlama",
+            "7/24 destek"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beyoğlu",
+      "neighborhood": "Galata",
+      "address": "Galata Mah. Kemeraltı Cad. No:56/3 Beyoğlu/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200",
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+      ],
+      "service_areas": [
+        "Türkiye Geneli",
+        "Uzaktan Hizmet"
+      ],
+      "certificates": [
+        {
+          "name": "Meta Blueprint",
+          "title": "Dijital Pazarlama",
+          "date": "2024"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Reklam bütçesi dahil mi?",
+          "answer": "Hayır, reklam bütçesi ayrıdır."
+        },
+        {
+          "question": "İçerikler onaya sunuluyor mu?",
+          "answer": "Evet, tüm içerikler yayınlanmadan önce onaya sunulur."
+        }
+      ],
+      "service_features": [
+        "Strateji Geliştirme",
+        "İçerik Üretimi",
+        "Reklam Yönetimi",
+        "Analiz ve Raporlama",
+        "Topluluk Yönetimi"
+      ],
+      "about_text": "6 yıllık dijital pazarlama deneyimimizle 200'den fazla markanın yönetimini üstlendik.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "3 saat",
+      "created_at": "2025-04-05T14:00:00Z",
+      "updated_at": "2025-06-20T16:00:00Z"
+    },
+    {
+      "id": "svc_3016",
+      "title": "Avukatlık & Hukuki Danışmanlık - İş ve Aile Hukuku",
+      "description": "<p>Uzman avukat kadromuzla hukuki konularda danışmanlık ve avukatlık hizmeti sunuyoruz.</p><p>İş hukuku, aile hukuku, ceza hukuku, ticaret hukuku alanlarında hizmet veriyoruz.</p>",
+      "category": {
+        "id": 12642,
+        "name": "Avukatlık & Hukuki Danışmanlık",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12641,
+        "parent_name": "Kurumsal & Hukuki Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3016_1",
+          "package_title": "Hukuki Danışmanlık",
+          "description": "30 dk online görüşme.",
+          "price": "2000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "30 dk görüşme",
+            "Online görüşme",
+            "Yazılı bilgilendirme",
+            "Değerlendirme"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3016_2",
+          "package_title": "Sözleşme Hazırlama",
+          "description": "İhtiyaç özelinde sözleşme.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "7",
+          "features": [
+            "İhtiyaç analizi",
+            "Sözleşme tasarımı",
+            "Hukuki inceleme",
+            "2 revizyon"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3016_3",
+          "package_title": "Dava Takibi",
+          "description": "Tam hukuki temsil.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "180",
+          "features": [
+            "Dava açılması",
+            "Savunma hazırlığı",
+            "Duruşma katılımı",
+            "İcra takibi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Caferağa",
+      "address": "Caferağa Mah. Moda Cad. No:12/4 Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200",
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul",
+        "Türkiye Geneli (Online)"
+      ],
+      "certificates": [
+        {
+          "name": "Avukatlık Ruhsatnamesi",
+          "title": "İstanbul Barosu",
+          "date": "2019"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "İlk görüşme ücretsiz mi?",
+          "answer": "15 dk ön görüşme ücretsizdir."
+        },
+        {
+          "question": "Online danışmanlık var mı?",
+          "answer": "Evet, Türkiye'nin her yerinden online hizmet."
+        }
+      ],
+      "service_features": [
+        "Gizlilik",
+        "Deneyimli Kadro",
+        "Online Danışmanlık",
+        "Uygun Ücret",
+        "Hızlı Çözüm"
+      ],
+      "about_text": "15 yıllık hukuk tecrübemizle bireysel ve kurumsal müşterilere kapsamlı hizmet sunuyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "4 saat",
+      "created_at": "2025-02-28T11:00:00Z",
+      "updated_at": "2025-06-21T08:00:00Z"
+    },
+    {
+      "id": "svc_3017",
+      "title": "Bilgisayar & Laptop Tamiri - Profesyonel Teknik Servis",
+      "description": "<p>Bilgisayar, laptop, masaüstü PC tamiri, veri kurtarma, format atma, ekran değişimi hizmetleri.</p><p>Garantili tamir, orijinal yedek parça ve hızlı teslimat.</p>",
+      "category": {
+        "id": 12656,
+        "name": "Bilgisayar & Laptop Tamiri",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12653,
+        "parent_name": "Elektronik & Beyaz Eşya Teknik Servis"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3017_1",
+          "package_title": "Format & Yazılım",
+          "description": "Format atma, program kurulumu.",
+          "price": "1500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Yedekleme",
+            "Format",
+            "Sürücü kurulumu",
+            "Program kurulumu",
+            "1 ay garanti"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3017_2",
+          "package_title": "Laptop Ekran Değişimi",
+          "description": "LCD/LED ekran değişimi.",
+          "price": "4000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Ekran tespiti",
+            "Orijinal/muadil",
+            "Profesyonel montaj",
+            "Test",
+            "6 ay garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3017_3",
+          "package_title": "Veri Kurtarma",
+          "description": "Bozulan diskten veri kurtarma.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "Durum tespiti",
+            "Fiziksel/lojik kurtarma",
+            "Gizli veri politikası",
+            "Yedek medya"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "11:00",
+          "end": "16:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Fatih",
+      "neighborhood": "Aksaray",
+      "address": "Aksaray Mah. Laleli Cad. No:78/6 Fatih/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200",
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Bilgisayar Teknisyenliği",
+          "title": "Mesleki Yeterlilik",
+          "date": "2021"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Veri kurtarma başarısı nedir?",
+          "answer": "Fiziksel hasarda %85, lojik hasarda %95 başarı oranımız var."
+        },
+        {
+          "question": "Garanti veriyor musunuz?",
+          "answer": "Evet, tüm tamirlere 1-6 ay garanti veriyoruz."
+        }
+      ],
+      "service_features": [
+        "Hızlı Teslimat",
+        "Orijinal Parça",
+        "Garantili Tamir",
+        "Veri Güvenliği",
+        "Uygun Fiyat"
+      ],
+      "about_text": "8 yıllık tecrübemizle tüm marka ve modellerde bilgisayar ve laptop tamiri yapıyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-03-25T10:00:00Z",
+      "updated_at": "2025-06-21T11:00:00Z"
+    },
+    {
+      "id": "svc_3018",
+      "title": "Düğün Organizasyonu - Profesyonel Düğün Planlama",
+      "description": "<p>Rüya gibi bir düğün için profesyonel organizasyon hizmeti sunuyoruz.</p><p>Mekan bulma, dekorasyon, catering, ses-ışık, gelin arabası gibi tüm detayları yönetiyoruz.</p>",
+      "category": {
+        "id": 12660,
+        "name": "Düğün Organizasyonu",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12659,
+        "parent_name": "Organizasyon & Etkinlik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3018_1",
+          "package_title": "Standart Düğün",
+          "description": "50-100 kişilik düğün.",
+          "price": "50000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Mekan önerisi",
+            "Dekorasyon",
+            "Süsleme",
+            "Tören yönetimi",
+            "Koordinasyon"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3018_2",
+          "package_title": "Premium Düğün",
+          "description": "100-300 kişilik lüks düğün.",
+          "price": "120000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Mekan bulma",
+            "Profesyonel dekor",
+            "Catering",
+            "Ses-ışık",
+            "Gelin arabası"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3018_3",
+          "package_title": "VIP Düğün",
+          "description": "300+ kişilik, her şey dahil.",
+          "price": "250000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Tam organizasyon",
+            "Profesyonel ekip",
+            "Her şey dahil",
+            "Koordinatör",
+            "After party"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "22:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beşiktaş",
+      "neighborhood": "Etiler",
+      "address": "Etiler Mah. Nispetiye Cad. No:90/7 Beşiktaş/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200",
+        "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Antalya",
+        "Bodrum",
+        "Kapadokya"
+      ],
+      "certificates": [
+        {
+          "name": "Event Planning Certificate",
+          "title": "Profesyonel Organizatör",
+          "date": "2022"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Kaç ay önceden başlamalıyız?",
+          "answer": "En az 3-6 ay önce iletişime geçmenizi öneririz."
+        },
+        {
+          "question": "Bütçe planlamasına yardım ediyor musunuz?",
+          "answer": "Evet, bütçenize uygun öneriler sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Ekip",
+        "Tam Koordinasyon",
+        "Dekorasyon",
+        "Catering",
+        "Ses-Işık",
+        "Her Şey Dahil"
+      ],
+      "about_text": "12 yıllık organizasyon deneyimimizle 500'den fazla düğün ve etkinlik düzenledik.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "3 saat",
+      "created_at": "2025-02-15T10:00:00Z",
+      "updated_at": "2025-06-20T12:00:00Z"
+    },
+    {
+      "id": "svc_3019",
+      "title": "Evcil Hayvan Bakımı & Veteriner Hizmeti",
+      "description": "<p>Evcil hayvanlarınız için profesyonel bakım, veteriner danışmanlığı ve pet kuaförlük hizmeti sunuyoruz.</p><p>Köpek eğitimi, kedi bakımı, egzotik hayvan bakımı alanlarında uzmanız.</p>",
+      "category": {
+        "id": 12667,
+        "name": "Evcil Hayvan Bakımı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12666,
+        "parent_name": "Hayvan Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3019_1",
+          "package_title": "Temel Bakım",
+          "description": "Kedi/köpek temel bakım.",
+          "price": "800",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Banyo",
+            "Tıraş",
+            "Tırnak kesimi",
+            "Kulak temizliği",
+            "Diş kontrolü"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3019_2",
+          "package_title": "Köpek Eğitimi",
+          "description": "Temel itaat eğitimi.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "10 seans eğitim",
+            "Temel komutlar",
+            "Sosyalleşme",
+            "Yürüyüş eğitimi",
+            "Video geri bildirim"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3019_3",
+          "package_title": "Günlük Bakım (Tam Gün)",
+          "description": "İş günlerinde evde bakım.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "8 saat bakım",
+            "Yürüyüş",
+            "Beslenme",
+            "Oyun",
+            "Günlük fotoğraf"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "16:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Göztepe",
+      "address": "Göztepe Mah. Bağdat Cad. No:340/5 Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200",
+        "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Veteriner Hekimliği",
+          "title": "İstanbul Üniversitesi",
+          "date": "2019"
+        },
+        {
+          "name": "Köpek Eğitmenliği",
+          "title": "Ulusal Köpek Eğitmenleri Derneği",
+          "date": "2021"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hangi hayvanlara hizmet veriyorsunuz?",
+          "answer": "Kedi, köpek, kuş, hamster ve diğer evcil hayvanlara hizmet veriyoruz."
+        },
+        {
+          "question": "Eve gelerek hizmet veriyor musunuz?",
+          "answer": "Evet, evde bakım ve eğitim hizmeti sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Bakım",
+        "Evde Hizmet",
+        "Eğitim",
+        "Güvenilir",
+        "Sevgi dolu"
+      ],
+      "about_text": "10 yıllık veterinerlik ve hayvan bakımı deneyimimizle evcil dostlarınızın her türlü ihtiyacını karşılıyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-03-08T09:00:00Z",
+      "updated_at": "2025-06-20T15:00:00Z"
+    },
+    {
+      "id": "svc_3020",
+      "title": "Özel Rehberlik Hizmeti - Turizm ve Gezi Organizasyonu",
+      "description": "<p>İstanbul ve Türkiye genelinde özel rehberlik, tur organizasyonu ve transfer hizmeti sunuyoruz.</p><p>Yabancı dil bilen rehberlerimizle unutulmaz deneyimler yaşatıyoruz.</p>",
+      "category": {
+        "id": 12672,
+        "name": "Özel Rehberlik Hizmeti",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12671,
+        "parent_name": "Turizm & Rehberlik"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3020_1",
+          "package_title": "Yarım Gün Tur",
+          "description": "4 saatlik özel rehberlik.",
+          "price": "3000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "4 saat rehberlik",
+            "Kişiye özel rota",
+            "Tarihi bilgi",
+            "Fotoğraf önerileri"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3020_2",
+          "package_title": "Tam Gün Tur",
+          "description": "8 saatlik kapsamlı tur.",
+          "price": "5500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "8 saat rehberlik",
+            "Kişiye özel rota",
+            "Yemek önerileri",
+            "Ulaşım planı"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3020_3",
+          "package_title": "Çoklu Gün Tur",
+          "description": "3-5 günlük tur programı.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "Çoklu gün rehberlik",
+            "Otel önerileri",
+            "Transfer organizasyonu",
+            "Acil destek"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "19:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Fatih",
+      "neighborhood": "Sultanahmet",
+      "address": "Sultanahmet Mah. Divanyolu Cad. No:42 Fatih/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200",
+        "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Kapadokya",
+        "Efes",
+        "Pamukkale",
+        "Antalya"
+      ],
+      "certificates": [
+        {
+          "name": "Turist Rehberliği",
+          "title": "A Grubu Turist Rehberi",
+          "date": "2020"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hangi dillerde rehberlik yapıyorsunuz?",
+          "answer": "İngilizce, Almanca, Rusça, İspanyolca, Fransızca."
+        },
+        {
+          "question": "Transfer hizmeti veriyor musunuz?",
+          "answer": "Evet, lüks araçlarla transfer organizasyonu yapıyoruz."
+        }
+      ],
+      "service_features": [
+        "Çoklu Dil",
+        "Kişiye Özel Rota",
+        "Profesyonel Rehber",
+        "Transfer",
+        "7/24 Destek"
+      ],
+      "about_text": "15 yıllık turizm deneyimimizle binlerce turiste unutulmaz deneyimler yaşattık.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-01-10T08:00:00Z",
+      "updated_at": "2025-06-21T07:30:00Z"
+    },
+    {
+      "id": "svc_3021",
+      "title": "Çilingir - 7/24 Acil Çilingir Hizmeti",
+      "description": "<p>7/24 acil çilingir hizmeti sunuyoruz. Kilit açma, kilit değiştirme, anahtar kopyalama, oto çilingir.</p>",
+      "category": {
+        "id": 12677,
+        "name": "Çilingir",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12676,
+        "parent_name": "Diğer Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3021_1",
+          "package_title": "Kapı Kilidi Açma",
+          "description": "Standart kapı kilidi açma.",
+          "price": "500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Kapı kilidi açma",
+            "Hasarsız müdahale",
+            "15-30 dk",
+            "7/24 hizmet"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3021_2",
+          "package_title": "Kilit Değişimi",
+          "description": "Eski kilidin sökülüp yeni kilit takılması.",
+          "price": "1500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Eski kilit sökümü",
+            "Yeni kilit montajı",
+            "Marka yardımı",
+            "Garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3021_3",
+          "package_title": "Oto Çilingir",
+          "description": "Araba kilidi açma.",
+          "price": "1000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Oto kilidi açma",
+            "Hasarsız müdahale",
+            "Anahtar kopyalama",
+            "7/24 hizmet"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "tuesday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "wednesday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "thursday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "friday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "saturday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "sunday": {
+          "start": "00:00",
+          "end": "23:59",
+          "is_active": true,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "7/24 acil çilingir hizmeti."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Fenerbahçe",
+      "address": "Fenerbahçe Mah. Sarayburnu Cad. No:18 Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200",
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "İstanbul Avrupa Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Çilingirlik Ustalık Belgesi",
+          "title": "Mesleki Yeterlilik",
+          "date": "2019"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hasar yapıyor musunuz?",
+          "answer": "Hayır, profesyonel ekipmanlarımızla hasarsız müdahale yapıyoruz."
+        },
+        {
+          "question": "Gelme süreniz ne kadar?",
+          "answer": "İstanbul genelinde ortalama 20-30 dakika."
+        }
+      ],
+      "service_features": [
+        "7/24 Hizmet",
+        "Hasarsız Müdahale",
+        "Hızlı Gelme",
+        "Uygun Fiyat",
+        "Güvenilir"
+      ],
+      "about_text": "20 yıllık çilingirlik deneyimimizle 7/24 acil çilingir hizmeti sunuyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "5 dakika",
+      "created_at": "2025-01-05T00:00:00Z",
+      "updated_at": "2025-06-21T08:00:00Z"
+    },
+    {
+      "id": "svc_3022",
+      "title": "Mobilya Montaj & Tamir - Profesyonel Marangoz Hizmeti",
+      "description": "<p>Ev ve ofis mobilyalarınızın montajı, tamiri ve boyama hizmetlerini profesyonelce yapıyoruz.</p><p>Özel mobilya tasarımı ve üretimi de yapılmaktadır.</p>",
+      "category": {
+        "id": 12563,
+        "name": "Mobilya Montaj & Tamir",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12559,
+        "parent_name": "Ev Hizmetleri & Mobilya"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3022_1",
+          "package_title": "Mobilya Montaj",
+          "description": "Yeni mobilya kurulumu.",
+          "price": "1000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Montaj hizmeti",
+            "Paket açma",
+            "Kurulum",
+            "Temizlik sonrası"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3022_2",
+          "package_title": "Mobilya Tamiri",
+          "description": "Hasarlı mobilya onarımı.",
+          "price": "2000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Hasar tespiti",
+            "Onarım",
+            "Boya/cila",
+            "Garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3022_3",
+          "package_title": "Özel Mobilya Üretimi",
+          "description": "İstek üzerine özel mobilya.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "21",
+          "features": [
+            "Ölçü alma",
+            "Tasarım",
+            "Üretim",
+            "Montaj",
+            "Teslim"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "15:00",
+          "is_active": true
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Ümraniye",
+      "neighborhood": "İçerenköy",
+      "address": "İçerenköy Mah. Değirmenyolu Cad. No:78 Ümraniye/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200",
+        "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Marangozluk Ustalık Belgesi",
+          "title": "Mesleki Yeterlilik",
+          "date": "2018"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hangi mobilyaları monte ediyorsunuz?",
+          "answer": "Tüm marka ve modellerde montaj hizmeti veriyoruz."
+        },
+        {
+          "question": "Yerinde tamir yapıyor musunuz?",
+          "answer": "Evet, evinizde yerinde tamir ve montaj hizmeti sunuyoruz."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Montaj",
+        "Yerinde Hizmet",
+        "Uygun Fiyat",
+        "Hızlı Teslimat",
+        "Garantili İşçilik"
+      ],
+      "about_text": "15 yıllık marangoz ve mobilya tecrübemizle tüm mobilya ihtiyaçlarınıza çözüm üretiyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-02-12T09:00:00Z",
+      "updated_at": "2025-06-20T14:30:00Z"
+    },
+    {
+      "id": "svc_3023",
+      "title": "Ses & Işık Sistemi Kiralama - Etkinlik ve Düğün İçin",
+      "description": "<p>Etkinlikleriniz, düğünleriniz ve organizasyonlarınız için profesyonel ses ve ışık sistemi kiralama hizmeti sunuyoruz.</p>",
+      "category": {
+        "id": 12663,
+        "name": "Ses & Işık Sistemi Kiralama",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12659,
+        "parent_name": "Organizasyon & Etkinlik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3023_1",
+          "package_title": "Temel Ses Sistemi",
+          "description": "50-100 kişi için ses sistemi.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Hoparlör sistemi",
+            "Mikrofon",
+            "Kurulum",
+            "Teknik destek"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3023_2",
+          "package_title": "Ses + Işık",
+          "description": "100-300 kişi için ses ve ışık.",
+          "price": "12000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Güçlü ses sistemi",
+            "DJ ekipmanı",
+            "Renkli ışık",
+            "Lazer efekti",
+            "Teknik ekip"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3023_3",
+          "package_title": "Premium Sahne",
+          "description": "300+ kişi, tam sahne.",
+          "price": "25000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Profesyonel sahne",
+            "Ses + ışık + lazer",
+            "DJ + teknisyen",
+            "Video ekranı",
+            "Duman efekti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "23:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "20:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beyoğlu",
+      "neighborhood": "Halıcıoğlu",
+      "address": "Halıcıoğlu Mah. İstiklal Cad. No:150/A Beyoğlu/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200",
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Kocaeli",
+        "Sakarya"
+      ],
+      "certificates": [
+        {
+          "name": "Ses Teknisyenliği",
+          "title": "Profesyonel Ses Eğitimi",
+          "date": "2021"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Kurulum ve söküm fiyata dahil mi?",
+          "answer": "Evet, tüm paketlerde kurulum ve söküm dahildir."
+        },
+        {
+          "question": "Teknik ekip geliyor mu?",
+          "answer": "Evet, tüm etkinliklerde teknik ekip bulunur."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Ekipman",
+        "Teknik Ekip",
+        "Kurulum/Söküm",
+        "Esnek Süre",
+        "Uygun Fiyat"
+      ],
+      "about_text": "10 yıllık deneyimimizle binlerce etkinlikte ses ve ışık hizmeti sunduk.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "3 saat",
+      "created_at": "2025-03-12T11:00:00Z",
+      "updated_at": "2025-06-20T17:00:00Z"
+    },
+    {
+      "id": "svc_3024",
+      "title": "Muhasebe & Mali Müşavirlik - KOBİ ve Şirket Hizmetleri",
+      "description": "<p>KOBİ ve büyük işletmeler için muhasebe, mali müşavirlik ve vergi danışmanlığı hizmeti sunuyoruz.</p><p>Bilanço, KDV beyannamesi, SGK işlemleri, personel maaş yönetimi.</p>",
+      "category": {
+        "id": 12643,
+        "name": "Mali Müşavir & Muhasebe",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12641,
+        "parent_name": "Kurumsal & Hukuki Hizmetler"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3024_1",
+          "package_title": "Şahıs Şirketi Muhasebesi",
+          "description": "Şahıs işletmesi için aylık muhasebe.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "Aylık muhasebe",
+            "KDV beyannamesi",
+            "Geçici vergi",
+            "Yıllık gelir vergisi",
+            "SGK bildirgeleri"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3024_2",
+          "package_title": "Limited Şirket Muhasebesi",
+          "description": "Limited şirket için kapsamlı muhasebe.",
+          "price": "12000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "Bilanço hesapları",
+            "KDV + ÖTV",
+            "Personel maaş",
+            "SGK + İŞKUR",
+            "Yıllık bilanço"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3024_3",
+          "package_title": "Vergi İnceleme Danışmanlığı",
+          "description": "Vergi incelemesi sürecinde danışmanlık.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "İnceleme süreci yönetimi",
+            "Savunma hazırlığı",
+            "Vergi mahkemesi desteği",
+            "Uzlaşma görüşmeleri"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "14:00",
+          "is_active": true
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Caferağa",
+      "address": "Caferağa Mah. Moda Cad. No:32/6 Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200",
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul",
+        "Online Türkiye Geneli"
+      ],
+      "certificates": [
+        {
+          "name": "YMM Belgesi",
+          "title": "Yeminli Mali Müşavir",
+          "date": "2018"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Dijital ortamda çalışıyor musunuz?",
+          "answer": "Evet, tüm işlemlerimizi dijital ortamda yürütebiliriz."
+        },
+        {
+          "question": "Deneme süresi var mı?",
+          "answer": "İlk ay deneme süresidir."
+        }
+      ],
+      "service_features": [
+        "Dijital Çalışma",
+        "Gizlilik",
+        "Deneyimli Kadro",
+        "Hızlı Çözüm",
+        "Uygun Ücret"
+      ],
+      "about_text": "20 yıllık muhasebe deneyimimizle 500'den fazla şirkete hizmet veriyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "4 saat",
+      "created_at": "2025-02-08T10:00:00Z",
+      "updated_at": "2025-06-20T15:30:00Z"
+    },
+    {
+      "id": "svc_3025",
+      "title": "Dış Cephe Cam Temizliği - Yüksek Bina Temizlik Hizmeti",
+      "description": "<p>İş merkezi, AVM, otel ve residence gibi yüksek binaların dış cephe cam temizliği yapıyoruz.</p><p>İp erişimli, vinçli ve asansörlü temizlik yöntemleri kullanıyoruz.</p>",
+      "category": {
+        "id": 12589,
+        "name": "Dış Cephe Cam Temizliği",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12585,
+        "parent_name": "Temizlik Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3025_1",
+          "package_title": "Bina Dış Cephe (1-5 Kat)",
+          "description": "1-5 katlı binalar için.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Dış cephe temizliği",
+            "Cam silme",
+            "Korkuluk temizliği",
+            "Güvenlik ekipmanı",
+            "Sigorta"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3025_2",
+          "package_title": "Yüksek Bina (6-15 Kat)",
+          "description": "6-15 kat için ip ile temizlik.",
+          "price": "20000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "İp erişimli temizlik",
+            "Dış cephe + cam",
+            "Merdiven temizliği",
+            "Profesyonel ekip",
+            "Sigorta"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3025_3",
+          "package_title": "Gökdelen (15+ Kat)",
+          "description": "15+ kat için vinç ile temizlik.",
+          "price": "50000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "10",
+          "features": [
+            "Vinç ile erişim",
+            "Tam dış cephe",
+            "Cam + cephe",
+            "Profesyonel ekip",
+            "Detaylı sigorta"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "14:00",
+          "is_active": true
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Şişli",
+      "neighborhood": "Levent",
+      "address": "Levent Mah. Büyükdere Cad. No:180/A Şişli/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800"
+      ],
+      "service_areas": [
+        "İstanbul",
+        "Kocaeli"
+      ],
+      "certificates": [
+        {
+          "name": "İş Güvenliği Sertifikası",
+          "title": "Yüksekte Çalışma",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Hava muhalefetinde ne olur?",
+          "answer": "Yağmur ve fırtınada erteleme yapılır."
+        },
+        {
+          "question": "Sigorta var mı?",
+          "answer": "Evet, tüm çalışanlar için iş yeri sigortası mevcuttur."
+        }
+      ],
+      "service_features": [
+        "Güvenlik Önceliği",
+        "Profesyonel Ekip",
+        "Sigorta",
+        "Esnek Tarih",
+        "Uygun Fiyat"
+      ],
+      "about_text": "12 yıllık dış cephe temizlik deneyimimizle İstanbul'un en prestijli binalarına hizmet verdik.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "3 saat",
+      "created_at": "2025-03-18T08:00:00Z",
+      "updated_at": "2025-06-20T13:00:00Z"
+    },
+    {
+      "id": "svc_3026",
+      "title": "Yabancı Dil Eğitimi - İngilizce, Almanca, Rusça",
+      "description": "<p>Kişiselleştirilmiş yabancı dil eğitimi ile hedeflerinize ulaşın.</p><p>IELTS, TOEFL, Goethe sınav hazırlığı, iş İngilizcesi, günlük konuşma ve tercüme hizmetleri.</p>",
+      "category": {
+        "id": 12624,
+        "name": "Yabancı Dil Eğitmeni",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12620,
+        "parent_name": "Eğitim & Kurs"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3026_1",
+          "package_title": "Birebir Ders (A1-A2)",
+          "description": "Başlangıç seviyesi birebir ders.",
+          "price": "2500",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "8 saat birebir",
+            "Kişisel müfredat",
+            "Materyal dahil",
+            "Ödev takibi"
+          ],
+          "is_popular": false,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3026_2",
+          "package_title": "Sınav Hazırlığı (B1-C1)",
+          "description": "IELTS/TOEFL/Goethe hazırlık.",
+          "price": "4000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "12 saat birebir",
+            "Deneme sınavları",
+            "Strateji eğitimi",
+            "Speaking pratiği",
+            "Kaynaklar dahil"
+          ],
+          "is_popular": true,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3026_3",
+          "package_title": "Kurumsal Dil Eğitimi",
+          "description": "Şirket çalışanlarına İngilizce.",
+          "price": "8000",
+          "currency": "TL",
+          "price_type": "per_month",
+          "delivery_days": "30",
+          "features": [
+            "Grup dersi (4-8 kişi)",
+            "İş İngilizcesi",
+            "Toplantı İngilizcesi",
+            "Email yazma",
+            "Aylık rapor"
+          ],
+          "is_popular": false,
+          "discount_percentage": "15"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "10:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "13:00",
+          "break_end": "14:00"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": false,
+          "break_start": null,
+          "break_end": null
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beşiktaş",
+      "neighborhood": "Akaretler",
+      "address": "Akaretler Mah. Çırağan Cad. No:42 Beşiktaş/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul",
+        "Online Türkiye Geneli"
+      ],
+      "certificates": [
+        {
+          "name": "TESOL Certificate",
+          "title": "Teaching English",
+          "date": "2021"
+        },
+        {
+          "name": "IELTS Examiner",
+          "title": "Cambridge Certified",
+          "date": "2022"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Seviye tespiti yapıyor musunuz?",
+          "answer": "Evet, ücretsiz online seviye tespit sınavı yapıyoruz."
+        },
+        {
+          "question": "Kaç ayda ilerleme?",
+          "answer": "Düzenli çalışma ile 3-6 ayda 1 seviye ilerleme mümkündür."
+        }
+      ],
+      "service_features": [
+        "Kişisel Müfredat",
+        "Sınav Hazırlığı",
+        "Online Ders",
+        "Esnek Saatler",
+        "Deneyimli Hoca",
+        "Ücretsiz Deneme"
+      ],
+      "about_text": "8 yıllık yabancı dil öğretmenlik deneyimimle binlerce öğrencinin dil hedeflerine ulaşmasına yardımcı oldum.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-04-02T15:00:00Z",
+      "updated_at": "2025-06-20T12:30:00Z"
+    },
+    {
+      "id": "svc_3027",
+      "title": "Beyaz Eşya Tamiri - Buzdolabı, Çamaşır, Bulaşık Makinesi",
+      "description": "<p>Arızalı beyaz eşyalarınızı tamir ediyoruz. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın.</p><p>Hızlı teşhis, uygun fiyat ve garantili tamir hizmeti.</p>",
+      "category": {
+        "id": 12654,
+        "name": "Beyaz Eşya Tamiri",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12653,
+        "parent_name": "Elektronik & Beyaz Eşya Teknik Servis"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3027_1",
+          "package_title": "Teşhis & Bakım",
+          "description": "Arıza teşhisi ve genel bakım.",
+          "price": "500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Yerinde teşhis",
+            "Arıza tespiti",
+            "Maliyet hesabı",
+            "Teşhis ücretsiz onay sonrası"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3027_2",
+          "package_title": "Buzdolabı Tamiri",
+          "description": "Kompresör, gaz, termostat onarımı.",
+          "price": "3000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Teşhis",
+            "Yedek parça",
+            "İşçilik",
+            "Test",
+            "6 ay garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3027_3",
+          "package_title": "Çamaşır Makinesi Tamiri",
+          "description": "Motor, tambur, elektronik kart onarımı.",
+          "price": "2500",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Teşhis",
+            "Yedek parça",
+            "Profesyonel onarım",
+            "Test",
+            "6 ay garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "09:00",
+          "end": "17:00",
+          "is_active": true,
+          "break_start": "12:30",
+          "break_end": "13:30"
+        },
+        "sunday": {
+          "start": "10:00",
+          "end": "15:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kartal",
+      "neighborhood": "Yakacık",
+      "address": "Yakacık Mah. Ankara Cad. No:56 Kartal/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200",
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200"
+      ],
+      "portfolio_images": [],
+      "service_areas": [
+        "İstanbul Anadolu Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Beyaz Eşya Teknisyenliği",
+          "title": "Mesleki Yeterlilik",
+          "date": "2020"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Yerinde tamir yapıyor musunuz?",
+          "answer": "Evet, %90 arıza yerinde giderilmektedir."
+        },
+        {
+          "question": "Yedek parçanız var mı?",
+          "answer": "Orijinal ve muadil yedek parça stokumuz mevcuttur."
+        }
+      ],
+      "service_features": [
+        "Hızlı Teşhis",
+        "Yerinde Tamir",
+        "Orijinal Parça",
+        "Garantili İşçilik",
+        "Uygun Fiyat"
+      ],
+      "about_text": "12 yıllık beyaz eşya tamir deneyimimizle tüm marka ve modellere hizmet veriyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "1 saat",
+      "created_at": "2025-03-22T09:00:00Z",
+      "updated_at": "2025-06-21T10:30:00Z"
+    },
+    {
+      "id": "svc_3028",
+      "title": "Fayans & Seramik Döşeme - Banyo ve Mutfak Yenileme",
+      "description": "<p>Banyo, mutfak, zemin ve dış cephe fayans-seramik döşeme hizmeti sunuyoruz.</p><p>Profesyonel uygulama, düzgün derz, temiz işçilik garantisi.</p>",
+      "category": {
+        "id": 12553,
+        "name": "Fayans & Seramik",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12549,
+        "parent_name": "İnşaat & Tadilat"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3028_1",
+          "package_title": "Banyo Fayans Döşeme",
+          "description": "1 banyo için komple fayans döşeme.",
+          "price": "12000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "5",
+          "features": [
+            "Eski söküm",
+            "Düzgün zemin hazırlama",
+            "Fayans döşeme",
+            "Derz çekme",
+            "Temizlik sonrası"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3028_2",
+          "package_title": "Mutfak Tezgah Arası",
+          "description": "Mutfak tezgah arası seramik uygulaması.",
+          "price": "4000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "2",
+          "features": [
+            "Ölçü alma",
+            "Seramik kesme",
+            "Yapıştırma",
+            "Derz çekme"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3028_3",
+          "package_title": "Zemin Seramik Döşeme",
+          "description": "Tüm oda zemini için seramik döşeme.",
+          "price": "18000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "7",
+          "features": [
+            "Zemin hazırlama",
+            "Döşeme",
+            "Derz",
+            "Süpürgelik",
+            "Temizlik"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "15:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Beylikdüzü",
+      "neighborhood": "Beylikdüzü Merkez",
+      "address": "Beylikdüzü Merkez Mah. Cumhuriyet Cad. No:120/A Beylikdüzü/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "Seramik Ustalık Belgesi",
+          "title": "Mesleki Yeterlilik",
+          "date": "2019"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Malzeme dahil mi?",
+          "answer": "Mevcut paketlerde sadece işçilik dahildir. Malzeme müşteriden."
+        },
+        {
+          "question": "Düzgünlük kontrolü yapıyor musunuz?",
+          "answer": "Evet, su terazisi ile düzgünlük kontrolü yaparak döşeme yapıyoruz."
+        }
+      ],
+      "service_features": [
+        "Profesyonel Döşeme",
+        "Temiz İşçilik",
+        "Su Terazisi",
+        "Derz Garantisi",
+        "Uygun Fiyat"
+      ],
+      "about_text": "14 yıllık inşaat tecrübemizle fayans ve seramik döşeme konusunda uzmanız.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "2 saat",
+      "created_at": "2025-03-28T10:00:00Z",
+      "updated_at": "2025-06-20T16:00:00Z"
+    },
+    {
+      "id": "svc_3029",
+      "title": "Banyo & Mutfak Yenileme - Komple Tadilat",
+      "description": "<p>Banyo ve mutfaklarınızın komple yenileme ve tadilat hizmetini anahtar teslim sunuyoruz.</p><p>Projelendirme, demontaj, sıhhi tesisat, elektrik, fayans, mobilya ve montaj dahil.</p>",
+      "category": {
+        "id": 12695,
+        "name": "Banyo & Mutfak Yenileme",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12549,
+        "parent_name": "İnşaat & Tadilat"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3029_1",
+          "package_title": "Banyo Yenileme (Standart)",
+          "description": "4-6 m² banyo için komple yenileme.",
+          "price": "80000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "15",
+          "features": [
+            "Tam söküm",
+            "Sıhhi tesisat yenileme",
+            "Fayans döşeme",
+            "Duşakabin montajı",
+            "Lavabo ve klozet",
+            "Elektrik tesisatı"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3029_2",
+          "package_title": "Mutfak Yenileme",
+          "description": "Komple mutfak yenileme.",
+          "price": "120000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "20",
+          "features": [
+            "Tam söküm",
+            "Mutfak dolabı",
+            "Tezgah",
+            "Ankastre montajı",
+            "Tesisat",
+            "Elektrik"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3029_3",
+          "package_title": "Banyo + Mutfak (VIP)",
+          "description": "Her şey dahil VIP yenileme.",
+          "price": "200000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "30",
+          "features": [
+            "Banyo + Mutfak",
+            "Lüks malzeme",
+            "Projelendirme",
+            "3D tasarım",
+            "Anahtar teslim",
+            "2 yıl garanti"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "14:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Kadıköy",
+      "neighborhood": "Fenerbahçe",
+      "address": "Fenerbahçe Mah. Bağdat Cad. No:280/A Kadıköy/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800"
+      ],
+      "service_areas": [
+        "İstanbul"
+      ],
+      "certificates": [
+        {
+          "name": "İç Mimarlık Belgesi",
+          "title": "İç Mimar Odası",
+          "date": "2021"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Ne kadar sürüyor?",
+          "answer": "Banyo 10-15 gün, mutfak 15-20 gün sürmektedir."
+        },
+        {
+          "question": "Projelendirme dahil mi?",
+          "answer": "Evet, 3D tasarım ve projelendirme hizmeti dahildir."
+        }
+      ],
+      "service_features": [
+        "Anahtar Teslim",
+        "3D Tasarım",
+        "Profesyonel Ekip",
+        "Kaliteli Malzeme",
+        "Garantili İşçilik"
+      ],
+      "about_text": "10 yıllık interior design deneyimimizle banyo ve mutfak yenileme konusunda uzmanız.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "4 saat",
+      "created_at": "2025-04-08T11:00:00Z",
+      "updated_at": "2025-06-21T09:00:00Z"
+    },
+    {
+      "id": "svc_3030",
+      "title": "Doğalgaz Tesisatı - Kombi, Peteke ve Hat Döşeme",
+      "description": "<p>Ev ve iş yeri için doğalgaz tesisatı döşeme, kombi ve petek bağlantısı hizmeti sunuyoruz.</p><p>Projelendirme, belediye onayı, tesisat döşeme ve sızıntı testi dahil.</p>",
+      "category": {
+        "id": 12544,
+        "name": "Doğalgaz Tesisatı",
+        "root_category_id": 12540,
+        "root_category_name": "Ustalar ve Hizmetler",
+        "parent_id": 12541,
+        "parent_name": "Teknik & Tesisat Hizmetleri"
+      },
+      "pricing_packages": [
+        {
+          "id": "pkg_3030_1",
+          "package_title": "Kombi Bağlantısı",
+          "description": "Mevcut hatta kombi bağlantısı.",
+          "price": "5000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "1",
+          "features": [
+            "Gaz hattı bağlantısı",
+            "Kombi montajı",
+            "Sızıntı testi",
+            "Garanti belgesi"
+          ],
+          "is_popular": true,
+          "discount_percentage": "0"
+        },
+        {
+          "id": "pkg_3030_2",
+          "package_title": "Petek Döşeme (4 Radyatör)",
+          "description": "4 radyatörlü daire için petek tesisatı.",
+          "price": "15000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "3",
+          "features": [
+            "Proje çizimi",
+            "Tesisat döşeme",
+            "Petek montajı",
+            "Sızıntı testi",
+            "Belediye onayı"
+          ],
+          "is_popular": false,
+          "discount_percentage": "10"
+        },
+        {
+          "id": "pkg_3030_3",
+          "package_title": "Komple Doğalgaz Tesisatı",
+          "description": "Sıfırdan komple doğalgaz tesisatı.",
+          "price": "30000",
+          "currency": "TL",
+          "price_type": "one_time",
+          "delivery_days": "7",
+          "features": [
+            "Projelendirme",
+            "Belediye onayı",
+            "Komple tesisat",
+            "Kombi + petek",
+            "Tüm bağlantılar",
+            "Test ve devir alma"
+          ],
+          "is_popular": false,
+          "discount_percentage": "5"
+        }
+      ],
+      "working_hours": {
+        "monday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "tuesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "wednesday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "thursday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "friday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "saturday": {
+          "start": "08:00",
+          "end": "18:00",
+          "is_active": true,
+          "break_start": "12:00",
+          "break_end": "13:00"
+        },
+        "sunday": {
+          "start": "09:00",
+          "end": "14:00",
+          "is_active": true
+        },
+        "special_notes": "Randevu alınız."
+      },
+      "city": "İstanbul",
+      "district": "Üsküdar",
+      "neighborhood": "Çekmeköy",
+      "address": "Çekmeköy Mah. Mimar Sinan Cad. No:45 Üsküdar/İstanbul",
+      "images": [
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200",
+        "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200"
+      ],
+      "portfolio_images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800"
+      ],
+      "service_areas": [
+        "İstanbul Anadolu Yakası",
+        "İstanbul Avrupa Yakası"
+      ],
+      "certificates": [
+        {
+          "name": "Doğalgaz Gaz Sertifikası",
+          "title": "Gaz İşletme Belgesi",
+          "date": "2022"
+        },
+        {
+          "name": "TSE Onaylı Firma",
+          "title": "Türk Standartları Enstitüsü",
+          "date": "2023"
+        }
+      ],
+      "faq_items": [
+        {
+          "question": "Belediye onayı sizin tarafınızdan mı yapılıyor?",
+          "answer": "Evet, tüm evrak ve belediye işlemleri tarafımızdan yürütülür."
+        },
+        {
+          "question": "Sızıntı testi yapılıyor mu?",
+          "answer": "Evet, tesisat tamamlandıktan sonra basınç testi ile sızıntı kontrolü yapılır."
+        }
+      ],
+      "service_features": [
+        "Projelendirme dahil",
+        "Belediye Onayı",
+        "Garantili Tesisat",
+        "Sızıntı Testi",
+        "Deneyimli Ekip",
+        "Hızlı Teslimat"
+      ],
+      "about_text": "15 yıllık doğalgaz tesisatı deneyimimizle binlerce konut ve iş yerine hizmet verdik. Güvenilir ve garantili tesisat çözümleri sunuyoruz.",
+      "quick_action_prefs": {
+        "whatsapp": true,
+        "message": true,
+        "phone": true,
+        "appointment": true
+      },
+      "response_rate": "30 dakika",
+      "created_at": "2025-02-18T08:00:00Z",
+      "updated_at": "2025-06-21T06:30:00Z"
+    }
+  ]
+}

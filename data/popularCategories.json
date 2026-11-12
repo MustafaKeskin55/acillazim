@@ -1,0 +1,333 @@
+[
+  {
+    "id": 1,
+    "label": "Emlak",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 2,
+    "label": "Vasıta",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 3,
+    "label": "İş Makineleri",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 12540,
+    "label": "Hizmetler",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 5,
+    "label": "İkinci El",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 6,
+    "label": "İş İlanları",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 7,
+    "label": "Hayvanlar",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 9,
+    "label": "Elektronik",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 10,
+    "label": "Giyim & Aksesuar",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 11,
+    "label": "Ev & Yaşam",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 12,
+    "label": "Spor & Outdoor",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 13,
+    "label": "Hobi & Oyuncak",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 14,
+    "label": "Kitap & Dergi",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 15,
+    "label": "Mobil & Tablet",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 16,
+    "label": "Bilgisayar & Donanım",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 17,
+    "label": "Fotoğraf & Kamera",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 18,
+    "label": "Müzik Aletleri",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 19,
+    "label": "Ofis & Kırtasiye",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 20,
+    "label": "Sanat & Antika",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 21,
+    "label": "Koleksiyon",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 22,
+    "label": "Takı & Mücevher",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 23,
+    "label": "Saat",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 24,
+    "label": "Çanta & Ayakkabı",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 25,
+    "label": "Kozmetik & Kişisel Bakım",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 26,
+    "label": "Bahçe & Yapı Market",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 27,
+    "label": "Bebek & Çocuk",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 28,
+    "label": "Yedek Parça & Aksesuar",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 29,
+    "label": "Araç Gereç",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 30,
+    "label": "Diğer",
+    "parent_id": null,
+    "img_url": null,
+    "position": null
+  },
+  {
+    "id": 101,
+    "label": "Evden Eve Nakliyat",
+    "parent_id": 12540,
+    "icon": "FaTruckMoving",
+    "img_url": "/images/services/category-image/Evden-Eve-Nakliyat.png",
+    "position": "center 50%"
+  },
+  {
+    "id": 102,
+    "label": "Oto Tamir & Servis",
+    "parent_id": 12540,
+    "icon": "FaCar",
+    "img_url": "/images/services/category-image/tamirci.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 103,
+    "label": "Su Tesisatçısı",
+    "parent_id": 12540,
+    "icon": "FaWrench",
+    "img_url": "/images/services/category-image/Tesisat.png",
+    "position": "center 40%"
+  },
+  {
+    "id": 104,
+    "label": "İnşaat & Hafriyat",
+    "parent_id": 12540,
+    "icon": "FaHardHat",
+    "img_url": "/images/services/category-image/inşaat.png",
+    "position": "center 40%"
+  },
+  {
+    "id": 105,
+    "label": "Ev Temizliği",
+    "parent_id": 12540,
+    "icon": "FaBroom",
+    "img_url": "/images/services/category-image/temizlikçi.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 106,
+    "label": "Boya & Badana",
+    "parent_id": 12540,
+    "icon": "FaPaintRoller",
+    "img_url": "/images/services/category-image/boyacı.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 107,
+    "label": "Çekici & Yol Yardım",
+    "parent_id": 12540,
+    "icon": "FaTruckMoving",
+    "img_url": "/images/services/category-image/çekiçi.png",
+    "position": "center 40%"
+  },
+  {
+    "id": 108,
+    "label": "Oto Ekspertiz",
+    "parent_id": 12540,
+    "icon": "FaCarCrash",
+    "img_url": "/images/services/category-image/Oto-Ekspertiz.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 109,
+    "label": "Tamirci",
+    "parent_id": 12540,
+    "icon": "FaTools",
+    "img_url": "/images/services/category-image/tamirci.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 110,
+    "label": "Elektrikçi",
+    "parent_id": 12540,
+    "icon": "FaBolt",
+    "img_url": "/images/services/category-image/elektirikçi.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 111,
+    "label": "Mobilya Montajı",
+    "parent_id": 12540,
+    "icon": "FaHammer",
+    "img_url": "/images/services/category-image/Mobilya-Montajı.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 112,
+    "label": "Camcı",
+    "parent_id": 12540,
+    "icon": "FaWrench",
+    "img_url": "/images/services/category-image/Camcı.png",
+    "position": "center 30%"
+  },
+  {
+    "id": 113,
+    "label": "Çatı Tamiri",
+    "parent_id": 12540,
+    "icon": "FaHardHat",
+    "img_url": "/images/services/category-image/Çatı-Ustası-İzolasyon.png",
+    "position": "center 20%"
+  },
+  {
+    "id": 114,
+    "label": "Haşere & Böcek İlaçlama",
+    "parent_id": 12540,
+    "icon": "FaBug",
+    "img_url": "/images/services/category-image/Haşere-Böcek-İlaçlama.png",
+    "position": "center 20%"
+  },
+  {
+    "id": 115,
+    "label": "Web Tasarım & Yazılım Hizmetleri",
+    "parent_id": 12540,
+    "icon": "FaCode",
+    "img_url": "/images/services/category-image/Web-Tasarım-Yazılım-Hizmetleri.png",
+    "position": "center 20%"
+  },
+  {
+    "id": 116,
+    "label": "Beyaz Eşya Servisi",
+    "parent_id": 12540,
+    "icon": "FaSnowflake",
+    "img_url": "/images/services/category-image/Beyaz-Eşya-Klima-Kombi-Tamiri.png",
+    "position": "center 20%"
+  }
+]

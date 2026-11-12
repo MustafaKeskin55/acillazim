@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Bootstrap Uyumluluk Katmanı (Tailwind @apply Destekli)
+   Bootstrap kaldırıldığında hiçbir bileşenin kaymaması için köprü.
+   ========================================================================== */
+
+.d-flex { @apply flex; }
+.d-inline-flex { @apply inline-flex; }
+.d-none { @apply hidden; }
+.d-block { @apply block; }
+.d-inline-block { @apply inline-block; }
+
+.flex-column { @apply flex-col; }
+
+.justify-content-start { @apply justify-start; }
+.justify-content-end { @apply justify-end; }
+.justify-content-center { @apply justify-center; }
+.justify-content-between { @apply justify-between; }
+.justify-content-around { @apply justify-around; }
+
+.align-items-start { @apply items-start; }
+.align-items-end { @apply items-end; }
+.align-items-center { @apply items-center; }
+.align-items-baseline { @apply items-baseline; }
+.align-items-stretch { @apply items-stretch; }
+
+.w-100 { @apply w-full; }
+.h-100 { @apply h-full; }
+
+.row {
+  @apply flex flex-wrap -mx-3;
+}
+
+.col-12 { @apply w-full px-3; }
+.col-6 { @apply w-1/2 px-3; }
+.col-4 { @apply w-1/3 px-3; }
+.col-3 { @apply w-1/4 px-3; }
+
+.col-md-12 { @apply md:w-full md:px-3; }
+.col-md-6 { @apply md:w-1/2 md:px-3; }
+.col-md-4 { @apply md:w-1/3 md:px-3; }
+.col-md-3 { @apply md:w-1/4 md:px-3; }
+
+.col-lg-12 { @apply lg:w-full lg:px-3; }
+.col-lg-6 { @apply lg:w-1/2 lg:px-3; }
+.col-lg-4 { @apply lg:w-1/3 lg:px-3; }
+.col-lg-3 { @apply lg:w-1/4 lg:px-3; }

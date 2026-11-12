@@ -1,0 +1,430 @@
+/* ProductDetailPage.css - Converted to Tailwind @apply */
+
+.navbar-breadcrumb-container {
+  @apply w-full mx-auto mt-0 p-0 bg-white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+}
+
+.navbar-breadcrumb-container .breadcrumb2-container {
+  @apply mx-auto text-left shadow-none rounded-none;
+  max-width: 1200px;
+  padding: 6px 15px;
+}
+
+.navbar-breadcrumb-container .breadcrumb2-content {
+  @apply bg-transparent border-0 shadow-none p-0;
+}
+
+/* Ana konteyner */
+.product-detail-container {
+  @apply mx-auto bg-white mt-0;
+  max-width: 1200px;
+  padding-top: 20px;
+}
+
+/* Başlık bölümü */
+.product-detail-header {
+  @apply flex justify-between items-start flex-wrap;
+  padding: 0 15px 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-detail-title {
+  @apply flex-1;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  min-width: 300px;
+}
+
+/* Meta bilgiler bölümü */
+.product-detail-meta {
+  @apply flex justify-end items-center;
+  margin-bottom: 15px;
+  min-width: 300px;
+}
+
+.product-detail-meta-left {
+  @apply flex items-center;
+  gap: 15px;
+  font-size: 13px;
+  margin-right: 20px;
+}
+
+.product-detail-id, 
+.product-detail-date {
+  @apply flex items-center;
+  color: #777;
+}
+
+.product-detail-date i {
+  margin-right: 5px;
+  color: #1f67a9;
+}
+
+/* Aksiyon butonları */
+.product-detail-meta-actions {
+  @apply flex;
+  gap: 10px;
+}
+
+.product-detail-action-button {
+  @apply flex items-center justify-center rounded-full cursor-pointer border-0;
+  width: 32px;
+  height: 32px;
+  background-color: #f0f0f0;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.product-detail-action-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.product-detail-action-button.favorite {
+  color: #e74c3c;
+}
+
+.product-detail-action-button.favorite:hover {
+  background-color: #fce4e4;
+}
+
+.product-detail-action-button.share {
+  color: #3498db;
+}
+
+.product-detail-action-button.share:hover {
+  background-color: #e1f0fa;
+}
+
+.product-detail-action-button.report {
+  color: #e67e22;
+}
+
+.product-detail-action-button.report:hover {
+  background-color: #fef5e7;
+}
+
+/* Ana içerik alanı */
+.product-detail-main {
+  @apply relative flex flex-col;
+  padding: 0 15px;
+  gap: 20px;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+/* Galeri konteyner */
+.product-detail-gallery-container {
+  @apply relative w-full bg-white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Özellik bölümü */
+.product-detail-features-section {
+  @apply relative w-full;
+  padding: 15px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border: 1px solid #edf2f7;
+  z-index: 1;
+}
+
+/* Sekmeler */
+.product-detail-tabs {
+  @apply bg-white overflow-hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  border: 1px solid #edf2f7;
+}
+
+.product-detail-tabs-header {
+  @apply flex;
+  border-bottom: 1px solid #eee;
+  background-color: #f8fafc;
+}
+
+.product-detail-tab-btn {
+  @apply flex-1 text-center cursor-pointer border-0;
+  padding: 14px 18px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.3s;
+}
+
+.product-detail-tab-btn:hover {
+  background-color: #f0f7ff;
+  color: #1a56db;
+}
+
+.product-detail-tab-btn.active {
+  color: #1a56db;
+  border-bottom: 3px solid #1a56db;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.product-detail-tabs-content {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.02);
+}
+
+.product-detail-tab-details h3,
+.product-detail-tab-location h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2d3748;
+  border-left: 4px solid #1a56db;
+  padding-left: 12px;
+}
+
+.product-detail-tab-features h3 {
+  @apply hidden;
+}
+
+.product-detail-similar-section {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .product-detail-main {
+    display: grid;
+    grid-template-columns: 70% 28%;
+    gap: 2%;
+    align-items: start;
+  }
+  
+  .product-detail-gallery-container {
+    @apply w-full relative;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+  }
+  
+  .product-detail-features-section {
+    @apply w-full relative;
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 20px;
+    z-index: 1;
+  }
+  
+  .product-detail-tabs {
+    @apply w-full;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 20px;
+  }
+  
+  .product-detail-right-components {
+    @apply w-full relative;
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: flex-start;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-header {
+    @apply flex-col;
+  }
+  
+  .product-detail-meta {
+    @apply flex-row justify-between items-center w-full;
+  }
+  
+  .product-detail-meta-left {
+    @apply mb-0;
+  }
+  
+  .product-detail-title {
+    font-size: 20px;
+  }
+  
+  .product-detail-tabs-header {
+    @apply overflow-x-auto;
+  }
+  
+  .product-detail-tab-btn {
+    @apply whitespace-nowrap;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+.product-detail-right-components {
+  @apply flex flex-col w-full;
+  gap: 20px;
+}
+
+.product-detail-ad-slot {
+  @apply w-full mx-auto overflow-hidden;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.product-detail-ad-slot:empty {
+  @apply hidden;
+}
+
+.product-detail-ad-slot .ad-banner {
+  @apply w-full overflow-hidden;
+  height: 480px;
+  border-radius: 10px;
+}
+
+.product-detail-ad-slot .ad-banner img,
+.product-detail-ad-slot .ad-banner video,
+.product-detail-ad-slot .alz-vitrin-media,
+.product-detail-ad-slot .alz-vitrin-video {
+  @apply w-full block object-cover;
+  height: 480px;
+}
+
+.product-detail-listing-price-card,
+.product-detail-seller-info {
+  @apply w-full bg-white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-listing-price-card {
+  padding: 15px;
+}
+
+.product-detail-tab-features {
+  @apply w-full mx-auto p-0;
+}
+
+.product-detail-tab-features h3 {
+  @apply hidden;
+}
+
+.product-detail-nearby-listings {
+  @apply w-full flex justify-center p-0;
+  margin: 40px auto 0;
+}
+
+.product-detail-nearby-listings .nearby-listings-container {
+  @apply relative flex justify-center w-full mx-auto left-0 right-0;
+  max-width: 1270px;
+}
+
+.product-detail-nearby-listings .card-category-container {
+  @apply w-full mx-auto;
+  max-width: 1270px;
+}
+
+.product-detail-nearby-listings .nearby-listings-empty {
+  @apply flex flex-col items-center justify-center text-center w-full mx-auto;
+  max-width: 1270px;
+  height: 200px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.product-detail-nearby-listings .card-category-container .nearby-listings-header {
+  @apply relative w-full;
+  text-align: center !important;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  color: #efb036;
+}
+
+.product-detail-nearby-listings .card-category-container .nearby-listings-header::after {
+  content: "";
+  @apply absolute bottom-0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255, 107, 0, 0.1), rgba(255, 107, 0, 1), rgba(255, 107, 0, 0.1));
+  box-shadow: 0 1px 2px rgba(255, 107, 0, 0.2);
+}
+
+@media (max-width: 1270px) {
+  .product-detail-nearby-listings .nearby-listings-container,
+  .product-detail-nearby-listings .card-category-container,
+  .product-detail-nearby-listings .nearby-listings-empty {
+    max-width: 100%;
+  }
+}
+
+.product-detail-tab-vehicle-damage {
+  @apply max-w-full;
+  padding: 15px 0;
+}
+
+.product-detail-tab-vehicle-damage .damage-display-container {
+  @apply shadow-none border-0;
+  margin-top: 10px;
+}
+
+.product-detail-tab-vehicle-damage .damage-display-title {
+  @apply hidden;
+}
+
+@media (max-width: 768px) {
+  .product-detail-tab-vehicle-damage {
+    padding: 10px 0;
+  }
+  
+  .product-detail-tab-vehicle-damage .damage-display-content {
+    padding: 10px;
+  }
+  
+  .product-detail-tab-vehicle-damage .car-diagram {
+    @apply mx-auto;
+    max-width: 350px;
+  }
+
+  .product-detail-desktop-shell,
+  .product-detail-breadcrumb,
+  .desktop-only-breadcrumb,
+  .breadcrumb2-container.product-detail-breadcrumb {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .product-detail-breadcrumb-wrapper {
+    display: block !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    margin-top: -44px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+  }
+}

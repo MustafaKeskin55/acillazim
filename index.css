@@ -1,0 +1,28 @@
+body {
+  @apply m-0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app-container {
+  @apply flex flex-col;
+  height: auto;
+}
+
+.main-content {
+  flex: 0 0 auto;
+}
+
+footer {
+  @apply flex-shrink-0 w-full;
+  margin-top: 80px;
+  background-color: #004AAD;
+}

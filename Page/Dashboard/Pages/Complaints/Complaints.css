@@ -1,0 +1,782 @@
+/* ==========================================================================
+   ACİLLAZIM.COM — Şikayetlerim & Taleplerim (2026 Kurumsal Tasarım Sistemi)
+   Navy (#003466 / #004B87) + Corporate Orange (#ff7a00 / #ea580c)
+   ========================================================================== */
+
+.complaints-main {
+  @apply w-full box-border;
+  min-height: 100vh;
+  padding: 28px 32px 48px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.complaints-main__container {
+  @apply mx-auto flex flex-col;
+  max-width: 1180px;
+  gap: 24px;
+}
+
+/* ==========================================================================
+   1. Kurumsal Üst Başlık (Header)
+   ========================================================================== */
+
+.complaints-main__header {
+  @apply relative flex items-center justify-between overflow-hidden;
+  gap: 24px;
+  padding: 28px 32px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 12px 32px -12px rgba(0, 52, 102, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.complaints-main__header::before {
+  @apply absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003466 0%, #004B87 55%, #ff7a00 100%);
+}
+
+.complaints-main__header-info {
+  @apply flex flex-col items-start flex-1;
+  gap: 14px;
+  min-width: 0;
+}
+
+.complaints-main__badge-pill {
+  @apply inline-flex items-center uppercase;
+  gap: 7px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(0, 52, 102, 0.06);
+  border: 1px solid rgba(0, 52, 102, 0.12);
+  color: #003466;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.complaints-main__badge-pill svg {
+  color: #ff7a00;
+  font-size: 12px;
+}
+
+.complaints-main__title {
+  @apply flex items-start;
+  gap: 16px;
+  min-width: 0;
+}
+
+.complaints-main__title-icon {
+  @apply flex items-center justify-center flex-shrink-0 relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  box-shadow: 0 8px 20px -4px rgba(0, 52, 102, 0.32);
+}
+
+.complaints-main__title-icon::after {
+  @apply absolute rounded-full;
+  content: '';
+  bottom: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  background: #ff7a00;
+  border: 2.5px solid #ffffff;
+}
+
+.complaints-main__flag-icon {
+  font-size: 21px;
+  color: #ffffff;
+}
+
+.complaints-main__title-text {
+  @apply flex flex-col;
+  gap: 6px;
+  min-width: 0;
+}
+
+.complaints-main__title h1 {
+  @apply m-0;
+  font-size: 25px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.complaints-main__subtitle {
+  @apply m-0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.complaints-main__header-cta {
+
+  @apply flex-shrink-0;
+}
+
+.complaints-main__new-btn {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ff7a00 0%, #ea580c 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 20px -4px rgba(234, 88, 12, 0.38);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.complaints-main__new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(234, 88, 12, 0.48);
+  background: linear-gradient(135deg, #ff8514 0%, #dc4c06 100%);
+}
+
+.complaints-main__new-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   2. Özet İstatistik Bento Şeridi (Stats Strip)
+   ========================================================================== */
+
+.complaints-main__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.complaints-main__stat-card {
+  @apply flex items-center;
+  gap: 16px;
+  padding: 20px 22px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+}
+
+.complaints-main__stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -6px rgba(0, 52, 102, 0.09);
+}
+
+.complaints-main__stat-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.complaints-main__stat-card--navy .complaints-main__stat-icon {
+  background: rgba(0, 52, 102, 0.08);
+  color: #003466;
+}
+
+.complaints-main__stat-card--orange .complaints-main__stat-icon {
+  background: rgba(255, 122, 0, 0.1);
+  color: #ea580c;
+}
+
+.complaints-main__stat-card--emerald .complaints-main__stat-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.complaints-main__stat-body {
+  @apply flex flex-col;
+  gap: 2px;
+  min-width: 0;
+}
+
+.complaints-main__stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.complaints-main__stat-label {
+  @apply overflow-hidden;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   3. Arama ve Filtreleme Araç Çubuğu (Toolbar)
+   ========================================================================== */
+
+.complaints-main__toolbar {
+  @apply flex items-center justify-between;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px -4px rgba(15, 23, 42, 0.04);
+}
+
+.complaints-main__search {
+  @apply relative flex-1 flex items-center;
+  min-width: 0;
+}
+
+.complaints-main__search-icon {
+  @apply absolute pointer-events-none;
+  left: 15px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.complaints-main__search input {
+  @apply w-full box-border;
+  height: 44px;
+  padding: 0 16px 0 42px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.complaints-main__search input::placeholder {
+  color: #94a3b8;
+}
+
+.complaints-main__search input:focus {
+  @apply outline-none;
+  background: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3.5px rgba(0, 52, 102, 0.09);
+}
+
+.complaints-main__actions {
+  @apply flex items-center flex-shrink-0;
+  gap: 12px;
+}
+
+.complaints-main__filter {
+
+  @apply relative flex items-center;
+}
+
+.complaints-main__filter-icon {
+  @apply absolute pointer-events-none;
+  left: 14px;
+  color: #003466;
+  font-size: 13px;
+}
+
+.complaints-main__filter select {
+  @apply cursor-pointer;
+  height: 44px;
+  padding: 0 36px 0 38px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23003466' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.complaints-main__filter select:focus {
+  @apply outline-none;
+  background-color: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3.5px rgba(0, 52, 102, 0.09);
+}
+
+/* ==========================================================================
+   4. Şikayet Listesi ve Kartlar (List & Cards)
+   ========================================================================== */
+
+.complaints-main__list {
+  @apply flex flex-col;
+  gap: 14px;
+}
+
+.complaints-main__item {
+  @apply relative flex items-start overflow-hidden cursor-pointer;
+  gap: 18px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.complaints-main__item::before {
+  @apply absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #003466;
+}
+
+.complaints-main__item--acik::before {
+  background: #004B87;
+}
+
+.complaints-main__item--inceleniyor::before {
+  background: #ff7a00;
+}
+
+.complaints-main__item--beklemede::before {
+  background: #6366f1;
+}
+
+.complaints-main__item--cozuldu::before {
+  background: #10b981;
+}
+
+.complaints-main__item:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px -8px rgba(0, 52, 102, 0.1);
+}
+
+.complaints-main__item-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 52, 102, 0.07) 0%, rgba(0, 75, 135, 0.12) 100%);
+  color: #003466;
+  font-size: 20px;
+}
+
+.complaints-main__item-content {
+  @apply flex-1 flex flex-col;
+  min-width: 0;
+  gap: 8px;
+}
+
+.complaints-main__item-top {
+  @apply flex items-start justify-between;
+  gap: 12px;
+}
+
+.complaints-main__item-title-group {
+  @apply flex flex-col;
+  gap: 5px;
+  min-width: 0;
+}
+
+.complaints-main__item-badges-row {
+  @apply flex items-center flex-wrap;
+  gap: 8px;
+}
+
+.complaints-main__item-type-badge {
+  @apply inline-flex items-center uppercase;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.complaints-main__item-id-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.complaints-main__item-title {
+  @apply m-0;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.complaints-main__item-status {
+  @apply inline-flex items-center justify-center flex-shrink-0;
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+}
+
+.complaints-main__item-desc {
+  @apply m-0;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.complaints-main__item-desc strong {
+  color: #003466;
+  font-weight: 600;
+}
+
+.complaints-main__item-excerpt {
+  @apply m-0 overflow-hidden;
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.complaints-main__item-footer {
+  @apply flex items-center flex-wrap;
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.complaints-main__item-date {
+  @apply inline-flex items-center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.complaints-main__item-date svg {
+  color: #94a3b8;
+}
+
+.complaints-main__item-messages {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.complaints-main__item-messages.has-messages {
+  color: #ea580c;
+  background: rgba(249, 115, 22, 0.1);
+}
+
+.complaints-main__item-hint {
+  @apply inline-flex items-center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003466;
+  margin-left: auto;
+  gap: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.complaints-main__item:hover .complaints-main__item-hint {
+  transform: translateX(3px);
+  color: #ea580c;
+}
+
+/* ==========================================================================
+   5. Yüklenme ve Boş Durumlar (Loading & Empty States)
+   ========================================================================== */
+
+.complaints-main__loading,
+.complaints-main__empty {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 56px 28px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px dashed #cbd5e1;
+  box-shadow: 0 6px 20px -6px rgba(15, 23, 42, 0.04);
+}
+
+.complaints-main__spinner-wrap,
+.complaints-main__empty-icon-wrap {
+  @apply flex items-center justify-center;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 52, 102, 0.07) 0%, rgba(255, 122, 0, 0.1) 100%);
+  margin-bottom: 18px;
+}
+
+.complaints-main__empty-icon-wrap--error {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.complaints-main__spinner {
+  font-size: 28px;
+  color: #003466;
+  animation: complaints-main-spin 0.9s linear infinite;
+}
+
+@keyframes complaints-main-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.complaints-main__empty-icon {
+  font-size: 28px;
+  color: #003466;
+}
+
+.complaints-main__empty-icon-wrap--error .complaints-main__empty-icon {
+  color: #dc2626;
+}
+
+.complaints-main__loading h3,
+.complaints-main__empty h3 {
+  margin: 0 0 8px 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.015em;
+}
+
+.complaints-main__loading p,
+.complaints-main__empty p {
+  margin: 0 0 22px 0;
+  font-size: 14px;
+  color: #64748b;
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.complaints-main__loading p {
+  margin-bottom: 0;
+}
+
+.complaints-main__retry-btn {
+  @apply cursor-pointer;
+  padding: 11px 22px;
+  border-radius: 12px;
+  border: 1.5px solid #003466;
+  background: #ffffff;
+  color: #003466;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.complaints-main__retry-btn:hover {
+  background: #003466;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   6. Responsive Tasarım (Tablet & Mobil Uyumluluk)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .complaints-main {
+    padding: 20px 18px 40px;
+  }
+
+  .complaints-main__header {
+    padding: 22px 24px;
+  }
+
+  .complaints-main__title h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complaints-main {
+    padding: 16px 14px 36px;
+  }
+
+  .complaints-main__container {
+    gap: 16px;
+  }
+
+  .complaints-main__header {
+    @apply flex-col items-stretch;
+    padding: 20px 18px;
+    gap: 18px;
+    border-radius: 18px;
+  }
+
+  .complaints-main__title {
+    gap: 13px;
+  }
+
+  .complaints-main__title-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+  }
+
+  .complaints-main__flag-icon {
+    font-size: 18px;
+  }
+
+  .complaints-main__title h1 {
+    font-size: 20px;
+  }
+
+  .complaints-main__subtitle {
+    font-size: 13px;
+  }
+
+  .complaints-main__header-cta,
+  .complaints-main__new-btn {
+
+    @apply w-full;
+  }
+
+  /* Mobilde 3'lü kompakt bento istatistik şeridi */
+  .complaints-main__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .complaints-main__stat-card {
+    @apply flex-col items-start;
+    gap: 10px;
+    padding: 14px 12px;
+    border-radius: 15px;
+  }
+
+  .complaints-main__stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .complaints-main__stat-value {
+    font-size: 19px;
+  }
+
+  .complaints-main__stat-label {
+    font-size: 11px;
+  }
+
+  /* Mobilde Arama & Filtre Araç Çubuğu */
+  .complaints-main__toolbar {
+    @apply flex-col items-stretch;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+
+  .complaints-main__actions,
+  .complaints-main__filter,
+  .complaints-main__filter select {
+
+    @apply w-full;
+  }
+
+  /* Mobilde Şikayet Kartı */
+  .complaints-main__item {
+    padding: 16px 16px 16px 18px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .complaints-main__item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    font-size: 17px;
+  }
+
+  .complaints-main__item-top {
+    @apply flex-col items-start;
+    gap: 8px;
+  }
+
+  .complaints-main__item-title {
+    font-size: 15px;
+  }
+
+  .complaints-main__item-desc {
+    font-size: 13.5px;
+  }
+
+  .complaints-main__empty,
+  .complaints-main__loading {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .complaints-main {
+    padding: 12px 10px 28px;
+  }
+
+  .complaints-main__stats {
+    gap: 8px;
+  }
+
+  .complaints-main__stat-card {
+    padding: 12px 10px;
+  }
+
+  .complaints-main__stat-value {
+    font-size: 17px;
+  }
+
+  .complaints-main__stat-label {
+    font-size: 10.5px;
+  }
+
+  .complaints-main__item {
+    @apply flex-col;
+    gap: 12px;
+  }
+
+  .complaints-main__item-top {
+
+    @apply flex-row justify-between items-start w-full;
+  }
+
+  .complaints-main__item-footer {
+
+    @apply flex-row justify-between items-center;
+  }
+}

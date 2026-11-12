@@ -1,0 +1,56 @@
+/* Logo image için özel stiller */
+.logo-image {
+  @apply fixed;
+  left: calc(50% - 520px);
+  top: calc(50% + 140px);
+  width: 290px;
+  height: 290px;
+  z-index: 1;
+  transform: rotate(10deg);
+}
+
+.logo-text {
+  @apply absolute text-center;
+  top: 43%;
+  left: 118%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 3;
+  width: 200px;
+  line-height: 1.2;
+}
+
+/* Zoom efekti için media queries */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .logo-image {
+    left: calc(50% - 442px);
+    top: calc(50% + 119px);
+    transform: rotate(10deg) scale(0.85);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1366px) {
+  .logo-image {
+    left: calc(50% - 468px);
+    top: calc(50% + 126px);
+    transform: rotate(10deg) scale(0.9);
+  }
+}
+
+@media (min-width: 1367px) {
+  .logo-image {
+    left: calc(50% - 520px);
+    top: calc(50% + 140px);
+    transform: rotate(10deg) scale(1);
+  }
+}
+
+/* Tablet ve mobil için gizleme */
+@media (max-width: 1200px) {
+  .logo-image,
+  .logo-text {
+    @apply hidden;
+  }
+} 

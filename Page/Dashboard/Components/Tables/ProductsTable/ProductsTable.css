@@ -1,0 +1,47 @@
+.products-table {
+  @apply w-full;
+  overflow-x: auto;
+}
+
+.products-table table {
+  @apply w-full;
+  border-collapse: collapse;
+}
+
+.products-table th, 
+.products-table td {
+  @apply text-left;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.products-table td {
+  color: #666;
+}
+
+.products-table .status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.products-table .status.aktif {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.products-table .status.pasif {
+  background: #fbe9e7;
+  color: #d32f2f;
+}
+
+.products-table tr:hover {
+  background: #f8f9fa;
+} 

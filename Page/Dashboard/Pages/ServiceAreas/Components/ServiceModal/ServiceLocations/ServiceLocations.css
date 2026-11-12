@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Hizmet Bölgeleri Sekmesi (ServiceLocations.css) — 2026 Kurumsal Tasarım
+   ========================================================================== */
+
+.service-locations {
+
+  @apply p-0;
+}
+
+.service-locations__header {
+  @apply flex items-center;
+  gap: 1.15rem;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: #f8fafc;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.service-locations__icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  border: 1px solid #c7d2fe;
+  font-size: 1.2rem;
+  color: #4f46e5;
+}
+
+.service-locations__title h3 {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.2rem 0;
+}
+
+.service-locations__title p {
+  @apply m-0;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.service-locations__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-locations__card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-locations__card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 22px -8px rgba(15, 23, 42, 0.08);
+}
+
+.service-locations__card--inactive {
+  opacity: 0.78;
+  background: #f8fafc;
+}
+
+.service-locations__card-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 0.5rem;
+}
+
+.service-locations__card-header h4 {
+  @apply m-0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.service-locations__status {
+  @apply inline-flex items-center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.service-locations__status--active {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+}
+
+.service-locations__status--inactive {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.service-locations__neighborhoods {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.service-locations__neighborhood {
+  @apply flex items-center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+}
+
+.service-locations__neighborhood svg {
+  @apply flex-shrink-0;
+  color: #059669;
+  font-size: 0.8rem;
+}
+
+.service-locations__neighborhood span {
+  color: #334155;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .service-locations__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .service-locations__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-locations__header {
+    padding: 1rem;
+  }
+}

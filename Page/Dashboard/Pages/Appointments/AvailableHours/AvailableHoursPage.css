@@ -1,0 +1,1378 @@
+/* ==========================================================================
+   MÜSAİT SAATLER VE ANALİZ (AvailableHoursPage.css) — 2026 SOFİSTİKE ARA RENK PALETİ & ANİMASYON
+   Uygulanan Prensipler:
+   - Göz Yormayan Ara Renk Harmanı (İndigo-Lavanta #EEF2FF/#4F46E5, Okyanus Turkuaz/Teal #F0FDFA/#0D9488,
+     Şampanya-Şeftali #FFFAF5/#EA580C, Adaçayı Nane #ECFDF5/#059669, Kehribar #FFFBEB/#D97706)
+   - Şeritsiz (Strip-Free) Temiz 1px Kenarlıklı Kart Mimarisi & GPU Mikro-Animasyonlar
+   - Tüm Ekran Boyutları İçin Tam Responsive (Desktop, Laptop, Tablet, Mobil, Küçük Mobil)
+   ========================================================================== */
+
+.appointments-page:has(.corp-available-hours-page) {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+@keyframes ahCardReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.994);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes ahIconFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -2.5px, 0);
+  }
+}
+
+.corp-available-hours-page {
+  @apply w-full mx-auto box-border overflow-x-hidden;
+  max-width: 1520px;
+  padding: 20px 24px 40px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(99, 102, 241, 0.05), transparent 40%),
+    radial-gradient(circle at 52% 6%, rgba(13, 148, 136, 0.045), transparent 42%),
+    radial-gradient(circle at 92% 12%, rgba(234, 88, 12, 0.042), transparent 38%),
+    #faf8f5;
+  font-family: var(--font-body, 'Manrope', 'Inter', system-ui, sans-serif);
+  color: #0f172a;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   1. KURUMSAL SAYFA BAŞLIĞI VE SEGMENT KONTROLÜ
+   ========================================================================== */
+.corp-page-header {
+  @apply flex justify-between items-end flex-wrap;
+  margin-bottom: 24px;
+  padding: 22px 26px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 48%, #f0fdfa 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px -18px rgba(79, 70, 229, 0.1);
+  gap: 20px;
+  animation: ahCardReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.corp-header-main {
+  @apply flex-1;
+  min-width: 240px;
+}
+
+.corp-kicker-badge {
+  @apply inline-flex items-center uppercase;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #4338ca;
+  background: linear-gradient(135deg, #eef2ff 0%, #f0fdfa 100%);
+  border: 1px solid #c7d2fe;
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.corp-page-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.corp-page-subtitle {
+  @apply m-0;
+  font-size: 14px;
+  color: #475569;
+  max-width: 680px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* Kurumsal Segmented Tab Nav */
+.corp-segment-nav {
+  @apply inline-flex items-center box-border;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.corp-segment-tab {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  gap: 8px;
+  padding: 9px 18px;
+  background: transparent;
+  color: #475569;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  transition: all 0.18s ease-in-out;
+  white-space: nowrap;
+}
+
+.corp-segment-tab:hover {
+  color: #4338ca;
+}
+
+.corp-segment-tab.active {
+  background: #ffffff;
+  color: #4f46e5;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.14), 0 1px 2px rgba(15, 23, 42, 0.04);
+  font-weight: 700;
+}
+
+.corp-page-body {
+  @apply w-full;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   2. TAKVİM VE GÜN İNCELEME DÜZENİ (2 KOLONLU)
+   ========================================================================== */
+.corp-calendar-layout {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: minmax(0, 1.38fr) minmax(0, 1.02fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.corp-calendar-col-main,
+.corp-calendar-col-side {
+  @apply w-full;
+  min-width: 0;
+}
+
+/* Sol Kart: Ay Takvimi */
+.corp-calendar-card {
+  @apply box-border w-full;
+  background: linear-gradient(145deg, #ffffff 0%, #fcfbff 100%);
+  border: 1px solid #e0e7ff;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px -16px rgba(67, 56, 202, 0.08);
+  padding: 22px;
+  animation: ahCardReveal 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.04s both;
+}
+
+.corp-calendar-toolbar {
+  @apply flex justify-between items-center flex-wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2ff;
+}
+
+.corp-calendar-nav {
+  @apply flex items-center;
+  gap: 10px;
+}
+
+.corp-nav-btn {
+  @apply inline-flex items-center justify-center cursor-pointer flex-shrink-0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+  background: #f5f3ff;
+  color: #4338ca;
+  transition: all 0.18s ease;
+}
+
+.corp-nav-btn:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px -6px rgba(79, 70, 229, 0.3);
+}
+
+.corp-month-heading {
+  @apply m-0 capitalize;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1b4b;
+  letter-spacing: -0.015em;
+}
+
+.corp-today-btn {
+  @apply cursor-pointer;
+  padding: 7px 14px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  border: 1px solid #a5b4fc;
+  color: #4338ca;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: all 0.18s ease;
+}
+
+.corp-today-btn:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* Lejant (Açıklama) */
+.corp-calendar-legend {
+  @apply flex items-center flex-wrap;
+  gap: 10px 18px;
+  margin-bottom: 16px;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.legend-item {
+  @apply inline-flex items-center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.legend-dot {
+  @apply rounded-full inline-block flex-shrink-0;
+  width: 8px;
+  height: 8px;
+}
+
+.legend-dot.available {
+  background-color: #10b981;
+}
+
+.legend-dot.busy {
+  background-color: #f97316;
+}
+
+.legend-dot.off {
+  background-color: #cbd5e1;
+}
+
+/* Takvim Tablosu — 7 Kolonlu Kusursuz Grid */
+.corp-calendar-table {
+  @apply w-full;
+  max-width: 100%;
+}
+
+.corp-weekdays-row {
+  @apply text-center;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 6px;
+}
+
+.corp-weekday-col {
+  @apply uppercase overflow-hidden;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  min-width: 0;
+  text-overflow: ellipsis;
+}
+
+.corp-days-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.corp-day-cell {
+  @apply flex flex-col justify-between cursor-pointer relative box-border overflow-hidden;
+  min-height: 68px;
+  min-width: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 7px 8px;
+  background: #ffffff;
+  transition: all 0.16s ease;
+}
+
+.corp-day-cell:hover:not(.other-month) {
+  border-color: #a5b4fc;
+  background: #f5f3ff;
+  transform: translateY(-1px);
+}
+
+.corp-day-cell.other-month {
+  @apply cursor-default;
+  background: #f8fafc;
+  border-color: #f1f5f9;
+  opacity: 0.38;
+}
+
+.corp-day-cell.today {
+  border-color: #fdba74;
+  background: #fffaf5;
+}
+
+.corp-day-cell.selected {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -6px rgba(79, 70, 229, 0.35);
+}
+
+.corp-day-top {
+  @apply flex justify-between items-center w-full;
+  gap: 3px;
+  min-width: 0;
+}
+
+.corp-day-num {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1.1;
+}
+
+.corp-today-badge {
+  @apply overflow-hidden;
+  font-size: 9px;
+  font-weight: 700;
+  color: #ea580c;
+  background: #ffedd5;
+  padding: 1px 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.corp-day-cell.selected .corp-today-badge {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.corp-day-status {
+  @apply flex justify-start items-center w-full;
+  min-width: 0;
+  margin-top: 4px;
+}
+
+.corp-appt-pill {
+  @apply overflow-hidden inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  background: #fff7ed;
+  color: #c2410c;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid #fed7aa;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.corp-day-cell.selected .corp-appt-pill {
+  background: rgba(249, 115, 22, 0.92);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.corp-dot-available {
+  @apply rounded-full;
+  width: 7px;
+  height: 7px;
+  background-color: #10b981;
+}
+
+.corp-day-cell.selected .corp-dot-available {
+  background-color: #34d399;
+}
+
+/* ==========================================================================
+   3. SAĞ KOLON: GÜN İNCELEMESİ (ŞERİTSİZ DAY HOURS INSPECTOR)
+   ========================================================================== */
+.corp-inspector-card {
+  @apply box-border w-full;
+  background: linear-gradient(145deg, #ffffff 0%, #f9fdfa 100%);
+  border: 1px solid #ccfbf1;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px -16px rgba(13, 148, 136, 0.08);
+  padding: 22px;
+  animation: ahCardReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+.corp-kicker {
+  @apply uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #0d9488;
+  margin-bottom: 4px;
+}
+
+.corp-inspector-header {
+  @apply flex justify-between items-start flex-wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0fdfa;
+  gap: 12px;
+}
+
+.corp-inspector-title {
+  @apply m-0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e1b4b;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.corp-inspector-metrics {
+  @apply flex flex-wrap;
+  gap: 8px;
+}
+
+.corp-badge-metric {
+  @apply inline-flex items-center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.corp-badge-metric.success {
+  background: #f0fdfa;
+  color: #0f766e;
+  border: 1px solid #99f6e4;
+}
+
+.corp-badge-metric.primary {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+/* Slot Filtre Butonları */
+.corp-slot-filter-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.corp-pill-btn {
+  @apply cursor-pointer text-center overflow-hidden;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+  background: #f5f3ff;
+  color: #4338ca;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.corp-pill-btn:hover {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.corp-pill-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  border-color: #4338ca;
+  box-shadow: 0 6px 14px -6px rgba(79, 70, 229, 0.32);
+}
+
+/* Saatler Listesi Grid (Şeritsiz Kart Mimarisi) */
+.corp-slots-container {
+  @apply overflow-y-auto;
+  max-height: 520px;
+  padding-right: 4px;
+}
+
+.corp-slots-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.corp-slots-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.corp-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.corp-slot-item {
+  @apply flex flex-col relative box-border;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: all 0.16s ease;
+  min-width: 0;
+}
+
+.corp-slot-item:hover {
+  box-shadow: 0 6px 14px -8px rgba(15, 23, 42, 0.1);
+  transform: translateY(-1px);
+}
+
+.corp-slot-item.status-available {
+  border-color: #a7f3d0;
+  background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.corp-slot-item.status-busy {
+  border-color: #fed7aa;
+  background: linear-gradient(145deg, #ffffff 0%, #fff7ed 100%);
+}
+
+.corp-slot-item.status-closed {
+  border-color: #e2e8f0;
+  background: #f8fafc;
+  opacity: 0.72;
+}
+
+.corp-slot-time {
+  @apply flex items-center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.corp-slot-time-icon {
+  @apply flex-shrink-0;
+  color: #64748b;
+}
+
+.corp-slot-end {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.corp-slot-body {
+  font-size: 12px;
+  min-width: 0;
+}
+
+.corp-slot-booking {
+  @apply flex flex-col;
+  gap: 4px;
+  min-width: 0;
+}
+
+.corp-booking-title {
+  @apply overflow-hidden;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.corp-booking-client {
+  @apply flex items-center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #475569;
+  min-width: 0;
+}
+
+.corp-booking-client span {
+  @apply overflow-hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.corp-badge-status {
+  @apply inline-flex items-center;
+  align-self: flex-start;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 2px;
+}
+
+.corp-badge-status.booked {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.corp-badge-status.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.corp-badge-status.in-progress {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.corp-badge-status.disputed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.corp-badge-status.reschedule {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.corp-badge-status.available {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.corp-badge-status.off {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.corp-slot-free,
+.corp-slot-off {
+  @apply flex flex-col;
+  gap: 4px;
+}
+
+.corp-slot-hint {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.corp-empty-slots {
+  @apply text-center;
+  padding: 28px 16px;
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+/* ==========================================================================
+   4. ANALİZ VE RAPORLAR BÖLÜMÜ (EXECUTIVE METRICS & CHARTS)
+   ========================================================================== */
+.corp-analytics-container {
+  @apply flex flex-col w-full;
+  gap: 22px;
+  min-width: 0;
+}
+
+/* 4'lü Üst KPI Kartları (Ara Renk Geçişli & Animasyonlu) */
+.corp-kpi-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.corp-kpi-card {
+  @apply box-border;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px -14px rgba(15, 23, 42, 0.06);
+  min-width: 0;
+  animation: ahCardReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.corp-kpi-card:nth-child(1) {
+  background: linear-gradient(145deg, #ffffff 0%, #fffaf5 60%, #ffedd5 100%);
+  border-color: #fed7aa;
+  animation-delay: 0.04s;
+}
+
+.corp-kpi-card:nth-child(2) {
+  background: linear-gradient(145deg, #ffffff 0%, #f0fdfa 60%, #ccfbf1 100%);
+  border-color: #99f6e4;
+  animation-delay: 0.08s;
+}
+
+.corp-kpi-card:nth-child(3) {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 60%, #e0e7ff 100%);
+  border-color: #c7d2fe;
+  animation-delay: 0.12s;
+}
+
+.corp-kpi-card:nth-child(4) {
+  background: linear-gradient(145deg, #ffffff 0%, #fffbeb 60%, #fef3c7 100%);
+  border-color: #fde68a;
+  animation-delay: 0.16s;
+}
+
+.corp-kpi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -14px rgba(67, 56, 202, 0.12);
+}
+
+.corp-kpi-top {
+  @apply flex justify-between items-center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.corp-kpi-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  min-width: 0;
+}
+
+.corp-kpi-icon-wrap {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  animation: ahIconFloat 4.2s ease-in-out infinite;
+}
+
+.corp-kpi-icon-wrap.primary {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1px solid #fdba74;
+  color: #c2410c;
+}
+
+.corp-kpi-icon-wrap.success {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  border: 1px solid #5eead4;
+  color: #0d9488;
+  animation-delay: 0.3s;
+}
+
+.corp-kpi-icon-wrap.indigo {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  border: 1px solid #a5b4fc;
+  color: #4f46e5;
+  animation-delay: 0.6s;
+}
+
+.corp-kpi-icon-wrap.slate {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+  color: #d97706;
+  animation-delay: 0.9s;
+}
+
+.corp-kpi-val {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+  word-break: break-word;
+}
+
+.corp-kpi-text-val {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.corp-kpi-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Grafikler Grid */
+.corp-charts-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.corp-chart-card {
+  @apply box-border overflow-hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 20px -14px rgba(15, 23, 42, 0.06);
+  min-width: 0;
+  max-width: 100%;
+}
+
+.corp-chart-card--wide {
+  grid-column: span 2;
+}
+
+.corp-chart-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.corp-chart-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.015em;
+}
+
+.corp-chart-desc {
+  @apply m-0;
+  font-size: 12.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.corp-chart-body {
+  @apply w-full;
+  min-width: 0;
+}
+
+.corp-chart-empty {
+  @apply flex items-center justify-center;
+  height: 240px;
+  color: #94a3b8;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* Hizmet Türü & Hafta İçi/Hafta Sonu Donut + Liste Düzeni */
+.corp-donut-container {
+  @apply flex items-center justify-between w-full;
+  gap: 18px;
+  min-height: 250px;
+  min-width: 0;
+}
+
+.corp-donut-chart-box {
+  @apply flex items-center justify-center;
+  flex: 1 1 48%;
+  min-width: 0;
+}
+
+.corp-donut-legend {
+  @apply flex flex-col overflow-y-auto;
+  flex: 1 1 52%;
+  min-width: 0;
+  gap: 8px;
+  max-height: 260px;
+  padding-right: 4px;
+}
+
+.corp-donut-legend::-webkit-scrollbar {
+  width: 4px;
+}
+
+.corp-donut-legend::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.corp-legend-item {
+  @apply flex items-center justify-between cursor-pointer select-none;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  transition: all 0.18s ease;
+  min-width: 0;
+}
+
+.corp-legend-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.corp-legend-item.active {
+  background: #fff7ed;
+  border-color: #fdba74;
+  box-shadow: 0 4px 12px -6px rgba(234, 88, 12, 0.2);
+}
+
+.corp-legend-left {
+  @apply flex items-center flex-1;
+  gap: 9px;
+  min-width: 0;
+}
+
+.corp-legend-color-dot {
+  @apply rounded-full flex-shrink-0;
+  width: 11px;
+  height: 11px;
+}
+
+.corp-legend-name {
+  @apply overflow-hidden;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.corp-legend-right {
+  @apply flex items-center flex-shrink-0;
+  gap: 8px;
+}
+
+.corp-legend-count {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #475569;
+  background: #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.corp-legend-item.active .corp-legend-count {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.corp-legend-percent {
+  @apply text-right;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  min-width: 34px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Verimlilik ve Gauge Alanı */
+.corp-efficiency-wrapper {
+  @apply flex items-center;
+  gap: 32px;
+  padding: 8px 12px;
+}
+
+.corp-efficiency-gauge {
+
+  @apply relative flex items-center justify-center flex-shrink-0;
+}
+
+.corp-gauge-center {
+
+  @apply absolute flex flex-col items-center justify-center pointer-events-none;
+}
+
+.corp-gauge-pct {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.corp-gauge-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.corp-efficiency-info {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.corp-efficiency-info h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.corp-efficiency-info p {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+}
+
+.corp-efficiency-stats-list {
+  @apply flex flex-col;
+  gap: 8px;
+}
+
+.corp-eff-item {
+  @apply flex items-center;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.corp-eff-dot {
+  @apply rounded-full flex-shrink-0;
+  width: 8px;
+  height: 8px;
+}
+
+.corp-eff-dot.primary {
+  background: #f97316;
+}
+
+.corp-eff-dot.success {
+  background: #10b981;
+}
+
+/* ==========================================================================
+   5. YÜKLEME VE HATA DURUMLARI
+   ========================================================================== */
+.corp-state-wrapper {
+  @apply flex flex-col items-center justify-center text-center;
+  min-height: 360px;
+  padding: 36px 20px;
+}
+
+.corp-loading-text {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.corp-error-icon {
+  color: #e11d48;
+  margin-bottom: 12px;
+}
+
+.corp-retry-btn {
+  @apply border-0 cursor-pointer;
+  margin-top: 16px;
+  padding: 9px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.corp-retry-btn:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+}
+
+.corp-no-data-card {
+  @apply text-center;
+  padding: 36px 20px;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.corp-muted-icon {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE UYARLAMALARI (LAPTOP, TABLET, MOBİL VE KÜÇÜK EKRANLAR)
+   ========================================================================== */
+@media (max-width: 1280px) {
+  .corp-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .corp-charts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .corp-chart-card--wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .corp-available-hours-page {
+    padding: 12px 4px 32px;
+  }
+
+  .corp-calendar-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .corp-slots-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .corp-page-header {
+    @apply flex-col items-stretch;
+    padding: 18px;
+    border-radius: 16px;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .corp-header-main {
+    min-width: 0;
+  }
+
+  .corp-page-title {
+    font-size: 21px;
+  }
+
+  .corp-page-subtitle {
+    font-size: 13px;
+  }
+
+  .corp-segment-nav {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .corp-segment-tab {
+    @apply w-full;
+    padding: 9px 10px;
+    font-size: 12.5px;
+  }
+
+  .corp-calendar-card,
+  .corp-inspector-card,
+  .corp-chart-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .corp-day-cell {
+    min-height: 56px;
+    padding: 6px 5px;
+    border-radius: 10px;
+  }
+
+  .corp-slots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .corp-donut-container {
+    @apply flex-col items-stretch;
+    gap: 14px;
+  }
+
+  .corp-donut-chart-box,
+  .corp-donut-legend {
+    @apply w-full;
+    flex: 1 1 100%;
+  }
+
+  .corp-efficiency-wrapper {
+    @apply flex-col text-center;
+    padding: 4px 0;
+    gap: 16px;
+  }
+
+  .corp-efficiency-stats-list {
+
+    @apply items-stretch text-left;
+  }
+}
+
+@media (max-width: 540px) {
+  .corp-available-hours-page {
+    padding: 4px 0 24px;
+  }
+
+  .corp-page-header {
+    padding: 15px 14px;
+    margin-bottom: 14px;
+  }
+
+  .corp-page-title {
+    font-size: 19px;
+  }
+
+  .corp-segment-tab {
+    font-size: 12px;
+    padding: 8px 6px;
+    gap: 6px;
+  }
+
+  .corp-calendar-card,
+  .corp-inspector-card,
+  .corp-chart-card {
+    padding: 14px 12px;
+    border-radius: 15px;
+  }
+
+  .corp-month-heading {
+    font-size: 15.5px;
+  }
+
+  .corp-nav-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .corp-today-btn {
+    padding: 5px 10px;
+    font-size: 11.5px;
+  }
+
+  .corp-calendar-legend {
+    font-size: 11.5px;
+    gap: 8px 12px;
+    margin-bottom: 12px;
+  }
+
+  .corp-weekdays-row {
+    gap: 3px;
+    padding-bottom: 7px;
+    margin-bottom: 6px;
+  }
+
+  .corp-weekday-col {
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+  }
+
+  .corp-days-grid {
+    gap: 4px;
+  }
+
+  .corp-day-cell {
+    @apply items-center;
+    min-height: 50px;
+    padding: 4px 3px;
+    border-radius: 9px;
+  }
+
+  .corp-day-top {
+    @apply flex-col items-center justify-center;
+    gap: 1px;
+  }
+
+  .corp-day-num {
+    font-size: 12.5px;
+  }
+
+  .corp-today-badge {
+    font-size: 7.5px;
+    padding: 0 3px;
+    line-height: 1.2;
+  }
+
+  .corp-day-status {
+    @apply justify-center;
+    margin-top: 2px;
+  }
+
+  .corp-appt-pill {
+    @apply text-center w-full box-border;
+    font-size: 8.5px;
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+
+  /* Mobilde dar hücre içinde "1 Randevu" yerine kompakt "1 Rnd" gösterimi */
+  .corp-appt-text {
+
+    @apply hidden;
+  }
+
+  .corp-appt-count::after {
+    content: ' Rnd';
+  }
+
+  .corp-inspector-header {
+    @apply flex-col items-start;
+    gap: 10px;
+  }
+
+  .corp-inspector-title {
+    font-size: 15.5px;
+  }
+
+  .corp-slot-filter-row {
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .corp-pill-btn {
+    padding: 7px 6px;
+    font-size: 11px;
+  }
+
+  .corp-slots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  /* Randevulu (detaylı) saat kartı mobilde tam satır kaplasın, müsait saatler 2'li kompakt dizilsin */
+  .corp-slot-item.status-busy {
+    grid-column: 1 / -1;
+  }
+
+  .corp-slot-item {
+    padding: 10px;
+  }
+
+  .corp-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .corp-kpi-card {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .corp-kpi-label {
+    font-size: 11.5px;
+  }
+
+  .corp-kpi-icon-wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  .corp-kpi-val {
+    font-size: 21px;
+  }
+
+  .corp-kpi-text-val {
+    font-size: 15.5px;
+  }
+
+  .corp-kpi-sub {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .corp-kpi-grid,
+  .corp-slots-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

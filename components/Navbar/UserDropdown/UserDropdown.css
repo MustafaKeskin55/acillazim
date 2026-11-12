@@ -1,0 +1,100 @@
+.user-dropdown {
+  @apply absolute overflow-hidden overflow-y-auto;
+  top: 35px;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  z-index: 1000;
+  margin-top: 12px;
+  max-height: 80vh;
+  animation: dropdown-appear 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.user-dropdown::before {
+  @apply absolute;
+  content: '';
+  top: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.04);
+  z-index: -1;
+}
+
+.user-dropdown-item {
+  @apply flex items-center cursor-pointer relative;
+  padding: 14px 18px;
+  gap: 15px;
+  color: #333;
+  transition: all 0.25s ease;
+  border-left: 3px solid transparent;
+}
+
+.user-dropdown-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.user-dropdown-item:hover {
+  background: rgba(255, 107, 0, 0.05); /* Buton renginde hover */
+  color: #ff6b00; /* Buton renginde text */
+  border-left: 3px solid #003466; /* Soldaki çizgi #003466 rengi */
+}
+
+.dropdown-icon {
+  font-size: 18px;
+  color: #ff6b00 !important; /* Buton renginde (primary button color) */
+  opacity: 1; /* Opacity'yi 1 yaptım ki renk tam görünsün */
+  transition: all 0.25s ease;
+}
+
+/* React Icons (FontAwesome ve diğerleri) için güçlü override */
+.user-dropdown-item .dropdown-icon,
+.user-dropdown-item .dropdown-icon svg,
+.user-dropdown-item .dropdown-icon path,
+.user-dropdown-item .dropdown-icon g {
+  color: #ff6b00 !important;
+  fill: #ff6b00 !important;
+  stroke: #ff6b00 !important;
+}
+
+.user-dropdown-item:hover .dropdown-icon {
+  transform: translateX(2px);
+  opacity: 1;
+  color: #ff6b00 !important; /* Hover durumunda da buton renginde */
+}
+
+/* Hover durumunda React Icons için güçlü override */
+.user-dropdown-item:hover .dropdown-icon,
+.user-dropdown-item:hover .dropdown-icon svg,
+.user-dropdown-item:hover .dropdown-icon path,
+.user-dropdown-item:hover .dropdown-icon g {
+  color: #ff6b00 !important;
+  fill: #ff6b00 !important;
+  stroke: #ff6b00 !important;
+}
+
+.user-dropdown-item span {
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.user-dropdown-item:hover span {
+  transform: translateX(2px);
+}
+
+@keyframes dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

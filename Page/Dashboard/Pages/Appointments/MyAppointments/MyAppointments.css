@@ -1,0 +1,814 @@
+/* ==========================================================================
+   Panel: Randevularım (MyAppointments.css)
+   Acillazım Tasarım Sistemi: Lacivert (#003466) & Sıcak Turuncu (#FF6B00 / #F97316)
+   ========================================================================== */
+
+.my-appointments {
+  @apply mx-auto box-border;
+  padding: 2.5rem;
+  max-width: 1400px;
+  background: #f8fafc;
+  min-height: calc(100vh - 80px);
+}
+
+/* ── ÜST BAŞLIK & HIZLI EYLEMLER ── */
+.my-appointments__header-wrap {
+  @apply flex items-end justify-between relative;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.my-appointments__header-wrap::after {
+  @apply absolute;
+  content: '';
+  bottom: -1px;
+  left: 0;
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+  border-radius: 999px;
+}
+
+.my-appointments__header {
+
+  @apply text-left;
+}
+
+.my-appointments__badge {
+  @apply inline-flex items-center uppercase;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  color: #ea580c;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.65rem;
+}
+
+.my-appointments__badge-dot {
+  @apply rounded-full;
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.my-appointments__header h1 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+.my-appointments__header p {
+  @apply m-0;
+  color: #64748b;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  max-width: 620px;
+}
+
+.my-appointments__actions {
+  @apply flex items-center flex-shrink-0;
+  gap: 12px;
+}
+
+.ma-action-btn {
+  @apply inline-flex items-center justify-center no-underline cursor-pointer border-0;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  border-radius: 14px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.ma-action-btn--secondary {
+  background: #ffffff;
+  color: #0f172a !important;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.ma-action-btn--secondary:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  border-color: #94a3b8;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.ma-action-btn--excel {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px -4px rgba(16, 185, 129, 0.38);
+}
+
+.ma-action-btn--excel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -4px rgba(16, 185, 129, 0.48);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.ma-action-btn:active {
+  transform: scale(0.98);
+}
+
+.ma-action-icon {
+  font-size: 0.95rem;
+}
+
+/* ── 3'LÜ İSTATİSTİK KARTLARI (BENTO STRIP) ── */
+.ma-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.ma-stat-card {
+  @apply flex items-center relative overflow-hidden;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  gap: 1.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow:
+    0 1px 3px rgba(15, 23, 42, 0.04),
+    0 10px 24px -8px rgba(15, 23, 42, 0.04);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ma-stat-card::before {
+  @apply absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: currentColor;
+}
+
+.ma-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.06),
+    0 14px 28px -6px rgba(15, 23, 42, 0.09);
+  border-color: rgba(203, 213, 225, 0.9);
+}
+
+.ma-stat-icon {
+  @apply flex items-center justify-center flex-shrink-0 relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  font-size: 1.5rem;
+  transition: transform 0.22s ease;
+}
+
+.ma-stat-card:hover .ma-stat-icon {
+  transform: scale(1.06);
+}
+
+.ma-stat-icon svg {
+  @apply relative;
+  width: 22px;
+  height: 22px;
+  z-index: 2;
+}
+
+/* Renk Çeşitleri */
+.ma-stat-card.ma-total {
+  color: #0284c7;
+}
+.ma-stat-card.ma-total .ma-stat-icon {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+}
+
+.ma-stat-card.ma-pending {
+  color: #ea580c;
+}
+.ma-stat-card.ma-pending .ma-stat-icon {
+  background: rgba(234, 88, 12, 0.1);
+  color: #ea580c;
+}
+
+.ma-stat-card.ma-rejected {
+  color: #ef4444;
+}
+.ma-stat-card.ma-rejected .ma-stat-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.ma-stat-content {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.ma-stat-title {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ma-stat-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* ── TOOLBAR & FİLTRELER ── */
+.appointments-toolbar {
+  @apply flex items-center justify-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.filter-buttons {
+  @apply inline-flex items-center;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  gap: 4px;
+}
+
+.filter-btn {
+  @apply border-0 cursor-pointer inline-flex items-center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.01em;
+}
+
+.filter-btn:hover {
+  color: #0f172a;
+  background: rgba(241, 245, 249, 0.8);
+}
+
+.filter-btn.active {
+  background: #003466;
+  color: #ffffff;
+  box-shadow: 0 4px 12px -2px rgba(0, 52, 102, 0.25);
+}
+
+.filter-btn .count {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.07);
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.filter-btn.active .count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+/* ── İÇERİK BÖLÜMÜ ── */
+.my-appointments__content {
+
+  @apply relative;
+}
+
+/* ── YÜKLENİYOR DURUMU ── */
+.my-appointments__loading {
+  @apply text-center;
+  padding: 4.5rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.my-appointments__spinner {
+  @apply rounded-full;
+  width: 44px;
+  height: 44px;
+  border: 3.5px solid rgba(249, 115, 22, 0.15);
+  border-top-color: #ea580c;
+  animation: maSpin 0.75s linear infinite;
+  margin: 0 auto 1.25rem;
+}
+
+@keyframes maSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.my-appointments__loading p {
+  @apply m-0;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ── BOŞ DURUM (GENEL EMPTY STATE) ── */
+.my-appointments__empty-state {
+  @apply text-center flex flex-col items-center mx-auto;
+  padding: 4rem 2rem 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  border-radius: 24px;
+  border: 1.5px dashed rgba(203, 213, 225, 0.9);
+  box-shadow: 0 8px 30px -10px rgba(15, 23, 42, 0.05);
+  max-width: 780px;
+}
+
+.ma-empty-icon-wrap {
+  @apply relative;
+  margin-bottom: 1.5rem;
+}
+
+.ma-empty-icon {
+  @apply flex items-center justify-center;
+  width: 74px;
+  height: 74px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(0, 52, 102, 0.15) 100%);
+  color: #0284c7;
+  font-size: 32px;
+  box-shadow:
+    0 12px 24px -4px rgba(2, 132, 199, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.ma-empty-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+.ma-empty-desc {
+  font-size: 0.98rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 0 2rem 0;
+}
+
+.ma-empty-actions {
+  @apply flex items-center flex-wrap justify-center;
+  gap: 12px;
+}
+
+.ma-empty-btn {
+  @apply inline-flex items-center justify-center no-underline;
+  gap: 9px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 14px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ma-empty-btn--primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px -4px rgba(234, 88, 12, 0.42);
+}
+
+.ma-empty-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(234, 88, 12, 0.52);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+}
+
+.ma-empty-btn--primary:hover .ma-empty-arrow {
+  transform: translateX(4px);
+}
+
+.ma-empty-arrow {
+  font-size: 0.88rem;
+  transition: transform 0.2s ease;
+}
+
+.ma-empty-btn--secondary {
+  background: #ffffff;
+  color: #0f172a !important;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.ma-empty-btn--secondary:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.ma-empty-badges {
+  @apply flex items-center justify-center w-full flex-wrap;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.ma-empty-badge {
+  @apply inline-flex items-center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.ma-empty-badge-icon {
+  color: #0284c7;
+  font-size: 0.95rem;
+}
+
+/* ── FİLTREDE SONUÇ YOKSA ── */
+.my-appointments__filter-empty {
+  @apply text-center flex flex-col items-center;
+  padding: 3.5rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.ma-filter-empty-icon {
+  @apply flex items-center justify-center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(148, 163, 184, 0.12);
+  color: #64748b;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.my-appointments__filter-empty h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.4rem 0;
+}
+
+.my-appointments__filter-empty p {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin: 0 0 1.25rem 0;
+}
+
+.ma-filter-clear-btn {
+  @apply border-0 cursor-pointer;
+  background: #003466;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ma-filter-clear-btn:hover {
+  background: #082d5b;
+  transform: translateY(-1px);
+}
+
+/* ── SAYFALAMA (PAGINATION) ── */
+.pagination {
+  @apply flex justify-center items-center;
+  gap: 8px;
+  margin-top: 2.5rem;
+  padding: 16px 0;
+}
+
+.pagination-btn {
+  @apply cursor-pointer inline-flex items-center justify-center;
+  padding: 8px 16px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  min-width: 42px;
+  height: 42px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.pagination-btn.active {
+  background: #003466;
+  color: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 4px 12px -2px rgba(0, 52, 102, 0.35);
+}
+
+.pagination-btn.disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.45;
+  background: #f1f5f9;
+}
+
+/* ==========================================================================
+   MOBİL VE TABLET UYARLAMASI (<= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .my-appointments {
+    padding: 1.25rem 1rem 2rem;
+    min-height: auto;
+  }
+
+  .my-appointments__header-wrap {
+    @apply flex-col items-stretch;
+    gap: 1.15rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .my-appointments__header-wrap::after {
+    width: 52px;
+  }
+
+  .my-appointments__badge {
+    font-size: 10.5px;
+    padding: 3px 9px;
+    margin-bottom: 0.45rem;
+  }
+
+  .my-appointments__header h1 {
+    font-size: 1.45rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .my-appointments__header p {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .my-appointments__actions {
+    @apply flex-col w-full;
+    gap: 8px;
+  }
+
+  .ma-action-btn {
+    @apply w-full;
+    min-height: 46px;
+  }
+
+  /* 3'lü istatistik kartları */
+  .ma-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ma-stat-card {
+    @apply flex-col items-start justify-center;
+    gap: 0.55rem;
+    padding: 0.85rem 0.65rem 0.85rem 0.85rem;
+    border-radius: 14px;
+    min-width: 0;
+  }
+
+  .ma-stat-card::before {
+    width: 3.5px;
+  }
+
+  .ma-stat-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+
+  .ma-stat-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .ma-stat-title {
+    font-size: 0.72rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .ma-stat-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  /* Toolbar */
+  .appointments-toolbar {
+    margin-bottom: 1.25rem;
+  }
+
+  .filter-buttons {
+    @apply w-full;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px;
+    border-radius: 14px;
+  }
+
+  .filter-buttons::-webkit-scrollbar {
+
+    @apply hidden;
+  }
+
+  .filter-btn {
+    @apply flex-1 justify-center;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .filter-btn .count {
+    font-size: 10.5px;
+    padding: 1px 6px;
+  }
+
+  /* Boş durum */
+  .my-appointments__empty-state {
+    padding: 2.5rem 1.15rem 2rem;
+    border-radius: 20px;
+  }
+
+  .ma-empty-icon {
+    width: 62px;
+    height: 62px;
+    font-size: 26px;
+    border-radius: 18px;
+  }
+
+  .ma-empty-title {
+    font-size: 1.18rem;
+    line-height: 1.35;
+  }
+
+  .ma-empty-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .ma-empty-actions {
+
+    @apply flex-col w-full;
+  }
+
+  .ma-empty-btn {
+    @apply w-full;
+    min-height: 48px;
+  }
+
+  .ma-empty-badges {
+    @apply flex-col items-start;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .ma-empty-badge {
+    font-size: 0.82rem;
+  }
+}
+
+/* ── ÇOK DAR TELEFONLAR (<= 360px) ── */
+@media (max-width: 360px) {
+  .my-appointments {
+    padding: 1rem 0.75rem 1.5rem;
+  }
+
+  .ma-stats-grid {
+    gap: 0.45rem;
+  }
+
+  .ma-stat-card {
+    padding: 0.75rem 0.45rem 0.75rem 0.7rem;
+    border-radius: 12px;
+  }
+
+  .ma-stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ma-stat-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .ma-stat-title {
+    font-size: 0.68rem;
+  }
+
+  .ma-stat-value {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ── MOD SEÇİCİ (ALDIĞIM RANDEVULAR / GELEN TALEPLER SEKMELERİ) ── */
+.ma-mode-switcher-wrap {
+  @apply flex items-center justify-start;
+  margin-bottom: 2rem;
+}
+
+.ma-mode-switcher {
+  @apply inline-flex;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 18px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  gap: 6px;
+}
+
+.ma-mode-tab {
+  @apply inline-flex items-center border-0 cursor-pointer;
+  gap: 10px;
+  padding: 11px 22px;
+  border-radius: 14px;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.94rem;
+  font-weight: 700;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.01em;
+}
+
+.ma-mode-tab:hover {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.ma-mode-tab.active {
+  background: #003466;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 52, 102, 0.25);
+}
+
+.ma-mode-tab-icon {
+  font-size: 15px;
+}
+
+.ma-mode-tab-count {
+  @apply inline-flex items-center justify-center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  background: rgba(15, 23, 42, 0.08);
+  color: inherit;
+}
+
+.ma-mode-tab.active .ma-mode-tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .ma-mode-switcher {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ma-mode-tab {
+    @apply w-full box-border justify-center;
+    padding: 11px 14px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+}

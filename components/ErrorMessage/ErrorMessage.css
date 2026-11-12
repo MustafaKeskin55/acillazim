@@ -1,0 +1,166 @@
+/* Hata Mesajı Bileşeni Stilleri */
+.error-message {
+  @apply flex flex-col items-center justify-center text-center;
+  min-height: 60vh;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+/* Hata türüne göre farklı stiller */
+.error-message.error {
+  background-color: #fff5f5;
+  border: 1px solid #ffe0e0;
+}
+
+.error-message.not-found,
+.error-message.product-not-found {
+  background-color: #f5f7ff;
+  border: 1px solid #e0e6ff;
+}
+
+.error-message.server-error {
+  background-color: #fff7f5;
+  border: 1px solid #ffd7c9;
+}
+
+.error-message.maintenance {
+  background-color: #f7f7f2;
+  border: 1px solid #eaeacb;
+}
+
+.error-message.unauthorized,
+.error-message.forbidden {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+}
+
+/* Emoji stilleri */
+.error-emoji {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: sadPulse 2s ease-in-out infinite;
+}
+
+@keyframes sadPulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hata türüne göre farklı animasyonlar */
+.error-message.server-error .error-emoji {
+  animation: wobble 1.5s ease-in-out infinite;
+}
+
+.error-message.maintenance .error-emoji {
+  animation: rotate 3s linear infinite;
+}
+
+.error-message.unauthorized .error-emoji,
+.error-message.forbidden .error-emoji {
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px) rotate(-5deg); }
+  75% { transform: translateX(10px) rotate(5deg); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Başlık stilleri */
+.error-message h2 {
+  color: #e53935;
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* Hata türüne özel başlık renkleri */
+.error-message.not-found h2,
+.error-message.product-not-found h2 {
+  color: #5c6bc0;
+}
+
+.error-message.server-error h2 {
+  color: #f4511e;
+}
+
+.error-message.maintenance h2 {
+  color: #f9a825;
+}
+
+.error-message.unauthorized h2,
+.error-message.forbidden h2 {
+  color: #546e7a;
+}
+
+/* Mesaj metni stilleri */
+.error-message p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 25px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Yönlendirme mesajı stilleri */
+.error-redirect-message {
+  color: #666;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .error-message {
+    padding: 30px 15px;
+    margin: 20px auto;
+  }
+  
+  .error-emoji {
+    font-size: 50px;
+  }
+  
+  .error-message h2 {
+    font-size: 24px;
+  }
+  
+  .error-message p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-message {
+    padding: 20px 15px;
+    margin: 15px auto;
+    min-height: 50vh;
+  }
+  
+  .error-emoji {
+    font-size: 40px;
+  }
+  
+  .error-message h2 {
+    font-size: 22px;
+  }
+} 

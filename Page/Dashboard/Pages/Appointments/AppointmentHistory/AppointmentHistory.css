@@ -1,0 +1,88 @@
+.appointment-history {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.history-toolbar {
+  @apply flex justify-between items-center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.search-box {
+
+  @apply flex-1;
+}
+
+.search-box input {
+  @apply w-full;
+  padding: 10px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.date-filter {
+  @apply cursor-pointer;
+  padding: 10px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  color: #666;
+}
+
+.history-table {
+  overflow-x: auto;
+}
+
+table {
+  @apply w-full;
+  border-collapse: collapse;
+}
+
+th, td {
+  @apply text-left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  font-weight: 600;
+  color: #666;
+  background: #f8f9fa;
+}
+
+td {
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 1024px) {
+  .history-toolbar {
+
+    @apply flex-col;
+  }
+  
+  .history-table {
+    font-size: 14px;
+  }
+} 

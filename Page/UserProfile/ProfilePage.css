@@ -1,0 +1,126 @@
+/* ProfilePage.css - Ana profil sayfası stilleri */
+
+.profile-page {
+  @apply w-full relative;
+  /* background-color: #f9fafb; */ /* Arka plan rengini kaldırıyorum */
+  padding: 30px 0 50px;
+  min-height: calc(100vh - 80px); /* Header'dan sonraki görünür alan */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.profile-page-container {
+  @apply w-full mx-auto flex flex-col;
+  max-width: 1140px;
+  padding: 0 20px;
+  gap: 24px; /* Bileşenler arası sabit boşluk */
+  transition: all 0.3s ease;
+}
+
+/* Sekme içerik alanı */
+.profile-tab-content {
+  @apply w-full overflow-hidden;
+  margin-top: 10px;
+  padding: 0 16px;
+  border-radius: 10px; /* Taşan içeriği düzenle */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Gölgeyi daha belirgin yapıyorum */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease forwards;
+  background-color: #ffffff; /* Beyaz arka plan ekliyorum */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tüm bileşenler için tutarlı gölge ve köşe yuvarlama */
+.profile-page-container > div {
+  @apply overflow-hidden;
+  border-radius: 10px; /* İçerikler taşmasın */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Tüm bileşenlere daha belirgin gölge */
+  background-color: #ffffff; /* Tüm bileşenlere beyaz arka plan */
+}
+
+/* Profil sayfası reklam bannerı - alt kısım */
+.profile-vitrin-bottom,
+.profile-ad-bottom {
+  @apply w-full flex justify-center m-0 overflow-hidden;
+  padding: 16px 0 0;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.profile-vitrin-bottom .ad-banner,
+.profile-vitrin-bottom .ad-banner-empty,
+.profile-ad-bottom .ad-banner,
+.profile-ad-bottom .ad-banner-empty {
+  @apply w-full;
+  max-height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  font-size: 10px;
+  background-color: #fafafa;
+}
+
+.profile-vitrin-bottom .alz-vitrin-video,
+.profile-vitrin-bottom .alz-vitrin-media,
+.profile-ad-bottom .alz-vitrin-video,
+.profile-ad-bottom .alz-vitrin-media,
+.profile-ad-bottom .ad-banner-video,
+.profile-ad-bottom .ad-banner-image {
+  @apply w-full object-cover;
+  height: 80px;
+}
+
+.profile-vitrin-bottom .ad-banner-label,
+.profile-ad-bottom .ad-banner-label {
+  font-size: 9px;
+  padding: 1px 8px;
+  top: 4px;
+  right: 4px;
+  background-color: rgba(255, 204, 0, 0.8);
+}
+
+/* Medya sorguları */
+@media (max-width: 992px) {
+  .profile-page-container {
+    max-width: 100%;
+    padding: 0 15px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 20px 0 30px;
+    /* background-color: #f5f7fa; */ /* Arka plan rengini kaldırıyorum */
+  }
+  
+  .profile-page-container {
+    gap: 16px;
+  }
+  
+  .profile-tab-content {
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 10px 0 20px;
+  }
+  
+  .profile-page-container {
+    padding: 0 12px;
+    gap: 12px;
+  }
+  
+  .profile-tab-content {
+    margin-top: 6px;
+    border-radius: 6px;
+  }
+} 

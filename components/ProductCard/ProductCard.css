@@ -1,0 +1,506 @@
+/* ===================================================================
+   ProductCard.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+/* GRID GÖRÜNÜMÜ — ölçü: styles/product-card-tokens.css */
+.prodcard-wrapper {
+  @apply relative w-full;
+  max-width: var(--alz-listing-card-w);
+  transform: none !important;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-container {
+  @apply w-full rounded-lg overflow-hidden bg-white cursor-pointer m-0 relative flex flex-col no-underline text-inherit outline-none;
+  max-width: var(--alz-listing-card-w);
+  height: var(--alz-listing-card-h);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
+  border: var(--alz-listing-card-border, 1px solid #c4c4c4);
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-container:hover {
+  @apply -translate-y-[5px] no-underline text-inherit;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--alz-listing-card-border-hover-color, #9a9a9a);
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-image-container {
+  @apply relative w-full overflow-hidden p-0 leading-none text-[0px];
+  height: calc(var(--alz-listing-card-h) * 160 / 280);
+  border-bottom: 1px solid var(--alz-listing-card-inner-border, #e0e0e0);
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-image {
+  @apply w-full h-full object-cover object-center block m-0 p-0 transition-transform duration-500;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-container:hover .prodcard-image {
+  @apply scale-105;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-content {
+  @apply py-2.5 px-3 flex flex-col flex-1;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-category {
+  @apply text-[10px] text-[#666] mb-1 uppercase tracking-[0.5px];
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-title {
+  @apply text-[14px] font-semibold my-0 mb-2 text-[#333] leading-[1.3] h-9 overflow-hidden text-ellipsis no-underline;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-location {
+  @apply flex items-center gap-1 text-[12px] text-[#666] mb-1.5;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-location-icon {
+  @apply text-[14px] text-[#666];
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-footer {
+  @apply flex justify-between items-center mt-auto pt-2 pb-0.5 relative z-[4];
+  border-top: 1px solid var(--alz-listing-card-inner-border, #e0e0e0);
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-footer--no-price {
+  @apply justify-end;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-price-container {
+  @apply flex flex-col;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-price {
+  @apply text-[15px] font-bold text-[#333] flex items-baseline flex-wrap;
+}
+
+.prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-service-cta {
+  @apply flex items-center;
+}
+
+.prodcard-service-badge {
+  @apply inline-flex items-center justify-center text-[12px] font-bold text-[#ff6000] py-1 px-2.5 rounded-full tracking-[0.2px] whitespace-nowrap transition-all duration-200;
+  background: rgba(255, 96, 0, 0.08);
+  border: 1px solid rgba(255, 96, 0, 0.28);
+}
+
+.prodcard-wrapper:hover .prodcard-service-badge {
+  @apply bg-[#ff6000] text-white border-[#ff6000];
+}
+
+.prodcard-price-period {
+  @apply text-[12px] font-semibold text-[#ff6000] ml-[3px];
+}
+
+.prodcard-price-negotiable {
+  @apply text-[11px] font-medium text-[#888] mt-px;
+}
+
+/* LİSTE GÖRÜNÜMÜ */
+.prodcard-wrapper.prodcard-wrapper-list {
+  @apply w-full mb-2 rounded-lg overflow-hidden relative bg-white;
+  border: var(--alz-listing-card-border, 1px solid #c4c4c4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.2s ease;
+  display: block !important;
+  transform: none !important;
+  max-width: 100% !important;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--alz-listing-card-border-hover-color, #9a9a9a);
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-container-list {
+  @apply w-full h-auto min-h-[120px] items-center p-0 m-0 rounded-none shadow-none border-0 overflow-visible relative flex-nowrap no-underline text-inherit;
+  display: flex !important;
+  flex-direction: row !important;
+  transform: none !important;
+  max-width: 100% !important;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-image-container-list {
+  @apply shrink-0 mr-[15px] overflow-hidden relative block rounded-none p-0 leading-none text-[0px];
+  width: 130px !important;
+  min-width: 130px !important;
+  height: 130px !important;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-image-container-list img {
+  @apply w-full h-full object-cover object-center block absolute top-0 left-0 m-0 p-0;
+  transform: none !important;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-title-column {
+  @apply flex flex-col justify-center min-w-0 pr-[15px] pl-[15px] overflow-hidden;
+  flex: 0 0 440px;
+  max-width: 440px;
+  width: 440px;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-title-list {
+  @apply text-[16px] font-semibold m-0 text-[#333] leading-[1.4] overflow-hidden text-ellipsis max-h-[44px];
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.prodcard-list-price-loc-row {
+  display: contents;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-info-column {
+  @apply flex-1 flex flex-row justify-end items-center min-w-0 pr-2.5 gap-[15px];
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-price-date-container {
+  @apply flex flex-col items-end gap-[5px] min-w-[90px];
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-info-item {
+  @apply flex flex-row items-center whitespace-nowrap;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-price-list {
+  @apply font-bold text-[#333] text-[16px] text-right -mr-[5px];
+  flex: 0 0 90px;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-price-list--service {
+  @apply flex items-center justify-end;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-service-badge--list {
+  @apply text-[11px] py-[3px] px-2;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-price-period-list {
+  @apply text-[12px] font-semibold text-[#ff6000];
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-date-list {
+  @apply text-[#333] text-[13px] text-center font-medium flex items-center justify-center leading-tight min-w-[90px];
+  flex: 0 0 90px;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-location-list {
+  @apply text-[#333] text-[14px] whitespace-normal text-center leading-tight flex items-center justify-center font-medium;
+  flex: 0 0 120px;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-favorite-container-list {
+  @apply w-10 flex justify-center items-center;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .date-content,
+.prodcard-wrapper.prodcard-wrapper-list .location-content {
+  @apply flex flex-col;
+  align-items: inherit;
+  justify-content: inherit;
+  text-align: inherit;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .date-content span,
+.prodcard-wrapper.prodcard-wrapper-list .location-content span {
+  @apply block leading-[1.3];
+}
+
+/* Badge'lar */
+.prodcard-badges {
+  @apply absolute top-2 left-2 flex flex-col gap-1 z-10 pointer-events-none;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-badges {
+  @apply top-2.5 left-2.5;
+}
+
+.prodcard-badge {
+  @apply py-1 px-2.5 rounded-md text-[12px] font-semibold text-white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-badge {
+  @apply py-[3px] px-2.5 text-[12px] font-bold tracking-[0.5px];
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.prodcard-badge-urgent {
+  background: linear-gradient(135deg, #d80027, #ff3b3b);
+}
+
+.prodcard-badge-new {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.prodcard-badge-featured {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+/* Favori Butonları */
+.prodcard-favorite-button {
+  @apply pointer-events-auto;
+  @apply bg-transparent border-0 w-[34px] h-[34px] p-1 flex items-center justify-center cursor-pointer relative z-10 shrink-0 rounded-full select-none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.prodcard-favorite-button:hover {
+  background-color: rgba(255, 96, 0, 0.1);
+  @apply scale-110;
+}
+
+.prodcard-favorite-button:hover .prodcard-favorite-icon {
+  @apply text-[#ff6000];
+}
+
+.prodcard-favorite-button:focus,
+.prodcard-favorite-button:focus-visible,
+.prodcard-favorite-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.prodcard-favorite-icon {
+  @apply text-[24px] text-[#aaa] pointer-events-none block;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.prodcard-favorite-icon.active {
+  @apply text-[#ff3b3b];
+  animation: heartBeat 0.3s ease-in-out;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Şikayet Butonu */
+.prodcard-report-button {
+  @apply pointer-events-auto;
+  @apply bg-transparent border-0 p-1.5 flex items-center justify-center cursor-pointer relative z-10 rounded-full select-none;
+  transition: background-color 0.2s ease;
+}
+
+.prodcard-report-button:focus,
+.prodcard-report-button:focus-visible,
+.prodcard-report-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.prodcard-report-icon {
+  @apply text-[18px] text-[#ccc] pointer-events-none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.prodcard-report-button:hover .prodcard-report-icon {
+  @apply text-[#e74c3c] scale-110;
+}
+
+.prodcard-actions {
+  @apply pointer-events-auto;
+  @apply flex items-center gap-1 relative z-10 shrink-0;
+}
+
+.prodcard-wrapper.prodcard-wrapper-list .prodcard-favorite-container-list {
+  @apply flex-col gap-1;
+}
+
+/* Mobil Görünüm - LİSTE */
+@media (max-width: 992px) {
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-title-column {
+    @apply flex-1 max-w-none w-auto;
+  }
+  
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-info-column {
+    @apply flex-wrap gap-2.5;
+  }
+  
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-price-date-container {
+    @apply shrink-0 grow-0 basis-auto;
+  }
+  
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-price-list,
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-date-list,
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-location-list {
+    @apply shrink-0 grow-0 basis-auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .prodcard-wrapper.prodcard-wrapper-list {
+    @apply mb-2 rounded-[10px] overflow-hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-container-list {
+    display: grid !important;
+    grid-template-columns: 96px minmax(0, 1fr) 40px;
+    grid-template-rows: auto auto;
+    @apply items-start gap-x-2.5 gap-y-0 relative min-h-0;
+    padding: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-image-container-list {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    @apply self-stretch rounded-lg overflow-hidden;
+    width: 96px !important;
+    min-width: 96px !important;
+    height: 100% !important;
+    min-height: 108px !important;
+    margin-right: 0 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-title-column {
+    grid-column: 2;
+    grid-row: 1;
+    flex: unset !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 0 4px 6px 0 !important;
+    @apply self-start;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-title-list {
+    @apply text-[14px] font-semibold leading-[1.38] m-0 overflow-hidden text-[#1a1a1a];
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-info-column {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 5px !important;
+    padding: 0 4px 0 0 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-list-price-loc-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: baseline !important;
+    gap: 6px !important;
+    min-width: 0 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-info-item {
+    white-space: normal !important;
+    margin: 0 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-price-list {
+    flex: 0 0 auto !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #111 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-price-list span {
+    @apply whitespace-nowrap;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-location-list {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #757575 !important;
+    line-height: 1.3 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .location-inline {
+    @apply block overflow-hidden text-ellipsis whitespace-nowrap;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-date-list {
+    flex: 0 0 auto !important;
+    padding-top: 0;
+    min-width: 0 !important;
+    @apply w-full text-left block;
+    align-items: unset !important;
+    justify-content: flex-start !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .date-single {
+    @apply block w-full text-left text-[11px] font-normal text-[#9e9e9e] whitespace-nowrap;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-favorite-container-list {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    @apply self-center justify-self-center;
+    width: 40px !important;
+    min-width: 40px !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-favorite-button {
+    @apply p-1.5 flex items-center justify-center;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-price-date-container {
+    min-width: 0 !important;
+  }
+
+  .prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-image-container {
+    height: calc(var(--alz-listing-card-h) * 176 / 280);
+  }
+
+  .prodcard-badges {
+    @apply top-1.5 left-1.5 gap-[3px];
+  }
+
+  .prodcard-badge {
+    @apply py-0.5 px-[7px] text-[10px] rounded;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-badges {
+    @apply top-1.5 left-1.5;
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list .prodcard-badge {
+    @apply py-0.5 px-[7px] text-[10px] font-semibold tracking-[0.3px];
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (min-width: 769px) {
+  .prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-container {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .prodcard-wrapper:not(.prodcard-wrapper-list) .prodcard-container:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .prodcard-wrapper.prodcard-wrapper-list:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  }
+}

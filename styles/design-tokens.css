@@ -1,0 +1,54 @@
+/* ===================================================================
+   ACİLLAZIM.COM — MERKEZİ TASARIM SİSTEMİ (DESIGN TOKENS)
+   Bu dosya tüm sitenin renk, buton, kart, input, gölge ve tipografi
+   standartlarını tek bir merkezden yönetir.
+   Burada yapılan herhangi bir değişiklik TÜM PROJEYE anında yansır.
+   =================================================================== */
+
+:root {
+  /* 🎨 1. MERKEZİ RENK PALETİ */
+  --brand-deep: #003466;             /* Kurumsal Lacivert */
+  --brand-deep-hover: #00274d;       /* Koyu Lacivert Hover */
+  --brand-accent: #FF6B00;           /* Kurumsal Turuncu */
+  --brand-accent-hover: #FF8124;     /* Turuncu Hover */
+  --brand-accent-active: #e56100;    /* Turuncu Tıklama */
+  --brand-ink: #0A0E27;              /* Ana Metin Rengi */
+  --brand-ink-2: #050816;            /* İkincil Metin */
+  --brand-cream: #FAF8F3;            /* Arka Plan Krem */
+  --brand-paper: #FFFFFF;            /* Kart / Zemin Beyazı */
+  --brand-bg: #F5F6F8;               /* Göz Yormayan Sakin Zemin (Aşırı beyazlığı kıran doğal SaaS arka planı) */
+  --brand-line: #ECE7DC;             /* Çizgi / Ayraç Rengi */
+  --brand-muted: #6B7280;            /* Soluk / Açıklama Metni */
+  --brand-success: #10B981;          /* Başarılı / Onay Yeşili */
+  --brand-warning: #F59E0B;          /* Uyarı Sarısı */
+  --brand-danger: #ff3b30;           /* Hata / Tehlike Kırmızısı */
+
+  /* 🔘 2. MERKEZİ BUTON STANDARTLARI */
+  --alz-btn-radius: 12px;            /* Tüm butonların köşe yuvarlaklığı */
+  --alz-btn-pad-y: 10px;             /* Dikey iç boşluk */
+  --alz-btn-pad-x: 20px;             /* Yatay iç boşluk */
+  --alz-btn-font-weight: 600;        /* Yazı kalınlığı */
+
+  /* 📝 3. MERKEZİ FORM / INPUT STANDARTLARI */
+  --alz-input-radius: 12px;          /* Input köşe yuvarlaklığı */
+  --alz-input-border: #E2E8F0;       /* Standart border rengi */
+  --alz-input-focus-border: #FF6B00; /* Odaklanma border rengi */
+  --alz-input-height: 48px;          /* Standart form girdi yüksekliği */
+
+  /* 🗂️ 4. MERKEZİ KART STANDARTLARI */
+  --alz-card-radius: 16px;           /* Tüm ürün ve dashboard kartları */
+  --alz-card-border: #F1F5F9;        /* Kart kenarlık rengi */
+  --alz-card-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --alz-card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* 💎 5. MERKEZİ İKON STANDARTLARI */
+  --alz-icon-radius: 12px;           /* İkon kutusu yuvarlaklığı */
+  --alz-icon-box-size: 44px;         /* İkon kutusu standart boyutu */
+
+  /* 📐 6. EKRAN & BOYUT STANDARTLARI */
+  --sidebar-width-desktop: 280px;    /* Masaüstü panel yan menü */
+  --sidebar-width-collapsed: 100px;  /* Daraltılmış yan menü */
+  --header-height-dashboard: 90px;   /* Panel üst bar yüksekliği */
+  --navbar-height-desktop: 80px;     /* Site ana menü yüksekliği */
+}
+

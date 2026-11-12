@@ -1,0 +1,250 @@
+/* ===================================================================
+   Breadcrumb2.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+.breadcrumb2-container {
+  @apply pointer-events-auto;
+  @apply items-center p-0 border-0 bg-transparent w-full max-w-full justify-start z-[990] relative shadow-none h-auto opacity-100 mt-0 mb-0;
+  visibility: visible !important;
+}
+
+.catcontent-container-breadcrumb .breadcrumb2-content {
+  @apply shadow-none mt-0;
+  padding: 0 !important;
+}
+
+.catcontent-container-breadcrumb {
+  margin: 0 !important;
+  margin-bottom: 12px !important;
+  width: 100% !important;
+}
+
+.product-detail-breadcrumb {
+  @apply mb-0 rounded-none;
+}
+
+.breadcrumb2-content {
+  @apply pointer-events-auto;
+  display: flex !important;
+  @apply items-center justify-start w-full overflow-x-auto px-3 rounded-lg min-h-[30px] whitespace-nowrap;
+  max-width: fit-content;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  visibility: visible !important;
+}
+
+.product-detail-breadcrumb .breadcrumb2-content {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  @apply pl-2.5;
+}
+
+.breadcrumb2-content::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.filter-page-breadcrumb {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.filter-page-breadcrumb .breadcrumb2-content {
+  display: flex !important;
+  visibility: visible !important;
+  @apply ml-2.5;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.breadcrumb2 {
+  @apply flex items-center list-none m-0 p-0 flex-nowrap whitespace-nowrap;
+}
+
+.breadcrumb2-item {
+  @apply flex items-center text-[13px] p-0;
+}
+
+.breadcrumb2-separator {
+  @apply flex items-center my-0 mx-1.5 p-0 select-none font-light text-[8px];
+  color: rgba(0, 52, 102, 0.25);
+}
+
+.breadcrumb2-link {
+  @apply no-underline pointer-events-auto;
+  color: #475569 !important;
+  @apply py-[3px] px-2 rounded-md font-medium text-[11.5px] cursor-pointer relative z-[990] bg-transparent border-0 tracking-wide;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.breadcrumb2-current {
+  @apply text-[#E9730C] py-[3px] px-[9px] font-bold text-[11.5px] overflow-hidden text-ellipsis max-w-[260px] inline-block rounded-md tracking-wide;
+  background: rgba(233, 115, 12, 0.08);
+  border: 1px solid rgba(233, 115, 12, 0.12);
+}
+
+.breadcrumb2-link:hover {
+  @apply no-underline;
+  color: #003466 !important;
+  background: rgba(0, 52, 102, 0.06);
+}
+
+.breadcrumb2-text {
+  @apply text-[#4B5563] py-1 px-0 font-normal text-[13px];
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .breadcrumb2-container, .category-breadcrumb {
+    @apply p-0;
+  }
+
+  .breadcrumb2-content {
+    @apply px-2.5 rounded-md min-h-[28px];
+  }
+
+  .breadcrumb2-link, .breadcrumb2-text {
+    @apply py-0.5 px-1.5 text-[10.5px];
+  }
+
+  .breadcrumb2-separator {
+    @apply my-0 mx-[5px] text-[7px];
+  }
+
+  .breadcrumb2-current {
+    @apply text-[10.5px] py-0.5 px-2 max-w-[180px];
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb2-container, .category-breadcrumb {
+    @apply p-0;
+  }
+
+  .breadcrumb2-content {
+    @apply px-2 rounded-[5px] min-h-[26px];
+  }
+
+  .breadcrumb2-link, .breadcrumb2-text {
+    @apply py-0.5 px-[5px] text-[9.5px];
+  }
+
+  .breadcrumb2-separator {
+    @apply my-0 mx-1 text-[7px];
+  }
+
+  .breadcrumb2-current {
+    @apply text-[9.5px] py-0.5 px-[7px] max-w-[150px];
+  }
+}
+
+/* İlan detayında breadcrumb pozisyonu */
+.product-detail .breadcrumb2-container {
+  @apply z-10 relative mb-0;
+}
+
+.breadcrumb2-home-wrapper {
+  @apply flex items-center mr-0 relative z-[1001];
+}
+
+.breadcrumb2-home-link {
+  color: #475569 !important;
+  font-weight: 500 !important;
+  padding: 3px 8px !important;
+  @apply mr-0 bg-transparent border-0 rounded-md block relative z-[1500] text-[11.5px] no-underline;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.breadcrumb2-home-link:hover {
+  color: #003466 !important;
+  text-decoration: none !important;
+  background: rgba(0, 52, 102, 0.06);
+}
+
+/* Kategori sayfası için breadcrumb */
+.catcontent-container .breadcrumb2-container,
+.catcontent-container .breadcrumb2-content {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+.catcontent-container .breadcrumb2-container {
+  @apply shadow-none mb-3;
+}
+
+.catcontent-container .breadcrumb2-content {
+  @apply pl-3;
+}
+
+/* Mobil ilan detay */
+.product-detail-breadcrumb-wrapper:empty,
+.service-detail-breadcrumb-wrapper:empty,
+.breadcrumb2-container:empty {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb2-container.filter-page-breadcrumb {
+    display: none !important;
+  }
+}
+
+:root {
+  --breadcrumb-gap-mobile: 12px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb2-container {
+    display: none !important;
+  }
+
+  .product-detail-breadcrumb-wrapper {
+    display: block !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    margin-top: -44px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+  }
+
+  .service-detail-breadcrumb-wrapper {
+    display: block !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    margin-top: -60px !important;
+    margin-top: calc(-1 * (var(--app-main-pad-top-mobile, 60px) + env(safe-area-inset-top, 0px))) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+  }
+
+  .catcontent-container {
+    padding-top: var(--breadcrumb-gap-mobile) !important;
+  }
+
+  .filter-page .filter-container {
+    padding-top: var(--breadcrumb-gap-mobile) !important;
+  }
+}

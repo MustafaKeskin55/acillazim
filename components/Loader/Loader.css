@@ -1,0 +1,117 @@
+.loader-container {
+  @apply flex justify-center items-center w-full h-full;
+  background: transparent;
+}
+
+.loader {
+  @apply flex flex-col items-center;
+  gap: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
+}
+
+.circle-loader {
+  @apply relative;
+  width: 80px;
+  height: 80px;
+}
+
+.circle-loader svg {
+  @apply w-full h-full;
+  transform: rotate(-90deg);
+}
+
+.circle-path {
+  fill: none;
+  stroke: #004B87;
+  stroke-width: 4;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  stroke-linecap: round;
+  animation: dash 2s ease-in-out infinite;
+}
+
+.pulse-rings {
+  @apply absolute w-full h-full flex justify-center items-center;
+  top: 0;
+  left: 0;
+}
+
+.loader-ring {
+  @apply absolute rounded-full;
+  border: 2px solid transparent;
+}
+
+.ring1 {
+  @apply w-full h-full;
+  border-top-color: #FF8042;
+  animation: spin 1s linear infinite;
+}
+
+.ring2 {
+  width: 80%;
+  height: 80%;
+  border-bottom-color: #FF8042;
+  animation: spin 1s linear infinite reverse;
+}
+
+.loader-text {
+  @apply text-center;
+  color: #004B87;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: pulse 2s ease-in-out infinite;
+  max-width: 280px;
+  line-height: 1.4;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 251;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -251;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Mobil cihazlar için responsive tasarım */
+@media (max-width: 768px) {
+  .circle-loader {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loader-text {
+    font-size: 14px;
+  }
+  
+  .loader {
+    padding: 20px;
+  }
+} 

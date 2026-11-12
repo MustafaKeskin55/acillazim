@@ -1,0 +1,4477 @@
+[
+  {
+    "category_id": 48345,
+    "category_name": "Teknik & Tesisat Hizmetleri",
+    "filters": [
+      {
+        "id": 1,
+        "label": "Hizmet Alanı",
+        "type": "multi-select",
+        "db_field": "hizmet_alani",
+        "display_location": "default",
+        "options": [
+          "Ev Tipi",
+          "İş Yeri",
+          "Endüstriyel",
+          "Site / Avm",
+          "İnşaat Sahası"
+        ]
+      },
+      {
+        "id": 2,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "is_turu",
+        "display_location": "default",
+        "options": [
+          "Bakım",
+          "Onarım",
+          "Montaj",
+          "Kurulum",
+          "Tamirat",
+          "Yenileme",
+          "Kontrol / Teşhis"
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Malzeme Durumu",
+        "type": "multi-select",
+        "db_field": "malzeme_durumu",
+        "display_location": "default",
+        "options": [
+          "Malzemeli Hizmet",
+          "Sadece İşçilik",
+          "Müşteri Malzemeli"
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Acil Servis",
+        "type": "checkbox",
+        "db_field": "acil_servis",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      },
+      {
+        "id": 6,
+        "label": "Garanti",
+        "type": "checkbox",
+        "db_field": "garanti",
+        "display_location": "more_options",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Referans",
+        "type": "checkbox",
+        "db_field": "referans",
+        "display_location": "more_options",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 12542,
+    "category_name": "Elektrikçi",
+    "filters": [
+      {
+        "id": 8,
+        "label": "Elektrik İş Türü",
+        "type": "multi-select",
+        "db_field": "elektrik_is_turu",
+        "display_location": "default",
+        "options": [
+          "Kablo Döşeme",
+          "Priz / Anahtar Montajı",
+          "Sigorta Kutusu",
+          "Aydınlatma",
+          "Topraklama",
+          "Zayıf Akım",
+          "Güneş Enerjisi",
+          "Jeneratör",
+          "AVR / UPS"
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Hizmet Alanı",
+        "type": "multi-select",
+        "db_field": "hizmet_alani",
+        "display_location": "default",
+        "options": [
+          "Ev Tipi",
+          "İş Yeri",
+          "Endüstriyel",
+          "Site / Avm",
+          "İnşaat Sahası"
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Acil Servis",
+        "type": "checkbox",
+        "db_field": "acil_servis",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      },
+      {
+        "id": 6,
+        "label": "Garanti",
+        "type": "checkbox",
+        "db_field": "garanti",
+        "display_location": "more_options",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 12543,
+    "category_name": "Su Tesisatçısı",
+    "filters": [
+      {
+        "id": 9,
+        "label": "Tesisat İş Türü",
+        "type": "multi-select",
+        "db_field": "tesisat_is_turu",
+        "display_location": "default",
+        "options": [
+          "Su Kaçağı Tespiti",
+          "Boru Değişimi",
+          "Tıkanıklık Açma",
+          "Klozet / Tuvalet",
+          "Duşakabin",
+          "Batarya Montajı",
+          "Kalorifer Tesisatı",
+          "Su Isıtıcı",
+          "Su Deposu"
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Hizmet Alanı",
+        "type": "multi-select",
+        "db_field": "hizmet_alani",
+        "display_location": "default",
+        "options": [
+          "Ev Tipi",
+          "İş Yeri",
+          "Endüstriyel",
+          "Site / Avm"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12544,
+    "category_name": "Doğalgaz Tesisatı",
+    "filters": [
+      {
+        "id": 10,
+        "label": "Doğalgaz İş Türü",
+        "type": "multi-select",
+        "db_field": "dogalgaz_is_turu",
+        "display_location": "default",
+        "options": [
+          "Doğalgaz Tesisatı Döşeme",
+          "Kombi Bağlantısı",
+          "Radyatör Bağlantısı",
+          "Doğalgaz Kaçak Kontrolü",
+          "Baca Tesisatı",
+          "Doğalgaz Onay Belgesi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12545,
+    "category_name": "Kombi Bakım & Onarım",
+    "filters": [
+      {
+        "id": 11,
+        "label": "Kombi İş Türü",
+        "type": "multi-select",
+        "db_field": "kombi_is_turu",
+        "display_location": "default",
+        "options": [
+          "Yıllık Bakım",
+          "Arıza Tespiti",
+          "Onarım",
+          "Yedek Parça Değişimi",
+          "Petek Temizliği",
+          "Gaz Ayarı",
+          "Kombi Değişimi"
+        ]
+      },
+      {
+        "id": 12,
+        "label": "Kombi Markası",
+        "type": "multi-select",
+        "db_field": "kombi_markasi",
+        "display_location": "default",
+        "options": [
+          "Vaillant",
+          "Viessmann",
+          "Bosch",
+          "ECA",
+          "Demirdöküm",
+          "Buderus",
+          "Ferroli",
+          "Baymak",
+          "Ariston",
+          "Protherm",
+          "Diğer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12546,
+    "category_name": "Klima Montaj & Servis",
+    "filters": [
+      {
+        "id": 13,
+        "label": "Klima İş Türü",
+        "type": "multi-select",
+        "db_field": "klima_is_turu",
+        "display_location": "default",
+        "options": [
+          "Montaj",
+          "Sökme",
+          "Bakım",
+          "Onarım",
+          "Gaz Dolumu",
+          "Filtre Değişimi",
+          "Klima Temizliği"
+        ]
+      },
+      {
+        "id": 14,
+        "label": "Klima Tipi",
+        "type": "multi-select",
+        "db_field": "klima_tipi",
+        "display_location": "default",
+        "options": [
+          "Split",
+          "Kaset",
+          "Salon",
+          "VRF",
+          "Kanallı",
+          "Multi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12547,
+    "category_name": "Güneş Enerji Sistemleri",
+    "filters": [
+      {
+        "id": 15,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "enerji_sistemi_turu",
+        "display_location": "default",
+        "options": [
+          "Güneş Paneli Kurulumu",
+          "Inverter Kurulumu",
+          "Akü / Depolama",
+          "Şebeke Bağlantısı",
+          "Bakım & Onarım",
+          "Projelendirme"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12548,
+    "category_name": "Yangın Alarm Sistemleri",
+    "filters": [
+      {
+        "id": 16,
+        "label": "Yangın Sistemi Türü",
+        "type": "multi-select",
+        "db_field": "yangin_sistemi_turu",
+        "display_location": "default",
+        "options": [
+          "Yangın Algılama",
+          "Duman Dedektörü",
+          "Isı Dedektörü",
+          "Yangın Tüpü",
+          "Sprinkler Sistemi",
+          "Acil Çıkış Sistemi",
+          "Yangın Merdiveni"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12683,
+    "category_name": "Petek Temizliği",
+    "filters": [
+      {
+        "id": 17,
+        "label": "Temizlik Türü",
+        "type": "multi-select",
+        "db_field": "petek_temizlik_turu",
+        "display_location": "default",
+        "options": [
+          "Kimyasal Temizlik",
+          "Makine ile Temizlik",
+          "Termal Kamera ile Tespit",
+          "Basınçlı Su ile Temizlik"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12684,
+    "category_name": "Şofben & Termosifon Servisi",
+    "filters": [
+      {
+        "id": 18,
+        "label": "Cihaz Türü",
+        "type": "multi-select",
+        "db_field": "cihaz_turu",
+        "display_location": "default",
+        "options": [
+          "Şofben",
+          "Termosifon",
+          "Kombi",
+          "Ankastre Soba"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12685,
+    "category_name": "Merkezi Isıtma Sistemleri",
+    "filters": [
+      {
+        "id": 19,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "sisitem_turu",
+        "display_location": "default",
+        "options": [
+          "Merkezi Kazan",
+          "Kat Kaloriferi",
+          "Yerden Isıtma",
+          "Radyatör Sistemi",
+          "Fan Coil"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12686,
+    "category_name": "Akıllı Ev Sistemleri",
+    "filters": [
+      {
+        "id": 20,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "akilli_ev_turu",
+        "display_location": "default",
+        "options": [
+          "Aydınlatma Kontrolü",
+          "İklimlendirme",
+          "Güvenlik",
+          "Perde / Stor",
+          "Ses Sistemi",
+          "Kapı Kilidi",
+          "Robot Süpürge",
+          "Anahtar / Hub Kurulumu"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12687,
+    "category_name": "Güvenlik Kamera ve Alarm Sistemleri",
+    "filters": [
+      {
+        "id": 21,
+        "label": "Kamera Türü",
+        "type": "multi-select",
+        "db_field": "kamera_turu",
+        "display_location": "default",
+        "options": [
+          "IP Kamera",
+          "Analog Kamera",
+          "Kablosuz Kamera",
+          "Gece Görüşlü",
+          "PTZ Kamera",
+          "Dome Kamera",
+          "Bullet Kamera",
+          "NVR / DVR Kayıt Cihazı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12688,
+    "category_name": "Görüntülü Diafon Sistemleri",
+    "filters": [
+      {
+        "id": 22,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "diafon_turu",
+        "display_location": "default",
+        "options": [
+          "Kablolu Diafon",
+          "Kablosuz Diafon",
+          "IP Diafon",
+          "Akıllı Ekran",
+          "Kartlı Geçiş Entegrasyonu"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12689,
+    "category_name": "Uydu & Anten Kurulumu",
+    "filters": [
+      {
+        "id": 23,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "anten_turu",
+        "display_location": "default",
+        "options": [
+          "Uydu Anteni Kurulumu",
+          "Çanak Anten",
+          "TV Anteni",
+          "Anten Yön Ayarı",
+          "Kablo Döşeme",
+          "Multi Switch"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12690,
+    "category_name": "Hidrofor & Su Deposu Montajı",
+    "filters": [
+      {
+        "id": 24,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "hidrofor_is_turu",
+        "display_location": "default",
+        "options": [
+          "Hidrofor Kurulumu",
+          "Hidrofor Tamiri",
+          "Su Deposu Kurulumu",
+          "Su Deposu Temizliği",
+          "Basınç Ayarı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12691,
+    "category_name": "Zayıf Akım Sistemleri",
+    "filters": [
+      {
+        "id": 25,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "zayif_akim_turu",
+        "display_location": "default",
+        "options": [
+          "Ethernet / Network",
+          "Telefon Tesisatı",
+          "Fiber Optik",
+          "Kapı Intercom",
+          "Yangın İhbar",
+          "Güvenlik Alarm"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12692,
+    "category_name": "İnternet",
+    "filters": [
+      {
+        "id": 26,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "internet_is_turu",
+        "display_location": "default",
+        "options": [
+          "Modem Kurulumu",
+          "Kablo Döşeme",
+          "Sinyal Güçlendirme",
+          "WiFi Çözümleri",
+          "Ağ Analizi",
+          "Routing & Switching"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12693,
+    "category_name": "Ses Sistemleri",
+    "filters": [
+      {
+        "id": 27,
+        "label": "Sistem Türü",
+        "type": "multi-select",
+        "db_field": "ses_sistemi_turu",
+        "display_location": "default",
+        "options": [
+          "Hoparlör Kurulumu",
+          "Anfi Kurulumu",
+          "Müzik Sistemi",
+          "Tavan Sistemi",
+          "Dış Mekan Sistemi",
+          "Stüdyo"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12694,
+    "category_name": "Drenaj ve Yağmur Suyu Tesisatı",
+    "filters": [
+      {
+        "id": 28,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "drenaj_turu",
+        "display_location": "default",
+        "options": [
+          "Yağmur Suyu Olukları",
+          "Drenaj Borusu",
+          "Fosseptik",
+          "Yağmur Suyu Depolama",
+          "Balkon / Teras Drenajı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12549,
+    "category_name": "İnşaat & Tadilat",
+    "filters": [
+      {
+        "id": 29,
+        "label": "İnşaat Alanı",
+        "type": "multi-select",
+        "db_field": "insaat_alani",
+        "display_location": "default",
+        "options": [
+          "Konut",
+          "İşyeri",
+          "Villa",
+          "Ofis",
+          "Dükkan",
+          "Fabrika",
+          "Depo",
+          "Site"
+        ]
+      },
+      {
+        "id": 30,
+        "label": "Tadilat Türü",
+        "type": "multi-select",
+        "db_field": "tadilat_turu",
+        "display_location": "default",
+        "options": [
+          "Komple Tadilat",
+          "Kısmi Tadilat",
+          "Yenileme",
+          "Restorasyon",
+          "Güçlendirme",
+          "Dekorasyon"
+        ]
+      },
+      {
+        "id": 31,
+        "label": "Proje Durumu",
+        "type": "multi-select",
+        "db_field": "proje_durumu",
+        "display_location": "default",
+        "options": [
+          "Mevcut Proje Devam Ediyor",
+          "Yeni Proje Alabilirim",
+          "Sadece Keşif / Danışmanlık"
+        ]
+      },
+      {
+        "id": 32,
+        "label": "Ücretsiz Keşif",
+        "type": "checkbox",
+        "db_field": "kesif",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      },
+      {
+        "id": 6,
+        "label": "Garanti",
+        "type": "checkbox",
+        "db_field": "garanti",
+        "display_location": "more_options",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 12550,
+    "category_name": "Ev Tadilatı",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12551,
+    "category_name": "Alçıpan & Kartonpiyer",
+    "filters": [
+      {
+        "id": 33,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "alci_is_turu",
+        "display_location": "default",
+        "options": [
+          "Alçıpan Duvar",
+          "Alçıpan Tavan",
+          "Kartonpiyer",
+          "Dekoratif Alçı",
+          "Bölme Duvar"
+        ]
+      },
+      {
+        "id": 29,
+        "label": "İnşaat Alanı",
+        "type": "multi-select",
+        "db_field": "insaat_alani",
+        "display_location": "default",
+        "options": [
+          "Konut",
+          "İşyeri",
+          "Villa",
+          "Ofis",
+          "Dükkan"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12552,
+    "category_name": "Boya & Badana",
+    "filters": [
+      {
+        "id": 34,
+        "label": "Boya Türü",
+        "type": "multi-select",
+        "db_field": "boya_turu",
+        "display_location": "default",
+        "options": [
+          "İç Cephe Boya",
+          "Dış Cephe Boya",
+          "Tavan Boya",
+          "Saten Boya",
+          "Mat Boya",
+          "Dekoratif Boya",
+          "Antibakteriyel Boya",
+          "Su Bazlı Boya"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12553,
+    "category_name": "Fayans & Seramik",
+    "filters": [
+      {
+        "id": 35,
+        "label": "Uygulama Alanı",
+        "type": "multi-select",
+        "db_field": "fayans_yeri",
+        "display_location": "default",
+        "options": [
+          "Banyo",
+          "Mutfak",
+          "Zemin",
+          "Duvar",
+          "Havuz",
+          "Teras",
+          "Balkon"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12554,
+    "category_name": "Duvar Örme & Sıva",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12555,
+    "category_name": "Çatı Yapımı & İzolasyon",
+    "filters": [
+      {
+        "id": 36,
+        "label": "Çatı Türü",
+        "type": "multi-select",
+        "db_field": "cati_turu",
+        "display_location": "default",
+        "options": [
+          "Kiremit Çatı",
+          "Metal Çatı",
+          "Shingle",
+          "Teraz (Düz Çatı)",
+          "Mantolama",
+          "Su Yalıtımı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12556,
+    "category_name": "Mantolama & Isı Yalıtımı",
+    "filters": [
+      {
+        "id": 37,
+        "label": "Yalıtım Türü",
+        "type": "multi-select",
+        "db_field": "yalitim_turu",
+        "display_location": "default",
+        "options": [
+          "Dış Cephe Mantolama",
+          "İç Cephe Yalıtımı",
+          "Çatı Yalıtımı",
+          "Zemin Yalıtımı",
+          "Ses Yalıtımı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12557,
+    "category_name": "Mermer & Granit İşleri",
+    "filters": [
+      {
+        "id": 38,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "mermer_is_turu",
+        "display_location": "default",
+        "options": [
+          "Tezgah",
+          "Basamak",
+          "Döşeme",
+          "Dekoratif",
+          "Mezar",
+          "Merdiven",
+          "Cephe"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12558,
+    "category_name": "İnşaat İşçisi / Usta",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12695,
+    "category_name": "Banyo & Mutfak Yenileme",
+    "filters": [
+      {
+        "id": 39,
+        "label": "Yenileme Alanı",
+        "type": "multi-select",
+        "db_field": "yenileme_alani",
+        "display_location": "default",
+        "options": [
+          "Banyo",
+          "Mutfak",
+          "İkisi Birden"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12696,
+    "category_name": "Zemin Kaplama (Parke)",
+    "filters": [
+      {
+        "id": 40,
+        "label": "Parke Türü",
+        "type": "multi-select",
+        "db_field": "parke_turu",
+        "display_location": "default",
+        "options": [
+          "Laminat Parke",
+          "Lamine Parke",
+          "Masif Parke",
+          "Lüks Vinyl (LVT)",
+          "Epoksi Zemin",
+          "Halıflex"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12697,
+    "category_name": "Epoksi",
+    "filters": [
+      {
+        "id": 41,
+        "label": "Uygulama Türü",
+        "type": "multi-select",
+        "db_field": "epoksi_turu",
+        "display_location": "default",
+        "options": [
+          "Endüstriyel Epoksi",
+          "Dekoratif Epoksi",
+          "Antistatik Epoksi",
+          "Kaymaz Epoksi",
+          "3D Epoksi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12698,
+    "category_name": "PVC",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12699,
+    "category_name": "Kapı & Pencere Sistemleri (PVC)",
+    "filters": [
+      {
+        "id": 42,
+        "label": "Ürün Türü",
+        "type": "multi-select",
+        "db_field": "kapipencere_turu",
+        "display_location": "default",
+        "options": [
+          "PVC Pencere",
+          "PVC Kapı",
+          "Alüminyum Pencere",
+          "Alüminyum Kapı",
+          "Demir Kapı",
+          "Cam Kapı",
+          "Otomatik Kapı",
+          "Panjur",
+          "Kepenk"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12700,
+    "category_name": "Ahşap",
+    "filters": [
+      {
+        "id": 43,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "ahsap_is_turu",
+        "display_location": "default",
+        "options": [
+          "Ahşap Kapı",
+          "Ahşap Pencere",
+          "Ahşap Merdiven",
+          "Ahşap Tavan",
+          "Ahşap Deck",
+          "Restorasyon"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12701,
+    "category_name": "Alüminyum",
+    "filters": [
+      {
+        "id": 44,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "aluminyum_is_turu",
+        "display_location": "default",
+        "options": [
+          "Alüminyum Doğrama",
+          "Küpeşte",
+          "Dekoratif",
+          "Cephe Sistemi",
+          "Kapı Sistemi",
+          "Pencere Sistemi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12702,
+    "category_name": "Demir Doğrama & Ferforje",
+    "filters": [
+      {
+        "id": 45,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "demir_is_turu",
+        "display_location": "default",
+        "options": [
+          "Korkuluk",
+          "Kapı",
+          "Kamelya",
+          "Çardak",
+          "Merdiven",
+          "Demir Doğrama",
+          "Ferforje"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12703,
+    "category_name": "Beton & Kalıp İşleri",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12704,
+    "category_name": "Cam & Ayna Montajı",
+    "filters": [
+      {
+        "id": 46,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "cam_is_turu",
+        "display_location": "default",
+        "options": [
+          "Cam Kapı",
+          "Duşakabin",
+          "Ayna",
+          "Cam Balkon",
+          "Temperli Cam",
+          "Lamine Cam",
+          "Buzlu Cam"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12705,
+    "category_name": "Asma Tavan & Led Sistemleri",
+    "filters": [
+      {
+        "id": 47,
+        "label": "Tavan Türü",
+        "type": "multi-select",
+        "db_field": "tavan_turu",
+        "display_location": "default",
+        "options": [
+          "Alçıpan Asma Tavan",
+          "Metal Tavan",
+          "Kartonpiyer",
+          "Led Şerit",
+          "Led Panel",
+          "Aydınlatma Sistemi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12706,
+    "category_name": "İç Mimarlık & 3D Projelendirme",
+    "filters": [
+      {
+        "id": 48,
+        "label": "Proje Türü",
+        "type": "multi-select",
+        "db_field": "proje_turu",
+        "display_location": "default",
+        "options": [
+          "İç Mimari Proje",
+          "3D Görselleştirme",
+          "Mobilya Tasarımı",
+          "Renk Danışmanlığı",
+          "Aydınlatma Projesi",
+          "Uygulama"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12707,
+    "category_name": "İskele Kurulumu",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12708,
+    "category_name": "Kanal Açma & Temel Kazı",
+    "filters_ref": 12549
+  },
+  {
+    "category_id": 12559,
+    "category_name": "Ev Hizmetleri & Mobilya",
+    "filters": [
+      {
+        "id": 49,
+        "label": "Hizmet Yeri",
+        "type": "multi-select",
+        "db_field": "hizmet_yeri",
+        "display_location": "default",
+        "options": [
+          "Evde Hizmet",
+          "İşyerinde Hizmet",
+          "Atölyede Hizmet"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12560,
+    "category_name": "Temizlikçi (gündelik/aylık)",
+    "filters": [
+      {
+        "id": 50,
+        "label": "Temizlik Türü",
+        "type": "multi-select",
+        "db_field": "temizlik_turu",
+        "display_location": "default",
+        "options": [
+          "Günlük Temizlik",
+          "Haftalık Temizlik",
+          "Aylık Temizlik",
+          "İnşaat Sonrası",
+          "Taşınma Öncesi / Sonrası"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12561,
+    "category_name": "Koltuk & Halı Yıkama",
+    "filters": [
+      {
+        "id": 51,
+        "label": "Yıkama Türü",
+        "type": "multi-select",
+        "db_field": "yikama_turu",
+        "display_location": "default",
+        "options": [
+          "Koltuk Yıkama",
+          "Halı Yıkama",
+          "Yatak Yıkama",
+          "Perde Yıkama",
+          "Oto Koltuk Yıkama"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12562,
+    "category_name": "Ev Yardımcısı / Bakıcı",
+    "filters": [
+      {
+        "id": 52,
+        "label": "Bakıcı Türü",
+        "type": "multi-select",
+        "db_field": "bakici_turu",
+        "display_location": "default",
+        "options": [
+          "Gündüzlü",
+          "Yatılı",
+          "Yarım Gün",
+          "Hafta Sonu"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12563,
+    "category_name": "Mobilya Montaj & Tamir",
+    "filters": [
+      {
+        "id": 53,
+        "label": "Mobilya Türü",
+        "type": "multi-select",
+        "db_field": "mobilya_turu",
+        "display_location": "default",
+        "options": [
+          "Gardırop",
+          "Mutfak Dolabı",
+          "Yatak Odası",
+          "Salon Takımı",
+          "Ofis Mobilyası",
+          "TV Ünitesi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12564,
+    "category_name": "Camcı",
+    "filters_ref": 12704
+  },
+  {
+    "category_id": 12565,
+    "category_name": "Marangoz",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12566,
+    "category_name": "Doğrama / Pimapen",
+    "filters_ref": 12699
+  },
+  {
+    "category_id": 12567,
+    "category_name": "Bahçıvanlık",
+    "filters": [
+      {
+        "id": 54,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "bahce_is_turu",
+        "display_location": "default",
+        "options": [
+          "Bahçe Bakımı",
+          "Çim Kesme",
+          "Ağaç Budama",
+          "Bitki Dikimi",
+          "Sulama Sistemi",
+          "Peyzaj"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12709,
+    "category_name": "Perde ve Stor Montajı",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12710,
+    "category_name": "Parke Döşeme ve Tamiri",
+    "filters": [
+      {
+        "id": 55,
+        "label": "Parke Türü",
+        "type": "multi-select",
+        "db_field": "parke_turu",
+        "display_location": "default",
+        "options": [
+          "Laminat",
+          "Lamine",
+          "Masif",
+          "LVT",
+          "Epoksi",
+          "Cilalama",
+          "Tamirat"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12711,
+    "category_name": "Mobilya Boyama ve Cila",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12712,
+    "category_name": "Ev Elektronik Cihaz Kurulumu (TV / Ankastre)",
+    "filters": [
+      {
+        "id": 56,
+        "label": "Cihaz Türü",
+        "type": "multi-select",
+        "db_field": "cihaz_turu",
+        "display_location": "default",
+        "options": [
+          "TV Montajı",
+          "Ankastre Ocak",
+          "Ankastre Fırın",
+          "Davlumbaz",
+          "Bulaşık Makinesi",
+          "Çamaşır Makinesi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12713,
+    "category_name": "Avize Montajı",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12715,
+    "category_name": "Duvar Kağıdı Ustası",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12716,
+    "category_name": "Evcil Hayvan Bakımı & Gezdirme",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12717,
+    "category_name": "Çamaşır & Ütü Hizmeti",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12718,
+    "category_name": "İç Dekorasyon & Stil Danışmanlığı",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12719,
+    "category_name": "Bahçe Düzenleme & Peyzaj",
+    "filters_ref": 12559
+  },
+  {
+    "category_id": 12568,
+    "category_name": "Nakliye & Lojistik",
+    "filters": [
+      {
+        "id": 57,
+        "label": "Taşıma Türü",
+        "type": "multi-select",
+        "db_field": "tasima_turu",
+        "display_location": "default",
+        "options": [
+          "Evden Eve Nakliyat",
+          "Ofis Taşıma",
+          "Şehir İçi",
+          "Şehirler Arası",
+          "Uluslararası"
+        ]
+      },
+      {
+        "id": 58,
+        "label": "Eşya Türü",
+        "type": "multi-select",
+        "db_field": "esya_turu",
+        "display_location": "default",
+        "options": [
+          "Mobilya",
+          "Beyaz Eşya",
+          "Koli",
+          "Tekstil",
+          "Kırılacak Eşya",
+          "Değerli Eşya",
+          "Piyano"
+        ]
+      },
+      {
+        "id": 59,
+        "label": "Sigorta",
+        "type": "checkbox",
+        "db_field": "sigorta",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 60,
+        "label": "Ambalaj Hizmeti",
+        "type": "checkbox",
+        "db_field": "ambalaj",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12569,
+    "category_name": "Evden Eve Nakliyat",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12570,
+    "category_name": "Parça Eşya Taşıma",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12571,
+    "category_name": "Şehirlerarası Nakliye",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12572,
+    "category_name": "Ofis Taşıma",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12573,
+    "category_name": "Asansörlü Taşımacılık",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12574,
+    "category_name": "Kargo & Kurye Hizmeti",
+    "filters": [
+      {
+        "id": 61,
+        "label": "Kurye Türü",
+        "type": "multi-select",
+        "db_field": "kurye_turu",
+        "display_location": "default",
+        "options": [
+          "Normal Kurye",
+          "Express Kurye",
+          "Gece Kurye",
+          "Motokurye",
+          "Araçlı Kurye"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12575,
+    "category_name": "Depolama Hizmeti",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12720,
+    "category_name": "Uluslararası Taşımacılık",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12721,
+    "category_name": "Ağır Yük & Makine Taşımacılığı",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12722,
+    "category_name": "Eşya Paketleme & Ambalajlama",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12723,
+    "category_name": "Mobilya Sökme & Kurulum Hizmeti",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12724,
+    "category_name": "Araç Taşıma (Çekici / Oto Transfer)",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12725,
+    "category_name": "(Oto Transfer)",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12726,
+    "category_name": "Fuariçi & Etkinlik Lojistiği",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12727,
+    "category_name": "Zati Eşya Taşımacılığı",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12728,
+    "category_name": "Evcil Hayvan Taşımacılığı",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12729,
+    "category_name": "Soğuk Zincir & Frigolu Taşımacılık",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12730,
+    "category_name": "Gemi/Konteyner Yükleme & Boşaltma",
+    "filters_ref": 12568
+  },
+  {
+    "category_id": 12576,
+    "category_name": "Otomotiv Hizmetleri",
+    "filters": [
+      {
+        "id": 62,
+        "label": "Araç Türü",
+        "type": "multi-select",
+        "db_field": "arac_turu",
+        "display_location": "default",
+        "options": [
+          "Otomobil",
+          "Minibüs",
+          "Otobüs",
+          "Kamyonet",
+          "Kamyon",
+          "Motosiklet",
+          "Karavan"
+        ]
+      },
+      {
+        "id": 63,
+        "label": "Oto Markası",
+        "type": "multi-select",
+        "db_field": "oto_marka",
+        "display_location": "default",
+        "options": [
+          "Yerli",
+          "Yabancı",
+          "Tüm Markalar"
+        ]
+      },
+      {
+        "id": 64,
+        "label": "Yerinde Hizmet",
+        "type": "checkbox",
+        "db_field": "yerinde_hizmet",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12577,
+    "category_name": "Oto Tamircisi",
+    "filters": [
+      {
+        "id": 65,
+        "label": "Tamir Türü",
+        "type": "multi-select",
+        "db_field": "tamir_turu",
+        "display_location": "default",
+        "options": [
+          "Motor Tamiri",
+          "Şanzıman",
+          "Fren Sistemi",
+          "Süspansiyon",
+          "Elektrik Arızası",
+          "Kaporta",
+          "Genel Bakım"
+        ]
+      },
+      {
+        "id": 62,
+        "label": "Araç Türü",
+        "type": "multi-select",
+        "db_field": "arac_turu",
+        "display_location": "default",
+        "options": [
+          "Otomobil",
+          "Minibüs",
+          "Otobüs",
+          "Kamyonet",
+          "Kamyon"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12578,
+    "category_name": "Oto Ekspertiz",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12579,
+    "category_name": "Oto Elektrik",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12580,
+    "category_name": "Oto Yıkama & Detaylı Temizlik",
+    "filters": [
+      {
+        "id": 66,
+        "label": "Yıkama Türü",
+        "type": "multi-select",
+        "db_field": "yikama_turu",
+        "display_location": "default",
+        "options": [
+          "Dış Yıkama",
+          "İç Temizlik",
+          "Detaylı Temizlik",
+          "Motor Yıkama",
+          "Seramik Kaplama",
+          "Cila"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12581,
+    "category_name": "Oto Kaporta & Boya",
+    "filters": [
+      {
+        "id": 67,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "kaporta_is_turu",
+        "display_location": "default",
+        "options": [
+          "Boya",
+          "Dolgu",
+          "Çekme",
+          "Değişen",
+          "Pasaj",
+          "Mini Onarım",
+          "Kaporta Düzelme"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12582,
+    "category_name": "Lastikçi",
+    "filters": [
+      {
+        "id": 68,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "lastik_is_turu",
+        "display_location": "default",
+        "options": [
+          "Lastik Değişimi",
+          "Balans",
+          "Rot Ayarı",
+          "Nitrojen",
+          "Yama",
+          "Saklama"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12583,
+    "category_name": "Çekici & Yol Yardım",
+    "filters": [
+      {
+        "id": 69,
+        "label": "Yardım Türü",
+        "type": "multi-select",
+        "db_field": "yardim_turu",
+        "display_location": "default",
+        "options": [
+          "Çekici",
+          "Yol Yardım",
+          "Akü Takviye",
+          "Lastik Değişimi",
+          "Kapı Açma",
+          "Yakıt Takviye"
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Acil Servis",
+        "type": "checkbox",
+        "db_field": "acil_servis",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12584,
+    "category_name": "Cam Filmi / Seramik Kaplama",
+    "filters": [
+      {
+        "id": 70,
+        "label": "Film / Kaplama Türü",
+        "type": "multi-select",
+        "db_field": "film_turu",
+        "display_location": "default",
+        "options": [
+          "Cam Filmi",
+          "Seramik Kaplama",
+          "PPF (Koruyucu Film)",
+          "Vinil Kaplama",
+          "Renk Değişikliği"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12731,
+    "category_name": "Oto Klima Bakım & Tamiri",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12732,
+    "category_name": "Araç İçi Aksesuar Montajı",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12733,
+    "category_name": "Far Temizleme & Parlatma",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12734,
+    "category_name": "Pasta – Cila – Boya Koruma",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12735,
+    "category_name": "Motor Temizliği",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12736,
+    "category_name": "Jant Düzeltme & Boyama",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12737,
+    "category_name": "Araç Folyo Kaplama",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12738,
+    "category_name": "Kaput Koruma (PPF / Şeffaf Film)",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12739,
+    "category_name": "Şase Düzeltme & Rot Ayarı",
+    "filters_ref": 12576
+  },
+  {
+    "category_id": 12585,
+    "category_name": "Temizlik Hizmetleri",
+    "filters": [
+      {
+        "id": 71,
+        "label": "Temizlik Alanı",
+        "type": "multi-select",
+        "db_field": "temizlik_yeri",
+        "display_location": "default",
+        "options": [
+          "Ev",
+          "Ofis",
+          "Dükkan",
+          "Fabrika",
+          "Depo",
+          "Apartman",
+          "Site",
+          "İnşaat"
+        ]
+      },
+      {
+        "id": 72,
+        "label": "Temizlik Sıklığı",
+        "type": "multi-select",
+        "db_field": "temizlik_sikligi",
+        "display_location": "default",
+        "options": [
+          "Tek Seferlik",
+          "Günlük",
+          "Haftalık",
+          "Aylık",
+          "Periyodik"
+        ]
+      },
+      {
+        "id": 73,
+        "label": "Malzeme Durumu",
+        "type": "multi-select",
+        "db_field": "malzeme",
+        "display_location": "default",
+        "options": [
+          "Malzemeli Temizlik",
+          "Malzemesiz Temizlik",
+          "Müşteri Temin Ediyor"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12586,
+    "category_name": "Ev Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12587,
+    "category_name": "İnşaat Sonrası Temizlik",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12588,
+    "category_name": "Ofis / Dükkan Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12589,
+    "category_name": "Dış Cephe Cam Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12590,
+    "category_name": "Apartman Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12591,
+    "category_name": "Haşere & Böcek İlaçlama",
+    "filters": [
+      {
+        "id": 74,
+        "label": "İlaçlama Türü",
+        "type": "multi-select",
+        "db_field": "ilaclama_turu",
+        "display_location": "default",
+        "options": [
+          "Hamam Böceği",
+          "Fare",
+          "Karınca",
+          "Pire",
+          "Tahta Kurusu",
+          "Akrep",
+          "Sivrisinek",
+          "Genel İlaçlama"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12592,
+    "category_name": "Halı & Koltuk Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12740,
+    "category_name": "Boş Ev Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12741,
+    "category_name": "Villa & Lüks Konut Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12742,
+    "category_name": "Endüstriyel Temizlik",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12745,
+    "category_name": "Su Baskını / Sel Sonrası Temizlik",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12746,
+    "category_name": "Yangın & Duman Sonrası Temizlik",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12747,
+    "category_name": "Dezenfekte & Hijyen Temizliği",
+    "filters_ref": 12585
+  },
+  {
+    "category_id": 12593,
+    "category_name": "Usta & İşçilik Hizmetleri",
+    "filters": [
+      {
+        "id": 75,
+        "label": "Usta Türü",
+        "type": "multi-select",
+        "db_field": "usta_turu",
+        "display_location": "default",
+        "options": [
+          "Tek Usta",
+          "Ekip",
+          "Şirket",
+          "Yevmiyeli"
+        ]
+      },
+      {
+        "id": 76,
+        "label": "İş Güvenliği Sertifikası",
+        "type": "checkbox",
+        "db_field": "is_guvenligi",
+        "display_location": "default",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12594,
+    "category_name": "Demirci",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12595,
+    "category_name": "Kaynakçı",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12596,
+    "category_name": "Kalıpçı",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12597,
+    "category_name": "Sıvacı",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12598,
+    "category_name": "Boyacı",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12599,
+    "category_name": "Elektrikçi",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12600,
+    "category_name": "İnşaat İşçisi (Yevmiyeli)",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12601,
+    "category_name": "Vinç Operatörü",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12748,
+    "category_name": "Asansör Montaj & Bakım Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12749,
+    "category_name": "İskele Kurulum Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12750,
+    "category_name": "Çatı Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12751,
+    "category_name": "Şap Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12752,
+    "category_name": "Mermer Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12753,
+    "category_name": "Kanal Açma & Altyapı Ustası",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12754,
+    "category_name": "Tadilatçı (Çoklu Uzmanlık)",
+    "filters_ref": 12593
+  },
+  {
+    "category_id": 12602,
+    "category_name": "Sağlık & Güzellik",
+    "filters": [
+      {
+        "id": 77,
+        "label": "Hizmet Şekli",
+        "type": "multi-select",
+        "db_field": "hizmet_sekli",
+        "display_location": "default",
+        "options": [
+          "Klinikte Hizmet",
+          "Evde Hizmet",
+          "Otelde Hizmet",
+          "Online Hizmet",
+          "Randevulu"
+        ]
+      },
+      {
+        "id": 78,
+        "label": "Hedef Kitle",
+        "type": "multi-select",
+        "db_field": "cinsiyet",
+        "display_location": "default",
+        "options": [
+          "Kadın",
+          "Erkek",
+          "Çocuk",
+          "Her İkisi"
+        ]
+      },
+      {
+        "id": 79,
+        "label": "Sertifika / Diploma",
+        "type": "checkbox",
+        "db_field": "sertifika",
+        "display_location": "default",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12603,
+    "category_name": "Hemşire / Hasta Bakıcı",
+    "filters": [
+      {
+        "id": 80,
+        "label": "Bakıcı Türü",
+        "type": "multi-select",
+        "db_field": "bakici_turu",
+        "display_location": "default",
+        "options": [
+          "Gündüzlü",
+          "Yatılı",
+          "Hasta Bakıcı",
+          "Ameliyat Sonrası",
+          "Yaşlı Bakımı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12604,
+    "category_name": "Masaj & Terapi",
+    "filters": [
+      {
+        "id": 81,
+        "label": "Masaj Türü",
+        "type": "multi-select",
+        "db_field": "masaj_turu",
+        "display_location": "default",
+        "options": [
+          "Spor Masajı",
+          "Relaksasyon",
+          "Tibet",
+          "Aromaterapi",
+          "Derin Doku",
+          "Thai",
+          "Lenf Drenaj",
+          "Selülit"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12605,
+    "category_name": "Güzellik Uzmanı",
+    "filters": [
+      {
+        "id": 82,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "guzellik_is_turu",
+        "display_location": "default",
+        "options": [
+          "Cilt Bakımı",
+          "Makyaj",
+          "Kaş",
+          "Kirpik",
+          "Manikür",
+          "Pedikür",
+          "Ağda",
+          "Lazer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12606,
+    "category_name": "Saç Kesim & Kuaförlük",
+    "filters": [
+      {
+        "id": 83,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "kuafor_turu",
+        "display_location": "default",
+        "options": [
+          "Kadın Kuaförü",
+          "Erkek Kuaförü",
+          "Saç Kesimi",
+          "Saç Boyama",
+          "Saç Bakımı",
+          "Topuz",
+          "Gelin Saçı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12607,
+    "category_name": "Estetisyen",
+    "filters": [
+      {
+        "id": 84,
+        "label": "İş Türü",
+        "type": "multi-select",
+        "db_field": "estetik_is_turu",
+        "display_location": "default",
+        "options": [
+          "Cilt Bakımı",
+          "Lazer Epilasyon",
+          "Cilt Gençleştirme",
+          "Botoks",
+          "Dolgu",
+          "Mezoterapi",
+          "PRP"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12608,
+    "category_name": "Diyetisyen & Beslenme",
+    "filters": [
+      {
+        "id": 85,
+        "label": "Diyet Türü",
+        "type": "multi-select",
+        "db_field": "diyet_turu",
+        "display_location": "default",
+        "options": [
+          "Kilo Verme",
+          "Kilo Alma",
+          "Spor Beslenmesi",
+          "Hasta Beslenmesi",
+          "Hamilelik Beslenmesi",
+          "Çocuk Beslenmesi",
+          "Vegan Beslenme"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12609,
+    "category_name": "Spor Eğitmeni / Fitness",
+    "filters": [
+      {
+        "id": 86,
+        "label": "Spor Türü",
+        "type": "multi-select",
+        "db_field": "spor_turu",
+        "display_location": "default",
+        "options": [
+          "Kişisel Antrenman",
+          "Grup Dersi",
+          "Yoga",
+          "Pilates",
+          "Crossfit",
+          "Kardiyo",
+          "Rehabilitasyon"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12755,
+    "category_name": "Cilt Bakımı & Medikal Cilt Hizmetleri",
+    "filters_ref": 12602
+  },
+  {
+    "category_id": 12756,
+    "category_name": "Protez Tırnak & Tırnak Bakımı",
+    "filters_ref": 12602
+  },
+  {
+    "category_id": 12757,
+    "category_name": "Lazer Epilasyon & Ağda Hizmetleri",
+    "filters": [
+      {
+        "id": 87,
+        "label": "Yöntem",
+        "type": "multi-select",
+        "db_field": "epilasyon_turu",
+        "display_location": "default",
+        "options": [
+          "Lazer Epilasyon",
+          "IPL",
+          "Buz Lazer",
+          "Ağda",
+          "İpek Epilasyon",
+          "Tüy Dökücü"
+        ]
+      },
+      {
+        "id": 88,
+        "label": "Bölge",
+        "type": "multi-select",
+        "db_field": "bolge",
+        "display_location": "default",
+        "options": [
+          "Yüz",
+          "Koltuk Altı",
+          "Bikini",
+          "Bacak",
+          "Kol",
+          "Sırt",
+          "Göğüs",
+          "Tüm Vücut"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12758,
+    "category_name": "Psikolog & Danışmanlık",
+    "filters": [
+      {
+        "id": 89,
+        "label": "Danışmanlık Türü",
+        "type": "multi-select",
+        "db_field": "psikolog_turu",
+        "display_location": "default",
+        "options": [
+          "Bireysel Terapi",
+          "Çift Terapisi",
+          "Aile Terapisi",
+          "Çocuk Terapisi",
+          "Grup Terapisi",
+          "Online Terapi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12759,
+    "category_name": "Fizyoterapist & Rehabilitasyon Hizmetleri",
+    "filters": [
+      {
+        "id": 90,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "fizyo_turu",
+        "display_location": "default",
+        "options": [
+          "Ortopedik Rehabilitasyon",
+          "Nörolojik Rehabilitasyon",
+          "Spor Rehabilitasyonu",
+          "Omurga Problemleri",
+          "Manuel Terapi",
+          "Egzersiz Programı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12760,
+    "category_name": "Doğum Koçu & Emzirme Danışmanı",
+    "filters_ref": 12602
+  },
+  {
+    "category_id": 12761,
+    "category_name": "Alternatif Tıp & Bitkisel Terapi",
+    "filters_ref": 12602
+  },
+  {
+    "category_id": 12762,
+    "category_name": "Yaşam Koçu & Motivasyon Danışmanı",
+    "filters": [
+      {
+        "id": 91,
+        "label": "Koçluk Türü",
+        "type": "multi-select",
+        "db_field": "kocluk_turu",
+        "display_location": "default",
+        "options": [
+          "Kişisel Gelişim",
+          "Kariyer Koçluğu",
+          "İlişki Koçluğu",
+          "Sağlık Koçluğu",
+          "Liderlik Koçluğu",
+          "Stres Yönetimi"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12610,
+    "category_name": "Çocuk & Yaşlı Bakımı",
+    "filters": [
+      {
+        "id": 92,
+        "label": "Bakım Yeri",
+        "type": "multi-select",
+        "db_field": "bakim_yeri",
+        "display_location": "default",
+        "options": [
+          "Evde Bakım",
+          "Kurumda Bakım",
+          "Hastanede Bakım"
+        ]
+      },
+      {
+        "id": 93,
+        "label": "Bakım Süresi",
+        "type": "multi-select",
+        "db_field": "bakim_suresi",
+        "display_location": "default",
+        "options": [
+          "Saatlik",
+          "Günlük",
+          "Haftalık",
+          "Aylık",
+          "Yatılı"
+        ]
+      },
+      {
+        "id": 94,
+        "label": "Referans",
+        "type": "checkbox",
+        "db_field": "referans",
+        "display_location": "default",
+        "options": [
+          "Var",
+          "Yok"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12763,
+    "category_name": "Bebek Bakıcısı",
+    "filters": [
+      {
+        "id": 95,
+        "label": "Yaş Aralığı",
+        "type": "multi-select",
+        "db_field": "yas_araligi",
+        "display_location": "default",
+        "options": [
+          "0-1 yaş",
+          "1-3 yaş",
+          "3-6 yaş"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12764,
+    "category_name": "Oyun Ablası",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12765,
+    "category_name": "Yaşlı Bakıcısı",
+    "filters": [
+      {
+        "id": 96,
+        "label": "Hastalık Durumu",
+        "type": "multi-select",
+        "db_field": "hastalik_durumu",
+        "display_location": "default",
+        "options": [
+          "Sağlıklı Yaşlı",
+          "Alzheimer",
+          "Demans",
+          "Yatağa Bağlı",
+          "Ameliyat Sonrası"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12766,
+    "category_name": "Hasta Refakatçisi",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12767,
+    "category_name": "Özel Eğitimli Çocuk Bakımı",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12768,
+    "category_name": "Engelli Birey Bakımı",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12769,
+    "category_name": "Yatılı Bakıcı",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12770,
+    "category_name": "Gündüzlü Bakıcı",
+    "filters_ref": 12610
+  },
+  {
+    "category_id": 12615,
+    "category_name": "Gayrimenkul & Emlak Hizmetleri",
+    "filters": [
+      {
+        "id": 97,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "gayrimenkul_hizmet_turu",
+        "display_location": "default",
+        "options": [
+          "Satış",
+          "Kiralama",
+          "Danışmanlık",
+          "Yönetim",
+          "Değerleme",
+          "Hukuki İşlem"
+        ]
+      },
+      {
+        "id": 98,
+        "label": "Emlak Türü",
+        "type": "multi-select",
+        "db_field": "emlak_turu",
+        "display_location": "default",
+        "options": [
+          "Konut",
+          "İşyeri",
+          "Arsa",
+          "Villa",
+          "Daire"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12616,
+    "category_name": "Emlak Danışmanı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12617,
+    "category_name": "Ev Kiralama / Satış Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12618,
+    "category_name": "Kat Mülkiyet İşlemleri",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12619,
+    "category_name": "Tapu & Ruhsat Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12771,
+    "category_name": "Arsa & Arazi Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12772,
+    "category_name": "Kentsel Dönüşüm Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12773,
+    "category_name": "Emlak Değerleme Uzmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12774,
+    "category_name": "Yabancılara Emlak Satışı & Oturum Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12775,
+    "category_name": "Kira Takibi & Tahsilat Yönetimi",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12776,
+    "category_name": "Kiralık İş Yeri / Dükkan Danışmanlığı",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12777,
+    "category_name": "Site & Apartman Yönetimi Hizmetleri",
+    "filters_ref": 12615
+  },
+  {
+    "category_id": 12620,
+    "category_name": "Eğitim & Kurs",
+    "filters": [
+      {
+        "id": 99,
+        "label": "Eğitim Şekli",
+        "type": "multi-select",
+        "db_field": "egitim_sekli",
+        "display_location": "default",
+        "options": [
+          "Birebir",
+          "Grup Dersi",
+          "Online",
+          "Yüz Yüze",
+          "Evde",
+          "Kursta"
+        ]
+      },
+      {
+        "id": 100,
+        "label": "Seviye",
+        "type": "multi-select",
+        "db_field": "seviye",
+        "display_location": "default",
+        "options": [
+          "Başlangıç",
+          "Orta",
+          "İleri",
+          "Sınava Hazırlık",
+          "Profesyonel"
+        ]
+      },
+      {
+        "id": 101,
+        "label": "Sertifika",
+        "type": "checkbox",
+        "db_field": "sertifika",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12621,
+    "category_name": "Özel Ders",
+    "filters": [
+      {
+        "id": 102,
+        "label": "Ders Konusu",
+        "type": "multi-select",
+        "db_field": "ders_konusu",
+        "display_location": "default",
+        "options": [
+          "Matematik",
+          "Fizik",
+          "Kimya",
+          "Biyoloji",
+          "Türkçe",
+          "İngilizce",
+          "Tarih",
+          "Coğrafya"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12622,
+    "category_name": "Online Ders",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12623,
+    "category_name": "Sürücü Kursu Eğitmeni",
+    "filters": [
+      {
+        "id": 103,
+        "label": "Ehliyet Türü",
+        "type": "multi-select",
+        "db_field": "ehliyet_turu",
+        "display_location": "default",
+        "options": [
+          "B Sınıfı",
+          "A2 Sınıfı",
+          "C/D Sınıfı",
+          "E Sınıfı"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12624,
+    "category_name": "Yabancı Dil Eğitmeni",
+    "filters": [
+      {
+        "id": 104,
+        "label": "Dil",
+        "type": "multi-select",
+        "db_field": "dil",
+        "display_location": "default",
+        "options": [
+          "İngilizce",
+          "Almanca",
+          "Fransızca",
+          "İspanyolca",
+          "Rusça",
+          "Arapça",
+          "Japonca",
+          "Diğer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12625,
+    "category_name": "Müzik Dersi",
+    "filters": [
+      {
+        "id": 105,
+        "label": "Enstrüman",
+        "type": "multi-select",
+        "db_field": "enstruman",
+        "display_location": "default",
+        "options": [
+          "Gitar",
+          "Piyano",
+          "Bağlama",
+          "Keman",
+          "Ney",
+          "Bateri",
+          "Şan",
+          "Diğer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12626,
+    "category_name": "Dikiş / El Sanatları Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12778,
+    "category_name": "Okul Öncesi & Oyun Grubu Eğitmeni",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12779,
+    "category_name": "Kodlama & Yazılım Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12780,
+    "category_name": "Üniversiteye Hazırlık Koçluğu",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12781,
+    "category_name": "Öğrenci Koçu & Eğitim Danışmanı",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12782,
+    "category_name": "Fotoğrafçılık & Grafik Tasarım Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12783,
+    "category_name": "Kariyer Planlama & CV Hazırlık Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12784,
+    "category_name": "İşaret Dili Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12785,
+    "category_name": "Kişisel Gelişim & İletişim Eğitimi",
+    "filters_ref": 12620
+  },
+  {
+    "category_id": 12627,
+    "category_name": "Dijital & Freelance Hizmetler",
+    "filters": [
+      {
+        "id": 106,
+        "label": "Çalışma Şekli",
+        "type": "multi-select",
+        "db_field": "calisma_sekli",
+        "display_location": "default",
+        "options": [
+          "Uzaktan",
+          "Ofiste",
+          "Müşteri Yerinde",
+          "Hibrit"
+        ]
+      },
+      {
+        "id": 107,
+        "label": "Proje Tipi",
+        "type": "multi-select",
+        "db_field": "proje_tipi",
+        "display_location": "default",
+        "options": [
+          "Saatlik",
+          "Günlük",
+          "Proje Bazlı",
+          "Aylık Sabit",
+          "Sözleşmeli"
+        ]
+      },
+      {
+        "id": 108,
+        "label": "Revizyon Hakkı",
+        "type": "multi-select",
+        "db_field": "revizyon",
+        "display_location": "default",
+        "options": [
+          "1 Revizyon",
+          "2 Revizyon",
+          "3 Revizyon",
+          "Sınırsız Revizyon"
+        ]
+      },
+      {
+        "id": 109,
+        "label": "Teslim Süresi",
+        "type": "multi-select",
+        "db_field": "teslim_suresi",
+        "display_location": "default",
+        "options": [
+          "1-2 Gün",
+          "3-5 Gün",
+          "1 Hafta",
+          "2 Hafta",
+          "1 Ay"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12628,
+    "category_name": "Web Tasarım / Yazılım",
+    "filters": [
+      {
+        "id": 110,
+        "label": "Teknoloji",
+        "type": "multi-select",
+        "db_field": "web_teknolojisi",
+        "display_location": "default",
+        "options": [
+          "WordPress",
+          "React",
+          "Next.js",
+          "Vue.js",
+          "HTML/CSS",
+          "PHP",
+          "Node.js",
+          "E-Ticaret"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12629,
+    "category_name": "Grafik Tasarım",
+    "filters": [
+      {
+        "id": 111,
+        "label": "Tasarım Türü",
+        "type": "multi-select",
+        "db_field": "tasarim_turu",
+        "display_location": "default",
+        "options": [
+          "Logo",
+          "Kartvizit",
+          "Broşür",
+          "Afiş",
+          "Sosyal Medya",
+          "Kurumsal Kimlik",
+          "Ambalaj"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12630,
+    "category_name": "Sosyal Medya Yönetimi",
+    "filters": [
+      {
+        "id": 112,
+        "label": "Platform",
+        "type": "multi-select",
+        "db_field": "platform",
+        "display_location": "default",
+        "options": [
+          "Instagram",
+          "Facebook",
+          "Twitter",
+          "LinkedIn",
+          "TikTok",
+          "YouTube",
+          "Pinterest"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12631,
+    "category_name": "Video Montaj & Animasyon",
+    "filters": [
+      {
+        "id": 113,
+        "label": "Video Türü",
+        "type": "multi-select",
+        "db_field": "video_turu",
+        "display_location": "default",
+        "options": [
+          "Reklam Filmi",
+          "Tanıtım Videosu",
+          "Müzik Klibi",
+          "Animasyon",
+          "Motion Graphics",
+          "Düğün Videosu"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12632,
+    "category_name": "Reklam & Dijital Pazarlama",
+    "filters": [
+      {
+        "id": 114,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "pazarlama_turu",
+        "display_location": "default",
+        "options": [
+          "Google Ads",
+          "Facebook Ads",
+          "Instagram Ads",
+          "SEO",
+          "E-posta Pazarlama",
+          "Influencer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12633,
+    "category_name": "E-Ticaret Danışmanlığı",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12634,
+    "category_name": "Çeviri Hizmeti",
+    "filters": [
+      {
+        "id": 115,
+        "label": "Çeviri Dili",
+        "type": "multi-select",
+        "db_field": "ceviri_dili",
+        "display_location": "default",
+        "options": [
+          "İngilizce",
+          "Almanca",
+          "Fransızca",
+          "Arapça",
+          "Rusça",
+          "İspanyolca",
+          "Japonca",
+          "Korece"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12786,
+    "category_name": "Mobil Uygulama Geliştirme",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12787,
+    "category_name": "UI/UX Tasarımı",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12788,
+    "category_name": "Veri Analizi & Raporlama Hizmetleri",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12789,
+    "category_name": "Chatbot & Otomasyon Sistemleri",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12790,
+    "category_name": "Online Eğitim İçeriği Hazırlama",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12791,
+    "category_name": "Seslendirme & Dublaj Hizmeti",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12794,
+    "category_name": "Yapay Zeka Destekli Uygulama & Entegrasyon",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12795,
+    "category_name": "Yazı & İçerik Üretimi",
+    "filters_ref": 12627
+  },
+  {
+    "category_id": 12635,
+    "category_name": "Fotoğraf & Video",
+    "filters": [
+      {
+        "id": 116,
+        "label": "Çekim Türü",
+        "type": "multi-select",
+        "db_field": "cekim_turu",
+        "display_location": "default",
+        "options": [
+          "Düğün",
+          "Nişan",
+          "Doğum Günü",
+          "Kurumsal",
+          "Ürün",
+          "Emlak",
+          "Moda",
+          "Etkinlik"
+        ]
+      },
+      {
+        "id": 117,
+        "label": "Çekim Mekanı",
+        "type": "multi-select",
+        "db_field": "mekan",
+        "display_location": "default",
+        "options": [
+          "Dış Mekan",
+          "İç Mekan",
+          "Stüdyo",
+          "Sahil",
+          "Orman",
+          "Otel",
+          "Müşteri Belirler"
+        ]
+      },
+      {
+        "id": 118,
+        "label": "Teslimat Şekli",
+        "type": "multi-select",
+        "db_field": "teslimat",
+        "display_location": "default",
+        "options": [
+          "Dijital",
+          "USB",
+          "Fotoğraf Baskısı",
+          "Albüm",
+          "Kanvas",
+          "Çerçeve"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12636,
+    "category_name": "Düğün Fotoğrafçısı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12637,
+    "category_name": "Doğum & Yeni Doğan Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12638,
+    "category_name": "Ürün Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12639,
+    "category_name": "Drone Çekimi",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12640,
+    "category_name": "Klip & Tanıtım Videosu",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12796,
+    "category_name": "Mezuniyet & Okul Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12797,
+    "category_name": "Etkinlik & Organizasyon Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12798,
+    "category_name": "Mekan & İç Mekan Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12799,
+    "category_name": "Moda & Katalog Çekimi",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12800,
+    "category_name": "Kurumsal Profil & CV Fotoğrafçılığı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12801,
+    "category_name": "Belgesel & Kısa Film Yapımı",
+    "filters_ref": 12635
+  },
+  {
+    "category_id": 12641,
+    "category_name": "Kurumsal & Hukuki Hizmetler",
+    "filters": [
+      {
+        "id": 119,
+        "label": "Hizmet Şekli",
+        "type": "multi-select",
+        "db_field": "hizmet_sekli",
+        "display_location": "default",
+        "options": [
+          "Ofiste Görüşme",
+          "Online Görüşme",
+          "Müşteri Yerinde",
+          "Telefon",
+          "E-posta"
+        ]
+      },
+      {
+        "id": 120,
+        "label": "Deneyim Yılı",
+        "type": "multi-select",
+        "db_field": "deneyim",
+        "display_location": "default",
+        "options": [
+          "1-3 Yıl",
+          "3-5 Yıl",
+          "5-10 Yıl",
+          "10+ Yıl"
+        ]
+      },
+      {
+        "id": 121,
+        "label": "Yabancı Dil",
+        "type": "multi-select",
+        "db_field": "dil",
+        "display_location": "default",
+        "options": [
+          "İngilizce",
+          "Almanca",
+          "Fransızca",
+          "Arapça",
+          "Rusça",
+          "İspanyolca"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12642,
+    "category_name": "Avukatlık & Hukuki Danışmanlık",
+    "filters": [
+      {
+        "id": 122,
+        "label": "Hukuk Alanı",
+        "type": "multi-select",
+        "db_field": "hukuk_alani",
+        "display_location": "default",
+        "options": [
+          "Ceza Hukuku",
+          "Aile Hukuku",
+          "İş Hukuku",
+          "Ticaret Hukuku",
+          "Gayrimenkul Hukuku",
+          "İdare Hukuku",
+          "Bilişim Hukuku"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12643,
+    "category_name": "Mali Müşavir & Muhasebe",
+    "filters": [
+      {
+        "id": 123,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "muhasebe_turu",
+        "display_location": "default",
+        "options": [
+          "Defter Tutma",
+          "Bilanço",
+          "KDV Beyannamesi",
+          "Gelir Vergisi",
+          "Kurumlar Vergisi",
+          "SGK"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12644,
+    "category_name": "Vergi Danışmanlığı",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12645,
+    "category_name": "Şirket Kuruluş Hizmeti",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12646,
+    "category_name": "İnsan Kaynakları & Personel Hazırlama",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12802,
+    "category_name": "Ticari Sözleşme Hazırlama & İnceleme",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12803,
+    "category_name": "Marka & Patent Danışmanlığı",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12804,
+    "category_name": "İcra & Takip Hizmetleri",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12805,
+    "category_name": "KVKK & Veri Güvenliği Danışmanlığı",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12806,
+    "category_name": "Uluslararası Şirket Danışmanlığı",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12807,
+    "category_name": "Ticaret Sicil & Oda İşlemleri",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12808,
+    "category_name": "Yatırım & Teşvik Danışmanlığı",
+    "filters_ref": 12641
+  },
+  {
+    "category_id": 12647,
+    "category_name": "Güvenlik & Alarm Sistemleri",
+    "filters": [
+      {
+        "id": 124,
+        "label": "Kurulum Yeri",
+        "type": "multi-select",
+        "db_field": "kurulum_yeri",
+        "display_location": "default",
+        "options": [
+          "Ev",
+          "İşyeri",
+          "Site",
+          "Fabrika",
+          "Depo",
+          "Ofis"
+        ]
+      },
+      {
+        "id": 125,
+        "label": "Periyodik Bakım",
+        "type": "checkbox",
+        "db_field": "periyodik_bakim",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 126,
+        "label": "Garanti Süresi",
+        "type": "multi-select",
+        "db_field": "garanti_suresi",
+        "display_location": "default",
+        "options": [
+          "1 Yıl",
+          "2 Yıl",
+          "3 Yıl",
+          "5 Yıl",
+          "Ömür Boyu"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12648,
+    "category_name": "Kamera Kurulumu",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12649,
+    "category_name": "Alarm Sistemi",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12650,
+    "category_name": "Kapı Otomasyonu",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12651,
+    "category_name": "Site Güvenliği & Özel Güvenlik",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12652,
+    "category_name": "Araç Takip Sistemleri",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12809,
+    "category_name": "Yüz Tanıma & Biyometrik Sistemler",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12810,
+    "category_name": "Turnike & Geçiş Kontrol Sistemleri",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12811,
+    "category_name": "Acil Anons & Yangın İhbar Sistemleri",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12812,
+    "category_name": "Elektrikli Kilit & Kartlı Geçiş Sistemleri",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12813,
+    "category_name": "Ev & Ofis İçin Akıllı Güvenlik Sistemleri",
+    "filters_ref": 12647
+  },
+  {
+    "category_id": 12653,
+    "category_name": "Elektronik & Beyaz Eşya Teknik Servis",
+    "filters": [
+      {
+        "id": 127,
+        "label": "Servis Yeri",
+        "type": "multi-select",
+        "db_field": "servis_yeri",
+        "display_location": "default",
+        "options": [
+          "Yerinde Servis",
+          "Atölyede Servis",
+          "Müşteri Adresinden Alım",
+          "Kargo ile Servis"
+        ]
+      },
+      {
+        "id": 128,
+        "label": "Garanti Süresi",
+        "type": "multi-select",
+        "db_field": "garanti_suresi",
+        "display_location": "default",
+        "options": [
+          "1 Ay",
+          "3 Ay",
+          "6 Ay",
+          "1 Yıl",
+          "2 Yıl"
+        ]
+      },
+      {
+        "id": 129,
+        "label": "Orijinal Parça",
+        "type": "checkbox",
+        "db_field": "orijinal_parca",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12654,
+    "category_name": "Beyaz Eşya Tamiri",
+    "filters": [
+      {
+        "id": 130,
+        "label": "Cihaz Türü",
+        "type": "multi-select",
+        "db_field": "cihaz_turu",
+        "display_location": "default",
+        "options": [
+          "Buzdolabı",
+          "Çamaşır Makinesi",
+          "Bulaşık Makinesi",
+          "Ankastre Fırın",
+          "Derin Dondurucu",
+          "Kurutmalı Makine"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12655,
+    "category_name": "Televizyon Tamiri",
+    "filters": [
+      {
+        "id": 131,
+        "label": "TV Türü",
+        "type": "multi-select",
+        "db_field": "tv_turu",
+        "display_location": "default",
+        "options": [
+          "LED TV",
+          "LCD TV",
+          "OLED TV",
+          "QLED TV",
+          "Plazma",
+          "Smart TV"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12656,
+    "category_name": "Bilgisayar & Laptop Tamiri",
+    "filters": [
+      {
+        "id": 132,
+        "label": "Cihaz Türü",
+        "type": "multi-select",
+        "db_field": "bilgisayar_turu",
+        "display_location": "default",
+        "options": [
+          "Laptop",
+          "Masaüstü",
+          "All-in-One",
+          "Sunucu",
+          "Workstation"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12657,
+    "category_name": "Cep Telefonu Tamiri",
+    "filters": [
+      {
+        "id": 133,
+        "label": "Marka",
+        "type": "multi-select",
+        "db_field": "telefon_markasi",
+        "display_location": "default",
+        "options": [
+          "Apple",
+          "Samsung",
+          "Xiaomi",
+          "Huawei",
+          "OPPO",
+          "Diğer"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12658,
+    "category_name": "Elektronik Kart Tamiri",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12814,
+    "category_name": "Klima & Kombi Teknik Servisi",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12815,
+    "category_name": "Yazıcı & Tarayıcı Tamiri",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12816,
+    "category_name": "Tablet & Akıllı Saat Tamiri",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12817,
+    "category_name": "Elektrikli Süpürge & Küçük Ev Aletleri Servisi",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12818,
+    "category_name": "Güç Kaynağı & Adaptör Onarımı",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12819,
+    "category_name": "Ankastre Cihaz Montaj & Tamiri",
+    "filters_ref": 12653
+  },
+  {
+    "category_id": 12659,
+    "category_name": "Organizasyon & Etkinlik Hizmetleri",
+    "filters": [
+      {
+        "id": 134,
+        "label": "Etkinlik Türü",
+        "type": "multi-select",
+        "db_field": "etkinlik_turu",
+        "display_location": "default",
+        "options": [
+          "Düğün",
+          "Nişan",
+          "Doğum Günü",
+          "Kurumsal",
+          "Açılış",
+          "Mezuniyet",
+          "Bayi Toplantısı"
+        ]
+      },
+      {
+        "id": 135,
+        "label": "Katılımcı Sayısı",
+        "type": "multi-select",
+        "db_field": "katilimci_sayisi",
+        "display_location": "default",
+        "options": [
+          "10-50",
+          "50-100",
+          "100-250",
+          "250-500",
+          "500+"
+        ]
+      },
+      {
+        "id": 136,
+        "label": "Tahmini Bütçe",
+        "type": "multi-select",
+        "db_field": "butce",
+        "display_location": "default",
+        "options": [
+          "5.000₺ altı",
+          "5.000-15.000₺",
+          "15.000-50.000₺",
+          "50.000-100.000₺",
+          "100.000₺ üstü"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12660,
+    "category_name": "Düğün Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12661,
+    "category_name": "Doğum Günü & Parti Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12662,
+    "category_name": "Palyaço & Animatör",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12663,
+    "category_name": "Ses & Işık Sistemi Kiralama",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12664,
+    "category_name": "Nişan & Kına Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12665,
+    "category_name": "Catering & Yemek Hizmeti",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12820,
+    "category_name": "Mezuniyet Töreni Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12821,
+    "category_name": "Açılış & Lansman Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12822,
+    "category_name": "Festival & Konser Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12823,
+    "category_name": "Kurumsal Etkinlik & Toplantı Hizmetleri",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12824,
+    "category_name": "Fuar Stand & Tanıtım Organizasyonu",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12825,
+    "category_name": "Araç Süsleme & Gelin Arabası Hizmeti",
+    "filters_ref": 12659
+  },
+  {
+    "category_id": 12666,
+    "category_name": "Hayvan Hizmetleri",
+    "filters": [
+      {
+        "id": 137,
+        "label": "Hayvan Türü",
+        "type": "multi-select",
+        "db_field": "hayvan_turu",
+        "display_location": "default",
+        "options": [
+          "Köpek",
+          "Kedi",
+          "Kuş",
+          "Balık",
+          "Kaplumbağa",
+          "Tavşan",
+          "Hamster",
+          "Egzotik Hayvan"
+        ]
+      },
+      {
+        "id": 138,
+        "label": "Hizmet Yeri",
+        "type": "multi-select",
+        "db_field": "hizmet_yeri",
+        "display_location": "default",
+        "options": [
+          "Kurumda",
+          "Evde",
+          "Yerinde",
+          "Online"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12667,
+    "category_name": "Evcil Hayvan Bakımı",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12668,
+    "category_name": "Köpek Eğitimi",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12669,
+    "category_name": "Pet Kuaför & Tıraş",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12670,
+    "category_name": "Veteriner Hizmetleri",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12826,
+    "category_name": "Hayvan Oteli & Geçici Konaklama",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12827,
+    "category_name": "Pet Taksi & Taşıma Hizmeti",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12828,
+    "category_name": "Hayvan Sahiplendirme & Danışmanlık",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12829,
+    "category_name": "Evde Veteriner Hizmeti",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12830,
+    "category_name": "Egzotik Hayvan Bakım Hizmeti",
+    "filters_ref": 12666
+  },
+  {
+    "category_id": 12671,
+    "category_name": "Turizm & Rehberlik",
+    "filters": [
+      {
+        "id": 139,
+        "label": "Tur Tipi",
+        "type": "multi-select",
+        "db_field": "tur_tipi",
+        "display_location": "default",
+        "options": [
+          "Günlük Tur",
+          "Konaklamalı Tur",
+          "Kültür Turu",
+          "Doğa Turu",
+          "Gastro Tur",
+          "Alışveriş Turu"
+        ]
+      },
+      {
+        "id": 140,
+        "label": "Konaklama",
+        "type": "multi-select",
+        "db_field": "konaklama",
+        "display_location": "default",
+        "options": [
+          "Dahil Değil",
+          "2 Yıldız",
+          "3 Yıldız",
+          "4 Yıldız",
+          "5 Yıldız",
+          "Butik Otel"
+        ]
+      },
+      {
+        "id": 141,
+        "label": "Yemek",
+        "type": "multi-select",
+        "db_field": "yemek",
+        "display_location": "default",
+        "options": [
+          "Kahvaltı Dahil",
+          "Öğle Yemeği Dahil",
+          "Akşam Yemeği Dahil",
+          "Tüm Yemekler Dahil"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12672,
+    "category_name": "Özel Rehberlik Hizmeti",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12673,
+    "category_name": "Tur Organizasyonu",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12674,
+    "category_name": "Transfer Hizmeti",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12675,
+    "category_name": "Araçlı Şoför Hizmeti",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12831,
+    "category_name": "Tercümanlık & Çok Dilli Rehberlik",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12832,
+    "category_name": "VIP Tur & Lüks Gezi Hizmeti",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12833,
+    "category_name": "Yurtiçi & Yurtdışı Gezi Planlama",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12834,
+    "category_name": "Karavan & Özel Tur Aracı Kiralama",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12835,
+    "category_name": "Otobüs & Minibüs Kiralama",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12836,
+    "category_name": "Turizm Danışmanlık Hizmeti",
+    "filters_ref": 12671
+  },
+  {
+    "category_id": 12676,
+    "category_name": "Diğer Hizmetler",
+    "filters": [
+      {
+        "id": 142,
+        "label": "Hizmet Yeri",
+        "type": "multi-select",
+        "db_field": "hizmet_yeri",
+        "display_location": "default",
+        "options": [
+          "Yerinde Hizmet",
+          "Müşteri Yerinde",
+          "Atölyede",
+          "Online",
+          "Kurumda"
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Acil Servis",
+        "type": "checkbox",
+        "db_field": "acil_servis",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12677,
+    "category_name": "Çilingir",
+    "filters": [
+      {
+        "id": 143,
+        "label": "Hizmet Türü",
+        "type": "multi-select",
+        "db_field": "cilingir_turu",
+        "display_location": "default",
+        "options": [
+          "Kapı Açma",
+          "Kilit Değişimi",
+          "Otomobil Kapı",
+          "Kasa Açma",
+          "Anahtar Kopyalama",
+          "Güvenlik Kilidi"
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Acil Servis",
+        "type": "checkbox",
+        "db_field": "acil_servis",
+        "display_location": "default",
+        "options": [
+          "Evet",
+          "Hayır"
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Fiyat Aralığı",
+        "type": "price",
+        "db_field": "fiyat",
+        "display_location": "default"
+      }
+    ]
+  },
+  {
+    "category_id": 12678,
+    "category_name": "Anahtar Kopyalama",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12679,
+    "category_name": "Hurdacı",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12680,
+    "category_name": "İkinci El Eşya Alım Satım",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12681,
+    "category_name": "Kayıp Eşya İlanı",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12682,
+    "category_name": "Koli & Ambalaj Temini",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12837,
+    "category_name": "Tornacı & Metal İşleri",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12838,
+    "category_name": "Plakacı & Oto Aksesuarcı",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12839,
+    "category_name": "Kıyafet Tamiri & Fermuar Değişimi",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12840,
+    "category_name": "Matbaa & Fotokopi Hizmeti",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12841,
+    "category_name": "Bayrak & Afiş Basımı",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12842,
+    "category_name": "Zımpara & Bıçak Bileme Hizmeti",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12843,
+    "category_name": "Ev Taşıma İçin Asansör Kiralama",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12844,
+    "category_name": "Baharat & Bitkisel Ürün Satışı",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12845,
+    "category_name": "Kurye & Evrak Taşıma Hizmeti",
+    "filters_ref": 12676
+  },
+  {
+    "category_id": 12846,
+    "category_name": "Su Sebili & Damacana Dağıtımı",
+    "filters_ref": 12676
+  }
+]

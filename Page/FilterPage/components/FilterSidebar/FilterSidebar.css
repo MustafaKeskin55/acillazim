@@ -1,0 +1,1448 @@
+/* FilterSidebar.css — Yatay Kompakt Filtre Barı */
+
+.fs-sidebar {
+  @apply w-full p-0 relative overflow-visible box-border;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
+  border: 1px solid #f0f2f5;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.fs-sidebar * {
+
+  @apply box-border;
+}
+
+/* ─── Yatay Bar ─── */
+.fs-horizontal-bar {
+  @apply flex items-center;
+  gap: 6px;
+  padding: 10px 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fs-horizontal-bar::-webkit-scrollbar {
+
+  @apply hidden;
+}
+
+/* ─── Filtre Grupları (Dropdown Kutuları) ─── */
+.fs-hbar-group {
+
+  @apply relative flex-shrink-0;
+}
+
+.fs-hbar-trigger {
+  @apply flex items-center cursor-pointer select-none;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #f8fafc;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.fs-hbar-trigger:hover {
+  background: #f1f5f9;
+  border-color: #d1d9e6;
+}
+
+.fs-hbar-trigger.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.fs-hbar-trigger-icon {
+  @apply flex-shrink-0;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.fs-hbar-trigger-label {
+  @apply overflow-hidden;
+  max-width: 140px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fs-hbar-trigger-placeholder {
+  color: #94a3b8;
+}
+
+.fs-hbar-trigger-arrow {
+  @apply flex-shrink-0;
+  font-size: 9px;
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+  margin-left: 2px;
+}
+
+.fs-hbar-group.open .fs-hbar-trigger-arrow {
+  transform: rotate(180deg);
+}
+
+/* Seçili değer badge'i */
+.fs-hbar-badge {
+  @apply flex items-center justify-center;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+/* ─── Dropdown Panel ─── */
+.fs-hbar-dropdown {
+  @apply absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 220px;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid #e8ecf1;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 200;
+  padding: 8px;
+  animation: fsDropdownIn 0.18s ease;
+}
+
+@keyframes fsDropdownIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fs-hbar-dropdown-header {
+  @apply flex items-center justify-between;
+  padding: 6px 8px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 6px;
+}
+
+.fs-hbar-dropdown-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.fs-hbar-dropdown-close {
+  @apply border-0 rounded-full cursor-pointer flex items-center justify-center;
+  width: 24px;
+  height: 24px;
+  background: #f1f5f9;
+  font-size: 14px;
+  color: #64748b;
+  transition: all 0.15s;
+  line-height: 1;
+}
+
+.fs-hbar-dropdown-close:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* Dropdown Select */
+.fs-hbar-select {
+  @apply w-full cursor-pointer;
+  padding: 9px 12px;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #334155;
+  background: #f8fafc;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.763 2.938 10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  transition: all 0.15s;
+  height: 40px;
+}
+
+.fs-hbar-select:hover {
+  border-color: #cbd5e1;
+  background-color: #fff;
+}
+
+.fs-hbar-select:focus {
+  @apply outline-none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
+  background-color: #fff;
+}
+
+.fs-hbar-select option:first-child {
+  color: #94a3b8;
+}
+
+.fs-hbar-select:disabled {
+  @apply cursor-not-allowed;
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  border-color: #e8ecf1;
+}
+
+/* Fiyat Inputları */
+.fs-hbar-price-row {
+  @apply flex items-center;
+  gap: 8px;
+}
+
+.fs-hbar-price-container {
+  @apply flex flex-col w-full;
+  gap: 8px;
+}
+
+.fs-hbar-price-inputs-row {
+  @apply flex items-center w-full;
+  gap: 6px;
+}
+
+.fs-hbar-price-inputs-row .fs-hbar-price-input {
+  @apply flex-1;
+  min-width: 0;
+}
+
+.fs-hbar-price-inputs-row .fs-hbar-price-sep {
+  @apply flex-shrink-0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.fs-hbar-price-actions-row {
+  @apply flex items-center w-full;
+  gap: 8px;
+}
+
+.fs-hbar-price-actions-row .fs-hbar-currency {
+
+  @apply flex-shrink-0;
+}
+
+.fs-hbar-price-actions-row .fs-hbar-btn-apply {
+  @apply flex-1;
+  margin-top: 0 !important;
+  height: 38px;
+}
+
+.fs-hbar-price-input {
+  @apply flex-1;
+  padding: 9px 12px;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #334155;
+  background: #f8fafc;
+  height: 40px;
+  transition: all 0.15s;
+  min-width: 0;
+}
+
+.fs-hbar-price-input:hover {
+  border-color: #cbd5e1;
+}
+
+.fs-hbar-price-input:focus {
+  @apply outline-none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
+  background: #fff;
+}
+
+.fs-hbar-price-input::placeholder {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.fs-hbar-price-sep {
+  @apply flex-shrink-0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.fs-hbar-currency {
+
+  @apply flex-shrink-0;
+}
+
+.fs-hbar-currency select {
+  @apply cursor-pointer text-center;
+  width: 60px;
+  height: 40px;
+  padding: 9px 6px;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  background: #f8fafc;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.fs-hbar-currency select:focus {
+  @apply outline-none;
+  border-color: #3b82f6;
+}
+
+/* Checkbox Grubu (Dropdown içinde) */
+.fs-hbar-checkbox-group {
+  @apply overflow-y-auto;
+  max-height: 180px;
+  scrollbar-width: thin;
+  scrollbar-color: #e2e8f0 transparent;
+  padding: 2px 0;
+}
+
+.fs-hbar-checkbox-group::-webkit-scrollbar {
+  width: 4px;
+}
+
+.fs-hbar-checkbox-group::-webkit-scrollbar-thumb {
+  background-color: #e2e8f0;
+  border-radius: 4px;
+}
+
+.fs-hbar-checkbox-item {
+  @apply flex items-center cursor-pointer;
+  padding: 7px 10px;
+  border-radius: 8px;
+  transition: background 0.12s;
+  font-size: 13px;
+  color: #475569;
+}
+
+.fs-hbar-checkbox-item:hover {
+  background: #f8fafc;
+}
+
+.fs-hbar-checkbox-item input[type="checkbox"] {
+  @apply cursor-pointer relative;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: all 0.15s;
+  background: #fff;
+}
+
+.fs-hbar-checkbox-item input[type="checkbox"]:hover {
+  border-color: #94a3b8;
+}
+
+.fs-hbar-checkbox-item input[type="checkbox"]:checked {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.fs-hbar-checkbox-item input[type="checkbox"]:checked::after {
+  @apply absolute;
+  content: "";
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 8px;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* Arama kutusu (Dropdown içinde) */
+.fs-hbar-search {
+  padding: 4px 6px 8px;
+}
+
+.fs-hbar-search input {
+  @apply w-full outline-none;
+  padding: 8px 12px;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #334155;
+  background: #f8fafc;
+  transition: all 0.15s;
+}
+
+.fs-hbar-search input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.fs-hbar-search input::placeholder {
+  color: #94a3b8;
+}
+
+/* Boş mesaj */
+.fs-hbar-empty {
+  @apply text-center;
+  padding: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ─── Ayırıcı Çizgi ─── */
+.fs-hbar-divider {
+  @apply flex-shrink-0;
+  width: 1px;
+  height: 24px;
+  background: #e8ecf1;
+  margin: 0 2px;
+}
+
+/* ─── Aksiyon Butonları ─── */
+.fs-hbar-actions {
+  @apply flex items-center flex-shrink-0;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.fs-hbar-btn {
+  @apply cursor-pointer border-0 flex items-center justify-center;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  height: 40px;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.fs-hbar-btn-clear {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.fs-hbar-btn-clear:hover {
+  background: #e2e8f0;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+.fs-hbar-btn-apply {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+}
+
+.fs-hbar-btn-apply:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+  transform: translateY(-1px);
+}
+
+.fs-hbar-btn-apply:active {
+  transform: translateY(0);
+}
+
+.fs-hbar-btn-more {
+  background: transparent;
+  color: #64748b;
+  border: 1px dashed #d1d9e6;
+  font-size: 12px;
+  padding: 8px 14px;
+}
+
+.fs-hbar-btn-more:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+/* ─── Kategori Ağacı (İç) ─── */
+.fs-filter-group {
+  margin-bottom: 0;
+}
+
+.fs-filter-section-title {
+  @apply flex items-center justify-between cursor-pointer p-0 m-0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  transition: color 0.15s;
+}
+
+.fs-filter-section-title:hover {
+  color: #1e293b;
+}
+
+.fs-filter-section-title h4 {
+  @apply m-0;
+  font-size: 13px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.fs-toggle-icon {
+  font-size: 10px;
+  color: #94a3b8;
+  transform: rotate(90deg);
+  transition: transform 0.2s, color 0.2s;
+  margin-left: 6px;
+}
+
+.fs-toggle-icon.open {
+  transform: rotate(270deg);
+}
+
+/* ─── Section Content ─── */
+.fs-section-content {
+  @apply w-full;
+  padding: 10px 0 4px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fs-section {
+  @apply m-0 p-0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fs-section:last-child {
+  border-bottom: none;
+}
+
+/* ─── Filtre Item ─── */
+.fs-filter-item {
+  @apply w-full;
+  margin-bottom: 10px;
+}
+
+.fs-filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.fs-filter-item label {
+  @apply block uppercase;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 5px;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+/* ─── Select Wrapper ─── */
+.fs-select-wrapper {
+  @apply relative w-full;
+  margin-bottom: 0;
+}
+
+.fs-select-wrapper::after {
+  @apply absolute pointer-events-none;
+  content: "";
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #94a3b8;
+}
+
+.fs-sidebar .fs-select-wrapper select,
+.fs-sidebar .filter-sidebar__select-container select {
+  width: 100% !important;
+  padding: 10px 32px 10px 12px !important;
+  border: 1px solid #e8ecf1 !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  background: #f8fafc !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s !important;
+  color: #1e293b !important;
+  cursor: pointer !important;
+  height: 38px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.fs-sidebar .fs-select-wrapper select:focus,
+.fs-sidebar .filter-sidebar__select-container select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.08) !important;
+  background: #fff !important;
+}
+
+.fs-sidebar .fs-select-wrapper select option {
+  padding: 8px !important;
+  background-color: #fff !important;
+  color: #1e293b !important;
+  font-size: 13px !important;
+}
+
+.fs-sidebar .fs-select-wrapper select option:first-child {
+  color: #94a3b8 !important;
+}
+
+.fs-sidebar .fs-select-wrapper select:disabled {
+  background-color: #f1f5f9 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed !important;
+  border-color: #e8ecf1 !important;
+}
+
+.filter-sidebar__select-container {
+
+  @apply relative w-full;
+}
+
+/* ─── Fiyat Satırı ─── */
+.fs-price-row {
+  @apply flex flex-row items-center w-full;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fs-price-inputs {
+  @apply flex items-center m-0 w-full;
+  gap: 8px;
+}
+
+.fs-range-inputs {
+  @apply flex items-center w-full;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.fs-price-inputs input,
+.fs-range-inputs input {
+  width: 100% !important;
+  padding: 9px 12px !important;
+  border: 1px solid #e8ecf1 !important;
+  border-radius: 10px !important;
+  height: 38px !important;
+  font-size: 13px !important;
+  color: #1e293b !important;
+  background: #f8fafc !important;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s !important;
+}
+
+.fs-sidebar .fs-range-inputs input {
+  padding: 9px 28px 9px 12px !important;
+  min-width: 0 !important;
+}
+
+.fs-input-unit-wrapper {
+  @apply relative flex items-center;
+  width: 48%;
+  min-width: 110px;
+}
+
+.fs-input-unit {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 10px !important;
+  color: #94a3b8 !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+  user-select: none !important;
+  font-weight: 500 !important;
+}
+
+.fs-range-inputs span {
+  @apply m-0 flex-shrink-0 text-center;
+  font-size: 12px;
+  color: #94a3b8;
+  width: 10px;
+}
+
+.fs-price-inputs span:not(.fs-input-unit) {
+  @apply flex-shrink-0 text-center;
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0 2px;
+}
+
+.fs-sidebar .fs-range-inputs input::placeholder,
+.fs-sidebar .fs-price-inputs input::placeholder {
+  color: #cbd5e1 !important;
+  font-size: 12px !important;
+}
+
+/* ─── Para Birimi Seçici ─── */
+.fs-currency-selector {
+  @apply w-full;
+  margin-bottom: 0;
+}
+
+.fs-currency-selector select {
+  width: 100% !important;
+  height: 38px !important;
+  padding: 9px 10px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border: 1px solid #e8ecf1 !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important;
+  color: #1e293b !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.fs-currency-selector::after {
+  @apply absolute pointer-events-none;
+  content: "";
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #94a3b8;
+}
+
+/* ─── Uygula Butonu (Fiyat) ─── */
+.fs-price-wrapper .fs-filter-apply-btn {
+  @apply w-full border-0 cursor-pointer text-center;
+  padding: 0 !important;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+  height: 38px !important;
+  font-size: 13px !important;
+  transition: all 0.15s !important;
+}
+
+.fs-price-wrapper .fs-filter-apply-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+
+.fs-price-wrapper .fs-filter-apply-btn:disabled {
+  background: #e2e8f0 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.fs-price-info {
+  @apply text-center;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 6px;
+  padding: 0 5px;
+  font-style: italic;
+}
+
+/* ─── Checkbox Label ─── */
+.fs-sidebar .fs-checkbox-label {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 13px !important;
+  padding: 5px 8px !important;
+  color: #475569 !important;
+  cursor: pointer !important;
+  transition: background 0.1s, color 0.1s !important;
+  margin-bottom: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  text-align: left !important;
+  line-height: normal !important;
+  border-radius: 6px !important;
+}
+
+.fs-sidebar .fs-checkbox-label:hover {
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+}
+
+.fs-sidebar .fs-checkbox-label span {
+  font-size: 13px !important;
+  color: #475569 !important;
+  line-height: 1.3 !important;
+  background: transparent !important;
+  border: none !important;
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ─── Checkbox Input ─── */
+.fs-sidebar .fs-section-content .fs-checkbox-label input[type="checkbox"].fs-sidebar-checkbox {
+  position: relative !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  margin-right: 8px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.15s !important;
+  background: #fff !important;
+  padding: 0 !important;
+}
+
+.fs-sidebar .fs-section-content .fs-checkbox-label input[type="checkbox"].fs-sidebar-checkbox:checked {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.fs-sidebar .fs-section-content .fs-checkbox-label input[type="checkbox"].fs-sidebar-checkbox:checked:after {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  top: 1px !important;
+  width: 5px !important;
+  height: 8px !important;
+  border-right: 1.5px solid #fff !important;
+  border-bottom: 1.5px solid #fff !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+}
+
+/* ─── Radio Group ─── */
+.fs-sidebar .fs-section-content .radio-group {
+  @apply flex flex-col;
+  gap: 4px;
+}
+
+.fs-sidebar .fs-radio-label {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 13px !important;
+  padding: 5px 8px !important;
+  color: #475569 !important;
+  cursor: pointer !important;
+  transition: background 0.15s !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+.fs-sidebar .fs-radio-label:hover {
+  background: #f1f5f9 !important;
+}
+
+.fs-sidebar .fs-radio-label span {
+  font-size: 13px !important;
+  color: #475569 !important;
+}
+
+.fs-sidebar .fs-radio-label input[type="radio"] {
+  position: relative !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  margin-right: 8px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: all 0.15s !important;
+  background: #fff !important;
+  padding: 0 !important;
+}
+
+.fs-sidebar .fs-radio-label input[type="radio"]:checked {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.fs-sidebar .fs-radio-label input[type="radio"]:checked::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 6px !important;
+  height: 6px !important;
+  background: #fff !important;
+  border-radius: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* ─── Filtre Butonları (Sticky Bottom - Mobil için) ─── */
+.fs-filter-actions {
+  @apply flex justify-between;
+  position: sticky;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 12px 16px;
+  gap: 10px;
+  z-index: 10;
+  border-top: 1px solid #f1f5f9;
+}
+
+.fs-filter-clear-btn {
+  @apply flex-1 cursor-pointer;
+  padding: 10px 0;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.fs-filter-clear-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.fs-filter-apply-btn {
+  @apply flex-1 border-0 cursor-pointer;
+  padding: 10px 0;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.fs-filter-apply-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+
+/* ─── Daha Fazla Filtre ─── */
+.fs-apply-filters {
+  margin-top: 8px;
+  padding: 0 16px 12px;
+}
+
+.fs-more-filters-btn {
+  @apply cursor-pointer w-full text-center flex items-center justify-center;
+  background: #f8fafc;
+  color: #64748b;
+  border: 1px dashed #d1d9e6;
+  border-radius: 10px;
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+  gap: 6px;
+}
+
+.fs-more-filters-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+/* ─── Checkbox Dropdown (İlçe/Mahalle) ─── */
+.fs-filter-item .fs-dropdown-container {
+
+  @apply relative;
+}
+
+.fs-dropdown-header {
+  @apply flex items-center justify-between cursor-pointer;
+  padding: 10px 12px;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: all 0.15s ease;
+  min-height: 40px;
+}
+
+.fs-dropdown-header:hover {
+  border-color: #cbd5e1;
+  background: #fff;
+}
+
+.fs-dropdown-header.disabled {
+  @apply cursor-not-allowed;
+  background: #f1f5f9;
+  color: #94a3b8;
+  border-color: #e8ecf1;
+  opacity: 0.7;
+}
+
+.fs-dropdown-selected {
+  font-size: 13px;
+  color: #475569;
+}
+
+.fs-dropdown-arrow {
+  color: #94a3b8;
+  font-size: 10px;
+  transition: transform 0.15s;
+}
+
+.fs-dropdown-header:hover .fs-dropdown-arrow {
+  color: #64748b;
+}
+
+.fs-dropdown-menu {
+  @apply absolute overflow-y-auto w-full;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  max-height: 220px;
+  z-index: 100;
+  padding: 6px;
+}
+
+.fs-dropdown-search {
+  padding: 4px 2px 6px;
+}
+
+.fs-dropdown-search input {
+  @apply w-full outline-none;
+  padding: 8px 12px;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #334155;
+  background: #f8fafc;
+}
+
+.fs-dropdown-search input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.fs-dropdown-item {
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.12s;
+}
+
+.fs-dropdown-item:hover {
+  background: #f8fafc;
+}
+
+.fs-dropdown-empty {
+  @apply text-center;
+  padding: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ─── Kategori Seçici ─── */
+.fs-category-path {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.fs-category-current {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.fs-category-current span {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.fs-category-tree {
+  margin-top: 12px;
+}
+
+.fs-loading {
+  @apply text-center;
+  padding: 10px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.fs-category-path-container {
+  margin-bottom: 12px;
+}
+
+.fs-category-path-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.fs-category-path-items {
+  @apply flex flex-wrap items-center;
+  gap: 4px;
+}
+
+.fs-category-path-item {
+  @apply cursor-pointer;
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.fs-category-path-item:hover {
+  color: #2563eb;
+}
+
+.fs-category-path-separator {
+  color: #94a3b8;
+  margin: 0 2px;
+}
+
+.fs-category-list {
+  @apply overflow-y-auto;
+  max-height: 200px;
+}
+
+.fs-category-list-group {
+  margin-bottom: 8px;
+}
+
+.fs-category-list-header {
+  font-weight: 500;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.fs-category-item {
+  @apply cursor-pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.12s;
+  font-size: 13px;
+  color: #475569;
+}
+
+.fs-category-item:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.fs-no-subcategories {
+  font-size: 12px;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* ─── Category Selector ─── */
+.category-selector {
+  margin-bottom: 16px;
+  padding: 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.category-selector .filter-section-header h3 {
+  @apply m-0;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.selected-category {
+  @apply flex items-center justify-between cursor-pointer;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.selected-category:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.selected-category span {
+  font-size: 13px;
+  color: #475569;
+}
+
+.selected-category .arrow {
+  font-size: 16px;
+  color: #94a3b8;
+  transform: rotate(90deg);
+}
+
+/* ─── Çoklu Seçim ─── */
+.fs-multi-select {
+  @apply overflow-y-auto w-full;
+  min-height: 80px;
+  max-height: 150px;
+  padding: 8px;
+  border: 1px solid #e8ecf1;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.fs-multi-select option {
+  @apply cursor-pointer;
+  padding: 6px 8px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+}
+
+.fs-multi-select option:checked {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* ─── Kategori Özellikleri ─── */
+.fs-category-feature {
+  margin-bottom: 6px;
+}
+
+.fs-category-feature-header {
+  @apply flex justify-between items-center cursor-pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.fs-category-feature-header:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.fs-category-feature-header h5 {
+  @apply m-0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.fs-category-feature-toggle {
+  @apply flex items-center justify-center rounded-full;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  background: #94a3b8;
+  transition: all 0.15s ease;
+}
+
+.fs-category-feature-header:hover .fs-category-feature-toggle {
+  background: #64748b;
+}
+
+.fs-category-feature-content {
+  padding: 4px 2px;
+  animation: fadeIn 0.15s ease;
+  margin-bottom: 6px;
+}
+
+/* ─── Checkbox Group (İç) ─── */
+.fs-sidebar .fs-section-content .checkbox-group {
+  @apply overflow-y-auto;
+  max-height: 180px;
+  scrollbar-width: thin;
+  scrollbar-color: #e2e8f0 transparent;
+  margin-bottom: 4px;
+  padding-right: 4px;
+  border-radius: 6px;
+}
+
+.fs-sidebar .fs-section-content .checkbox-group::-webkit-scrollbar {
+  width: 4px;
+}
+
+.fs-sidebar .fs-section-content .checkbox-group::-webkit-scrollbar-thumb {
+  background-color: #e2e8f0;
+  border-radius: 4px;
+}
+
+.fs-sidebar .fs-section-content .checkbox-group.small {
+  max-height: none;
+  overflow-y: visible;
+}
+
+/* ─── Responsive: Mobil ─── */
+@media (max-width: 768px) {
+  .fs-sidebar {
+    @apply border-0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .fs-horizontal-bar {
+    @apply flex-nowrap;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .fs-hbar-trigger {
+    padding: 7px 12px;
+    font-size: 12px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .fs-hbar-btn {
+    height: 36px;
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: 10px;
+  }
+
+  .fs-hbar-dropdown {
+    @apply fixed overflow-y-auto;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    max-height: 60vh;
+    animation: fsMobileSlideUp 0.25s ease;
+  }
+
+  @keyframes fsMobileSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .fs-hbar-divider {
+
+    @apply hidden;
+  }
+
+  .fs-hbar-actions {
+    @apply w-full;
+    margin-left: 0;
+    justify-content: stretch;
+  }
+
+  .fs-hbar-btn {
+
+    @apply flex-1;
+  }
+}
+
+/* ─── Required yıldızları gizle ─── */
+.required,
+span.required,
+.fs-section-header h4 .required,
+.fs-filter-item label .required,
+.fs-checkbox-label .required,
+h4 .required,
+label .required,
+*[class*="required"],
+*[class$="required"],
+span[class*="required"],
+.fs-sidebar *[class*="required"],
+.filter-header *[class*="required"],
+[class*="header"] label::after,
+.filter-controls label::after,
+.sort-container label::after,
+label[for="sort-select"]::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/* ─── Global input fix ─── */
+html body .fs-sidebar input[type="text"],
+html body .fs-sidebar input[type="number"],
+html body .fs-sidebar input[type="search"],
+html body .fs-sidebar input {
+  box-sizing: border-box !important;
+  max-width: none !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+}
+
+body .fs-sidebar .fs-section-content input[type="checkbox"].fs-sidebar-checkbox {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 3px !important;
+  background-color: #fff !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  padding: 0 !important;
+}
+
+body .fs-sidebar .fs-section-content input[type="checkbox"].fs-sidebar-checkbox:hover {
+  border-color: #94a3b8 !important;
+}
+
+body .fs-sidebar .fs-section-content input[type="checkbox"].fs-sidebar-checkbox:checked {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+body .fs-sidebar .fs-section-content input[type="checkbox"].fs-sidebar-checkbox:checked::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  top: 2px !important;
+  width: 4px !important;
+  height: 7px !important;
+  border-right: 1.5px solid #fff !important;
+  border-bottom: 1.5px solid #fff !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+}
+
+/* Section auto-height */
+.fs-section {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.fs-section-content {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.fs-section[aria-expanded="false"] .fs-section-content {
+  display: none !important;
+}
+
+.fs-section[aria-expanded="true"] .fs-section-content {
+  display: block !important;
+  height: auto !important;
+}

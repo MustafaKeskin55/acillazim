@@ -1,0 +1,376 @@
+/* Sidebar ana bileşen stilleri - Modern tasarım */
+.sidebar {
+  @apply overflow-hidden mx-auto flex flex-col;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  width: 230px;
+  height: 570px;
+  z-index: 1000;
+  border: 1px solid #c8c8c8;
+}
+
+/* Sidebar başlık bölümü */
+.sidebar-header {
+  padding: 15px;
+  background-color: #f8f9fb;
+  border-bottom: 1px solid #eaeef5;
+}
+
+.sidebar-header h3 {
+  @apply m-0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Kategori container */
+.sidebar-categories-container {
+  @apply overflow-y-auto flex-1;
+}
+
+/* Sidebar Option Styles */
+.sidebar-options {
+  @apply flex items-center;
+  padding: 7px 12px;
+  border-bottom: 1px solid #d0d0d0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-options:hover {
+  background-color: #e8f0fe;
+}
+
+.sidebar-options:last-child {
+  border-bottom: none;
+}
+
+.sidebar-option {
+  @apply flex items-center w-full;
+}
+
+/* Ustalar-ve-Hizmetler kategori listesi: ikon yok, metin tam satır */
+.sidebar-option.sidebar-option--no-icon .category-text {
+  @apply w-full;
+}
+
+.icon {
+  @apply flex items-center justify-center;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.category-text {
+  @apply m-0 overflow-hidden capitalize;
+  font-size: 14px;
+  font-weight: 550;
+  color: #2a2a2a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sidebar-option-link {
+  @apply cursor-pointer;
+  transition: color 0.2s;
+}
+
+.sidebar-option-link:hover {
+  color: #0d6efd !important;
+}
+
+.sidebar-option-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
+}
+
+/* Hizmet kategorileri: metin rengi (inline stil kaldırıldı) */
+.sidebar.sidebar--service .sidebar-option-link {
+  color: #334155;
+  transition: color 0.22s ease;
+}
+
+.sidebar.sidebar--service .sidebar-option-link:hover {
+  color: #0d6efd !important;
+}
+
+.sidebar.sidebar--service .sidebar-option-link.active {
+  font-weight: 600;
+}
+
+.sidebar-loading {
+  @apply text-center;
+  padding: 20px;
+  color: #495057;
+}
+
+.sidebar-error {
+  @apply text-center;
+  padding: 20px;
+  color: #dc3545;
+}
+
+/* Kategoriler sayfasında tam ekran liste modu */
+.sidebar.sidebar-fullpage {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: unset !important;
+  overflow: visible !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  left: auto !important;
+  transition: none !important;
+}
+
+/* Arkaplan overlay (mobil görünümde) */
+.sidebar-overlay {
+  @apply fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+/* Mobil görünüm için hamburger menü */
+.hamburger-menu {
+  @apply hidden;
+}
+
+/* Mobil görünüm */
+@media (max-width: 880px) {
+  .category-text {
+    font-size: 13px;
+  }
+
+  .sidebar.mobile {
+    @apply fixed;
+    top: 0;
+    left: -230px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.mobile.open {
+    left: 0;
+  }
+
+  .hamburger-menu {
+    @apply flex fixed cursor-pointer rounded-full items-center justify-center;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger {
+    @apply relative;
+    width: 20px;
+    height: 16px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  .hamburger span {
+    @apply block absolute w-full;
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 7px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: 14px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 7px;
+    transform: rotate(135deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-135deg);
+  }
+
+  /*
+    Hizmet tam liste — mobil: kutusuz “magazine” listesi; gradyan/gölge kart yok, sol accent çubuk.
+  */
+  .sidebar.sidebar--service .sidebar-options {
+    @apply relative p-0 m-0;
+    border-bottom: none;
+    background: transparent;
+  }
+
+  .sidebar.sidebar--service .sidebar-options:not(:last-child)::after {
+    @apply absolute;
+    content: "";
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(0, 52, 102, 0.08);
+  }
+
+  .sidebar.sidebar--service .sidebar-options:hover {
+    background-color: transparent;
+  }
+
+  .sidebar.sidebar--service .sidebar-option {
+    @apply flex-1 items-stretch m-0 border-0;
+    min-width: 0;
+    gap: 0;
+    padding: 18px 20px 18px 16px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: background-color 0.22s ease;
+  }
+
+  .sidebar.sidebar--service .sidebar-option:hover {
+    background-color: rgba(0, 52, 102, 0.045);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:active {
+    background-color: rgba(0, 52, 102, 0.07);
+  }
+
+  .sidebar.sidebar--service .sidebar-option-accent {
+    @apply flex-shrink-0;
+    width: 4px;
+    min-height: 44px;
+    align-self: center;
+    margin-right: 14px;
+    border-radius: 4px;
+    background-color: #ff8c00;
+    transition: background-color 0.22s ease, transform 0.22s ease;
+  }
+
+  .sidebar.sidebar--service .sidebar-option:hover .sidebar-option-accent {
+    background-color: #ff6b00;
+    transform: scaleY(1.04);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:has(.sidebar-option-link.active) .sidebar-option-accent {
+    background-color: #003466;
+    transform: scaleY(1.06);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:has(.sidebar-option-link.active) {
+    background-color: rgba(0, 52, 102, 0.06);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:has(.sidebar-option-link.active) .sidebar-option-link {
+    color: #003466 !important;
+  }
+
+  .sidebar.sidebar--service .sidebar-option:hover .sidebar-option-link {
+    color: #003466 !important;
+  }
+
+  .sidebar.sidebar--service .category-text {
+    @apply flex-1;
+    min-width: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #334155;
+    white-space: normal;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  .sidebar.sidebar--service .sidebar-option-chevron {
+    @apply flex-shrink-0 rounded-full border-0 relative;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: rgba(0, 52, 102, 0.06);
+    transform: none;
+    transition: background-color 0.22s ease;
+  }
+
+  .sidebar.sidebar--service .sidebar-option-chevron::after {
+    @apply absolute box-border;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border-right: 2px solid #64748b;
+    border-bottom: 2px solid #64748b;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:hover .sidebar-option-chevron {
+    background-color: rgba(0, 52, 102, 0.11);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:hover .sidebar-option-chevron::after {
+    border-right-color: #003466;
+    border-bottom-color: #003466;
+  }
+
+  .sidebar.sidebar--service .sidebar-option:has(.sidebar-option-link.active) .sidebar-option-chevron {
+    background-color: rgba(0, 52, 102, 0.12);
+  }
+
+  .sidebar.sidebar--service .sidebar-option:has(.sidebar-option-link.active) .sidebar-option-chevron::after {
+    border-right-color: #003466;
+    border-bottom-color: #003466;
+  }
+
+  .sidebar.sidebar-fullpage.sidebar--service {
+    @apply box-border;
+    background-color: #ffffff;
+    background-image: none;
+    padding: 4px 0 36px;
+    /* main-content sütununu doldur: gri/beyaz iki şerit oluşmasın */
+    flex: 1 1 auto;
+    min-height: calc(
+      100dvh - var(--app-main-pad-top-mobile, 60px) - var(--app-main-pad-bottom-mobile, 92px) -
+        env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+    );
+  }
+
+  .sidebar.sidebar-fullpage.sidebar--service .sidebar-loading {
+    @apply flex items-center justify-center m-0;
+    flex: 1 1 auto;
+    padding: 32px 20px;
+    background-color: #ffffff;
+    background-image: none;
+    color: #6c757d;
+    font-size: 15px;
+    min-height: 40vh;
+  }
+}

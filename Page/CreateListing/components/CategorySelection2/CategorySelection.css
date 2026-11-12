@@ -1,0 +1,159 @@
+/* =============================================
+   CategorySelection — wrapper
+   ============================================= */
+
+.category-selection-container {
+  @apply w-full m-0 relative;
+  max-width: 100%;
+  padding-top: 0;
+  background: #fff;
+  min-height: 100%;
+}
+
+/* ── Loading ── */
+.category-loading {
+  @apply flex flex-col items-center justify-center;
+  min-height: 60vh;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.category-loading-spinner {
+  @apply rounded-full;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #0066ff;
+  animation: cat-spin .8s linear infinite;
+}
+
+@keyframes cat-spin { to { transform: rotate(360deg); } }
+
+/* ─────────────────────────────────────────────
+   DESKTOP
+   ─────────────────────────────────────────────*/
+
+/* Mobil header gizli, desktop-only elemanlar görünür */
+.cs-mobile-header {
+
+  @apply hidden; }
+.cs-desktop-only  {
+
+  @apply block; }
+
+/* Desktop üst alan — breadcrumb + progress */
+.cs-desktop-top {
+
+  @apply w-full;
+}
+
+.category-breadcrumb-container {
+
+  @apply w-full; }
+
+.category-selection-progress { margin-bottom: 12px; }
+
+/* İçerik */
+.category-selection-content {
+
+  @apply w-full p-0;
+}
+
+.category-selection-content .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE ≤ 768px
+   ─────────────────────────────────────────────*/
+@media (max-width: 768px) {
+
+  /* Desktop üst kısım ve progress gizle */
+  .cs-desktop-top  {
+
+    @apply hidden; }
+  .cs-desktop-only {
+
+    @apply hidden; }
+
+  /* ── Sticky header — 2. Görsel (#003466) Tasarımı ── */
+  .cs-mobile-header {
+    @apply flex items-center justify-center;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    background: #003466;
+    height: 50px;
+    min-height: 50px;
+    padding: 0 16px;
+    box-shadow: 0 2px 6px rgba(0, 52, 102, 0.15);
+  }
+
+  .cs-mobile-back {
+    @apply absolute rounded-full border-0 cursor-pointer flex items-center justify-center p-0 outline-none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .cs-mobile-back:active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .cs-mobile-back svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cs-mobile-header__titles {
+    @apply flex items-center justify-center w-full mx-auto text-center;
+    max-width: calc(100% - 90px);
+  }
+
+  .cs-mobile-header__title {
+    @apply overflow-hidden text-center;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+  }
+
+  .cs-mobile-header__sub {
+    display: none !important;
+  }
+
+  /* İçerik — tam genişlik, padding kaldır */
+  .category-selection-container {
+    padding-bottom: 16px;
+  }
+
+  .category-selection-content .container {
+    @apply p-0;
+    max-width: 100%;
+  }
+
+  /* main-content padding'i mobilde sıfırla (sticky header halleder offset'i) */
+  .main-content:has(.category-selection-container) {
+    padding-top: 0;
+  }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 480px) {
+  .cs-mobile-header { height: 50px; }
+  .cs-mobile-back { width: 30px; height: 30px; }
+  .cs-mobile-header__title { font-size: 16px; }
+}

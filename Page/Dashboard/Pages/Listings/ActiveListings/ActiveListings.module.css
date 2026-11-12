@@ -1,0 +1,148 @@
+.listings-container {
+  padding: 32px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.listings-header {
+  @apply flex justify-between items-center;
+  margin-bottom: 32px;
+}
+
+.listings-header h1 {
+  @apply m-0;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.search-filter {
+  @apply flex;
+  gap: 16px;
+}
+
+.search-box,
+.filter-box {
+
+  @apply relative flex items-center;
+}
+
+.search-icon,
+.filter-icon {
+  @apply absolute;
+  left: 12px;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.search-input {
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 280px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  @apply outline-none;
+  border-color: #FF8A00;
+}
+
+.filter-select {
+  @apply cursor-pointer;
+  padding: 12px 32px 12px 40px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+  background: white;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+  @apply outline-none;
+  border-color: #FF8A00;
+}
+
+.listings-grid {
+  @apply justify-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.listing-card {
+  @apply overflow-hidden;
+  background: white;
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.listings-pagination {
+  @apply flex justify-center items-center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.page-numbers {
+  @apply flex;
+  gap: 8px;
+}
+
+.page-btn {
+  @apply cursor-pointer;
+  padding: 8px 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #6c757d;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  border-color: #FF8A00;
+  color: #FF8A00;
+}
+
+.page-btn.active {
+  background: #FF8A00;
+  border-color: #FF8A00;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .listings-container {
+    padding: 16px;
+  }
+
+  .listings-header {
+    @apply flex-col items-stretch;
+    gap: 16px;
+  }
+
+  .search-filter {
+
+    @apply flex-col;
+  }
+
+  .search-input,
+  .filter-select {
+
+    @apply w-full;
+  }
+
+  .listings-grid {
+    @apply justify-center;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+} 

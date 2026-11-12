@@ -1,0 +1,180 @@
+/* PopularCategories.css - Flat Minimalism Overhaul */
+.popular-categories-section {
+  @apply w-full p-0 m-0;
+  background-color: transparent;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.popular-categories-section .section-title {
+  @apply p-0 relative text-left flex items-center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 24px;
+  justify-content: start;
+  letter-spacing: -0.02e;
+  text-transform: none;
+}
+
+.popular-categories-section .section-title::after {
+  @apply block absolute;
+  content: "";
+  width: 48px;
+  height: 3px;
+  background: #ff6b00;
+  bottom: -6px;
+  left: 0;
+  border-radius: 4px;
+}
+
+/* Category Card Design */
+.category-card {
+  @apply relative cursor-pointer overflow-hidden text-center;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 160px;
+  color: white;
+  border: 1px solid rgba(0, 52, 102, 0.04);
+}
+
+.category-card-background {
+  @apply absolute w-full h-full;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-card::before {
+  @apply absolute w-full;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #ff6b00;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 52, 102, 0.1);
+  border-color: rgba(255, 107, 0, 0.2);
+}
+
+.category-card:hover .category-card-background {
+  transform: scale(1.06);
+}
+
+.category-card:hover::before {
+  transform: scaleX(1);
+}
+
+.category-card-overlay {
+  @apply absolute w-full h-full flex flex-col justify-end;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.7));
+  padding: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.category-card:hover .category-card-overlay {
+  background: linear-gradient(to bottom, rgba(0, 52, 102, 0.3), rgba(0, 52, 102, 0.8));
+}
+
+.category-card-name {
+  @apply w-full;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-top: 8px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.01em;
+  word-wrap: break-word;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.category-card:hover .category-card-name {
+  transform: translateY(-2px);
+}
+
+/* Category grid layouts */
+.popular-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.popular-categories-grid.popular-categories-grid--mobile-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Controls */
+.pagination-controls {
+  @apply flex justify-center items-center;
+  margin-top: 20px;
+}
+
+.page-indicators {
+  @apply flex;
+  gap: 6px;
+}
+
+.page-indicator {
+  @apply rounded-full border-0 cursor-pointer;
+  width: 6px;
+  height: 6px;
+  background-color: #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-indicator.active {
+  background-color: #ff6b00;
+  width: 18px;
+  border-radius: 3px;
+}
+
+.page-arrow {
+  @apply rounded-full flex items-center justify-center cursor-pointer;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  margin: 0 8px;
+  color: #64748b;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-arrow:hover:not(:disabled) {
+  border-color: #ff6b00;
+  color: #ff6b00;
+  transform: translateY(-1px);
+}
+
+.page-arrow:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.35;
+}
+
+@media (max-width: 992px) {
+  .popular-categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card { min-height: 130px; }
+  .popular-categories-section .section-title { font-size: 20px; }
+}

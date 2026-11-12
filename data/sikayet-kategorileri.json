@@ -1,0 +1,182 @@
+{
+  "ilanSikayetleri": [
+    {
+      "id": "randevuya-gelmedi",
+      "adi": "Randevuya Gelmedi",
+      "aciklama": "Belirlenen randevu saatinde gelmedi",
+      "ikon": "faUserClock",
+      "renk": "#e74c3c",
+      "formAlanlari": [
+        { "id": "randevuTarihi", "tip": "datetime", "label": "Randevu Tarihi", "zorunlu": true },
+        { "id": "beklemeSuresi", "tip": "select", "label": "Ne Kadar Beklediniz?", "zorunlu": true, "secenekler": ["15 dakika", "30 dakika", "1 saat", "2 saatt fazla"] }
+      ]
+    },
+    {
+      "id": "gec-geldi",
+      "adi": "Randevuya Geç Geldi",
+      "aciklama": "Söz verdiği saatte çok geç geldi",
+      "ikon": "faHourglassEnd",
+      "renk": "#e67e22",
+      "formAlanlari": [
+        { "id": "randevuTarihi", "tip": "datetime", "label": "Randevu Tarihi", "zorunlu": true },
+        { "id": "planlananSaat", "tip": "time", "label": "Planlanan Saat", "zorunlu": true },
+        { "id": "gerceklesmeSaat", "tip": "time", "label": "Geldiği Saat", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "yanlis-bilgi",
+      "adi": "Yanlış Bilgi Verdi",
+      "aciklama": "İlan bilgileri ile uyuşmayan bilgi verdi",
+      "ikon": "faExclamationTriangle",
+      "renk": "#f39c12",
+      "formAlanlari": [
+        { "id": "yanlisBilgiAlani", "tip": "select", "label": "Yanlış Bilgi Türü", "zorunlu": true, "secenekler": ["Fiyat", "Konum", "Ürün Detayı", "Stok Durumu", "Diğer"] },
+        { "id": "beklenenBilgi", "tip": "textarea", "label": "İlanda Yazan", "zorunlu": true, "placeholder": "İlanda ne yazıyordu?" },
+        { "id": "gercekBilgi", "tip": "textarea", "label": "Gerçek Durum", "zorunlu": true, "placeholder": "Gerçekte ne oldu?" }
+      ]
+    },
+    {
+      "id": "kotu-hizmet",
+      "adi": "Kötü Hizmet",
+      "aciklama": "Hizmet kalitesiz veya yetersiz kaldı",
+      "ikon": "faThumbsDown",
+      "renk": "#9b59b6",
+      "formAlanlari": [
+        { "id": "hizmetTuru", "tip": "select", "label": "Hizmet Türü", "zorunlu": true, "secenekler": ["Tamirat", "Nakliyat", "Temizlik", "Elektrik", "Tesisat", "Diğer"] },
+        { "id": "sorunAciklamasi", "tip": "textarea", "label": "Yaşanan Sorun", "zorunlu": true, "placeholder": "Ne tür bir sorun yaşadınız?" }
+      ]
+    },
+    {
+      "id": "fazla-ucret",
+      "adi": "Fazla Ücret Talebi",
+      "aciklama": "Anlaşılan fiyattan fazla ücret istedi",
+      "ikon": "faMoneyBillWave",
+      "renk": "#e74c3c",
+      "formAlanlari": [
+        { "id": "anlasilanFiyat", "tip": "number", "label": "Anlaşılan Fiyat (₺)", "zorunlu": true },
+        { "id": "talepEdilenFiyat", "tip": "number", "label": "Talep Edilen Fiyat (₺)", "zorunlu": true },
+        { "id": "farkAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true, "placeholder": "Neden ek ücret istendi?" }
+      ]
+    },
+    {
+      "id": "urun-yok",
+      "adi": "Ürün/Hizmet Yok",
+      "aciklama": "İlanda belirtilen ürün veya hizmet mevcut değil",
+      "ikon": "faBan",
+      "renk": "#c0392b",
+      "formAlanlari": [
+        { "id": "arananUrun", "tip": "textarea", "label": "Aradığınız", "zorunlu": true, "placeholder": "Ne arıyordunuz?" },
+        { "id": "durumAciklamasi", "tip": "textarea", "label": "Durum", "zorunlu": true, "placeholder": "Ne oldu?" }
+      ]
+    },
+    {
+      "id": "sahte-ilan",
+      "adi": "Sahte İlan",
+      "aciklama": "Tamamen sahte veya var olmayan ilan",
+      "ikon": "faTimesCircle",
+      "renk": "#8e44ad",
+      "formAlanlari": [
+        { "id": "sahteNeden", "tip": "select", "label": "Neden?", "zorunlu": true, "secenekler": ["Ürün mevcut değil", "Farklı ürün gönderildi", "Dolandırıcılık", "Sahte profil", "Diğer"] },
+        { "id": "sahteAciklama", "tip": "textarea", "label": "Açıklama", "zorunlu": true, "placeholder": "Detayları açıklayın" }
+      ]
+    },
+    {
+      "id": "teslim-sorunu",
+      "adi": "Teslimat Sorunu",
+      "aciklama": "Ürün zamanında veya hiç teslim edilmedi",
+      "ikon": "faTruck",
+      "renk": "#e67e22",
+      "formAlanlari": [
+        { "id": "teslimTarihi", "tip": "datetime", "label": "Anlaşılan Teslim Tarihi", "zorunlu": true },
+        { "id": "teslimDurumu", "tip": "select", "label": "Durum", "zorunlu": true, "secenekler": ["Hiç teslim edilmedi", "Geç teslim edildi", "Hasarlı teslim edildi", "Eksik teslim edildi"] },
+        { "id": "teslimAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "garanti-sorunu",
+      "adi": "Garanti Sorunu",
+      "aciklama": "Garanti kapsamında olması gereken hizmet verilmedi",
+      "ikon": "faShieldAlt",
+      "renk": "#3498db",
+      "formAlanlari": [
+        { "id": "garantiDurumu", "tip": "select", "label": "Garanti Durumu", "zorunlu": true, "secenekler": ["Garanti reddedildi", "Garanti kapsamında tamir edilmedi", "Ek ücret istendi", "Diğer"] },
+        { "id": "garantiAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "ilan-diger",
+      "adi": "Diğer İlan Şikayeti",
+      "aciklama": "Yukarıdaki kategorilere uymayan diğer sorunlar",
+      "ikon": "faEllipsisH",
+      "renk": "#3498db",
+      "formAlanlari": [
+        { "id": "sikayetKonu", "tip": "select", "label": "Konu", "zorunlu": true, "secenekler": ["Hizmet Kalitesi", "İletişim Sorunu", "Fiyatlandırma", "Teslimat", "Garanti", "Diğer"] },
+        { "id": "sikayetAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true, "placeholder": "Sorunu detaylı açıklayın" }
+      ]
+    }
+  ],
+  "kullaniciSikayetleri": [
+    {
+      "id": "olumsuz-davranis",
+      "adi": "Olumsuz Davranış",
+      "aciklama": "Kaba veya rahatsız edici davranış",
+      "ikon": "faFrown",
+      "renk": "#f39c12",
+      "formAlanlari": [
+        { "id": "davranisTuru", "tip": "select", "label": "Davranış Türü", "zorunlu": true, "secenekler": ["Kaba Davranış", "Tehdit", "Irkcılık", "Cinsel Taciz", "Diğer"] },
+        { "id": "davranisAciklamasi", "tip": "textarea", "label": "Ne Oldu?", "zorunlu": true, "placeholder": "Durumu açıklayın" }
+      ]
+    },
+    {
+      "id": "guvenlik-sorunu",
+      "adi": "Güvenlik Sorunu",
+      "aciklama": "Kişisel güvenlik veya tehdit",
+      "ikon": "faShieldAlt",
+      "renk": "#c0392b",
+      "formAlanlari": [
+        { "id": "tehditTuru", "tip": "select", "label": "Tehdit Türü", "zorunlu": true, "secenekler": ["Fiziksel Tehdit", "Siber Tehdit", "Dolandırıcılık", "Diğer"] },
+        { "id": "tehditAciklamasi", "tip": "textarea", "label": "Detay", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "dolandiricilik",
+      "adi": "Dolandırıcılık",
+      "aciklama": "Dolandırıcılık girişimi veya şüpheli faaliyet",
+      "ikon": "faExclamationTriangle",
+      "renk": "#e74c3c",
+      "formAlanlari": [
+        { "id": "dolandiricilikTuru", "tip": "select", "label": "Tür", "zorunlu": true, "secenekler": ["Ön Ödeme Dolandırıcılığı", "Sahte Ürün", "Kimlik Hırsızlığı", "Diğer"] },
+        { "id": "dolandiricilikAciklamasi", "tip": "textarea", "label": "Ne Oldu?", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "kullanici-spam",
+      "adi": "Spam / İstenmeyen İletişim",
+      "aciklama": "Rahatsız edici tekrarlayan iletişim",
+      "ikon": "faEnvelope",
+      "renk": "#7f8c8d",
+      "formAlanlari": [
+        { "id": "spamTuru", "tip": "select", "label": "Tür", "zorunlu": true, "secenekler": ["Toplu Mesaj", "Reklam", "Sahte Profil", "Diğer"] },
+        { "id": "spamAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true }
+      ]
+    },
+    {
+      "id": "kullanici-diger",
+      "adi": "Diğer Kullanıcı Şikayeti",
+      "aciklama": "Diğer şikayetler",
+      "ikon": "faEllipsisH",
+      "renk": "#3498db",
+      "formAlanlari": [
+        { "id": "sikayetKonu", "tip": "select", "label": "Konu", "zorunlu": true, "secenekler": ["İletişim Sorunu", "Güvenlik", "Dolandırıcılık", "Diğer"] },
+        { "id": "sikayetAciklamasi", "tip": "textarea", "label": "Açıklama", "zorunlu": true }
+      ]
+    }
+  ],
+  "durumDegerleri": [
+    { "id": "acik", "adi": "Açık", "renk": "#3498db" },
+    { "id": "inceleniyor", "adi": "İnceleniyor", "renk": "#f39c12" },
+    { "id": "beklemede", "adi": "Beklemede", "renk": "#9b59b6" },
+    { "id": "cozuldu", "adi": "Çözüldü", "renk": "#27ae60" },
+    { "id": "kapatildi", "adi": "Kapatıldı", "renk": "#7f8c8d" }
+  ]
+}

@@ -1,0 +1,47 @@
+/*
+  Tek kaynak: ilan kartı kutusu ve boşluklar.
+  Tarihsel olarak her bileşen kendi 207/213/25/16 değerini yazmıştı; hepsi buradan türetilir.
+  Değiştirmek için sadece bu dosyayı düzenleyin (layout.tsx ile tüm sitede yüklenir).
+
+  Masaüstü: aşağıdaki :root sabit kalır (768px üstü).
+  Mobil: aynı token isimleri küçülür — vitrin, slider, filtre, profil vb. otomatik uyum.
+*/
+:root {
+  --alz-listing-card-w: 200px;
+  --alz-listing-card-h: 300px;
+  --alz-listing-card-gap: 12px;
+  --alz-listing-card-gap-scroll: 10px;
+  /* Popüler Lokasyon çipi masaüstü genişlik */
+  --alz-popular-location-chip-w: 210px;
+  /* Kart çerçevesi (ProductCard, vitrin, lokasyon çipleri vb.) */
+  --alz-listing-card-border: 1px solid #cbd5e1;
+  --alz-listing-card-border-hover-color: #94a3b8;
+  --alz-listing-card-inner-border: #f3f4f6;
+}
+
+/* Mobil / tablet portre: kartlar masaüstünden küçük */
+@media (max-width: 768px) {
+  :root {
+    --alz-listing-card-w: 175px;
+    --alz-listing-card-h: 270px;
+    --alz-listing-card-gap: var(--alz-listing-card-gap-scroll);
+    /* Popüler Lokasyon çipi: uzun şehir isimleri sığsın diye genişletildi */
+    --alz-popular-location-chip-w: 190px;
+    --alz-popular-location-chip-min-h: 52px;
+    --alz-popular-location-chip-pad-y: 10px;
+    --alz-popular-location-chip-pad-x: 12px;
+    --alz-popular-location-chip-font: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --alz-listing-card-w: 162px;
+    --alz-listing-card-h: 268px;
+    --alz-popular-location-chip-w: 175px;
+    --alz-popular-location-chip-min-h: 48px;
+    --alz-popular-location-chip-pad-y: 9px;
+    --alz-popular-location-chip-pad-x: 11px;
+    --alz-popular-location-chip-font: 13px;
+  }
+}

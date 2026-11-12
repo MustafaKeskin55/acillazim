@@ -1,0 +1,134 @@
+.loader-container {
+  @apply flex flex-col items-center justify-center w-full fixed;
+  min-height: calc(100vh - 140px); /* navbar ve footer'ı çıkarıyoruz */
+  top: 70px; /* navbar yüksekliği */
+  left: 0;
+  right: 0;
+  bottom: 70px; /* footer yüksekliği */
+  background-color: #fff; /* veya istediğiniz arka plan rengi */
+  z-index: 1000;
+}
+
+.loader {
+  @apply relative flex items-center justify-center;
+  width: 200px;
+  height: 60px;
+}
+
+.loader-circle {
+  @apply absolute rounded-full;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 132, 0, 0.1);
+  border-top-color: #ff8400;
+  animation: spin 1s linear infinite;
+}
+
+.loader-circle::before {
+  @apply absolute rounded-full;
+  content: '';
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-top-color: #ff8400;
+  opacity: 0.6;
+  animation: spin 2s linear infinite;
+}
+
+.loader-content {
+  @apply flex items-center justify-center;
+  z-index: 2;
+}
+
+.loader-text-acil {
+  color: #0066cc;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+.loader-exclamation {
+  color: #ff8400;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 2px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-text-lazim {
+  color: #0066cc;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+.loader-text-com {
+  color: #0066cc;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.loader-status {
+  margin-top: 20px;
+  color: #0066cc;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.8;
+  animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Mobil cihazlar için responsive tasarım */
+@media (max-width: 768px) {
+  .loader {
+    width: 160px;
+    height: 50px;
+  }
+
+  .loader-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .loader-text-acil,
+  .loader-text-lazim {
+    font-size: 20px;
+  }
+
+  .loader-exclamation {
+    font-size: 24px;
+  }
+
+  .loader-text-com {
+    font-size: 16px;
+  }
+} 

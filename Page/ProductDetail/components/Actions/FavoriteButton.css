@@ -1,0 +1,51 @@
+/* FavoriteButton.css - Converted to Tailwind @apply */
+.product-detail-favorite-button {
+  @apply flex items-center cursor-pointer;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.product-detail-favorite-button i {
+  color: #ff5252;
+  font-size: 15px;
+  transition: transform 0.2s;
+}
+
+.product-detail-favorite-button:hover {
+  background-color: #e5e5e5;
+}
+
+.product-detail-favorite-button:hover i {
+  transform: scale(1.1);
+}
+
+.product-detail-favorite-button.active {
+  background-color: #fff5f5;
+  border-color: #ffcdd2;
+  color: #d32f2f;
+}
+
+.product-detail-favorite-button.active:hover {
+  background-color: #ffe8e8;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 576px) {
+  .product-detail-favorite-button span {
+    @apply hidden;
+  }
+  
+  .product-detail-favorite-button {
+    @apply p-2;
+  }
+  
+  .product-detail-favorite-button i {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,167 @@
+/* Login Modal - Tamamen bağımsız stil dosyası */
+.login-modal-overlay {
+  @apply fixed w-full h-full flex items-center justify-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Daha koyu arka plan */
+  z-index: 999999;
+}
+
+.login-modal {
+  @apply overflow-hidden relative border-0;
+  width: 90%;
+  max-width: 450px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modal-fade-in 0.3s ease;
+}
+
+.login-modal-header {
+  @apply flex justify-center items-center relative;
+  background: linear-gradient(135deg, #004d7f, #006cb5);
+  padding: 18px 20px;
+}
+
+.login-modal-header h3 {
+  @apply m-0 text-center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login-close-button {
+  @apply absolute border-0 cursor-pointer flex items-center justify-center rounded-full;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.2s ease;
+}
+
+.login-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login-modal-content {
+  @apply flex flex-col items-center text-center;
+  padding: 30px 25px;
+  background-color: #ffffff;
+}
+
+.login-icon-wrapper {
+  @apply rounded-full flex items-center justify-center;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  animation: icon-pulse 2s infinite;
+}
+
+.login-lock-icon {
+  font-size: 40px;
+}
+
+.login-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.login-modal-message {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 90%;
+}
+
+.login-modal-actions {
+  @apply flex justify-center w-full;
+  gap: 15px;
+}
+
+.login-modal-cancel {
+  @apply border-0 cursor-pointer;
+  background-color: #f0f0f0;
+  color: #444;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.login-modal-cancel:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.login-modal-submit {
+  @apply border-0 cursor-pointer;
+  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  color: white;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2);
+  min-width: 120px;
+}
+
+.login-modal-submit:hover {
+  background: linear-gradient(135deg, #e56200, #ff7a20);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes icon-pulse {
+  0% {
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 5px 25px rgba(255, 107, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+}
+
+/* Mobil uyumlu düzenlemeler */
+@media (max-width: 576px) {
+  .login-modal {
+    width: 95%;
+  }
+  
+  .login-modal-actions {
+    @apply flex-col;
+  }
+  
+  .login-modal-cancel,
+  .login-modal-submit {
+    @apply w-full;
+    min-width: auto;
+  }
+} 

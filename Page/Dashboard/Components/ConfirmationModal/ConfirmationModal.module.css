@@ -1,0 +1,102 @@
+.confirmationModalOverlay {
+  @apply fixed flex justify-center items-center;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(6px);
+  padding: 16px;
+  z-index: 1000;
+  animation: confirmFadeIn 0.2s ease;
+}
+
+@keyframes confirmFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirmationModalContent {
+  @apply w-full overflow-hidden;
+  background-color: #ffffff;
+  border-radius: 20px;
+  max-width: 400px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 24px 48px -12px rgba(15, 23, 42, 0.24),
+    0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.confirmationModalHeader {
+  @apply text-center relative;
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  color: #ffffff;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.confirmationModalHeader::after {
+  @apply absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff7a00 0%, #ea580c 100%);
+}
+
+.confirmationModalBody {
+  @apply text-center;
+  padding: 26px 22px;
+}
+
+.confirmationModalText {
+  @apply m-0;
+  color: #334155;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.confirmationModalButtons {
+  @apply flex;
+  padding: 0 20px 20px;
+  gap: 12px;
+}
+
+.baseButton {
+  @apply flex-1 cursor-pointer;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cancelButton {
+  background-color: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+}
+
+.cancelButton:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.confirmButton {
+  @apply border-0;
+  background: linear-gradient(135deg, #ff7a00 0%, #ea580c 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px -4px rgba(234, 88, 12, 0.36);
+}
+
+.confirmButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px -4px rgba(234, 88, 12, 0.46);
+}

@@ -1,0 +1,182 @@
+/* PreviewPage.css - Ana router için stiller */
+
+.preview-page {
+  @apply w-full;
+  min-height: 100vh;
+}
+
+/* Loading durumu */
+.preview-loading {
+  @apply flex items-center justify-center;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.preview-loading-content {
+  @apply text-center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.preview-loading-spinner {
+  @apply rounded-full;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e9ecef;
+  border-top: 4px solid #3498db;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.preview-loading-content h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.preview-loading-content p {
+  @apply m-0;
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Hata durumu */
+.preview-error {
+  @apply flex items-center justify-center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 2rem;
+}
+
+.preview-error-content {
+  @apply text-center w-full;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.preview-error-icon {
+  @apply rounded-full flex items-center justify-center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+}
+
+.preview-error-content h2 {
+  color: #2c3e50;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.preview-error-content p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.preview-error-actions {
+  @apply flex justify-center flex-wrap;
+  gap: 1rem;
+}
+
+.preview-error-btn {
+  @apply flex items-center border-0 cursor-pointer no-underline justify-center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.preview-error-btn.primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.preview-error-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.preview-error-btn.secondary {
+  background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+  color: white;
+  box-shadow: 0 4px 12px rgba(149, 165, 166, 0.3);
+}
+
+.preview-error-btn.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(149, 165, 166, 0.4);
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .preview-loading-content,
+  .preview-error-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .preview-error-actions {
+
+    @apply flex-col items-center;
+  }
+  
+  .preview-error-btn {
+    @apply w-full;
+    max-width: 200px;
+  }
+  
+  .preview-loading-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .preview-error-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .preview-error-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-loading,
+  .preview-error {
+    padding: 1rem;
+  }
+  
+  .preview-loading-content,
+  .preview-error-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .preview-error-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+

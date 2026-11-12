@@ -1,0 +1,380 @@
+/* ==========================================================================
+   ComplaintDetailModal.css
+   Kullanıcı Şikayet Detayı & Destek Mesajlaşma Penceresi
+   ========================================================================== */
+
+.cdm-overlay {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.cdm-backdrop {
+  @apply absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.cdm-dialog {
+  @apply relative w-full flex flex-col overflow-hidden;
+  background: #ffffff;
+  border-radius: 22px;
+  max-width: 680px;
+  max-height: 88vh;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  animation: cdmPopIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cdmPopIn {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── ÜST BAŞLIK ── */
+.cdm-header {
+  @apply flex items-start justify-between;
+  padding: 1.5rem 1.75rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 1rem;
+  background: #fbfcfe;
+}
+
+.cdm-header-left {
+  @apply flex flex-col;
+  gap: 6px;
+}
+
+.cdm-status-pill {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+}
+
+.cdm-status-icon {
+  font-size: 11px;
+}
+
+.cdm-id-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.cdm-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 2px 0 0;
+  line-height: 1.3;
+}
+
+.cdm-close-btn {
+  @apply border-0 rounded-full flex items-center justify-center cursor-pointer flex-shrink-0;
+  background: #f1f5f9;
+  width: 34px;
+  height: 34px;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.cdm-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* ── GÖVDE ── */
+.cdm-body {
+  @apply overflow-y-auto flex flex-col;
+  padding: 1.5rem 1.75rem;
+  gap: 1.25rem;
+}
+
+/* Şikayet Özeti */
+.cdm-summary-card {
+  @apply flex flex-col;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  gap: 0.5rem;
+}
+
+.cdm-summary-row {
+  @apply flex items-center;
+  gap: 8px;
+  font-size: 0.88rem;
+}
+
+.cdm-summary-label {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.84rem;
+}
+
+.cdm-summary-val {
+  color: #0f172a;
+}
+
+.cdm-summary-desc-box {
+  margin-top: 0.35rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.cdm-summary-desc {
+  @apply m-0;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.cdm-evidence-strip {
+  @apply flex items-center flex-wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cdm-evidence-list {
+  @apply flex flex-wrap;
+  gap: 6px;
+}
+
+.cdm-evidence-link {
+  @apply inline-flex items-center no-underline;
+  gap: 4px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0284c7;
+}
+
+.cdm-evidence-link:hover {
+  background: #f1f5f9;
+  border-color: #0284c7;
+}
+
+/* ── MESAJLAŞMA BÖLÜMÜ ── */
+.cdm-chat-section {
+  @apply flex flex-col;
+  gap: 0.75rem;
+}
+
+.cdm-chat-title-row {
+
+  @apply flex items-center justify-between;
+}
+
+.cdm-chat-title {
+  @apply m-0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cdm-msg-count-tag {
+  background: rgba(249, 115, 22, 0.1);
+  color: #ea580c;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.cdm-messages-container {
+  @apply overflow-y-auto flex flex-col;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem;
+  min-height: 180px;
+  max-height: 280px;
+  gap: 12px;
+}
+
+.cdm-loading-box,
+.cdm-empty-messages {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 2.5rem 1rem;
+  color: #64748b;
+  margin: auto;
+}
+
+.cdm-empty-icon {
+  font-size: 32px;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.cdm-empty-messages h4 {
+  margin: 0 0 4px;
+  font-size: 0.96rem;
+  color: #334155;
+}
+
+.cdm-empty-messages p {
+  @apply m-0;
+  font-size: 0.82rem;
+  max-width: 380px;
+}
+
+/* Mesaj Balonları */
+.cdm-message-bubble {
+  @apply flex flex-col;
+  max-width: 82%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  gap: 4px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.cdm-message-bubble--support {
+  align-self: flex-start;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 3.5px solid #10b981;
+}
+
+.cdm-message-bubble--mine {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #003466 0%, #002244 100%);
+  color: #ffffff;
+}
+
+.cdm-message-meta {
+  @apply flex items-center justify-between;
+  gap: 12px;
+  font-size: 11px;
+}
+
+.cdm-message-bubble--support .cdm-sender-badge {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cdm-message-bubble--mine .cdm-sender-badge {
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.cdm-message-time {
+  color: #94a3b8;
+  font-size: 10.5px;
+}
+
+.cdm-message-bubble--mine .cdm-message-time {
+  color: #94a3b8;
+}
+
+.cdm-message-text {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.cdm-message-bubble--support .cdm-message-text {
+  color: #1e293b;
+}
+
+.cdm-message-bubble--mine .cdm-message-text {
+  color: #ffffff;
+}
+
+/* Çözüldü Uyarısı */
+.cdm-resolved-notice {
+  @apply flex items-center;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  gap: 10px;
+}
+
+/* Yanıt Yazma Formu */
+.cdm-reply-form {
+  @apply flex items-end;
+  gap: 8px;
+}
+
+.cdm-reply-textarea {
+  @apply flex-1 outline-none box-border;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cdm-reply-textarea:focus {
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.1);
+}
+
+.cdm-send-btn {
+  @apply border-0 cursor-pointer inline-flex items-center;
+  background: #003466;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 11px 18px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 6px;
+  transition: all 0.2s;
+  height: 44px;
+}
+
+.cdm-send-btn:hover:not(:disabled) {
+  background: #002244;
+  transform: translateY(-1px);
+}
+
+.cdm-send-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.55;
+}
+
+.cdm-spinner {
+  animation: cdmSpin 0.75s linear infinite;
+}
+
+@keyframes cdmSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cdm-error-alert {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+}
+

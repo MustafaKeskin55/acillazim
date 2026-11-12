@@ -1,0 +1,175 @@
+/* progress.css içeriğini buraya kopyalayın, değişiklik gerekmez */ 
+.progress-container {
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.progress-steps {
+    @apply flex justify-between items-center relative w-full;
+    max-width: 100%;
+    z-index: 1;
+    --progress-width: 33.33%;
+}
+
+/* Base line (gray) */
+.progress-steps::before {
+    @apply absolute w-full;
+    content: '';
+    top: 17px;
+    left: 0;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 0;
+}
+
+/* Progress line (green) */
+.progress-steps::after {
+    @apply absolute;
+    content: '';
+    top: 17px;
+    left: 0;
+    width: var(--progress-width);
+    height: 2px;
+    background: #00a651;
+    z-index: 0;
+    transition: width 0.3s ease;
+}
+
+.step {
+    @apply flex flex-col items-center relative text-center cursor-pointer;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px;
+    margin: -10px;
+}
+
+.step-circle {
+    @apply rounded-full flex items-center justify-center relative;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    font-weight: 500;
+    color: #757575;
+    margin-bottom: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.step-text {
+    @apply relative;
+    font-size: 14px;
+    color: #757575;
+    margin-top: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active state */
+.step.active .step-circle {
+    background: #fff;
+    border-color: #00a651;
+    color: #00a651;
+    box-shadow: 0 0 0 4px rgba(0, 166, 81, 0.1);
+}
+
+.step.active .step-text {
+    color: #00a651;
+    font-weight: 500;
+}
+
+/* Completed state */
+.step.completed .step-circle {
+    background: #00a651;
+    border-color: #00a651;
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 166, 81, 0.1);
+}
+
+.step.completed .step-text {
+    color: #00a651;
+}
+
+/* Hover effects for completed and active steps */
+.step.completed:hover,
+.step.active:hover {
+    transform: translateY(-5px);
+}
+
+.step.completed:hover .step-circle,
+.step.active:hover .step-circle {
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0, 166, 81, 0.3);
+}
+
+.step.completed:hover .step-text,
+.step.active:hover .step-text {
+    transform: scale(1.05);
+    font-weight: 600;
+}
+
+/* Hover effects for completed steps */
+.step.completed:hover .step-circle::after {
+    @apply absolute rounded-full;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 166, 81, 0.1);
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+    z-index: -1;
+}
+
+/* Hover effect for future steps */
+.step:not(.completed):not(.active):hover .step-circle {
+    border-color: #b4b4b4;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step:not(.completed):not(.active):hover .step-text {
+    color: #555;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .step-text {
+        font-size: 12px;
+    }
+
+    .step-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .progress-steps::before,
+    .progress-steps::after {
+        top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-text { 
+        @apply hidden;
+    }
+
+    .progress-container {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+}

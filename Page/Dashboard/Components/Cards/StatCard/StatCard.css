@@ -1,0 +1,87 @@
+.stat-card {
+  @apply flex items-start relative overflow-hidden;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  gap: 20px;
+}
+
+.stat-card::before {
+  @apply absolute rounded-full;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: currentColor;
+  opacity: 0.03;
+  transform: translate(30%, -30%);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .stat-icon {
+  @apply flex items-center justify-center;
+  font-size: 24px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+}
+
+.stat-card .stat-content {
+
+  @apply flex-1;
+}
+
+.stat-card h3 {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.stat-card .stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.stat-card .stat-percentage {
+  @apply flex items-center;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 4px;
+}
+
+.stat-card .stat-percentage.increase {
+  color: #4CAF50;
+}
+
+.stat-card .stat-percentage.decrease {
+  color: #f44336;
+}
+
+.stat-card .trend-arrow {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-card .stat-icon {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .stat-card .stat-value {
+    font-size: 20px;
+  }
+} 

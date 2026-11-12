@@ -1,0 +1,392 @@
+/* SharedFavorites.module.css - Kurumsal ve Modern Tasarım */
+
+.container {
+  @apply box-border;
+  min-height: 85vh;
+  background-color: #f8fafc;
+  padding: 1rem 1.25rem 4rem;
+}
+
+.inner {
+  @apply mx-auto w-full box-border;
+  max-width: 1240px;
+}
+
+/* ── Kurumsal Liste Başlık Kartı ── */
+.headerCard {
+  @apply relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+  margin-bottom: 2rem;
+  border-top: 3px solid #003466;
+}
+
+.headerContent {
+  @apply flex flex-col justify-between;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .headerContent {
+
+    @apply flex-row items-center;
+  }
+}
+
+.headerMain {
+  @apply flex flex-col;
+  gap: 0.35rem;
+}
+
+.badge {
+  @apply inline-flex items-center uppercase;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #003466;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  width: fit-content;
+  margin-bottom: 0.25rem;
+}
+
+.badgeIcon {
+  color: #ea580c;
+  font-size: 0.85rem;
+}
+
+.title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0.25rem 0 0.65rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.metaRow {
+  @apply flex flex-wrap items-center;
+  gap: 0.75rem;
+  color: #64748b;
+  font-size: 0.86rem;
+}
+
+.metaItem {
+  @apply inline-flex items-center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 4px 11px;
+}
+
+.metaIcon {
+  color: #003466;
+  font-size: 0.85rem;
+}
+
+.metaStrong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* ── Aksiyon Butonları ── */
+.actionBtns {
+  @apply flex flex-wrap items-center;
+  gap: 0.75rem;
+}
+
+.shareBtn {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: #25d366;
+  color: #ffffff;
+  border: 1px solid #16a34a;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.2);
+}
+
+.shareBtn:hover {
+  background: #1eb956;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.copyBtn {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: #ffffff;
+  color: #003466;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.copyBtn:hover {
+  background: #003466;
+  color: #ffffff;
+  border-color: #003466;
+  transform: translateY(-1px);
+}
+
+.copyBtnSuccess {
+  background: #f0fdf4 !important;
+  color: #16a34a !important;
+  border-color: #86efac !important;
+}
+
+/* ── İlanlar Başlık Alanı ── */
+.gridHeader {
+  @apply flex items-center justify-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.gridTitleArea {
+  @apply flex items-center;
+  gap: 0.65rem;
+}
+
+.gridTitle {
+  @apply m-0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.itemCountBadge {
+  background: #eff6ff;
+  color: #003466;
+  border: 1px solid #dbeafe;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.gridSubtitle {
+  font-size: 0.84rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ── İlan Kartları Izgarası (Ayrık Olma Sorunu Çözüldü) ── */
+.listingsGrid {
+  @apply justify-start w-full box-border;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w, 200px));
+  gap: var(--alz-listing-card-gap, 16px);
+  align-items: start;
+}
+
+.listingsGrid :global(.prodcard-wrapper) {
+
+  @apply m-0;
+}
+
+/* ── Yükleniyor Durumu ── */
+.loadingContainer {
+  @apply flex flex-col items-center justify-center;
+  min-height: 50vh;
+  gap: 1.25rem;
+  color: #003466;
+}
+
+.pulseIcon {
+  @apply rounded-full flex items-center justify-center;
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #003466;
+  font-size: 1.75rem;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.85; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.85; }
+}
+
+.loadingText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ── Hata / Bulunamadı Durumu ── */
+.errorCard {
+  @apply text-center;
+  max-width: 540px;
+  margin: 4rem auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 30px -10px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.errorIconWrap {
+  @apply rounded-full flex items-center justify-center;
+  width: 72px;
+  height: 72px;
+  background: #fff1f2;
+  color: #e11d48;
+  font-size: 2.25rem;
+  margin: 0 auto 1.25rem;
+}
+
+.errorTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.errorDesc {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.actionBtnPrimary {
+  @apply inline-flex items-center justify-center no-underline;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #003466;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 52, 102, 0.2);
+}
+
+.actionBtnPrimary:hover {
+  background: #002244;
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+/* ── Boş Liste Durumu ── */
+.emptyCard {
+  @apply text-center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3.5rem 2rem;
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+}
+
+.emptyIcon {
+  font-size: 2.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.emptyCard h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.emptyCard p {
+  @apply m-0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ── Mobil Uyumluluk ── */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--breadcrumb-gap-mobile, 12px) 0.85rem 3rem;
+  }
+
+  .headerCard {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+    margin-bottom: 1.35rem;
+  }
+
+  .headerContent {
+    @apply flex-col items-stretch;
+    gap: 1.15rem;
+  }
+
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .metaRow {
+    gap: 0.45rem;
+  }
+
+  .metaItem {
+    font-size: 0.78rem;
+    padding: 3px 8px;
+  }
+
+  .actionBtns {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .shareBtn,
+  .copyBtn {
+    @apply w-full justify-center;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.82rem;
+  }
+
+  .gridHeader {
+    @apply flex-col items-start;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .gridSubtitle {
+
+    @apply hidden;
+  }
+
+  /* Mobilde 2 ilan yan yana ve tam genişlik */
+  .listingsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .listingsGrid :global(.prodcard-wrapper),
+  .listingsGrid :global(.prodcard-container) {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .actionBtns {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,106 @@
+/* ListingBadge Ana Stilleri */
+.listing-badge {
+  @apply inline-flex items-center justify-center;
+  font-weight: 600;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-transform: none;
+  letter-spacing: 0px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Kart variyasyonu (ProductCard için) */
+.listing-badge-card {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* Galeri variyasyonu (ProductGallery için) */
+.listing-badge-gallery {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* ProductCard ile uyumlu renk temaları */
+.listing-badge-urgent,
+.listing-badge-acil {
+  background: linear-gradient(135deg, #d80027, #ff3b3b);
+}
+
+.listing-badge-new,
+.listing-badge-yeni {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.listing-badge-featured,
+.listing-badge-jet {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+/* Diğer ilan tipleri için özel renkler */
+.listing-badge-kiralık,
+.listing-badge-kiralik {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.listing-badge-satılık,
+.listing-badge-satilik {
+  background: linear-gradient(135deg, #ff5722, #ff7043);
+}
+
+.listing-badge-günlük,
+.listing-badge-gunluk,
+.listing-badge-günlük-kiralık,
+.listing-badge-gunluk-kiralik {
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+.listing-badge-eşyalı,
+.listing-badge-esyali {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+}
+
+.listing-badge-öne-çıkan,
+.listing-badge-one-cikan {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.listing-badge-indirimli {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+/* Varsayılan renk (diğer türler için) */
+.listing-badge-default {
+  background: linear-gradient(135deg, #607d8b, #90a4ae);
+}
+
+/* Yanyana badge'ler için stil */
+.listing-badge + .listing-badge {
+  margin-left: 4px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .listing-badge-gallery {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .listing-badge-card {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-badge-gallery {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+  
+  .listing-badge-card {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+} 

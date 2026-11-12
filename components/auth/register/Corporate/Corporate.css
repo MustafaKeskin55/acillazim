@@ -1,0 +1,515 @@
+/* ==========================================================================
+   ACİLLAZIM — KURUMSAL ÜYELİK (2026 KURUMSAL TASARIM SİSTEMİ)
+   ========================================================================== */
+
+.corporate-register {
+  @apply flex items-center justify-center;
+  min-height: calc(100vh - 110px);
+  padding: 52px 24px 72px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(circle at 86% 14%, rgba(255, 122, 0, 0.065) 0%, transparent 45%),
+    radial-gradient(circle at 14% 86%, rgba(0, 75, 135, 0.055) 0%, transparent 45%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.corporate-register .register-container {
+  @apply relative w-full;
+  max-width: 740px;
+  background: linear-gradient(180deg, rgba(255, 122, 0, 0.045) 0%, #ffffff 22%);
+  border: 1.5px solid rgba(255, 122, 0, 0.22);
+  border-radius: 28px;
+  padding: 44px 44px 40px;
+  box-shadow:
+    0 24px 56px -14px rgba(15, 23, 42, 0.11),
+    0 10px 24px -8px rgba(255, 122, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+/* Header */
+.corporate-register .register-header {
+  @apply text-center;
+  margin-bottom: 32px;
+}
+
+.corporate-register .register-header-top {
+  @apply flex items-center justify-center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.corporate-register .register-icon-squircle {
+  @apply flex items-center justify-center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ff7a00 0%, #ff5500 100%);
+  color: #ffffff;
+  box-shadow:
+    0 10px 22px -6px rgba(255, 122, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.32);
+}
+
+.corporate-register .register-icon-squircle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.corporate-register .register-badge {
+  @apply inline-flex items-center uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(255, 122, 0, 0.1);
+  color: #d95f00;
+  border: 1px solid rgba(255, 122, 0, 0.24);
+}
+
+.corporate-register .register-header h1 {
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.corporate-register .register-header .accent-text {
+  color: #ff7a00;
+  font-weight: 800;
+}
+
+.corporate-register .register-header p {
+  @apply m-0;
+  color: #64748b;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Form Sections */
+.corporate-register .register-form {
+  @apply flex flex-col;
+  gap: 22px;
+}
+
+.corporate-register .form-section-block {
+  @apply flex flex-col;
+  background: rgba(248, 250, 252, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  gap: 16px;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.corporate-register .form-section-block:focus-within {
+  background: #ffffff;
+  border-color: rgba(255, 122, 0, 0.32);
+  box-shadow: 0 10px 26px -10px rgba(255, 122, 0, 0.1);
+}
+
+.corporate-register .form-section-title {
+  @apply flex items-center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.corporate-register .section-step {
+  @apply inline-flex items-center justify-center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7a00 0%, #ff5500 100%);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 10px -2px rgba(255, 122, 0, 0.34);
+}
+
+/* Grid & Field Groups */
+.corporate-register .input-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+.corporate-register .input-field {
+  @apply relative w-full flex flex-col;
+  margin-bottom: 0;
+  gap: 6px;
+}
+
+.corporate-register .field-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: -0.01em;
+  margin-left: 2px;
+}
+
+.corporate-register .input-field input,
+.corporate-register .input-field select,
+.corporate-register .input-field textarea {
+  @apply w-full box-border;
+  height: 48px;
+  padding: 0 15px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: inherit;
+}
+
+.corporate-register .input-field textarea {
+  height: auto;
+  min-height: 92px;
+  padding: 12px 15px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.corporate-register .input-field input::placeholder,
+.corporate-register .input-field textarea::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.corporate-register .input-field input:hover,
+.corporate-register .input-field select:hover:not(:disabled),
+.corporate-register .input-field textarea:hover {
+  border-color: #94a3b8;
+}
+
+.corporate-register .input-field input:focus,
+.corporate-register .input-field select:focus,
+.corporate-register .input-field textarea:focus {
+  @apply outline-none;
+  border-color: #004B87;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(0, 75, 135, 0.11);
+}
+
+/* Select Dropdown */
+.corporate-register .select-field select {
+  @apply cursor-pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004B87' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}
+
+.corporate-register .select-field select:disabled {
+  @apply cursor-not-allowed;
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+}
+
+/* Password Field */
+.corporate-register .password-input-wrap {
+
+  @apply relative flex items-center w-full;
+}
+
+.corporate-register .password-input-wrap input {
+  padding-right: 84px;
+}
+
+.corporate-register .corporate-toggle-password {
+  @apply absolute cursor-pointer select-none;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 75, 135, 0.07);
+  border-radius: 8px;
+  color: #004B87;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+}
+
+.corporate-register .corporate-toggle-password:hover {
+  background: rgba(0, 75, 135, 0.14);
+  color: #00335c;
+}
+
+.corporate-register .corporate-password-match-icon {
+  @apply absolute pointer-events-none;
+  right: 68px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.corporate-register .corporate-password-match-icon.match {
+  color: #10b981;
+}
+
+.corporate-register .corporate-password-match-icon.mismatch {
+  color: #ef4444;
+}
+
+/* Password Strength Feedback */
+.corporate-register .corporate-password-feedback {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px -6px rgba(15, 23, 42, 0.06);
+  margin-top: 2px;
+}
+
+.corporate-register .corporate-password-strength {
+  @apply flex items-center justify-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.corporate-register .corporate-strength-bars {
+  @apply flex flex-1;
+  gap: 6px;
+}
+
+.corporate-register .corporate-strength-bar {
+  @apply flex-1;
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.corporate-register .corporate-strength-bar.level-1 { background: #ef4444; }
+.corporate-register .corporate-strength-bar.level-2 { background: #f59e0b; }
+.corporate-register .corporate-strength-bar.level-3 { background: #10b981; }
+.corporate-register .corporate-strength-bar.level-4 { background: #059669; }
+
+.corporate-register .corporate-strength-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.corporate-register .corporate-password-rules h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin: 0 0 8px 0;
+}
+
+.corporate-register .corporate-password-rules ul {
+  @apply p-0 m-0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.corporate-register .corporate-password-rules li {
+  @apply flex items-center;
+  font-size: 12px;
+  color: #64748b;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.corporate-register .corporate-password-rules li::before {
+  content: "•";
+  color: #cbd5e1;
+  font-weight: bold;
+}
+
+.corporate-register .corporate-password-rules li.valid {
+  color: #059669;
+  font-weight: 600;
+}
+
+.corporate-register .corporate-password-rules li.valid::before {
+  content: "✓";
+  color: #10b981;
+}
+
+/* Field Errors */
+.corporate-register .input-field input.error,
+.corporate-register .input-field textarea.error {
+  border-color: #ef4444;
+  background-color: #fffafa;
+}
+
+.corporate-register .error-message,
+.corporate-register .phone-error,
+.corporate-register .tckn-error {
+  @apply flex items-center;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+/* Terms Box (Separate Items) */
+.corporate-register .terms-container {
+  @apply flex flex-col m-0;
+  gap: 10px;
+}
+
+.corporate-register .checkbox-container {
+  @apply flex items-center cursor-pointer m-0;
+  gap: 12px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 13px;
+  padding: 13px 16px;
+  transition: all 0.2s ease;
+}
+
+.corporate-register .checkbox-container:hover {
+  background: #ffffff;
+  border-color: rgba(255, 122, 0, 0.35);
+}
+
+.corporate-register .checkbox-container input[type="checkbox"] {
+  @apply m-0 cursor-pointer flex-shrink-0;
+  width: 18px;
+  height: 18px;
+  accent-color: #ff7a00;
+}
+
+.corporate-register .terms-text {
+  @apply cursor-pointer;
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.corporate-register .contract-link {
+  @apply underline;
+  color: #004B87;
+  font-weight: 700;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.corporate-register .contract-link:hover {
+  color: #ff7a00;
+}
+
+/* reCAPTCHA */
+.corporate-register .recaptcha-container {
+  @apply flex justify-center;
+  margin: 2px 0;
+}
+
+/* Actions Row & Login Link */
+.corporate-register .register-actions-row {
+  @apply items-center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.corporate-register .login-link {
+  @apply w-full flex items-center justify-center box-border m-0 no-underline;
+  height: 48px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  padding: 0 18px;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.22s ease;
+}
+
+.corporate-register .login-link span {
+  @apply inline-flex items-center;
+  color: #004B87;
+  font-weight: 700;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.corporate-register .login-link:hover {
+  background: #ffffff;
+  border-color: rgba(255, 122, 0, 0.35);
+  box-shadow: 0 6px 16px -6px rgba(15, 23, 42, 0.08);
+}
+
+.corporate-register .login-link:hover span {
+  color: #ff7a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .corporate-register {
+    padding: 28px 16px 48px;
+  }
+
+  .corporate-register .register-container {
+    padding: 28px 20px 26px;
+    border-radius: 22px;
+  }
+
+  .corporate-register .register-header h1 {
+    font-size: 23px;
+  }
+
+  .corporate-register .form-section-block {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .corporate-register .input-group,
+  .corporate-register .register-actions-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .corporate-register .corporate-password-rules ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .corporate-register {
+    padding: 18px 12px 36px;
+  }
+
+  .corporate-register .register-container {
+    padding: 24px 16px 22px;
+    border-radius: 20px;
+  }
+
+  .corporate-register .register-header h1 {
+    font-size: 21px;
+  }
+
+  .corporate-register .register-header p {
+    font-size: 13.5px;
+  }
+
+  .corporate-register .recaptcha-container {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+}

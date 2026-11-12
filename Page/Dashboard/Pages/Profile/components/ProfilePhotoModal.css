@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Profil ve Kapak Görseli Yükleme Modalı (AcilLazım Tasarım Sistemi)
+   - Kurumsal Lacivert: #003466
+   - Canlı Turuncu: #FF6B00
+   ========================================================================== */
+
+.ppm-overlay {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 52, 102, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 1.25rem;
+  animation: ppmFadeIn 0.2s ease-out;
+}
+
+@keyframes ppmFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ppm-modal {
+  @apply relative w-full flex flex-col overflow-hidden;
+  max-width: 640px;
+  max-height: 92vh;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 24px 60px -12px rgba(0, 52, 102, 0.22),
+    0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  font-family: inherit;
+  animation: ppmSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ppmSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- Modal Başlık ---------- */
+.ppm-header {
+  @apply flex items-start justify-between;
+  padding: 1.35rem 1.6rem 1.15rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.ppm-header-title-group {
+  @apply flex items-center;
+  gap: 0.85rem;
+}
+
+.ppm-header-icon-badge {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  color: #003466;
+  font-size: 1.15rem;
+}
+
+.ppm-header h2 {
+  @apply m-0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #003466;
+  letter-spacing: -0.015em;
+}
+
+.ppm-header p {
+  margin: 0.15rem 0 0 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ppm-close-btn {
+  @apply border-0 flex items-center justify-center cursor-pointer;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+
+.ppm-close-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ---------- Modal Gövde (Scrollable) ---------- */
+.ppm-body {
+  @apply overflow-y-auto flex flex-col;
+  padding: 1.25rem 1.6rem 1.4rem;
+  gap: 1.15rem;
+}
+
+/* ---------- Yükleme Kartları ---------- */
+.ppm-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.15rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ppm-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.ppm-card.has-error {
+  border-color: #fca5a5;
+  background: #fffafa;
+}
+
+.ppm-card-header {
+  @apply flex items-center justify-between;
+  margin-bottom: 0.9rem;
+}
+
+.ppm-card-title {
+  @apply flex items-center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.ppm-card-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.ppm-card.has-error .ppm-card-pill {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+/* Profil Önizleme Düzeni */
+.ppm-avatar-layout {
+  @apply flex items-center;
+  gap: 1.15rem;
+}
+
+.ppm-avatar-preview {
+  @apply relative rounded-full overflow-hidden flex items-center justify-center flex-shrink-0;
+  width: 90px;
+  height: 90px;
+  border: 3px solid #e2e8f0;
+  background: #f8fafc;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.ppm-avatar-preview img {
+  @apply w-full h-full object-cover;
+}
+
+.ppm-avatar-placeholder {
+  color: #94a3b8;
+  font-size: 2rem;
+}
+
+/* Kapak Önizleme Düzeni */
+.ppm-cover-layout {
+  @apply flex flex-col;
+  gap: 0.75rem;
+}
+
+.ppm-cover-preview {
+  @apply relative w-full overflow-hidden flex items-center justify-center;
+  height: 130px;
+  border-radius: 10px;
+  border: 2px dashed #cbd5e1;
+  background: #f8fafc;
+}
+
+.ppm-cover-preview.has-image {
+  border-style: solid;
+  border-color: #e2e8f0;
+}
+
+.ppm-cover-preview img {
+  @apply w-full h-full object-cover;
+}
+
+.ppm-cover-placeholder {
+  @apply flex flex-col items-center;
+  gap: 0.35rem;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Yükleme Butonu ve Dosya Bilgisi */
+.ppm-file-info {
+  @apply flex-1 flex flex-col;
+  gap: 0.35rem;
+}
+
+.ppm-upload-trigger-btn {
+  @apply inline-flex items-center justify-center cursor-pointer;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #003466;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.ppm-upload-trigger-btn:hover {
+  background: #f0f7ff;
+  border-color: #003466;
+  color: #003466;
+}
+
+.ppm-file-meta-text {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ppm-file-meta-text.success {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.ppm-file-meta-text.error {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ---------- Güvenlik Dipnotu (Security Pill) ---------- */
+.ppm-security-note {
+  @apply flex items-center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.95rem;
+  background: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  color: #003466;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.ppm-security-note svg {
+  @apply flex-shrink-0;
+  font-size: 0.95rem;
+  color: #003466;
+}
+
+/* ---------- Modal Alt Bilgi ve Butonlar ---------- */
+.ppm-footer {
+  @apply flex items-center justify-end;
+  padding: 1.1rem 1.6rem;
+  border-top: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.ppm-actions {
+  @apply flex items-center;
+  gap: 0.75rem;
+}
+
+.ppm-cancel-btn {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  height: 42px;
+  padding: 0 1.25rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.ppm-cancel-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Primary Action Button: AcilLazım Canlı Turuncu (#FF6B00) */
+.ppm-submit-btn {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  gap: 0.5rem;
+  height: 42px;
+  padding: 0 1.4rem;
+  background: #FF6B00;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.26);
+}
+
+.ppm-submit-btn svg {
+  flex-shrink: 0;
+}
+
+.ppm-submit-btn:hover:not(:disabled) {
+  background: #e05e00;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 107, 0, 0.36);
+}
+
+.ppm-submit-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+  background: #cbd5e1;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ---------- Responsive Uyumluluk ---------- */
+@media (max-width: 640px) {
+  .ppm-modal {
+    max-height: 96vh;
+    border-radius: 14px;
+  }
+
+  .ppm-header {
+    padding: 1.1rem 1rem 0.9rem;
+  }
+
+  .ppm-body {
+    padding: 1rem;
+    gap: 0.9rem;
+  }
+
+  .ppm-avatar-layout {
+    @apply flex-col text-center;
+    gap: 0.75rem;
+  }
+
+  .ppm-upload-trigger-btn {
+    @apply w-full;
+  }
+
+  .ppm-footer {
+    @apply items-stretch;
+    padding: 1rem;
+  }
+
+  .ppm-actions {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+
+  .ppm-cancel-btn,
+  .ppm-submit-btn {
+    height: 40px;
+    padding: 0 0.75rem;
+    font-size: 0.85rem;
+  }
+}

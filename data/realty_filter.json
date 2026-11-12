@@ -1,0 +1,1275 @@
+[
+  {
+    "id": 1,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Oda Sayısı",
+      "type": "multi-select",
+      "db_field": "number_of_rooms",
+      "display_location": "default",
+      "options": [
+        "1+0","1+1","1.5+1","2+0","2+1","2+1.5","2+2","2.5+1","2.5+2",
+        "3+0","3+1","3+1.5","3+2","3+3","3.5+1","3.5+2","3.5+3",
+        "4+0","4+1","4+1.5","4+2","4+3","4+4","4.5+1","4.5+2","4.5+3",
+        "5+0","5+1","5+1.5","5+2","5+3","5+4","5+5","5.5+1","5.5+2","5.5+3",
+        "6+0","6+1","6+1.5","6+2","6+3","6+4","6+5","6.5+1","6.5+2","6.5+3",
+        "7+0","7+1","7+1.5","7+2","7+3","7+4","7+5","7.5+1","7.5+2","7.5+3","8 ve üzeri"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,37, 38, 39, 40, 41, 42, 43, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 
+      58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 
+       96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 116],
+    "options": {
+      "priority": true,
+      "label": "Bina Yaşı",
+      "type": "multi-select",
+      "db_field": "building_age",
+      "display_location": "default",
+      "options": ["0", "1", "2", "3", "4", "5-10", "11-15", "16-20","21 ve üzeri"]
+    }
+  },
+  {
+    "id": 3,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,37, 39, 40, 46, 49, 56, 62, 63, 69, 72, 
+      75, 76, 78, 79, 80, 81, 82, 83, 85, 86, 90, 94, 96, 97, 98, 100, 104, 105, 109, 111, 113, 114, 116],
+    "options": {
+      "priority": true,
+      "label": "Kat Sayısı",
+      "type": "multi-select",
+      "db_field": "building_floors",
+      "display_location": "default",
+      "options": ["Tek Katlı","Dubleks","Tripleks","4 Kat ve Üzeri"]
+    }
+  },
+  {
+    "id": 4,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,159, 160, 183, 206,
+      38, 42, 49, 78, 79, 85, 89, 90, 94, 96, 100, 105, 109, 112, 113, 114],
+    "options": {
+      "priority": true,
+      "label": "Isıtma Tipi",
+      "type": "multi-select",
+      "db_field": "heating_type",
+      "display_location": "default",
+      "options": [
+        "Doğalgaz (Kombi)","Kat Kaloriferi","Soba","Klima",
+        "Yerden Isıtma","Güneş Enerjisi","Merkezi Sistem","Jeotermal","Yok"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,159, 160, 183, 206,
+      38, 42, 78, 79, 105, 109],
+    "options": {
+      "priority": true,
+      "label": "Eşyalı mı?",
+      "type": "checkbox",
+      "db_field": "is_furnished",
+      "display_location": "default",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 6,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,146,151,153,158,38, 42, 56, 78, 79, 104, 105, 109],
+    "options": {
+      "priority": true,
+      "label": "Kullanım Durumu",
+      "type": "multi-select",
+      "db_field": "usage_status",
+      "display_location": "default",
+      "options": ["Boş","Kiracı Oturuyor","Mal Sahibi Oturuyor"]
+    }
+  },
+  {
+    "id": 7,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Banyo Sayısı",
+      "type": "multi-select",
+      "db_field": "bathroom_count",
+      "display_location": "default",
+      "options": ["1","2","3","4","5+"]
+    }
+  },
+  {
+    "id": 8,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Balkon",
+      "type": "checkbox",
+      "db_field": "balcony",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 9,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Teras",
+      "type": "checkbox",
+      "db_field": "terrace",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 10,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Bahçe",
+      "type": "multi-select",
+      "db_field": "garden_type",
+      "display_location": "default",
+      "options": ["Yok","Ortak Kullanım","Özel","Meyve Bahçesi","Sebze Bahçesi","Karma"]
+    }
+  },
+  {
+    "id": 11,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,
+      37, 38, 39, 40, 42, 43, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56, 59, 61, 62, 63, 65, 66, 67, 
+      68, 69, 70, 73, 75, 76, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 90, 91, 92, 93, 94, 95, 96, 97,
+      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 116],
+    "options": {
+      "priority": true,
+      "label": "Otopark",
+      "type": "multi-select",
+      "db_field": "parking_type",
+      "display_location": "default",
+      "options": ["Yok","Açık","Kapalı"]
+    }
+  },
+  {
+    "id": 12,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Garaj",
+      "type": "checkbox",
+      "db_field": "garage",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 13,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32,159, 160, 183, 206],
+    "options": {
+      "priority": false,
+      "label": "Havuz",
+      "type": "multi-select",
+      "db_field": "pool_type",
+      "display_location": "default",
+      "options": ["Yok","Özel Havuz","Ortak Havuz","Kapalı Havuz","Isıtmalı Havuz"]
+    }
+  },
+  {
+    "id": 14,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "Cephe Yönü",
+      "type": "multi-select",
+      "db_field": "orientation",
+      "display_location": "default",
+      "options": ["Kuzey","Güney","Doğu","Batı","Kuzeydoğu","Güneydoğu","Kuzeybatı","Güneybatı"]
+    }
+  },
+  {
+    "id": 15,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Net m²",
+      "type": "range",
+      "db_field": "net_m2",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 16,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34],
+    "options": {
+      "priority": true,
+      "label": "Brüt m²",
+      "type": "range",
+      "db_field": "gross_m2",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 17,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32,119,120,121,123,124],
+    "options": {
+      "priority": true,
+      "label": "Arsa Alanı (m²)",
+      "type": "range",
+      "db_field": "land_area",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 18,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,119,120,121,123,124,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143],
+    "options": {
+      "priority": true,
+      "label": "Tapu Durumu",
+      "type": "multi-select",
+      "db_field": "title_deed_status",
+      "display_location": "default",
+      "options": ["Kat Mülkiyeti","Kat İrtifakı","Müstakil Tapu","Hisseli"]
+    }
+  },
+  {
+    "id": 19,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,119,120,121,123,124,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,159, 160, 183, 206,37, 38, 39, 40, 41, 42, 43, 45, 46, 47, 
+      48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 
+      80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 
+      109, 110, 111, 112, 113, 114, 116],
+    "options": {
+      "priority": true,
+      "label": "Krediye Uygunluk",
+      "type": "checkbox",
+      "db_field": "is_loan_eligible",
+      "display_location": "default",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 20,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,24, 34,119,120,121,123,124,146,151,153,158,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,159, 160, 183, 206,37, 38, 39, 40, 41, 42, 43, 45, 46, 47, 
+      48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 
+      80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 
+      109, 110, 111, 112, 113, 114, 116],
+    "options": {
+      "priority": false,
+      "label": "Takaslı mı?",
+      "type": "checkbox",
+      "db_field": "barter_available",
+      "display_location": "more_options",
+      "options": ["Evet","Hayır"]
+    }
+  },
+   {
+    "id": 21,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "Site İçinde mi?",
+      "type": "checkbox",
+      "db_field": "in_complex",
+      "display_location": "default",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 22,
+    "category_dependency": [6,17,28,7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Depo / Kiler",
+      "type": "checkbox",
+      "db_field": "storage_room",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 23,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,159, 160, 183, 206,
+      40, 42, 49, 56, 61, 62, 63, 65, 68, 69, 70, 78, 79, 85, 104, 105, 109, 110, 112, 113, 114, 116],
+      
+    "options": {
+      "priority": false,
+      "label": "Güvenlik",
+      "type": "checkbox",
+      "db_field": "security",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 26,
+    "category_dependency": [4,15,26,5,16,27,6,17,28,7,18,29,8,19,30,9,20,31,10,21,32,119,120,121,123,124,
+      127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Manzara",
+      "type": "multi-select",
+      "db_field": "view_type",
+      "display_location": "default",
+      "options": [
+        "Deniz","Boğaz","Panoramik Deniz",
+        "Doğa","Şehir","Tarihi","Dağ","Göl","Orman","Yok"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "Denize Sıfır",
+      "type": "checkbox",
+      "db_field": "is_seafront",
+      "display_location": "default",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 28,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "İskele",
+      "type": "checkbox",
+      "db_field": "pier_available",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 29,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Tekne Bağlama Yeri",
+      "type": "checkbox",
+      "db_field": "boat_dock",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 30,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "Denize Uzaklık",
+      "type": "multi-select",
+      "db_field": "sea_distance",
+      "display_location": "default",
+      "options": [
+        "0–25 m","25–100 m","100–500 m","500 m+","Yok"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Oda İçinde Banyo",
+      "type": "checkbox",
+      "db_field": "bathroom_in_room",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 32,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Ebeveyn Banyosu",
+      "type": "checkbox",
+      "db_field": "ensuite_bathroom",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 33,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Giyinme Odası",
+      "type": "checkbox",
+      "db_field": "dressing_room",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 34,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32,146,151,153,158,127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,
+      76, 78, 79, 90, 94, 104, 105, 109, 110, 113, 114, 116],
+    "options": {
+      "priority": false,
+      "label": "Asansör",
+      "type": "checkbox",
+      "db_field": "has_elevator",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 35,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Zemin Etüdü",
+      "type": "checkbox",
+      "db_field": "ground_survey",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 36,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Yapının Durumu",
+      "type": "multi-select",
+      "db_field": "building_condition",
+      "display_location": "more_options",
+      "options": ["Sıfır","İkinci El"]
+    }
+  },
+  {
+    "id": 37,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Oda Zemin Kaplaması",
+      "type": "multi-select",
+      "db_field": "floor_covering",
+      "display_location": "more_options",
+      "options": ["Parke","Seramik","Mermer","Halı","Mozaik"]
+    }
+  },
+  {
+    "id": 38,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Mutfak Tipi",
+      "type": "multi-select",
+      "db_field": "kitchen_type",
+      "display_location": "more_options",
+      "options": ["Amerikan","Kapalı","Ada Mutfak"]
+    }
+  },
+  {
+    "id": 39,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Cephe Kaplama",
+      "type": "multi-select",
+      "db_field": "facade_material",
+      "display_location": "more_options",
+      "options": ["Taş","Ahşap","Sıva","Mermer","Kompozit","Tuğla","Cam"]
+    }
+  },
+  {
+    "id": 40,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Yapı Tarzı",
+      "type": "multi-select",
+      "db_field": "building_style",
+      "display_location": "more_options",
+      "options": ["Betonarme","Ahşap","Prefabrik","Çelik","Taş Ev"]
+    }
+  },
+  {
+    "id": 43,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Ahır / Hayvan Barınağı",
+      "type": "checkbox",
+      "db_field": "animal_shelter",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 44,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Depo / Ambar",
+      "type": "checkbox",
+      "db_field": "barn",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 45,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Su Kuyusu",
+      "type": "checkbox",
+      "db_field": "water_well",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 46,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Elektrik Durumu",
+      "type": "multi-select",
+      "db_field": "electricity_type",
+      "display_location": "more_options",
+      "options": ["Şebeke Elektriği","Güneş Paneli","Jeneratör","Yok"]
+    }
+  },
+  {
+    "id": 47,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Su Kaynağı",
+      "type": "multi-select",
+      "db_field": "water_source",
+      "display_location": "more_options",
+      "options": ["Şebeke Suyu","Artezyen","Kuyu","Yok"]
+    }
+  },
+  {
+    "id": 48,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": true,
+      "label": "Arsa Alanı (m²)",
+      "type": "range",
+      "db_field": "land_area",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 49,
+    "category_dependency": [8,19,30,9,20,31],
+    "options": {
+      "priority": false,
+      "label": "Tarla Durumu",
+      "type": "checkbox",
+      "db_field": "is_farmland",
+      "display_location": "more_options",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 50,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "İmar Durumu",
+      "type": "multi-select",
+      "db_field": "zoning_status",
+      "display_location": "default",
+      "options": ["İmarlı","İmarsız"]
+    }
+  },
+  {
+    "id": 51,
+    "category_dependency": [4,15,26,5,16,27],
+    "options": {
+      "priority": true,
+      "label": "Bulunduğu Kat",
+      "type": "multi-select",
+      "db_field": "floor_location",
+      "display_location": "default",
+      "options": [
+        "Zemin Kat","1. Kat","2. Kat","3. Kat","4. Kat","5. Kat","6. Kat",
+        "7. Kat","8. Kat","9. Kat","10. Kat","11. Kat","12. Kat",
+        "13. Kat","14. Kat","15. Kat","16 ve Üzeri Kat","Bahçe Dubleksi","Çatı Dubleksi"
+      ]
+    }
+  },
+   {
+    "id": 52,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Konut Tipi",
+      "type": "multi-select",
+      "db_field": "villa_type",
+      "display_location": "more_options",
+      "options": ["Müstakil Villa","İkiz Villa","Sıra Villa"]
+    }
+  },
+  {
+    "id": 53,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Cephe Kaplama",
+      "type": "multi-select",
+      "db_field": "facade_covering",
+      "display_location": "more_options",
+      "options": ["Taş","Ahşap","Sıva","Mermer","Kompozit","Tuğla"]
+    }
+  },
+  {
+    "id": 54,
+    "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Yapı Tarzı",
+      "type": "multi-select",
+      "db_field": "building_style",
+      "display_location": "more_options",
+      "options": ["Betonarme","Ahşap","Çelik","Taş Ev","Prefabrik"]
+    }
+  },
+  {
+    "id": 55,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Denize Sıfır",
+      "type": "checkbox",
+      "db_field": "is_seafront",
+      "display_location": "default",
+      "options": ["Evet","Hayır"]
+    }
+  },
+  {
+    "id": 56,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "İskele",
+      "type": "checkbox",
+      "db_field": "pier",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 57,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Tekne Bağlama Yeri",
+      "type": "checkbox",
+      "db_field": "boat_parking",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 58,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": false,
+      "label": "Denize Uzaklık",
+      "type": "multi-select",
+      "db_field": "sea_distance",
+      "display_location": "default",
+      "options": ["0–25 m","25–100 m","100–500 m","500 m+"]
+    }
+  },
+  {
+    "id": 59,
+    "category_dependency": [9,20,31,10,21,32],
+    "options": {
+      "priority": true,
+      "label": "İmar Durumu",
+      "type": "multi-select",
+      "db_field": "zoning_status",
+      "display_location": "default",
+      "options": ["İmarlı","İmarsız"]
+    }
+  },
+  {
+  "id": 60,
+  "category_dependency": [7,18,29,8,19,30,9,20,31,10,21,32,24,25,41,42],
+  "options": {
+    "priority": false,
+    "label": "Ek Özellikler",
+    "type": "multi-select",
+    "db_field": "extra_features",
+    "display_location": "more_options",
+    "options": [
+      "Jeneratör",
+      "Su Deposu",
+      "Şömine",
+      "Sauna / Hamam",
+      "Jakuzi",
+      "Alarm / Kamera Sistemi",
+      "Engelliye Uygunluk",
+      "Asansör",
+      "Isı Yalıtımı",
+      "Ses Yalıtımı",
+      "Güvenlik",
+      "Otopark"
+    ]
+  }
+},
+{
+  "id": 61,
+  "category_dependency": [19,146,151,153,158,127,128,129,130,131,132,133,134,136,137,138,139,140,141,142,143,
+    40, 49, 61, 62, 63, 68, 69, 85, 104, 105, 109, 110, 112, 113, 114,43, 54, 65, 69, 80],
+    "options": {
+    "priority": false,
+    "label": "Ek Özellikler",
+    "type": "multi-select",
+    "db_field": "extra_features",
+    "display_location": "more_options",
+    "options": [
+      "Jeneratör",
+      "Su Deposu",
+      "Alarm / Kamera Sistemi",
+      "Engelliye Uygunluk",
+      "Asansör",
+      "Isı Yalıtımı",
+      "Ses Yalıtımı",
+      "Güvenlik",
+      "Otopark",
+      "Havuz",
+      "Bahçe",
+      "Klima",
+      "Wi-Fi"
+    ]
+  }
+},
+  {
+    "id": 62,
+    "category_dependency": [119, 120, 121],
+    "options": {
+      "priority": true,
+      "label": "İmar Durumu",
+      "type": "multi-select",
+      "db_field": "zoning_type",
+      "display_location": "default",
+      "options": [
+        "Konut",
+        "Ticari",
+        "Sanayi",
+        "Turizm",
+        "Tarla",
+        "İmarsız",
+        "Tarımsal Nitelikli"
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "category_dependency": [119, 120],
+    "options": {
+      "priority": true,
+      "label": "Yola Cephe",
+      "type": "checkbox",
+      "db_field": "road_frontage",
+      "display_location": "default",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 64,
+    "category_dependency": [119, 120, 121],
+    "options": {
+      "priority": true,
+      "label": "Parsel Tipi",
+      "type": "multi-select",
+      "db_field": "parcel_type",
+      "display_location": "default",
+      "options": [
+        "Tek Parsel",
+        "Köşe Parsel",
+        "Birden Fazla Parsel"
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "category_dependency": [119, 120, 121],
+    "options": {
+      "priority": false,
+      "label": "Eğim Durumu",
+      "type": "multi-select",
+      "db_field": "slope_status",
+      "display_location": "more_options",
+      "options": ["Düz", "Hafif Eğimli", "Eğimli"]
+    }
+  },
+  {
+    "id": 66,
+    "category_dependency": [121],
+    "options": {
+      "priority": false,
+      "label": "Sulama İmkânı",
+      "type": "checkbox",
+      "db_field": "irrigation_available",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 67,
+    "category_dependency": [119, 120, 121],
+    "options": {
+      "priority": false,
+      "label": "Altyapı Durumu",
+      "type": "multi-select",
+      "db_field": "infrastructure_status",
+      "display_location": "more_options",
+      "options": [
+        "Su",
+        "Elektrik",
+        "Doğalgaz",
+        "Kanalizasyon",
+        "Telefon",
+        "Yok"
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "category_dependency": [119, 120, 121],
+    "options": {
+      "priority": false,
+      "label": "Ulaşım Durumu",
+      "type": "multi-select",
+      "db_field": "transport_access",
+      "display_location": "more_options",
+      "options": ["Asfalt Yol", "Stabilize Yol", "Toprak Yol","Beton Yol"]
+    }
+  },
+  {
+  "id": 69,
+  "category_dependency": [4,5,6,7,8,9,10,13,15,16,17,18,19,20,21,24,119,120,121,123,124],
+  "options": {
+    "priority": false,
+    "label": "Çevre Özellikleri",
+    "type": "multi-select",
+    "db_field": "environment_features",
+    "display_location": "more_options",
+    "options": [
+      "Sağlık Ocağı",
+      "Veteriner",
+      "Cami",
+      "Kilise",
+      "Restoran",
+      "Market",
+      "Park",
+      "İnternet Cafe",
+      "Semt Pazarı"
+    ]
+  }
+},
+{
+    "id": 70,
+    "category_dependency": [127,136],
+    "options": {
+      "priority": true,
+      "label": "Yıldız Sayısı",
+      "type": "multi-select",
+      "db_field": "star_rating",
+      "display_location": "default",
+      "options": [
+        "1 Yıldız",
+        "2 Yıldız",
+        "3 Yıldız",
+        "4 Yıldız",
+        "5 Yıldız",
+        "Belgeli",
+        "Belgesiz"
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "category_dependency": [127,128,129,130,131,136,137,138,139,140],
+    "options": {
+      "priority": true,
+      "label": "Oda Sayısı (Toplam)",
+      "type": "multi-select",
+      "db_field": "total_room_count",
+      "display_location": "default",
+      "options": [
+        "1–5",
+        "6–10",
+        "11–20",
+        "21–50",
+        "51–100",
+        "100+"
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "category_dependency": [127,128,129,130,131,132,133,136,137,138,139,140,141,142],
+    "options": {
+      "priority": false,
+      "label": "Restaurant / Kafe",
+      "type": "checkbox",
+      "db_field": "restaurant_cafe",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 73,
+    "category_dependency": [127,128,129,131,136,137,138,140],
+    "options": {
+      "priority": false,
+      "label": "Wi-Fi",
+      "type": "checkbox",
+      "db_field": "wifi_available",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 74,
+    "category_dependency": [127,128,129,136,137,138],
+    "options": {
+      "priority": false,
+      "label": "Resepsiyon / Danışma",
+      "type": "checkbox",
+      "db_field": "reception_desk",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 75,
+    "category_dependency": [127,128,129,133,136,137,138,142],
+    "options": {
+      "priority": false,
+      "label": "Spa / Hamam / Sauna",
+      "type": "checkbox",
+      "db_field": "spa_hamam_sauna",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 76,
+    "category_dependency": [127,128,129,133,136,137,138,142],
+    "options": {
+      "priority": false,
+      "label": "Spor Alanı",
+      "type": "checkbox",
+      "db_field": "sports_area",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 77,
+    "category_dependency": [127,133,136,142],
+    "options": {
+      "priority": false,
+      "label": "Toplantı Salonu",
+      "type": "checkbox",
+      "db_field": "conference_room",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 78,
+    "category_dependency": [127,136,133,142],
+    "options": {
+      "priority": false,
+      "label": "Deniz Manzarası",
+      "type": "checkbox",
+      "db_field": "sea_view",
+      "display_location": "default",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 79,
+    "category_dependency": [132,141,133,142,134,143],
+    "options": {
+      "priority": true,
+      "label": "Toplam Alan (m²)",
+      "type": "range",
+      "db_field": "total_area",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 80,
+    "category_dependency": [132,141],
+    "options": {
+      "priority": true,
+      "label": "Konaklama Tipi",
+      "type": "multi-select",
+      "db_field": "accommodation_type",
+      "display_location": "default",
+      "options": [
+        "Çadır",
+        "Karavan",
+        "Bungalov",
+        "Tiny House",
+        "Karma"
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "category_dependency": [132,141],
+    "options": {
+      "priority": false,
+      "label": "Elektrik İmkanı",
+      "type": "checkbox",
+      "db_field": "electricity_available",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 82,
+    "category_dependency": [132,141],
+    "options": {
+      "priority": false,
+      "label": "Tuvalet / Duş Alanı",
+      "type": "checkbox",
+      "db_field": "bathroom_area",
+      "display_location": "more_options",
+      "options": ["Var", "Yok"]
+    }
+  },
+  {
+    "id": 83,
+    "category_dependency": [134,143],
+    "options": {
+      "priority": false,
+      "label": "Denize Sıfır",
+      "type": "checkbox",
+      "db_field": "seafront",
+      "display_location": "default",
+      "options": ["Evet", "Hayır"]
+    }
+  },
+   {
+    "id": 84,
+    "category_dependency": [159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Dönem (Hafta)",
+      "type": "multi-select",
+      "db_field": "period_week",
+      "display_location": "default",
+      "options": ["1–4", "5–8", "9–12", "13–26", "27–39", "40–52"]
+    }
+  },
+  {
+    "id": 85,
+    "category_dependency": [159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Dönem Tipi",
+      "type": "multi-select",
+      "db_field": "period_type",
+      "display_location": "default",
+      "options": ["Yaz", "Kış", "4 Mevsim"]
+    }
+  },
+  {
+    "id": 86,
+    "category_dependency": [159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Mülkiyet Durumu",
+      "type": "multi-select",
+      "db_field": "ownership_type",
+      "display_location": "default",
+      "options": ["Tapulu", "Hisseli"]
+    }
+  },
+  {
+    "id": 87,
+    "category_dependency": [159, 160, 183, 206],
+    "options": {
+      "priority": true,
+      "label": "Kapasite",
+      "type": "multi-select",
+      "db_field": "capacity",
+      "display_location": "default",
+      "options": ["1–2", "3–4", "5–6", "7+"]
+    }
+  },
+  {
+    "id": 88,
+    "category_dependency": [37,73],
+    "options": {
+      "priority": true,
+      "label": "Pompa Sayısı",
+      "type": "multi-select",
+      "db_field": "pump_count",
+      "display_location": "default",
+      "options": ["1–2", "3–4", "5–6", "7+"]
+    }
+  },
+  {
+    "id": 89,
+    "category_dependency": [37,73],
+    "options": {
+      "priority": true,
+      "label": "Akaryakıt Markası",
+      "type": "multi-select",
+      "db_field": "fuel_brand",
+      "display_location": "default",
+      "options": ["Shell", "Opet", "BP", "Total", "Aytemiz", "Petrol Ofisi", "Diğer"]
+    }
+  },
+  {
+    "id": 90,
+    "category_dependency": [37,73,44,80],
+    "options": {
+      "priority": true,
+      "label": "Kapalı Alan (m²)",
+      "type": "range",
+      "db_field": "indoor_area",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 91,
+    "category_dependency": [37,73,117,118,121,44,80],
+    "options": {
+      "priority": true,
+      "label": "Arsa Alanı (m²)",
+      "type": "range",
+      "db_field": "land_area",
+      "display_location": "default",
+      "unit": "m²"
+    }
+  },
+  {
+    "id": 92,
+    "category_dependency": [37,73,48],
+    "options": {
+      "priority": false,
+      "label": "Lisans Durumu",
+      "type": "checkbox",
+      "db_field": "license_status",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 93,
+    "category_dependency": [37,73],
+    "options": {
+      "priority": false,
+      "label": "Market / Shop",
+      "type": "checkbox",
+      "db_field": "market_available",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 94,
+    "category_dependency": [43,79,60,102],
+    "options": {
+      "priority": true,
+      "label": "Ruhsat",
+      "type": "checkbox",
+      "db_field": "license_available",
+      "display_location": "default",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 95,
+    "category_dependency": [39,75,49,81,51,89,44,80],
+    "options": {
+      "priority": false,
+      "label": "Elektrik Gücü",
+      "type": "multi-select",
+      "db_field": "electric_power",
+      "display_location": "more_options",
+      "options": ["220V", "380V", "Sanayi Elektriği"]
+    }
+  },
+  {
+    "id": 96,
+    "category_dependency": [39,75,49,81,51,89,44,80],
+    "options": {
+      "priority": false,
+      "label": "Vinç Sistemi",
+      "type": "checkbox",
+      "db_field": "crane_system",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 97,
+    "category_dependency": [49,81],
+    "options": {
+      "priority": false,
+      "label": "Rampalı Giriş",
+      "type": "checkbox",
+      "db_field": "ramp_access",
+      "display_location": "more_options",
+      "options": ["Var","Yok"]
+    }
+  },
+  {
+    "id": 98,
+    "category_dependency": [49,81],
+    "options": {
+      "priority": false,
+      "label": "Tavan Yüksekliği",
+      "type": "multi-select",
+      "db_field": "ceiling_height",
+      "display_location": "default",
+      "options": ["3–4 m", "5–7 m", "8 m+"]
+    }
+  },
+  {
+    "id": 99,
+    "category_dependency": [49,81],
+    "options": {
+      "priority": false,
+      "label": "Zemin Tipi",
+      "type": "multi-select",
+      "db_field": "floor_type",
+      "display_location": "default",
+      "options": ["Beton","Epoksi","Toprak"]
+    }
+  },
+  {
+    "id": 100,
+    "category_dependency": [69,113],
+    "options": {
+      "priority": true,
+      "label": "Branş Türü",
+      "type": "multi-select",
+      "db_field": "sports_branch",
+      "display_location": "default",
+      "options": ["Fitness","Yüzme","Tenis","Futbol","Karma"]
+    }
+  }
+]

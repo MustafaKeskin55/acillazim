@@ -1,0 +1,47 @@
+* {
+  @apply m-0 p-0 box-border;
+  
+}
+
+/* Navbar ve Breadcrumb2 için container stil */
+.navbar-breadcrumb-container {
+  @apply w-full;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Breadcrumb'dan sonraki içeriğe margin */
+
+
+.app-bodyContainer {
+  @apply flex;
+}
+
+.app-bodyLeft {
+  width: 20%;
+}
+
+.app-bodyRight {
+  width: 1060px;
+  margin: 10px 0;
+  margin-left: 25px;
+}
+
+/* Ana uygulama container'ı - Footer'ı en alta sabitlemek için */
+.app-container {
+  @apply flex flex-col;
+  min-height: 100vh;
+}
+
+/* Ana içerik alanı - Footer'ın üstünde kalan tüm alanı kaplar */
+.main-content {
+  @apply flex-1 flex flex-col;
+}
+
+/* Dashboard için özel stil */
+.dashboard-wrapper {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}

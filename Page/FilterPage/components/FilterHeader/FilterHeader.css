@@ -1,0 +1,586 @@
+/* ============================================================
+   FilterHeader.css  — Premium Redesign
+   Acillazim.com | Filtrele Sayfası Başlık & Kontroller
+   ============================================================ */
+
+/* ── Ana Wrapper ── */
+.filter-header-wrapper {
+  @apply flex flex-col;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+/* ═══════════════════════════════════════
+   BAŞLIK BÖLÜMÜ
+   ═══════════════════════════════════════ */
+.filter-title-section {
+  @apply w-full;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 52, 102, 0.07);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 6px 24px rgba(0, 52, 102, 0.06);
+  padding: 20px 24px;
+}
+
+.filter-title-container {
+  @apply w-full;
+}
+
+.filter-title {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0a1628;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.filter-subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  font-weight: 400;
+}
+
+.filter-count {
+  @apply inline-flex items-center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: 2px;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ── Aktif Filtre Etiketleri ── */
+.active-filters {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 52, 102, 0.06);
+}
+
+.filter-tags {
+  @apply flex flex-wrap items-center;
+  gap: 8px;
+}
+
+.filter-tag {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 4px;
+  padding: 5px 12px 5px 10px;
+  background: linear-gradient(135deg, #eff6ff 0%, #e8f4fd 100%);
+  border: 1px solid rgba(0, 82, 164, 0.18);
+  border-radius: 20px;
+  font-size: 13px;
+  color: #003466;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  font-weight: 500;
+}
+
+.filter-tag:hover {
+  background: linear-gradient(135deg, #dbeafe 0%, #d1e9f8 100%);
+  border-color: rgba(0, 82, 164, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 52, 102, 0.12);
+}
+
+.filter-tag-label {
+  @apply uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  margin-right: 2px;
+}
+
+.filter-tag-value {
+  color: #003466;
+  font-weight: 600;
+}
+
+/* Fiyat filtreleri */
+.filter-tag[data-filter-type="price"],
+.filter-tag[data-filter-type="price-min"],
+.filter-tag[data-filter-type="price-max"] {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef0e4 100%);
+  border-color: rgba(255, 107, 0, 0.2);
+  color: #c04f00;
+}
+
+.filter-tag[data-filter-type="price"] .filter-tag-value,
+.filter-tag[data-filter-type="price-min"] .filter-tag-value,
+.filter-tag[data-filter-type="price-max"] .filter-tag-value {
+  color: #c04f00;
+}
+
+.filter-tag-remove {
+  @apply flex items-center justify-center border-0 cursor-pointer rounded-full flex-shrink-0;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 52, 102, 0.12);
+  color: #003466;
+  font-size: 13px;
+  line-height: 1;
+  margin-left: 4px;
+  transition: all 0.15s;
+}
+
+.filter-tag-remove:hover {
+  background: rgba(220, 38, 38, 0.15);
+  color: #dc2626;
+  transform: scale(1.1);
+}
+
+.clear-all-filters {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 5px;
+  background: none;
+  border: 1.5px solid rgba(220, 38, 38, 0.25);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #dc2626;
+  transition: all 0.18s;
+  opacity: 0.85;
+}
+
+.clear-all-filters:hover {
+  background: rgba(220, 38, 38, 0.06);
+  border-color: rgba(220, 38, 38, 0.4);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════
+   HEADER KONTROL ÇUBUĞU
+   ═══════════════════════════════════════ */
+.filter-header {
+  @apply flex items-stretch;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 52, 102, 0.07);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 16px rgba(0, 52, 102, 0.05);
+  padding: 0 20px;
+  min-height: 64px;
+}
+
+.filter-controls-wrapper {
+  @apply flex justify-between items-center w-full;
+  min-height: 64px;
+}
+
+.filter-options-row {
+  @apply flex items-center flex-1 overflow-hidden;
+  gap: 0;
+}
+
+/* ── Kimden Sekmeleri ── */
+.listing-source-tabs {
+  @apply p-0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.listing-source-tabs::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.source-tab-list {
+  @apply flex p-0 m-0;
+  list-style: none;
+  gap: 2px;
+}
+
+.source-tab-item {
+  flex: 0 0 auto;
+}
+
+.source-tab-button {
+  @apply inline-flex items-center border-0 cursor-pointer relative;
+  gap: 5px;
+  padding: 8px 16px;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+
+.source-tab-button::after {
+  @apply absolute;
+  content: '';
+  bottom: -1px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: #003466;
+  border-radius: 2px 2px 0 0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.source-tab-button:hover {
+  color: #003466;
+  background: rgba(0, 52, 102, 0.04);
+}
+
+.source-tab-item.active .source-tab-button {
+  color: #003466;
+  font-weight: 700;
+  background: rgba(0, 52, 102, 0.06);
+}
+
+.source-tab-item.active .source-tab-button::after {
+  transform: scaleX(1);
+}
+
+.source-count {
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(0, 52, 102, 0.1);
+  color: #003466;
+  padding: 1px 7px;
+  border-radius: 10px;
+}
+
+.source-tab-item.active .source-count {
+  background: #003466;
+  color: #ffffff;
+}
+
+/* ── Sıralama + Görünüm Kontrolleri ── */
+.view-sort-controls {
+  @apply flex items-center flex-shrink-0;
+  gap: 10px;
+}
+
+/* Ayırıcı */
+.filter-controls-divider {
+  @apply flex-shrink-0;
+  width: 1px;
+  height: 28px;
+  background: rgba(0, 52, 102, 0.1);
+  margin: 0 4px;
+}
+
+.sort-container {
+  @apply relative;
+}
+
+.sort-select {
+  @apply cursor-pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 36px 8px 14px;
+  background: #f8f9fc;
+  border: 1.5px solid rgba(0, 52, 102, 0.12);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  min-width: 190px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23003466' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: all 0.18s;
+}
+
+.sort-select:hover,
+.sort-select:focus {
+  @apply outline-none;
+  border-color: #003466;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.08);
+}
+
+.sort-select.default {
+  color: #9ca3af;
+}
+
+/* ── Görünüm Modu Butonları ── */
+.view-mode-controls {
+  @apply flex;
+  gap: 3px;
+  background: #f0f2f5;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.view-mode-btn {
+  @apply flex items-center justify-center border-0 cursor-pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: transparent;
+  transition: all 0.18s ease;
+  color: #6b7280;
+}
+
+.view-mode-btn:hover {
+  background: rgba(255,255,255,0.8);
+  color: #374151;
+}
+
+.view-mode-btn.active {
+  background: #ffffff;
+  color: #003466;
+  box-shadow: 0 1px 4px rgba(0, 52, 102, 0.12), 0 0 0 1px rgba(0,52,102,0.08);
+}
+
+.filter-view-ico {
+  @apply block flex-shrink-0;
+}
+
+.view-mode-btn--map:not(.active) {
+  color: #1e7fcc;
+}
+
+/* Mobil araç ikonları */
+.view-mode-btn--tool {
+  width: 40px;
+  height: 40px;
+}
+
+.filter-m-toolbar-ico-wrap {
+  @apply relative inline-flex items-center justify-center;
+}
+
+.filter-m-toolbar-badge {
+  @apply absolute text-center;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* ═══════════════════════════════════════
+   MOBİL SIRAALA PANELİ (portal → body)
+   ═══════════════════════════════════════ */
+.filter-m-sort-backdrop {
+  @apply fixed flex items-end justify-center;
+  inset: 0;
+  z-index: 4000;
+  background: rgba(10, 22, 40, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-m-sort-panel {
+  @apply w-full flex flex-col;
+  max-width: 100%;
+  max-height: 72vh;
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  animation: filterMsortSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes filterMsortSlide {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.filter-m-sort-panel-head {
+  @apply flex items-center justify-between flex-shrink-0;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-m-sort-panel-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0a1628;
+}
+
+.filter-m-sort-close {
+  @apply border-0 rounded-full cursor-pointer flex items-center justify-center;
+  background: #f0f2f5;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  line-height: 1;
+  color: #4b5563;
+  transition: background 0.15s;
+}
+
+.filter-m-sort-close:hover {
+  background: #e5e7eb;
+}
+
+.filter-m-sort-list {
+  @apply m-0 overflow-y-auto;
+  list-style: none;
+  padding: 8px 0 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-m-sort-list li {
+  @apply m-0 p-0;
+}
+
+.filter-m-sort-list-btn {
+  @apply flex items-center w-full text-left border-0 cursor-pointer;
+  padding: 14px 20px;
+  background: #ffffff;
+  font-size: 15px;
+  color: #374151;
+  border-bottom: 1px solid #f8f9fc;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.1s;
+}
+
+.filter-m-sort-list-btn.is-active {
+  background: #eff6ff;
+  color: #003466;
+  font-weight: 700;
+}
+
+.filter-m-sort-list-btn:hover {
+  background: #f8f9fc;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 992px) {
+  .filter-options-row {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filter-options-row::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .sort-select {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-header-wrapper {
+    gap: 10px;
+  }
+
+  .filter-title-section {
+    padding: 16px 18px;
+    border-radius: 14px;
+  }
+
+  .filter-title {
+    font-size: 20px;
+  }
+
+  .filter-header {
+    border-radius: 14px;
+    padding: 0 14px;
+    min-height: 58px;
+  }
+
+  .filter-header .sort-container {
+    display: none !important;
+  }
+
+  .filter-header .view-sort-controls {
+    display: none !important;
+  }
+
+  /* Mobil araç çubuğu */
+  .filter-mobile-filters-bar {
+    @apply flex flex-col w-full;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 52, 102, 0.08);
+  }
+
+  .filter-mobile-filters-bar .view-mode-controls--mobile {
+    @apply flex flex-row flex-nowrap justify-between items-center w-full m-0;
+    padding: 10px 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1.5px solid rgba(0, 52, 102, 0.08);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  .filter-mobile-filters-bar .view-mode-controls--mobile .view-mode-btn {
+    width: 46px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .source-tab-list {
+    @apply flex-nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    padding: 2px 0 0;
+  }
+
+  .source-tab-button {
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 9px;
+    border: 1.5px solid rgba(0, 52, 102, 0.1);
+    background: #f8f9fc;
+  }
+
+  .source-tab-button::after {
+    @apply hidden;
+  }
+
+  .source-tab-item.active .source-tab-button {
+    background: #003466;
+    color: #ffffff;
+    border-color: #003466;
+  }
+
+  .source-tab-item.active .source-count {
+    background: rgba(255,255,255,0.25);
+    color: #ffffff;
+  }
+
+  .filter-tags {
+    gap: 6px;
+  }
+
+  .filter-tag {
+    font-size: 12px;
+    padding: 4px 10px 4px 8px;
+  }
+
+  .filter-tag-label {
+    font-size: 10px;
+  }
+
+  .clear-all-filters {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+/* Mobil yatay filtre çubuğu gizli */
+@media (min-width: 769px) {
+  .filter-mobile-filters-bar {
+    @apply hidden;
+  }
+}

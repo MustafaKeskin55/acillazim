@@ -1,0 +1,657 @@
+/* ReviewList.css - Değerlendirme listesi bileşeni stilleri */
+
+/* :root yerine sınıf seçicisi kullanarak değişkenleri kapsüllüyoruz */
+.reviews-container {
+  @apply w-full;
+  /* Bileşen özelinde değişkenler */
+  --primary-blue: #004d7f;
+  --primary-orange: #ff6b00;
+  --primary-blue-light: #1a6eab;
+  --primary-blue-lighter: #e5f1fa;
+  --primary-orange-light: #ff8c3a;
+  --light-gray: #f5f5f5;
+  --mid-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0, 77, 127, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 77, 127, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 77, 127, 0.2);
+  --transition: all 0.3s ease;
+  
+  /* Mevcut özellikleri koru */
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Değerlendirme istatistikleri */
+.reviews-stats {
+  @apply flex flex-wrap;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.stats-left {
+  @apply flex flex-col items-center justify-center;
+  flex: 0 0 30%;
+  padding: 20px;
+  border-right: 1px solid var(--mid-gray);
+}
+
+.average-rating {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stats-left .review-stars {
+  margin: 10px 0;
+}
+
+.stats-left .star {
+  font-size: 26px;
+  margin: 0 2px;
+}
+
+.stats-left .star.active {
+  color: var(--primary-orange);
+}
+
+.total-reviews {
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.stats-right {
+  flex: 0 0 65%;
+  padding: 10px 20px;
+}
+
+.rating-bar-container {
+  @apply flex items-center cursor-pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+  transition: var(--transition);
+}
+
+.rating-bar-container:hover {
+  background-color: var(--primary-blue-lighter);
+}
+
+.rating-bar-container.selected {
+  background-color: var(--primary-blue-lighter);
+  border-left: 3px solid var(--primary-blue);
+}
+
+.rating-label {
+  flex: 0 0 80px;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.rating-bar {
+  @apply flex-1 overflow-hidden;
+  height: 12px;
+  background-color: var(--mid-gray);
+  border-radius: 10px;
+  margin: 0 15px;
+}
+
+.rating-bar-fill {
+  @apply h-full;
+  background-color: var(--primary-orange);
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.rating-count {
+  @apply text-right;
+  flex: 0 0 30px;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+/* Geliştirilmiş Filtre Bölümü */
+.enhanced-filter-section {
+  @apply flex justify-between items-center;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.filters-container {
+  @apply flex;
+  gap: 20px;
+}
+
+.filter-group {
+  @apply flex flex-col;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: var(--primary-blue);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.custom-select {
+  @apply relative;
+  min-width: 180px;
+}
+
+.custom-select select {
+  @apply w-full cursor-pointer;
+  appearance: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 2px solid var(--mid-gray);
+  border-radius: 6px;
+  background-color: var(--white);
+  color: var(--primary-blue);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.custom-select select:focus {
+  @apply outline-none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(0, 77, 127, 0.2);
+}
+
+.custom-select select:hover {
+  border-color: var(--primary-blue-light);
+}
+
+.select-arrow {
+  @apply absolute pointer-events-none;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-blue);
+  transition: var(--transition);
+}
+
+.custom-select select:focus + .select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Değerlendirme Yap Butonu */
+.write-review-button {
+  @apply flex items-center border-0 cursor-pointer relative overflow-hidden;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-light));
+  color: white;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  z-index: 1;
+}
+
+.write-review-button:before {
+  @apply absolute w-full h-full;
+  content: '';
+  top: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.write-review-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.write-review-button:hover:before {
+  left: 100%;
+}
+
+.write-review-button:active {
+  transform: translateY(-1px);
+}
+
+.review-icon {
+  font-size: 16px;
+}
+
+/* Hata ve boş durumlar */
+.reviews-error,
+.reviews-empty {
+  @apply w-full text-center flex flex-col items-center;
+  padding: 50px 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+/* Filtrelenmiş boş durum için özel stil */
+.reviews-empty.filtered-empty {
+  padding: 40px 30px;
+  background-color: var(--primary-blue-lighter);
+  border: 1px dashed var(--primary-blue-light);
+  transition: var(--transition);
+}
+
+.reviews-error .error-icon {
+  font-size: 48px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.reviews-empty {
+  @apply text-center;
+  padding: 40px 20px;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.empty-title {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.empty-title .highlight {
+  color: var(--primary-orange);
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.empty-description {
+  color: var(--dark-gray);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+/* Boş durumda gösterilen yeni değerlendirme butonu */
+.empty-review-button {
+  @apply border-0 cursor-pointer relative overflow-hidden;
+  background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-light));
+  color: white;
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+  margin-top: 25px;
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-review-button:before {
+  @apply absolute w-full h-full;
+  content: '';
+  top: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.empty-review-button:hover {
+  background-color: var(--primary-orange-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.empty-review-button:hover:before {
+  left: 100%;
+}
+
+.empty-review-button:active {
+  transform: translateY(-1px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Değerlendirme Listesi */
+.reviews-list {
+  @apply flex flex-col;
+  gap: 20px;
+}
+
+.review-item {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.review-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.review-header {
+  @apply flex;
+  margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+  @apply rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  background-color: var(--primary-blue-lighter);
+}
+
+.reviewer-avatar img {
+  @apply w-full h-full object-cover;
+}
+
+.avatar-icon {
+  font-size: 26px;
+  color: var(--primary-blue);
+}
+
+.avatar-icon.female-avatar {
+  color: #E91E63; /* Kadın avatarı için pembe renk */
+}
+
+.avatar-icon.male-avatar {
+  color: #2196F3; /* Erkek avatarı için mavi renk */
+}
+
+.reviewer-info {
+  @apply flex-1;
+}
+
+.reviewer-name-container {
+  @apply flex items-center flex-wrap;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary-blue);
+}
+
+.reviewer-stars {
+  @apply flex items-center;
+}
+
+.reviewer-stars .review-stars {
+  @apply flex;
+}
+
+.reviewer-stars .star {
+  font-size: 14px;
+  margin-right: 2px;
+  color: var(--mid-gray);
+}
+
+.reviewer-stars .star.active {
+  color: var(--primary-orange);
+}
+
+.rating-value {
+  margin-left: 5px;
+  font-weight: 600;
+  color: var(--primary-orange);
+}
+
+.review-date {
+  font-size: 13px;
+  color: var(--dark-gray);
+}
+
+.review-content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* İlan bilgileri */
+.review-listing {
+  @apply flex;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.listing-image {
+  @apply overflow-hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.listing-image img {
+  @apply w-full h-full object-cover;
+}
+
+.listing-info {
+  @apply flex-1 flex flex-col justify-center;
+}
+
+.listing-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.listing-price {
+  font-weight: 600;
+  color: var(--primary-orange);
+}
+
+/* Yükleniyor durumu için iskelet ekranı */
+.reviews-stats-skeleton,
+.review-item-skeleton {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.reviews-stats-skeleton {
+  @apply flex;
+}
+
+.stats-left-skeleton {
+  flex: 0 0 30%;
+  padding: 20px;
+  border-right: 1px solid var(--mid-gray);
+}
+
+.stats-right-skeleton {
+  flex: 0 0 65%;
+  padding: 20px;
+}
+
+.rating-bar-skeleton {
+  @apply relative overflow-hidden;
+  height: 12px;
+  background-color: var(--mid-gray);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.rating-bar-skeleton::after {
+  @apply absolute w-full h-full;
+  content: "";
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+.review-header-skeleton {
+  @apply flex;
+  margin-bottom: 15px;
+}
+
+.reviewer-avatar-skeleton {
+  @apply rounded-full relative overflow-hidden;
+  width: 50px;
+  height: 50px;
+  background-color: var(--mid-gray);
+  margin-right: 15px;
+}
+
+.reviewer-info-skeleton {
+  @apply flex-1;
+}
+
+.reviewer-name-skeleton {
+  @apply relative overflow-hidden;
+  height: 20px;
+  width: 150px;
+  background-color: var(--mid-gray);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.review-date-skeleton {
+  @apply relative overflow-hidden;
+  height: 14px;
+  width: 100px;
+  background-color: var(--mid-gray);
+  border-radius: 4px;
+}
+
+.review-rating-skeleton {
+  @apply relative overflow-hidden;
+  height: 20px;
+  width: 120px;
+  background-color: var(--mid-gray);
+  border-radius: 4px;
+}
+
+.review-content-skeleton {
+  margin-top: 15px;
+}
+
+.skeleton-line {
+  @apply w-full relative overflow-hidden;
+  height: 14px;
+  background-color: var(--mid-gray);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line.short {
+  width: 70%;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .stats-left {
+    flex: 0 0 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--mid-gray);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stats-right {
+    @apply p-0;
+    flex: 0 0 100%;
+  }
+  
+  .enhanced-filter-section {
+    @apply flex-col items-stretch;
+    gap: 15px;
+  }
+  
+  .filters-container {
+    @apply flex-col;
+    gap: 15px;
+  }
+  
+  .write-review-button {
+    @apply w-full justify-center;
+  }
+}
+
+/* Daha Fazla Yorum Göster Bölümü */
+.more-reviews-container {
+  @apply text-center flex flex-col items-center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+.reviews-limit-message {
+  @apply flex items-center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.info-icon {
+  color: #2196F3;
+}
+
+.more-reviews-button {
+  @apply border-0 cursor-pointer inline-flex items-center justify-center;
+  background-color: #ff6b00;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.more-reviews-button:hover {
+  background-color: #e56200;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+} 

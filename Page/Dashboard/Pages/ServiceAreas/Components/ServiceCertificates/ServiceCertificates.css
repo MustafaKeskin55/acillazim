@@ -1,0 +1,402 @@
+.service-certificates-section {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--gray-100);
+}
+
+.service-certificates-header {
+  @apply flex justify-between items-start flex-wrap;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+  gap: 1rem;
+}
+
+.service-certificates-header h2 {
+  @apply m-0 flex items-center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: black;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.service-certificates-container {
+  /* mevcut stiller */
+}
+
+.service-certificates-actions {
+  @apply flex flex-wrap justify-end items-center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+/* Butonlar */
+.service-certificates-edit-button,
+.service-certificates-save-button,
+.service-certificates-cancel-button,
+.service-certificates-add-button {
+  @apply inline-flex items-center cursor-pointer;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.service-certificates-edit-button {
+  background: linear-gradient(135deg, #4a90e2, #5a6acf);
+  color: white;
+  border: 1px solid #4285F4;
+}
+
+.service-certificates-save-button {
+  background: linear-gradient(135deg, #4a90e2, #5a6acf);
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.service-certificates-save-button.success {
+  /* başarılı kaydetme durumu stilleri */
+}
+
+.service-certificates-cancel-button {
+  background: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+.service-certificates-add-button {
+  background: var(--gray-50);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+/* Hover efektleri */
+.service-certificates-edit-button:hover,
+.service-certificates-save-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(66, 133, 244, 0.3);
+}
+
+.service-certificates-add-button:hover,
+.service-certificates-cancel-button:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+/* Sertifika grid */
+.service-certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.certificate-item {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.certificate-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
+}
+
+/* Form elemanları */
+.certificate-edit-form {
+  @apply flex flex-col;
+  gap: 1rem;
+}
+
+.certificate-input-group {
+  @apply flex items-start;
+  gap: 0.75rem;
+}
+
+.certificate-name-input,
+.certificate-date-input {
+  padding: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.certificate-name-input {
+
+  @apply flex-1;
+}
+
+.certificate-name-input:focus,
+.certificate-date-input:focus {
+  @apply outline-none;
+  border-color: var(--primary);
+}
+
+.service-certificates-remove-button {
+  @apply cursor-pointer flex items-center justify-center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  background: white;
+  color: var(--gray-400);
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.service-certificates-remove-button:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+  color: var(--danger);
+}
+
+/* Sertifika görüntüleme */
+.certificate-display {
+
+  @apply flex justify-between items-center;
+}
+
+.certificate-info {
+
+  @apply flex-1;
+}
+
+.certificate-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.5rem;
+}
+
+.certificate-date {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+@media (max-width: 768px) {
+  .service-certificates-section {
+    padding: 1.5rem;
+  }
+
+  .service-certificates-header {
+    @apply flex-col items-stretch;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .service-certificates-actions {
+    @apply w-full;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .service-certificates-actions button {
+    @apply w-full justify-center;
+    min-height: 46px;
+  }
+
+  .service-certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certificate-input-group {
+
+    @apply flex-col;
+  }
+
+  .certificate-name-input,
+  .certificate-date-input {
+
+    @apply w-full;
+  }
+
+  .service-certificates-remove-button {
+    align-self: flex-end;
+  }
+}
+
+/* Diğer özel class isimleri */
+.service-certificates-item {
+  /* sertifika öğesi stilleri */
+}
+
+.service-certificates-input {
+  /* input stilleri */
+}
+
+/* Sertifika ikonu için yeni stil */
+.certificate-icon {
+  @apply flex-shrink-0;
+  width: 32px;
+  height: 32px;
+  color: #4285F4;  /* Google mavi tonu */
+  margin-right: 1rem;
+  background: rgba(66, 133, 244, 0.1);  /* Hafif mavi arka plan */
+  padding: 6px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Hover durumunda efekt */
+.certificate-item:hover .certificate-icon {
+  transform: scale(1.1);
+  color: #5a6acf;  /* Hover'da renk değişimi */
+  background: rgba(90, 106, 207, 0.15);
+}
+
+/* Düzenleme modunda ikon stili */
+.certificate-edit-form .certificate-icon {
+  opacity: 0.7;
+  background: rgba(66, 133, 244, 0.05);
+}
+
+/* Mevcut stillere ek olarak */
+
+.certificate-inputs {
+  @apply flex flex-col flex-1;
+  gap: 0.5rem;
+}
+
+.certificate-title-input,
+.certificate-name-input,
+.certificate-date-input {
+  @apply w-full;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.certificate-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.25rem;
+}
+
+.certificate-name {
+  font-size: 1rem;
+  color: var(--gray-700);
+  margin: 0 0 0.5rem;
+}
+
+.service-certificates-add-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .certificate-inputs {
+
+    @apply w-full;
+  }
+  
+  .certificate-input-group {
+    @apply flex-col;
+    gap: 1rem;
+  }
+  
+  .service-certificates-remove-button {
+    align-self: flex-end;
+  }
+}
+
+:root {
+
+  @apply relative;
+}
+
+/* Warning Modal Styles */
+.certificate-warning-modal-overlay {
+  @apply fixed flex justify-center items-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.certificate-warning-modal {
+  @apply overflow-hidden;
+  background: white;
+  border-radius: 16px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s ease;
+}
+
+.certificate-warning-modal-header {
+  padding: 1rem 1.5rem;
+  background-color: #FF5722;
+  color: white;
+}
+
+.certificate-warning-modal-header h3 {
+  @apply m-0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.certificate-warning-modal-body {
+  padding: 1.5rem;
+}
+
+.certificate-warning-modal-body p {
+  @apply m-0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.certificate-warning-modal-footer {
+  @apply flex justify-center;
+  padding: 1rem 1.5rem;
+  gap: 0.75rem;
+}
+
+.certificate-warning-ok-button {
+  @apply border-0 cursor-pointer;
+  background: #FF5722;
+  color: white;
+  border-radius: 8px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.certificate-warning-ok-button:hover {
+  background: #F04D16;
+}
+
+.certificate-title-error {
+  border-color: #e53935 !important;
+  background-color: rgba(229, 57, 53, 0.05) !important;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

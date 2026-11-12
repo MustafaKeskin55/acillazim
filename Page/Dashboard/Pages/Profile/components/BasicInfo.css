@@ -1,0 +1,672 @@
+/* ==========================================================================
+   BasicInfo Component Styles — 2026 Sofistike Ara Renk Paleti & 4-Skill Mimarisi
+   (impeccable, jakub-krehel-skills, taste-skill, ui-ux-pro-max)
+   Not: Kartların üstünde veya yanında dekoratif renkli şerit (::before) kullanılmaz.
+   ========================================================================== */
+
+.bi-basic-info-container {
+
+  @apply w-full box-border;
+}
+
+.bi-basic-info-form {
+  @apply flex flex-col;
+  gap: 24px;
+}
+
+/* 1. Kart Blokları (Section Cards — Sade, Düzgün & Kurumsal) */
+.bi-section-card {
+  @apply relative;
+  overflow: visible;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tarih seçici açıldığında kartı sticky save barın (z-index: 25) tamamen önüne çıkarır */
+.bi-section-card--popover-open,
+.bi-section-card:has(.cdp-is-open),
+.bi-form-group:has(.cdp-is-open) {
+  z-index: 99999 !important;
+}
+
+.bi-section-card::before {
+  @apply hidden;
+  content: none;
+}
+
+.bi-section-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+.bi-fade-in {
+  animation: biSectionFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes biSectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bi-section-header {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.bi-section-title {
+  @apply m-0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.bi-section-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* 2. Grid & Form Grupları */
+.bi-form-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* 3'lü Yan Yana Grid (İl / İlçe / Mahalle) */
+.bi-form-grid-3 {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 960px) {
+  .bi-form-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .bi-form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bi-form-group {
+  @apply flex flex-col;
+  min-width: 0;
+}
+
+.bi-form-group.bi-full-width {
+  grid-column: 1 / -1;
+}
+
+.bi-label-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.bi-label-header label {
+  margin-bottom: 0;
+}
+
+.bi-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #bbf7d0;
+  line-height: 1.2;
+}
+
+.bi-form-group label {
+  @apply flex items-center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+  gap: 4px;
+}
+
+.bi-required {
+  color: #ff6b00;
+  font-weight: 700;
+}
+
+.bi-field-hint {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Form Inputları ve Seçiciler */
+.bi-form-group input,
+.bi-form-group select,
+.bi-form-group textarea {
+  @apply w-full box-border;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bi-form-group input {
+  height: 42px;
+}
+
+.bi-form-group input:hover,
+.bi-form-group select:hover,
+.bi-form-group textarea:hover {
+  border-color: #94a3b8;
+}
+
+.bi-form-group input:focus,
+.bi-form-group select:focus,
+.bi-form-group textarea:focus {
+  @apply outline-none;
+  background-color: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.12);
+}
+
+.bi-form-group input:disabled {
+  @apply cursor-not-allowed;
+  background-color: #f8fafc;
+  color: #64748b;
+  border-color: #e2e8f0;
+}
+
+/* Modern Select Styling */
+.bi-select {
+  @apply cursor-pointer;
+  height: 42px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003466' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.bi-select:disabled {
+  @apply cursor-not-allowed;
+  background-color: #f1f5f9;
+  color: #94a3b8;
+}
+
+/* Textarea */
+.bi-form-group textarea {
+  resize: vertical;
+  min-height: 104px;
+  line-height: 1.6;
+}
+
+.bi-char-counter {
+  @apply text-right;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3. Kurumsal / Şirket Bilgileri Switch Kutusu */
+.bi-corporate-switch-box {
+  @apply flex items-center justify-between;
+  gap: 20px;
+  padding: 18px 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.bi-corporate-switch-text {
+  @apply flex-1;
+}
+
+.bi-switch-title {
+  @apply block;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.bi-switch-desc {
+  @apply m-0;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+/* Toggle Switch */
+.bi-switch {
+  @apply relative inline-block flex-shrink-0 cursor-pointer;
+  width: 50px;
+  height: 28px;
+}
+
+.bi-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.bi-slider {
+  @apply absolute cursor-pointer;
+  inset: 0;
+  background-color: #cbd5e1;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 999px;
+}
+
+.bi-slider::before {
+  @apply absolute rounded-full;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.bi-switch input:checked + .bi-slider {
+  background: #ff6b00;
+}
+
+.bi-switch input:checked + .bi-slider::before {
+  transform: translateX(22px);
+}
+
+.bi-switch input:focus-visible + .bi-slider {
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.25);
+}
+
+.bi-corporate-grid {
+  animation: biFadeIn 0.2s ease-out;
+}
+
+@keyframes biFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   4. SOSYAL MEDYA BÖLÜMÜ — 2026 KURUMSAL BENTO KART TASARIMI
+   ========================================================================== */
+
+.bi-social-section-header {
+  @apply flex items-start justify-between flex-wrap;
+  gap: 16px;
+}
+
+.bi-social-header-copy {
+  @apply flex-1;
+  min-width: 220px;
+}
+
+.bi-social-status-pill {
+  @apply inline-flex items-center;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.bi-social-status-pill.has-links {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+.bi-social-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.bi-social-item {
+  @apply flex flex-col;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  min-width: 0;
+  transition: all 0.2s ease;
+}
+
+.bi-social-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px -4px rgba(15, 23, 42, 0.06);
+}
+
+.bi-social-item:focus-within {
+  border-color: #003466;
+  box-shadow: 0 0 0 3px rgba(0, 52, 102, 0.1);
+}
+
+.bi-social-item--filled {
+  border-color: #cbd5e1;
+}
+
+.bi-social-label {
+  @apply m-0 cursor-pointer font-semibold;
+  font-size: 13px;
+  color: #334155;
+}
+
+.bi-input-with-icon {
+  @apply relative flex items-center w-full;
+  min-width: 0;
+}
+
+.bi-social-icon-wrapper {
+  @apply absolute flex items-center justify-center pointer-events-none;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--platform-bg, rgba(79, 70, 229, 0.08));
+  color: var(--platform-color, #4f46e5);
+  font-size: 16px;
+  z-index: 2;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bi-social-item:hover .bi-social-icon-wrapper,
+.bi-social-item:focus-within .bi-social-icon-wrapper {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.bi-input-with-icon input,
+.bi-input-with-icon input[type="url"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: 48px !important;
+  padding: 0 14px 0 50px !important;
+  font-family: inherit !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 11px !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.02) !important;
+}
+
+.bi-input-with-icon input::placeholder {
+  color: #94a3b8 !important;
+  font-weight: 400 !important;
+}
+
+.bi-input-with-icon input:hover,
+.bi-input-with-icon input[type="url"]:hover {
+  border-color: #94a3b8 !important;
+}
+
+.bi-input-with-icon input:focus,
+.bi-input-with-icon input[type="url"]:focus {
+  outline: none !important;
+  border-color: var(--platform-color, #4f46e5) !important;
+  box-shadow: 0 0 0 3px var(--platform-bg, rgba(79, 70, 229, 0.12)) !important;
+}
+
+.bi-social-actions {
+  @apply flex justify-center;
+  margin-top: 22px;
+}
+
+.bi-toggle-platforms-button {
+  @apply inline-flex items-center justify-center cursor-pointer;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.bi-toggle-platforms-button:hover {
+  background: #f8fafc;
+  border-color: #ff6b00;
+  color: #ff6b00;
+}
+
+.bi-toggle-icon {
+  color: #64748b;
+}
+
+.bi-toggle-count {
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5. Alt Aksiyon Çubuğu (Sticky Save Bar — Erişilebilir & Kaçırılmaz) */
+.bi-actions-bar {
+  position: sticky;
+  bottom: 16px;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 10px 25px -4px rgba(0, 43, 73, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.bi-actions-inner {
+  @apply flex items-center justify-between flex-wrap;
+  gap: 16px;
+}
+
+.bi-actions-hint {
+  @apply m-0;
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.bi-save-button {
+  @apply inline-flex items-center justify-center border-0 cursor-pointer;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 24px;
+  background: #ff6b00;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.28);
+}
+
+.bi-save-button:hover:not(:disabled) {
+  background: #e65c00;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 107, 0, 0.35);
+}
+
+.bi-save-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.bi-save-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.65;
+}
+
+.bi-spinner {
+  animation: biSpin 0.8s linear infinite;
+}
+
+@keyframes biSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 6. Bildirim Durumu Toast */
+.bi-save-status {
+  @apply fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 12px 28px -6px rgba(30, 41, 59, 0.22);
+  z-index: 9999;
+  animation: biToastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes biToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bi-save-status.loading {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.bi-save-status.success {
+  background: #0d9488;
+  color: #ffffff;
+}
+
+.bi-save-status.error {
+  background: #e11d48;
+  color: #ffffff;
+}
+
+.bi-save-status.warning {
+  background: #d97706;
+  color: #ffffff;
+}
+
+/* Responsive Uyarlamalar */
+@media (max-width: 960px) {
+  .bi-social-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .bi-social-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bi-section-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .bi-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .bi-social-item {
+    padding: 12px 13px;
+  }
+
+  .bi-toggle-platforms-button {
+
+    @apply w-full;
+  }
+
+  .bi-corporate-switch-box {
+
+    @apply flex-col items-start;
+  }
+
+  .bi-actions-inner {
+
+    @apply flex-col items-stretch;
+  }
+
+  .bi-save-button {
+
+    @apply w-full;
+  }
+
+  .bi-actions-hint {
+
+    @apply text-center;
+  }
+}

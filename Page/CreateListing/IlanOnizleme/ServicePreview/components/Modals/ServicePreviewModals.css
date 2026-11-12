@@ -1,0 +1,432 @@
+/* ServicePreviewModals Styles */
+
+/* Modern Modal Styles */
+.service-preview-modals__modal-overlay {
+  @apply fixed flex items-center justify-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.service-preview-modals__modal {
+  @apply overflow-hidden relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 24px;
+  max-width: 480px;
+  width: 90vw;
+  max-height: 80vh;
+  box-shadow: 
+    0 32px 80px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.service-preview-modals__modal-header {
+  @apply flex justify-between items-center;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-preview-modals__modal-header h3 {
+  @apply m-0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f172a 0%, #334155 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-preview-modals__modal-close {
+  @apply border-0 flex items-center justify-center cursor-pointer;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+.service-preview-modals__modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #334155;
+  transform: scale(1.1);
+}
+
+.service-preview-modals__modal-body {
+  @apply text-center;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.service-preview-modals__modal-icon {
+  @apply flex justify-center;
+  margin-bottom: 1.5rem;
+}
+
+.service-preview-modals__modal-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 52, 102, 0.3));
+}
+
+/* WhatsApp için gerçek WhatsApp yeşili */
+.service-preview-modals__modal-icon svg:not(.fa-phone):not(.fa-envelope) {
+  color: #25d366;
+  filter: drop-shadow(0 4px 12px rgba(37, 211, 102, 0.3));
+}
+
+/* Message için mor rengi */  
+.service-preview-modals__modal-icon .fa-envelope {
+  color: #6A5ACD;
+  filter: drop-shadow(0 4px 12px rgba(106, 90, 205, 0.3));
+}
+
+/* Phone için sitenin primary rengi */  
+.service-preview-modals__modal-icon .fa-phone {
+  color: #003466;
+  filter: drop-shadow(0 4px 12px rgba(0, 52, 102, 0.3));
+}
+
+.service-preview-modals__modal-message {
+  @apply m-0 text-left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.service-preview-modals__modal-actions {
+  @apply flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.service-preview-modals__modal-btn {
+  @apply flex-1 flex items-center justify-center border-0 cursor-pointer relative overflow-hidden;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.service-preview-modals__modal-btn::before {
+  @apply absolute w-full h-full;
+  content: '';
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.service-preview-modals__modal-btn:hover::before {
+  left: 100%;
+}
+
+.service-preview-modals__modal-btn.primary {
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa640 100%);
+  color: white;
+  box-shadow: 
+    0 8px 32px rgba(255, 140, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-preview-modals__modal-btn.primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 16px 48px rgba(255, 140, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #e07600 0%, #ff8c00 100%);
+}
+
+.service-preview-modals__modal-btn svg {
+  font-size: 1.125rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.service-preview-modals__modal-btn:hover svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Gallery Modal Styles */
+.service-preview-modals__gallery-modal {
+  @apply fixed w-full h-full flex flex-col;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  animation: galleryModalFadeIn 0.3s ease;
+}
+
+@keyframes galleryModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service-preview-modals__gallery-modal-header {
+  @apply absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10001;
+}
+
+.service-preview-modals__gallery-modal-close {
+  @apply border-0 rounded-full flex items-center justify-center cursor-pointer;
+  background: rgba(255, 255, 255, 0.1);
+  width: 48px;
+  height: 48px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.service-preview-modals__gallery-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.service-preview-modals__gallery-modal-main {
+  @apply flex-1 flex items-center justify-center relative;
+  padding: 80px 20px 120px;
+}
+
+.service-preview-modals__gallery-modal-nav {
+  @apply absolute border-0 rounded-full flex items-center justify-center cursor-pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  width: 56px;
+  height: 56px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  color: white;
+}
+
+.service-preview-modals__gallery-modal-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.service-preview-modals__gallery-modal-nav.prev {
+  left: 20px;
+}
+
+.service-preview-modals__gallery-modal-nav.next {
+  right: 20px;
+}
+
+.service-preview-modals__gallery-modal-nav svg {
+  font-size: 20px;
+}
+
+.service-preview-modals__gallery-modal-content {
+  @apply flex items-center justify-center;
+  max-width: 90vw;
+  max-height: 70vh;
+}
+
+.service-preview-modals__gallery-modal-image-container {
+  @apply relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.service-preview-modals__gallery-modal-image-container img {
+  @apply object-contain;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Protected Image - Filigran koruması */
+.service-preview-modals__gallery-modal-image-container .protected-image {
+  @apply select-none pointer-events-auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* Ek filigran koruması - Merkezi filigran */
+.service-preview-modals__gallery-modal-image-container::before {
+  @apply absolute pointer-events-none;
+  content: 'Acillazım.com';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  color: rgba(255, 255, 255, 0.06);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.service-preview-modals__gallery-modal-watermark {
+  @apply absolute pointer-events-none;
+  bottom: 15px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.2px;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+.service-preview-modals__gallery-modal-footer {
+  @apply absolute flex flex-col;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  gap: 15px;
+}
+
+.service-preview-modals__gallery-modal-counter {
+  @apply text-center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .service-preview-modals__modal {
+    max-width: 95vw;
+    border-radius: 20px;
+  }
+
+  .service-preview-modals__modal-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+
+  .service-preview-modals__modal-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-preview-modals__modal-body {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .service-preview-modals__modal-actions {
+    @apply flex-col;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .service-preview-modals__modal-btn {
+    @apply w-full;
+  }
+  
+  /* Gallery Modal Responsive */
+  .service-preview-modals__gallery-modal-main {
+    padding: 60px 15px 100px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav.prev {
+    left: 15px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav.next {
+    right: 15px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav svg {
+    font-size: 18px;
+  }
+  
+  .service-preview-modals__gallery-modal-close {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .service-preview-modals__gallery-modal-footer {
+    padding: 15px;
+  }
+  
+  .service-preview-modals__gallery-modal-image-container::before {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-preview-modals__gallery-modal-main {
+    padding: 50px 10px 80px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav.prev {
+    left: 10px;
+  }
+  
+  .service-preview-modals__gallery-modal-nav.next {
+    right: 10px;
+  }
+  
+  .service-preview-modals__gallery-modal-image-container::before {
+    font-size: 1.5rem;
+  }
+}

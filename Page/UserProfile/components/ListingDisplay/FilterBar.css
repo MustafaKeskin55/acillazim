@@ -1,0 +1,639 @@
+/* FilterBar.css - İlan filtreleme bileşeni stilleri */
+
+.filter-bar__container {
+  @apply w-full relative;
+  margin-bottom: 25px;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.filter-bar__main {
+  @apply flex items-center justify-between;
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.filter-bar__spacer { @apply flex-1; /* Sol tarafı doldurur */
+}
+
+.filter-bar__controls {
+  @apply flex items-center;
+  gap: 15px; /* İki kontrol arasındaki boşluk */
+}
+
+.filter-container {
+
+  @apply relative;
+}
+
+.filter-bar__view-mode-container {
+
+  @apply flex items-center relative;
+}
+
+/* Sıralama Dropdown */
+.filter-bar__sort-dropdown {
+  @apply relative;
+  z-index: 9999 !important; /* En yüksek z-index */
+}
+
+.filter-bar__sort-button {
+  @apply cursor-pointer flex items-center justify-between overflow-hidden outline-none relative;
+  padding: 9px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #444;
+  min-width: 240px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 9999;
+}
+
+.filter-bar__dropdown-icon {
+  margin-left: 8px;
+  transition: transform 0.25s ease;
+  font-size: 12px;
+  color: #888;
+}
+
+.filter-bar__dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menü */
+.filter-bar__dropdown-menu {
+  @apply absolute w-full overflow-visible;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #eaedf1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 99999;
+  margin-top: 5px;
+  padding: 8px 0;
+  max-height: none;
+  animation: fadeInDropdown 0.2s ease-out;
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-bar__dropdown-item {
+  @apply cursor-pointer;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #f5f5f5;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.filter-bar__dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.filter-bar__dropdown-item:hover {
+  background-color: #f5f9fd;
+  color: #3498db;
+}
+
+.filter-bar__dropdown-item.active {
+  background-color: #ebf5fd;
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Görünüm Seçenekleri */
+.filter-bar__view-mode-selector {
+  @apply flex overflow-hidden;
+  background-color: #fff;
+  border: 1px solid #eaedf1;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+.filter-bar__view-mode-button {
+  @apply border-0 cursor-pointer;
+  background: none;
+  padding: 9px 12px;
+  color: #777;
+  transition: all 0.25s ease;
+  font-size: 14px;
+}
+
+.filter-bar__view-mode-button.active {
+  background-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3) inset;
+}
+
+.filter-bar__view-mode-button:hover:not(.active) {
+  background-color: #f1f7fd;
+  color: #3498db;
+}
+
+/* Kategori Filtreleme */
+.filter-bar__category-filter {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Webkit tarayıcılar için kaydırma çubuğunu gizle */
+.filter-bar__category-filter::-webkit-scrollbar {
+
+  @apply hidden;
+}
+
+/* Firefox için kaydırma çubuğunu gizle */
+.filter-bar__category-filter {
+  scrollbar-width: none;
+}
+
+/* IE ve Edge için kaydırma çubuğunu gizle */
+.filter-bar__category-filter {
+  -ms-overflow-style: none;
+}
+
+.filter-bar__category-options {
+  @apply flex flex-wrap;
+  gap: 10px;
+}
+
+.filter-bar__category-option {
+  @apply cursor-pointer;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: #f5f7fa;
+  font-size: 13px;
+  color: #555;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  border: 1px solid transparent;
+}
+
+.filter-bar__category-option:hover {
+  background-color: #e9f0f7;
+  transform: translateY(-1px);
+}
+
+.filter-bar__category-option.active {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.15);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .filter-bar__main {
+    @apply flex-wrap;
+    gap: 12px;
+  }
+  
+  .filter-bar__controls {
+
+    @apply w-full justify-between;
+  }
+  
+  .filter-bar__sort-button {
+    min-width: 180px;
+  }
+  
+  .filter-bar__view-mode-container {
+    flex: 0;
+  }
+  
+  .filter-bar__category-filter {
+    padding: 14px 16px;
+  }
+  
+  .filter-bar__category-options {
+    gap: 8px;
+  }
+  
+  .filter-bar__category-option {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar__main {
+    display: none !important;
+  }
+  
+  /* Kontrol bölümü ile ilgili tüm elementleri gizle */
+  .filter-bar__controls,
+  .filter-bar__view-mode-container,
+  .filter-bar__sort-dropdown,
+  .filter-bar__view-mode-selector,
+  .filter-bar__sort-button {
+    display: none !important;
+  }
+  
+  /* Ana bölüm içindeki spacer'ı da gizleyelim */
+  .filter-bar__spacer {
+
+    @apply hidden;
+  }
+  
+  .filter-bar__category-filter {
+    padding: 12px 8px;
+    overflow-x: auto; /* Yatay kaydırma ekle */
+    -webkit-overflow-scrolling: touch; /* iOS için akıcı kaydırma */
+    scrollbar-width: none; /* Firefox için kaydırma çubuğunu gizle */
+    -ms-overflow-style: none; /* IE ve Edge için kaydırma çubuğunu gizle */
+  }
+  
+  /* Webkit tarayıcılar için kaydırma çubuğunu gizle (mobil için) */
+  .filter-bar__category-filter::-webkit-scrollbar {
+
+    @apply hidden;
+  }
+  
+  .filter-bar__category-options { @apply flex flex-nowrap; /* Kategori seçeneklerinin satır atlamasını engelle */
+    gap: 6px;
+    padding: 0 6px; /* Başlangıç ve bitiş için küçük bir padding */
+    min-width: min-content; /* İçeriği sığdırmak için minimum genişlik */
+    width: auto; /* Genişliği içeriğe göre ayarla */
+  }
+  
+  .filter-bar__category-option {
+    padding: 5px 10px;
+    font-size: 11px;
+    flex: 0 0 auto; /* Öğelerin daralmasını engelle */
+    white-space: nowrap; /* Metin satır atlamasın */
+  }
+}
+
+/* FilterBar.css - İlan filtreleme bileşeni stilleri */
+
+.filter-bar__container {
+  @apply w-full relative;
+  margin-bottom: 20px;
+  font-family: inherit;
+  transform: translateZ(0); /* Kaymaları önler */
+  will-change: transform; /* Performans iyileştirme */
+  z-index: 10; /* Dropdown düzgün çalışsın */
+}
+
+.filter-bar__main {
+  @apply flex items-center justify-between;
+  background-color: #f9fafb;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  gap: 12px; /* Butonlar arası boşluk ekler */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Filtre ve Sıralama Butonları */
+.filter-button, 
+.sort-button {
+  @apply flex items-center cursor-pointer relative flex-1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #eaedf1;
+  font-size: 14px;
+  color: #444;
+  transition: all 0.2s ease;
+  font-weight: 500; /* Eşit genişlikte olsunlar */
+  min-width: 140px;
+  transform: translateZ(0); /* Kaymaları önler */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+.filter-button:hover, 
+.sort-button:hover {
+  border-color: #d0d7de;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.filter-button svg, 
+.sort-button svg {
+  margin-right: 10px;
+  color: #3498db;
+  font-size: 14px;
+}
+
+.dropdown-icon {
+  @apply absolute;
+  margin-left: 8px !important;
+  transition: transform 0.25s ease;
+  font-size: 12px;
+  color: #888 !important;
+  right: 12px;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menüler */
+.dropdown-menu {
+  @apply absolute overflow-y-auto;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 240px;
+  background-color: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  z-index: 1000;
+  margin-top: 5px;
+  max-height: 320px;
+  border: 1px solid #f0f0f0;
+  transform: translateZ(0); /* Kaymaları önler */
+  animation: fadeInMenu 0.2s ease forwards;
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sort-button .dropdown-menu {
+  min-width: 240px;
+}
+
+.dropdown-item {
+  @apply cursor-pointer;
+  padding: 12px 16px;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f9fd;
+}
+
+.dropdown-item.active {
+  background-color: #ebf5fd;
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Filtre Dropdown */
+.filter-dropdown {
+  @apply absolute w-full;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 1000;
+  padding: 22px;
+  transform: translateZ(0); /* Kaymaları önler */
+  animation: fadeInDropdown 0.25s ease forwards;
+  border: 1px solid #f0f0f0;
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section h4 {
+  @apply flex items-center;
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+/* Fiyat Aralığı */
+.price-range, 
+.date-range {
+  @apply flex items-center;
+  gap: 12px;
+}
+
+.price-range input,
+.date-range input {
+  @apply flex-1;
+  padding: 10px 14px;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) inset;
+}
+
+.price-range input:focus,
+.date-range input:focus {
+  @apply outline-none;
+  border-color: #a0c4e7;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.range-separator {
+  color: #999;
+  font-weight: 500;
+}
+
+/* Filtre Aksiyonları */
+.filter-actions {
+  @apply flex justify-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.filter-apply,
+.filter-reset {
+  @apply cursor-pointer;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-apply {
+  @apply border-0;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.filter-apply:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+}
+
+.filter-reset {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.filter-reset:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .filter-bar__main {
+    @apply flex-wrap;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+  
+  .filter-button,
+  .sort-button {
+    @apply justify-between;
+    min-width: auto;
+    flex: 1 1 calc(50% - 10px);
+    padding: 9px 12px;
+  }
+  
+  .filter-bar__view-mode-selector {
+    flex: 0 0 auto;
+  }
+  
+  .filter-dropdown {
+    padding: 18px;
+  }
+  
+  .filter-bar__category-options {
+    gap: 8px;
+  }
+  
+  .filter-bar__category-option {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .price-range, 
+  .date-range {
+    @apply flex-col;
+    gap: 8px;
+  }
+  
+  .range-separator {
+
+    @apply hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar__main {
+    padding: 10px 12px;
+  }
+  
+  .filter-button,
+  .sort-button {
+    padding: 8px 10px;
+  }
+  
+  .filter-button span,
+  .sort-button span {
+    @apply overflow-hidden;
+    max-width: 60px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .filter-button svg, 
+  .sort-button svg {
+    margin-right: 6px;
+    font-size: 12px;
+  }
+  
+  .dropdown-icon {
+    right: 8px;
+    font-size: 10px;
+  }
+  
+  .filter-dropdown {
+    padding: 15px;
+  }
+  
+  .filter-section {
+    margin-bottom: 16px;
+  }
+  
+  .dropdown-item {
+    padding: 10px 14px;
+  }
+  
+  .filter-apply,
+  .filter-reset {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  
+  .filter-bar__view-mode-button {
+    padding: 8px 10px;
+  }
+}
+
+/* Button içerik düzeni */
+.button-content {
+
+  @apply flex items-center relative flex-1;
+}
+
+/* Filtre sayacı için rozet */
+.filter-badge {
+  @apply flex items-center justify-center rounded-full;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Bölüm başlığı ikonları */
+.section-icon {
+  margin-right: 8px;
+  color: #3498db;
+  font-size: 14px;
+} 

@@ -1,0 +1,385 @@
+/* ==========================================================================
+   ACİLLAZIM.COM — Pasif İlanlarım (2026 Kurumsal Tasarım Sistemi)
+   Navy (#003466 / #004B87) + Corporate Orange (#ff7a00 / #ea580c)
+   ========================================================================== */
+
+.listings-container {
+  @apply p-0 w-full box-border;
+  max-width: 100%;
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.listings-header {
+  @apply relative flex justify-between items-end flex-wrap w-full box-border overflow-hidden;
+  margin-bottom: 24px;
+  gap: 20px;
+  padding: 24px 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 52%, #f0fdfa 100%);
+  border-radius: 22px;
+  border: 1px solid #c7d2fe;
+  box-shadow:
+    0 12px 30px -12px rgba(79, 70, 229, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.listings-header__info {
+  @apply flex flex-col items-start flex-1;
+  gap: 12px;
+  min-width: 260px;
+}
+
+.listings-header__badge {
+  @apply inline-flex items-center uppercase;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.listings-header__badge svg {
+  color: #4f46e5;
+  font-size: 12px;
+}
+
+.listings-header__title-row {
+  @apply flex items-start;
+  gap: 15px;
+}
+
+.listings-header__icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 8px 18px -4px rgba(79, 70, 229, 0.28);
+}
+
+.listings-header__icon--passive {
+  background: linear-gradient(135deg, #db2777 0%, #e11d48 100%);
+  box-shadow: 0 8px 18px -4px rgba(219, 39, 119, 0.25);
+}
+
+.listings-header__text {
+  @apply flex flex-col;
+  gap: 5px;
+}
+
+.listings-header__heading-group {
+  @apply flex items-center flex-wrap;
+  gap: 10px;
+}
+
+.listings-header h1 {
+  @apply m-0;
+  font-size: 24px;
+  color: #0f172a;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.listings-count-badge {
+  @apply inline-flex items-center;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #047857;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.listings-count-badge--passive {
+  background: rgba(100, 116, 139, 0.12);
+  border-color: rgba(100, 116, 139, 0.24);
+  color: #334155;
+}
+
+.listings-subtitle {
+  @apply m-0;
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  max-width: 580px;
+}
+
+/* Arama ve Kategori Filtreleme */
+.search-filter {
+  @apply flex items-center flex-wrap;
+  gap: 12px;
+}
+
+.listings-container .search-box,
+.listings-container .filter-box {
+  @apply relative flex items-center border-0 p-0;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  background: transparent;
+  box-shadow: none;
+}
+
+.listings-container .search-icon {
+  @apply absolute pointer-events-none;
+  left: 14px;
+  color: #64748b;
+  font-size: 13.5px;
+  z-index: 2;
+}
+
+.listings-container .search-input {
+  @apply box-border;
+  height: 44px;
+  padding: 0 14px 0 40px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  width: 250px;
+  max-width: 100%;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.listings-container .search-input::placeholder {
+  color: #94a3b8;
+}
+
+.listings-container .search-input:focus {
+  @apply outline-none;
+  background: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3.5px rgba(0, 52, 102, 0.09);
+}
+
+.listings-container .filter-icon {
+  @apply absolute pointer-events-none;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #003466;
+  font-size: 13px;
+  transition: color 0.2s ease;
+  z-index: 2;
+}
+
+.listings-container .filter-select {
+  @apply cursor-pointer box-border;
+  height: 44px;
+  padding: 0 36px 0 38px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0f172a;
+  background: #f8fafc;
+  appearance: none;
+  transition: all 0.2s ease;
+  min-width: 185px;
+  max-width: 100%;
+}
+
+.listings-container .filter-box::after {
+  @apply absolute pointer-events-none;
+  content: '';
+  right: 14px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #003466;
+  border-bottom: 2px solid #003466;
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.listings-container .filter-select:hover {
+  border-color: #cbd5e1;
+}
+
+.listings-container .filter-select:focus {
+  @apply outline-none;
+  background: #ffffff;
+  border-color: #003466;
+  box-shadow: 0 0 0 3.5px rgba(0, 52, 102, 0.09);
+}
+
+/* Boş ve Yüklenme Durumları */
+.listings-empty {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 56px 24px;
+  color: #64748b;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px dashed #cbd5e1;
+  box-shadow: 0 6px 20px -6px rgba(15, 23, 42, 0.04);
+}
+
+.listings-empty__icon-wrap {
+  @apply flex items-center justify-center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(0, 52, 102, 0.07) 0%, rgba(255, 122, 0, 0.1) 100%);
+  margin-bottom: 16px;
+}
+
+.listings-empty__icon {
+  font-size: 26px;
+  color: #003466;
+}
+
+.listings-empty__spinner {
+  font-size: 26px;
+  color: #003466;
+  animation: listings-spin 0.9s linear infinite;
+}
+
+@keyframes listings-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.listings-empty h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.listings-empty p {
+  @apply m-0;
+  font-size: 14px;
+  color: #64748b;
+  max-width: 440px;
+  line-height: 1.55;
+}
+
+/* İlan Kartları Grid Yapısı */
+.listings-grid {
+  @apply justify-start w-full box-border;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 252px));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Sayfalama (Pagination) */
+.listings-pagination {
+  @apply flex justify-center items-center flex-wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.page-numbers {
+  @apply flex flex-wrap;
+  gap: 6px;
+}
+
+.page-btn {
+  @apply cursor-pointer;
+  height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: #c7d2fe;
+  color: #4f46e5;
+  background: #f5f3ff;
+}
+
+.page-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.45;
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  border-color: #4338ca;
+  color: #ffffff;
+  box-shadow: 0 6px 14px -4px rgba(79, 70, 229, 0.32);
+}
+
+/* Responsive (Tablet & Mobil) */
+@media (max-width: 1024px) {
+  .listings-container {
+    @apply p-0 box-border;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .listings-header {
+    @apply flex-col items-stretch;
+    padding: 20px 20px;
+    gap: 18px;
+  }
+
+  .search-filter {
+
+    @apply flex-col items-stretch w-full;
+  }
+
+  .listings-container .search-box,
+  .listings-container .filter-box {
+
+    @apply w-full;
+  }
+
+  .listings-container .search-input,
+  .listings-container .filter-select {
+
+    @apply w-full;
+  }
+
+  .listings-grid {
+    @apply justify-start;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 248px));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .listings-header {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .listings-header__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .listings-header h1 {
+    font-size: 20px;
+  }
+
+  .listings-subtitle {
+    font-size: 13px;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

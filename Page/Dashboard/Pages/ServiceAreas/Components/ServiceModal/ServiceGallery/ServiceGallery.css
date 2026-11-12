@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Galeri Sekmesi (ServiceGallery.css) — 2026 Kurumsal Tasarım
+   ========================================================================== */
+
+.service-gallery {
+
+  @apply p-0;
+}
+
+.service-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-gallery__item {
+  @apply relative overflow-hidden cursor-pointer;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #e2e8f0;
+  background: #f1f5f9;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.service-gallery__item:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.12);
+}
+
+.service-gallery__item img {
+  @apply w-full h-full object-cover block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-gallery__item:hover img {
+  transform: scale(1.04);
+}
+
+.service-gallery__item-overlay {
+  @apply absolute flex flex-col items-center justify-center;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.62);
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  color: #ffffff;
+  backdrop-filter: blur(4px);
+}
+
+.service-gallery__item-overlay svg {
+  font-size: 1.25rem;
+}
+
+.service-gallery__item-overlay span {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.service-gallery__item:hover .service-gallery__item-overlay {
+  opacity: 1;
+}
+
+.service-gallery__modal {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.88);
+  z-index: 1300;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.service-gallery__modal-content {
+  @apply relative overflow-hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+
+.service-gallery__modal-content img {
+  @apply block object-contain;
+  max-width: 100%;
+  max-height: calc(90vh - 64px);
+}
+
+.service-gallery__modal-close {
+  @apply absolute flex items-center justify-center cursor-pointer;
+  top: 0.85rem;
+  right: 0.85rem;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.service-gallery__modal-close:hover {
+  background: #ea580c;
+}
+
+.service-gallery__modal-title {
+  @apply text-center;
+  padding: 0.85rem 1.25rem;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.service-gallery--empty {
+  @apply text-center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.25rem 1.5rem;
+  color: #64748b;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.service-gallery--empty p {
+
+  @apply m-0;
+}
+
+@media (max-width: 960px) {
+  .service-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .service-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+}

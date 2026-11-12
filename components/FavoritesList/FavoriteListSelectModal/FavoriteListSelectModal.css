@@ -1,0 +1,178 @@
+/* ==========================================================================
+   FavoriteListSelectModal.css — Tailwind CSS (@apply Mimarisi)
+   - Merkezi Tasarım Sistemi Uyumlu Favori Listesi Seçim Modalı
+   - Standart Nötr Tipografi (text-slate-900, text-slate-500)
+   - Kurumsal Butonlar (bg-brand-deep hover:bg-brand-accent text-white)
+   ========================================================================== */
+
+.favorite-list-select-overlay {
+  @apply fixed inset-0 flex justify-center items-center bg-slate-900/60 backdrop-blur-sm z-[10000] p-4;
+}
+
+.favorite-list-select-modal {
+  @apply w-full flex flex-col bg-white rounded-2xl max-w-lg max-h-[85vh] shadow-2xl border border-slate-200 overflow-hidden;
+  animation: selectModalPopIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes selectModalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.favorite-list-select-header {
+  @apply flex justify-between items-center px-6 py-4 bg-brand-deep text-white border-b border-white/10;
+}
+
+.favorite-list-select-header h2 {
+  @apply m-0 text-base font-bold text-white tracking-tight flex items-center gap-2;
+}
+
+.favorite-list-select-close {
+  @apply border-0 bg-white/10 hover:bg-white/20 text-white w-8 h-8 rounded-lg flex items-center justify-center text-sm cursor-pointer transition-colors p-0;
+}
+
+.favorite-list-select-content {
+  @apply overflow-y-auto flex-1 p-6 flex flex-col gap-3;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.favorite-list-select-content::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.favorite-list-select-loading {
+  @apply flex flex-col items-center justify-center py-10 px-4 text-slate-500 gap-3 text-xs;
+}
+
+.favorite-list-select-loading i {
+  @apply text-2xl text-brand-deep;
+}
+
+.favorite-list-select-description {
+  @apply text-xs text-slate-500 m-0 leading-relaxed;
+}
+
+.favorite-list-select-lists {
+  @apply flex flex-col gap-2.5;
+}
+
+.favorite-list-select-item {
+  @apply flex items-center p-3.5 border border-slate-200 rounded-xl transition-all cursor-pointer bg-white hover:bg-slate-50 gap-3;
+}
+
+.favorite-list-select-item:hover {
+  @apply border-slate-300;
+}
+
+.favorite-list-select-item.selected {
+  @apply border-brand-deep bg-slate-50/80 shadow-sm;
+}
+
+.favorite-list-select-radio {
+  @apply flex items-center justify-center;
+}
+
+.favorite-list-select-radio input[type="radio"] {
+  @apply cursor-pointer accent-brand-deep w-4 h-4;
+}
+
+.favorite-list-select-info {
+  @apply flex-1 min-w-0 flex flex-col gap-0.5;
+}
+
+.favorite-list-select-info h3 {
+  @apply flex items-center text-sm font-semibold text-slate-900 m-0 gap-2 truncate;
+}
+
+.default-badge {
+  @apply inline-flex items-center px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10.5px] font-bold rounded-full whitespace-nowrap;
+}
+
+.favorite-list-select-info p {
+  @apply m-0 text-xs text-slate-400 font-normal;
+}
+
+.favorite-list-select-footer {
+  @apply flex justify-end gap-2.5 px-6 py-3.5 bg-slate-50 border-t border-slate-100;
+}
+
+.favorite-list-select-btn {
+  @apply inline-flex items-center gap-1.5 h-8 px-3.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors border;
+}
+
+.favorite-list-select-btn.cancel {
+  @apply border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+.favorite-list-select-btn.confirm {
+  @apply border-0 bg-brand-deep hover:bg-[#00254a] text-white shadow-sm;
+}
+
+.favorite-list-select-btn.confirm:disabled {
+  @apply opacity-50 cursor-not-allowed hover:bg-brand-deep;
+}
+
+/* Yeni Liste Oluştur Butonu ve Formu */
+.favorite-list-create-wrapper {
+  @apply mt-2 pt-3 border-t border-dashed border-slate-200;
+}
+
+.favorite-list-new-btn {
+  @apply inline-flex items-center justify-center gap-2 w-full h-8 px-3.5 bg-slate-50 hover:bg-slate-100 border border-dashed border-slate-300 hover:border-brand-deep text-slate-700 hover:text-brand-deep text-xs font-semibold rounded-lg cursor-pointer transition-colors;
+}
+
+.favorite-list-create-form {
+  @apply flex flex-col gap-2;
+}
+
+.favorite-list-create-input {
+  @apply w-full px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-xs outline-none focus:bg-white focus:border-brand-deep focus:ring-2 focus:ring-brand-deep/20 transition-all box-border;
+}
+
+.favorite-list-create-actions {
+  @apply flex justify-end gap-2;
+}
+
+.favorite-list-create-submit {
+  @apply inline-flex items-center gap-1.5 h-8 px-3.5 border-0 bg-brand-deep hover:bg-[#00254a] text-white text-xs font-semibold rounded-lg cursor-pointer transition-colors shadow-sm;
+}
+
+.favorite-list-create-submit:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.favorite-list-create-cancel {
+  @apply h-8 px-3 border border-slate-300 bg-white hover:bg-slate-50 text-slate-600 text-xs font-medium rounded-lg cursor-pointer transition-colors;
+}
+
+.favorite-list-create-error {
+  @apply text-rose-600 text-[11px] font-medium m-0;
+}
+
+/* Mobil Responsive */
+@media (max-width: 768px) {
+  .favorite-list-select-modal {
+    @apply max-w-full rounded-xl;
+  }
+
+  .favorite-list-select-header {
+    @apply px-4 py-3;
+  }
+
+  .favorite-list-select-content {
+    @apply p-4;
+  }
+
+  .favorite-list-select-footer {
+    @apply px-4 py-3;
+  }
+}

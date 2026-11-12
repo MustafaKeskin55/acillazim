@@ -1,0 +1,370 @@
+/* ============================================================
+   HERO SECTION — Desktop
+   ============================================================ */
+.hero-section {
+  padding: 20px 40px;
+  margin: 5px auto;
+  max-width: 1400px;
+  border-radius: 30px;
+}
+
+.hero-section .hero-content {
+  @apply flex justify-between items-center;
+  gap: 80px;
+}
+
+/* ---- Left ---- */
+.hero-section .hero-left {
+  @apply flex-1 relative;
+}
+
+.hero-section .hero-left h1 {
+  @apply relative;
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #1a365d 0%, #003466 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-section .hero-left h1::after {
+  @apply absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #003466, transparent);
+  border-radius: 2px;
+}
+
+.hero-section .hero-left h1:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.hero-section .hero-left p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 500px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* ---- Buttons ---- */
+.hero-section .hero-buttons {
+  @apply flex;
+  gap: 15px;
+  animation: slideInUp 1s ease-out;
+}
+
+.hero-section .primary-button {
+  @apply border-0 flex items-center cursor-pointer relative overflow-hidden;
+  background: linear-gradient(45deg, #003466, #004d7a);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0, 52, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-section .primary-button::before {
+  @apply absolute w-full h-full;
+  content: "";
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.hero-section .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 52, 102, 0.4);
+}
+
+.hero-section .primary-button:hover::before {
+  left: 100%;
+}
+
+.hero-section .secondary-button {
+  @apply flex items-center cursor-pointer;
+  background: white;
+  color: #003466;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-section .secondary-button:hover {
+  border-color: #003466;
+  background: #f7fafc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Right card ---- */
+.hero-section .hero-right {
+  @apply relative overflow-hidden;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 29px;
+  min-width: 500px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  animation: slideInRight 1s ease-out;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  margin-top: 50px;
+}
+
+.hero-section .hero-right::before {
+  @apply absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, transparent, rgba(0, 52, 102, 0.1));
+  border-radius: 0 24px 0 150px;
+}
+
+/* ---- Feature items ---- */
+.hero-section .feature-item {
+  @apply flex items-center;
+  gap: 16px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 1px solid transparent;
+}
+
+.hero-section .feature-item:hover {
+  transform: translateX(10px);
+  border-color: #e2e8f0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.hero-section .feature-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #e6f0ff 0%, #f0f7ff 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.hero-section .feature-icon svg {
+  font-size: 22px;
+  color: #003466;
+}
+
+.hero-section .feature-text h4 {
+  font-size: 1rem;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.hero-section .feature-text h4:hover {
+  color: #003466;
+  transition: color 0.3s ease;
+}
+
+.hero-section .feature-text p {
+  @apply m-0;
+  color: #718096;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* ---- Text selection ---- */
+.hero-section ::selection {
+  background: #bee3f8;
+  color: #2c5282;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE — 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+  .hero-section .hero-left h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section .hero-right {
+    min-width: 350px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 992px (tablet yatay)
+   ============================================================ */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 24px 28px;
+  }
+
+  .hero-section .hero-content {
+    @apply flex-col items-start;
+    gap: 40px;
+  }
+
+  .hero-section .hero-left h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-section .hero-right {
+    @apply w-full;
+    min-width: 100%;
+    padding: 24px;
+    margin-top: 0;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px (tablet dikey / büyük mobil)
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px 16px;
+    margin: 0 0 20px 0;
+    border-radius: 16px;
+  }
+
+  .hero-section .hero-content {
+    @apply flex-col items-stretch;
+    gap: 28px;
+  }
+
+  .hero-section .hero-left h1 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-section .hero-left p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .hero-section .hero-buttons {
+    @apply flex-col;
+    gap: 10px;
+  }
+
+  .hero-section .primary-button,
+  .hero-section .secondary-button {
+    @apply w-full justify-center;
+    padding: 13px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-right {
+    @apply w-full;
+    min-width: unset;
+    padding: 20px 16px;
+    margin-top: 0;
+    border-radius: 16px;
+  }
+
+  .hero-section .feature-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    gap: 14px;
+  }
+
+  .hero-section .feature-item:hover {
+    transform: none;
+  }
+
+  .hero-section .feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .hero-section .feature-icon svg {
+    font-size: 20px;
+  }
+
+  .hero-section .feature-text h4 {
+    font-size: 0.95rem;
+  }
+
+  .hero-section .feature-text p {
+    font-size: 0.82rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px (küçük mobil)
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px 12px;
+    border-radius: 12px;
+  }
+
+  .hero-section .hero-left h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-section .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .hero-section .primary-button,
+  .hero-section .secondary-button {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hero-section .hero-right {
+    padding: 16px 12px;
+  }
+
+  .hero-section .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-section .feature-icon svg {
+    font-size: 18px;
+  }
+}

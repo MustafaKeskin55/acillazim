@@ -1,0 +1,111 @@
+/* Fiyat Kartı - Converted to Tailwind @apply */
+.product-detail-listing-price-card {
+  @apply flex flex-col bg-white overflow-hidden;
+  padding: 20px;
+  border-top: 5px solid #1f67a9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Fiyat bölümü */
+.price-section {
+  @apply flex items-center;
+  margin-bottom: 15px;
+}
+
+.currency-symbol {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f67a9;
+  margin-right: 5px;
+}
+
+.price-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f67a9;
+}
+
+/* Hızlı bilgiler bölümü */
+.quick-info {
+  @apply grid;
+  margin-bottom: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.quick-info-item {
+  @apply flex items-center;
+  gap: 8px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.quick-info-item i {
+  color: #1f67a9;
+  width: 18px;
+  font-size: 16px;
+}
+
+/* Butonlar Genel Container */
+.listing-actions {
+  @apply flex flex-col items-center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Telefon Butonu */
+.product-detail-phone-button {
+  @apply w-full flex items-center justify-center no-underline;
+  height: 48px;
+  background-color: #004D7F;
+  color: white;
+  gap: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.product-detail-phone-button:hover {
+  @apply no-underline;
+  background-color: #003b63;
+  color: white;
+}
+
+.product-detail-phone-button i {
+  font-size: 18px;
+}
+
+/* Mesaj Gönder Butonu */
+.product-detail-message-button {
+  @apply w-full flex items-center justify-center no-underline cursor-pointer border-0;
+  height: 48px;
+  background-color: #FF8C00;
+  color: white;
+  gap: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.product-detail-message-button:hover {
+  @apply no-underline;
+  background-color: #e67e00;
+  color: white;
+}
+
+.product-detail-message-button i {
+  font-size: 18px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .quick-info {
+    grid-template-columns: 1fr;
+  }
+}

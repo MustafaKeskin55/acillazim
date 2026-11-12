@@ -1,0 +1,533 @@
+/* ==========================================================================
+   BookedAppointmentCard.css
+   Müşteri Aldığı Randevular Kart Tasarımı (Masaüstü & Mobil Uyumlu)
+   ========================================================================== */
+
+.bac-card {
+  @apply w-full overflow-hidden flex flex-col relative box-border;
+  max-width: 252px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.04),
+    0 12px 28px -8px rgba(15, 23, 42, 0.06);
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bac-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 16px -2px rgba(15, 23, 42, 0.06),
+    0 20px 32px -8px rgba(15, 23, 42, 0.1);
+  border-color: rgba(203, 213, 225, 1);
+}
+
+/* ── ÜST GÖRSEL & ROZET ── */
+.bac-media {
+  @apply relative w-full overflow-hidden flex-shrink-0;
+  height: 132px;
+  background: #f1f5f9;
+}
+
+.bac-image-placeholder {
+  @apply absolute;
+  inset: 0;
+  background: linear-gradient(110deg, #eceff1 8%, #f5f5f5 18%, #eceff1 33%);
+  background-size: 200% 100%;
+  animation: bacShimmer 1.5s linear infinite;
+}
+
+@keyframes bacShimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.bac-image {
+  @apply w-full h-full object-cover;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+.bac-image.is-loaded {
+  opacity: 1;
+}
+
+.bac-card:hover .bac-image {
+  transform: scale(1.04);
+}
+
+.bac-badge-overlay {
+  @apply absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+}
+
+.bac-status-badge {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.bac-badge-icon {
+  font-size: 11px;
+}
+
+.bac-status-confirmed {
+  background: rgba(16, 185, 129, 0.94);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-pending {
+  background: rgba(245, 158, 11, 0.94);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-cancelled,
+.bac-status-rejected {
+  background: rgba(239, 68, 68, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-inprogress {
+  background: rgba(14, 165, 233, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-disputed {
+  background: rgba(225, 29, 72, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-completed {
+  background: rgba(2, 132, 199, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bac-status-neutral {
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+}
+
+/* ── KART İÇERİK GÖVDESİ ── */
+.bac-body {
+  @apply flex flex-col flex-1 box-border;
+  padding: 0.9rem 0.95rem;
+  min-width: 0;
+}
+
+.bac-header-row {
+  margin-bottom: 0.6rem;
+}
+
+.bac-title {
+  @apply m-0 overflow-hidden;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* ── USTA / HİZMET SAĞLAYICI ŞERİDİ ── */
+.bac-provider-pill {
+  @apply flex items-center box-border;
+  gap: 10px;
+  padding: 9px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  min-width: 0;
+}
+
+.bac-provider-avatar {
+  @apply rounded-full flex items-center justify-center flex-shrink-0;
+  width: 34px;
+  height: 34px;
+  background: #003466;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.bac-provider-meta {
+  @apply flex flex-col flex-1;
+  min-width: 0;
+}
+
+.bac-provider-label {
+  @apply uppercase;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+
+.bac-provider-name {
+  @apply overflow-hidden;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ── DETAYLAR IZGARASI (KAYMA ÖNLEYİCİ GRID) ── */
+.bac-details-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.85fr);
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
+  min-width: 0;
+}
+
+.bac-detail-item {
+  @apply flex items-start overflow-hidden box-border;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 11px;
+  padding: 9px 11px;
+  min-width: 0;
+}
+
+.bac-detail-item--full {
+  grid-column: 1 / -1;
+}
+
+.bac-detail-icon {
+  @apply flex-shrink-0;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.bac-detail-icon.text-primary {
+  color: #0284c7;
+}
+
+.bac-detail-icon.text-orange {
+  color: #f97316;
+}
+
+.bac-detail-icon.text-muted {
+  color: #64748b;
+}
+
+.bac-detail-content {
+  @apply flex flex-col flex-1;
+  min-width: 0;
+}
+
+.bac-detail-label {
+  font-size: 10.5px;
+  color: #94a3b8;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.bac-detail-val {
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ── NOTLAR & PAKET ── */
+.bac-notes-strip {
+  @apply box-border;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 11px;
+  padding: 9px 12px;
+  margin-bottom: 0.95rem;
+  font-size: 0.84rem;
+}
+
+.bac-package-badge {
+  @apply inline-block;
+  font-weight: 700;
+  color: #b45309;
+  margin-right: 6px;
+}
+
+.bac-notes-text {
+  color: #92400e;
+  margin: 4px 0 0;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* ── ALT KISIM: ÜCRET SATIRI + AKSİYON BUTONLARI ── */
+.bac-footer {
+  @apply flex flex-col items-stretch w-full box-border;
+  margin-top: auto;
+  padding-top: 0.95rem;
+  border-top: 1px solid #f1f5f9;
+  gap: 10px;
+}
+
+.bac-price-box {
+  @apply flex flex-row items-center justify-between w-full box-border;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 9px 12px;
+}
+
+.bac-price-label {
+  @apply uppercase;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.bac-price-val {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #003466;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.bac-actions {
+  @apply flex items-center w-full box-border;
+  gap: 7px;
+}
+
+.bac-btn {
+  @apply flex-1 inline-flex items-center justify-center no-underline cursor-pointer border-0 box-border;
+  min-width: 0;
+  gap: 5px;
+  padding: 9px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.bac-btn svg {
+  @apply flex-shrink-0;
+  font-size: 12.5px;
+}
+
+.bac-btn--view {
+  background: #f1f5f9;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0;
+}
+
+.bac-btn--rate {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff !important;
+  border: 1px solid #d97706;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+}
+
+.bac-btn--rate:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.35);
+}
+
+.bac-btn--view:hover {
+  background: #e2e8f0;
+  color: #0f172a !important;
+}
+
+.bac-btn--cancel {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.bac-btn--cancel:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ── MOBİL UYUMLULUK ── */
+@media (max-width: 767px) {
+  .bac-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .bac-media {
+    height: 165px;
+  }
+
+  .bac-body {
+    padding: 1.05rem;
+  }
+
+  .bac-title {
+    font-size: 1rem;
+  }
+
+  .bac-details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+  }
+
+  .bac-detail-val {
+    font-size: 0.8rem;
+  }
+
+  .bac-actions {
+    @apply flex-wrap;
+    gap: 6px;
+  }
+
+  .bac-btn {
+    padding: 9px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .bac-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bac-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bac-btn--chat {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── İKİ TARAFLI DOĞRULAMA (HANDSHAKE) KUTULARI ── */
+.bac-action-card {
+  @apply box-border flex flex-col;
+  margin-bottom: 0.95rem;
+  border-radius: 12px;
+  padding: 12px 14px;
+  gap: 8px;
+}
+
+.bac-action-card--arrival {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.bac-action-card--completion {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.bac-action-card--disputed {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.bac-action-card__header {
+  @apply flex items-center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: #0f172a;
+}
+
+.bac-action-card__header svg {
+  @apply flex-shrink-0;
+  font-size: 1rem;
+}
+
+.bac-action-card__text {
+  @apply m-0;
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.bac-action-card__buttons {
+  @apply flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.bac-action-btn {
+  @apply flex-1 inline-flex items-center justify-center cursor-pointer border-0;
+  min-width: 0;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.bac-action-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.65;
+}
+
+.bac-action-btn--arrival {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.bac-action-btn--arrival:hover:not(:disabled) {
+  background: #ea580c;
+}
+
+.bac-action-btn--complete {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.bac-action-btn--complete:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.bac-action-btn--dispute {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.bac-action-btn--dispute:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.bac-spinner {
+  animation: bacSpin 1s linear infinite;
+}
+
+@keyframes bacSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

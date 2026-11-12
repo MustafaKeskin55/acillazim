@@ -1,0 +1,232 @@
+/* ListingList.css - İlanların liste görünümü stilleri */
+
+.listings-list {
+  @apply w-full overflow-hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Liste başlık satırı */
+.listings-list-header {
+  @apply flex items-center;
+  padding: 12px 0;
+  background-color: #f8f9fa;
+  color: #555;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid #eee;
+}
+
+.list-header-image {
+  @apply text-center;
+  width: 80px;
+  min-width: 80px;
+  padding: 0 10px;
+}
+
+.list-header-title {
+  flex: 3;
+  padding: 0 10px;
+  min-width: 200px;
+}
+
+.list-header-price {
+  @apply flex-1 text-center;
+  padding: 0 10px;
+  min-width: 100px;
+}
+
+.list-header-date {
+  @apply flex-1 text-center;
+  padding: 0 10px;
+  min-width: 120px;
+}
+
+.list-header-location {
+  @apply flex-1 text-center;
+  padding: 0 10px;
+  min-width: 120px;
+}
+
+.list-header-action {
+  @apply text-center;
+  width: 50px;
+  min-width: 50px;
+}
+
+/* Liste öğeleri */
+.listing-list-item {
+  @apply w-full p-0;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.listing-list-item:hover {
+  background-color: #f9f9f9;
+}
+
+.listing-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Yükleniyor durumu iskelet ekranı */
+.listing-list-item-skeleton {
+  @apply flex items-center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-image-skeleton {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.list-content-skeleton {
+  flex: 3;
+  min-width: 200px;
+  padding: 0 10px;
+}
+
+.list-title-skeleton {
+  height: 16px;
+  width: 90%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.list-meta-skeleton {
+  height: 12px;
+  width: 60%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.list-price-skeleton,
+.list-date-skeleton,
+.list-location-skeleton {
+  @apply flex-1;
+  min-width: 90px;
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.list-action-skeleton {
+  @apply rounded-full;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Hata ve boş durumlar */
+.listings-error,
+.listings-empty {
+  @apply w-full text-center;
+  padding: 50px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.listings-error .error-icon {
+  font-size: 48px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.listings-empty .info-icon {
+  font-size: 48px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.listings-error h3,
+.listings-empty h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.listings-error p,
+.listings-empty p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  @apply border-0 cursor-pointer;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive tasarım */
+@media (max-width: 992px) {
+  .list-header-location,
+  .list-location-skeleton {
+
+    @apply hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .listings-list-header { @apply hidden; /* Mobilde başlık satırını gizle */
+  }
+  
+  .listing-list-item-skeleton {
+    @apply flex-wrap;
+    padding: 10px;
+  }
+  
+  .list-content-skeleton {
+    @apply flex-1;
+    min-width: auto;
+  }
+  
+  .list-date-skeleton,
+  .list-location-skeleton { @apply hidden; /* Mobilde bazı iskelet alanlarını gizle */
+  }
+  
+  .list-price-skeleton {
+    min-width: 60px;
+  }
+  
+  /* Listedeki ProductCard tarzı kartlar için responsive ayarlar */
+  .listing-list-item {
+    padding: 10px 0;
+  }
+} 

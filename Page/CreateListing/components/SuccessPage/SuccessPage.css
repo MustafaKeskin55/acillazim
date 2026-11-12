@@ -1,0 +1,346 @@
+/* ============================================================
+   SUCCESS PAGE — İlan Başarıyla Oluşturuldu
+   ============================================================ */
+
+.sp-root {
+  @apply flex items-center justify-center;
+  min-height: 100dvh;
+  background: #f3f4f6;
+  padding: 40px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sp-container {
+  @apply w-full;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  max-width: 560px;
+  padding: 40px 28px;
+  animation: sp-slide-up 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes sp-slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Checkmark ── */
+.sp-icon-wrap {
+  @apply flex justify-center;
+  margin-bottom: 24px;
+}
+
+.sp-check-circle {
+  width: 88px;
+  height: 88px;
+  animation: sp-scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+@keyframes sp-scale-in {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.sp-svg {
+
+  @apply w-full h-full; }
+
+.sp-circle {
+  stroke: #10b981;
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-linecap: round;
+  animation: sp-stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+}
+
+.sp-path {
+  stroke: #10b981;
+  stroke-width: 2.5;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: sp-stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.75s forwards;
+}
+
+@keyframes sp-stroke {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Heading ── */
+.sp-title {
+  @apply text-center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+  animation: sp-fade-up 0.4s ease 0.3s both;
+}
+
+.sp-subtitle {
+  @apply text-center;
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  animation: sp-fade-up 0.4s ease 0.4s both;
+}
+
+@keyframes sp-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Info Card ── */
+.sp-info-card {
+  @apply flex;
+  gap: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: sp-fade-up 0.4s ease 0.5s both;
+}
+
+.sp-info-icon {
+  @apply flex-shrink-0;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.sp-info-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 4px;
+}
+
+.sp-info-card p {
+  @apply m-0;
+  font-size: 13px;
+  color: #1d4ed8;
+  line-height: 1.6;
+}
+
+/* ── Summary ── */
+.sp-summary {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: sp-fade-up 0.4s ease 0.6s both;
+}
+
+.sp-summary-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.sp-summary-grid {
+  @apply flex flex-col;
+  gap: 8px;
+}
+
+.sp-summary-row {
+  @apply flex justify-between items-center;
+  gap: 8px;
+}
+
+.sp-summary-key {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sp-summary-val {
+  @apply text-right;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ── Steps ── */
+.sp-steps {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: sp-fade-up 0.4s ease 0.7s both;
+}
+
+.sp-steps-title {
+  @apply text-center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.sp-steps-list {
+  @apply flex flex-col;
+  gap: 14px;
+}
+
+.sp-step {
+  @apply flex items-center;
+  gap: 14px;
+}
+
+.sp-step-num {
+  @apply rounded-full flex items-center justify-center flex-shrink-0;
+  width: 36px;
+  height: 36px;
+  background: #e5e7eb;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sp-step-num--done {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+}
+
+.sp-step-num--active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  animation: sp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes sp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(59,130,246,0); }
+}
+
+.sp-step h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.sp-step p {
+  @apply m-0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ── Notification ── */
+.sp-notify {
+  @apply flex items-center;
+  gap: 10px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 24px;
+  animation: sp-fade-up 0.4s ease 0.8s both;
+}
+
+.sp-notify span { @apply flex-shrink-0; font-size: 18px; }
+
+.sp-notify p {
+  @apply m-0;
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+/* ── Actions ── */
+.sp-actions {
+  @apply flex flex-col;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: sp-fade-up 0.4s ease 0.9s both;
+}
+
+.sp-btn {
+  @apply w-full cursor-pointer border-0;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.sp-btn:active { transform: scale(0.98); }
+
+.sp-btn--primary {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.sp-btn--primary:hover { background: #1d4ed8; }
+
+.sp-btn--secondary {
+  background: #fff;
+  color: #374151;
+  border: 1.5px solid #e5e7eb;
+}
+
+.sp-btn--secondary:hover { background: #f9fafb; border-color: #d1d5db; }
+
+/* ── Redirect ── */
+.sp-redirect {
+  @apply text-center;
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  animation: sp-fade-up 0.4s ease 1s both;
+}
+
+.sp-countdown {
+  @apply inline-block text-center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #3b82f6;
+  margin: 0 2px;
+  min-width: 22px;
+}
+
+/* ── Help ── */
+.sp-help {
+  @apply text-center;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+  animation: sp-fade-up 0.4s ease 1.1s both;
+}
+
+.sp-help-link {
+  @apply no-underline;
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.sp-help-link:hover {
+
+  @apply underline; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .sp-container {
+    @apply border-0;
+    padding: 28px 18px;
+    border-radius: 0;
+    min-height: 100dvh;
+    box-shadow: none;
+  }
+
+  .sp-root {
+
+    @apply p-0 items-start;
+  }
+
+  .sp-title { font-size: 20px; }
+}

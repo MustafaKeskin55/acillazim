@@ -1,0 +1,724 @@
+/* ==========================================================================
+   EditAppointmentModal — Harmonious Intermediate Palette & Mobile-First Sheet
+   ========================================================================== */
+
+.ed-modal-backdrop {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.56);
+  padding: 16px;
+  z-index: 1200;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: edBackdropFadeIn 0.22s ease-out;
+  font-family: var(--font-body, 'Manrope', 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+@keyframes edBackdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes edModalPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ed-modal {
+  @apply relative w-full flex overflow-hidden;
+  max-width: 920px;
+  max-height: min(88vh, 720px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow:
+    0 24px 56px -12px rgba(15, 23, 42, 0.22),
+    0 8px 20px -6px rgba(79, 70, 229, 0.08);
+  animation: edModalPopIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Close button */
+.ed-modal .ed-close {
+  @apply absolute inline-flex items-center justify-center cursor-pointer;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.92rem;
+  z-index: 20;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ed-modal .ed-close:hover {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #e11d48;
+  transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (Desktop) / COMPACT BANNER (Mobile)
+   ========================================================================== */
+.ed-modal .ed-sidebar {
+  @apply flex-shrink-0 flex flex-col overflow-y-auto;
+  width: 320px;
+  background: linear-gradient(165deg, #f8fafc 0%, #f5f3ff 52%, #f0fdfa 100%);
+  border-right: 1px solid #e2e8f0;
+}
+
+.ed-modal .ed-preview {
+  @apply relative overflow-hidden flex-shrink-0;
+  height: 176px;
+  margin: 16px 16px 0 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(199, 210, 254, 0.65);
+  background: #e2e8f0;
+}
+
+.ed-modal .ed-preview img {
+  @apply w-full h-full object-cover block;
+  transition: transform 0.35s ease;
+}
+
+.ed-modal .ed-preview:hover img {
+  transform: scale(1.03);
+}
+
+/* Status Pill */
+.ed-modal .ed-status {
+  @apply absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+.ed-modal .ed-status--inline {
+  @apply hidden static;
+  box-shadow: none;
+}
+
+.ed-modal .ed-status[data-status="confirmed"],
+.ed-modal .ed-status[data-status="completed"] {
+  background: rgba(240, 253, 250, 0.95);
+  color: #0f766e;
+  border-color: #99f6e4;
+}
+
+.ed-modal .ed-status[data-status="pending"],
+.ed-modal .ed-status[data-status="reschedule_requested"] {
+  background: rgba(255, 251, 235, 0.96);
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+.ed-modal .ed-status[data-status="rejected"],
+.ed-modal .ed-status[data-status="cancelled"] {
+  background: rgba(255, 241, 242, 0.96);
+  color: #be123c;
+  border-color: #fecdd3;
+}
+
+.ed-modal .ed-info {
+  @apply flex flex-col flex-1;
+  padding: 16px;
+  gap: 12px;
+}
+
+.ed-modal .ed-mobile-meta-row {
+  @apply flex items-center justify-between;
+  gap: 8px;
+}
+
+.ed-modal .ed-info h3 {
+  @apply m-0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+}
+
+/* Price Pill — Şeftali-Bakır Ara Ton */
+.ed-modal .ed-price {
+  @apply inline-flex items-center;
+  gap: 7px;
+  background: linear-gradient(135deg, #fffaf5 0%, #ffedd5 100%);
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  width: fit-content;
+}
+
+.ed-modal .ed-price svg {
+  color: #ea580c;
+  font-size: 0.9rem;
+}
+
+/* Description Box */
+.ed-modal .ed-desc {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 11px 12px;
+}
+
+.ed-modal .ed-desc h4 {
+  @apply flex items-center uppercase;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #4f46e5;
+  margin: 0 0 5px 0;
+}
+
+.ed-modal .ed-desc p {
+  @apply m-0 overflow-hidden;
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.48;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Sidebar Metadata Chips */
+.ed-modal .ed-details {
+  @apply flex flex-col;
+  margin-top: auto;
+  gap: 7px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.ed-modal .ed-detail {
+  @apply flex items-center;
+  gap: 9px;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ed-modal .ed-detail svg {
+  @apply flex-shrink-0;
+  color: #0d9488;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   RIGHT MAIN AREA
+   ========================================================================== */
+.ed-modal .ed-main {
+  @apply flex-1 flex flex-col overflow-hidden;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.ed-modal .ed-content {
+  @apply overflow-y-auto flex-1 flex flex-col;
+  padding: 24px 26px;
+  gap: 18px;
+}
+
+.ed-modal .ed-header {
+  padding-right: 36px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 14px;
+}
+
+.ed-modal .ed-header-eyebrow {
+  @apply inline-flex items-center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #4f46e5;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.ed-modal .ed-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 5px 0;
+  letter-spacing: -0.02em;
+}
+
+.ed-modal .ed-header p {
+  @apply m-0;
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.ed-modal .ed-form {
+  @apply flex flex-col flex-1;
+  gap: 14px;
+}
+
+/* Section Card */
+.ed-modal .ed-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 15px 16px;
+}
+
+.ed-modal .ed-section h3 {
+  @apply flex items-center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.ed-modal .ed-section h3 svg {
+  color: #4f46e5;
+  font-size: 0.92rem;
+}
+
+/* Date & Time Inputs */
+.ed-modal .ed-datetime {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ed-modal .ed-readonly {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ed-modal .ed-info-item {
+  @apply flex flex-col;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  gap: 3px;
+}
+
+.ed-modal .ed-info-item label {
+  @apply uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.03em;
+}
+
+.ed-modal .ed-info-item span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ed-modal .ed-group {
+  @apply flex flex-col;
+  gap: 5px;
+}
+
+.ed-modal .ed-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.ed-modal .ed-group input,
+.ed-modal .ed-group select {
+  @apply w-full;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+
+.ed-modal .ed-group input:hover,
+.ed-modal .ed-group select:hover {
+  border-color: #a5b4fc;
+}
+
+.ed-modal .ed-group input:focus,
+.ed-modal .ed-group select:focus {
+  @apply outline-none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.ed-modal .ed-slots-status {
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ed-modal .ed-slots-status--loading {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #4f46e5;
+}
+
+.ed-modal .ed-slots-status--empty {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+}
+
+/* Client / Provider Info Grid */
+.ed-modal .ed-client-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ed-modal .ed-client-card {
+  @apply flex items-center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  min-width: 0;
+  transition: border-color 0.2s ease;
+}
+
+.ed-modal .ed-client-card:hover {
+  border-color: #99f6e4;
+}
+
+.ed-modal .ed-icon {
+  @apply flex-shrink-0;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 9px;
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  color: #0d9488;
+}
+
+.ed-modal .ed-client-content {
+  @apply flex flex-col;
+  gap: 1px;
+  min-width: 0;
+}
+
+.ed-modal .ed-client-content label {
+  @apply uppercase;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.ed-modal .ed-client-content span {
+  @apply overflow-hidden;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Action Buttons */
+.ed-modal .ed-actions {
+  @apply flex justify-end items-center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ed-modal .ed-btn {
+  @apply cursor-pointer inline-flex items-center justify-center;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: inherit;
+}
+
+.ed-modal .ed-btn-cancel {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.ed-modal .ed-btn-cancel:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.ed-modal .ed-btn-save {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: #ffffff;
+  border: 1px solid #4338ca;
+  box-shadow: 0 6px 16px -4px rgba(79, 70, 229, 0.35);
+}
+
+.ed-modal .ed-btn-save:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -4px rgba(79, 70, 229, 0.45);
+}
+
+.ed-modal .ed-btn:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE RESPONSIVE DESIGN (<= 900px)
+   No cut-off sidebar! Converts sidebar into a sleek horizontal summary card.
+   ========================================================================== */
+@media (max-width: 900px) {
+  .ed-modal-backdrop {
+    @apply items-center;
+    padding: 12px;
+  }
+
+  .ed-modal {
+    @apply flex-col overflow-y-auto;
+    max-width: 560px;
+    max-height: calc(100dvh - 24px);
+    border-radius: 20px;
+  }
+
+  /* Compact Horizontal Service Banner on Tablet/Mobile */
+  .ed-modal .ed-sidebar {
+    @apply w-full flex-row items-start overflow-visible;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 14px 48px 14px 14px;
+    gap: 12px;
+  }
+
+  .ed-modal .ed-preview {
+    @apply m-0;
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
+  }
+
+  /* Hide overlay badge on tiny thumbnail, show inline pill in info row instead */
+  .ed-modal .ed-preview .ed-status {
+
+    @apply hidden;
+  }
+
+  .ed-modal .ed-status--inline {
+    @apply inline-flex items-center;
+    padding: 3px 9px;
+    font-size: 0.68rem;
+  }
+
+  .ed-modal .ed-info {
+    @apply p-0;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .ed-modal .ed-mobile-meta-row {
+    @apply justify-start flex-wrap;
+    gap: 6px;
+  }
+
+  .ed-modal .ed-price {
+    padding: 3px 9px;
+    font-size: 0.78rem;
+    border-radius: 8px;
+  }
+
+  .ed-modal .ed-info h3 {
+    @apply overflow-hidden;
+    font-size: 0.92rem;
+    line-height: 1.32;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Hide verbose description block on mobile so form is immediately visible */
+  .ed-modal .ed-desc {
+
+    @apply hidden;
+  }
+
+  .ed-modal .ed-details {
+    @apply flex-row flex-wrap;
+    margin-top: 2px;
+    padding-top: 0;
+    border-top: none;
+    gap: 6px;
+  }
+
+  .ed-modal .ed-detail {
+    padding: 3px 8px;
+    font-size: 0.73rem;
+    border-radius: 7px;
+    gap: 5px;
+  }
+
+  .ed-modal .ed-main {
+
+    @apply overflow-visible;
+  }
+
+  .ed-modal .ed-content {
+    @apply overflow-visible;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .ed-modal .ed-header {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  .ed-modal .ed-header h2 {
+    font-size: 1.08rem;
+  }
+
+  .ed-modal .ed-header p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==========================================================================
+   SMALL PHONES (<= 540px)
+   ========================================================================== */
+@media (max-width: 540px) {
+  .ed-modal-backdrop {
+    padding: 10px;
+  }
+
+  .ed-modal {
+    max-height: calc(100dvh - 20px);
+    border-radius: 18px;
+  }
+
+  .ed-modal .ed-close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+
+  .ed-modal .ed-sidebar {
+    padding: 12px 42px 12px 12px;
+    gap: 10px;
+  }
+
+  .ed-modal .ed-preview {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+  }
+
+  .ed-modal .ed-info h3 {
+    font-size: 0.86rem;
+  }
+
+  .ed-modal .ed-content {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+
+  .ed-modal .ed-section {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .ed-modal .ed-section h3 {
+    font-size: 0.84rem;
+    margin-bottom: 10px;
+  }
+
+  .ed-modal .ed-datetime,
+  .ed-modal .ed-readonly,
+  .ed-modal .ed-client-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ed-modal .ed-group input,
+  .ed-modal .ed-group select {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .ed-modal .ed-client-card {
+    padding: 8px 10px;
+  }
+
+  /* Side-by-side compact action buttons on mobile */
+  .ed-modal .ed-actions {
+    position: sticky;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(6px);
+    padding: 10px 0 2px 0;
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 8px;
+  }
+
+  .ed-modal .ed-btn {
+    @apply w-full;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 0.84rem;
+    border-radius: 11px;
+  }
+}

@@ -1,0 +1,584 @@
+/* ReviewModal.css - Yepyeni, modern ve şık tasarım */
+
+/* Markamız renkleri - Modern tasarım */
+.review-modal-backdrop {
+  @apply fixed flex items-center justify-center;
+  /* Bileşen özelinde değişkenler - Marka renkleri */
+  --modal-primary: #006cb5;
+  --modal-primary-dark: #005691;
+  --modal-primary-light: #1a86d0;
+  --modal-primary-lighter: #e5f1fa;
+  --modal-accent: #ff6b00;
+  --modal-accent-dark: #e56000;
+  --modal-accent-light: #ff8c3a;
+  --modal-bg: #ffffff;
+  --modal-bg-alt: #f9fafb;
+  --modal-text: #111827;
+  --modal-text-light: #4b5563;
+  --modal-text-lighter: #9ca3af;
+  --modal-border: #e5e7eb;
+  --modal-success: #10b981;
+  --modal-error: #ef4444;
+  --modal-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --modal-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --modal-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --modal-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --modal-radius: 1rem;
+  --modal-radius-sm: 0.5rem;
+  --modal-radius-lg: 1.5rem;
+  --modal-transition: all 0.2s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: none;
+  z-index: 99999;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modal Container */
+.review-modal {
+  @apply overflow-hidden absolute;
+  width: 90%;
+  max-width: 480px;
+  background-color: var(--modal-bg);
+  border-radius: 12px;
+  box-shadow: var(--modal-shadow-xl);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: modalEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid #005691;
+}
+
+/* Feedback mesajı gösterim modu */
+.review-modal.with-feedback {
+  @apply absolute;
+  max-width: 400px;
+  animation: modalBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #005691;
+  border-radius: 12px;
+}
+
+/* Feedback mesajı stili */
+.feedback-message {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 40px 30px;
+}
+
+.feedback-message.success {
+  background: var(--modal-bg);
+  color: var(--modal-success);
+}
+
+.feedback-message.error {
+  background: var(--modal-bg);
+  color: var(--modal-error);
+}
+
+.feedback-icon {
+  @apply rounded-full flex items-center justify-center;
+  font-size: 48px;
+  margin-bottom: 20px;
+  height: 80px;
+  width: 80px;
+  background-color: var(--modal-bg-alt);
+  animation: iconScale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: var(--modal-shadow);
+}
+
+.feedback-message.success .feedback-icon {
+  color: var(--modal-success);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.feedback-message.error .feedback-icon {
+  color: var(--modal-error);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.feedback-text {
+  font-size: 18px;
+  font-weight: 600;
+  animation: fadeInUp 0.3s ease-out 0.1s both;
+  margin-top: 10px;
+}
+
+.feedback-message.success .feedback-text {
+  color: var(--modal-text);
+}
+
+.feedback-message.error .feedback-text {
+  color: var(--modal-text);
+}
+
+/* Modal Başlığı - Mavi Renkli */
+.modal-header {
+  @apply flex justify-center items-center relative;
+  padding: 15px 20px;
+  background-color: #005691; /* Konum Seçin resmindeki mavi renk */
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-header h2 {
+  @apply m-0 text-center select-none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.close-button {
+  @apply border-0 cursor-pointer flex items-center justify-center rounded-full absolute;
+  background: none;
+  color: white;
+  font-size: 16px;
+  transition: var(--modal-transition);
+  width: 28px;
+  height: 28px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  background-color: transparent;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.close-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.5;
+}
+
+/* Form Stili - Clean Design */
+.review-form {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  @apply block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--modal-text);
+  font-size: 15px;
+}
+
+/* Yıldız Derecelendirme - Büyük ve Gösterişli */
+.star-rating {
+  margin-bottom: 15px;
+}
+
+.stars-container {
+  @apply flex justify-center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.rating-star {
+  @apply cursor-pointer;
+  font-size: 40px;
+  color: var(--modal-border);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.rating-star:hover {
+  transform: scale(1.15) translateY(-5px);
+}
+
+.rating-star.active {
+  color: var(--modal-accent);
+}
+
+.rating-text {
+  @apply text-center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--modal-text-light);
+  font-weight: 500;
+  min-height: 24px;
+}
+
+/* Textarea Stili - Modern ve Minimal */
+textarea {
+  @apply w-full;
+  padding: 16px;
+  border: 2px solid #d1d1d1;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 15px;
+  transition: var(--modal-transition);
+  background-color: var(--modal-bg);
+  color: var(--modal-text);
+  min-height: 120px;
+}
+
+textarea:focus {
+  @apply outline-none;
+  border-color: #005691;
+  box-shadow: 0 0 0 3px rgba(0, 86, 145, 0.15);
+}
+
+.char-count {
+  @apply text-right;
+  font-size: 13px;
+  color: var(--modal-text-lighter);
+  margin-top: 8px;
+}
+
+/* Butonlar - Modern Tasarım */
+.form-actions {
+  @apply flex justify-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-button,
+.submit-button {
+  @apply cursor-pointer border-0 relative overflow-hidden;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: var(--modal-transition);
+}
+
+.cancel-button {
+  background-color: #e6e6e6;
+  color: #333333;
+}
+
+.cancel-button:hover {
+  background-color: #d9d9d9;
+}
+
+.submit-button {
+  background-color: #005691;
+  color: white;
+  box-shadow: var(--modal-shadow-sm);
+}
+
+.submit-button:before {
+  @apply absolute w-full h-full;
+  content: '';
+  top: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.submit-button:hover {
+  background-color: var(--modal-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--modal-shadow);
+}
+
+.submit-button:hover:before {
+  left: 100%;
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: var(--modal-shadow-sm);
+}
+
+.submit-button:disabled,
+.cancel-button:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Hata Mesajı - Daha Küçük ve Şık */
+.error-message {
+  @apply flex items-center;
+  background-color: rgba(255, 107, 0, 0.1);
+  color: #ff6b00;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border-left: 3px solid #ff6b00;
+  max-width: 100%;
+  box-shadow: none;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 30px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes modalBounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes iconScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 576px) {
+  .review-modal {
+    @apply overflow-y-auto;
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    @apply w-full;
+  }
+  
+  .stars-container {
+    gap: 6px;
+  }
+  
+  .rating-star {
+    font-size: 34px;
+  }
+  
+  .feedback-icon {
+    height: 70px;
+    width: 70px;
+    font-size: 36px;
+  }
+}
+
+/* Label wrapper - Karakter sayısı ve etiket için */
+.label-wrapper {
+  @apply flex justify-between items-baseline;
+  margin-bottom: 8px;
+}
+
+/* Karakterler azaldığında uyarı rengi */
+.char-count.warning {
+  color: var(--modal-accent-dark);
+  font-weight: 600;
+}
+
+/* Yıldız Derecelendirme - Seçili değilse vurgu yapalım */
+.stars-container.not-selected {
+  animation: pulse-attention 1.5s infinite;
+}
+
+.stars-container.not-selected .rating-star {
+  color: #ff6b00;
+  opacity: 0.7;
+}
+
+/* Uyarı mesajı metin rengi */
+.star-rating .rating-text.warning {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+@keyframes pulse-attention {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Textarea hata durumu */
+textarea.has-error {
+  border-color: #ff6b00;
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Yorum giriş alanı uyarı mesajı */
+.input-warning {
+  @apply flex items-center;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ff6b00;
+  animation: fadeInUp 0.3s ease-out;
+  font-weight: 500;
+}
+
+/* Sallanma animasyonu */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+  40%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Giriş Gerektiren Modal Stilleri */
+.login-required-modal {
+  @apply border-0 overflow-hidden;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.login-content {
+  @apply flex flex-col items-center text-center;
+  padding: 30px 25px;
+  background: linear-gradient(to bottom, #ffffff, #f9fafc);
+}
+
+.login-icon-container {
+  @apply rounded-full flex items-center justify-center;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  animation: pulse-glow 2s infinite;
+}
+
+.lock-icon {
+  font-size: 40px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.login-message {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 85%;
+}
+
+.login-actions {
+  @apply flex justify-center w-full;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.login-required-modal .cancel-button {
+  @apply border-0 cursor-pointer;
+  background-color: #f0f0f0;
+  color: #444;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.login-required-modal .cancel-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.login-required-modal .login-button {
+  @apply border-0 cursor-pointer;
+  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  color: white;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2);
+  min-width: 120px;
+}
+
+.login-required-modal .login-button:hover {
+  background: linear-gradient(135deg, #e56200, #ff7a20);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
+}
+
+.login-required-modal .modal-header {
+  background: linear-gradient(135deg, #004d7f, #006cb5);
+  padding: 18px 20px;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 5px 25px rgba(255, 107, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+} 

@@ -1,0 +1,725 @@
+.subcategory-container {
+  @apply relative w-full flex flex-col m-0 p-0 overflow-hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.4s ease-out;
+  max-height: 420px;
+  min-height: auto;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subcategory-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.subcategory-menu {
+  @apply w-full overflow-hidden h-full flex flex-col;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.subcategory-header {
+  @apply relative flex items-center justify-center overflow-visible;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #FF6600 0%, #FF8533 100%);
+  color: white;
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  min-height: 50px;
+}
+
+.subcategory-header::before {
+  @apply absolute rounded-full;
+  content: '';
+  top: -10px;
+  right: -10px;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.subcategory-header::after {
+  @apply absolute w-full;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  border-radius: 3px;
+}
+
+.back-arrow {
+  @apply cursor-pointer;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FF6600;
+  transition: all 0.3s ease;
+  z-index: 2;
+  margin-left: -5px;
+}
+
+.back-arrow:hover {
+  transform: translateX(-2px);
+  color: #ff8533;
+}
+
+.subcategory-breadcrumb {
+  @apply flex items-center flex-wrap;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.breadcrumb-item {
+  @apply cursor-default;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item:hover {
+  color: #FF6600;
+}
+
+.breadcrumb-separator {
+  color: #999;
+  margin: 0 3px;
+}
+
+.subcategory-title {
+  @apply m-0 flex items-center flex-nowrap overflow-hidden w-full;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.category-main-title {
+  @apply inline-flex items-center overflow-hidden;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.subcategory-level-indicator {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.subcategory-menu-list {
+  @apply m-0 p-0 overflow-y-auto overflow-x-hidden;
+  list-style-type: none;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  border: 1px solid rgba(231, 234, 238, 0.7);
+  max-height: 400px;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 1024px) {
+  .subcategory-menu-list {
+    max-height: 300px;
+  }
+  
+  .subcategory-container {
+    @apply w-full;
+    margin-left: 0;
+    max-height: 425px;
+    min-height: auto;
+  }
+  
+  .subcategory-advertisement {
+
+    @apply hidden;
+  }
+}
+
+.subcategory-menu-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.subcategory-menu-list::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 0 0 12px 0;
+}
+
+.subcategory-menu-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.subcategory-menu-list::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.subcategory-menu-list li {
+  border-bottom: 1px solid rgba(231, 234, 238, 0.5);
+}
+
+.subcategory-menu-link {
+  @apply flex items-center justify-between no-underline relative overflow-hidden cursor-pointer;
+  padding: 14px 20px;
+  color: #747474;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.subcategory-menu-link:hover {
+  color: #FF6600;
+  background-color: rgba(255, 102, 0, 0.05);
+  padding-left: 25px;
+}
+
+.subcategory-menu-link::before {
+  @apply absolute;
+  content: '';
+  left: 0;
+  width: 3px;
+  height: 0;
+  background-color: #FF6600;
+  transition: height 0.3s ease;
+  border-radius: 0 2px 2px 0;
+  opacity: 0;
+}
+
+.subcategory-menu-link:hover::before {
+  height: 70%;
+  opacity: 1;
+}
+
+/* Şık ve zarif ikon stili */
+.subcategory-elegant-icon {
+  @apply inline-block absolute;
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  color: #aaa;
+  transition: all 0.2s ease;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.subcategory-menu-link:hover .subcategory-elegant-icon {
+  color: #FF6600;
+  transform: translateY(-50%) translateX(2px);
+}
+
+/* Eski ikon stili (referans için bırakıldı) */
+.subcategory-arrow-icon {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #aaa;
+  transition: all 0.2s ease;
+}
+
+.subcategory-menu-link:hover .subcategory-arrow-icon {
+  color: #FF6600;
+}
+
+.subcategory-advertisement {
+  @apply w-full;
+  margin-top: 20px;
+}
+
+/* Yükleniyor animasyonu için stiller */
+.subcategory-menu-loading {
+  @apply flex flex-col items-center justify-center text-center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  border: 1px solid rgba(231, 234, 238, 0.7);
+  border-top: none;
+  color: #666;
+  min-height: 150px;
+}
+
+.spinner {
+  @apply rounded-full;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 102, 0, 0.1);
+  border-top-color: #FF6600;
+  animation: spinner 1s ease-in-out infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hata mesajı stilleri */
+.subcategory-menu-error {
+  @apply p-0 m-0;
+  border-radius: 0 0 8px 8px;
+}
+
+.subcategory-menu-error > p {
+
+  @apply m-0;
+}
+
+/* Boş alt kategori mesajı */
+.subcategory-empty-message {
+  @apply text-center;
+  padding: 25px 20px;
+  color: #999;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
+
+/* Alt kategori sayısı badge */
+.subcategory-count {
+  font-size: 12px;
+  color: #999;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.subcategory-menu-link:hover .subcategory-count {
+  color: #FF6600;
+}
+
+/* Veri olmadığında gösterilecek mesaj stili */
+.no-data-message {
+  @apply text-center m-0;
+  color: #777;
+  font-size: 15px;
+  padding: 25px 20px;
+  border-radius: 0 0 8px 8px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(231, 234, 238, 0.7);
+  border-top: none;
+}
+
+/* Boş alt kategori mesajı için stil */
+.empty-subcategory-message {
+  @apply text-center;
+  padding: 15px;
+  color: #666;
+}
+
+.empty-subcategory-message p {
+  margin: 5px 0;
+}
+
+.empty-subcategory-help {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 5px;
+}
+
+.no-subcategories {
+  @apply text-center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+  border-bottom: 1px solid #eee;
+}
+
+/* Yeni görünüm için CSS eklemeleri */
+.simple-header {
+  @apply flex items-center justify-center relative;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+}
+
+.category-name-title {
+  @apply m-0 text-center overflow-hidden;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 0;
+  width: 85%;
+  flex-grow: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.back-button {
+  @apply border-0 outline-none cursor-pointer m-0 flex items-center justify-center absolute;
+  background: none;
+  font-size: 18px;
+  color: #333;
+  padding: 5px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.2s;
+  box-shadow: none;
+}
+
+.back-button:hover {
+  color: #FF6600;
+}
+
+.back-button:focus {
+
+  @apply outline-none;
+}
+
+/* Yeni sade geri butonu stili */
+.back-button-simple {
+  @apply absolute p-0 border-0 rounded-full cursor-pointer flex items-center justify-center;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  width: 28px;
+  height: 28px;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.back-button-simple:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.back-button-simple:focus {
+
+  @apply outline-none;
+}
+
+.back-icon-svg {
+  @apply flex-shrink-0;
+  width: 15px;
+  height: 15px;
+}
+
+.subcategory-list-simple {
+  @apply overflow-y-auto flex-1;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  max-height: 370px;
+}
+
+.subcategory-list-simple ul {
+  @apply m-0 p-0 relative;
+  list-style-type: none;
+  overflow-y: visible;
+}
+
+.subcategory-list-simple ul::after {
+  @apply absolute pointer-events-none;
+  content: '';
+  left: 20px;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  background: none;
+  z-index: 0;
+}
+
+.subcategory-item-simple {
+  @apply flex items-center justify-between cursor-pointer relative overflow-hidden;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  min-height: 30px;
+}
+
+.subcategory-item-simple:hover {
+  background-color: rgba(255, 102, 0, 0.03);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.subcategory-item-simple:active {
+  background-color: rgba(255, 102, 0, 0.08);
+  transform: scale(0.99);
+}
+
+.subcategory-item-simple:last-child {
+  border-bottom: none;
+}
+
+.subcategory-item-simple::before {
+  @apply absolute h-full;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0;
+  background-color: #FF6600;
+  transition: all 0.25s ease;
+}
+
+.subcategory-item-simple:hover::before {
+  width: 3px;
+}
+
+.subcategory-name {
+  @apply relative flex items-center;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  z-index: 1;
+}
+
+.subcategory-name::before {
+  @apply inline-block rounded-full;
+  content: '';
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 102, 0, 0.1);
+  margin-right: 0;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.subcategory-item-simple:hover .subcategory-name::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  opacity: 1;
+}
+
+.subcategory-item-simple:hover .subcategory-name {
+  color: #FF6600;
+}
+
+.subcategory-chevron {
+  @apply relative flex items-center justify-center rounded-full;
+  color: #bbb;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all 0.25s ease;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+}
+
+.subcategory-item-simple:hover .subcategory-chevron {
+  color: #FF6600;
+  background-color: rgba(255, 102, 0, 0.08);
+}
+
+/* Yükleniyor ve hata durumları */
+.loading-subcategories {
+  @apply flex justify-center items-center text-center;
+  padding: 25px;
+  font-size: 14px;
+  color: #888;
+  background: white;
+}
+
+.minimal-loader {
+  @apply inline-block relative;
+  color: #FF6600;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  padding: 15px 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.no-subcategories {
+  @apply flex justify-center items-center text-center;
+  padding: 25px;
+  font-size: 14px;
+  color: #888;
+  background: white;
+}
+
+/* Geri butonu vurgulanmış hali */
+.back-button-highlight {
+  @apply flex items-center justify-center p-0 rounded-full;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: 500;
+  gap: 0;
+  width: 28px;
+  height: 28px;
+  transition: all 0.2s ease;
+}
+
+.back-button-highlight:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.back-button-highlight .back-icon-svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ===== MOBİL — SAHİBİNDEN TARZI (max-width: 768px) ===== */
+@media (max-width: 768px) {
+
+  /* Ana container — tam ekran, kart görünümü */
+  .subcategory-container {
+    @apply w-full m-0;
+    max-height: none;
+    min-height: unset;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    animation: none;
+  }
+
+  .subcategory-menu {
+    border-radius: 0;
+    background: #fff;
+  }
+
+  /* Başlık — koyu mavi arka plan, geri ok + kategori adı */
+  .subcategory-header,
+  .simple-header {
+    @apply flex items-center justify-center relative;
+    background: #003466;
+    padding: 14px 16px;
+    border-radius: 0;
+    border-bottom: none;
+    min-height: 50px;
+  }
+
+  .category-name-title {
+    @apply text-center overflow-hidden;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    width: auto;
+    flex-grow: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* Geri butonu — sol tarafta beyaz */
+  .back-button-simple,
+  .back-button-highlight {
+    @apply absolute border-0 p-0 rounded-full cursor-pointer flex items-center justify-center;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    gap: 0;
+    line-height: 1;
+  }
+
+  .back-icon,
+  .back-icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Liste alanı */
+  .subcategory-list-simple {
+    @apply overflow-visible;
+    max-height: none;
+    background: #fff;
+    border-radius: 0;
+  }
+
+  .subcategory-list-simple ul {
+
+    @apply m-0 p-0;
+  }
+
+  /* Her liste öğesi — sahibinden tarzı */
+  .subcategory-item-simple {
+    @apply flex items-center justify-between cursor-pointer;
+    padding: 14px 16px;
+    border-bottom: 1px solid #efefef;
+    background: #fff;
+    min-height: 52px;
+    transition: background 0.15s;
+  }
+
+  .subcategory-item-simple:last-child {
+    border-bottom: none;
+  }
+
+  .subcategory-item-simple:hover,
+  .subcategory-item-simple:active {
+    background: #f9f9f9;
+  }
+
+  /* Sol taraf — kategori adı */
+  .subcategory-name {
+    @apply flex-1;
+    font-size: 15px;
+    color: #0066cc;
+    font-weight: 500;
+  }
+
+  /* Sağ taraf — chevron ok */
+  .subcategory-chevron {
+    @apply flex-shrink-0;
+    color: #999;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 8px;
+    background: none;
+    border-radius: 0;
+  }
+
+  /* Hover efektlerini kapat */
+  .subcategory-item-simple::before {
+
+    @apply hidden; }
+  .subcategory-item-simple:hover::before {
+
+    @apply hidden; }
+  .subcategory-item-simple:hover .subcategory-name { color: #0066cc; }
+  .subcategory-item-simple:hover .subcategory-chevron {
+    color: #999;
+    background: none;
+  }
+
+  /* Yükleniyor */
+  .loading-subcategories {
+    @apply text-center;
+    padding: 20px;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .no-subcategories {
+    @apply text-center;
+    padding: 20px;
+    color: #999;
+    font-size: 14px;
+  }
+
+  /* Eski header stilleri override */
+  .subcategory-header::before,
+  .subcategory-header::after {
+
+    @apply hidden;
+  }
+}

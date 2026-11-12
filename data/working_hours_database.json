@@ -1,0 +1,373 @@
+[
+  {
+  "working_hours_id": 1,
+  "ilan_id": 2044,
+  "user_id": 1014,
+  "category_id": "12625",
+  "service_category": "Çocuk Bakımı",
+  "monday": {
+    "start": "07:00",
+    "end": "19:00",
+    "is_active": false,
+    "break_start": "12:00",
+    "break_end": "13:00"
+  },
+  "tuesday": {
+    "start": "07:00",
+    "end": "19:00",
+    "is_active": true,
+    "break_start": "12:00",
+    "break_end": "13:00"
+  },
+  "wednesday": {
+    "start": "07:00",
+    "end": "19:00",
+    "is_active": true,
+    "break_start": "12:00",
+    "break_end": "13:00"
+  },
+  "thursday": {
+    "start": "07:00",
+    "end": "19:00",
+    "is_active": true,
+    "break_start": "12:00",
+    "break_end": "13:00"
+  },
+  "friday": {
+    "start": "07:00",
+    "end": "19:00",
+    "is_active": true,
+    "break_start": "12:00",
+    "break_end": "13:00"
+  },
+  "saturday": {
+    "start": "08:00",
+    "end": "18:00",
+    "is_active": true,
+    "break_start": "12:30",
+    "break_end": "13:30"
+  },
+  "sunday": {
+    "start": "09:00",
+    "end": "17:00",
+    "is_active": true,
+    "break_start": null,
+    "break_end": null
+  },
+  "timezone": "Europe/Istanbul",
+  "special_notes": "Acil durumlar için 24 saat ulaşılabilir",
+  "created_date": "2024-01-15",
+  "updated_date": "2024-01-15",
+  "is_active": true
+  },
+  {
+    "working_hours_id": 2,
+    "ilan_id": 2045,
+    "user_id": 1015,
+    "category_id": "12612",
+    "service_category": "Web Tasarım",
+    "monday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": false,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "tuesday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": false,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "wednesday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "thursday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "is_today": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "friday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "saturday": {
+      "start": "10:00",
+      "end": "16:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "sunday": {
+      "start": "10:00",
+      "end": "16:00",
+      "is_active": false,
+      "break_start": null,
+      "break_end": null
+    },
+    "timezone": "Europe/Istanbul",
+    "special_notes": "Proje yoğunluğuna göre esnek saatler",
+    "created_date": "2024-01-20",
+    "updated_date": "2024-01-20",
+    "is_active": true
+  },
+  {
+    "working_hours_id": 3,
+    "ilan_id": 1001,
+    "user_id": 5421,
+    "category_id": "1001",
+    "service_category": "Otomobil",
+    "monday": {
+      "start": "08:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "tuesday": {
+      "start": "08:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "wednesday": {
+      "start": "08:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "thursday": {
+      "start": "08:00",
+      "end": "19:00",
+      "is_active": true,
+      "is_today": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "friday": {
+      "start": "08:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "saturday": {
+      "start": "09:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "sunday": {
+      "start": "10:00",
+      "end": "16:00",
+      "is_active": false,
+      "break_start": null,
+      "break_end": null
+    },
+    "timezone": "Europe/Istanbul",
+    "special_notes": "Test sürüşü için randevu gerekli",
+    "created_date": "2024-02-01",
+    "updated_date": "2024-02-01",
+    "is_active": true
+  },
+  {
+    "working_hours_id": 4,
+    "ilan_id": 1002,
+    "user_id": 5422,
+    "category_id": "2001",
+    "service_category": "Emlak",
+    "monday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "tuesday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "wednesday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "thursday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "is_today": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "friday": {
+      "start": "09:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "saturday": {
+      "start": "10:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "sunday": {
+      "start": "11:00",
+      "end": "16:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "timezone": "Europe/Istanbul",
+    "special_notes": "Emlak gezisi için önceden randevu alınması önerilir",
+    "created_date": "2024-02-05",
+    "updated_date": "2024-02-05",
+    "is_active": true
+  },
+  {
+    "working_hours_id": 5,
+    "ilan_id": 1003,
+    "user_id": 5423,
+    "category_id": "3001",
+    "service_category": "Elektronik",
+    "monday": {
+      "start": "10:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "tuesday": {
+      "start": "10:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "wednesday": {
+      "start": "10:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "thursday": {
+      "start": "10:00",
+      "end": "19:00",
+      "is_active": true,
+      "is_today": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "friday": {
+      "start": "10:00",
+      "end": "19:00",
+      "is_active": true,
+      "break_start": "13:00",
+      "break_end": "14:00"
+    },
+    "saturday": {
+      "start": "10:00",
+      "end": "18:00",
+      "is_active": true,
+      "break_start": "13:30",
+      "break_end": "14:30"
+    },
+    "sunday": {
+      "start": "12:00",
+      "end": "17:00",
+      "is_active": false,
+      "break_start": null,
+      "break_end": null
+    },
+    "timezone": "Europe/Istanbul",
+    "special_notes": "Online satış 7/24 aktif, fiziksel teslimat belirlenen saatlerde",
+    "created_date": "2024-02-10",
+    "updated_date": "2024-02-10",
+    "is_active": true
+  },
+  {
+    "working_hours_id": 6,
+    "ilan_id": 1004,
+    "user_id": 5424,
+    "category_id": "4001",
+    "service_category": "Temizlik",
+    "monday": {
+      "start": "08:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "tuesday": {
+      "start": "08:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "wednesday": {
+      "start": "08:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "thursday": {
+      "start": "08:00",
+      "end": "17:00",
+      "is_active": true,
+      "is_today": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "friday": {
+      "start": "08:00",
+      "end": "17:00",
+      "is_active": true,
+      "break_start": "12:00",
+      "break_end": "13:00"
+    },
+    "saturday": {
+      "start": "09:00",
+      "end": "16:00",
+      "is_active": true,
+      "break_start": "12:30",
+      "break_end": "13:30"
+    },
+    "sunday": {
+      "start": "10:00",
+      "end": "15:00",
+      "is_active": false,
+      "break_start": null,
+      "break_end": null
+    },
+    "timezone": "Europe/Istanbul",
+    "special_notes": "Acil temizlik hizmetleri için 24 saat önceden haber verilmesi gerekir",
+    "created_date": "2024-02-12",
+    "updated_date": "2024-02-12",
+    "is_active": true
+  }  
+] 

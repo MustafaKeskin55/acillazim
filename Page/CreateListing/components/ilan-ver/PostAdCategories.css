@@ -1,0 +1,413 @@
+/* =============================================
+   PostAdCategories — Ana Sayfa "İlan Ver" Grid
+   ============================================= */
+
+.create-listing-wrapper {
+  @apply flex flex-col relative w-full;
+  min-height: 100vh;
+  background-color: #fff;
+  padding-top: 0;
+}
+
+body.ilan-ver-page .footer {
+  margin-top: 0 !important;
+}
+
+.create-listing-content {
+  @apply flex-1 relative;
+  padding-top: 0;
+}
+
+.post-ad-container {
+  @apply flex flex-col p-0;
+  gap: 8px;
+  height: fit-content;
+}
+
+/* ---- Content wrapper ---- */
+.post-ad-content {
+  @apply flex flex-col items-center mx-auto;
+  max-width: 1600px;
+  padding: 12px 20px 60px;
+}
+
+/* ---- Heading ---- */
+.post-ad-content h1 {
+  @apply text-center relative;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.post-ad-subtitle {
+  @apply text-center;
+  font-size: 15px;
+  color: #6b7280;
+  margin: 8px auto 30px;
+  letter-spacing: -0.2px;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* ==========================================
+   DESKTOP / TABLET — Card Grid
+   ========================================== */
+
+.post-ad-grid {
+  @apply w-full;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+  max-width: 1600px;
+  margin: 20px auto 0;
+  justify-items: center;
+}
+
+/* Card item */
+.post-ad-item {
+  @apply cursor-pointer flex flex-col items-center text-center w-full relative overflow-hidden outline-none;
+  background: white;
+  border-radius: 16px;
+  padding: 40px 24px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  max-width: 240px;
+  height: 240px;
+  backdrop-filter: blur(8px);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.post-ad-item:hover,
+.post-ad-item:focus-visible {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.post-ad-item::before {
+  @apply absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.post-ad-item::after {
+  @apply absolute;
+  content: '';
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.post-ad-item:hover::before,
+.post-ad-item:focus-visible::before { opacity: 1; }
+
+.post-ad-item:hover::after,
+.post-ad-item:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Icon */
+.post-ad-icon {
+  @apply flex items-center justify-center flex-shrink-0 relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.post-ad-icon svg {
+  @apply block;
+  color: white;
+  width: 28px;
+  height: 28px;
+}
+
+/* Text */
+.post-ad-text {
+  @apply text-center flex flex-col;
+  z-index: 1;
+  margin-top: 8px;
+  gap: 4px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.post-ad-item:hover .post-ad-text {
+  transform: translateY(-2px);
+}
+
+.post-ad-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: -0.2px;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.3;
+}
+
+.post-ad-item:hover .post-ad-name {
+  background: linear-gradient(135deg, #000 0%, #1f2937 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.post-ad-sub {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+  opacity: 0.9;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.post-ad-item:hover .post-ad-sub {
+  color: #4b5563;
+  opacity: 1;
+}
+
+/* Skeleton loading */
+.post-ad-item--skeleton {
+  @apply cursor-default pointer-events-none;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Error state */
+.post-ad-error {
+  @apply text-center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.post-ad-retry-btn {
+  @apply border-0 cursor-pointer;
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: #0066ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.post-ad-retry-btn:hover {
+  background: #0052cc;
+}
+
+/* ==========================================
+   MOBILE — List view (hidden on desktop)
+   ========================================== */
+
+/* ── Mobil 2'li grid ── */
+.post-ad-mobile-list {
+  @apply hidden w-full;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 4px 2px;
+  margin-top: 8px;
+}
+
+.post-ad-mobile-item {
+  @apply flex flex-col items-start cursor-pointer outline-none;
+  gap: 10px;
+  padding: 14px 12px 12px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  transition: border-color .15s, box-shadow .15s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 90px;
+}
+
+.post-ad-mobile-item:active {
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0,102,255,.12);
+}
+
+.post-ad-mobile-icon {
+  @apply flex items-center justify-center flex-shrink-0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.post-ad-mobile-icon svg {
+  @apply block;
+  color: white;
+  width: 22px;
+  height: 22px;
+}
+
+.post-ad-mobile-text {
+  @apply w-full flex flex-col;
+  gap: 2px;
+  min-width: 0;
+}
+
+.post-ad-mobile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.post-ad-mobile-sub {
+  font-size: 11.5px;
+  color: #9ca3af;
+  line-height: 1.3;
+}
+
+.post-ad-mobile-arrow {
+
+  @apply hidden;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Large desktop — 5 cols */
+@media (min-width: 1401px) {
+  .post-ad-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Desktop — 4 cols */
+@media (max-width: 1400px) {
+  .post-ad-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Laptop / large tablet — 3 cols */
+@media (max-width: 1100px) {
+  .post-ad-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .post-ad-item {
+    max-width: none;
+    height: 220px;
+  }
+}
+
+/* Tablet — 2 cols (card style still) */
+@media (max-width: 768px) {
+  /* Hide desktop grid, show mobile list */
+  .post-ad-grid {
+    display: none !important;
+  }
+
+  .post-ad-mobile-list {
+    display: grid;
+  }
+
+  /* Adjust headings */
+  .post-ad-content {
+    @apply items-start;
+    padding: 16px 16px 40px;
+  }
+
+  .post-ad-content h1 {
+    @apply text-left;
+    font-size: 26px;
+    font-weight: 700;
+    -webkit-text-fill-color: #1f2937;
+    background: none;
+  }
+
+  .post-ad-subtitle {
+    @apply text-left;
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .create-listing-content {
+    padding-top: 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .post-ad-content {
+    padding: 12px 12px 32px;
+  }
+
+  .post-ad-content h1 {
+    font-size: 22px;
+  }
+
+  .post-ad-mobile-item {
+    padding: 12px 10px 10px;
+    min-height: 82px;
+    gap: 8px;
+  }
+
+  .post-ad-mobile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+  }
+
+  .post-ad-mobile-name {
+    font-size: 12.5px;
+  }
+}
+
+/* Very small mobile */
+@media (max-width: 360px) {
+  .post-ad-content {
+    padding: 10px 10px 28px;
+  }
+
+  .post-ad-mobile-item {
+    padding: 10px 8px 8px;
+    min-height: 76px;
+  }
+
+  .post-ad-mobile-name {
+    font-size: 12px;
+  }
+
+  .post-ad-mobile-sub {
+    font-size: 11px;
+  }
+}

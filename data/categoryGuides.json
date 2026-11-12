@@ -1,0 +1,387 @@
+{
+  "guides": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "label": "Emlak",
+      "categoryName": "Emlak",
+      "icon": "faHome",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Tapu ve Yasal Durum",
+          "icon": "faFileContract",
+          "description": "Tapu bilgilerini ve mülkün yasal durumunu kontrol edin. Herhangi bir ipotekli durum, kat mülkiyeti veya kat irtifakı olup olmadığını sorun.",
+          "tips": [
+            "Tapu kayıtlarını tapu dairesinden veya e-Devlet üzerinden sorgulayın",
+            "İmar durumunu belediyeden öğrenin",
+            "Üzerinde haciz, ipotek veya şerh olup olmadığını kontrol edin"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Aidat ve Faturalar",
+          "icon": "faMoneyBillWave",
+          "description": "Mülkün aylık aidat tutarını, ortalama ısınma giderlerini ve diğer sabit giderlerini mutlaka öğrenin.",
+          "tips": [
+            "Aylık aidat tutarını öğrenin",
+            "Isınma giderlerini sorun",
+            "Su ve elektrik giderlerini kontrol edin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mülk İncelemesi",
+          "icon": "faEye",
+          "description": "Mülkü mutlaka farklı gün ve saatlerde ziyaret edin. Bu şekilde gün ışığı durumu, gürültü seviyesi ve çevre faktörlerini değerlendirebilirsiniz.",
+          "tips": [
+            "Farklı günlerde ziyaret edin",
+            "Gün ışığı durumunu kontrol edin",
+            "Gürültü seviyesini değerlendirin"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Bina Yaşı ve Deprem Dayanıklılığı",
+          "icon": "faExclamationTriangle",
+          "description": "Binanın yaşını, deprem yönetmeliğine uygunluğunu ve son deprem testi raporunu talep edin. Bina yaşı değerin belirlenmesinde önemli bir faktördür.",
+          "tips": [
+            "Bina yaşını kontrol edin",
+            "Deprem testi raporunu talep edin",
+            "Yapı kullanma izin belgesini inceleyin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": 499,
+      "label": "Elektronik",
+      "categoryName": "Elektronik",
+      "icon": "faLaptop",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Ürün Özellikleri",
+          "icon": "faInfoCircle",
+          "description": "İlanda belirtilen teknik özellikleri dikkatlice inceleyin. Bellek, işlemci, ekran ve batarya gibi kritik özelliklerin ihtiyaçlarınıza uygun olduğundan emin olun.",
+          "tips": [
+            "Model ve seri numarasını kontrol edin",
+            "RAM ve depolama kapasitesini öğrenin",
+            "İşlemci tipini araştırın"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Garanti Durumu",
+          "icon": "faShield",
+          "description": "İkinci el elektronik ürünlerde garanti durumunu ve kalan süresini satıcıdan talep edin. Bazı elektronik ürünlerde garanti devredilebilir olabilir.",
+          "tips": [
+            "Garanti süresini kontrol edin",
+            "Garanti devredilebilirliğini sorun",
+            "Satış faturasını talep edin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Ürün Fotoğrafları",
+          "icon": "faCamera",
+          "description": "Ürünün tüm açılardan net fotoğraflarını talep edin. Ekran çizikleri, gövde hasarları veya eskimiş parçaları görmek için yakın çekim fotoğraflar isteyin.",
+          "tips": [
+            "Tüm açılardan fotoğraf isteyin",
+            "Ekran çiziklerini kontrol edin",
+            "Gövde hasarlarını inceleyin"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Orjinal Kutusu ve Aksesuarları",
+          "icon": "faCheckCircle",
+          "description": "Ürünün orijinal kutusu, şarj cihazı, kulaklık gibi aksesuarları tam mı kontrol edin. Kutusu ve aksesuarları tam ürünler daha değerli olur.",
+          "tips": [
+            "Orijinal kutu durumunu kontrol edin",
+            "Şarj cihazını kontrol edin",
+            "Aksesuarların tamamını isteyin"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Orjinallik Kontrolü",
+          "icon": "faTag",
+          "description": "Özellikle elektronik cihazlarda sahte ürünler olabilir. IMEI, seri numarası gibi bilgileri kontrol edin ve üretici web sitesinden doğrulayın.",
+          "tips": [
+            "IMEI numarasını kontrol edin",
+            "Sahte ürün belirtilerine dikkat edin",
+            "Fiyatı piyasanın çok altındaysa şüphelenin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "label": "Vasıta",
+      "categoryName": "Vasıta",
+      "icon": "faCarSide",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Araç Geçmişi",
+          "icon": "faFileContract",
+          "description": "Aracın tramer kaydını, servis geçmişini ve kilometre bilgisini doğrulayın. Satıcıdan Cardata veya benzeri araç geçmiş raporlarını talep edin.",
+          "tips": [
+            "Tramer kaydını kontrol edin",
+            "Servis geçmişini inceleyin",
+            "Kilometre bilgisini doğrulayın"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Araç Muayenesi",
+          "icon": "faCheckCircle",
+          "description": "Aracın muayene durumunu ve bir sonraki muayene tarihini kontrol edin. Güncel muayenesi olmayan araçlar için sonradan ekstra maliyet çıkabilir.",
+          "tips": [
+            "Muayene tarihini kontrol edin",
+            "Bir sonraki muayene tarihini sorun",
+            "Muayene raporunu inceleyin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Detaylı İnceleme",
+          "icon": "faTools",
+          "description": "Aracı satın almadan önce güvendiğiniz bir serviste detaylı inceleme yaptırın. Ekspertiz raporu, gizli hasarları ve potansiyel sorunları ortaya çıkarabilir.",
+          "tips": [
+            "Ekspertiz yaptırın",
+            "Gizli hasarları tespit edin",
+            "Potansiyel sorunları öğrenin"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Vergi ve Sigorta Maliyeti",
+          "icon": "faMoneyBillWave",
+          "description": "Aracın motor hacmine ve yaşına göre yıllık MTV tutarını ve yaklaşık kasko/trafik sigortası maliyetlerini hesaplayın.",
+          "tips": [
+            "MTV tutarını hesaplayın",
+            "Kasko maliyetini öğrenin",
+            "Trafik sigortası maliyetini kontrol edin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "categoryId": 3,
+      "label": "Mobilya",
+      "categoryName": "Mobilya",
+      "icon": "faCouch",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Ölçü Kontrolü",
+          "icon": "faRuler",
+          "description": "Mobilyanın ölçülerini evinizde yerleştirmeyi düşündüğünüz alanla karşılaştırın. Kapılardan ve merdivenlerden geçebileceğinden emin olun.",
+          "tips": [
+            "Mobilya ölçülerini not edin",
+            "Evinizdeki alanı ölçün",
+            "Kapılardan geçip geçemeyeceğini kontrol edin"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Malzeme Kalitesi",
+          "icon": "faCheckCircle",
+          "description": "Mobilyanın hangi malzemeden yapıldığını sorun (masif ahşap, sunta, MDF). Malzeme türü, mobilyanın kalitesini ve ömrünü belirler.",
+          "tips": [
+            "Malzeme türünü sorun",
+            "Kalite belgelerini kontrol edin",
+            "Ağırlığını inceleyin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Kullanım Durumu",
+          "icon": "faEye",
+          "description": "İkinci el mobilyalarda çizik, leke, kırık veya gevşek parçalar olup olmadığını kontrol edin. Satıcıdan detaylı fotoğraflar isteyin.",
+          "tips": [
+            "Tüm parçaları inceleyin",
+            "Detaylı fotoğraflar isteyin",
+            "Gevşek parçaları kontrol edin"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Nakliye Durumu",
+          "icon": "faTruck",
+          "description": "Büyük parçaların nakliye sorumluluğunun kimde olduğunu belirleyin. Nakliye maliyeti bazen ürün fiyatının önemli bir yüzdesini oluşturabilir.",
+          "tips": [
+            "Nakliye maliyetini öğrenin",
+            "Nakliye sorumluluğunu netleştirin",
+            "Montaj hizmetini sorun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "categoryId": 4,
+      "label": "Giyim",
+      "categoryName": "Giyim",
+      "icon": "faTshirt",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Boyut Doğrulama",
+          "icon": "faRuler",
+          "description": "Kıyafetin etiket bedenini değil, gerçek ölçülerini sorun. Satıcıdan omuz genişliği, göğüs çevresi, bel, boy gibi somut ölçüler isteyin.",
+          "tips": [
+            "Gerçek ölçüleri isteyin",
+            "Omuz genişliğini kontrol edin",
+            "Bel ve göğüs çevresini sorun"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Kumaş Durumu",
+          "icon": "faEye",
+          "description": "Kumaş kalitesini, aşınma veya solma durumunu detaylı fotoğraflarla kontrol edin. Özellikle koltuk altı, diz ve dirsek gibi aşınmaya müsait bölgelere dikkat edin.",
+          "tips": [
+            "Kumaş kalitesini kontrol edin",
+            "Aşınma belirtilerini inceleyin",
+            "Solma durumunu kontrol edin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Orijinallik Kontrolü",
+          "icon": "faTag",
+          "description": "Marka ürünlerde orijinallik etiketleri, hologramlar ve seri numaralarını kontrol edin. Çanta ve ayakkabılarda iç etiketler ve işçilik kalitesine bakın.",
+          "tips": [
+            "Etiketleri kontrol edin",
+            "Hologramları inceleyin",
+            "İşçilik kalitesine bakın"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Temizlik Durumu",
+          "icon": "faCheckCircle",
+          "description": "Ürünün temizlik durumunu ve herhangi bir koku problemini sorun. Bazı ürünler kuru temizleme veya özel bakım gerektirebilir.",
+          "tips": [
+            "Temizlik durumunu kontrol edin",
+            "Koku problemi olup olmadığını sorun",
+            "Bakım gereksinimlerini öğrenin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "categoryId": 5,
+      "label": "Sanayi ve İş Makinaları Rehberi",
+      "categoryName": "Sanayi",
+      "icon": "faIndustry",
+      "sections": [
+        {
+          "id": 1,
+          "title": "Kullanım Geçmişi",
+          "icon": "faBusinessTime",
+          "description": "Makinenin çalışma saati, bakım geçmişi ve önceki kullanım koşullarını mutlaka kontrol edin. Bu bilgiler makinenin gerçek yaşı ve durumu hakkında önemli ipuçları verir.",
+          "tips": [
+            "Çalışma saati kayıtlarını kontrol edin",
+            "Bakım geçmişini inceleyin",
+            "Önceki kullanım koşullarını sorun"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Teknik Özellikler",
+          "icon": "faCogs",
+          "description": "Makinenin kapasitesi, motor gücü, enerji tüketimi ve hassasiyet değerlerini detaylı olarak sorun. Bu değerler üretim ihtiyaçlarınıza uygun olmalıdır.",
+          "tips": [
+            "Kapasite değerlerini öğrenin",
+            "Motor gücünü kontrol edin",
+            "Enerji tüketimini hesaplayın"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Yedek Parça Bulunabilirliği",
+          "icon": "faTools",
+          "description": "Özellikle ithal makinelerde yedek parça bulunabilirliği kritik önem taşır. Türkiye'de yedek parça ve servis desteği olup olmadığını araştırın.",
+          "tips": [
+            "Yedek parça bulunabilirliğini araştırın",
+            "Servis desteğini kontrol edin",
+            "Yedek parça maliyetlerini sorun"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Nakliye ve Kurulum",
+          "icon": "faTruck",
+          "description": "Büyük endüstriyel ekipmanların nakliyesi ve kurulumu ek maliyet ve uzmanlık gerektirir. Bu hizmetlerin ilanda dahil olup olmadığını netleştirin.",
+          "tips": [
+            "Nakliye maliyetini öğrenin",
+            "Kurulum hizmetini sorun",
+            "Özel nakliye gereksinimlerini kontrol edin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "categoryId": 0,
+      "label": "Genel",
+      "categoryName": "Genel",
+      "icon": "faInfoCircle",
+      "sections": [
+        {
+          "id": 1,
+          "title": "İlan Detayları",
+          "icon": "faInfoCircle",
+          "description": "İlan açıklamasını dikkatlice okuyun ve net olmayan detayları satıcıya sorun. Ne kadar çok bilgi edinirseniz, o kadar iyi bir karar verebilirsiniz.",
+          "tips": [
+            "İlan açıklamasını detaylı okuyun",
+            "Belirsiz noktaları sorun",
+            "Tüm özellikleri listeleyin"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Görsel İnceleme",
+          "icon": "faCamera",
+          "description": "Ürünün farklı açılardan çekilmiş net fotoğraflarını talep edin. Yakın çekim detaylar, ürünün durumunu anlamanıza yardımcı olur.",
+          "tips": [
+            "Farklı açılardan fotoğraf isteyin",
+            "Yakın çekim detaylar talep edin",
+            "Fotoğraf kalitesini kontrol edin"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Satıcı Profili",
+          "icon": "faUserShield",
+          "description": "Satıcının profilini, daha önce yaptığı satışları ve aldığı yorumları kontrol edin. Güvenilir ve iletişime açık satıcılar tercih edin.",
+          "tips": [
+            "Satıcı profilini inceleyin",
+            "Önceki yorumları kontrol edin",
+            "Güvenilir satıcıları tercih edin"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Fiyat Araştırması",
+          "icon": "faTag",
+          "description": "Benzer ürünlerin fiyatlarını karşılaştırarak, ürünün adil bir fiyata satılıp satılmadığını kontrol edin. Aşırı ucuz fiyatlar şüpheli olabilir.",
+          "tips": [
+            "Benzer ürünleri arayın",
+            "Fiyatları karşılaştırın",
+            "Aşırı ucuz fiyatlara dikkat edin"
+          ]
+        }
+      ]
+    }
+  ]
+}
+

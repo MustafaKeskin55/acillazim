@@ -1,0 +1,168 @@
+/* UserBio.css - Kullanıcı biyografisi bileşeni stilleri */
+
+.user-bio-container {
+  @apply w-full;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+}
+
+/* Biyografi bölümü */
+.user-bio-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 25px;
+}
+
+/* Bölüm başlıkları */
+.section-title {
+  @apply flex items-center;
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-icon {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+/* Biyografi içeriği */
+.bio-content {
+  margin-bottom: 25px;
+}
+
+.bio-title {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.bio-text {
+  @apply m-0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Meta bilgiler (Üyelik tarihi vb.) */
+.bio-meta {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.meta-item {
+  @apply flex items-center;
+  font-size: 14px;
+  color: #666;
+}
+
+.meta-icon {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.meta-label {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.meta-value {
+  color: #333;
+}
+
+/* Yükleniyor durumu */
+.user-bio-skeleton {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.skeleton-header {
+  height: 24px;
+  width: 40%;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-line {
+  @apply w-full;
+  height: 16px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Hata durumu */
+.user-bio-error {
+  @apply text-center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.error-icon {
+  font-size: 48px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.user-bio-error h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-bio-error p {
+  color: #666;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .user-bio-section {
+    padding: 20px;
+  }
+  
+  .bio-text {
+    font-size: 14px;
+  }
+  
+  .bio-meta {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-bio-section {
+    padding: 15px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+  }
+} 

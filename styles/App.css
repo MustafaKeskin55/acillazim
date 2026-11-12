@@ -1,0 +1,247 @@
+@import "./design-tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components.css";
+
+* {
+
+  @apply m-0 p-0 box-border;
+}
+
+/*
+  AppShell gövdesi — Navbar.tsx üst/alt sabit menü yüksekliği ile aynı rakamlar kalmalı.
+  Navbar.css içinde --navbar-height-* bu değişkenlere bağlı (fallback ile).
+*/
+:root {
+  --app-main-pad-top-desktop: 80px;
+  /* Mobil: Navbar yüksekliği ile birebir (logo kesilmesin); ara boşluk içerik margin ile kısılır */
+  --app-main-pad-top-mobile: 60px;
+  /* Alt tab ~64px + orta FAB taşması; safe-area ayrı eklenir */
+  --app-main-pad-bottom-mobile: 92px;
+
+  /* ---- Tipografi (2026 SaaS Standartı: Başlıklar Inter, Gövde Inter/Manrope) ---- */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, serif;
+
+  /* ---- Marka renk paleti ---- */
+  --brand-ink: #0A0E27;
+  --brand-ink-2: #050816;
+  --brand-deep: #003466;
+  --brand-accent: #FF6B00;
+  --brand-accent-soft: #FFB07A;
+  --brand-cream: #FAF8F3;
+  --brand-paper: #FFFFFF;
+  --brand-mist: #F4F2EC;
+  --brand-line: #ECE7DC;
+  --brand-muted: #6B7280;
+  --brand-success: #10B981;
+}
+
+/* Global font ayarı & taşma koruması */
+html, body {
+  font-family: var(--font-body);
+  background-color: var(--brand-bg, #F5F6F8);
+  color: var(--brand-ink, #0A0E27);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.app-container {
+  @apply flex flex-col;
+  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+
+
+.main-content {
+
+  @apply flex-1 flex flex-col;
+}
+
+/*
+  AppShell tek main-content verir; bazı route sayfaları eski kalıpla içerde tekrar
+  .main-content sarıyor — her iki kutuya da padding-top uygulanınca üst boşluk ikiye katlanır.
+*/
+.main-content > .main-content {
+  padding-top: 0 !important;
+}
+
+/* Hizmet kategorileri tam sayfa: gövde zemini liste ile aynı beyaz (iki ton şerit olmasın) */
+.main-content:has(.sidebar.sidebar-fullpage.sidebar--service) {
+  background-color: #ffffff;
+}
+
+/* Hesabım sayfası: üst site navbar yok, zemin rengi #eef2f7 (alt tab arkasında beyaz ton farkı olmaması için) */
+html:has(.hesabim-page),
+body:has(.hesabim-page),
+.app-container:has(.hesabim-page),
+.main-content:has(.hesabim-page) {
+  background-color: #eef2f7 !important;
+  --bg-page-fallback: #eef2f7;
+}
+
+.main-content:has(.hesabim-page) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Filtrele sayfası: alt tab arkasında beyaz ton farkı olmaması için */
+html:has(.filter-page),
+body:has(.filter-page),
+.app-container:has(.filter-page),
+.main-content:has(.filter-page) {
+  background-color: #f0f2f5 !important;
+  --bg-page-fallback: #f0f2f5;
+}
+
+/* /dashboard — AppShell’de Navbar hiç render edilmez; üst/alt boşluk uygulanmamalı */
+.app-container--dashboard,
+.app-container--dashboard .main-content,
+.main-content:has(.dashboard-layout) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  /*
+    Üst/alt navbar fixed → flex öğesi gibi yer kaplamaz; flex:1 ile main-content tüm 100vh’i
+    büyütüyordu. İçerik kısa kalınca alt tab ile son blok arasında dev beyaz boşluk oluşuyordu.
+  */
+  .main-content {
+    flex: 0 1 auto;
+    min-height: 0;
+    padding-top: calc(var(--app-main-pad-top-mobile) + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(var(--app-main-pad-bottom-mobile) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Mobil alt tab gizli (ilan detayı): alt dolgu tab yüksekliği olmadan yalnızca safe-area */
+  html[data-hide-mobile-bottom-nav] .main-content {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Mobil ilan detay: breadcrumb yalnız boş ise gizlenir, doluysa sıfır boşlukla gösterilir */
+  .service-detail-breadcrumb-wrapper:empty,
+  .product-detail-breadcrumb-wrapper:empty,
+  .service-detail-breadcrumb:empty,
+  .product-detail-breadcrumb:empty {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+
+  /* Çift sarılı iç main-content: alt tab için padding dışarıda kalsın */
+  .main-content > .main-content {
+    padding-bottom: 0 !important;
+  }
+
+  .app-container--dashboard,
+  .app-container--dashboard .main-content,
+  .main-content:has(.dashboard-layout) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Ustalar-ve-Hizmetler: hero üstten taşar; ofset ServiceSearch içinde */
+  .app-container > .main-content:has(.svc) {
+    padding-top: 0 !important;
+  }
+
+  /*
+    Navbar yüksekliği / main padding-top değişmez.
+    PopularCategories (.category-wrapper) ve /kategoriler tam liste (.sidebar-fullpage)
+    sonrası kalan beyaz şeridi yukarı çeker.
+  */
+  .main-content .category-wrapper,
+  .main-content .sidebar.sidebar-fullpage {
+    margin-top: -44px !important;
+  }
+
+  /*
+    /filtrele — navbar–liste boşluğu: önceki ~50px iç ofsetin %60 daha düşüğü → 50 × (1 − 0,6) = 20px (+ safe-area).
+    Çok agresif; kart üstü navbar bandına yaklaşır veya hafif örtüşür — gerekirse değeri yükselt.
+  */
+  .main-content:has(.filter-page) {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 20px);
+  }
+}
+
+@media (min-width: 769px) {
+  .main-content .category-wrapper,
+  .main-content .sidebar.sidebar-fullpage {
+    margin-top: -20px !important;
+  }
+
+  /*
+    Önceki filtre ofseti ~72px’ti; %60 sıkılaştırma ≈ 29px — masaüstü navbar (~80px) ile taşmaması için
+    token’a bağlı orta yol (navbar altına yakın, kart kesilmesin).
+  */
+  .main-content:has(.filter-page) {
+    padding-top: 8px;
+  }
+}
+
+.dashboard-wrapper {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.navbar-breadcrumb-container {
+  @apply w-full;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-bodyContainer {
+
+  @apply flex;
+}
+
+.app-bodyLeft  { width: 20%; }
+.app-bodyRight { width: 1060px; margin: 0 0 0 25px; }
+
+@media (max-width: 1023px) {
+  .app-bodyContainer {
+
+    @apply flex-col;
+  }
+  .app-bodyLeft,
+  .app-bodyRight {
+    @apply w-full;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+  }
+
+  /* ilan-form sayfası mobilde: sadece main-content padding sıfırla
+     (navbarlar görünür kalır, mfm-topbar kendi başlığını gösterir) */
+  .app-container--ilan-form > .main-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+
+}

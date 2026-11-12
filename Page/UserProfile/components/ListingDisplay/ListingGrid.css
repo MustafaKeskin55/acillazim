@@ -1,0 +1,170 @@
+/* ListingGrid.css - İlanların grid görünümü stilleri */
+
+.listings-grid {
+  @apply w-full justify-center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+  gap: 16px;
+}
+
+.listing-card-wrapper {
+  @apply w-full;
+  transition: transform 0.2s ease;
+}
+
+.listing-card-wrapper:hover {
+  transform: translateY(-3px);
+}
+
+/* Yükleniyor Durumu İskelet Ekranı */
+.listing-card-skeleton {
+  @apply w-full overflow-hidden;
+  height: var(--alz-listing-card-h);
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.listing-image-skeleton {
+  @apply w-full;
+  height: calc(var(--alz-listing-card-h) * 160 / 280);
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.listing-content-skeleton {
+  padding: 15px;
+}
+
+.listing-title-skeleton {
+  height: 18px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.listing-price-skeleton {
+  height: 24px;
+  width: 70%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.listing-meta-skeleton {
+  @apply w-full;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Hata Durumu */
+.listings-error,
+.listings-empty {
+  @apply w-full text-center;
+  padding: 50px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.listings-error .error-icon {
+  font-size: 48px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.listings-empty .info-icon {
+  font-size: 48px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.listings-error h3,
+.listings-empty h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.listings-error p,
+.listings-empty p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  @apply border-0 cursor-pointer;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive tasarım */
+@media (max-width: 1200px) {
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+    gap: var(--alz-listing-card-gap);
+  }
+
+  .listing-card-skeleton {
+    height: var(--alz-listing-card-h);
+  }
+
+  .listing-image-skeleton {
+    height: calc(var(--alz-listing-card-h) * 160 / 280);
+  }
+}
+
+@media (max-width: 480px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--alz-listing-card-gap-scroll);
+  }
+  
+  .listings-error,
+  .listings-empty {
+    padding: 30px 15px;
+  }
+  
+  .listings-error .error-icon,
+  .listings-empty .info-icon {
+    font-size: 40px;
+  }
+  
+  .listings-error h3,
+  .listings-empty h3 {
+    font-size: 18px;
+  }
+} 

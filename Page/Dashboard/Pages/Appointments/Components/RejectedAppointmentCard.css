@@ -1,0 +1,186 @@
+.rejected-appointment-card {
+  @apply relative;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #f1f1f1;
+}
+
+.status-badge {
+  @apply absolute flex items-center;
+  top: -10px;
+  right: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 6px;
+}
+
+.status-badge.rejected {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.appointment-header {
+  @apply flex justify-between items-start;
+  margin-bottom: 16px;
+  padding-top: 10px;
+}
+
+.appointment-header h3 {
+  @apply m-0;
+  font-size: 16px;
+  color: #333;
+}
+
+.details-btn {
+  @apply border-0 cursor-pointer;
+  background: none;
+  color: #78909c;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  color: #1976d2;
+  transform: scale(1.1);
+}
+
+.appointment-info {
+  margin-bottom: 16px;
+}
+
+.info-row {
+  @apply flex justify-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.info-row .label {
+  color: #78909c;
+  font-weight: 500;
+}
+
+.info-row .value {
+  color: #333;
+  font-weight: 500;
+}
+
+.price-tag {
+  @apply text-right;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f44336;
+}
+
+/* Modal Styles */
+.appointment-modal {
+  @apply fixed flex justify-center items-center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  @apply overflow-y-auto relative;
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+}
+
+.modal-header {
+  @apply flex justify-between items-center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-header h2 {
+  @apply m-0;
+  font-size: 20px;
+  color: #333;
+}
+
+.close-btn {
+  @apply border-0 cursor-pointer;
+  background: none;
+  color: #666;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #f44336;
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-section h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row {
+  @apply flex justify-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  @apply flex-1;
+  color: #78909c;
+  font-weight: 500;
+}
+
+.detail-row .value {
+  @apply text-right;
+  color: #333;
+  font-weight: 500;
+  flex: 2;
+}
+
+.notes {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .detail-row {
+
+    @apply flex-col;
+  }
+
+  .detail-row .value {
+    @apply text-left;
+    margin-top: 4px;
+  }
+} 

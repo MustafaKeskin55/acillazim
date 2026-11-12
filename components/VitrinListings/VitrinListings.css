@@ -1,0 +1,146 @@
+/* ===================================================================
+   VitrinListings.css — Tailwind CSS (@apply Mimarisi)
+   Tasarım, renkler, animasyonlar ve responsive davranış birebir korunmuştur.
+   =================================================================== */
+
+.vitrin-listings {
+  @apply mt-[18px] mb-2 overflow-hidden;
+}
+
+.vitrin-listings-header {
+  @apply flex justify-between items-center gap-3 pt-3 px-3 pb-4 box-border;
+}
+
+.vitrin-listings-header h3 {
+  @apply text-[#ffa500] capitalize m-0 leading-tight flex-1 min-w-0;
+}
+
+.vitrin-listings-header button {
+  @apply bg-[#f8f9fa] rounded-lg py-2 px-[18px] text-[#495057] font-medium cursor-pointer relative overflow-hidden tracking-wide text-[14px] transition-all duration-300;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.vitrin-listings-header button:hover {
+  @apply -translate-y-0.5 bg-white text-[#ff6b00];
+  border-color: #ff6b00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.vitrin-listings-header button::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full -translate-x-full transition-transform duration-600;
+  background: linear-gradient(120deg, transparent, rgba(255, 107, 0, 0.05), transparent);
+}
+
+.vitrin-listings-header button:hover::before {
+  @apply translate-x-full;
+}
+
+.vitrin-listings-header button:active {
+  @apply translate-y-0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1281px) {
+  .vitrin-listings-header {
+    @apply w-auto;
+  }
+}
+
+@media (max-width: 1071px) {
+  .vitrin-listings-header {
+    @apply w-auto;
+  }
+}
+
+@media (max-width: 870px) {
+  .vitrin-listings {
+    @apply mt-[22px] mb-3;
+  }
+
+  .vitrin-listings-header {
+    @apply pt-3.5 px-2.5 pb-5 gap-3.5;
+  }
+
+  .vitrin-listings-header h3 {
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem);
+  }
+
+  .vitrin-listings-header button {
+    @apply py-[11px] px-4 text-[13px] font-semibold rounded-[10px] whitespace-nowrap shrink-0 min-h-[46px] inline-flex items-center justify-center;
+  }
+
+  .vitrin-listings-header button .button-icon {
+    @apply text-[18px] mr-2;
+  }
+}
+
+@media (max-width: 480px) {
+  .vitrin-listings-header {
+    @apply pt-3 px-1.5 pb-[18px] gap-2.5;
+  }
+
+  .vitrin-listings-header button {
+    @apply py-2.5 px-3.5 text-[12px] min-h-[44px];
+  }
+}
+
+.vitrin-listings-container {
+  @apply grid justify-center pt-3 px-2.5 pb-3.5;
+  grid-template-columns: repeat(auto-fill, var(--alz-listing-card-w));
+  gap: var(--alz-listing-card-gap);
+}
+
+/* Reklam kartları */
+.ad-container {
+  @apply rounded-lg overflow-hidden;
+  width: var(--alz-listing-card-w);
+  height: var(--alz-listing-card-h);
+  border: var(--alz-listing-card-border, 1px solid #c4c4c4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ad-image {
+  @apply w-full h-full object-cover;
+}
+
+@media (max-width: 680px) {
+  .vitrin-listings-container {
+    @apply flex flex-nowrap overflow-x-auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 6px 10px 18px;
+    gap: var(--alz-listing-card-gap-scroll);
+  }
+
+  .vitrin-listings-container::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .vitrin-listings-container > * {
+    @apply shrink-0 grow-0 basis-auto;
+    width: var(--alz-listing-card-w);
+  }
+  
+  .ad-container {
+    @apply mr-[15px];
+    width: var(--alz-listing-card-w);
+    height: var(--alz-listing-card-h);
+  }
+}
+
+.button-icon {
+  @apply mr-1.5 text-[16px] align-middle inline-block text-[#ff6b00];
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}

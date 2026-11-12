@@ -1,0 +1,112 @@
+.modal__overlay {
+  @apply fixed flex items-center justify-center;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.58);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  padding: 16px;
+}
+
+.modal__content {
+  @apply w-full relative overflow-hidden;
+  background: #ffffff;
+  border-radius: 22px;
+  max-width: 460px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 24px 52px -12px rgba(15, 23, 42, 0.28);
+}
+
+.modal__header {
+  @apply relative;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+}
+
+.modal__title {
+  @apply m-0 flex items-center;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #ffffff;
+  gap: 10px;
+}
+
+.modal__title svg {
+  font-size: 18px;
+  color: #ff9819;
+}
+
+.modal__close {
+  @apply absolute border-0 cursor-pointer flex items-center justify-center;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.modal__close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.modal__body {
+  padding: 22px 22px 0;
+}
+
+.modal__actions {
+  @apply flex;
+  padding: 20px 22px 22px;
+  gap: 12px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 18px;
+}
+
+.modal__btn {
+  @apply cursor-pointer flex items-center justify-center flex-1;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 8px;
+  height: 46px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.modal__btn--primary {
+  @apply border-0;
+  background: linear-gradient(135deg, #003466 0%, #004B87 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px -4px rgba(0, 52, 102, 0.3);
+}
+
+.modal__btn--primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px -4px rgba(0, 52, 102, 0.4);
+}
+
+.modal__btn--primary:disabled {
+  @apply cursor-not-allowed;
+  opacity: 0.65;
+}
+
+.modal__btn--secondary {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.modal__btn--secondary:hover:not(:disabled) {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+@media (max-width: 640px) {
+  .modal__actions {
+    @apply flex-col;
+    gap: 10px;
+  }
+}
