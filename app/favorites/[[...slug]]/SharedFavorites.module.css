@@ -19,177 +19,45 @@
   max-width: 1400px;
 }
 
-/* ── Kurumsal Liste Başlık Kartı ── */
-.headerCard {
-  @apply relative;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 1.75rem 2rem;
-  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
-  margin-bottom: 2rem;
-  border-top: 3px solid #003466;
+/* ── Kurumsal Sade Başlık Barı (Dashboard ve Sistem Uyumu) ── */
+.headerBar {
+  @apply flex items-center justify-between flex-wrap gap-3 pb-3.5 mb-6 border-0 border-b border-solid border-slate-200;
 }
 
-.headerContent {
-  @apply flex flex-col justify-between;
-  gap: 1.25rem;
+.headerInfo {
+  @apply flex flex-col gap-1;
 }
 
-@media (min-width: 768px) {
-  .headerContent {
-
-    @apply flex-row items-center;
-  }
+.titleRow {
+  @apply flex items-center gap-2.5 flex-wrap;
 }
 
-.headerMain {
-  @apply flex flex-col;
-  gap: 0.35rem;
+.titleIconBox {
+  @apply w-9 h-9 rounded-xl flex items-center justify-center text-sm shrink-0 bg-orange-50 text-brand-accent border border-solid border-orange-200/80;
 }
 
-.badge {
-  @apply inline-flex items-center uppercase;
-  gap: 6px;
-  padding: 4px 11px;
-  border-radius: 999px;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  color: #003466;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  width: fit-content;
-  margin-bottom: 0.25rem;
+.pageTitle {
+  @apply m-0 text-xl font-bold text-slate-900 tracking-tight leading-snug;
 }
 
-.badgeIcon {
-  color: #ea580c;
-  font-size: 0.85rem;
-}
-
-.title {
-  font-size: 1.85rem;
-  font-weight: 800;
-  color: #0f172a;
-  margin: 0.25rem 0 0.65rem;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
+.countBadge {
+  @apply inline-flex items-center py-0.5 px-2.5 rounded-full bg-slate-100 text-slate-600 border border-solid border-slate-200/80 text-xs font-semibold tracking-wide whitespace-nowrap;
 }
 
 .metaRow {
-  @apply flex flex-wrap items-center;
-  gap: 0.75rem;
-  color: #64748b;
-  font-size: 0.86rem;
+  @apply flex items-center gap-2 text-xs text-slate-500 font-normal;
 }
 
-.metaItem {
-  @apply inline-flex items-center;
-  gap: 6px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 4px 11px;
+.metaText {
+  @apply text-slate-500;
 }
 
-.metaIcon {
-  color: #003466;
-  font-size: 0.85rem;
+.metaText strong {
+  @apply font-semibold text-slate-700;
 }
 
-.metaStrong {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-/* ── Aksiyon Butonları ── */
-.actionBtns {
-  @apply flex flex-wrap items-center;
-  gap: 0.75rem;
-}
-
-.shareBtn {
-  @apply inline-flex items-center cursor-pointer;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
-  background: #25d366;
-  color: #ffffff;
-  border: 1px solid #16a34a;
-  border-radius: 10px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.2);
-}
-
-.shareBtn:hover {
-  background: #1eb956;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
-}
-
-.copyBtn {
-  @apply inline-flex items-center cursor-pointer;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
-  background: #ffffff;
-  color: #003466;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-}
-
-.copyBtn:hover {
-  background: #003466;
-  color: #ffffff;
-  border-color: #003466;
-  transform: translateY(-1px);
-}
-
-.copyBtnSuccess {
-  background: #f0fdf4 !important;
-  color: #16a34a !important;
-  border-color: #86efac !important;
-}
-
-/* ── İlanlar Başlık Alanı ── */
-.gridHeader {
-  @apply flex items-center justify-between;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.gridTitleArea {
-  @apply flex items-center;
-  gap: 0.65rem;
-}
-
-.gridTitle {
-  @apply m-0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.itemCountBadge {
-  background: #eff6ff;
-  color: #003466;
-  border: 1px solid #dbeafe;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 3px 9px;
-  border-radius: 999px;
-}
-
-.gridSubtitle {
-  font-size: 0.84rem;
-  color: #64748b;
-  font-weight: 500;
+.metaDot {
+  @apply text-slate-300 font-bold;
 }
 
 /* ── İlan Kartları Izgarası (Ayrık Olma Sorunu Çözüldü) ── */

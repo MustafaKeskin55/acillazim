@@ -5,9 +5,6 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { 
   FaHeart, 
-  FaUser, 
-  FaCalendarAlt, 
-  FaLayerGroup, 
   FaExclamationCircle,
   FaHome
 } from 'react-icons/fa';
@@ -128,46 +125,30 @@ export default function SharedFavoritesCatchAllPage() {
     <div className={styles.container}>
       <Toaster position="top-center" />
       <div className={styles.inner}>
-        {/* Kurumsal Header Kartı */}
-        <div className={styles.headerCard}>
-          <div className={styles.headerContent}>
-            <div className={styles.headerMain}>
-              <div className={styles.badge}>
-                <FaHeart className={styles.badgeIcon} />
-                <span>Paylaşılan Favori Listesi</span>
+        {/* Kurumsal Sade Başlık Barı (Dashboard Favoriler & Acillazım Tasarım Sistemi) */}
+        <div className={styles.headerBar}>
+          <div className={styles.headerInfo}>
+            <div className={styles.titleRow}>
+              <div className={styles.titleIconBox}>
+                <FaHeart />
               </div>
-              <h1 className={styles.title}>{data.listName || 'Favori İlanlar'}</h1>
-              <div className={styles.metaRow}>
-                {data.sharedBy && (
-                  <div className={styles.metaItem}>
-                    <FaUser className={styles.metaIcon} />
-                    <span>Paylaşan: <strong className={styles.metaStrong}>{data.sharedBy}</strong></span>
-                  </div>
-                )}
-                {formattedDate && (
-                  <div className={styles.metaItem}>
-                    <FaCalendarAlt className={styles.metaIcon} />
-                    <span>{formattedDate}</span>
-                  </div>
-                )}
-                <div className={styles.metaItem}>
-                  <FaLayerGroup className={styles.metaIcon} />
-                  <span><strong className={styles.metaStrong}>{data.items?.length || 0}</strong> İlan</span>
-                </div>
-              </div>
+              <h1 className={styles.pageTitle}>{data.listName || 'Favori İlanlar'}</h1>
+              <span className={styles.countBadge}>
+                {data.items?.length || 0} İlan
+              </span>
             </div>
-
-            {/* Aksiyon Butonları kaldırıldı - kurumsal ve sade başlık yapısı */}
+            <div className={styles.metaRow}>
+              {data.sharedBy && (
+                <span className={styles.metaText}>
+                  Paylaşan: <strong>{data.sharedBy}</strong>
+                </span>
+              )}
+              {data.sharedBy && formattedDate && <span className={styles.metaDot}>&bull;</span>}
+              {formattedDate && (
+                <span className={styles.metaText}>{formattedDate}</span>
+              )}
+            </div>
           </div>
-        </div>
-
-        {/* Listings Section Header */}
-        <div className={styles.gridHeader}>
-          <div className={styles.gridTitleArea}>
-            <h2 className={styles.gridTitle}>Listedeki İlanlar</h2>
-            <span className={styles.itemCountBadge}>{data.items?.length || 0}</span>
-          </div>
-          <span className={styles.gridSubtitle}>Listenin güncel ilan detayları</span>
         </div>
 
         {data.items && data.items.length > 0 ? (
